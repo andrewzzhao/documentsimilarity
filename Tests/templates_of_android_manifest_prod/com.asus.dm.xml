@@ -1,0 +1,168 @@
+<?xml version="1.0" ?><manifest android:sharedUserId="android.uid.system" android:versionCode="19" android:versionName="4.4.2-eng.android.20150311.111838" package="com.asus.dm" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="19" android:targetSdkVersion="19">
+</uses-sdk>
+<permission android:name="com.asus.dm.permission.C2D_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="com.asus.dm.permission.C2D_MESSAGE">
+</uses-permission>
+<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_SMS">
+</uses-permission>
+<uses-permission android:name="android.permission.SEND_SMS">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_WAP_PUSH">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_APN_SETTINGS">
+</uses-permission>
+<uses-permission android:name="com.android.browser.permission.READ_HISTORY_BOOKMARKS">
+</uses-permission>
+<uses-permission android:name="com.android.browser.permission.WRITE_HISTORY_BOOKMARKS">
+</uses-permission>
+<uses-permission android:name="android.permission.MASTER_CLEAR">
+</uses-permission>
+<uses-permission android:name="android.permission.REBOOT">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<application android:icon="@7F020004" android:label="@7F060000" android:name=".DMApp" android:theme="@android:0103013F">
+<activity android:configChanges="0x00000480" android:label="@7F060000" android:name=".DMClient">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x00000480" android:excludeFromRecents="true" android:label="@7F06004C" android:launchMode="3" android:name=".SystemUpdateActivity" android:theme="@7F0A0000">
+<intent-filter>
+<action android:name="android.settings.ASUS_SYSTEM_UPDATE_SETTINGS">
+</action>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x00000480" android:excludeFromRecents="true" android:name=".mmi.dialog.AlertBatteryDialog" android:theme="@android:0103031B">
+</activity>
+<activity android:configChanges="0x00000480" android:excludeFromRecents="true" android:name=".mmi.dialog.AlertConfirmDialog" android:theme="@android:0103031B">
+</activity>
+<activity android:configChanges="0x00000480" android:excludeFromRecents="true" android:launchMode="1" android:name=".mmi.dialog.AlertDisplayDialog" android:theme="@android:0103031B">
+</activity>
+<activity android:configChanges="0x00000480" android:excludeFromRecents="true" android:launchMode="1" android:name=".mmi.dialog.AlertFirmwareUpgradeFail" android:theme="@android:0103031B">
+</activity>
+<activity android:configChanges="0x00000480" android:excludeFromRecents="true" android:name=".mmi.dialog.AlertInputDateDialog" android:theme="@android:0103031B">
+</activity>
+<activity android:configChanges="0x00000480" android:excludeFromRecents="true" android:name=".mmi.dialog.AlertInputDialog" android:theme="@android:0103031B">
+</activity>
+<activity android:configChanges="0x00000480" android:excludeFromRecents="true" android:name=".mmi.dialog.AlertInputTimeDialog" android:theme="@android:0103031B">
+</activity>
+<activity android:configChanges="0x00000480" android:excludeFromRecents="true" android:name=".mmi.dialog.AlertMultiChoiceDialog" android:theme="@android:0103031B">
+</activity>
+<activity android:configChanges="0x00000480" android:excludeFromRecents="true" android:name=".mmi.dialog.AlertSingleChoiceDialog" android:theme="@android:0103031B">
+</activity>
+<activity android:configChanges="0x00000480" android:excludeFromRecents="true" android:launchMode="2" android:name=".mmi.dialog.ConfirmDLDialog" android:theme="@android:0103031B">
+</activity>
+<activity android:configChanges="0x00000480" android:excludeFromRecents="true" android:launchMode="2" android:name=".mmi.dialog.ConfirmUPDialog" android:theme="@android:0103031B">
+</activity>
+<activity android:configChanges="0x00000480" android:excludeFromRecents="true" android:launchMode="1" android:name=".mmi.dialog.AlertFirmwareUpgradeSuccess" android:theme="@android:0103031B">
+</activity>
+<activity android:configChanges="0x00000480" android:excludeFromRecents="true" android:launchMode="1" android:name=".mmi.dialog.AlertFotaErrorReportDialog" android:theme="@android:0103031B">
+</activity>
+<activity android:configChanges="0x00000480" android:excludeFromRecents="true" android:launchMode="1" android:name=".mmi.dialog.ConfirmEnlargeDialog" android:theme="@android:0103031B">
+</activity>
+<service android:name=".DMService">
+<intent-filter>
+<action android:name="com.asus.dm.IDMService">
+</action>
+<action android:name="com.asus.dm.IStatusNotifyRegister">
+</action>
+<action android:name="com.asus.provisioningclient.persister.IDmPersister">
+</action>
+<action android:name="com.asus.dm.DMService.showConfirmUpdate">
+</action>
+<action android:name="com.asus.dm.DMService.showpushnotice">
+</action>
+<action android:name="com.asus.dm.DMService.showpushdialog">
+</action>
+<action android:name="com.asus.dm.modifyui.test">
+</action>
+<action android:name="com.asus.dm.DMService.executeupdate">
+</action>
+<action android:name="com.asus.dm.DMService.executeenlarge">
+</action>
+<action android:name="com.asus.dm.DMService.noti.partition.enlarge">
+</action>
+</intent-filter>
+</service>
+<receiver android:name="com.asus.dm.BootCompletedReceiver">
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:enabled="false" android:name=".ConnectivityStateReceiver">
+<intent-filter>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name="com.asus.dm.ni.NetworkInitialReceiver">
+<intent-filter>
+<action android:name="android.provider.Telephony.WAP_PUSH_RECEIVED">
+</action>
+<data android:mimeType="application/vnd.syncml.notification">
+</data>
+</intent-filter>
+</receiver>
+<receiver android:name=".c2dm.C2DMReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+<category android:name="com.asus.dm">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.REGISTRATION">
+</action>
+<category android:name="com.asus.dm">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="com.asus.dm.push.intent.RECEIVE">
+</action>
+<category android:name="com.asus.dm">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.accounts.LOGIN_ACCOUNTS_CHANGED">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name=".BadgeReceiver" android:permission="com.android.launcher.permission.WRITE_SETTINGS">
+<intent-filter>
+<action android:name="com.asus.dm.broadcast_badge">
+</action>
+</intent-filter>
+&gt;
+
+</receiver>
+</application>
+</manifest>

@@ -1,0 +1,282 @@
+<?xml version="1.0" ?><manifest android:versionCode="85" android:versionName="2.1.2" package="com.hifimusic.player" platformBuildVersionCode="25" platformBuildVersionName="7.1.1" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="15" android:targetSdkVersion="22">
+</uses-sdk>
+<uses-permission android:name="android.permission.BLUETOOTH">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.SEND_SMS">
+</uses-permission>
+<uses-permission android:name="android.permission.RECORD_AUDIO">
+</uses-permission>
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<permission android:name="com.hifimusic.player.permission.MIPUSH_RECEIVE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="com.hifimusic.player.permission.MIPUSH_RECEIVE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_GPS">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_ASSISTED_GPS">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.BLUETOOTH">
+</uses-permission>
+<uses-permission android:name="android.permission.BLUETOOTH_ADMIN">
+</uses-permission>
+<uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS">
+</uses-permission>
+<supports-screens android:anyDensity="true" android:largeScreens="true" android:normalScreens="true" android:smallScreens="true" android:xlargeScreens="true">
+</supports-screens>
+<application android:allowBackup="true" android:icon="@7F030000" android:label="@7F090044" android:largeHeap="true" android:name="s.h.e.l.l.S" android:theme="@7F0B00DC">
+<meta-data android:name="UMENG_APPKEY" android:value="54f40896fd98c5bdbb000f4d">
+</meta-data>
+<meta-data android:name="UMENG_CHANNEL" android:value="Yingyongbao">
+</meta-data>
+<activity android:name="com.dfim.music.ui.activity.IntroduceActivity" android:screenOrientation="1" android:theme="@android:01030007">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:label="@7F090044" android:name="com.dfim.music.ui.activity.SplashActivity" android:screenOrientation="1" android:theme="@android:01030007">
+</activity>
+<activity android:label="@7F090044" android:launchMode="2" android:name="com.dfim.music.ui.MainActivity" android:screenOrientation="1" android:theme="@7F0B003E">
+</activity>
+<activity android:label="@7F090044" android:name="com.dfim.music.ui.activity.Main2Activity" android:screenOrientation="1" android:theme="@7F0B003D">
+</activity>
+<activity android:label="@7F090044" android:launchMode="1" android:name="com.dfim.music.ui.activity.PlayerActivity" android:screenOrientation="1" android:theme="@7F0B003E">
+</activity>
+<activity android:label="@7F090044" android:name="com.dfim.music.ui.activity.CategoryActivity" android:screenOrientation="1" android:theme="@7F0B003D">
+</activity>
+<activity android:label="@7F090044" android:name="com.dfim.music.ui.activity.ArtistListActivity" android:screenOrientation="1" android:theme="@7F0B003D">
+</activity>
+<activity android:label="@7F090044" android:name="com.dfim.music.ui.activity.ArtistAlbumListActivity" android:screenOrientation="1" android:theme="@7F0B003E">
+</activity>
+<activity android:label="@7F090044" android:name="com.dfim.music.ui.activity.ArtistGroupActivity" android:screenOrientation="1" android:theme="@7F0B003D">
+</activity>
+<activity android:label="@7F090044" android:name="com.dfim.music.ui.activity.CategoryAlbumListActivity" android:screenOrientation="1" android:theme="@7F0B003D">
+</activity>
+<activity android:name="com.dfim.music.ui.activity.AlbumDetailActivity" android:screenOrientation="1" android:theme="@7F0B003E">
+</activity>
+<service android:exported="false" android:name="com.dfim.music.core.MusicService">
+<intent-filter android:priority="1000">
+<action android:name="com.dfim.music.core.actionTOGGLE_PLAYBACK">
+</action>
+<action android:name="com.dfim.music.core.actionPLAY">
+</action>
+<action android:name="com.dfim.music.core.actionPAUSE">
+</action>
+<action android:name="com.dfim.music.core.actionSKIP">
+</action>
+<action android:name="com.dfim.music.core.actionNEXT">
+</action>
+<action android:name="com.dfim.music.core.actionLAST">
+</action>
+<action android:name="com.dfim.music.core.actionREWIND">
+</action>
+<action android:name="com.dfim.music.core.actionNEXT_ALBUM">
+</action>
+<action android:name="com.dfim.music.core.actionSTOP">
+</action>
+<action android:name="com.dfim.music.core.actionURI">
+</action>
+<action android:name="com.dfim.music.core.actionAddToFavorite">
+</action>
+<action android:name="com.dfim.music.core.actionPlayMode">
+</action>
+<action android:name="com.dfim.music.core.actionSeekTo">
+</action>
+<action android:name="com.dfim.music.core.actionPlayerError">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="com.dfim.music.core.actionURL">
+</action>
+<data android:scheme="http">
+</data>
+</intent-filter>
+</service>
+<receiver android:name="com.dfim.music.core.MusicIntentReceiver">
+<intent-filter>
+<action android:name="android.media.AUDIO_BECOMING_NOISY">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.MEDIA_BUTTON">
+</action>
+</intent-filter>
+</receiver>
+<activity android:name="com.dfim.music.ui.activity.WebViewActivity" android:screenOrientation="1" android:theme="@7F0B003F">
+</activity>
+<activity android:name="com.dfim.music.ui.activity.SearchActivity" android:screenOrientation="1" android:theme="@7F0B003F">
+</activity>
+<activity android:name="com.dfim.music.ui.activity.CollectedMusicsActivity" android:screenOrientation="1" android:theme="@7F0B003F">
+</activity>
+<activity android:name="com.dfim.music.ui.activity.SettingActivity" android:screenOrientation="1" android:theme="@7F0B003F">
+</activity>
+<activity android:exported="true" android:label="HIFI 乐" android:name="com.hifimusic.player.wxapi.WXEntryActivity">
+</activity>
+<activity android:exported="true" android:label="HIFI 乐" android:name="com.hifimusic.player.wxapi.WXPayEntryActivity">
+</activity>
+<activity android:label="手机登录" android:name="com.dfim.music.ui.mobile_login_register_reset.MobileLoginActivity" android:screenOrientation="1" android:theme="@7F0B003D">
+</activity>
+<activity android:label="手机公" android:name="com.dfim.music.ui.mobile_login_register_reset.MobileRegisterActivity" android:screenOrientation="1" android:theme="@7F0B003D">
+</activity>
+<activity android:label="置ś�" android:name="com.dfim.music.ui.mobile_login_register_reset.MobileResetPassWordActivity" android:screenOrientation="1" android:theme="@7F0B003D">
+</activity>
+<activity android:name="com.dfim.music.ui.activity.AddPlayListActivity" android:screenOrientation="1" android:theme="@7F0B003F">
+</activity>
+<activity android:name="com.dfim.music.ui.activity.PlayListListActivity" android:screenOrientation="1" android:theme="@7F0B003F">
+</activity>
+<activity android:name="com.dfim.music.ui.activity.AddToPlayListActivity" android:screenOrientation="1" android:theme="@7F0B003F">
+</activity>
+<activity android:launchMode="1" android:name="com.dfim.music.ui.activity.DownloadMusicActivity" android:screenOrientation="1" android:theme="@7F0B003F">
+</activity>
+<activity android:name="com.dfim.music.ui.activity.PlayListActivity" android:screenOrientation="1" android:theme="@7F0B003F">
+</activity>
+<activity android:name="com.dfim.music.ui.activity.BaseWebActivity" android:screenOrientation="1" android:theme="@7F0B003F">
+</activity>
+<receiver android:name="com.dfim.music.receiver.LoginReceiver">
+<intent-filter>
+<action android:name="com.dfim.music.wxlogin.failure">
+</action>
+<action android:name="com.dfim.music.wxlogin.success">
+</action>
+<action android:name="com.dfim.music.mobilelogin.success">
+</action>
+<action android:name="com.dfim.music.mobilelogin.failure">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name="com.dfim.music.receiver.SwitchSongReceiver">
+<intent-filter android:priority="887">
+<action android:name="com.dfim.music.core.MusicService.switchSong">
+</action>
+</intent-filter>
+</receiver>
+<activity android:name="com.dfim.music.ui.activity.YikaitongActivity" android:screenOrientation="1" android:theme="@7F0B003F">
+</activity>
+<activity android:launchMode="2" android:name="com.dfim.music.ui.activity.VIPInfoActivity" android:screenOrientation="1" android:theme="@7F0B003F">
+</activity>
+<activity android:launchMode="3" android:name="com.dfim.music.ui.activity.VipWebViewActivity" android:screenOrientation="1" android:theme="@7F0B003F">
+</activity>
+<activity android:configChanges="0x000000E0" android:exported="false" android:name="com.alipay.sdk.app.H5PayActivity" android:screenOrientation="3">
+</activity>
+<activity android:configChanges="0x000000E0" android:exported="false" android:name="com.alipay.sdk.auth.AuthActivity" android:screenOrientation="3">
+</activity>
+<activity android:name="com.dfim.music.ui.activity.BoughtListActivity" android:screenOrientation="1" android:theme="@7F0B003F">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.dfim.music.ui.activity.BaichuanFeedbackActivity" android:screenOrientation="1" android:theme="@7F0B0195" android:windowSoftInputMode="0x00000010">
+</activity>
+<meta-data android:name="com.google.android.gms.version" android:value="@7F0D0009">
+</meta-data>
+<activity android:name="com.dfim.music.ui.activity.ActivateCouponActivity" android:screenOrientation="1" android:theme="@7F0B003F">
+</activity>
+<activity android:configChanges="0x00000CF0" android:launchMode="1" android:name="io.vov.vitamio.activity.InitActivity" android:theme="@android:01030006" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.dfim.music.ui.activity.DownloadHistoryActivity" android:screenOrientation="1" android:theme="@7F0B003F">
+</activity>
+<activity android:name="com.dfim.music.ui.activity.DecoderSettingActivity" android:screenOrientation="1" android:theme="@7F0B003F">
+</activity>
+<activity android:name="com.dfim.music.ui.activity.SubjectListActivity" android:screenOrientation="1" android:theme="@7F0B003F">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.dfim.music.ui.activity.DFUniversalWebViewActivity" android:theme="@7F0B003F">
+</activity>
+<receiver android:enabled="true" android:exported="true" android:name="com.dfim.music.receiver.PhoneStateReceiver">
+<intent-filter>
+<action android:name="android.intent.action.PHONE_STATE">
+</action>
+</intent-filter>
+</receiver>
+<activity android:name="com.dfim.music.ui.activity.NetworkWarningActivity" android:theme="@7F0B013F">
+</activity>
+<activity android:name="com.dfim.music.ui.activity.ChannelActivity" android:screenOrientation="1" android:theme="@7F0B003F">
+</activity>
+<service android:enabled="true" android:name="com.xiaomi.push.service.XMPushService" android:process=":pushservice">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.xiaomi.push.service.XMJobService" android:permission="android.permission.BIND_JOB_SERVICE" android:process=":pushservice">
+</service>
+<service android:enabled="true" android:exported="true" android:name="com.xiaomi.mipush.sdk.PushMessageHandler">
+</service>
+<service android:enabled="true" android:name="com.xiaomi.mipush.sdk.MessageHandleService">
+</service>
+<receiver android:exported="true" android:name="com.xiaomi.push.service.receivers.NetworkStatusReceiver">
+<intent-filter>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</receiver>
+<receiver android:exported="false" android:name="com.xiaomi.push.service.receivers.PingReceiver" android:process=":pushservice">
+<intent-filter>
+<action android:name="com.xiaomi.push.PING_TIMER">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:exported="true" android:name="com.dfim.music.receiver.DemoMessageReceiver">
+<intent-filter>
+<action android:name="com.xiaomi.mipush.RECEIVE_MESSAGE">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="com.xiaomi.mipush.MESSAGE_ARRIVED">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="com.xiaomi.mipush.ERROR">
+</action>
+</intent-filter>
+</receiver>
+<service android:name="org.fourthline.cling.android.AndroidUpnpServiceImpl">
+</service>
+<activity android:configChanges="0x000004A0" android:name="cm.pass.sdk.activity.BufferActivity" android:screenOrientation="-1">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="cm.pass.sdk.activity.LoginAuthActivity" android:screenOrientation="-1">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="cm.pass.sdk.activity.AuthActivity" android:screenOrientation="-1">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="cm.pass.sdk.activity.OAuthActivity" android:screenOrientation="-1">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="cm.pass.sdk.activity.ChooseAccountActivity" android:screenOrientation="-1">
+</activity>
+<activity android:name="com.dfim.music.ui.activity.SettingActivityLite" android:screenOrientation="1" android:theme="@7F0B003F">
+</activity>
+<meta-data android:name="UMCSDK_SMSCODE_FLAG" android:value="0">
+</meta-data>
+<meta-data android:name="UMCSDK_SMSLOGIN_FLAG" android:value="0">
+</meta-data>
+<activity android:name="com.dfim.music.ui.activity.MobileSMLoginActivity">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.alibaba.sdk.android.feedback.windvane.CustomHybirdActivity" android:screenOrientation="1" android:theme="@7F0B0195" android:windowSoftInputMode="0x00000010">
+</activity>
+</application>
+</manifest>

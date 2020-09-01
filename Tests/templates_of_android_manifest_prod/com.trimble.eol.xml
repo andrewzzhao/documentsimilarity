@@ -1,0 +1,72 @@
+<?xml version="1.0" ?><manifest android:versionCode="12" android:versionName="1.5.7" package="com.trimble.eol" platformBuildVersionCode="27" platformBuildVersionName="8.1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="19" android:targetSdkVersion="27">
+</uses-sdk>
+<uses-permission android:name="android.permission.BLUETOOTH_ADMIN">
+</uses-permission>
+<uses-permission android:name="android.permission.BLUETOOTH">
+</uses-permission>
+<uses-permission android:name="android.permission.BLUETOOTH_PRIVILEGED">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<application android:allowBackup="true" android:hardwareAccelerated="false" android:icon="@7F020058" android:label="@7F070022" android:largeHeap="true" android:supportsRtl="true" android:theme="@7F090093">
+<activity android:configChanges="0x000000A0" android:name="com.trimble.eol.StartupActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000A0" android:label="@7F070041" android:name="com.trimble.eol.DeviceListActivity" android:theme="@android:01030073">
+</activity>
+<activity android:configChanges="0x000000A0" android:label="@7F070041" android:name="com.trimble.eol.DeviceListPairingActivity" android:screenOrientation="1" android:theme="@android:0103006F">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+</intent-filter>
+</activity>
+<activity android:label="@7F070040" android:name="com.trimble.eol.CmdListActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="EOL Tool" android:name="com.trimble.eol.MainActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.trimble.serviceengineerapp.StatusActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.trimble.serviceengineerapp.SettingsActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.trimble.serviceengineerapp.CommandsActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.trimble.serviceengineerapp.BlockAppActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.trimble.serviceengineerapp.ConnectDevice" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F070022" android:name="com.trimble.hm10bluwtooth.DeviceScanActivity">
+</activity>
+<activity android:name="com.trimble.hm10bluwtooth.DeviceControlActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="io.github.xudaojie.qrcodelib.CaptureActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.trimble.eol.SimpleCaptureActivity" android:screenOrientation="1">
+</activity>
+<service android:enabled="true" android:name="com.trimble.hm10bluwtooth.BluetoothLeService">
+</service>
+<receiver android:name="com.trimble.serviceengineerapp.OTPReader">
+<intent-filter>
+<action android:name="android.provider.Telephony.SMS_RECEIVED">
+</action>
+</intent-filter>
+</receiver>
+<service android:enabled="true" android:name="com.trimble.serviceengineerapp.UsbService">
+</service>
+</application>
+</manifest>

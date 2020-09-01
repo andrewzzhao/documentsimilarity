@@ -1,0 +1,194 @@
+<?xml version="1.0" ?><manifest android:versionCode="9" android:versionName="1.8" package="com.almeida.gameszone" platformBuildVersionCode="23" platformBuildVersionName="6.0-2704002" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="11" android:targetSdkVersion="22">
+</uses-sdk>
+<uses-permission android:name="android.permission.READ_SMS">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_SMS">
+</uses-permission>
+<uses-permission android:name="android.permission.SEND_SMS">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SMS">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="com.android.vending.BILLING">
+</uses-permission>
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<permission android:name="com.almeida.gameszone.permission.C2D_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="com.almeida.gameszone.permission.C2D_MESSAGE">
+</uses-permission>
+<application android:allowBackup="true" android:icon="@7F0200E0" android:label="@7F060045" android:largeHeap="true" android:name="com.almeida.gameszone.GlobalApplication" android:theme="@7F09008E">
+<activity android:label="@7F060045" android:name="com.almeida.gameszone.SplashScreenActivity">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:label="@7F060045" android:name="com.almeida.gameszone.MainActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F060045" android:name="com.almeida.gameszone.GamesListActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F060045" android:name="com.almeida.gameszone.GameActivity">
+</activity>
+<activity android:label="@7F060045" android:name="com.almeida.gameszone.GameDetailedActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F060045" android:name="com.almeida.gameszone.SettingsActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F060045" android:name="com.almeida.gameszone.FavoritesActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004B0" android:label="@7F060045" android:name="com.ma.paymentsdk.MobileArts_BillingActivity" android:screenOrientation="1">
+</activity>
+<receiver android:name="com.ma.paymentsdk.broadcast.MobileArts_MessageReceiver">
+<intent-filter android:priority="1000">
+<action android:name="android.provider.Telephony.SMS_RECEIVED">
+</action>
+</intent-filter>
+</receiver>
+<meta-data android:name="com.google.android.gms.version" android:value="@7F0A0004">
+</meta-data>
+<receiver android:exported="true" android:name="com.almeida.gameszone.objects.InstallReceiver">
+<intent-filter android:priority="1000">
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+<meta-data android:name="com.ma.ServiceId" android:value="@7F0600A8">
+</meta-data>
+<meta-data android:name="com.ma.ClientGuid" android:value="@7F060062">
+</meta-data>
+<meta-data android:name="com.ma.ClientKey" android:value="@7F060063">
+</meta-data>
+<meta-data android:name="com.ma.Apk_CampaignId" android:value="@7F060061">
+</meta-data>
+<meta-data android:name="com.ma.GlobalChargeAccountId" android:value="@7F060064">
+</meta-data>
+<service android:exported="false" android:name="com.ma.paymentsdk.fcm.MyFirebaseMessagingService">
+<intent-filter>
+<action android:name="com.google.firebase.MESSAGING_EVENT">
+</action>
+</intent-filter>
+</service>
+<service android:exported="false" android:name="com.ma.paymentsdk.fcm.MyFirebaseInstanceIDService">
+<intent-filter>
+<action android:name="com.google.firebase.INSTANCE_ID_EVENT">
+</action>
+</intent-filter>
+</service>
+<activity android:name="com.ma.paymentsdk.SelectCountryActivity" android:screenOrientation="1" android:theme="@7F09008F">
+</activity>
+<activity android:label="@7F0600B2" android:name="com.ma.paymentsdk.NotificationsActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F0600B1" android:name="com.ma.paymentsdk.NotificationDetails" android:screenOrientation="1">
+</activity>
+<activity android:excludeFromRecents="true" android:exported="false" android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity" android:theme="@android:01030010">
+</activity>
+<service android:exported="true" android:name="com.google.android.gms.auth.api.signin.RevocationBoundService" android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION">
+</service>
+<activity android:name="com.globalcharge.android.ConfirmActivity" android:screenOrientation="1" android:theme="@7F0900C5">
+</activity>
+<activity android:name="com.globalcharge.android.ProgressActivity" android:screenOrientation="1" android:theme="@7F0900C5">
+</activity>
+<activity android:name="com.globalcharge.android.FinalResultActivity" android:screenOrientation="1" android:theme="@7F0900C5">
+</activity>
+<activity android:name="com.globalcharge.android.FinalResultActivitySetTwo" android:screenOrientation="1" android:theme="@7F0900C0">
+</activity>
+<activity android:name="com.globalcharge.android.ConfirmActivitySetTwo" android:screenOrientation="1" android:theme="@7F0900C0">
+</activity>
+<activity android:name="com.globalcharge.android.ProgressActivitySetTwo" android:screenOrientation="1" android:theme="@7F0900C0">
+</activity>
+<activity android:name="com.globalcharge.android.FinalResultActivityBbl" android:screenOrientation="1" android:theme="@7F0900C1">
+</activity>
+<activity android:name="com.globalcharge.android.ConfirmActivityBbl" android:screenOrientation="1" android:theme="@7F0900C1">
+</activity>
+<activity android:name="com.globalcharge.android.ProgressActivityBbl" android:screenOrientation="1" android:theme="@7F0900C1">
+</activity>
+<activity android:name="com.globalcharge.android.FinalResultActivityGeneric" android:screenOrientation="1" android:theme="@7F0900C4">
+</activity>
+<activity android:name="com.globalcharge.android.ConfirmActivityGeneric" android:screenOrientation="1" android:theme="@7F0900C4">
+</activity>
+<activity android:name="com.globalcharge.android.ProgressActivityGeneric" android:screenOrientation="1" android:theme="@7F0900C4">
+</activity>
+<activity android:name="com.globalcharge.android.FinalResultActivityBdTr" android:screenOrientation="1" android:theme="@7F0900BF">
+</activity>
+<activity android:name="com.globalcharge.android.ConfirmActivityBdTr" android:screenOrientation="1" android:theme="@7F0900BF">
+</activity>
+<activity android:name="com.globalcharge.android.ProgressActivityBdTr" android:screenOrientation="1" android:theme="@7F0900BF">
+</activity>
+<activity android:name="com.globalcharge.android.FinalResultActivityXbox" android:screenOrientation="1" android:theme="@7F0900C6">
+</activity>
+<activity android:name="com.globalcharge.android.ConfirmActivityXbox" android:screenOrientation="1" android:theme="@7F0900C6">
+</activity>
+<activity android:name="com.globalcharge.android.ProgressActivityXbox" android:screenOrientation="1" android:theme="@7F0900C6">
+</activity>
+<service android:exported="true" android:name="com.google.firebase.messaging.FirebaseMessagingService">
+<intent-filter android:priority="-500">
+<action android:name="com.google.firebase.MESSAGING_EVENT">
+</action>
+</intent-filter>
+</service>
+<activity android:exported="true" android:name="com.google.android.gms.appinvite.PreviewActivity" android:theme="@7F090106">
+<intent-filter>
+<action android:name="com.google.android.gms.appinvite.ACTION_PREVIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:01030010">
+</activity>
+<receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementReceiver">
+</receiver>
+<receiver android:enabled="true" android:exported="true" android:name="com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver" android:permission="android.permission.INSTALL_PACKAGES">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementService">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementJobService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<receiver android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+<category android:name="com.almeida.gameszone">
+</category>
+</intent-filter>
+</receiver>
+<receiver android:exported="false" android:name="com.google.firebase.iid.FirebaseInstanceIdInternalReceiver">
+</receiver>
+<service android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdService">
+<intent-filter android:priority="-500">
+<action android:name="com.google.firebase.INSTANCE_ID_EVENT">
+</action>
+</intent-filter>
+</service>
+<provider android:authorities="com.almeida.gameszone.firebaseinitprovider" android:exported="false" android:initOrder="100" android:name="com.google.firebase.provider.FirebaseInitProvider">
+</provider>
+</application>
+</manifest>

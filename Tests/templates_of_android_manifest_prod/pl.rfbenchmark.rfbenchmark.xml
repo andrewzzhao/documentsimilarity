@@ -1,0 +1,204 @@
+<?xml version="1.0" ?><manifest android:compileSdkVersion="28" android:compileSdkVersionCodename="9" android:versionCode="522" android:versionName="1.38.20" package="pl.rfbenchmark.rfbenchmark" platformBuildVersionCode="28" platformBuildVersionName="9" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="15" android:targetSdkVersion="28">
+</uses-sdk>
+<uses-feature android:name="android.hardware.touchscreen" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.location" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.location.network" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.location.gps" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.telephony" android:required="false">
+</uses-feature>
+<uses-permission android:name="android.permission.FOREGROUND_SERVICE">
+</uses-permission>
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" android:required="false">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" android:required="false">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" android:required="false">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" android:required="false">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" android:required="false">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE" android:required="false">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE">
+</uses-permission>
+<uses-permission android:name="android.permission.PACKAGE_USAGE_STATS">
+</uses-permission>
+<permission android:name="pl.rfbenchmark.rfbenchmark.permission.C2D_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="pl.rfbenchmark.rfbenchmark.permission.C2D_MESSAGE">
+</uses-permission>
+<permission android:name="pl.rfbenchmark.rfbenchmark.permission.MAPS_RECEIVE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="pl.rfbenchmark.rfbenchmark.permission.MAPS_RECEIVE">
+</uses-permission>
+<uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES">
+</uses-permission>
+<uses-feature android:glEsVersion="0x00020000" android:required="true">
+</uses-feature>
+<uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE">
+</uses-permission>
+<application android:allowBackup="false" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:fullBackupOnly="false" android:icon="@7F0600D3" android:label="@7F0D0044" android:name="pl.rfbenchmark.rfbenchmark.RFBenchmarkApp" android:supportsRtl="true" android:theme="@7F0E0010">
+<meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="@7F0D00F3">
+</meta-data>
+<meta-data android:name="com.google.android.gms.version" android:value="@7F080004">
+</meta-data>
+<meta-data android:name="com.google.android.gms.ads.APPLICATION_ID" android:value="@7F0D0047">
+</meta-data>
+<activity android:configChanges="0x00000FB0" android:label="@7F0D0044" android:launchMode="1" android:name="pl.rfbenchmark.rfbenchmark.MainActivity">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:label="@7F0D0044" android:launchMode="1" android:name="com.parse.ui.login.ParseLoginActivity">
+<meta-data android:name="com.parse.ui.login.ParseLoginActivity.PARSE_LOGIN_ENABLED" android:value="true">
+</meta-data>
+<meta-data android:name="com.parse.ui.login.ParseLoginActivity.PARSE_LOGIN_EMAIL_AS_USERNAME" android:value="true">
+</meta-data>
+<meta-data android:name="com.parse.ui.login.ParseLoginActivity.FACEBOOK_LOGIN_ENABLED" android:value="true">
+</meta-data>
+<meta-data android:name="com.parse.ui.login.ParseLoginActivity.TWITTER_LOGIN_ENABLED" android:value="true">
+</meta-data>
+</activity>
+<activity android:configChanges="0x000005B0" android:label="@7F0D0044" android:launchMode="1" android:name="com.facebook.FacebookActivity" android:theme="@7F0E01D8">
+</activity>
+<activity android:configChanges="0x00000FB0" android:exported="false" android:name="com.google.android.gms.ads.AdActivity" android:theme="@android:0103000F">
+</activity>
+<meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@7F0D00BB">
+</meta-data>
+<service android:exported="false" android:icon="@7F0600D3" android:label="@7F0D00D0" android:name="pl.rfbenchmark.rfcore.service.GsmService">
+</service>
+<receiver android:enabled="true" android:exported="true" android:label="@7F0D00D4" android:name="pl.rfbenchmark.rfcore.service.StartGsmServiceReceiver">
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+</intent-filter>
+</receiver>
+<service android:exported="true" android:name="pl.rfbenchmark.rfcore.notification.InstanceIdService">
+<intent-filter>
+<action android:name="com.google.firebase.INSTANCE_ID_EVENT">
+</action>
+</intent-filter>
+</service>
+<service android:name="pl.rfbenchmark.rfcore.notification.MessagingService">
+<intent-filter>
+<action android:name="com.google.firebase.MESSAGING_EVENT">
+</action>
+</intent-filter>
+</service>
+<receiver android:exported="false" android:name="pl.rfbenchmark.rfcore.notification.Receiver">
+<intent-filter>
+<action android:name="com.parse.push.intent.RECEIVE">
+</action>
+<action android:name="com.parse.push.intent.DELETE">
+</action>
+<action android:name="com.parse.push.intent.OPEN">
+</action>
+</intent-filter>
+</receiver>
+<service android:exported="false" android:name="pl.rfbenchmark.rfcore.notification.JobService">
+<intent-filter>
+<action android:name="com.firebase.jobdispatcher.ACTION_EXECUTE">
+</action>
+</intent-filter>
+</service>
+<provider android:authorities="com.facebook.app.FacebookContentProvider697615643607820" android:exported="true" android:name="com.facebook.FacebookContentProvider">
+</provider>
+<meta-data android:name="io.fabric.ApiKey" android:value="59d1497eb011ccfd768593c300c843e203ffdafb">
+</meta-data>
+<activity android:name="com.facebook.CustomTabMainActivity">
+</activity>
+<activity android:name="com.facebook.CustomTabActivity">
+</activity>
+<provider android:authorities="pl.rfbenchmark.rfbenchmark.MarketingInitProvider" android:exported="false" android:name="com.facebook.marketing.internal.MarketingInitProvider">
+</provider>
+<provider android:authorities="pl.rfbenchmark.rfbenchmark.FacebookInitProvider" android:exported="false" android:name="com.facebook.internal.FacebookInitProvider">
+</provider>
+<receiver android:exported="false" android:name="com.facebook.CurrentAccessTokenExpirationBroadcastReceiver">
+<intent-filter>
+<action android:name="com.facebook.sdk.ACTION_CURRENT_ACCESS_TOKEN_CHANGED">
+</action>
+</intent-filter>
+</receiver>
+<provider android:authorities="pl.rfbenchmark.rfbenchmark.crashlyticsinitprovider" android:exported="false" android:initOrder="90" android:name="com.crashlytics.android.CrashlyticsInitProvider">
+</provider>
+<uses-library android:name="org.apache.http.legacy" android:required="false">
+</uses-library>
+<receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.analytics.AnalyticsReceiver">
+</receiver>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.analytics.AnalyticsService">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.analytics.AnalyticsJobService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<service android:exported="true" android:name="com.google.firebase.messaging.FirebaseMessagingService">
+<intent-filter android:priority="-500">
+<action android:name="com.google.firebase.MESSAGING_EVENT">
+</action>
+</intent-filter>
+</service>
+<service android:exported="true" android:name="com.firebase.jobdispatcher.GooglePlayReceiver" android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE">
+<intent-filter>
+<action android:name="com.google.android.gms.gcm.ACTION_TASK_READY">
+</action>
+</intent-filter>
+</service>
+<provider android:authorities="pl.rfbenchmark.rfbenchmark.lifecycle-process" android:exported="false" android:multiprocess="true" android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer">
+</provider>
+<service android:exported="false" android:name="com.google.firebase.components.ComponentDiscoveryService">
+<meta-data android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar" android:value="com.google.firebase.components.ComponentRegistrar">
+</meta-data>
+<meta-data android:name="com.google.firebase.components:com.google.firebase.iid.Registrar" android:value="com.google.firebase.components.ComponentRegistrar">
+</meta-data>
+</service>
+<receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementReceiver">
+</receiver>
+<receiver android:enabled="true" android:exported="true" android:name="com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver" android:permission="android.permission.INSTALL_PACKAGES">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementService">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementJobService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<receiver android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+</intent-filter>
+</receiver>
+<service android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdService">
+<intent-filter android:priority="-500">
+<action android:name="com.google.firebase.INSTANCE_ID_EVENT">
+</action>
+</intent-filter>
+</service>
+<activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:01030010">
+</activity>
+<provider android:authorities="pl.rfbenchmark.rfbenchmark.mobileadsinitprovider" android:exported="false" android:initOrder="100" android:name="com.google.android.gms.ads.MobileAdsInitProvider">
+</provider>
+<provider android:authorities="pl.rfbenchmark.rfbenchmark.firebaseinitprovider" android:exported="false" android:initOrder="100" android:name="com.google.firebase.provider.FirebaseInitProvider">
+</provider>
+</application>
+</manifest>

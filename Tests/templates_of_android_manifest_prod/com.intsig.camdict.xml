@@ -1,0 +1,146 @@
+<?xml version="1.0" ?><manifest android:installLocation="0" android:sharedUserId="com.intsig" android:versionCode="2400" android:versionName="2.4.0.20141231" package="com.intsig.camdict" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-permission android:name="com.android.vending.BILLING">
+</uses-permission>
+<uses-permission android:name="com.samsung.accessory.permission.ACCESSORY_FRAMEWORK">
+</uses-permission>
+<uses-permission android:name="com.samsung.wmanager.APP">
+</uses-permission>
+<application android:configChanges="0x00000FB0" android:icon="@7F020158" android:label="@7F08004A" android:name="com.intsig.camdict.CamDictApplication" android:screenOrientation="0" android:theme="@7F0A0009">
+<activity android:configChanges="0x00000FB0" android:label="@7F08004A" android:name="com.intsig.camdict.MainMenuActivity" android:screenOrientation="1" android:theme="@7F0A0009" android:windowSoftInputMode="0x00000033">
+</activity>
+<activity android:configChanges="0x00000FB0" android:label="@7F08004A" android:name="com.intsig.camdict.CaptureActivity" android:screenOrientation="0" android:theme="@android:01030007" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x00000FB0" android:name="com.intsig.camdict.HistroyActivity" android:screenOrientation="1" android:theme="@7F0A0009">
+</activity>
+<activity android:configChanges="0x00000FB0" android:name="com.intsig.camdict.TranslateActivity" android:screenOrientation="1" android:theme="@7F0A0009">
+<intent-filter>
+<action android:name="android.intent.action.SEND">
+</action>
+<data android:mimeType="image/*">
+</data>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x00000FB0" android:name="com.intsig.camdict.DictViewActivity" android:theme="@7F0A0009">
+</activity>
+<provider android:authorities="com.intsig.camdict.DcitHistroyProvider" android:name="com.intsig.camdict.DictHistroyProvider">
+</provider>
+<activity android:configChanges="0x00000FB0" android:name="com.intsig.camdict.SettingActivity" android:theme="@7F0A0009">
+</activity>
+<activity android:configChanges="0x00000FB0" android:name="com.intsig.camdict.HelpActivity" android:screenOrientation="1" android:theme="@7F0A0009">
+</activity>
+<activity android:configChanges="0x00000FB0" android:name="com.intsig.payment.UnlockAppActivity" android:theme="@7F0A0009">
+</activity>
+<activity android:configChanges="0x00000FB0" android:label="@7F0800B3" android:name="com.intsig.camdict.UpdateAppActivity" android:theme="@7F0A000B">
+</activity>
+<activity android:name="com.intsig.camdict.UpdateLocalDicActivity" android:theme="@7F0A0009">
+</activity>
+<activity android:configChanges="0x00000FB0" android:name="com.intsig.camdict.SplashActivity" android:screenOrientation="1" android:theme="@7F0A0009">
+<intent-filter>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+<action android:name="android.intent.action.MAIN">
+</action>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x00000FB0" android:name="com.intsig.payment.ActivateActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000FB0" android:name="com.intsig.payment.PayOnPCActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000FB0" android:name="com.intsig.payment.PayMainActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000FB0" android:name="com.intsig.payment.PayOnMobileActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000FB0" android:name="com.intsig.payment.PreVerifyActivity" android:screenOrientation="1" android:theme="@7F0A000B">
+</activity>
+<activity android:configChanges="0x00000FB0" android:name="com.intsig.camdict.DictListActivity" android:screenOrientation="1" android:theme="@7F0A0009">
+</activity>
+<activity android:configChanges="0x00000FB0" android:name="com.intsig.camdict.DictInfoActivity" android:screenOrientation="1" android:theme="@7F0A0009">
+</activity>
+<activity android:configChanges="0x00000FB0" android:name="com.intsig.payment_dict.PaymentActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000FB0" android:name="com.intsig.payment_dict.UnlockAppActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000FB0" android:name="com.intsig.payment_dict.QueryLicenseActivity" android:screenOrientation="1" android:theme="@7F0A000B">
+</activity>
+<activity android:configChanges="0x00000FB0" android:name="com.intsig.payment_dict.ActivateActivity" android:screenOrientation="1">
+</activity>
+<service android:label="@7F0A0009" android:name="com.intsig.camdict.DownLoadService">
+</service>
+<service android:name="com.intsig.payment_dict.BillingService">
+</service>
+<receiver android:name="com.intsig.payment_dict.BillingReceiver">
+<intent-filter>
+<action android:name="com.android.vending.billing.IN_APP_NOTIFY">
+</action>
+<action android:name="com.android.vending.billing.RESPONSE_CODE">
+</action>
+<action android:name="com.android.vending.billing.PURCHASE_STATE_CHANGED">
+</action>
+</intent-filter>
+</receiver>
+<provider android:authorities="com.intsig.camdict.DictQueryHistoryProvider" android:name="com.intsig.camdict.DictQueryHistoryProvider">
+</provider>
+<activity android:configChanges="0x00000FB0" android:label="@7F0800CB" android:name="com.intsig.camdict.SetDefaultLocalDicActivity">
+</activity>
+<activity android:name="com.intsig.camdict.UnlockInSettingPreference" android:theme="@7F0A0009">
+</activity>
+<activity android:label="@7F0800D9" android:name="com.intsig.camdict.DeleteSpeechActivity" android:theme="@7F0A000B">
+</activity>
+<activity android:configChanges="0x00000FB0" android:name="com.google.ads.AdActivity">
+</activity>
+<activity android:configChanges="0x00000FB0" android:name="com.intsig.camdict.OnlineAppStarActivity" android:screenOrientation="1" android:theme="@7F0A0009">
+</activity>
+<activity android:name="com.intsig.camdict.ConfirmRecogResultActivity" android:screenOrientation="1" android:theme="@7F0A0009" android:windowSoftInputMode="0x00000013">
+</activity>
+<service android:name="com.intsig.camdict.FTProviderService">
+</service>
+<service android:name="com.intsig.util.FTSampleProviderImpl">
+</service>
+<receiver android:name="com.samsung.android.sdk.accessory.RegisterUponInstallReceiver">
+<intent-filter>
+<action android:name="android.accessory.device.action.REGISTER_AFTER_INSTALL">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name="com.samsung.android.sdk.accessory.ServiceConnectionIndicationBroadcastReceiver">
+<intent-filter>
+<action android:name="android.accessory.service.action.ACCESSORY_SERVICE_CONNECTION_IND">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name="com.samsung.android.sdk.accessoryfiletransfer.SAFileTransferIncomingRequestReceiver">
+<intent-filter>
+<action android:name="com.samsung.accessory.ftconnection">
+</action>
+</intent-filter>
+</receiver>
+<meta-data android:name="AccessoryServicesLocation" android:value="/res/xml/accessoryservices.xml">
+</meta-data>
+</application>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<supports-screens android:largeScreens="true" android:normalScreens="true" android:smallScreens="true">
+</supports-screens>
+<uses-sdk android:minSdkVersion="5" android:targetSdkVersion="14">
+</uses-sdk>
+<uses-feature android:name="android.hardware.camera">
+</uses-feature>
+<uses-feature android:name="android.hardware.camera.autofocus">
+</uses-feature>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+</manifest>

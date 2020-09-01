@@ -1,0 +1,406 @@
+<?xml version="1.0" ?><manifest android:versionCode="400" android:versionName="4.0.0" package="cn.com.beyo.early" platformBuildVersionCode="23" platformBuildVersionName="6.0-2438415" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="14" android:targetSdkVersion="23">
+</uses-sdk>
+<uses-permission android:name="android.permission.FLASHLIGHT">
+</uses-permission>
+<uses-feature android:name="android.hardware.camera">
+</uses-feature>
+<uses-feature android:name="android.hardware.camera.autofocus">
+</uses-feature>
+<uses-permission android:name="android.permission.RECORD_AUDIO">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="com.android.launcher.permission.READ_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.MANAGE_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS">
+</uses-permission>
+<uses-permission android:name="android.permission.BLUETOOTH">
+</uses-permission>
+<uses-permission android:name="android.permission.BLUETOOTH_ADMIN">
+</uses-permission>
+<uses-permission android:name="android.permission.CALL_PHONE">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<permission android:name="cn.com.beyo.early.permission.JPUSH_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="cn.com.beyo.early.permission.JPUSH_MESSAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_USER_PRESENT">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_NETWORK_STATE">
+</uses-permission>
+<permission android:name="cn.com.beyo.early.permission.MIPUSH_RECEIVE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="cn.com.beyo.early.permission.MIPUSH_RECEIVE">
+</uses-permission>
+<application android:allowBackup="true" android:icon="@7F020008" android:label="@7F060000" android:name=".base.BaseApplication" android:theme="@android:0103000D">
+<meta-data android:name="UMENG_APPKEY" android:value="56fb958767e58ef9200012e7">
+</meta-data>
+<meta-data android:name="UMENG_CHANNEL" android:value="">
+</meta-data>
+<meta-data android:name="com.baidu.lbsapi.API_KEY" android:value="cxO5FrsOKuw3CUwSDZipndOV92Trt62K">
+</meta-data>
+<service android:enabled="true" android:name="com.baidu.location.f" android:process=":remote">
+</service>
+<activity android:configChanges="0x000004A0" android:name="com.mob.tools.MobUIShell" android:screenOrientation="1" android:theme="@android:01030010" android:windowSoftInputMode="0x00000012">
+<intent-filter>
+<data android:scheme="tencent100371282">
+</data>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004A0" android:exported="true" android:name=".wxapi.WXEntryActivity" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<meta-data android:name="EASEMOB_APPKEY" android:value="beyo#byearly">
+</meta-data>
+<activity android:name="com.hyphenate.easeui.ui.EaseBaiduMapActivity">
+</activity>
+<activity android:name="com.hyphenate.easeui.ui.EaseShowBigImageActivity">
+</activity>
+<activity android:name="com.hyphenate.easeui.ui.EaseShowVideoActivity">
+</activity>
+<service android:exported="true" android:name="com.hyphenate.chat.EMChatService">
+</service>
+<receiver android:name="com.hyphenate.chat.EMMonitorReceiver">
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_REMOVED">
+</action>
+<data android:scheme="package">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+<action android:name="android.intent.action.USER_PRESENT">
+</action>
+</intent-filter>
+</receiver>
+<activity android:configChanges="0x000000A0" android:exported="false" android:name="cn.jpush.android.ui.PushActivity" android:theme="@android:01030006">
+<intent-filter>
+<action android:name="cn.jpush.android.ui.PushActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="cn.com.beyo.early">
+</category>
+</intent-filter>
+</activity>
+<service android:enabled="true" android:exported="false" android:name="cn.jpush.android.service.DownloadService">
+</service>
+<service android:enabled="true" android:exported="false" android:name="cn.jpush.android.service.PushService">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.REGISTER">
+</action>
+<action android:name="cn.jpush.android.intent.REPORT">
+</action>
+<action android:name="cn.jpush.android.intent.PushService">
+</action>
+<action android:name="cn.jpush.android.intent.PUSH_TIME">
+</action>
+</intent-filter>
+</service>
+<service android:enabled="true" android:exported="true" android:name="cn.jpush.android.service.DaemonService">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.DaemonService">
+</action>
+<category android:name="cn.com.beyo.early">
+</category>
+</intent-filter>
+</service>
+<receiver android:enabled="true" android:exported="false" android:name="cn.jpush.android.service.PushReceiver">
+<intent-filter android:priority="1000">
+<action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY">
+</action>
+<category android:name="cn.com.beyo.early">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.USER_PRESENT">
+</action>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_ADDED">
+</action>
+<action android:name="android.intent.action.PACKAGE_REMOVED">
+</action>
+<data android:scheme="cn.com.beyo.early">
+</data>
+</intent-filter>
+</receiver>
+<receiver android:exported="false" android:name="cn.jpush.android.service.AlarmReceiver">
+</receiver>
+<receiver android:enabled="true" android:exported="false" android:name=".receiver.JPushReceiver">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.REGISTRATION">
+</action>
+<action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED">
+</action>
+<action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED">
+</action>
+<action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED">
+</action>
+<action android:name="cn.jpush.android.intent.ACTION_RICHPUSH_CALLBACK">
+</action>
+<action android:name="cn.jpush.android.intent.CONNECTION">
+</action>
+<category android:name="cn.com.beyo.early">
+</category>
+</intent-filter>
+</receiver>
+<meta-data android:name="JPUSH_CHANNEL" android:value="developer-default">
+</meta-data>
+<meta-data android:name="JPUSH_APPKEY" android:value="907cf85862554bd8c6817cd4">
+</meta-data>
+<service android:name=".service.OnlineService">
+</service>
+<service android:name=".service.AudioPlayService">
+</service>
+<receiver android:name=".receiver.PhoneReceiver">
+<intent-filter>
+<action android:name="android.intent.action.PHONE_STATE">
+</action>
+<action android:name="android.intent.action.NEW_OUTGOING_CALL">
+</action>
+</intent-filter>
+</receiver>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name=".main.MainUI" android:screenOrientation="1" android:theme="@7F070001">
+</activity>
+<activity android:name=".main.GuideActivity">
+</activity>
+<activity android:name=".main.WelcomeUI">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:name=".base.BaseActivity">
+</activity>
+<activity android:name=".subcenter.CenterLocationActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:name=".Course.CourseDetailActivity" android:screenOrientation="1" android:theme="@7F070001">
+</activity>
+<activity android:name=".subcenter.ProvinceActivity">
+</activity>
+<activity android:name=".subcenter.TeacherActivity">
+</activity>
+<activity android:name=".User.LoginActivity">
+</activity>
+<activity android:name=".User.FindPasswordActivity">
+</activity>
+<activity android:name=".User.RegisterActivity">
+</activity>
+<activity android:name=".User.ResetPassWordActivity">
+</activity>
+<activity android:name=".User.SetNewPwdActivity">
+</activity>
+<activity android:launchMode="1" android:name=".User.MyOrderActivity">
+</activity>
+<activity android:name=".subcenter.TeacherDetailActivity" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:name=".Course.ExperienceCourseActivity" android:theme="@7F070001">
+</activity>
+<activity android:name=".Course.SelectCourseOrSexActivity">
+</activity>
+<activity android:name=".Activity.ActivityDetailActivity">
+</activity>
+<activity android:name=".Activity.ActivityBuyActivity" android:theme="@7F070001">
+</activity>
+<activity android:name=".Activity.ActivityPayActivity">
+</activity>
+<activity android:name=".main.WebViewActivity">
+</activity>
+<activity android:name=".Activity.ApplyActivity" android:theme="@7F070001">
+</activity>
+<activity android:name=".Activity.MyPiaoQuanActivity">
+</activity>
+<activity android:name=".Course.CoursePackageDetailActivity">
+</activity>
+<activity android:launchMode="1" android:name=".Course.CoursePackagePayActivity">
+</activity>
+<activity android:name=".Course.SubmitOrderActivity" android:theme="@7F070001">
+</activity>
+<activity android:name=".User.MessageActivity">
+</activity>
+<activity android:name=".User.MessageDetailActivity">
+</activity>
+<activity android:name=".User.PointsListActivity">
+</activity>
+<activity android:name=".User.RecordClassActivity">
+</activity>
+<activity android:name=".User.OnlineLeaveActivity">
+</activity>
+<activity android:name=".User.OrderOnlineActivity">
+</activity>
+<activity android:name=".User.MyCollectionActivity">
+</activity>
+<activity android:name=".pay.utils.AlipayResultActivity">
+</activity>
+<activity android:name=".pay.utils.AlipayResult2Activity">
+</activity>
+<activity android:name=".User.UserProfiles.UserProfileActivity" android:theme="@7F070001">
+</activity>
+<activity android:name=".User.UserProfiles.UserChangeActivity">
+</activity>
+<activity android:name=".User.UserProfiles.UserChangeSexActivity">
+</activity>
+<activity android:name=".User.UserProfiles.UserChangeSex2Activity">
+</activity>
+<activity android:name=".User.UserSignActivity">
+</activity>
+<activity android:name=".User.UserActivityActivity">
+</activity>
+<activity android:name=".User.AboutBeyoActivity">
+</activity>
+<activity android:name=".User.JoinActivity">
+</activity>
+<activity android:name=".User.HonorActivity">
+</activity>
+<activity android:name=".common.CommonChangeActivity">
+</activity>
+<activity android:name=".User.SurplusClassActivity">
+</activity>
+<activity android:name=".User.SettingActivity">
+</activity>
+<activity android:name=".User.OpinoinActivity">
+</activity>
+<activity android:name=".User.UserProfiles.UserAddressActivity">
+</activity>
+<activity android:exported="true" android:launchMode="1" android:name=".wxapi.WXPayEntryActivity">
+</activity>
+<activity android:name=".User.UserSignResultActivity">
+</activity>
+<activity android:launchMode="2" android:name=".Parenting.AddFusionActivity">
+</activity>
+<activity android:name=".Parenting.AlbumActivity">
+</activity>
+<activity android:name=".Parenting.IM.MyFriendActivity">
+</activity>
+<activity android:name=".Parenting.WhiterDetailActivity">
+</activity>
+<activity android:name=".Parenting.PhotoActivity">
+</activity>
+<activity android:name=".Parenting.IM.NewFriendActivity">
+</activity>
+<activity android:name=".Parenting.RecommendFriendActivity">
+</activity>
+<activity android:name=".Parenting.IM.SearchFriendActivity">
+</activity>
+<activity android:name=".Parenting.IM.SendFriendRequsetActivity">
+</activity>
+<activity android:name=".Parenting.IM.IMActivity">
+</activity>
+<activity android:name=".Parenting.ParentingDetailActivity">
+</activity>
+<activity android:name=".User.SignAgreementActivity">
+</activity>
+<activity android:name=".User.SignActivity">
+</activity>
+<activity android:name=".User.SignListActivity">
+</activity>
+<activity android:name=".Parenting.IM.ChatListActivity">
+</activity>
+<activity android:name=".Parenting.CommentActivity">
+</activity>
+<activity android:name=".Parenting.NewFriendActivity">
+</activity>
+<activity android:label="@7F06019E" android:name=".Parenting.IM.IMProfileActivity">
+</activity>
+<activity android:name=".Parenting.IM.IMProfileSetActivity">
+</activity>
+<activity android:configChanges="0x000004E0" android:exported="false" android:name="com.alipay.sdk.app.H5PayActivity" android:screenOrientation="3" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:configChanges="0x000000E0" android:exported="false" android:name="com.alipay.sdk.app.H5AuthActivity" android:screenOrientation="3" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.beyo.videoplayerlib.FullScreenActivity" android:screenOrientation="0">
+</activity>
+<activity android:name=".home.SubCenterActivity">
+</activity>
+<activity android:name=".home.CityActivity" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name=".Course.MyCollectCoursePackListActivity">
+</activity>
+<activity android:name=".subcenter.SubcenterErrorActivity">
+</activity>
+<activity android:name=".subcenter.SubcenterEnterActivity" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name=".subcenter.SelectCityActivity">
+</activity>
+<activity android:configChanges="0x000000A0" android:name=".zbar.CaptureActivity" android:screenOrientation="1" android:theme="@android:01030009" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name=".User.SignCodeActivity">
+</activity>
+<activity android:name=".User.UserPointActivity">
+</activity>
+<activity android:name=".User.PointGoodsDetailActivity">
+</activity>
+<activity android:name=".User.ExchangeRecordActivity">
+</activity>
+<activity android:name=".User.MyClassActivity">
+</activity>
+<activity android:name=".Course.CoursePackListActivity">
+</activity>
+<activity android:label="@7F0601B8" android:name=".User.EvaluateActivity">
+</activity>
+<activity android:label="@7F0601BA" android:name=".subcenter.SubcenterDetail4Activity">
+</activity>
+<activity android:label="@7F0601BB" android:name="cn.com.beyo.early.User.BabyRateActivity">
+</activity>
+</application>
+</manifest>

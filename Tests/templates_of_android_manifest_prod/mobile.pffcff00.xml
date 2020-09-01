@@ -1,0 +1,124 @@
+<?xml version="1.0" ?><manifest android:versionCode="17" android:versionName="6.4.0.11642" package="mobile.pffcff00" xmlns:android="http://schemas.android.com/apk/res/android">
+<application android:debuggable="false" android:icon="@7F020040" android:label="@7F050025" android:name="mozat.android.MozatApp">
+<activity android:configChanges="0x000001B0" android:label="@7F050025" android:launchMode="2" android:name="mozat.android.MainActivity" android:screenOrientation="5">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:name="mozat.android.activity.InputActivity" android:screenOrientation="5" android:theme="@android:0103000B">
+</activity>
+<activity android:name="mozat.android.activity.MessageBoxActivity" android:screenOrientation="5" android:theme="@android:0103000B">
+</activity>
+<activity android:name="mozat.android.activity.ViewImageActivity" android:screenOrientation="5">
+</activity>
+<activity android:name="mozat.android.activity.SmileyActivity" android:screenOrientation="5" android:theme="@android:0103000B">
+</activity>
+<activity android:name="mozat.android.script.FriendSelectActivity" android:screenOrientation="5">
+</activity>
+<activity android:label="@7F050025" android:name="mozat.android.photo.PhotoPreviewActivity" android:screenOrientation="5">
+<intent-filter>
+<action android:name="android.intent.action.SEND">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:mimeType="image/*">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="mozat.android.activity.SelectFriendActivity" android:screenOrientation="5">
+</activity>
+<activity android:name="mozat.android.activity.MoListActivity" android:screenOrientation="5" android:theme="@android:0103000B">
+</activity>
+<activity android:name="mozat.android.script.WebKitDialog" android:screenOrientation="5">
+</activity>
+<receiver android:name="mozat.android.framework.MoReceiver">
+<intent-filter>
+<action android:name="mozat.android.broadcast">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name="mozat.android.sys.PingReceiver">
+</receiver>
+<receiver android:name="mozat.android.sys.PushClient">
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+<category android:name="mobile.pffcff00">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.REGISTRATION">
+</action>
+<category android:name="mobile.pffcff00">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="mozat.android.sys.PushClient.onClick">
+</action>
+</intent-filter>
+</receiver>
+<activity android:name="mozat.android.activity.CreateShortcut">
+<intent-filter>
+<action android:name="android.intent.action.CREATE_SHORTCUT">
+</action>
+</intent-filter>
+</activity>
+<activity android:label="@7F050025" android:name="mozat.android.activity.CameraActivity" android:screenOrientation="4" android:theme="@android:0103000A">
+<intent-filter>
+<action android:name="mozat.android.activity.CameraActivity.CAPTURE">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+</application>
+<uses-sdk android:minSdkVersion="4">
+</uses-sdk>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_CONTACTS">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_CONTACTS">
+</uses-permission>
+<uses-permission android:name="android.permission.CALL_PHONE">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.SEND_SMS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<permission android:name="mobile.pffcff00.permission.C2D_MESSAGE" android:protectionLevel="2">
+</permission>
+<uses-permission android:name="mobile.pffcff00.permission.C2D_MESSAGE">
+</uses-permission>
+<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_LOGS">
+</uses-permission>
+<uses-feature android:name="android.hardware.camera">
+</uses-feature>
+<uses-feature android:name="android.hardware.camera.autofocus">
+</uses-feature>
+</manifest>

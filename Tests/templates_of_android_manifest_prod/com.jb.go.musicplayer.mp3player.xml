@@ -1,0 +1,702 @@
+<?xml version="1.0" ?><manifest android:versionCode="2004" android:versionName="1.7.0" package="com.jb.go.musicplayer.mp3player" platformBuildVersionCode="25" platformBuildVersionName="7.1.1" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="16" android:targetSdkVersion="19">
+</uses-sdk>
+<uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS">
+</uses-permission>
+<uses-permission android:name="com.jiubang.go.music.permission.SERVICE">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_SYNC_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.RECORD_AUDIO">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_DOWNLOAD_MANAGER">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_ALL_DOWNLOADS">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_DOWNLOAD_MANAGER_ADVANCED">
+</uses-permission>
+<uses-permission android:name="android.permission.DISABLE_KEYGUARD">
+</uses-permission>
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW">
+</uses-permission>
+<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-permission android:name="android.permission.BLUETOOTH">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.FLASHLIGHT">
+</uses-permission>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT">
+</uses-permission>
+<uses-permission android:name="com.android.launcher.permission.UNINSTALL_SHORTCUT">
+</uses-permission>
+<meta-data android:name="android.support.VERSION" android:value="25.3.1">
+</meta-data>
+<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE">
+</uses-permission>
+<permission android:name="com.jb.go.musicplayer.mp3player.permission.C2D_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="com.jb.go.musicplayer.mp3player.permission.C2D_MESSAGE">
+</uses-permission>
+<application android:allowBackup="true" android:icon="@7F030112" android:label="@7F090050" android:largeHeap="true" android:name="com.jiubang.go.music.MusicApplication" android:supportsRtl="false" android:theme="@7F0B00AA">
+<meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@7F09030A">
+</meta-data>
+<meta-data android:name="com.google.android.gms.version" android:value="@7F0D000F">
+</meta-data>
+<meta-data android:name="APPKEY" android:value="YKO8AO967R6TD4INDFULK7W3">
+</meta-data>
+<meta-data android:name="channel" android:value="11625">
+</meta-data>
+<meta-data android:name="production" android:value="true">
+</meta-data>
+<meta-data android:name="apkMode" android:value="release">
+</meta-data>
+<meta-data android:name="svn" android:value="97145">
+</meta-data>
+<meta-data android:name="com.jiubang.go.music.GlideModuleConfig" android:value="GlideModule">
+</meta-data>
+<meta-data android:name="gomo_firebase_channel" android:value="200">
+</meta-data>
+<meta-data android:name="com.google.firebase.messaging.default_notification_icon" android:resource="@7F030149">
+</meta-data>
+<meta-data android:name="com.google.firebase.messaging.default_notification_color" android:resource="@7F0E0023">
+</meta-data>
+<activity android:name="debug.impl.DebugSettingsActivity">
+</activity>
+<activity android:launchMode="1" android:name="com.jiubang.go.music.SplashActivity" android:screenOrientation="1" android:theme="@7F0B00AD">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:launchMode="2" android:name="com.jiubang.go.music.HomeActivity" android:windowSoftInputMode="0x00000030">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<action android:name="android.intent.action.MUSIC_PLAYER">
+</action>
+<category android:name="android.intent.category.APP_MUSIC">
+</category>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.media.action.MEDIA_PLAY_FROM_SEARCH">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:mimeType="vnd.android.cursor.dir/playlist">
+</data>
+<data android:mimeType="vnd.android.cursor.dir/albums">
+</data>
+<data android:mimeType="vnd.android.cursor.dir/artists">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:scheme="content">
+</data>
+<data android:mimeType="audio/*">
+</data>
+<data android:mimeType="application/ogg">
+</data>
+<data android:mimeType="application/x-ogg">
+</data>
+<data android:mimeType="application/itunes">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:scheme="file">
+</data>
+<data android:mimeType="audio/*">
+</data>
+<data android:mimeType="application/ogg">
+</data>
+<data android:mimeType="application/x-ogg">
+</data>
+<data android:mimeType="application/itunes">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="http">
+</data>
+<data android:mimeType="audio/*">
+</data>
+<data android:mimeType="application/ogg">
+</data>
+<data android:mimeType="application/x-ogg">
+</data>
+<data android:mimeType="application/itunes">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="com.android.music.PLAYBACK_VIEWER">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.OPENABLE">
+</category>
+<data android:mimeType="vnd.android.cursor.dir/playlist">
+</data>
+<data android:mimeType="vnd.android.cursor.dir/artists">
+</data>
+<data android:mimeType="vnd.android.cursor.dir/albums">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.PICK">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.OPENABLE">
+</category>
+<data android:mimeType="vnd.android.cursor.dir/audio">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.media.action.MEDIA_PLAY_FROM_SEARCH">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.PICK">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:mimeType="vnd.android.cursor.dir/playlist">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:mimeType="vnd.android.cursor.dir/playlist">
+</data>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x00000480" android:hardwareAccelerated="true" android:name="com.jiubang.go.music.webview.MusicWebViewActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.jiubang.go.music.setting.MusicShopWebView" android:screenOrientation="1">
+</activity>
+<activity android:name="com.jiubang.go.music.webview.DownloadSongGuideActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name="com.jiubang.go.music.play.MusicPlayControllActivity" android:screenOrientation="1">
+</activity>
+<receiver android:name="com.jiubang.go.music.play.commerce.util.PreLoadMusicPlayAdReceiver">
+</receiver>
+<activity android:name="com.jiubang.go.music.setting.equalizer.EqualizerActivity">
+</activity>
+<activity android:name="com.jiubang.go.music.login.RegisterActivity">
+</activity>
+<activity android:name="com.jiubang.go.music.alarmclock.activity.AlarmCreateActivity" android:screenOrientation="1">
+</activity>
+<activity android:excludeFromRecents="true" android:icon="@7F030134" android:label="ScreenLock" android:launchMode="3" android:name="com.jiubang.go.music.locker.MusicClockLockerActivity" android:screenOrientation="1" android:taskAffinity=":ScreenLock">
+</activity>
+<activity android:name="com.jiubang.go.music.alarmclock.activity.AlarmMusicActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.jiubang.go.music.playlist.PlayListManagerActivity">
+</activity>
+<activity android:name="com.jiubang.go.music.playlist.PlayListMusicManagerActivity">
+</activity>
+<activity android:name="com.jiubang.go.music.playlist.ChooseSongsActivity">
+</activity>
+<activity android:name="com.jiubang.go.music.playlist.ChoosePlayListActivity">
+</activity>
+<activity android:name="com.jiubang.go.music.home.FreeStreamActivity">
+</activity>
+<activity android:name="com.jiubang.go.music.home.FreeStreamSubActivity">
+</activity>
+<activity android:name="com.jiubang.go.music.home.singer.view.SingerListActivity">
+</activity>
+<activity android:name="com.jiubang.go.music.home.singer.view.SingerDetailInfoActivity">
+</activity>
+<activity android:name="com.jiubang.go.music.home.singer.view.SingerDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.jiubang.go.music.home.singer.view.SingerSongsActivity">
+</activity>
+<activity android:name="com.jiubang.go.music.foryou.OnlineSongsAlbum.ui.AlbumSingerSongsActivity">
+</activity>
+<activity android:name="com.jiubang.go.music.foryou.OnlineSongsAlbum.ui.AlbumOfMoreActivity">
+</activity>
+<activity android:name="com.jiubang.go.music.foryou.OnlineSongsAlbum.ui.AlbumSearchResultActivity">
+</activity>
+<activity android:name="com.jiubang.go.music.MusicListDetailActivity">
+</activity>
+<activity android:name="com.jiubang.go.music.home.singer.view.SingerAlbumsActivity">
+</activity>
+<activity android:name="com.jiubang.go.music.setting.SettingActivity">
+</activity>
+<activity android:name="com.jiubang.go.music.setting.LanguageActivity">
+</activity>
+<activity android:name="com.jiubang.go.music.setting.FeedBackActivity">
+</activity>
+<activity android:name="com.jiubang.go.music.setting.TermOfServiceWebViewActivity">
+</activity>
+<activity android:name="com.jiubang.go.music.search.SearchLocalOnlineActivity" android:windowSoftInputMode="0x00000030">
+</activity>
+<activity android:name="com.jiubang.go.music.search.searchhot.ui.SearchAndHotActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000030">
+</activity>
+<activity android:name="com.jiubang.go.music.foryou.OnlineSongsAlbum.ui.AlbumDetailsActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.jiubang.go.music.setting.scanmusic.ScanMusicActivity">
+</activity>
+<activity android:name="com.jiubang.go.music.pickphoto.SearchPhotoActivity">
+</activity>
+<activity android:name="com.jiubang.go.music.cutview.CutActivity">
+</activity>
+<activity android:name="com.jiubang.go.music.rate.RateActivity">
+</activity>
+<activity android:name="com.jiubang.go.music.ad.DailyRecommendActivity">
+</activity>
+<activity android:name="com.jiubang.go.music.download.DownloadManagerActivity">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="addShortcut">
+</category>
+</intent-filter>
+</activity>
+<activity android:name="com.jiubang.go.music.ad.LauncherAdActivity" android:theme="@7F0B0140">
+</activity>
+<activity android:name="com.jiubang.go.music.dialog.YouTubeDownloadGuide" android:screenOrientation="1" android:theme="@7F0B01D4">
+</activity>
+<activity android:excludeFromRecents="true" android:launchMode="3" android:name="com.jiubang.go.music.locker.LockerScreenActivity" android:screenOrientation="1">
+</activity>
+<activity android:excludeFromRecents="true" android:exported="true" android:finishOnTaskLaunch="true" android:launchMode="3" android:name="com.jiubang.go.music.common.crashreport.CrashReportDialog" android:theme="@7F0B0135">
+</activity>
+<receiver android:name="com.jiubang.go.music.widget.GOMusicWidget4x2Provider">
+<intent-filter>
+<action android:name="android.appwidget.action.APPWIDGET_UPDATE">
+</action>
+<action android:name="com.jb.go.musicplayer.mp3player.widget.new.GOMusicWidget4x2Provider.UPDATE_VIEW">
+</action>
+<action android:name="com.jb.go.musicplayer.mp3player.widget.new.GOMusicWidget4x2Provider.CLEAR_INFO">
+</action>
+</intent-filter>
+<meta-data android:name="android.appwidget.provider" android:resource="@7F070001">
+</meta-data>
+</receiver>
+<receiver android:name="com.jiubang.go.music.utils.MusicIntentReceiver">
+<intent-filter android:priority="2147483647">
+<action android:name="android.intent.action.MEDIA_BUTTON">
+</action>
+</intent-filter>
+</receiver>
+<activity android:name="com.jiubang.go.music.visualizer.MusicFlashEffectActivity" android:screenOrientation="1" android:theme="@7F0B0140">
+</activity>
+<activity android:name="com.jiubang.go.music.login.LoginActivity">
+</activity>
+<activity android:name="com.jiubang.go.music.login.SilentLoginActivity" android:theme="@7F0B00AC">
+</activity>
+<activity android:configChanges="0x000005B0" android:label="@7F090050" android:name="com.facebook.FacebookActivity" android:theme="@7F0B01A8">
+</activity>
+<activity android:exported="true" android:name="com.facebook.CustomTabActivity">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="@7F09030B">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.jiubang.go.music.theme.ThemeActivity">
+</activity>
+<activity android:launchMode="2" android:name="com.jiubang.go.music.haveatry.BalloonActivity" android:screenOrientation="1" android:theme="@7F0B00AC">
+</activity>
+<activity android:name="com.jiubang.go.music.social.comment.view.CommentsActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:name="com.jiubang.go.music.social.comment.view.PostCommentActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:name="com.jiubang.go.music.home.notificenter.view.NotificationCenterActivity" android:screenOrientation="1">
+</activity>
+<service android:exported="true" android:name="com.jiubang.go.music.MusicService">
+</service>
+<service android:name="com.jiubang.go.music.MusicService$InnerService1">
+</service>
+<service android:name="com.jiubang.go.music.autofix.SongFixService">
+</service>
+<receiver android:name="com.jiubang.go.music.Receiver1">
+</receiver>
+<service android:name="com.jiubang.go.music.AssistantService" android:process=":assistant">
+</service>
+<receiver android:name="com.jiubang.go.music.Receiver2" android:process=":assistant">
+</receiver>
+<service android:name="com.jiubang.go.music.AssistantService$InnerService2" android:process=":assistant">
+</service>
+<service android:name="com.jiubang.commerce.daemon.JobSchedulerService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<receiver android:name="com.jiubang.commerce.daemon.BootCompleteReceiver">
+<intent-filter>
+<action android:name="android.intent.action.QUICKBOOT_POWERON">
+</action>
+<action android:name="android.bluetooth.adapter.action.STATE_CHANGED">
+</action>
+<action android:name="android.net.wifi.WIFI_STATE_CHANGED">
+</action>
+</intent-filter>
+<intent-filter android:priority="999">
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+<action android:name="android.intent.action.USER_PRESENT">
+</action>
+<action android:name="android.intent.action.WALLPAPER_CHANGED">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_RESTARTED">
+</action>
+<action android:name="android.intent.action.PACKAGE_REPLACED">
+</action>
+<data android:scheme="package">
+</data>
+</intent-filter>
+<intent-filter android:priority="99999">
+<action android:name="android.provider.Telephony.SECRET_CODE">
+</action>
+<data android:scheme="android_secret_code">
+</data>
+</intent-filter>
+<intent-filter android:priority="99999">
+<action android:name="android.intent.action.NEW_OUTGOING_CALL">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.MEDIA_MOUNTED">
+</action>
+<action android:name="android.intent.action.MEDIA_UNMOUNTED">
+</action>
+<data android:scheme="file">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="com.jiubang.alock.ACTION_LOCKER_ACCOUNT_CHANGE">
+</action>
+<action android:name="com.jiubang.alocker.theme.change">
+</action>
+<action android:name="com.jiubang.alocker.monitor.vip">
+</action>
+<action android:name="com.jiubang.alocker.refresh.vip">
+</action>
+</intent-filter>
+</receiver>
+<service android:name="com.jiubang.go.music.firebase.MessageService">
+<intent-filter>
+<action android:name="com.google.firebase.MESSAGING_EVENT">
+</action>
+</intent-filter>
+</service>
+<service android:name="com.jiubang.go.music.firebase.InstanceIdService">
+<intent-filter>
+<action android:name="com.google.firebase.INSTANCE_ID_EVENT">
+</action>
+</intent-filter>
+</service>
+<service android:name="com.jiubang.go.music.firebase.notifier.FirebaseActionService">
+</service>
+<receiver android:name="com.jiubang.go.music.common.crashreport.FireBaseHelper$FireBaseHelperReceiver">
+<intent-filter>
+<action android:name="com.jb.go.musicplayer.mp3player.firebase">
+</action>
+</intent-filter>
+</receiver>
+<provider android:authorities="com.jb.go.musicplayer.mp3player.commerce.MPSharedPreferences" android:exported="false" android:name="com.jiubang.commerce.buychannel.MPSharedPreferences">
+</provider>
+<provider android:authorities="com.jb.go.musicplayer.mp3player.staticsdkprovider" android:name="com.gau.go.gostaticsdk.StaticDataContentProvider">
+</provider>
+<service android:name="com.jiubang.go.music.alarmclock.AlarmService">
+</service>
+<activity android:configChanges="0x000000A0" android:launchMode="3" android:name="com.jiubang.go.music.alarmclock.activity.AlarmRingAcitivity" android:screenOrientation="1" android:theme="@7F0B0142">
+</activity>
+<receiver android:name="com.jiubang.go.music.alarmclock.AlarmBroadCastReceiver">
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+<action android:name="com.jiubang.intent.plus.action.ALARM_BROADCAST_RECEIVER">
+</action>
+</intent-filter>
+</receiver>
+<service android:label="Intelligent Preload Service" android:name="com.jiubang.commerce.service.IntelligentPreloadService" android:process=":com.jiubang.commerce.service.IntelligentPreloadService">
+</service>
+<receiver android:name="com.jiubang.commerce.receiver.BootBroadcastReceiver">
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</receiver>
+<service android:exported="true" android:label="ClientService" android:name="com.jiubang.go.music.wecloudpush.WeCloudPushService" android:permission="com.jiubang.go.music.permission.SERVICE" android:process=":pushservice">
+<intent-filter>
+<action android:name="io.wecloud.message.action.PUSH_SERVICE">
+</action>
+<action android:name="io.wecloud.message.service.AIDL">
+</action>
+</intent-filter>
+</service>
+<service android:name="com.jiubang.go.music.notifier.NotificationActionService">
+</service>
+<receiver android:enabled="true" android:name="com.jiubang.go.music.notification.EveryDayNotificationBroadCastReceiver">
+<intent-filter>
+<action android:name="com.jb.go.musicplayer.mp3player.widget.NotificationUtil.EVERYDAY_NOTIFICATION">
+</action>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name="jiubang.music.wecloud.PushServiceReceiver" android:process=":pushservice">
+<intent-filter>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+<action android:name="android.intent.action.USER_PRESENT">
+</action>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+<action android:name="io.wecloud.message.action.METHOD">
+</action>
+</intent-filter>
+</receiver>
+<provider android:authorities="com.jb.go.musicplayer.mp3player.provider.AppConfigProvider" android:name="com.jiubang.go.music.data.ConfigProvider">
+</provider>
+<provider android:authorities="com.jb.go.musicplayer.mp3player.chargelocker.MultiprocessSharedPreferences" android:exported="false" android:name="com.jb.ga0.commerce.util.io.MultiprocessSharedPreferences">
+</provider>
+<receiver android:name="com.jiubang.commerce.receiver.AppBroadcastReceiver">
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_ADDED">
+</action>
+<action android:name="android.intent.action.PACKAGE_REPLACED">
+</action>
+<action android:name="android.intent.action.PACKAGE_REMOVED">
+</action>
+<data android:scheme="package">
+</data>
+</intent-filter>
+</receiver>
+<activity android:configChanges="0x000004A0" android:multiprocess="true" android:name="com.monet.bidder.AdActivity">
+</activity>
+<activity android:launchMode="3" android:name="com.jiubang.commerce.dynamicloadlib.PluginActivity" android:process=":com.jiubang.commerce.chargelocker" android:screenOrientation="1" android:theme="@android:01030011">
+<intent-filter>
+<action android:name="com.jiubang.commerce.dynamicloadlib.PluginActivity">
+</action>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x00000FB0" android:multiprocess="true" android:name="com.google.android.gms.ads.AdActivity" android:theme="@android:0103000F">
+</activity>
+<activity android:excludeFromRecents="true" android:launchMode="3" android:name="com.jiubang.go.music.ad.mopub.SimulateClickActivity" android:taskAffinity=":simulate.click" android:theme="@7F0B0151">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="3" android:name="com.mopub.common.MoPubBrowser">
+</activity>
+<service android:name="jiubang.music.player.MusicPlayBackService">
+</service>
+<activity android:exported="true" android:launchMode="3" android:name="com.jiubang.commerce.dyload.pl.chargelocker.cell.ChargeBatteryProxyActivity" android:process=":com.jiubang.commerce.chargelocker" android:screenOrientation="1" android:theme="@android:01030011">
+</activity>
+<service android:exported="true" android:name="com.jiubang.commerce.dyload.pl.chargelocker.cell.ChargeLockerProxyService" android:persistent="true" android:process=":com.jiubang.commerce.chargelocker">
+</service>
+<activity android:exported="true" android:multiprocess="true" android:name="com.jiubang.commerce.dyload.core.proxy.activity.StandarProxyActivity" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.mopub.mobileads.MoPubActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.mopub.mobileads.MraidActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.mopub.mobileads.MraidVideoPlayerActivity">
+</activity>
+<service android:name="com.liulishuo.filedownloader.services.FileDownloadService$SharedMainProcessService">
+</service>
+<service android:name="com.liulishuo.filedownloader.services.FileDownloadService$SeparateProcessService" android:process=":filedownloader">
+</service>
+<provider android:authorities="com.jb.go.musicplayer.mp3player.AgentWebFileProvider" android:exported="false" android:grantUriPermissions="true" android:name="com.just.library.AgentWebFileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F070002">
+</meta-data>
+</provider>
+<activity android:configChanges="0x000004A0" android:launchMode="0" android:name="com.just.library.ActionActivity" android:screenOrientation="1" android:theme="@7F0B01A4" android:windowSoftInputMode="0x00000003">
+</activity>
+<receiver android:name="com.just.library.RealDownLoader$NotificationBroadcastReceiver">
+</receiver>
+<activity android:excludeFromRecents="true" android:launchMode="3" android:name="com.commerce.notification.main.core.HandleNotificaionClickActivity" android:taskAffinity="com.commerce.notification" android:theme="@7F0B0151">
+</activity>
+<service android:name="com.commerce.notification.main.core.NotificationSdkService">
+</service>
+<activity android:configChanges="0x000004A0" android:name="com.commerce.notification.main.ad.mopub.base.common.MoPubBrowser">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.commerce.notification.main.ad.mopub.base.mobileads.MraidVideoPlayerActivity">
+</activity>
+<receiver android:exported="true" android:name="com.appsflyer.MultipleInstallBroadcastReceiver">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:exported="true" android:name="com.jiubang.commerce.buychannel.GaTrackerReceiver">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+<service android:name="com.gomo.firebasesdk.notification.ClickService">
+</service>
+<service android:name="com.gomo.firebasesdk.notification.DeleteService">
+</service>
+<receiver android:exported="true" android:name="com.gomo.firebasesdk.statistic.AlarmStatisticReceiver">
+<intent-filter>
+<action android:name="com.firebase.STATISTIC">
+</action>
+</intent-filter>
+</receiver>
+<service android:exported="true" android:name="com.google.firebase.messaging.FirebaseMessagingService">
+<intent-filter android:priority="-500">
+<action android:name="com.google.firebase.MESSAGING_EVENT">
+</action>
+</intent-filter>
+</service>
+<activity android:name="com.gomo.liveaccountsdk.login.instagram.InsLoginActivity">
+</activity>
+<activity android:name="com.facebook.CustomTabMainActivity">
+</activity>
+<provider android:authorities="com.jb.go.musicplayer.mp3player.FacebookInitProvider" android:exported="false" android:name="com.facebook.internal.FacebookInitProvider">
+</provider>
+<meta-data android:name="com.bumptech.glide.integration.okhttp3.OkHttpGlideModule" android:value="GlideModule">
+</meta-data>
+<meta-data android:name="android.max_aspect" android:value="2.100000">
+</meta-data>
+<receiver android:name="com.go.news.engine.abtest.ABTestReceiver">
+<intent-filter>
+<action android:name="com.go.news.abtest">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name="com.go.news.engine.ConfigManager$BasisConfigReceiver">
+<intent-filter>
+<action android:name="com.go.news.basisconfig">
+</action>
+</intent-filter>
+</receiver>
+<activity android:name="com.go.news.activity.BaseActivity" android:theme="@7F0B01CA">
+</activity>
+<activity android:name="com.go.news.activity.news.NewsActivity" android:screenOrientation="1" android:theme="@7F0B00F4">
+</activity>
+<activity android:name="com.go.news.activity.detail.TopicNewsPagerActivity" android:screenOrientation="1" android:theme="@7F0B00F4">
+</activity>
+<activity android:name="com.go.news.activity.detail.ListNewsPagerActivity" android:screenOrientation="1" android:theme="@7F0B00F4">
+</activity>
+<activity android:name="com.go.news.activity.detail.NewsBrowserActivity" android:screenOrientation="1" android:theme="@7F0B00F4">
+</activity>
+<activity android:name="com.go.news.activity.news.SourcesNewsActivity" android:screenOrientation="1" android:theme="@7F0B00F4">
+</activity>
+<activity android:name="com.go.news.activity.discover.DiscoverActivity" android:screenOrientation="1" android:theme="@7F0B00F4">
+</activity>
+<activity android:name="com.go.news.activity.detail.BrowserActivity" android:screenOrientation="1" android:theme="@7F0B00F4">
+</activity>
+<meta-data android:name="CRYSTAL_ID" android:value="bbbf617f88bd456d8092990377474b4c">
+</meta-data>
+<activity android:configChanges="0x00000480" android:name="com.intowow.sdk.WebViewActivity" android:theme="@android:01030007">
+</activity>
+<receiver android:exported="false" android:name="com.intowow.sdk.ScheduleReceiver">
+<intent-filter>
+<action android:name="com.intowow.sdk.prefetch">
+</action>
+</intent-filter>
+</receiver>
+<activity android:excludeFromRecents="true" android:exported="false" android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity" android:theme="@android:01030010">
+</activity>
+<service android:exported="true" android:name="com.google.android.gms.auth.api.signin.RevocationBoundService" android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION">
+</service>
+<activity android:configChanges="0x000004A0" android:name="com.facebook.ads.AudienceNetworkActivity">
+</activity>
+<activity android:name="com.google.android.gms.ads.purchase.InAppPurchaseActivity" android:theme="@7F0B0149">
+</activity>
+<activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:01030010">
+</activity>
+<activity android:name="com.jiubang.commerce.ad.url.AdUrlPreParseLoadingActivity" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<activity android:name="com.jiubang.commerce.ad.h5.H5AdActivity" android:screenOrientation="1">
+</activity>
+<service android:label="Ad Service" android:name="com.jiubang.commerce.service.AdService">
+</service>
+<receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementReceiver">
+</receiver>
+<receiver android:enabled="true" android:name="com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver" android:permission="android.permission.INSTALL_PACKAGES">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementService">
+</service>
+<receiver android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+<category android:name="com.jb.go.musicplayer.mp3player">
+</category>
+</intent-filter>
+</receiver>
+<receiver android:exported="false" android:name="com.google.firebase.iid.FirebaseInstanceIdInternalReceiver">
+</receiver>
+<service android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdService">
+<intent-filter android:priority="-500">
+<action android:name="com.google.firebase.INSTANCE_ID_EVENT">
+</action>
+</intent-filter>
+</service>
+<provider android:authorities="com.jb.go.musicplayer.mp3player.firebaseinitprovider" android:exported="false" android:initOrder="100" android:name="com.google.firebase.provider.FirebaseInitProvider">
+</provider>
+</application>
+</manifest>

@@ -1,0 +1,358 @@
+<?xml version="1.0" ?><manifest android:versionCode="17" android:versionName="3.8.2" package="com.tou360.jiabao" platformBuildVersionCode="24" platformBuildVersionName="7.000000" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="16" android:targetSdkVersion="24">
+</uses-sdk>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.MANAGE_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_LOGS">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-permission android:name="android.permission.RECORD_AUDIO">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS">
+</uses-permission>
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW">
+</uses-permission>
+<uses-permission android:name="android.permission.CALL_PHONE">
+</uses-permission>
+<permission android:name="com.tou360.jiabao.permission.JPUSH_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="com.tou360.jiabao.permission.JPUSH_MESSAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_USER_PRESENT">
+</uses-permission>
+<application android:allowBackup="true" android:icon="@7F030080" android:label="@7F060032" android:name="com.stub.StubApp" android:protect="activity" android:supportsRtl="true" android:theme="@7F0800D6">
+<meta-data android:name="com.tou360.utils.CustomCachingGlideModule" android:value="GlideModule">
+</meta-data>
+<service android:exported="false" android:name="com.tencent.qalsdk.service.QalService" android:process=":QALSERVICE">
+</service>
+<service android:exported="false" android:name="com.tencent.qalsdk.service.QalAssistService" android:process=":QALSERVICE">
+</service>
+<receiver android:exported="false" android:name="com.tencent.qalsdk.QALBroadcastReceiver">
+<intent-filter>
+<action android:name="com.tencent.qalsdk.broadcast.qal">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name="com.tencent.qalsdk.core.NetConnInfoCenter" android:process=":QALSERVICE">
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.TIME_SET">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.TIMEZONE_CHANGED">
+</action>
+</intent-filter>
+</receiver>
+<activity android:configChanges="0x000004A0" android:name="com.mob.tools.MobUIShell" android:screenOrientation="1" android:theme="@android:01030010" android:windowSoftInputMode="0x00000012">
+<intent-filter>
+<data android:scheme="tencent1105799513">
+</data>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:excludeFromRecents="true" android:exported="false" android:launchMode="2" android:name="com.stub.stub02.Stub01" android:noHistory="true" android:taskAffinity="com.tou360.jiabao.util" android:theme="@android:0103005F">
+</activity>
+<service android:enabled="true" android:exported="true" android:name="com.stub.stub02.Stub02">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.stub.stub02.Stub03">
+</service>
+<receiver android:enabled="true" android:exported="false" android:name="com.stub.stub02.Stub05">
+</receiver>
+<provider android:authorities="com.tou360.jiabao.COMMONPROVIDER" android:exported="true" android:name="com.stub.stub02.Stub04">
+</provider>
+<activity android:configChanges="0x000000A0" android:exported="false" android:launchMode="2" android:name="com.stub.stub05.Stub01" android:screenOrientation="1" android:theme="@android:01030060">
+</activity>
+<service android:exported="false" android:name="com.stub.stub05.Stub02">
+</service>
+<activity android:configChanges="0x000004A0" android:exported="true" android:name="com.tou360.share.wxapi.WXEntryActivity" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<meta-data android:name="UMENG_CHANNEL" android:value="Vivo Market">
+</meta-data>
+<meta-data android:name="UMENG_APPKEY" android:value="569dd6e567e58e102200149b">
+</meta-data>
+<meta-data android:name="JPUSH_CHANNEL" android:value="Vivo Market">
+</meta-data>
+<meta-data android:name="JPUSH_APPKEY" android:value="e2d5fbd0015013e41ce058a1">
+</meta-data>
+<activity android:configChanges="0x000000A0" android:exported="false" android:name="cn.jpush.android.ui.PushActivity" android:theme="@android:01030006">
+<intent-filter>
+<action android:name="cn.jpush.android.ui.PushActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="com.tou360.jiabao">
+</category>
+</intent-filter>
+</activity>
+<service android:enabled="true" android:exported="false" android:name="cn.jpush.android.service.DownloadService">
+</service>
+<service android:enabled="true" android:exported="false" android:name="cn.jpush.android.service.PushService" android:process=":push">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.REGISTER">
+</action>
+<action android:name="cn.jpush.android.intent.REPORT">
+</action>
+<action android:name="cn.jpush.android.intent.PushService">
+</action>
+<action android:name="cn.jpush.android.intent.PUSH_TIME">
+</action>
+</intent-filter>
+</service>
+<service android:enabled="true" android:exported="true" android:name="cn.jpush.android.service.DaemonService" android:process=":push">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.DaemonService">
+</action>
+<category android:name="com.tou360.jiabao">
+</category>
+</intent-filter>
+</service>
+<receiver android:enabled="true" android:exported="false" android:name="cn.jpush.android.service.PushReceiver" android:process=":push">
+<intent-filter android:priority="1000">
+<action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY">
+</action>
+<category android:name="com.tou360.jiabao">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.USER_PRESENT">
+</action>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_ADDED">
+</action>
+<action android:name="android.intent.action.PACKAGE_REMOVED">
+</action>
+<data android:scheme="package">
+</data>
+</intent-filter>
+</receiver>
+<receiver android:name="cn.jpush.android.service.AlarmReceiver" android:process=":push">
+</receiver>
+<receiver android:enabled="true" android:name="com.tou360.jiabao.core.receiver.JPushReceiver">
+<intent-filter>
+<action android:name="android.media.RINGER_MODE_CHANGED">
+</action>
+<action android:name="cn.jpush.android.intent.REGISTRATION">
+</action>
+<action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED">
+</action>
+<action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED">
+</action>
+<action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED">
+</action>
+<action android:name="cn.jpush.android.intent.ACTION_RICHPUSH_CALLBACK">
+</action>
+<action android:name="cn.jpush.android.intent.CONNECTION">
+</action>
+<category android:name="com.tou360.jiabao">
+</category>
+</intent-filter>
+</receiver>
+<service android:exported="false" android:name="com.tou360.jiabao.core.CoreService">
+</service>
+<service android:exported="false" android:name="com.tou360.jiabao.core.NotificationService">
+</service>
+<activity android:configChanges="0x000004A0" android:name="com.tou360.jiabao.activity.LauncherActivity" android:screenOrientation="1" android:theme="@7F080082">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+<intent-filter>
+<data android:host="com.tou360.jiabao" android:scheme="app">
+</data>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.tou360.jiabao.activity.GuideActivity" android:process=":gds" android:screenOrientation="1" android:theme="@7F080081">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="com.tou360.jiabao.activity.MainActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.tou360.jiabao.activity.StrategiesActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.tou360.jiabao.activity.WebActivity" android:screenOrientation="1" android:theme="@7F080087">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.tou360.jiabao.activity.ConsultCategoryActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.tou360.jiabao.activity.RegActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000013">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.tou360.jiabao.activity.RegNextActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000013">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.tou360.jiabao.activity.LoginActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000013">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.tou360.jiabao.activity.SmsLoginActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000013">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.tou360.jiabao.activity.ForgetPwdActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.tou360.jiabao.activity.ComplaintsActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.tou360.jiabao.activity.EvaluationAgentActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.tou360.jiabao.activity.DemandEvaluatingActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.tou360.jiabao.activity.PersonalProfileActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.tou360.jiabao.activity.ResetPasswordActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.tou360.jiabao.activity.CityPickerActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000013">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.tou360.jiabao.activity.SettingActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.tou360.jiabao.activity.AgreementActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.tou360.jiabao.activity.InviteFriendsActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.tou360.jiabao.activity.FeedbackActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.tou360.jiabao.activity.SysMessageActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.tou360.jiabao.activity.ProdListActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.tou360.jiabao.activity.ProdBookingActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.tou360.jiabao.activity.ProdBookResultActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.tou360.jiabao.activity.ProductActivity" android:screenOrientation="1" android:theme="@7F080087">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.tou360.jiabao.activity.ProdPlanActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.tou360.jiabao.activity.QAListActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.tou360.jiabao.activity.QAItemActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.tou360.jiabao.activity.QuestionActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.tou360.jiabao.activity.MyQAListActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.tou360.jiabao.activity.DiscountsListActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.tou360.jiabao.activity.ItemWebActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.tou360.jiabao.activity.AgentListActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.tou360.jiabao.activity.ProdVoteActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.tou360.jiabao.activity.BookingOrdersActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.tou360.jiabao.activity.OrderDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.tou360.jiabao.activity.ProductCollectListActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.tou360.jiabao.activity.EvalutionResultListActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.tou360.jiabao.activity.TIMActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:hardwareAccelerated="false" android:name="com.tou360.jiabao.activity.PreviewImgActivity" android:process=":bmp" android:screenOrientation="1" android:theme="@7F080083">
+</activity>
+<activity android:configChanges="0x000004A0" android:hardwareAccelerated="false" android:name="com.tou360.jiabao.activity.OrigImgActivity" android:process=":bmp" android:screenOrientation="1" android:theme="@7F080083">
+<intent-filter>
+<action android:name="com.tou360.jiabao.chat.ACTION_SHOW_ORIGINAL_IMG">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004A0" android:hardwareAccelerated="false" android:name="com.tou360.jiabao.activity.TIMMenuActivity" android:screenOrientation="1" android:theme="@7F0800EB">
+<intent-filter>
+<action android:name="com.tou360.jiabao.chat.ACTION_MENU_ENABLED">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.tou360.jiabao.activity.MyAgentActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.tou360.jiabao.activity.NoticeActivity" android:screenOrientation="1">
+</activity>
+<provider android:authorities="com.tou360.jiabao.provider" android:exported="false" android:name="com.tou360.jiabao.core.provider.StorageProvider">
+</provider>
+<activity android:configChanges="0x000004A0" android:name="com.tou360.jiabao.activity.SetTagActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.tou360.jiabao.activity.FirstSetTagActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.tou360.jiabao.activity.GlobalDialog" android:screenOrientation="1" android:theme="@7F08009C">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.tou360.jiabao.activity.MyCouponActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.tou360.jiabao.activity.MyEventListActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.tou360.jiabao.activity.MyHistoryCouponActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.tou360.jiabao.activity.InsuranceOrderActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.tou360.jiabao.activity.InsuranceOrderDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.tou360.jiabao.activity.InsuranceCompanyActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.tou360.jiabao.activity.ComparableProdListActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.tou360.jiabao.activity.AvailableCouponsActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.tou360.jiabao.activity.PanicBuyInsurActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.tou360.jiabao.activity.AddPolicyHolderActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000010">
+</activity>
+</application>
+</manifest>

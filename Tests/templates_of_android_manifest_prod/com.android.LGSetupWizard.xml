@@ -1,0 +1,618 @@
+<?xml version="1.0" ?><manifest android:sharedUserId="android.uid.system" android:versionCode="70102600" android:versionName="7.1.26" package="com.android.LGSetupWizard" platformBuildVersionCode="26" platformBuildVersionName="8.0.0" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="26" android:targetSdkVersion="26">
+</uses-sdk>
+<permission android:name="com.setupwizard.SETUP_PERMISSION" android:protectionLevel="0x00000003">
+</permission>
+<permission android:name="com.vodafone.vodafone360updates.permission.SHOW_SETUP_WIZARD" android:protectionLevel="0x00000000">
+</permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.MANAGE_USERS">
+</uses-permission>
+<uses-permission android:name="android.permission.STATUS_BAR">
+</uses-permission>
+<uses-permission android:name="com.vcast.mediamanager.CLOUD_PERMISSION">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_CONFIGURATION">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PRIVILEGED_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.MODIFY_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.HARDWARE_TEST">
+</uses-permission>
+<uses-permission android:name="android.permission.CALL_PHONE">
+</uses-permission>
+<uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.MASTER_CLEAR">
+</uses-permission>
+<uses-permission android:name="com.google.android.googleapps.permission.GOOGLE_AUTH">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_DOWNLOAD_MANAGER">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CLEAR_APP_USER_DATA">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_APN_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_CHECKIN_PROPERTIES">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_USER_DICTIONARY">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_USER_DICTIONARY">
+</uses-permission>
+<uses-permission android:name="android.permission.RESTART_PACKAGES">
+</uses-permission>
+<uses-permission android:name="com.android.launcher.permission.READ_SETTINGS">
+</uses-permission>
+<uses-permission android:name="com.lge.launcher3.permission.READ_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_LGDRM">
+</uses-permission>
+<uses-permission android:name="android.permission.CALL_PRIVILEGED">
+</uses-permission>
+<uses-permission android:name="com.verizon.ACCESS_VZW_ACCOUNT">
+</uses-permission>
+<uses-permission android:name="android.permission.SET_PREFERRED_APPLICATIONS">
+</uses-permission>
+<uses-permission android:name="com.lge.permission.LGHIDDEN">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_ACCOUNTS_PRIVILEGED">
+</uses-permission>
+<uses-permission android:name="com.lge.permission.SET_FACTORY_VALUE">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_COMPONENT_ENABLED_STATE">
+</uses-permission>
+<uses-permission android:name="com.android.managedprovisioning.permission.READ_STATE">
+</uses-permission>
+<uses-permission android:name="lge.permission.activation.OTA_TRIGGER_ACCESS">
+</uses-permission>
+<uses-permission android:name="com.sprint.permission.RECEIVE_SW_START">
+</uses-permission>
+<uses-permission android:name="android.Manifest.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="com.smithmicro.netwise.director.comcast.oem.NWD_SDK">
+</uses-permission>
+<uses-permission android:name="com.google.android.apps.now.OPT_IN_WIZARD">
+</uses-permission>
+<uses-permission android:name="com.lge.permission.WRITE_CHAMELEON_ITEM">
+</uses-permission>
+<uses-permission android:name="android.permission.SEND_SMS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<application android:allowBackup="false" android:directBootAware="true" android:hardwareAccelerated="true" android:icon="@7F02009D" android:label="@7F0B00A3" android:supportsRtl="true" android:theme="@7F0A00D1">
+<meta-data android:name="com.lge.bl.oom" android:value="true">
+</meta-data>
+<meta-data android:name="android.max_aspect" android:value="2.000000">
+</meta-data>
+<meta-data android:name="com.lge.special_display" android:value="true">
+</meta-data>
+<activity android:configChanges="0x400024B7" android:name="com.android.LGSetupWizard.SetupHomeInit" android:screenOrientation="1">
+<intent-filter android:priority="4">
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.HOME">
+</category>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="com.android.LGSetupWizard.START_LG_SETUP">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x400024B7" android:exported="true" android:name="com.android.LGSetupWizard.SetupHomeExit" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.android.LGSetupWizard.EXIT">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x400024B7" android:exported="false" android:name="com.android.LGSetupWizard.control.SetupBridge" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.android.LGSetupWizard.NEXT">
+</action>
+<action android:name="com.android.LGSetupWizard.NEXT_SKIP">
+</action>
+<action android:name="com.android.LGSetupWizard.BACK">
+</action>
+<action android:name="com.android.LGSetupWizard.FINISH">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x400024B7" android:exported="false" android:name="com.android.LGSetupWizard.ui.BaseActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x40002480" android:exported="false" android:name="com.android.LGSetupWizard.ui.WelcomeActivity" android:screenOrientation="1" android:theme="@7F0A0136">
+<intent-filter>
+<action android:name="com.android.LGSetupWizard.WELCOME">
+</action>
+<action android:name="com.android.LGSetupWizard.SKIP_PRE_SETUP">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004B3" android:exported="false" android:label="@7F0B010C" android:name="com.android.LGSetupWizard.ui.InitActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.android.LGSetupWizard.INIT">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x00000030" android:exported="false" android:name="com.android.LGSetupWizard.ui.LanguageSelectionActivity" android:screenOrientation="1" android:theme="@7F0A0136" android:windowSoftInputMode="0x00000020">
+<intent-filter>
+<action android:name="com.android.LGSetupWizard.SELECT_LANGUAGE">
+</action>
+<action android:name="com.android.LGSetupWizard.SKIP_VZW_PRE_SETUP">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x00000030" android:exported="false" android:label="@7F0B00CF" android:name="com.android.LGSetupWizard.ui.ReadyToGoActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.android.LGSetupWizard.READY_TO_GO">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:name="com.android.LGSetupWizard.ui.NotiActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.android.LGSetupWizard.POA_RESTRICTED_BY_BUSINESS">
+</action>
+<action android:name="com.android.LGSetupWizard.POA_AUTHENTICATION_NEEDED">
+</action>
+<action android:name="com.android.LGSetupWizard.POA_LOST_OR_STOLEN">
+</action>
+<action android:name="com.android.LGSetupWizard.CANCEL_BB_PORTAL">
+</action>
+<action android:name="com.android.LGSetupWizard.ACTIVATION_FAIL">
+</action>
+<action android:name="com.android.LGSetupWizard.WIFI_NO_CONNECTION">
+</action>
+<action android:name="com.android.LGSetupWizard.BB_PORTAL_DESCRIPTION">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:label="@7F0B0082" android:name="com.android.LGSetupWizard.ui.LocalePickerActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.android.LGSetupWizard.LOCALE_PICKER">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:label="@7F0B00BB" android:name="com.android.LGSetupWizard.ui.TwoPhoneActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.android.LGSetupWizard.START_OLLEH_TWOPHONE">
+</action>
+<action android:name="com.android.LGSetupWizard.END_OLLEH_TWOPHONE">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:label="@7F0B0094" android:name="com.android.LGSetupWizard.ui.PhoneModeSelectionActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.android.LGSetupWizard.SELECT_PHONE_MODE">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:label="@7F0B00A9" android:name="com.android.LGSetupWizard.ui.SmartForwardActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.android.LGSetupWizard.START_SMRATFORWARD">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:label="@7F0B0063" android:name="com.android.LGSetupWizard.ui.AutoNaviActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.android.LGSetupWizard.AUTO_NAVI">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004B0" android:name="com.android.LGSetupWizard.ui.HfaActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.android.LGSetupWizard.START_HFA">
+</action>
+<action android:name="com.android.LGSetupWizard.SKIP_HFA">
+</action>
+<action android:name="com.android.LGSetupWizard.SUCCESS_HFA">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004B0" android:name="com.android.LGSetupWizard.ui.HfaCompleteActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.android.LGSetupWizard.HFA_COMPLETE">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:label="@7F0B0055" android:name="com.android.LGSetupWizard.ui.USIMWarningActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.android.LGSetupWizard.INSERT_USIM">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:name="com.android.LGSetupWizard.ui.ConnectNetworkActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.android.LGSetupWizard.CONNECT_NETWORK">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:label="@7F0B00A7" android:name="com.android.LGSetupWizard.ui.EulaActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.android.LGSetupWizard.EULA">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:label="@7F0B00A7" android:name="com.android.LGSetupWizard.ui.SelectGDPRActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.android.LGSetupWizard.SELECT_GDPR">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:label="@7F0B00A7" android:name="com.android.LGSetupWizard.ui.TermsActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.android.LGSetupWizard.TERMS">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:label="@7F0B0096" android:name="com.android.LGSetupWizard.ui.SelectHomeActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.android.LGSetupWizard.SELECT_HOME">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:label="@7F0B0042" android:name="com.android.LGSetupWizard.ui.SelectFullVisionModeActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.android.LGSetupWizard.SELECT_FULL_VISION_MODE">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:label="@7F0B00CE" android:name="com.android.LGSetupWizard.ui.SecurityAndPrivacyActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.android.LGSetupWizard.SECURITY_AND_PRIVACY">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004B3" android:exported="true" android:label="@7F0B007A" android:name="com.android.LGSetupWizard.ui.UserLockActivity" android:screenOrientation="1" android:theme="@7F0A0183">
+<intent-filter>
+<action android:name="com.android.LGSetupWizard.USER_LOCK">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:label="@7F0B0044" android:name="com.android.LGSetupWizard.ui.PersonalizeDeviceActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.android.LGSetupWizard.PERSONALIZE_DEVICE">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:label="@7F0B0041" android:name="com.android.LGSetupWizard.ui.SelectKeyboardActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.android.LGSetupWizard.SELECT_KEYBOARD">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:name="com.android.LGSetupWizard.ui.SpectrumMobileActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.android.LGSetupWizard.SPECTRUM_MOBILE">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x400024B7" android:exported="false" android:label="@7F0B0101" android:name="com.android.LGSetupWizard.ui.BaseAdapter" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x400024B7" android:label="@7F0B0101" android:name="com.android.LGSetupWizard.uiadapter.EmailListAdapter" android:screenOrientation="1">
+<intent-filter android:priority="1">
+<action android:name="com.android.LGSetupWizard.CALL_EMAILLIST">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x400024B7" android:exported="false" android:label="@7F0B0101" android:name="com.android.LGSetupWizard.uiadapter.VZWCloudAdapter" android:screenOrientation="1">
+<intent-filter android:priority="1">
+<action android:name="com.android.LGSetupWizard.VZW_CLOUD">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x400024B7" android:label="@7F0B0101" android:name="com.android.LGSetupWizard.uiadapter.GoogleSUWAdapter" android:screenOrientation="1">
+<intent-filter android:priority="1">
+<action android:name="android.intent.action.MAIN">
+</action>
+<action android:name="com.android.LGSetupWizard.CALL_GOOGLESUW">
+</action>
+<action android:name="com.android.LGSetupWizard.ADD_GOOGLEACCOUNT">
+</action>
+<action android:name="com.android.setupwizard.OEM_POST_SETUP">
+</action>
+<action android:name="com.android.setupwizard.COMPLETED">
+</action>
+<action android:name="com.android.LGSetupWizard.CALL_QR_PROVISIONING_GOOGLESUW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x400024B7" android:exported="false" android:label="@7F0B0101" android:name="com.android.LGSetupWizard.uiadapter.WifiSettingsAdapter" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.android.LGSetupWizard.SET_WIFI">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x400024B7" android:label="@7F0B0101" android:name="com.android.LGSetupWizard.uiadapter.CallAdapter" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.android.LGSetupWizard.START_ACTIVATION">
+</action>
+<action android:name="com.android.LGSetupWizard.POA_ACTIVATION">
+</action>
+<action android:name="com.android.LGSetupWizard.ACTIVATION_COMPLETE">
+</action>
+<action android:name="com.android.LGSetupWizard.ACTIVATION_CANCELED">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x400024B7" android:exported="false" android:label="@7F0B0101" android:name="com.android.LGSetupWizard.uiadapter.PortalUIAdapter">
+<intent-filter>
+<action android:name="com.android.LGSetupWizard.START_CAPTIVE_PORTAL">
+</action>
+<action android:name="com.android.LGSetupWizard.START_BB_PORTAL">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x400024B7" android:exported="false" android:label="@7F0B0101" android:name="com.android.LGSetupWizard.uiadapter.TStoreAdapter" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.android.LGSetupWizard.REGISTER_TSTORE">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x400024B7" android:exported="false" android:label="@7F0B0101" android:name="com.android.LGSetupWizard.uiadapter.OllehServiceAdapter" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.android.LGSetupWizard.START_OLLEH_WELCOME">
+</action>
+<action android:name="com.android.LGSetupWizard.SHOW_OLLEH_TERMS_OF_CONDITIONS">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x400024B7" android:exported="false" android:label="@7F0B0101" android:name="com.android.LGSetupWizard.uiadapter.R2GStartAdapter" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.android.LGSetupWizard.START_R2G">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x400024B7" android:exported="false" android:label="@7F0B0101" android:name="com.android.LGSetupWizard.uiadapter.CIQAdapter" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.android.LGSetupWizard.START_CIQ">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x400024B7" android:exported="false" android:label="@7F0B0101" android:name="com.android.LGSetupWizard.uiadapter.TphoneAdapter" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.android.LGSetupWizard.START_TPHONE_EULA">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x400024B7" android:exported="false" android:label="@7F0B0101" android:name="com.android.LGSetupWizard.uiadapter.WifiManagerEulaAdapter" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.android.LGSetupWizard.CALL_WIFIMANAGER_EULA">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x400024B7" android:exported="true" android:label="@7F0B0101" android:name="com.android.LGSetupWizard.uiadapter.NetworkCheckerAdapter">
+<intent-filter>
+<action android:name="com.android.LGSetupWizard.NETWORK_CHECKER">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x400024B7" android:exported="true" android:label="@7F0B0101" android:name="com.android.LGSetupWizard.uiadapter.DOCheckerAdapter">
+<intent-filter>
+<action android:name="com.android.LGSetupWizard.DO_CHECKER">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x400024B7" android:exported="true" android:label="@7F0B0101" android:name="com.android.LGSetupWizard.uiadapter.AmazonAdapter">
+<intent-filter>
+<action android:name="com.android.LGSetupWizard.AMAZON">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x400024B7" android:exported="true" android:label="@7F0B0101" android:name="com.android.LGSetupWizard.uiadapter.UPlusTermsAdapter">
+<intent-filter>
+<action android:name="com.android.LGSetupWizard.UPLUS_TERMS">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x400024B7" android:exported="true" android:label="@7F0B0101" android:name="com.android.LGSetupWizard.wizard_script_linker.AFWProvisioningLinker">
+<intent-filter>
+<action android:name="com.android.LGSetupWizard.QR_CODE_PROVISIONING">
+</action>
+<action android:name="com.android.LGSetupWizard.NFC_PROVISIONING_FINISHED">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x400024B7" android:exported="true" android:label="@7F0B0101" android:name="com.android.LGSetupWizard.wizard_script_linker.PostProvisioningLinker">
+<intent-filter>
+<action android:name="com.android.LGSetupWizard.POST_PROVISIONING">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x400024B7" android:exported="true" android:label="@7F0B0101" android:name="com.android.LGSetupWizard.wizard_script_linker.DCMCoreSetupLinker">
+<intent-filter>
+<action android:name="com.android.LGSetupWizard.DCM_CORE_SETUP_LINKER">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x400024B7" android:exported="true" android:label="@7F0B0101" android:name="com.android.LGSetupWizard.wizard_script_linker.GoogleMobileNetworkOnLinker">
+<intent-filter>
+<action android:name="com.android.LGSetupWizard.GOOGLE_MOBILE_NETWORK_ON">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x400024B7" android:exported="true" android:label="@7F0B0101" android:name="com.android.LGSetupWizard.wizard_script_linker.PAILinker">
+<intent-filter>
+<action android:name="com.android.LGSetupWizard.PAI_LINKER">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x400024B7" android:exported="true" android:label="@7F0B0101" android:name="com.android.LGSetupWizard.wizard_script_linker.NoAccountStartDownloadLinker">
+<intent-filter>
+<action android:name="com.android.LGSetupWizard.NO_ACCOUNT_START_DOWNLOAD_LINKER">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x400024B7" android:exported="true" android:label="@7F0B0101" android:name="com.android.LGSetupWizard.wizard_script_linker.GoogleAssistantLinker">
+<intent-filter>
+<action android:name="com.android.LGSetupWizard.GOOGLE_ASSISTANT_LINKER">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x400024B7" android:exported="true" android:label="@7F0B0101" android:name="com.android.LGSetupWizard.wizard_script_linker.ASMLinker">
+<intent-filter>
+<action android:name="com.android.LGSetupWizard.ASM_LINKER">
+</action>
+<action android:name="com.android.LGSetupWizard.ASM_LINKER_WITH_ACTIVATION">
+</action>
+<action android:name="com.android.LGSetupWizard.ASM_LINKER_WITH_SKIP">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x400024B7" android:exported="true" android:label="@7F0B0101" android:name="com.android.LGSetupWizard.wizard_script_linker.LockScreenLinker">
+<intent-filter>
+<action android:name="com.android.LGSetupWizard.LOCK_SCREEN_LINKER">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:label="@7F0B0101" android:name="com.android.LGSetupWizard.wrapper.GoogleWrapper" android:theme="@7F0A0099">
+<intent-filter>
+<action android:name="com.android.LGSetupWizard.GOOGLE_ASSISTANT_WRAPPER">
+</action>
+<action android:name="com.android.LGSetupWizard.REVIEW_ADDITIONAL_APPS_WRAPPER">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<service android:configChanges="0x000004B0" android:name="com.android.LGSetupWizard.ui.ConeUIService">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</service>
+<receiver android:name="com.android.LGSetupWizard.uiadapter.R2GCompleteAdapter">
+<intent-filter>
+<action android:name="com.synchronoss.dcs.r2g.POST_R2G_SETUP">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name="com.android.LGSetupWizard.adapter.PartnerReceiver">
+<intent-filter>
+<action android:name="com.android.setupwizard.action.PARTNER_CUSTOMIZATION">
+</action>
+</intent-filter>
+</receiver>
+</application>
+</manifest>

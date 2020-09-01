@@ -1,0 +1,232 @@
+<?xml version="1.0" ?><manifest android:versionCode="57" android:versionName="5.23" package="com.gensuite.onthego" platformBuildVersionCode="24" platformBuildVersionName="7.000000" xmlns:amazon="http://schemas.amazon.com/apk/res/android" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="19" android:targetSdkVersion="22">
+</uses-sdk>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_DOWNLOAD_MANAGER">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_INTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.RECORD_AUDIO">
+</uses-permission>
+<uses-permission android:name="android.permission.USE_FINGERPRINT">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_CONTACTS">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_CONTACTS">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-permission android:name="android.permission.MANAGE_DOCUMENTS">
+</uses-permission>
+<uses-permission android:name="android.permission.BLUETOOTH" android:required="false">
+</uses-permission>
+<uses-permission android:name="android.permission.BLUETOOTH_ADMIN" android:required="false">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE">
+</uses-permission>
+<uses-permission android:name="com.gensuite.onthego.permission.C2D_MESSAGE">
+</uses-permission>
+<uses-feature android:name="android.hardware.telephony" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.camera" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.camera.autofocus" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.location.gps" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.microphone" android:required="false">
+</uses-feature>
+<permission android:name="com.gensuite.onthego.permission.RECEIVE_ADM_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="com.gensuite.onthego.permission.RECEIVE_ADM_MESSAGE">
+</uses-permission>
+<uses-permission android:name="com.amazon.device.messaging.permission.RECEIVE">
+</uses-permission>
+<permission android:name="com.gensuite.onthego.permission.C2D_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-feature android:name="android.hardware.camera.front" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.camera.flash" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.screen.landscape" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.wifi" android:required="false">
+</uses-feature>
+<meta-data android:name="android.support.VERSION" android:value="25.3.1">
+</meta-data>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<application android:allowBackup="true" android:icon="@7F030000" android:label="@7F080141" android:largeHeap="true" android:name="com.gensuite.onthego.GensuiteAppController" android:supportsRtl="true" android:theme="@7F0A0044">
+<amazon:enable-feature android:name="com.amazon.device.messaging" android:required="true">
+</amazon:enable-feature>
+<service android:exported="false" android:name="com.push.amazonpush.ADMMessageHandler">
+</service>
+<meta-data android:name="AmazonAPIKey" android:value="@7F080140">
+</meta-data>
+<receiver android:name="com.push.amazonpush.ADMMessageHandler$MessageAlertReceiver" android:permission="com.amazon.device.messaging.permission.SEND">
+<intent-filter>
+<action android:name="com.amazon.device.messaging.intent.REGISTRATION">
+</action>
+<action android:name="com.amazon.device.messaging.intent.RECEIVE">
+</action>
+<category android:name="com.gensuite.onthego">
+</category>
+</intent-filter>
+</receiver>
+<activity android:configChanges="0x000004A0" android:label="@7F080141" android:name="com.gensuite.onthego.SplashActivity">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:label="@7F080270" android:name="com.gensuite.onthego.ui.activities.RegisterActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F080269" android:name="com.gensuite.onthego.ui.activities.HomeBaseActivity" android:screenOrientation="13">
+<intent-filter>
+<data android:scheme="gsexplorer">
+</data>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+</intent-filter>
+</activity>
+<activity android:name="com.gensuite.onthego.ui.activities.SettingsActivity" android:screenOrientation="1" android:theme="@7F0A0044">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F08026E" android:name="com.gensuite.onthego.ui.activities.PersonalActionEntryActivity" android:screenOrientation="13">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F080268" android:name="com.gensuite.onthego.ui.activities.FastForwardEntryActivity" android:screenOrientation="13">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F08026D" android:name="com.gensuite.onthego.ui.activities.OpenPendingItemsActivity" android:screenOrientation="13" android:theme="@7F0A0044" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:label="@7F080272" android:name="com.gensuite.onthego.ui.activities.VideoPlayActivity" android:theme="@7F0A0044">
+</activity>
+<activity android:label="@7F080271" android:name="com.gensuite.onthego.ui.activities.TourActivity" android:theme="@7F0A00E8">
+</activity>
+<activity android:name="com.gensuite.onthego.ui.activities.AboutActivity">
+</activity>
+<activity android:configChanges="0x00000480" android:label="@7F08026C" android:name="com.gensuite.onthego.ui.activities.OpenPageActivity" android:theme="@7F0A0044">
+</activity>
+<activity android:label="@7F08026A" android:name="com.gensuite.onthego.ui.activities.OfflineFormsActivity" android:screenOrientation="1" android:theme="@7F0A0044">
+</activity>
+<activity android:clearTaskOnLaunch="true" android:name="com.journeyapps.barcodescanner.CaptureActivity" android:screenOrientation="10" android:stateNotNeeded="true" android:theme="@7F0A01C2" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:label="@7F08026B" android:name="com.gensuite.onthego.ui.activities.OfflinePendingFormActivity" android:screenOrientation="1" android:theme="@7F0A0044">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F080267" android:name="com.gensuite.onthego.ui.activities.ClosedItemsActivity" android:screenOrientation="13" android:theme="@7F0A0044" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.gensuite.onthego.ui.activities.SentItemsActivity" android:screenOrientation="13" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.gensuite.onthego.ui.activities.NotSentItemsActivity" android:screenOrientation="13" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.gensuite.onthego.ui.activities.AwaitingConnectionItemsActivity" android:screenOrientation="13" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:label="@7F08026F" android:name="com.gensuite.onthego.ui.activities.PreviewActivity" android:theme="@7F0A0044">
+</activity>
+<activity android:name="com.gensuite.onthego.ui.activities.RecordAudioActivity" android:theme="@7F0A01A6">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.gensuite.onthego.ui.activities.OpenPastDueItemsActivity" android:screenOrientation="13" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.gensuite.onthego.ui.activities.EditProfileActivity">
+</activity>
+<activity android:name="com.gensuite.onthego.ui.activities.SetPassCodeConditionActivity" android:theme="@7F0A01A6">
+</activity>
+<activity android:name="com.gensuite.onthego.ui.activities.SetPassCodeNormalActivity" android:theme="@7F0A01A6">
+</activity>
+<activity android:name="com.gensuite.onthego.ui.activities.SetPassCodeActivity" android:theme="@7F0A01A6">
+</activity>
+<activity android:name="com.gensuite.onthego.ui.activities.EnterPasscodeActivity" android:theme="@7F0A01A6">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.gensuite.onthego.ui.activities.EmailPickActivity">
+</activity>
+<activity android:name="com.gensuite.onthego.ui.activities.ShowDialogActivity" android:theme="@7F0A01A6">
+</activity>
+<receiver android:name="com.push.pushnotification.GCMCallbackReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+<action android:name="com.google.android.c2dm.intent.REGISTRATION">
+</action>
+<category android:name="com.gensuite.onthego">
+</category>
+</intent-filter>
+</receiver>
+<receiver android:name="com.gensuite.onthego.beacon.BeaconRegionReceiver">
+<intent-filter>
+<action android:name="com.gensuite.onthego.action.NOTIFY_BEACON_ENTERS_REGION">
+</action>
+</intent-filter>
+</receiver>
+<service android:name="com.push.pushnotification.GCMCallbackService">
+</service>
+<service android:name="com.push.pushnotification.GcmRegisterService">
+</service>
+<service android:name="com.push.pushnotification.NotificationIntentService">
+</service>
+<service android:name="com.gensuite.onthego.util.VoiceRecordSaveDataService">
+</service>
+<service android:name="com.gensuite.onthego.service.ContactFetchIntentService">
+</service>
+<activity android:name="com.gensuite.onthego.ui.activities.NotificationDetailActivity">
+</activity>
+<meta-data android:name="io.fabric.ApiKey" android:value="966adb9d1ba90db94c6025e8b24916c66df7d78c">
+</meta-data>
+<activity android:name="com.gensuite.onthego.ui.activities.MemosActivity">
+</activity>
+<activity android:name="com.gensuite.onthego.ui.activities.PendingFollowUpActivity">
+</activity>
+<activity android:configChanges="0x00000480" android:name="com.gensuite.onthego.ui.widget.photoeditor.PhotoEditorActivity" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name="com.gensuite.onthego.ui.activities.VirtualAssistantActivity" android:theme="@7F0A01A6">
+</activity>
+<activity android:name="com.gensuite.onthego.ui.activities.SelectLanguageActivity">
+</activity>
+<activity android:name="com.gensuite.onthego.ui.widget.photoeditor.PhotoPreviewActivity">
+</activity>
+<receiver android:name="org.altbeacon.beacon.startup.StartupBroadcastReceiver">
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+<action android:name="android.intent.action.ACTION_POWER_CONNECTED">
+</action>
+<action android:name="android.intent.action.ACTION_POWER_DISCONNECTED">
+</action>
+</intent-filter>
+</receiver>
+<service android:enabled="true" android:exported="false" android:isolatedProcess="false" android:label="beacon" android:name="org.altbeacon.beacon.service.BeaconService">
+</service>
+<service android:enabled="true" android:exported="false" android:name="org.altbeacon.beacon.BeaconIntentProcessor">
+</service>
+<service android:name="org.altbeacon.beacon.service.ScanJob" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:01030010">
+</activity>
+<meta-data android:name="com.google.android.gms.version" android:value="@7F0C000B">
+</meta-data>
+</application>
+</manifest>

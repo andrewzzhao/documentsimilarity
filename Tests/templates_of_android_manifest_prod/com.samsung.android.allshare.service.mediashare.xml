@@ -1,0 +1,82 @@
+<?xml version="1.0" ?><manifest android:sharedUserId="android.uid.asf_mediashare" android:versionCode="18" android:versionName="2.2" package="com.samsung.android.allshare.service.mediashare" platformBuildVersionCode="23" platformBuildVersionName="6.0.1" xmlns:android="http://schemas.android.com/apk/res/android">
+<supports-screens android:anyDensity="true" android:largeScreens="true" android:normalScreens="true" android:smallScreens="true" android:xlargeScreens="true">
+</supports-screens>
+<permission android:description="@7F070002" android:label="@7F070001" android:name="com.sec.android.permission.PERSONAL_MEDIA" android:protectionLevel="0x00000003">
+</permission>
+<uses-sdk android:minSdkVersion="14" android:targetSdkVersion="23">
+</uses-sdk>
+<application android:debuggable="false" android:icon="@7F020007" android:label="@7F070000">
+<service android:enabled="true" android:name=".ServiceManager" android:permission="com.sec.android.permission.PERSONAL_MEDIA">
+<intent-filter>
+<action android:name="com.samsung.android.allshare.service.mediashare.ServiceManager.START_SERVICE">
+</action>
+<action android:name="com.samsung.android.allshare.service.mediashare.ServiceManager.STOP_SERVICE">
+</action>
+<action android:name="com.samsung.android.allshare.service.mediashare.SUBSCRIBE_SERVICE">
+</action>
+<action android:name="com.sec.android.allshare.framework.ServiceManager.START_SERVICE">
+</action>
+<action android:name="com.sec.android.allshare.framework.ServiceManager.STOP_SERVICE">
+</action>
+<action android:name="com.sec.android.allshare.framework.SUBSCRIBE_SERVICE">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</service>
+<activity android:configChanges="0x000004A0" android:exported="false" android:launchMode="1" android:name=".download.ui.DownloadActivity" android:theme="@android:0103005F">
+</activity>
+<service android:exported="false" android:name=".download.DownloadService">
+</service>
+<uses-library android:name="allshare">
+</uses-library>
+<uses-library android:name="touchwiz">
+</uses-library>
+</application>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="conv.svc.sec.nearby.config.READ">
+</uses-permission>
+<uses-permission android:name="conv.svc.sec.nearby.config.WRITE">
+</uses-permission>
+<uses-permission android:name="conv.svc.sec.nearby.MEDIASHARE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PROFILE">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-permission android:name="android.permission.REAL_GET_TASKS">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERACT_ACROSS_USERS">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_MEDIA_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.SET_PROCESS_LIMIT">
+</uses-permission>
+<uses-permission android:name="com.android.email.permission.READ_ATTACHMENT">
+</uses-permission>
+<uses-permission android:name="android.permission.MANAGE_USERS">
+</uses-permission>
+<uses-permission android:name="android.permission.MANAGE_DOCUMENTS">
+</uses-permission>
+<uses-permission android:name="android.permission.LOCAL_MAC_ADDRESS">
+</uses-permission>
+</manifest>

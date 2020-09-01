@@ -1,0 +1,450 @@
+<?xml version="1.0" ?><manifest android:installLocation="0" android:versionCode="1569" android:versionName="4.3.7" package="com.ehi.national.mobile" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="21" android:targetSdkVersion="27">
+</uses-sdk>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_LOGS">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_CALENDAR">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_CALENDAR">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-permission android:name="android.permission.FLASHLIGHT">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-feature android:name="android.hardware.location" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.location.gps" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.location.network" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.camera" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.camera.flash" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.camera.autofocus" android:required="false">
+</uses-feature>
+<uses-permission android:name="android.permission.USE_FINGERPRINT">
+</uses-permission>
+<supports-screens android:anyDensity="true" android:largeScreens="true" android:normalScreens="true" android:resizeable="true" android:smallScreens="true" android:xlargeScreens="true">
+</supports-screens>
+<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE">
+</uses-permission>
+<uses-feature android:glEsVersion="0x00020000" android:required="true">
+</uses-feature>
+<uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<application android:allowBackup="false" android:hardwareAccelerated="true" android:icon="@7F0700CC" android:label="@7F0D00A9" android:name="com.ehi.national.mobile.session.EhiApplication" android:screenOrientation="1" android:theme="@7F0E0019">
+<service android:name="com.ehi.national.mobile.notifications.FCMListenerService">
+<intent-filter>
+<action android:name="com.google.firebase.MESSAGING_EVENT">
+</action>
+</intent-filter>
+</service>
+<meta-data android:name="com.google.firebase.messaging.default_notification_channel_id" android:value="misc_channel_id">
+</meta-data>
+<service android:name="com.ehi.national.mobile.notifications.EHFirebaseInstanceIdService">
+<intent-filter>
+<action android:name="com.google.firebase.INSTANCE_ID_EVENT">
+</action>
+</intent-filter>
+</service>
+<service android:name="com.ehi.national.mobile.notifications.LocalNotificationCheckIntentService">
+</service>
+<receiver android:exported="true" android:name="com.ehi.national.mobile.analytics.NmaReferralReceiver">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:exported="true" android:label="@7F0D0018" android:name="com.ehi.national.mobile.app_widget.RewardsWidgetProvider">
+<intent-filter>
+<action android:name="android.appwidget.action.APPWIDGET_UPDATE">
+</action>
+</intent-filter>
+<meta-data android:name="android.appwidget.provider" android:resource="@7F100000">
+</meta-data>
+</receiver>
+<activity android:configChanges="0x000000A0" android:label="@7F0D0266" android:name="com.ehi.national.mobile.splash.SplashActivity" android:screenOrientation="1" android:theme="@7F0E0018">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="nationalmobileapp">
+</data>
+</intent-filter>
+<intent-filter android:autoVerify="true">
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="nationalcar-usability.com" android:path="/en_US/car-rental/reservation/startReservation.html" android:scheme="https">
+</data>
+<data android:host="www.nationalcar.com" android:path="/en_US/car-rental/reservation/startReservation.html" android:scheme="https">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="nationalcar-usability.com" android:path="/en_US/car-rental/home.html" android:scheme="https">
+</data>
+<data android:host="www.nationalcar.com" android:path="/en_US/car-rental/home.html" android:scheme="https">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="nationalcar-usability.com" android:path="/en_US/car-rental/reservation/reservationSearch.html" android:scheme="https">
+</data>
+<data android:host="www.nationalcar.com" android:path="/en_US/car-rental/reservation/reservationSearch.html" android:scheme="https">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="nationalcar-usability.com" android:path="/en_US/car-rental/locations.html" android:scheme="https">
+</data>
+<data android:host="www.nationalcar.com" android:path="/en_US/car-rental/locations.html" android:scheme="https">
+</data>
+</intent-filter>
+<intent-filter>
+<data android:scheme="amp8537253c3b084a0c6dddb5e-22e881ac-d2e7-11e2-8d87-009c5fda0a25">
+</data>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+</intent-filter>
+<intent-filter>
+<data android:scheme="amp1df6944aa2a11f4bbc74e43-264eddee-d2e9-11e2-352a-00a426b17dd8">
+</data>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+</intent-filter>
+<intent-filter>
+<data android:scheme="amp54590b20ab2fa84da0777d2-ba51d1a8-d751-11e2-8e15-009c5fda0a25">
+</data>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.ehi.national.mobile.reservation.DatePickerActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.ehi.national.mobile.profile.payment_info.PaymentDetailsInformationActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.ehi.national.mobile.reservation.policydetails.PolicyDetailsActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.ehi.national.mobile.reservation.ReservationActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.ehi.national.mobile.reservation.review_and_reserve.ReviewReserveMopActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.ehi.national.mobile.reservation.CurrencyConversionHelpActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.ehi.national.mobile.reservation.itemdetails.ProductDetailsActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.ehi.national.mobile.reservation.taxessurchargesfees.TaxesSurchargesFeesActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.ehi.national.mobile.login.login.LoginActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name="com.ehi.national.mobile.profile.ProfileMainActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ehi.national.mobile.profile.payment_info.PaymentInformationActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.ehi.national.mobile.profile.driver_info.DriverInfoActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:name="com.ehi.national.mobile.profile.reward_preference.RewardPreferenceActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ehi.national.mobile.profile.RecoveryFeeActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ehi.national.mobile.profile.ProfileRentalPrefEditActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ehi.national.mobile.profile.rental_pref_coverage_info.ProfileRentalPrefCoverageInfoActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.ehi.national.mobile.profile.communication.CommunicationPreferencesActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:name="com.ehi.national.mobile.profile.ProfileHelpActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ehi.national.mobile.profile.ProfileEmeraldCardActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.ehi.national.mobile.profile.add_credit_card.AddCreditCardActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name="com.ehi.national.mobile.home.HomeActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ehi.national.mobile.home.websurvey.WebSurveyActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ehi.national.mobile.home.extendrental.ExtendRentalActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ehi.national.mobile.home.extendrental.extendrental_review.ExtendRentalReviewActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ehi.national.mobile.home.extendrental.extendrental_details.ExtendRentalDetailsActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ehi.national.mobile.RoadsideAssistanceActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ehi.national.mobile.myrewards.MyRewardsInfoActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ehi.national.mobile.login.ForgotLoginPasswordActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ehi.national.mobile.mytrips.past_trips.PastTripViewActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ehi.national.mobile.virtualaisle.vehicle_choice.VehicleChoiceActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ehi.national.mobile.virtualaisle.PaymentMethodActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ehi.national.mobile.virtualaisle.confirm_choice.ConfirmChoiceActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ehi.national.mobile.virtualaisle.va_error.VirtualAisleErrorActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ehi.national.mobile.virtualaisle.SpeedePassCancelActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ehi.national.mobile.virtualaisle.rentalitem.RentalItemsActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ehi.national.mobile.virtualaisle.VirtualAisleHelpActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ehi.national.mobile.virtualexit.VirtualExitInstructionsActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ehi.national.mobile.virtualexit.VirtualExitGenericErrorActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ehi.national.mobile.virtualaisle.VirtualAisleIneligibilityHelpActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ehi.national.mobile.mytrips.MyTripsActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ehi.national.mobile.mytrips.trips_details.MyTripsDetailsActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ehi.national.mobile.mytrips.MyTripsTermsAndConditions" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ehi.national.mobile.mytrips.find_reservation.MyTripsFindReservationActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ehi.national.mobile.mytrips.MyTripsFindReservationResultActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ehi.national.mobile.locations.location_search.LocationSearchActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ehi.national.mobile.locations.details.LocationDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ehi.national.mobile.locations.LocationAddInfoActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ehi.national.mobile.mytrips.MyTripsPolicyInfoActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ehi.national.mobile.tour.TourTheAppActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ehi.national.mobile.mytrips.MyTripsHelpActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ehi.national.mobile.specials.SpecialsListActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ehi.national.mobile.SpecialsDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ehi.national.mobile.contact_us.ContactActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ehi.national.mobile.ContactListActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ehi.national.mobile.terms_data.TermsDataActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ehi.national.mobile.about.AboutThisAppActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ehi.national.mobile.locations.direction.LocationDirectionsActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ehi.national.mobile.wrenchscreen.extra_tools.ExtraToolsActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ehi.national.mobile.DoNotRentActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ehi.national.mobile.NotAvailableForRentalActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ehi.national.mobile.ServerDownErrorActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ehi.national.mobile.app_force_upgrade.ForceUpgradeAppActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ehi.national.mobile.virtualaisle.VirtualAisleStartActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ehi.national.mobile.virtualaisle.VAUpsellProductDetailsActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ehi.national.mobile.reservation.redemption.RedemptionActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ehi.national.mobile.SendFeedbackActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:name="com.ehi.national.mobile.OfflineActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ehi.national.mobile.eastereggs.SimpleCreditsListActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ehi.national.mobile.eastereggs.CreditsListActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ehi.national.mobile.eastereggs.credit.CreditListActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ehi.national.mobile.eastereggs.RollingCreditsListActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ehi.national.mobile.eastereggs.DrivingCreditsListActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ehi.csma.activities.BarcodeScanActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ehi.national.mobile.virtualexit.secure.SecureVehicleActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ehi.national.mobile.virtualpass.VirtualPassActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ehi.national.mobile.mytrips.past_trips.TollPassInfoActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ehi.national.mobile.WebViewActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ehi.national.mobile.settings.AppSettingsActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ehi.national.mobile.settings.AppSettingsInformationActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ehi.national.mobile.newfeatures.NewFeatureActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ehi.national.mobile.profile.TermsAndConditionsActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F0D0283" android:name="com.google.android.gms.oss.licenses.OssLicensesMenuActivity" android:theme="@7F0E012E">
+</activity>
+<activity android:name="com.google.android.gms.oss.licenses.OssLicensesActivity" android:theme="@7F0E012E">
+</activity>
+<activity android:enabled="@7F04000D" android:exported="false" android:name="com.localytics.android.PushTrackingActivity">
+</activity>
+<service android:exported="false" android:name="com.ehi.national.mobile.VAVehicleUnlockService">
+</service>
+<meta-data android:name="LOCALYTICS_APP_KEY" android:value="@7F0D01AF">
+</meta-data>
+<receiver android:enabled="@7F04000E" android:exported="true" android:name="com.localytics.android.ReferralReceiver">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+<service android:enabled="@7F040007" android:exported="true" android:name="com.localytics.android.FirebaseTokenService">
+<intent-filter>
+<action android:name="com.google.firebase.INSTANCE_ID_EVENT">
+</action>
+</intent-filter>
+</service>
+<service android:enabled="@7F040007" android:exported="true" android:name="com.localytics.android.FirebaseService">
+<intent-filter>
+<action android:name="com.google.firebase.MESSAGING_EVENT">
+</action>
+</intent-filter>
+</service>
+<receiver android:enabled="@7F04000C" android:name="com.localytics.android.LocationUpdateReceiver">
+</receiver>
+<receiver android:enabled="@7F04000C" android:name="com.localytics.android.BootReceiver">
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+</intent-filter>
+</receiver>
+<service android:enabled="@7F04000B" android:exported="true" android:name="com.localytics.android.BackgroundService" android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE">
+<intent-filter>
+<action android:name="com.google.android.gms.gcm.ACTION_TASK_READY">
+</action>
+</intent-filter>
+</service>
+<service android:exported="true" android:name="com.google.firebase.messaging.FirebaseMessagingService">
+<intent-filter android:priority="-500">
+<action android:name="com.google.firebase.MESSAGING_EVENT">
+</action>
+</intent-filter>
+</service>
+<service android:exported="false" android:name="com.google.firebase.components.ComponentDiscoveryService">
+<meta-data android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar" android:value="com.google.firebase.components.ComponentRegistrar">
+</meta-data>
+<meta-data android:name="com.google.firebase.components:com.google.firebase.iid.Registrar" android:value="com.google.firebase.components.ComponentRegistrar">
+</meta-data>
+</service>
+<receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementReceiver">
+</receiver>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementService">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementJobService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<receiver android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+</intent-filter>
+</receiver>
+<service android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdService">
+<intent-filter android:priority="-500">
+<action android:name="com.google.firebase.INSTANCE_ID_EVENT">
+</action>
+</intent-filter>
+</service>
+<provider android:authorities="com.ehi.national.mobile.firebaseinitprovider" android:exported="false" android:initOrder="100" android:name="com.google.firebase.provider.FirebaseInitProvider">
+</provider>
+<activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:01030010">
+</activity>
+<meta-data android:name="com.google.android.gms.version" android:value="@7F090009">
+</meta-data>
+<activity android:configChanges="0x000004B0" android:exported="false" android:label="@7F0D0030" android:name="com.foresee.sdk.cxMeasure.tracker.app.invite.InviteActivity" android:theme="@android:01030010">
+<intent-filter>
+<action android:name="com.fsr.tracker.app.LAUNCH_INVITE">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:name="com.foresee.sdk.cxMeasure.tracker.app.SurveyActivity">
+<intent-filter>
+<action android:name="com.fsr.tracker.app.LAUNCH_SURVEY">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<receiver android:name="com.foresee.sdk.cxMeasure.tracker.services.NotificationReceiver">
+</receiver>
+<activity android:configChanges="0x000000A0" android:name="io.card.payment.CardIOActivity">
+</activity>
+<activity android:name="io.card.payment.DataEntryActivity">
+</activity>
+</application>
+</manifest>

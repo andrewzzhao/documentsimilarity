@@ -1,0 +1,264 @@
+<?xml version="1.0" ?><manifest android:versionCode="9" android:versionName="4.0.0" package="com.mobicule.lodha" platformBuildVersionCode="26" platformBuildVersionName="8.0.0" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="21" android:targetSdkVersion="22">
+</uses-sdk>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE">
+</uses-permission>
+<uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS">
+</uses-permission>
+<uses-permission android:name="com.google.android.gms.permission.ACTIVITY_RECOGNITION">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_SYNC_STATS">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_SYNC_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_INTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_INTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="com.google.android.c2dm.permission.SEND">
+</uses-permission>
+<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE">
+</uses-permission>
+<uses-permission android:name="com.android.core_componants.gcm_componant.gcm.permission.C2D_MESSAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<meta-data android:name="android.support.VERSION" android:value="26.0.0-alpha1">
+</meta-data>
+<permission android:name="com.mobicule.lodha.permission.C2D_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="com.mobicule.lodha.permission.C2D_MESSAGE">
+</uses-permission>
+<application android:allowBackup="false" android:icon="@7F02005F" android:label="@7F090058" android:largeHeap="true" android:name="com.mobicule.lodha.application.AppApplication" android:supportsRtl="true" android:theme="@7F0B00AA">
+<activity android:name="com.mobicule.lodha.common.view.BaseActivity">
+</activity>
+<activity android:name="com.mobicule.lodha.login.view.LoginActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.mobicule.lodha.login.view.OTPActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:name="com.mobicule.lodha.home.view.HomeActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.mobicule.lodha.reports.view.FilterActivityDepartmentScoreCard" android:screenOrientation="1" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:name="com.mobicule.lodha.feedback.view.WhomToGiveFeedbackActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:name="com.mobicule.lodha.odleave.ApplyLeaveOdDetailsActivity" android:screenOrientation="1" android:theme="@7F0B00AB" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:label="@7F090058" android:name="com.mobicule.lodha.home.view.MainHomeScreenActivity" android:screenOrientation="1" android:theme="@7F0B00AB" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:name="com.mobicule.lodha.feedback.view.FeedbackActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.mobicule.lodha.feedback.view.FullFeedbackDetailsActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.mobicule.lodha.notification.view.NotificationActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.mobicule.lodha.ManualCheckInCheckOut.ManualCheckInActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:name="com.mobicule.lodha.ManualCheckInCheckOut.ManualCheckOutActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:name="com.mobicule.lodha.feedback.view.CongratulatoryMessageActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:name="com.mobicule.lodha.feedback.view.CreateFeedbackActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000020">
+</activity>
+<provider android:authorities="com.mobicule.lodha.provider" android:exported="false" android:multiprocess="true" android:name="com.mobicule.synccore.syncadapter.StubProvider" android:syncable="true">
+</provider>
+<service android:exported="true" android:name="com.mobicule.synccore.syncadapter.SyncService">
+<intent-filter>
+<action android:name="android.content.SyncAdapter">
+</action>
+</intent-filter>
+<meta-data android:name="android.content.SyncAdapter" android:resource="@7F070003">
+</meta-data>
+</service>
+<service android:exported="true" android:name="com.mobicule.synccore.syncadapter.AccountService" android:process=":auth">
+<intent-filter>
+<action android:name="android.accounts.AccountAuthenticator">
+</action>
+</intent-filter>
+<meta-data android:name="android.accounts.AccountAuthenticator" android:resource="@7F070000">
+</meta-data>
+</service>
+<activity android:name="com.mobicule.lodha.home.view.ProfileActivity" android:screenOrientation="1">
+</activity>
+<service android:exported="false" android:name="com.mobicule.lodha.notification.implementation.GCMRegistrationIntentService">
+<intent-filter>
+<action android:name="com.google.android.gms.iid.InstanceID">
+</action>
+</intent-filter>
+</service>
+<receiver android:exported="true" android:name="com.google.android.gms.gcm.GcmReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+<action android:name="com.google.android.c2dm.intent.REGISTRATION">
+</action>
+<category android:name="com.gnirt69.gcmexample">
+</category>
+</intent-filter>
+</receiver>
+<receiver android:label="@7F090058" android:name="com.mobicule.lodha.util.UpgradeReceiver">
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_REPLACED">
+</action>
+<action android:name="android.intent.action.MY_PACKAGE_REPLACED">
+</action>
+<data android:path="com.mobicule.lodha" android:scheme="package">
+</data>
+</intent-filter>
+</receiver>
+<service android:exported="false" android:name="com.mobicule.lodha.notification.implementation.GCMPushReceiverService">
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+</intent-filter>
+</service>
+<service android:enabled="true" android:name="com.mobicule.lodha.notification.implementation.GPSActivationService">
+</service>
+<receiver android:name="com.mobicule.lodha.notification.implementation.AlarmSnoozeReceiver">
+</receiver>
+<service android:enabled="true" android:name="com.mobicule.lodha.notification.implementation.LocationTrackingBackgroundService">
+</service>
+<receiver android:name="com.mobicule.lodha.home.view.AlarmReceiver">
+</receiver>
+<receiver android:name="com.mobicule.lodha.home.view.AlaramReceiverForDataDelete">
+</receiver>
+<activity android:label="@7F090058" android:name="com.mobicule.lodha.login.view.LauncherActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:label="@7F09010C" android:name="com.mobicule.lodha.timeManagement.view.TimeManagementActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:label="@7F090109" android:name="com.mobicule.lodha.odleave.LeaveActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:label="@7F09010B" android:name="com.mobicule.lodha.odleave.OdActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:name="com.mobicule.lodha.reporteeDashboard.View.ReportsActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:name="com.mobicule.lodha.reporteeDashboard.View.ReporteeFilterActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:name="com.mobicule.lodha.reporteeDashboard.View.AssociateExpandableListViewActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:name="com.mobicule.lodha.reporteeDashboard.View.ReporteeDetailsDataActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:label="@7F090107" android:name="com.mobicule.lodha.holidayCalendar.view.HolidayCalendarAcitivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:name="com.mobicule.lodha.odleave.view.LeaveActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:name="com.mobicule.lodha.approval.view.ApprovalsActivity">
+</activity>
+<activity android:name="com.mobicule.lodha.odleave.view.FilterActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:name="com.mobicule.lodha.odleave.view.SortDialog" android:theme="@7F0B0138">
+</activity>
+<activity android:name="com.mobicule.lodha.monthlyAttendance.View.MonthlyAttendanceActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:name="com.mobicule.lodha.monthlyAttendance.View.DailyTeamAttendanceActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:name="com.mobicule.lodha.teamCalendar.TeamCalendarActivity">
+</activity>
+<activity android:name="com.mobicule.lodha.odleave.view.AssociateDialog" android:screenOrientation="1" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:name="com.mobicule.lodha.awards.AwardsActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:name="com.mobicule.lodha.monthlyAttendance.View.Filter_For_Monthly_Attendance">
+</activity>
+<activity android:name="com.mobicule.lodha.awards.culture.view.activity.add_nomination.associate.AssociateNominationActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:name="com.mobicule.lodha.awards.culture.view.activity.add_nomination.team.TeamNominationActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:name="com.mobicule.lodha.LeaderBoard.LeaderBoard.View.LeaderBoard_Fragment_Container" android:screenOrientation="1" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:name="com.mobicule.lodha.LeaderBoard.LeaderBoard.View.FilterActivityLeaderBoard" android:screenOrientation="1" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:name="com.mobicule.lodha.awards.culture.view.activity.winner_fillter.WinnerFiltterActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.mobicule.lodha.survey.view.SurveyPreviewLiveActivity">
+</activity>
+<activity android:name="com.mobicule.lodha.survey.view.SurveyActivity" android:screenOrientation="1">
+</activity>
+<receiver android:name="com.mobicule.crashnotifier.backgroundmail.ConnectivityChangedBroadcastReceiver">
+<intent-filter>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name="com.mobicule.crashnotifier.CloseNotificationReceiver">
+</receiver>
+<service android:name="com.mobicule.crashnotifier.EmailNotificationService">
+</service>
+<service android:name="com.mobicule.crashnotifier.backgroundmail.SendBackgroundMailService">
+</service>
+<provider android:authorities="com.mobicule.lodha" android:exported="false" android:grantUriPermissions="true" android:name="android.support.v4.content.FileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F070001">
+</meta-data>
+</provider>
+<activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:01030010">
+</activity>
+<receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementReceiver">
+</receiver>
+<receiver android:enabled="true" android:name="com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver" android:permission="android.permission.INSTALL_PACKAGES">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementService">
+</service>
+<receiver android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+<action android:name="com.google.android.c2dm.intent.REGISTRATION">
+</action>
+<category android:name="com.mobicule.lodha">
+</category>
+</intent-filter>
+</receiver>
+<receiver android:exported="false" android:name="com.google.firebase.iid.FirebaseInstanceIdInternalReceiver">
+</receiver>
+<service android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdService">
+<intent-filter android:priority="-500">
+<action android:name="com.google.firebase.INSTANCE_ID_EVENT">
+</action>
+</intent-filter>
+</service>
+<provider android:authorities="com.mobicule.lodha.firebaseinitprovider" android:exported="false" android:initOrder="100" android:name="com.google.firebase.provider.FirebaseInitProvider">
+</provider>
+<meta-data android:name="com.google.android.gms.version" android:value="@7F0D0006">
+</meta-data>
+</application>
+</manifest>

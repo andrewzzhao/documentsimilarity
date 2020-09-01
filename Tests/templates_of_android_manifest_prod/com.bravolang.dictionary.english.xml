@@ -1,0 +1,192 @@
+<?xml version="1.0" ?><manifest android:compileSdkVersion="28" android:compileSdkVersionCodename="9" android:installLocation="0" android:versionCode="38" android:versionName="7.8.0" package="com.bravolang.dictionary.english" platformBuildVersionCode="38" platformBuildVersionName="7.8.0" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="19" android:targetSdkVersion="28">
+</uses-sdk>
+<supports-screens android:xlargeScreens="true">
+</supports-screens>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="com.android.vending.BILLING">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-feature android:name="android.hardware.touchscreen" android:required="false">
+</uses-feature>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE">
+</uses-permission>
+<uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE">
+</uses-permission>
+<application android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:icon="@7F080099" android:label="@7F0E004F" android:name="com.bravolang.dictionary.english.DictApplication" android:resizeableActivity="false" android:supportsRtl="true" android:theme="@7F0F0144">
+<activity android:label="@7F0E004F" android:name="com.bravolang.dictionary.english.SearchableActivity">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="bravolol.com" android:pathPrefix="/english-dictionary" android:scheme="http">
+</data>
+</intent-filter>
+</activity>
+<activity android:label="@7F0E004B" android:name="com.bravolang.dictionary.english.SearchableActivity2">
+<intent-filter>
+<action android:name="android.intent.action.PROCESS_TEXT">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:mimeType="text/plain">
+</data>
+</intent-filter>
+</activity>
+<activity android:label="@7F0E004F" android:launchMode="1" android:name="com.bravolang.dictionary.english.BravoDict" android:windowSoftInputMode="0x00000002">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:label="@7F0E004F" android:launchMode="1" android:name="com.bravolang.dictionary.english.SearchActivity" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:hardwareAccelerated="true" android:label="" android:launchMode="1" android:name="com.bravolang.dictionary.english.ResultDetails">
+</activity>
+<activity android:hardwareAccelerated="true" android:label="" android:launchMode="1" android:name="com.bravolang.dictionary.english.ResultDetailsSub" android:theme="@7F0F00C8">
+</activity>
+<activity android:configChanges="0x00000480" android:hardwareAccelerated="false" android:launchMode="1" android:name="com.bravolang.dictionary.english.FlashCard">
+</activity>
+<activity android:label="@7F0E015A" android:launchMode="1" android:name="com.bravolang.dictionary.english.Settings">
+</activity>
+<activity android:label="@7F0E00EE" android:launchMode="1" android:name="com.bravolang.dictionary.english.History" android:theme="@7F0F00C8">
+</activity>
+<activity android:launchMode="1" android:name="com.bravolang.dictionary.english.GeneralInfo">
+</activity>
+<activity android:label="@7F0E00A4" android:launchMode="1" android:name="com.bravolang.dictionary.english.Examples" android:theme="@7F0F00C8">
+</activity>
+<activity android:label="@7F0E0145" android:launchMode="1" android:name="com.bravolang.dictionary.english.RelatedWords" android:theme="@7F0F00C8">
+</activity>
+<activity android:label="@7F0E00AA" android:launchMode="1" android:name="com.bravolang.dictionary.english.EngDef" android:theme="@7F0F00C8">
+</activity>
+<activity android:label="@7F0E0157" android:launchMode="1" android:name="com.bravolang.dictionary.english.SelectedWordAnalyzer" android:theme="@7F0F00C8">
+</activity>
+<activity android:hardwareAccelerated="true" android:label="@7F0E004A" android:launchMode="1" android:name="com.bravolang.dictionary.english.Analyzer" android:theme="@7F0F00C8" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:configChanges="0x00000FB0" android:exported="false" android:name="com.google.android.gms.ads.AdActivity" android:theme="@android:0103000F">
+</activity>
+<activity android:configChanges="0x00000FB0" android:name="com.flurry.android.FlurryFullscreenTakeoverActivity" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x000005B0" android:label="@7F0E004F" android:name="com.facebook.FacebookActivity" android:theme="@android:01030010">
+</activity>
+<meta-data android:name="com.flurry.admob.MY_AD_UNIT_ID" android:value="@7F0E00C1">
+</meta-data>
+<meta-data android:name="com.google.android.gms.version" android:value="@7F0A0008">
+</meta-data>
+<meta-data android:name="com.google.android.gms.analytics.globalConfigResource" android:resource="@7F110001">
+</meta-data>
+<meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@7F0E00AE">
+</meta-data>
+<receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.analytics.AnalyticsReceiver">
+<intent-filter>
+<action android:name="com.google.android.gms.analytics.ANALYTICS_DISPATCH">
+</action>
+</intent-filter>
+</receiver>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.analytics.AnalyticsService">
+</service>
+<receiver android:exported="true" android:name="com.google.android.gms.analytics.CampaignTrackingReceiver">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+<service android:name="com.google.android.gms.analytics.CampaignTrackingService">
+</service>
+<activity android:configChanges="0x000004A0" android:name="com.mopub.common.MoPubBrowser">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.mopub.mobileads.MoPubActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.mopub.mobileads.MraidActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.mopub.mobileads.RewardedMraidActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.mopub.mobileads.MraidVideoPlayerActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.mopub.common.privacy.ConsentDialogActivity">
+</activity>
+<meta-data android:name="io.fabric.ApiKey" android:value="2e3dbadd4d545d5af62b5856d7364cd6975323c7">
+</meta-data>
+<meta-data android:name="com.google.android.gms.ads.AD_MANAGER_APP" android:value="true">
+</meta-data>
+<meta-data android:name="com.google.android.gms.ads.APPLICATION_ID" android:value="ca-app-pub-7129156410240915~2710877583">
+</meta-data>
+<meta-data android:name="io.fabric.ApiKey" android:value="2e3dbadd4d545d5af62b5856d7364cd6975323c7">
+</meta-data>
+<meta-data android:name="com.facebook.sdk.AutoLogAppEventsEnabled" android:value="true">
+</meta-data>
+<meta-data android:name="com.facebook.sdk.AdvertiserIDCollectionEnabled" android:value="true">
+</meta-data>
+<activity android:configChanges="0x00000FB0" android:name="com.flurry.android.FlurryTileAdActivity" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x00000FB0" android:name="com.flurry.android.FlurryBrowserActivity" android:theme="@android:01030010">
+</activity>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.analytics.AnalyticsJobService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<service android:exported="false" android:name="com.google.firebase.components.ComponentDiscoveryService">
+<meta-data android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar" android:value="com.google.firebase.components.ComponentRegistrar">
+</meta-data>
+<meta-data android:name="com.google.firebase.components:com.google.firebase.iid.Registrar" android:value="com.google.firebase.components.ComponentRegistrar">
+</meta-data>
+</service>
+<receiver android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+</intent-filter>
+</receiver>
+<activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x000005B0" android:name="com.android.billingclient.api.ProxyBillingActivity" android:theme="@android:01030010">
+</activity>
+<provider android:authorities="com.bravolang.dictionary.english.FacebookInitProvider" android:exported="false" android:name="com.facebook.internal.FacebookInitProvider">
+</provider>
+<receiver android:exported="false" android:name="com.facebook.CurrentAccessTokenExpirationBroadcastReceiver">
+<intent-filter>
+<action android:name="com.facebook.sdk.ACTION_CURRENT_ACCESS_TOKEN_CHANGED">
+</action>
+</intent-filter>
+</receiver>
+<activity android:configChanges="0x000004A0" android:exported="false" android:name="com.facebook.ads.AudienceNetworkActivity" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x000004A0" android:exported="false" android:name="com.facebook.ads.internal.ipc.RemoteANActivity" android:process=":adnw" android:theme="@android:01030010">
+</activity>
+<service android:exported="false" android:name="com.facebook.ads.internal.ipc.AdsProcessPriorityService">
+</service>
+<service android:exported="false" android:name="com.facebook.ads.internal.ipc.AdsMessengerService" android:process=":adnw">
+</service>
+<provider android:authorities="com.bravolang.dictionary.english.AudienceNetworkContentProvider" android:exported="false" android:name="com.facebook.ads.AudienceNetworkContentProvider">
+</provider>
+<provider android:authorities="com.bravolang.dictionary.english.crashlyticsinitprovider" android:exported="false" android:initOrder="90" android:name="com.crashlytics.android.CrashlyticsInitProvider">
+</provider>
+<provider android:authorities="com.bravolang.dictionary.english.firebaseinitprovider" android:exported="false" android:initOrder="100" android:name="com.google.firebase.provider.FirebaseInitProvider">
+</provider>
+<provider android:authorities="com.bravolang.dictionary.english.mobileadsinitprovider" android:exported="false" android:initOrder="100" android:name="com.google.android.gms.ads.MobileAdsInitProvider">
+</provider>
+<receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementReceiver">
+</receiver>
+<receiver android:enabled="true" android:exported="true" android:name="com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver" android:permission="android.permission.INSTALL_PACKAGES">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementService">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementJobService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+</application>
+</manifest>

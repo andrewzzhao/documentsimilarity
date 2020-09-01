@@ -1,0 +1,390 @@
+<?xml version="1.0" ?><manifest android:versionCode="34" android:versionName="1.0.3.4" package="com.rupeeboss.rba" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="16" android:targetSdkVersion="25">
+</uses-sdk>
+<uses-permission android:name="android.permission.CAPTURE_AUDIO_OUTPUT">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_CALL_LOG">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_CALL_LOG">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_CONTACTS">
+</uses-permission>
+<uses-permission android:name="android.permission.CALL_PHONE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.RECORD_AUDIO">
+</uses-permission>
+<uses-permission android:name="android.permission.STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_SMS">
+</uses-permission>
+<uses-permission android:name="android.permission.SEND_SMS">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_SMS">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE">
+</uses-permission>
+<permission android:name="com.rupeeboss.rba.permission.C2D_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="com.rupeeboss.rba.permission.C2D_MESSAGE">
+</uses-permission>
+<application android:allowBackup="true" android:icon="@7F0D0000" android:label="@7F0F0020" android:supportsRtl="true" android:theme="@7F100005">
+<meta-data android:name="DATABASE" android:value="rba.db">
+</meta-data>
+<meta-data android:name="VERSION" android:value="1">
+</meta-data>
+<meta-data android:name="QUERY_LOG" android:value="true">
+</meta-data>
+<meta-data android:name="DOMAIN_PACKAGE_NAME" android:value="com.rupeeboss.rba">
+</meta-data>
+<activity android:name="com.rupeeboss.rba.splashscreen.SplashScreenActivity" android:noHistory="true">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:label="@7F0F0073" android:name="com.rupeeboss.rba.login.LoginActivity" android:screenOrientation="1" android:theme="@7F100005">
+</activity>
+<activity android:name="com.rupeeboss.rba.home.MainActivity" android:screenOrientation="1" android:theme="@7F100005">
+</activity>
+<activity android:label="Credit Card" android:name="com.rupeeboss.rba.creditcard.CreditCardActivity" android:parentActivityName="com.rupeeboss.rba.home.MainActivity" android:screenOrientation="1" android:theme="@7F100005">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".home.MainActivity">
+</meta-data>
+</activity>
+<activity android:label="Calling" android:name="com.rupeeboss.rba.calling.CallingActivity" android:parentActivityName="com.rupeeboss.rba.home.MainActivity" android:screenOrientation="1" android:theme="@7F100005">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".home.MainActivity">
+</meta-data>
+</activity>
+<activity android:label="Loan" android:name="com.rupeeboss.rba.loan.LoanMenuActivity" android:parentActivityName="com.rupeeboss.rba.home.MainActivity" android:screenOrientation="1" android:theme="@7F100005">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".home.MainActivity">
+</meta-data>
+</activity>
+<activity android:label="@7F0F006C" android:name="com.rupeeboss.rba.homeloan.HomeLoanActivity" android:parentActivityName="com.rupeeboss.rba.loan.LoanActivity" android:screenOrientation="1" android:theme="@7F100005">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".loan.LoanActivity">
+</meta-data>
+</activity>
+<activity android:label="Home Loan" android:name="com.rupeeboss.rba.loan.LoanActivity" android:parentActivityName="com.rupeeboss.rba.homeloan.activity_home_loan_menu" android:screenOrientation="1" android:theme="@7F100005">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".loan.LoanMenuActivity">
+</meta-data>
+</activity>
+<activity android:label="@7F0F0080" android:launchMode="1" android:name="com.rupeeboss.rba.quotes.QuoteActivity" android:parentActivityName="com.rupeeboss.rba.homeloan.HomeLoanActivity" android:screenOrientation="1" android:theme="@7F100005">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".homeloan.HomeLoanActivity">
+</meta-data>
+</activity>
+<activity android:label="@7F0F0050" android:name="com.rupeeboss.rba.webviews.homeloan.HomeLoanApplyActivity" android:parentActivityName="com.rupeeboss.rba.quotes.QuoteActivity" android:screenOrientation="1" android:theme="@7F100005">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".quotes.QuoteActivity">
+</meta-data>
+</activity>
+<activity android:label="@7F0F0081" android:name="com.rupeeboss.rba.quotes.QuoteInfoActivity" android:parentActivityName="com.rupeeboss.rba.quotes.QuoteActivity" android:screenOrientation="1" android:theme="@7F100005">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".quotes.QuoteActivity">
+</meta-data>
+</activity>
+<activity android:label="@7F0F0083" android:name="com.rupeeboss.rba.rbdialerpad.RbDialerPadActivity" android:parentActivityName="com.rupeeboss.rba.home.MainActivity" android:screenOrientation="1" android:theme="@7F100005">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".home.MainActivity">
+</meta-data>
+</activity>
+<activity android:label="@7F0F0082" android:name="com.rupeeboss.rba.rbaddlead.RbAddLeadActivity" android:parentActivityName="com.rupeeboss.rba.rbdialerpad.RbDialerPadActivity" android:screenOrientation="1" android:theme="@7F100005">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".rbdialerpad.RbDialerPadActivity">
+</meta-data>
+</activity>
+<activity android:label="@7F0F0066" android:name="com.rupeeboss.rba.rbfeedback.FeedBackActivity" android:parentActivityName="com.rupeeboss.rba.rbdialerpad.RbDialerPadActivity" android:screenOrientation="1" android:theme="@7F100005">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".rbdialerpad.RbDialerPadActivity">
+</meta-data>
+</activity>
+<activity android:label="@7F0F0085" android:name="com.rupeeboss.rba.sharemessage.ShareMessageActivity" android:parentActivityName="com.rupeeboss.rba.home.MainActivity" android:screenOrientation="1" android:theme="@7F100005">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".home.MainActivity">
+</meta-data>
+</activity>
+<activity android:label="@7F0F0074" android:name="com.rupeeboss.rba.webviewinfo.MoreInfoActivity" android:parentActivityName="com.rupeeboss.rba.loan.LoanActivity" android:screenOrientation="1" android:theme="@7F100005">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".loan.LoanActivity">
+</meta-data>
+</activity>
+<activity android:label="@7F0F007A" android:name="com.rupeeboss.rba.personalloan.PersonalLoanActivity" android:parentActivityName="com.rupeeboss.rba.personalloan.LoanPersonalActivity" android:screenOrientation="1" android:theme="@7F100005">
+</activity>
+<activity android:label="@7F0F007A" android:name="com.rupeeboss.rba.personalloan.LoanPersonalActivity" android:parentActivityName="com.rupeeboss.rba.personalloan.PersonalLoanMenuActivity" android:screenOrientation="1" android:theme="@7F100005">
+</activity>
+<activity android:label="Follow Up" android:name="com.rupeeboss.rba.calling.followup.FollowUpActivity" android:parentActivityName="com.rupeeboss.rba.calling.CallingActivity" android:screenOrientation="1" android:theme="@7F100005">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value="calling.CallingActivity">
+</meta-data>
+</activity>
+<activity android:name="com.rupeeboss.rba.calling.followup.FollowUpHistoryActivity" android:parentActivityName="com.rupeeboss.rba.calling.followup.FollowUpActivity" android:screenOrientation="1" android:theme="@7F100005">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".calling.followup.FollowUpActivity">
+</meta-data>
+</activity>
+<activity android:name="com.rupeeboss.rba.calling.history.HistoryActivity" android:parentActivityName="com.rupeeboss.rba.calling.CallingActivity" android:screenOrientation="1" android:theme="@7F100005">
+</activity>
+<activity android:name="com.rupeeboss.rba.contact.ContactActivity" android:parentActivityName="com.rupeeboss.rba.home.MainActivity" android:screenOrientation="1" android:theme="@7F100005">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".calling.CallingActivity">
+</meta-data>
+</activity>
+<activity android:label="New Registration" android:name="com.rupeeboss.rba.login.NewRegistration" android:parentActivityName="com.rupeeboss.rba.login.LoginActivity" android:screenOrientation="1" android:theme="@7F100005" android:windowSoftInputMode="0x00000002">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".login.LoginActivity">
+</meta-data>
+</activity>
+<meta-data android:name="io.fabric.ApiKey" android:value="ff50cb469899caa478ce1ed3dfae87725fbc2fc8">
+</meta-data>
+<receiver android:exported="true" android:name="com.rupeeboss.rba.referrar.InstallReferrerReceiver">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+<activity android:label="@7F0F007D" android:launchMode="1" android:name="com.rupeeboss.rba.personalloan.PersonalLoanQuoteActivity" android:parentActivityName="com.rupeeboss.rba.personalloan.PersonalLoanActivity" android:screenOrientation="1" android:theme="@7F100005">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.rupeeboss.rba.personalloan.PersonalLoanActivity">
+</meta-data>
+</activity>
+<activity android:label="@7F0F007B" android:name="com.rupeeboss.rba.webviews.persoanlloan.PersonalLoanApplyActivity" android:parentActivityName="com.rupeeboss.rba.personalloan.PersonalLoanQuoteActivity" android:screenOrientation="1" android:theme="@7F100005">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.rupeeboss.rba.personalloan.PersonalLoanQuoteActivity">
+</meta-data>
+</activity>
+<activity android:label="@7F0F007E" android:name="com.rupeeboss.rba.personalloan.PLQuoteInfoActivity" android:parentActivityName="com.rupeeboss.rba.personalloan.PersonalLoanQuoteActivity" android:screenOrientation="1" android:theme="@7F100005">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.rupeeboss.rba.personalloan.PersonalLoanQuoteActivity">
+</meta-data>
+</activity>
+<activity android:label="Forgot Password" android:name="com.rupeeboss.rba.forgetpwd.ForgotPasswordActivity" android:parentActivityName="com.rupeeboss.rba.login.LoginActivity" android:screenOrientation="1" android:theme="@7F100005">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".login.LoginActivity">
+</meta-data>
+</activity>
+<activity android:label="@7F0F0051" android:name="com.rupeeboss.rba.webviews.balancetransfer.BalanceTransferActivity" android:parentActivityName="com.rupeeboss.rba.home.MainActivity" android:screenOrientation="1" android:theme="@7F100005">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.rupeeboss.rba.home.MainActivity">
+</meta-data>
+</activity>
+<activity android:label="@7F0F0072" android:name="com.rupeeboss.rba.sharemessage.LeadSmsActivity" android:parentActivityName="com.rupeeboss.rba.sharemessage.ShareMessageActivity" android:screenOrientation="1" android:theme="@7F100005">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.rupeeboss.rba.sharemessage.ShareMessageActivity">
+</meta-data>
+</activity>
+<activity android:label="@7F0F0075" android:name="com.rupeeboss.rba.mylead.MyLeadActivity" android:parentActivityName="com.rupeeboss.rba.mylist.GroupListActivity" android:screenOrientation="1" android:theme="@7F100005">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".mylist.GroupListActivity">
+</meta-data>
+</activity>
+<activity android:label="LAP" android:name="com.rupeeboss.rba.LAP.Loan_LAPActivity" android:parentActivityName="com.rupeeboss.rba.loan.LoanMenuActivity" android:screenOrientation="1" android:theme="@7F100005">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".loan.LoanMenuActivity">
+</meta-data>
+</activity>
+<activity android:label="@7F0F004F" android:name="com.rupeeboss.rba.LAP.LAP_LoanActivity" android:parentActivityName="com.rupeeboss.rba.LAP.Loan_LAPActivity" android:screenOrientation="1" android:theme="@7F100005">
+</activity>
+<activity android:label="@7F0F0052" android:name="com.rupeeboss.rba.webviews.balancetransfer.BalanceTransferType" android:parentActivityName="com.rupeeboss.rba.home.MainActivity" android:screenOrientation="1" android:theme="@7F100005">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.rupeeboss.rba.home.MainActivity">
+</meta-data>
+</activity>
+<activity android:label="@7F0F0061" android:name="com.rupeeboss.rba.webviews.creditcard.CreditCardApplyActivity" android:parentActivityName="com.rupeeboss.rba.home.MainActivity" android:screenOrientation="1" android:theme="@7F100005">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.rupeeboss.rba.home.MainActivity">
+</meta-data>
+</activity>
+<activity android:label="@7F0F0071" android:launchMode="1" android:name="com.rupeeboss.rba.LAP.LAPQuoteActivity" android:parentActivityName="com.rupeeboss.rba.LAP.LAP_LoanActivity" android:screenOrientation="1" android:theme="@7F100005">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".LAP.LAP_LoanActivity">
+</meta-data>
+</activity>
+<activity android:label="@7F0F0050" android:name="com.rupeeboss.rba.webviews.LAP.LAPLoanApplyActivity" android:parentActivityName="com.rupeeboss.rba.LAP.LAPQuoteActivity" android:screenOrientation="1" android:theme="@7F100005">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".LAP.LAPQuoteActivity">
+</meta-data>
+</activity>
+<activity android:label="@7F0F005B" android:name="com.rupeeboss.rba.webviews.CarLoan.CarLoanActivity" android:parentActivityName="com.rupeeboss.rba.loan.LoanMenuActivity" android:screenOrientation="1" android:theme="@7F100005">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".loan.LoanMenuActivity">
+</meta-data>
+</activity>
+<activity android:label="@7F0F0055" android:name="com.rupeeboss.rba.mybuisness.BuisinessActivity" android:parentActivityName="com.rupeeboss.rba.home.MainActivity" android:screenOrientation="1" android:theme="@7F100005">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".home.MainActivity">
+</meta-data>
+</activity>
+<meta-data android:name="com.google.android.gms.version" android:value="@7F0A0006">
+</meta-data>
+<activity android:label="@7F0F0087" android:name="com.rupeeboss.rba.webviews.workingCapital.WorkingCapitalActivity" android:parentActivityName="com.rupeeboss.rba.loan.LoanMenuActivity" android:screenOrientation="1" android:theme="@7F100005">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".loan.LoanMenuActivity">
+</meta-data>
+</activity>
+<activity android:label="@7F0F0088" android:name="com.rupeeboss.rba.webviews.workingCapital.WorkingCapitalBalanceTrans" android:parentActivityName="com.rupeeboss.rba.home.MainActivity" android:screenOrientation="1" android:theme="@7F100005">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".home.MainActivity">
+</meta-data>
+</activity>
+<activity android:label="@7F0F0067" android:name="com.rupeeboss.rba.webviews.generalInsurance.GeneralInsuranceActivity" android:parentActivityName="com.rupeeboss.rba.webviews.generalInsurance.GeneralInsuranceType" android:screenOrientation="1" android:theme="@7F100005">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.rupeeboss.rba.home.MainActivity">
+</meta-data>
+</activity>
+<activity android:label="@7F0F0058" android:name="com.rupeeboss.rba.webviews.businessLoan.businessLoanActivity" android:parentActivityName="com.rupeeboss.rba.loan.LoanMenuActivity" android:screenOrientation="1" android:theme="@7F100005">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".loan.LoanMenuActivity">
+</meta-data>
+</activity>
+<activity android:label="@7F0F005D" android:name="com.rupeeboss.rba.webviews.commPurchase.CommPurchaseActivity" android:parentActivityName="com.rupeeboss.rba.loan.LoanMenuActivity" android:screenOrientation="1" android:theme="@7F100005">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".loan.LoanMenuActivity">
+</meta-data>
+</activity>
+<activity android:label="@7F0F0065" android:name="com.rupeeboss.rba.EmiCalculator.EmiMenuActivity" android:parentActivityName="com.rupeeboss.rba.home.MainActivity" android:screenOrientation="1" android:theme="@7F100005">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".home.MainActivity">
+</meta-data>
+</activity>
+<activity android:label="@7F0F0064" android:name="com.rupeeboss.rba.EmiCalculator.EmiCalcActivity" android:parentActivityName="com.rupeeboss.rba.EmiCalculator.EmiMenuActivity" android:screenOrientation="1" android:theme="@7F100005">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".EmiCalculator.EmiMenuActivity">
+</meta-data>
+</activity>
+<activity android:label="@7F0F0063" android:launchMode="2" android:name="com.rupeeboss.rba.webviews.document.DocumentWebViewActivity" android:parentActivityName="com.rupeeboss.rba.home.MainActivity" android:theme="@7F100005">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.rupeeboss.rba.home.MainActivity">
+</meta-data>
+</activity>
+<activity android:label="@7F0F006A" android:name="com.rupeeboss.rba.EmiCalculator.HomeEMICalcActivity" android:parentActivityName="com.rupeeboss.rba.EmiCalculator.EmiMenuActivity" android:screenOrientation="1" android:theme="@7F100005">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".EmiCalculator.EmiMenuActivity">
+</meta-data>
+</activity>
+<activity android:label="@7F0F0079" android:name="com.rupeeboss.rba.EmiCalculator.PersonalEMICalcActivity" android:parentActivityName="com.rupeeboss.rba.EmiCalculator.EmiMenuActivity" android:screenOrientation="1" android:theme="@7F100005">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".EmiCalculator.EmiMenuActivity">
+</meta-data>
+</activity>
+<activity android:label="@7F0F005F" android:name="com.rupeeboss.rba.contactToManager.ContactToManager" android:parentActivityName="com.rupeeboss.rba.home.MainActivity" android:screenOrientation="1" android:theme="@7F100005">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.rupeeboss.rba.home.MainActivity">
+</meta-data>
+</activity>
+<activity android:label="@7F0F0060" android:name="com.rupeeboss.rba.contactus.ContactUsActivity" android:parentActivityName="com.rupeeboss.rba.home.MainActivity" android:screenOrientation="1" android:theme="@7F100005">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.rupeeboss.rba.home.MainActivity">
+</meta-data>
+</activity>
+<activity android:label="@7F0F006B" android:name="com.rupeeboss.rba.EmiCalculator.HomeEMICalcPOPUP" android:theme="@7F1000A7">
+</activity>
+<activity android:label="@7F0F0057" android:name="com.rupeeboss.rba.mybuisness.BuisnessPopUpActivity" android:screenOrientation="1" android:theme="@7F1000A7">
+</activity>
+<activity android:label="@7F0F0089" android:name="com.rupeeboss.rba.EmiCalculator.workcapital.WorkingCapitalCalculatorActivity" android:parentActivityName="com.rupeeboss.rba.EmiCalculator.EmiMenuActivity" android:theme="@7F100005">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.rupeeboss.rba.EmiCalculator.EmiMenuActivity">
+</meta-data>
+</activity>
+<activity android:label="@7F0F0056" android:name="com.rupeeboss.rba.EmiCalculator.businessloan.BusinessLoanCalActivity" android:parentActivityName="com.rupeeboss.rba.EmiCalculator.EmiMenuActivity" android:screenOrientation="1" android:theme="@7F100005">
+</activity>
+<activity android:name="com.rupeeboss.rba.EmiCalculator.businessloan.BuisnessCalcPOPUP" android:screenOrientation="1" android:theme="@7F1000A7">
+</activity>
+<activity android:label="@7F0F0068" android:name="com.rupeeboss.rba.webviews.generalInsurance.GeneralInsuranceType" android:parentActivityName="com.rupeeboss.rba.home.MainActivity" android:screenOrientation="1" android:theme="@7F100005">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.rupeeboss.rba.home.MainActivity">
+</meta-data>
+</activity>
+<activity android:label="@7F0F0084" android:name="com.rupeeboss.rba.repository.RepositoryWebViewActivity" android:parentActivityName="com.rupeeboss.rba.home.MainActivity" android:screenOrientation="1" android:theme="@7F100005">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.rupeeboss.rba.home.MainActivity">
+</meta-data>
+</activity>
+<activity android:label="@7F0F0062" android:name="com.rupeeboss.rba.DocumentUpload.DocumentUpload" android:parentActivityName="com.rupeeboss.rba.home.MainActivity" android:screenOrientation="1" android:theme="@7F100005" android:windowSoftInputMode="0x00000013">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.rupeeboss.rba.home.MainActivity">
+</meta-data>
+</activity>
+<activity android:label="@7F0F007C" android:name="com.rupeeboss.rba.personalloan.PersonalLoanMenuActivity" android:parentActivityName="com.rupeeboss.rba.loan.LoanActivity" android:screenOrientation="1" android:theme="@7F100005">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".loan.LoanActivity">
+</meta-data>
+</activity>
+<activity android:label="@7F0F006F" android:name="com.rupeeboss.rba.personalloan.IIFLWebviewActivity" android:parentActivityName="com.rupeeboss.rba.personalloan.PersonalLoanMenuActivity" android:screenOrientation="1" android:theme="@7F100005">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.rupeeboss.rba.personalloan.PersonalLoanMenuActivity">
+</meta-data>
+</activity>
+<activity android:label="@7F0F005C" android:name="com.rupeeboss.rba.changepassword.ChangePasswordActivity" android:parentActivityName="com.rupeeboss.rba.home.MainActivity" android:screenOrientation="1" android:theme="@7F100005" android:windowSoftInputMode="0x00000013">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.rupeeboss.rba.home.MainActivity">
+</meta-data>
+</activity>
+<activity android:label="@7F0F0059" android:name="com.rupeeboss.rba.businessloan.BusinessLoanMenuActivity" android:parentActivityName="com.rupeeboss.rba.loan.LoanMenuActivity" android:screenOrientation="1" android:theme="@7F100005">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.rupeeboss.rba.loan.LoanMenuActivity">
+</meta-data>
+</activity>
+<activity android:label="@7F0F005A" android:name="com.rupeeboss.rba.businessloan.BusinessLoanWebviewActivity" android:parentActivityName="com.rupeeboss.rba.businessloan.BusinessLoanMenuActivity" android:screenOrientation="1" android:theme="@7F100005">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.rupeeboss.rba.businessloan.BusinessLoanMenuActivity">
+</meta-data>
+</activity>
+<activity android:label="@7F0F0077" android:name="com.rupeeboss.rba.mylist.MyListActivity" android:parentActivityName="com.rupeeboss.rba.home.MainActivity" android:screenOrientation="1" android:theme="@7F100005">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.rupeeboss.rba.home.MainActivity">
+</meta-data>
+</activity>
+<activity android:label="@7F0F0077" android:name="com.rupeeboss.rba.mylist.ExpandActivity" android:parentActivityName="com.rupeeboss.rba.home.MainActivity" android:theme="@7F100005">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.rupeeboss.rba.home.MainActivity">
+</meta-data>
+</activity>
+<activity android:label="My Lead" android:name="com.rupeeboss.rba.mylist.MyLeadDetailActivity" android:parentActivityName="com.rupeeboss.rba.home.MainActivity" android:screenOrientation="1" android:theme="@7F100005">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.rupeeboss.rba.home.MainActivity">
+</meta-data>
+</activity>
+<activity android:label="@7F0F0078" android:name="com.rupeeboss.rba.mylist.MyListPopUpActivity" android:screenOrientation="1" android:theme="@7F1000A7">
+</activity>
+<activity android:label="@7F0F0076" android:name="com.rupeeboss.rba.mylead.MyLeadDetailsActivity" android:parentActivityName="com.rupeeboss.rba.home.MainActivity" android:screenOrientation="1" android:theme="@7F100005">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.rupeeboss.rba.home.MainActivity">
+</meta-data>
+</activity>
+<activity android:label="@7F0F0069" android:name="com.rupeeboss.rba.mylist.GroupListActivity" android:parentActivityName="com.rupeeboss.rba.home.MainActivity" android:theme="@7F100005">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.rupeeboss.rba.home.MainActivity">
+</meta-data>
+</activity>
+<activity android:label="@7F0F0070" android:name="com.rupeeboss.rba.incomeSimulator.IncomeSimulatorActivity" android:parentActivityName="com.rupeeboss.rba.home.MainActivity" android:screenOrientation="1" android:theme="@7F100005" android:windowSoftInputMode="0x00000013">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.rupeeboss.rba.home.MainActivity">
+</meta-data>
+</activity>
+<activity android:label="@7F0F0053" android:name="com.rupeeboss.rba.businessloan.BLActivity" android:parentActivityName="com.rupeeboss.rba.businessloan.BusinessLoanMenuActivity" android:screenOrientation="1" android:theme="@7F100005">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.rupeeboss.rba.businessloan.BusinessLoanMenuActivity">
+</meta-data>
+</activity>
+<activity android:label="@7F0F0054" android:name="com.rupeeboss.rba.businessloan.BLQuoteActivity" android:parentActivityName="com.rupeeboss.rba.businessloan.BLActivity" android:screenOrientation="1" android:theme="@7F100005">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.rupeeboss.rba.businessloan.BLActivity">
+</meta-data>
+</activity>
+<activity android:label="@7F0F0086" android:name="com.rupeeboss.rba.webviews.ShortTermPersonalLoan.ShortTermPersonalLoanActivity" android:parentActivityName="com.rupeeboss.rba.loan.LoanMenuActivity" android:screenOrientation="1" android:theme="@7F100005">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".loan.LoanMenuActivity">
+</meta-data>
+</activity>
+<activity android:label="@7F0F007F" android:name="com.rupeeboss.rba.webviews.posloan.posloanActivity" android:parentActivityName="com.rupeeboss.rba.loan.LoanMenuActivity" android:screenOrientation="1" android:theme="@7F100005">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".loan.LoanMenuActivity">
+</meta-data>
+</activity>
+<activity android:label="@7F0F006D" android:name="com.rupeeboss.rba.homeloan.activity_home_loan_menu" android:parentActivityName="com.rupeeboss.rba.loan.LoanActivity" android:screenOrientation="1" android:theme="@7F100005">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".loan.LoanActivity">
+</meta-data>
+</activity>
+<activity android:label="@7F0F005E" android:name="com.rupeeboss.rba.webviews.commonwebview.CommonWebviewActivity" android:parentActivityName="com.rupeeboss.rba.home.MainActivity" android:theme="@7F100005">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.rupeeboss.rba.home.MainActivity">
+</meta-data>
+</activity>
+<activity android:excludeFromRecents="true" android:exported="false" android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity" android:theme="@android:01030010">
+</activity>
+<service android:exported="true" android:name="com.google.android.gms.auth.api.signin.RevocationBoundService" android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION">
+</service>
+<activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:01030010">
+</activity>
+<receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementReceiver">
+</receiver>
+<receiver android:enabled="true" android:name="com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver" android:permission="android.permission.INSTALL_PACKAGES">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementService">
+</service>
+<receiver android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+<action android:name="com.google.android.c2dm.intent.REGISTRATION">
+</action>
+<category android:name="com.rupeeboss.rba">
+</category>
+</intent-filter>
+</receiver>
+<receiver android:exported="false" android:name="com.google.firebase.iid.FirebaseInstanceIdInternalReceiver">
+</receiver>
+<service android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdService">
+<intent-filter android:priority="-500">
+<action android:name="com.google.firebase.INSTANCE_ID_EVENT">
+</action>
+</intent-filter>
+</service>
+<provider android:authorities="com.rupeeboss.rba.firebaseinitprovider" android:exported="false" android:initOrder="100" android:name="com.google.firebase.provider.FirebaseInitProvider">
+</provider>
+</application>
+</manifest>

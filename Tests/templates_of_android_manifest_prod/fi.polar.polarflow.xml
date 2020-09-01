@@ -1,0 +1,320 @@
+<?xml version="1.0" ?><manifest android:compileSdkVersion="29" android:compileSdkVersionCodename="10" android:versionCode="44112" android:versionName="4.4.1" package="fi.polar.polarflow" platformBuildVersionCode="29" platformBuildVersionName="10" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="23" android:targetSdkVersion="29">
+</uses-sdk>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.BLUETOOTH">
+</uses-permission>
+<uses-permission android:name="android.permission.BLUETOOTH_ADMIN">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_CONTACTS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_CALL_LOG">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_CALENDAR">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_CALENDAR">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="android.permission.FOREGROUND_SERVICE">
+</uses-permission>
+<uses-feature android:glEsVersion="0x00020000" android:required="true">
+</uses-feature>
+<uses-feature android:name="android.hardware.bluetooth_le" android:required="true">
+</uses-feature>
+<uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE">
+</uses-permission>
+<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE">
+</uses-permission>
+<application android:allowBackup="false" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:hardwareAccelerated="true" android:icon="@7F0E0000" android:label="@7F100061" android:name="fi.polar.polarflow.BaseApplication" android:requestLegacyExternalStorage="true" android:supportsRtl="false" android:theme="@7F11000D">
+<meta-data android:name="com.google.android.gms.version" android:value="@7F0A0008">
+</meta-data>
+<meta-data android:name="com.google.android.wearable.beta.app" android:resource="@7F130005">
+</meta-data>
+<uses-library android:name="org.apache.http.legacy" android:required="false">
+</uses-library>
+<activity android:launchMode="1" android:name="fi.polar.polarflow.activity.login.SplashScreenActivity" android:screenOrientation="1" android:theme="@7F110133">
+<intent-filter android:label="@7F100061">
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:label="@7F100061" android:launchMode="1" android:name="fi.polar.polarflow.activity.login.LoginActivity" android:screenOrientation="1" android:theme="@7F1100F4">
+<intent-filter>
+<action android:name="fi.polar.polarflow.action.CONNECT">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:scheme="fi.polar.polarflow">
+</data>
+</intent-filter>
+</activity>
+<activity android:launchMode="2" android:name="fi.polar.polarflow.activity.main.MainActivity" android:screenOrientation="1" android:theme="@7F11000C">
+</activity>
+<service android:enabled="true" android:exported="false" android:name="com.polar.pftp.BluetoothService">
+</service>
+<service android:enabled="true" android:exported="false" android:name="fi.polar.polarflow.service.sensor.SensorConnectionService">
+</service>
+<service android:enabled="true" android:exported="false" android:name="fi.polar.polarflow.service.fwupdate.FwUpdateService">
+</service>
+<service android:enabled="true" android:exported="false" android:name="fi.polar.polarflow.service.fwupdate.SensorDeviceUpdateService">
+</service>
+<service android:enabled="true" android:exported="false" android:name="fi.polar.polarflow.service.mobilegps.MobileGpsService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<service android:exported="false" android:name="fi.polar.polarflow.service.smartnotification.PolarNotificationService" android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE">
+<intent-filter>
+<action android:name="android.service.notification.NotificationListenerService">
+</action>
+</intent-filter>
+</service>
+<activity android:label="" android:launchMode="1" android:name="fi.polar.polarflow.activity.login.NoDeviceActivity" android:noHistory="true" android:parentActivityName="fi.polar.polarflow.activity.login.LoginActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="" android:launchMode="2" android:name="fi.polar.polarflow.activity.login.registration.RegistrationJoinNowActivity" android:parentActivityName="fi.polar.polarflow.activity.login.registration.RegistrationPhysicalInfoActivity" android:screenOrientation="1" android:theme="@7F110112">
+</activity>
+<activity android:label="" android:launchMode="2" android:name="fi.polar.polarflow.activity.login.registration.RegistrationConsentsSummaryActivity" android:parentActivityName="fi.polar.polarflow.activity.login.LoginActivity" android:screenOrientation="1" android:theme="@7F110112">
+</activity>
+<activity android:label="" android:launchMode="2" android:name="fi.polar.polarflow.activity.login.registration.RegistrationPersonalInfoActivity" android:parentActivityName="fi.polar.polarflow.activity.login.registration.RegistrationConsentsSummaryActivity" android:screenOrientation="1" android:theme="@7F110112">
+</activity>
+<activity android:label="" android:launchMode="2" android:name="fi.polar.polarflow.activity.login.registration.RegistrationPhysicalInfoActivity" android:parentActivityName="fi.polar.polarflow.activity.login.registration.RegistrationPersonalInfoActivity" android:screenOrientation="1" android:theme="@7F110112">
+</activity>
+<activity android:label="" android:launchMode="2" android:name="fi.polar.polarflow.activity.login.registration.RegistrationStartUsingActivity" android:parentActivityName="fi.polar.polarflow.activity.login.LoginActivity" android:screenOrientation="1" android:theme="@7F110112">
+</activity>
+<activity android:label="" android:launchMode="2" android:name="fi.polar.polarflow.activity.login.registration.RegistrationDeviceSettingsActivity" android:parentActivityName="fi.polar.polarflow.activity.login.LoginActivity" android:screenOrientation="1" android:theme="@7F1100E9">
+</activity>
+<activity android:label="@7F10063F" android:launchMode="1" android:name="fi.polar.polarflow.activity.main.settings.ProfileActivity" android:parentActivityName="fi.polar.polarflow.activity.main.MainActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000013">
+</activity>
+<activity android:label="General Settings" android:launchMode="2" android:name="fi.polar.polarflow.activity.main.settings.GeneralSettingActivity" android:parentActivityName="fi.polar.polarflow.activity.main.MainActivity" android:screenOrientation="1" android:theme="@7F11000D" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:label="@7F100610" android:launchMode="2" android:name="fi.polar.polarflow.activity.main.settings.HowToSyncSettingsActivity" android:parentActivityName="fi.polar.polarflow.activity.main.MainActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="" android:launchMode="1" android:name="fi.polar.polarflow.activity.popup.PopupActivity" android:parentActivityName="fi.polar.polarflow.activity.main.MainActivity" android:theme="@7F1101E0">
+</activity>
+<activity android:label="@7F100940" android:launchMode="1" android:name="fi.polar.polarflow.activity.main.training.traininganalysis.TrainingAnalysisPagerActivity" android:parentActivityName="fi.polar.polarflow.activity.main.MainActivity" android:theme="@7F1101E0">
+</activity>
+<activity android:label="@7F100553" android:launchMode="1" android:name="fi.polar.polarflow.activity.main.training.trainingtarget.TrainingTargetPagerActivity" android:parentActivityName="fi.polar.polarflow.activity.main.MainActivity" android:theme="@7F1101E0">
+</activity>
+<activity android:label="@7F100553" android:launchMode="1" android:name="fi.polar.polarflow.activity.main.training.trainingtarget.CreateQuickTargetActivity" android:parentActivityName="fi.polar.polarflow.activity.main.MainActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F100553" android:launchMode="1" android:name="fi.polar.polarflow.activity.main.training.trainingtarget.CreateIntervalTargetActivity" android:parentActivityName="fi.polar.polarflow.activity.main.MainActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name="fi.polar.polarflow.activity.main.training.TrainingFullScreenGraphActivity" android:screenOrientation="0" android:theme="@android:01030007">
+</activity>
+<activity android:exported="false" android:launchMode="1" android:name="fi.polar.polarflow.activity.login.TestUIActivity">
+</activity>
+<activity android:launchMode="1" android:name="fi.polar.polarflow.activity.main.training.map.FullScreenMapActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name="fi.polar.polarflow.activity.main.training.traininganalysis.TrainingAnalysisActivity" android:parentActivityName="fi.polar.polarflow.activity.main.MainActivity" android:screenOrientation="1" android:theme="@7F11000D">
+</activity>
+<activity android:launchMode="1" android:name="fi.polar.polarflow.activity.main.training.traininganalysis.TrainingRpeLoadActivity" android:parentActivityName="fi.polar.polarflow.activity.main.MainActivity" android:screenOrientation="1" android:theme="@7F11000D">
+</activity>
+<activity android:launchMode="1" android:name="fi.polar.polarflow.activity.main.training.traininganalysis.TrainingFeedbackActivity" android:parentActivityName="fi.polar.polarflow.activity.main.MainActivity" android:screenOrientation="1" android:theme="@7F11000D">
+</activity>
+<activity android:launchMode="1" android:name="fi.polar.polarflow.activity.main.feed.DayActivityLauncherActivity" android:parentActivityName="fi.polar.polarflow.activity.main.MainActivity" android:screenOrientation="1" android:theme="@7F11000D">
+</activity>
+<activity android:launchMode="1" android:name="fi.polar.polarflow.activity.main.sleep.DetailedSleepLauncherActivity" android:parentActivityName="fi.polar.polarflow.activity.main.MainActivity" android:screenOrientation="1" android:theme="@7F11000D">
+</activity>
+<activity android:launchMode="1" android:name="fi.polar.polarflow.activity.main.favouriteslibrary.FavouriteTargetActivity" android:parentActivityName="fi.polar.polarflow.activity.main.MainActivity" android:screenOrientation="1" android:theme="@7F11000D">
+</activity>
+<activity android:launchMode="1" android:name="fi.polar.polarflow.activity.main.feed.FeedBrowserActivity" android:screenOrientation="0" android:theme="@android:01030007">
+</activity>
+<activity android:launchMode="1" android:name="fi.polar.polarflow.activity.main.notifications.FeedActivity" android:parentActivityName="fi.polar.polarflow.activity.main.MainActivity" android:screenOrientation="1" android:theme="@7F11000D">
+</activity>
+<activity android:configChanges="0x00002004" android:launchMode="1" android:name="fi.polar.polarflow.activity.list.ChoiceListActivity" android:screenOrientation="1" android:theme="@7F11000E">
+</activity>
+<activity android:label="" android:launchMode="2" android:name="fi.polar.polarflow.activity.main.fwupdate.TrainingComputerUpdateActivity" android:parentActivityName="fi.polar.polarflow.activity.main.MainActivity" android:screenOrientation="1" android:theme="@7F1100E9">
+</activity>
+<activity android:label="@7F10062F" android:launchMode="1" android:name="fi.polar.polarflow.activity.main.settings.SettingsBrowserActivity" android:parentActivityName="fi.polar.polarflow.activity.main.MainActivity" android:screenOrientation="1" android:theme="@7F11000D">
+</activity>
+<activity android:label="@7F10062F" android:launchMode="1" android:name="fi.polar.polarflow.activity.main.settings.SettingsLicenseAndTermsActivity" android:parentActivityName="fi.polar.polarflow.activity.main.MainActivity" android:screenOrientation="1" android:theme="@7F11000D">
+</activity>
+<activity android:label="@7F100766" android:launchMode="1" android:name="fi.polar.polarflow.activity.main.settings.BlockAppsActivity" android:parentActivityName="fi.polar.polarflow.activity.main.MainActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F1004B7" android:launchMode="1" android:name="fi.polar.polarflow.activity.main.settings.NewProductViewPagerActivity" android:parentActivityName="fi.polar.polarflow.activity.main.MainActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F1004B7" android:launchMode="1" android:name="fi.polar.polarflow.activity.main.settings.DeviceSettingsViewPagerActivity" android:parentActivityName="fi.polar.polarflow.activity.main.MainActivity" android:screenOrientation="1" android:theme="@7F11000D">
+</activity>
+<activity android:launchMode="1" android:name="fi.polar.polarflow.activity.main.feed.FeedCommentActivity" android:parentActivityName="fi.polar.polarflow.activity.main.MainActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:launchMode="1" android:name="fi.polar.polarflow.activity.main.training.TrainingTestActivity" android:parentActivityName="fi.polar.polarflow.activity.main.MainActivity" android:screenOrientation="1" android:theme="@7F11000D">
+</activity>
+<activity android:label="Sport Profiles" android:launchMode="2" android:name="fi.polar.polarflow.activity.main.sportprofile.SportProfileActivity" android:parentActivityName="fi.polar.polarflow.activity.main.MainActivity" android:screenOrientation="1" android:theme="@7F11000D" android:windowSoftInputMode="0x00000013">
+</activity>
+<activity android:label="Sport Profiles Edit" android:launchMode="1" android:name="fi.polar.polarflow.activity.main.sportprofile.SportProfileEditActivity" android:parentActivityName="fi.polar.polarflow.activity.main.sportprofile.SportProfileActivity" android:screenOrientation="1" android:theme="@7F11000D" android:windowSoftInputMode="0x00000013">
+</activity>
+<activity android:label="Edit Sport Profile Zone Limits" android:launchMode="1" android:name="fi.polar.polarflow.activity.main.sportprofile.trainingzones.EditZoneLimitsActivity" android:parentActivityName="fi.polar.polarflow.activity.main.sportprofile.SportProfileEditActivity" android:screenOrientation="1" android:theme="@7F11000D" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:label="Edit Sport Profile Training Displays" android:launchMode="1" android:name="fi.polar.polarflow.activity.main.sportprofile.trainingdisplay.EditTrainingDisplaysActivity" android:parentActivityName="fi.polar.polarflow.activity.main.sportprofile.SportProfileEditActivity" android:screenOrientation="1" android:theme="@7F11000D" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:label="" android:launchMode="2" android:name="fi.polar.polarflow.activity.main.fwupdate.SensorDeviceUpdateActivity" android:parentActivityName="fi.polar.polarflow.activity.main.MainActivity" android:screenOrientation="1" android:theme="@7F1100E1">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="fi.polar.polarflow.activity.main.training.trainingtarget.YoutubePlayerActivity">
+</activity>
+<service android:exported="true" android:name="fi.polar.polarflow.service.wear.datalayer.DataListenerService">
+<intent-filter>
+<action android:name="com.google.android.gms.wearable.MESSAGE_RECEIVED">
+</action>
+<action android:name="com.google.android.gms.wearable.CAPABILITY_CHANGED">
+</action>
+<data android:host="*" android:scheme="wear">
+</data>
+</intent-filter>
+</service>
+<service android:name="fi.polar.polarflow.notifications.DeviceSyncNotificationService">
+</service>
+<service android:name="fi.polar.polarflow.notifications.RemoteSyncNotificationService">
+</service>
+<service android:name="fi.polar.polarflow.notifications.ExerciseOngoingNotificationService">
+</service>
+<activity android:launchMode="1" android:name="fi.polar.polarflow.activity.main.share.ShareSelectionActivity" android:parentActivityName="fi.polar.polarflow.activity.main.MainActivity" android:theme="@7F11012A">
+</activity>
+<activity android:configChanges="0x00000480" android:launchMode="1" android:name="fi.polar.polarflow.activity.main.share.ShareImageEditorActivity" android:parentActivityName="fi.polar.polarflow.activity.main.MainActivity" android:screenOrientation="1" android:theme="@7F11000D">
+</activity>
+<activity android:label="@7F10003F" android:launchMode="1" android:name="fi.polar.polarflow.activity.main.training.trainingresult.AddTrainingResultActivity" android:parentActivityName="fi.polar.polarflow.activity.main.MainActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000480" android:launchMode="1" android:name="fi.polar.polarflow.balance.BalanceScaleActivity" android:parentActivityName="fi.polar.polarflow.activity.main.MainActivity" android:screenOrientation="1" android:theme="@7F11000D">
+</activity>
+<activity android:launchMode="1" android:name="fi.polar.polarflow.activity.main.sleep.SleepHypnogramActivity" android:screenOrientation="0" android:theme="@android:01030007">
+</activity>
+<activity android:launchMode="2" android:name="fi.polar.polarflow.activity.main.featureintroduction.ConfigurableFeatureIntroductionActivity" android:parentActivityName="fi.polar.polarflow.activity.main.settings.GeneralSettingActivity" android:screenOrientation="1" android:theme="@7F11000D">
+</activity>
+<activity android:launchMode="1" android:name="fi.polar.polarflow.activity.main.sleep.SleepRatingActivity" android:theme="@7F110110">
+</activity>
+<activity android:configChanges="0x00000480" android:launchMode="1" android:name="fi.polar.polarflow.activity.main.settings.ThirdPartyServiceEnablerActivity" android:parentActivityName="fi.polar.polarflow.activity.main.settings.GeneralSettingActivity" android:screenOrientation="1" android:theme="@7F11000D">
+</activity>
+<activity android:launchMode="1" android:name="fi.polar.polarflow.activity.login.PhysicalReminderActivity" android:screenOrientation="1" android:theme="@7F11000D">
+</activity>
+<activity android:label="" android:launchMode="2" android:name="fi.polar.polarflow.activity.main.featureintroduction.FeatureIntroductionActivity" android:screenOrientation="1" android:theme="@7F1100E4">
+</activity>
+<activity android:launchMode="1" android:name="fi.polar.polarflow.activity.main.account.consent.ConsentApprovalReminderActivity" android:parentActivityName="fi.polar.polarflow.activity.main.MainActivity" android:screenOrientation="1" android:theme="@7F11000D">
+</activity>
+<activity android:launchMode="1" android:name="fi.polar.polarflow.activity.main.overlayintroduction.OverlayIntroductionActivity" android:theme="@7F1101E0">
+</activity>
+<activity android:label="" android:launchMode="2" android:name="fi.polar.polarflow.activity.main.account.AccountVerificationReminderActivity" android:parentActivityName="fi.polar.polarflow.activity.main.MainActivity" android:screenOrientation="1" android:theme="@7F11000D" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:launchMode="2" android:name="fi.polar.polarflow.activity.main.account.ChangeEmailAddressActivity" android:parentActivityName="fi.polar.polarflow.activity.main.MainActivity" android:screenOrientation="1" android:theme="@7F11000D" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:launchMode="1" android:name="fi.polar.polarflow.activity.main.settings.PrivacyConsentsSettingActivity" android:screenOrientation="1" android:theme="@7F11000D">
+</activity>
+<activity android:launchMode="2" android:name="fi.polar.polarflow.activity.main.cardioloadstatus.CardioLoadBuildupActivity" android:parentActivityName="fi.polar.polarflow.activity.main.MainActivity" android:screenOrientation="1" android:theme="@7F11000D">
+</activity>
+<activity android:launchMode="2" android:name="fi.polar.polarflow.activity.main.cardioloadstatus.CardioLoadBuildupFullscreenGraphActivity" android:parentActivityName="fi.polar.polarflow.activity.main.cardioloadstatus.CardioLoadBuildupActivity" android:screenOrientation="0" android:theme="@7F11000D">
+</activity>
+<activity android:launchMode="3" android:name="fi.polar.polarflow.activity.login.MandatoryUpdateActivity" android:screenOrientation="1" android:theme="@7F1100F4">
+</activity>
+<activity android:launchMode="2" android:name="fi.polar.polarflow.activity.main.tutorial.BreathingTutorialActivity" android:parentActivityName="fi.polar.polarflow.activity.main.MainActivity" android:screenOrientation="1" android:theme="@7F11000D">
+</activity>
+<activity android:launchMode="2" android:name="fi.polar.polarflow.activity.main.nps.NpsTextFeedbackActivity" android:parentActivityName="fi.polar.polarflow.activity.main.MainActivity" android:screenOrientation="1" android:theme="@7F11000D" android:windowSoftInputMode="0x00000014">
+</activity>
+<activity android:launchMode="2" android:name="fi.polar.polarflow.activity.main.nps.NpsScoreActivity" android:parentActivityName="fi.polar.polarflow.activity.main.MainActivity" android:theme="@7F11012A">
+</activity>
+<receiver android:name="fi.polar.polarflow.TimeChangedReceiver">
+<intent-filter>
+<action android:name="android.intent.action.TIMEZONE_CHANGED">
+</action>
+</intent-filter>
+</receiver>
+<activity android:launchMode="2" android:name="fi.polar.polarflow.activity.main.nightlyrecharge.AnsRecoveryActivity" android:parentActivityName="fi.polar.polarflow.activity.main.MainActivity" android:screenOrientation="1" android:theme="@7F11000D">
+</activity>
+<activity android:launchMode="2" android:name="fi.polar.polarflow.activity.login.registration.RegistrationDeviceReadyForUseActivity" android:parentActivityName="fi.polar.polarflow.activity.main.MainActivity" android:screenOrientation="1" android:theme="@7F11000D">
+</activity>
+<activity android:launchMode="2" android:name="fi.polar.polarflow.activity.main.favouriteslibrary.DeviceFavouriteTargetsActivity" android:parentActivityName="fi.polar.polarflow.activity.main.settings.DeviceSettingsViewPagerActivity" android:screenOrientation="1" android:theme="@7F11000D">
+</activity>
+<activity android:launchMode="2" android:name="fi.polar.polarflow.activity.main.favouriteslibrary.FavouritesLibraryActivity" android:parentActivityName="fi.polar.polarflow.activity.main.MainActivity" android:screenOrientation="1" android:theme="@7F11000D">
+</activity>
+<receiver android:name="fi.polar.polarflow.TimeChangedReceiver">
+<intent-filter>
+<action android:name="android.intent.action.TIMEZONE_CHANGED">
+</action>
+</intent-filter>
+</receiver>
+<provider android:authorities="fi.polar.polarflow.provider" android:exported="false" android:grantUriPermissions="true" android:name="androidx.core.content.FileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F130003">
+</meta-data>
+</provider>
+<meta-data android:name="DATABASE" android:value="mva2.db">
+</meta-data>
+<meta-data android:name="VERSION" android:value="39">
+</meta-data>
+<meta-data android:name="QUERY_LOG" android:value="false">
+</meta-data>
+<meta-data android:name="DOMAIN_PACKAGE_NAME" android:value="fi.polar.polarflow">
+</meta-data>
+<meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="@7F100417">
+</meta-data>
+<receiver android:exported="false" android:name="com.polar.pftp.blescan.ScanEventReceiver">
+<intent-filter>
+<action android:name="com.polar.pftp.RESTART_SCAN">
+</action>
+<action android:name="com.polar.pftp.CONNECTION_TIMEOUT">
+</action>
+</intent-filter>
+</receiver>
+<activity android:excludeFromRecents="true" android:exported="false" android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity" android:theme="@android:01030010">
+</activity>
+<service android:exported="true" android:name="com.google.android.gms.auth.api.signin.RevocationBoundService" android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION">
+</service>
+<receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.analytics.AnalyticsReceiver">
+</receiver>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.analytics.AnalyticsService">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.analytics.AnalyticsJobService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<service android:exported="false" android:name="com.google.firebase.components.ComponentDiscoveryService">
+<meta-data android:name="com.google.firebase.components:com.google.firebase.remoteconfig.RemoteConfigRegistrar" android:value="com.google.firebase.components.ComponentRegistrar">
+</meta-data>
+<meta-data android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar" android:value="com.google.firebase.components.ComponentRegistrar">
+</meta-data>
+<meta-data android:name="com.google.firebase.components:com.google.firebase.iid.Registrar" android:value="com.google.firebase.components.ComponentRegistrar">
+</meta-data>
+<meta-data android:name="com.google.firebase.components:com.google.firebase.abt.component.AbtRegistrar" android:value="com.google.firebase.components.ComponentRegistrar">
+</meta-data>
+</service>
+<receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementReceiver">
+</receiver>
+<receiver android:enabled="true" android:exported="true" android:name="com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver" android:permission="android.permission.INSTALL_PACKAGES">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementService">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementJobService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<receiver android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+</intent-filter>
+</receiver>
+<activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:01030010">
+</activity>
+<provider android:authorities="fi.polar.polarflow.firebaseinitprovider" android:exported="false" android:initOrder="100" android:name="com.google.firebase.provider.FirebaseInitProvider">
+</provider>
+<provider android:authorities="fi.polar.polarflow.com.squareup.picasso" android:exported="false" android:name="com.squareup.picasso.PicassoProvider">
+</provider>
+<provider android:authorities="fi.polar.polarflow.crashlyticsinitprovider" android:exported="false" android:initOrder="90" android:name="com.crashlytics.android.CrashlyticsInitProvider">
+</provider>
+<provider android:authorities="fi.polar.polarflow.lifecycle-process" android:exported="false" android:multiprocess="true" android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer">
+</provider>
+</application>
+</manifest>

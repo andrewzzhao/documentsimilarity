@@ -1,0 +1,78 @@
+<?xml version="1.0" ?><manifest android:versionCode="8" android:versionName="1.7" package="com.mobi.screensaver.gytxf7" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="7">
+</uses-sdk>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.DISABLE_KEYGUARD">
+</uses-permission>
+<uses-permission android:name="android.permission.EXPAND_STATUS_BAR">
+</uses-permission>
+<uses-feature android:name="android.software.live_wallpaper">
+</uses-feature>
+<application android:icon="@7F020019" android:label="@7F060000" android:name=".ScreenSaverApplication">
+<activity android:configChanges="0x000000A0" android:label="@7F060000" android:name=".LaunchActivity" android:screenOrientation="1">
+<intent-filter>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+<action android:name="android.intent.action.MAIN">
+</action>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000A0" android:excludeFromRecents="true" android:label="@7F060000" android:launchMode="2" android:name=".ScreenSaverActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.HOME">
+</category>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000A0" android:name=".BackgroundSelectActivity" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000000A0" android:name=".PhotoSelectActivity" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000000A0" android:label="@7F060000" android:name="com.mobi.screensaver.settings.SettingsBackgroundActivity" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000000A0" android:label="@7F060000" android:name="com.mobi.screensaver.settings.SettingsScreenActivity" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:name="com.mobi.screensaver.settings.LockPatternSetActivity" android:screenOrientation="1" android:theme="@android:01030009">
+</activity>
+<activity android:name="com.mobi.screensaver.settings.LockPasswordSetActivity" android:screenOrientation="1" android:theme="@android:01030009">
+</activity>
+<receiver android:name=".ScreenSaverReceiver">
+<intent-filter>
+<action android:name="android.intent.action.USER_PRESENT">
+</action>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+<action android:name="android.intent.action.HEADSET_PLUG">
+</action>
+<action android:name="action_application_start">
+</action>
+<action android:name="action_application_stop">
+</action>
+</intent-filter>
+</receiver>
+<service android:name=".ScreenSaverService">
+</service>
+<activity android:configChanges="0x000000A0" android:name="com.mobi.ad.wrapper.wanpu.MyMobiView">
+</activity>
+<meta-data android:name="Mobi_ID" android:value="e47606100f08a20eebcc660a044072f6">
+</meta-data>
+<meta-data android:name="Mobi_PID" android:value="baidu">
+</meta-data>
+</application>
+</manifest>

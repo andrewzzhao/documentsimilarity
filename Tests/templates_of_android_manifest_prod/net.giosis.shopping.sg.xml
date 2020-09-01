@@ -1,0 +1,516 @@
+<?xml version="1.0" ?><manifest android:compileSdkVersion="28" android:compileSdkVersionCodename="9" android:versionCode="219" android:versionName="5.3.0" package="net.giosis.shopping.sg" platformBuildVersionCode="28" platformBuildVersionName="9" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="21" android:targetSdkVersion="28">
+</uses-sdk>
+<uses-feature android:name="android.hardware.bluetooth" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.location" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.location.gps" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.telephony" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.touchscreen" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.wifi" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.camera" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.camera.autofocus" android:required="false">
+</uses-feature>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="android.permission.USE_CREDENTIALS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.REORDER_TASKS">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.RECORD_AUDIO">
+</uses-permission>
+<uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT">
+</uses-permission>
+<uses-permission android:name="com.google.android.photos.permission.GOOGLE_PHOTOS">
+</uses-permission>
+<uses-permission android:name="com.samsung.android.pass.permissions.USE_PASS_SERVICE">
+</uses-permission>
+<uses-permission android:name="com.samsung.android.camera.iris.permission.USE_IRIS">
+</uses-permission>
+<uses-permission android:name="com.nets.netspay.QR_TRANSACTION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" android:required="false">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" android:required="false">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_NUMBERS">
+</uses-permission>
+<uses-permission android:name="android.permission.USE_BIOMETRIC">
+</uses-permission>
+<uses-permission android:name="android.permission.USE_FINGERPRINT">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE">
+</uses-permission>
+<permission android:name="net.giosis.shopping.sg.permission.C2D_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="net.giosis.shopping.sg.permission.C2D_MESSAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_USER_PRESENT">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.BROADCAST_STICKY">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_LOGS">
+</uses-permission>
+<uses-permission android:name="android.permission.BLUETOOTH">
+</uses-permission>
+<uses-permission android:name="android.permission.BATTERY_STATS">
+</uses-permission>
+<application android:allowBackup="false" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:icon="@7F0804D5" android:label="@7F0F0036" android:largeHeap="true" android:name="net.giosis.common.CommApplication" android:networkSecurityConfig="@7F120002" android:resizeableActivity="false" android:supportsRtl="true" android:theme="@7F100100">
+<uses-library android:name="org.apache.http.legacy" android:required="false">
+</uses-library>
+<meta-data android:name="android.max_aspect" android:value="2.100000">
+</meta-data>
+<service android:name="net.giosis.common.push.FcmMessagingService">
+<intent-filter>
+<action android:name="com.google.firebase.MESSAGING_EVENT">
+</action>
+</intent-filter>
+</service>
+<activity android:label="@7F0F0036" android:name="net.giosis.common.activitys.CommIntroActivity" android:screenOrientation="1" android:theme="@7F1000FF">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:allowTaskReparenting="true" android:hardwareAccelerated="true" android:label="@7F0F0036" android:name="net.giosis.common.activitys.IntroBannerActivity" android:screenOrientation="1" android:theme="@7F1000FF">
+</activity>
+<activity android:exported="true" android:launchMode="1" android:name="net.giosis.shopping.sg.wxapi.WXEntryActivity">
+</activity>
+<activity android:exported="true" android:launchMode="1" android:name="net.giosis.shopping.sg.wxapi.WXPayEntryActivity">
+</activity>
+<activity android:label="@7F0F0036" android:name="net.giosis.common.crop.ImageSearchActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F0F0036" android:name="net.giosis.common.crop.ImageCropActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F0F0036" android:name="net.giosis.common.crop.CropImageActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F0F0036" android:name="net.giosis.common.crop.SelectCategoryActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F0F0036" android:name="net.giosis.common.shopping.search.activity.ImageSearchResultActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F0F0036" android:name="net.giosis.common.shopping.activities.CartActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F0F0036" android:name="net.giosis.common.shopping.activities.SettingActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F0F0036" android:name="net.giosis.common.shopping.activities.TodaysSaleActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000480" android:label="@7F0F0036" android:name="net.giosis.common.newweb.ShoppingWebActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F0F0036" android:name="net.giosis.common.activitys.SchemeWebActivity" android:theme="@7F100100">
+</activity>
+<activity android:configChanges="0x00000480" android:label="@7F0F0036" android:name="net.giosis.common.newweb.PopupWebViewActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000480" android:label="@7F0F0036" android:name="net.giosis.common.newweb.NoticeWebActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000480" android:label="@7F0F0036" android:name="net.giosis.common.newweb.IndexingWebActivity" android:screenOrientation="1">
+<intent-filter android:label="@7F0F0036">
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="@7F0F00BA" android:pathPrefix="@7F0F0034" android:scheme="http">
+</data>
+<data android:host="@7F0F00BB" android:pathPrefix="@7F0F0034" android:scheme="http">
+</data>
+<data android:host="@7F0F00BC" android:pathPrefix="@7F0F0034" android:scheme="http">
+</data>
+<data android:host="@7F0F00BA" android:path="@7F0F0034" android:scheme="https">
+</data>
+<data android:host="@7F0F00BB" android:path="@7F0F0034" android:scheme="https">
+</data>
+<data android:host="@7F0F00BC" android:path="@7F0F0034" android:scheme="https">
+</data>
+<data android:host="@7F0F00AE" android:pathPrefix="@7F0F0034" android:scheme="http">
+</data>
+<data android:host="@7F0F00AF" android:pathPrefix="@7F0F0034" android:scheme="http">
+</data>
+<data android:host="@7F0F00B0" android:pathPrefix="@7F0F0034" android:scheme="http">
+</data>
+<data android:host="@7F0F00AE" android:path="@7F0F0034" android:scheme="https">
+</data>
+<data android:host="@7F0F00AF" android:path="@7F0F0034" android:scheme="https">
+</data>
+<data android:host="@7F0F00B0" android:path="@7F0F0034" android:scheme="https">
+</data>
+<data android:host="@7F0F00B4" android:pathPrefix="@7F0F0034" android:scheme="http">
+</data>
+<data android:host="@7F0F00B5" android:pathPrefix="@7F0F0034" android:scheme="http">
+</data>
+<data android:host="@7F0F00B6" android:pathPrefix="@7F0F0034" android:scheme="http">
+</data>
+<data android:host="@7F0F00B4" android:path="@7F0F0034" android:scheme="https">
+</data>
+<data android:host="@7F0F00B5" android:path="@7F0F0034" android:scheme="https">
+</data>
+<data android:host="@7F0F00B6" android:path="@7F0F0034" android:scheme="https">
+</data>
+<data android:host="@7F0F00B7" android:pathPrefix="@7F0F0034" android:scheme="http">
+</data>
+<data android:host="@7F0F00B8" android:pathPrefix="@7F0F0034" android:scheme="http">
+</data>
+<data android:host="@7F0F00B9" android:pathPrefix="@7F0F0034" android:scheme="http">
+</data>
+<data android:host="@7F0F00B7" android:path="@7F0F0034" android:scheme="https">
+</data>
+<data android:host="@7F0F00B8" android:path="@7F0F0034" android:scheme="https">
+</data>
+<data android:host="@7F0F00B9" android:path="@7F0F0034" android:scheme="https">
+</data>
+<data android:host="@7F0F00AB" android:pathPrefix="@7F0F0034" android:scheme="http">
+</data>
+<data android:host="@7F0F00AC" android:pathPrefix="@7F0F0034" android:scheme="http">
+</data>
+<data android:host="@7F0F00AD" android:pathPrefix="@7F0F0034" android:scheme="http">
+</data>
+<data android:host="@7F0F00AB" android:path="@7F0F0034" android:scheme="https">
+</data>
+<data android:host="@7F0F00AC" android:path="@7F0F0034" android:scheme="https">
+</data>
+<data android:host="@7F0F00AD" android:path="@7F0F0034" android:scheme="https">
+</data>
+<data android:host="@7F0F00B1" android:pathPrefix="@7F0F0034" android:scheme="http">
+</data>
+<data android:host="@7F0F00B2" android:pathPrefix="@7F0F0034" android:scheme="http">
+</data>
+<data android:host="@7F0F00B3" android:pathPrefix="@7F0F0034" android:scheme="http">
+</data>
+<data android:host="@7F0F00B1" android:path="@7F0F0034" android:scheme="https">
+</data>
+<data android:host="@7F0F00B2" android:path="@7F0F0034" android:scheme="https">
+</data>
+<data android:host="@7F0F00B3" android:path="@7F0F0034" android:scheme="https">
+</data>
+</intent-filter>
+</activity>
+<activity android:label="@7F0F0036" android:name="net.giosis.common.gallery.ImageGalleryActivity" android:screenOrientation="1">
+</activity>
+<activity android:hardwareAccelerated="true" android:label="@7F0F0036" android:name="net.giosis.common.shopping.activities.ShoppingMainActivity" android:screenOrientation="1" android:theme="@7F100100">
+</activity>
+<activity android:hardwareAccelerated="true" android:label="@7F0F0036" android:name="net.giosis.common.shopping.activities.SearchActivity" android:screenOrientation="1" android:theme="@7F100101">
+</activity>
+<activity android:hardwareAccelerated="true" android:label="@7F0F0036" android:name="net.giosis.common.shopping.categorymap.CategoryActivity" android:theme="@android:01030010">
+</activity>
+<activity android:hardwareAccelerated="true" android:label="@7F0F0036" android:name="net.giosis.common.shopping.search.activity.GroupCategoryActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:hardwareAccelerated="true" android:label="@7F0F0036" android:name="net.giosis.common.shopping.activities.ShoppingTalkActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:hardwareAccelerated="true" android:label="@7F0F0036" android:name="net.giosis.common.shopping.search.activity.SearchCategoryActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:hardwareAccelerated="true" android:label="@7F0F0036" android:name="net.giosis.common.shopping.search.activity.SearchTotalActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:hardwareAccelerated="true" android:label="@7F0F0036" android:name="net.giosis.common.shopping.activities.BestSellerActivity" android:screenOrientation="1">
+</activity>
+<activity android:hardwareAccelerated="true" android:label="@7F0F0036" android:name="net.giosis.common.shopping.qbox.QboxActivity" android:screenOrientation="1">
+</activity>
+<activity android:hardwareAccelerated="true" android:label="@7F0F0036" android:name="net.giosis.common.shopping.activities.HistoryActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F0F0036" android:name="net.giosis.common.activitys.DeveloperModeActivity" android:screenOrientation="1" android:theme="@7F100171">
+</activity>
+<activity android:label="@7F0F0036" android:name="net.giosis.common.activitys.TestUrlChangeActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F0F0036" android:name="net.giosis.common.activitys.TestApiChangeActivity" android:screenOrientation="1">
+</activity>
+<activity android:icon="@7F0801ED" android:label="Qtalk" android:name="net.giosis.common.activitys.ShareQtalkActivity" android:theme="@7F1000FD">
+</activity>
+<activity android:icon="@7F080203" android:label="Facebook" android:name="net.giosis.common.activitys.ShareFacebookActivity" android:theme="@7F1000FD">
+</activity>
+<activity android:icon="@7F080205" android:label="Twitter" android:name="net.giosis.common.activitys.ShareTwitterActivity" android:theme="@7F1000FD">
+</activity>
+<activity android:icon="@7F080204" android:label="QQ" android:name="net.giosis.common.activitys.ShareQQActivity" android:theme="@7F1000FD">
+</activity>
+<activity android:icon="@7F080206" android:label="Weibo" android:name="net.giosis.common.activitys.ShareWeiboActivity" android:theme="@7F1000FD">
+</activity>
+<activity android:label="@7F0F0036" android:name="net.giosis.common.shopping.activities.ShareActivity" android:theme="@7F1000FD">
+</activity>
+<activity android:name="net.giosis.common.activitys.VideoInfoActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:excludeFromRecents="true" android:label="@7F0F0036" android:launchMode="3" android:name="net.giosis.common.activitys.PushAlarmDialogActivityThemeBlack" android:screenOrientation="1" android:taskAffinity="" android:theme="@7F100171">
+</activity>
+<activity android:configChanges="0x000000A0" android:excludeFromRecents="true" android:label="@7F0F0036" android:name="net.giosis.common.activitys.PushAlarmDialogActivityThemeTransParents" android:theme="@7F1000FD">
+</activity>
+<activity android:label="@7F0F0036" android:name="net.giosis.common.activitys.SdkLoginAgreeActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000005B0" android:label="@7F0F0036" android:name="com.facebook.FacebookActivity" android:theme="@android:01030010">
+</activity>
+<activity android:clearTaskOnLaunch="true" android:configChanges="0x000000A0" android:name="net.giosis.common.camera.activity.CameraActivity" android:screenOrientation="7" android:stateNotNeeded="true" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:label="@7F0F0036" android:name="net.giosis.common.camera.activity.CameraDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F0F0036" android:name="net.giosis.common.crop.UpLoadImageCropActivity" android:screenOrientation="1">
+</activity>
+<activity android:clearTaskOnLaunch="true" android:configChanges="0x000000A0" android:name="net.giosis.common.camera.activity.VideoPlayActivity" android:stateNotNeeded="true" android:theme="@7F1000C4" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:label="@7F0F0036" android:name="net.giosis.common.shopping.main.activities.TimeSaleActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F0F0036" android:name="net.giosis.common.shopping.main.activities.DailyDealActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F0F0036" android:name="net.giosis.common.shopping.main.activities.GroupBuyActivity" android:screenOrientation="1">
+</activity>
+<activity android:hardwareAccelerated="true" android:label="@7F0F0036" android:name="net.giosis.common.shopping.main.section.search.SectionSearchActivity" android:screenOrientation="1">
+</activity>
+<activity android:hardwareAccelerated="true" android:label="@7F0F0036" android:name="net.giosis.common.shopping.main.section.result.SectionResultActivity" android:screenOrientation="1">
+</activity>
+<activity android:hardwareAccelerated="true" android:label="@7F0F0036" android:name="net.giosis.common.shopping.activities.SelectNationActivity" android:screenOrientation="1">
+</activity>
+<activity android:hardwareAccelerated="true" android:label="@7F0F0036" android:name="net.giosis.common.newweb.RelatedLoginActivity" android:screenOrientation="1">
+</activity>
+<activity android:clearTaskOnLaunch="true" android:configChanges="0x000000A0" android:name="net.giosis.common.zxing.CaptureActivity" android:screenOrientation="1" android:stateNotNeeded="true" android:theme="@7F1000C4" android:windowSoftInputMode="0x00000003">
+<intent-filter>
+<action android:name="com.google.zxing.client.android.SCAN">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="zxing.appspot.com" android:path="/scan" android:scheme="http">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="www.google.com" android:path="/m/products/scan" android:scheme="http">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="scan" android:path="/" android:scheme="zxing">
+</data>
+</intent-filter>
+</activity>
+<activity android:label="qrcode_preferences" android:name="net.giosis.common.zxing.PreferencesActivity" android:stateNotNeeded="true">
+</activity>
+<activity android:name="net.giosis.common.zxing.image.ImageActivity" android:stateNotNeeded="true" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x000000A0" android:exported="true" android:label="@7F0F0036" android:name="net.giosis.common.activitys.PushRelayActivity" android:screenOrientation="1" android:theme="@7F1000EB">
+</activity>
+<activity android:label="@7F0F0036" android:name="net.giosis.common.activitys.SchemeInterfaceActivity" android:theme="@7F1000FD">
+<intent-filter>
+<data android:scheme="qoo10sg">
+</data>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="@7F0F012B" android:scheme="@7F0F012A">
+</data>
+</intent-filter>
+</activity>
+<receiver android:name="net.giosis.common.utils.ShoppingSchemeBroadCastReciever">
+<intent-filter>
+<action android:name="net.giosis.shopping.sg">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:exported="true" android:name="net.giosis.common.push.XGPushMessageReceiver">
+<intent-filter>
+<action android:name="com.tencent.android.tpush.action.PUSH_MESSAGE">
+</action>
+</intent-filter>
+</receiver>
+<service android:exported="false" android:name="net.giosis.qlibrary.location.FetchAddressIntentService">
+</service>
+<meta-data android:name="com.google.android.gms.version" android:value="@7F0A0008">
+</meta-data>
+<meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@7F0F00CF">
+</meta-data>
+<meta-data android:name="com.kakao.sdk.AppKey" android:value="@7F0F0129">
+</meta-data>
+<provider android:authorities="@7F0F01CD" android:exported="false" android:grantUriPermissions="true" android:name="androidx.core.content.FileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F120001">
+</meta-data>
+</provider>
+<provider android:authorities="@7F0F009F" android:exported="true" android:name="net.giosis.common.utils.QooContentProvider">
+</provider>
+<meta-data android:name="debug_mode" android:value="N">
+</meta-data>
+<meta-data android:name="spay_sdk_api_level" android:value="1.600000">
+</meta-data>
+<service android:exported="true" android:name="com.google.firebase.messaging.FirebaseMessagingService">
+<intent-filter android:priority="-500">
+<action android:name="com.google.firebase.MESSAGING_EVENT">
+</action>
+</intent-filter>
+</service>
+<activity android:excludeFromRecents="true" android:exported="false" android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity" android:theme="@android:01030010">
+</activity>
+<service android:exported="true" android:name="com.google.android.gms.auth.api.signin.RevocationBoundService" android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION">
+</service>
+<activity android:name="com.facebook.CustomTabMainActivity">
+</activity>
+<activity android:name="com.facebook.CustomTabActivity">
+</activity>
+<service android:name="com.google.firebase.components.ComponentDiscoveryService">
+<meta-data android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar" android:value="com.google.firebase.components.ComponentRegistrar">
+</meta-data>
+<meta-data android:name="com.google.firebase.components:com.google.firebase.iid.Registrar" android:value="com.google.firebase.components.ComponentRegistrar">
+</meta-data>
+</service>
+<receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementReceiver">
+</receiver>
+<receiver android:enabled="true" android:exported="true" android:name="com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver" android:permission="android.permission.INSTALL_PACKAGES">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementService">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementJobService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<receiver android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+<category android:name="net.giosis.shopping.sg">
+</category>
+</intent-filter>
+</receiver>
+<service android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdService">
+<intent-filter android:priority="-500">
+<action android:name="com.google.firebase.INSTANCE_ID_EVENT">
+</action>
+</intent-filter>
+</service>
+<provider android:authorities="net.giosis.shopping.sg.firebaseinitprovider" android:exported="false" android:initOrder="100" android:name="com.google.firebase.provider.FirebaseInitProvider">
+</provider>
+<activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x00000FB0" android:exported="false" android:name="com.google.android.gms.ads.AdActivity" android:theme="@android:0103000F">
+</activity>
+<provider android:authorities="net.giosis.shopping.sg.crashlyticsinitprovider" android:exported="false" android:initOrder="90" android:name="com.crashlytics.android.CrashlyticsInitProvider">
+</provider>
+<activity android:exported="false" android:name="com.tencent.android.tpush.XGPushActivity" android:theme="@android:0103000F">
+<intent-filter>
+<action android:name="android.intent.action">
+</action>
+</intent-filter>
+</activity>
+<receiver android:name="com.tencent.android.tpush.XGPushReceiver" android:process=":xg_service_v4">
+<intent-filter android:priority="0x7FFFFFFF">
+<action android:name="com.tencent.android.tpush.action.SDK">
+</action>
+<action android:name="com.tencent.android.tpush.action.INTERNAL_PUSH_MESSAGE">
+</action>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+<action android:name="android.intent.action.USER_PRESENT">
+</action>
+<action android:name="android.bluetooth.adapter.action.STATE_CHANGED">
+</action>
+<action android:name="android.intent.action.ACTION_POWER_CONNECTED">
+</action>
+<action android:name="android.intent.action.ACTION_POWER_DISCONNECTED">
+</action>
+</intent-filter>
+<intent-filter android:priority="0x7FFFFFFF">
+<action android:name="android.intent.action.MEDIA_UNMOUNTED">
+</action>
+<action android:name="android.intent.action.MEDIA_REMOVED">
+</action>
+<action android:name="android.intent.action.MEDIA_CHECKING">
+</action>
+<action android:name="android.intent.action.MEDIA_EJECT">
+</action>
+<data android:scheme="file">
+</data>
+</intent-filter>
+</receiver>
+<service android:exported="true" android:name="com.tencent.android.tpush.rpc.XGRemoteService">
+<intent-filter>
+<action android:name="net.giosis.shopping.sg.PUSH_ACTION">
+</action>
+</intent-filter>
+</service>
+<service android:exported="true" android:name="com.tencent.android.tpush.service.XGPushServiceV4" android:persistent="true" android:process=":xg_service_v4">
+</service>
+<provider android:authorities="net.giosis.shopping.sg.AUTH_XGPUSH" android:exported="true" android:name="com.tencent.android.tpush.XGPushProvider">
+</provider>
+<provider android:authorities="net.giosis.shopping.sg.TPUSH_PROVIDER" android:exported="false" android:name="com.tencent.android.tpush.SettingsContentProvider">
+</provider>
+<meta-data android:name="XG_V2_ACCESS_ID" android:value="2100345836">
+</meta-data>
+<meta-data android:name="XG_V2_ACCESS_KEY" android:value="ALJN9T885M3E">
+</meta-data>
+<provider android:authorities="net.giosis.shopping.sg.TENCENT.MID.V4" android:exported="true" android:name="com.tencent.mid.api.MidProvider">
+</provider>
+<provider android:authorities="net.giosis.shopping.sg.FacebookInitProvider" android:exported="false" android:name="com.facebook.internal.FacebookInitProvider">
+</provider>
+<receiver android:exported="false" android:name="com.facebook.CurrentAccessTokenExpirationBroadcastReceiver">
+<intent-filter>
+<action android:name="com.facebook.sdk.ACTION_CURRENT_ACCESS_TOKEN_CHANGED">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:exported="true" android:name="com.facebook.CampaignTrackingReceiver" android:permission="android.permission.INSTALL_PACKAGES">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+</application>
+</manifest>

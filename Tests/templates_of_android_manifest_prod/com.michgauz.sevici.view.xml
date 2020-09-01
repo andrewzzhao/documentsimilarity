@@ -1,0 +1,170 @@
+<?xml version="1.0" ?><manifest android:versionCode="263" android:versionName="2.6.3" package="com.michgauz.sevici.view" platformBuildVersionCode="25" platformBuildVersionName="7.1.1" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="9" android:targetSdkVersion="25">
+</uses-sdk>
+<uses-feature android:glEsVersion="0x00020000" android:required="true">
+</uses-feature>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES">
+</uses-permission>
+<uses-permission android:name="com.android.vending.BILLING">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE">
+</uses-permission>
+<permission android:name="com.michgauz.sevici.view.permission.C2D_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="com.michgauz.sevici.view.permission.C2D_MESSAGE">
+</uses-permission>
+<application android:allowBackup="true" android:icon="@7F020095" android:label="@7F080060" android:theme="@7F0C0136">
+<service android:name="com.michgauz.velibco.utils.MyFirebaseMessagingService">
+<intent-filter>
+<action android:name="com.google.firebase.MESSAGING_EVENT">
+</action>
+</intent-filter>
+</service>
+<receiver android:name="com.michgauz.velibco.widget.GlobalAppWidgetProvider">
+<intent-filter>
+<action android:name="android.appwidget.action.APPWIDGET_UPDATE">
+</action>
+<action android:name="VelibcoClick">
+</action>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+</intent-filter>
+<meta-data android:name="android.appwidget.provider" android:resource="@7F060002">
+</meta-data>
+</receiver>
+<service android:name="com.michgauz.velibco.widget.UpdateWidgetService">
+</service>
+<service android:name="com.michgauz.velibco.widget.ListenerService">
+<intent-filter>
+<action android:name="com.google.android.gms.wearable.BIND_LISTENER">
+</action>
+</intent-filter>
+</service>
+<meta-data android:name="com.google.android.gms.version" android:value="@7F0E0006">
+</meta-data>
+<meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="@7F0800C9">
+</meta-data>
+<meta-data android:name="io.fabric.ApiKey" android:value="31162fcf4aab8f17e771d07c8e6a98db930fc1d8">
+</meta-data>
+<activity android:configChanges="0x00000480" android:label="@7F080060" android:launchMode="2" android:name="com.michgauz.velibco.view.GlobalActivity" android:screenOrientation="-1" android:windowSoftInputMode="0x00000030">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.SEARCH">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:scheme="@7F0800D0">
+</data>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+</intent-filter>
+<meta-data android:name="android.app.searchable" android:resource="@7F060009">
+</meta-data>
+</activity>
+<activity android:configChanges="0x00000480" android:name="com.michgauz.velibco.view.PreferencesActivity" android:screenOrientation="-1">
+</activity>
+<activity android:configChanges="0x00000480" android:name="com.michgauz.velibco.view.AccountActivity" android:screenOrientation="-1">
+</activity>
+<activity android:configChanges="0x00000480" android:name="com.michgauz.velibco.view.EnterActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.michgauz.velibco.widget.AppWidgetConfigure" android:theme="@7F0C012E">
+<intent-filter>
+<action android:name="android.appwidget.action.APPWIDGET_CONFIGURE">
+</action>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x00000FB0" android:name="com.google.android.gms.ads.AdActivity" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x00000CB0" android:hardwareAccelerated="true" android:name="com.inmobi.androidsdk.IMBrowserActivity" android:theme="@android:01030010">
+</activity>
+<activity android:name="com.google.android.gms.ads.purchase.InAppPurchaseActivity" android:theme="@7F0C012D">
+</activity>
+<activity android:excludeFromRecents="true" android:exported="false" android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity" android:theme="@android:01030010">
+</activity>
+<service android:exported="true" android:name="com.google.android.gms.auth.api.signin.RevocationBoundService" android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION">
+</service>
+<service android:exported="true" android:name="com.google.firebase.messaging.FirebaseMessagingService">
+<intent-filter android:priority="-500">
+<action android:name="com.google.firebase.MESSAGING_EVENT">
+</action>
+</intent-filter>
+</service>
+<activity android:exported="true" android:name="com.google.android.gms.appinvite.PreviewActivity" android:theme="@7F0C0126">
+<intent-filter>
+<action android:name="com.google.android.gms.appinvite.ACTION_PREVIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:01030010">
+</activity>
+<receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementReceiver">
+</receiver>
+<receiver android:enabled="true" android:name="com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver" android:permission="android.permission.INSTALL_PACKAGES">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementService">
+</service>
+<receiver android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+<action android:name="com.google.android.c2dm.intent.REGISTRATION">
+</action>
+<category android:name="com.michgauz.sevici.view">
+</category>
+</intent-filter>
+</receiver>
+<receiver android:exported="false" android:name="com.google.firebase.iid.FirebaseInstanceIdInternalReceiver">
+</receiver>
+<service android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdService">
+<intent-filter android:priority="-500">
+<action android:name="com.google.firebase.INSTANCE_ID_EVENT">
+</action>
+</intent-filter>
+</service>
+<provider android:authorities="com.michgauz.sevici.view.firebaseinitprovider" android:exported="false" android:initOrder="100" android:name="com.google.firebase.provider.FirebaseInitProvider">
+</provider>
+<activity android:exported="false" android:name="com.twitter.sdk.android.tweetcomposer.ComposerActivity" android:windowSoftInputMode="0x00000014">
+</activity>
+<service android:enabled="true" android:exported="false" android:name="com.twitter.sdk.android.tweetcomposer.TweetUploadService">
+</service>
+<activity android:configChanges="0x000004A0" android:name="com.twitter.sdk.android.tweetui.PlayerActivity" android:theme="@7F0C0021">
+</activity>
+<activity android:name="com.twitter.sdk.android.tweetui.GalleryActivity" android:theme="@7F0C0021">
+</activity>
+<activity android:configChanges="0x00000480" android:excludeFromRecents="true" android:exported="false" android:name="com.twitter.sdk.android.core.identity.OAuthActivity">
+</activity>
+<activity android:configChanges="0x00000480" android:excludeFromRecents="true" android:exported="false" android:icon="@7F02012A" android:label="@7F0800C8" android:name="com.twitter.sdk.android.core.identity.ShareEmailActivity">
+</activity>
+<meta-data android:name="com.google.android.wearable.beta.app" android:resource="@7F060001">
+</meta-data>
+</application>
+</manifest>

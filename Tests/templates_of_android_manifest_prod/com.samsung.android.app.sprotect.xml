@@ -1,0 +1,138 @@
+<?xml version="1.0" ?><manifest android:compileSdkVersion="28" android:compileSdkVersionCodename="9" android:versionCode="400300100" android:versionName="4.0.03" package="com.samsung.android.app.sprotect" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="28" android:targetSdkVersion="28">
+</uses-sdk>
+<permission android:name="com.samsung.android.app.sprotect.permission.LAUNCH_SPROTECT_COMPONENT" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.EXPAND_STATUS_BAR">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERACT_ACROSS_USERS">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERACT_ACROSS_USERS_FULL">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.MANAGE_USERS">
+</uses-permission>
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="com.samsung.applock.permission.STATUSCHANGED">
+</uses-permission>
+<uses-permission android:name="com.samsung.android.mfi.UPDATE_WIDGET">
+</uses-permission>
+<uses-permission android:name="com.samsung.applock.permission.STATUS_UPDATE">
+</uses-permission>
+<uses-permission android:name="com.samsung.android.providers.context.permission.WRITE_USE_APP_FEATURE_SURVEY">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_COMPONENT_ENABLED_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.FOREGROUND_SERVICE">
+</uses-permission>
+<uses-permission android:name="com.sec.spp.permission.TOKEN_76767142bf06a20005d779670fc9d82311f2f8bffcef9db1981c0cd5d9fc1aaa57d13f9161d06e16feafff900a52da30b87bb43e617cf1e3532a53f9608e80f50693d08ce429291502734749f512a2eb17b3206c95fe6dec731946a0d5662b1cd8a9e5d54d6c1e926093d4a331bf1a58ed5a9d4271278f6a6c2f0e6b4d86b85f">
+</uses-permission>
+<uses-permission android:name="com.sec.spp.permission.TOKEN_ce29d024561d28641d16dd1170340e32a4bd81335a447337d6a05cad653a168d9f11a4eecb8a6dd5355a00ccab2a1c46c13f500d06c6eb0d7039bc5ef92831baf89d12fa8f08c64660ccef345d5c6f7525641214effe37758ba75c937659c376805a058aeb4434e5e6a007bca619e02444b0b1611d3995fe300dfb6cbfc64d4f">
+</uses-permission>
+<uses-feature android:name="com.samsung.android.api.version.2402" android:required="true">
+</uses-feature>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<application android:allowBackup="false" android:icon="@7F0C0000" android:label="@7F0E0020" android:resizeableActivity="false" android:supportsRtl="true" android:theme="@7F0F0120" android:usesCleartextTraffic="true">
+<meta-data android:name="com.google.android.gms.version" android:value="@7F080001">
+</meta-data>
+<meta-data android:name="com.samsung.android.icon_container.has_icon_container" android:value="@7F030006">
+</meta-data>
+<meta-data android:name="android.max_aspect" android:value="2.100000">
+</meta-data>
+<activity android:label="@7F0E0020" android:launchMode="2" android:name="com.samsung.android.app.sprotect.dashboard.DashBoard" android:screenOrientation="1">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="com.samsung.android.yuva_feature">
+</action>
+</intent-filter>
+<meta-data android:name="com.samsung.android.yuva_feature.key" android:value="ssecure">
+</meta-data>
+<meta-data android:name="com.samsung.android.yuva_feature.introduction" android:value="@7F0E009F">
+</meta-data>
+</activity>
+<receiver android:exported="true" android:name="com.samsung.android.app.sprotect.securewifi.SecureWifiReceiver">
+<intent-filter>
+<action android:name="com.samsung.android.app.sprotect.ENABLE_SECURE_WIFI_POPUP">
+</action>
+<action android:name="com.samsung.android.app.sprotect.ENABLE_SECURE_WIFI">
+</action>
+<action android:name="com.samsung.android.app.sprotect.DISABLE_SECURE_WIFI">
+</action>
+<action android:name="com.samsung.android.app.sprotect.SHOW_PROTECTION_DETAILS">
+</action>
+<action android:name="com.samsung.intent.action.EMERGENCY_STATE_CHANGED">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.net.wifi.WIFI_STATE_CHANGED">
+</action>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+<action android:name="android.intent.action.LOCALE_CHANGED">
+</action>
+</intent-filter>
+</receiver>
+<meta-data android:name="com.samsung.android.multiuser.install_only_owner" android:value="true">
+</meta-data>
+<activity android:excludeFromRecents="true" android:exported="true" android:finishOnCloseSystemDialogs="true" android:launchMode="2" android:name="com.samsung.android.app.sprotect.securewifi.SecureWifiPopupActivity" android:theme="@7F0F00EC">
+</activity>
+<activity android:excludeFromRecents="true" android:exported="true" android:launchMode="3" android:name="com.samsung.android.app.sprotect.securewifi.EulaActivity">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="com.samsung.android.app.sprotect.securewifi.EulaActivity">
+</action>
+</intent-filter>
+</activity>
+<activity android:excludeFromRecents="true" android:exported="true" android:label="@7F0E00A9" android:launchMode="2" android:name="com.samsung.android.app.sprotect.securewifi.SecureWifiDescriptionActivity">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="com.samsung.android.app.sprotect.securewifi.SecureWifiDescriptionActivity">
+</action>
+</intent-filter>
+</activity>
+<service android:name="com.samsung.android.app.sprotect.securewifi.SecureWifiService">
+</service>
+<receiver android:exported="true" android:name="com.samsung.android.app.sprotect.analytics.AnalyticsReceiver">
+<intent-filter>
+<action android:name="com.samsung.applock.intent.action.APP_HIDE_CHANGED">
+</action>
+<action android:name="com.samsung.applock.intent.action.APP_LOCK_CHANGED">
+</action>
+</intent-filter>
+</receiver>
+<activity android:name="com.samsung.android.app.sprotect.dashboard.SProtectSettingsActivity" android:parentActivityName="com.samsung.android.app.sprotect.dashboard.DashBoard">
+</activity>
+<activity android:name="com.samsung.android.app.sprotect.dashboard.AboutSProtectActivity" android:parentActivityName="com.samsung.android.app.sprotect.dashboard.SProtectSettingsActivity">
+</activity>
+<activity android:configChanges="0x000004B0" android:excludeFromRecents="true" android:exported="false" android:name="com.samsung.android.app.sprotect.dashboard.OpenSourceLicenseActivity" android:theme="@7F0F0000">
+</activity>
+<provider android:authorities="com.samsung.android.app.sprotect.lifecycle-trojan" android:exported="false" android:multiprocess="true" android:name="android.arch.lifecycle.ProcessLifecycleOwnerInitializer">
+</provider>
+<activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:01030010">
+</activity>
+<meta-data android:name="SPDE.build.signature" android:value="5c13f93/39175014/Beyond-release/SProtect-400100-4.0.03">
+</meta-data>
+<meta-data android:name="SPDE.env.version" android:value="3.0.1/L28.1.21/28.1.3">
+</meta-data>
+</application>
+</manifest>

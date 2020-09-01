@@ -1,0 +1,250 @@
+<?xml version="1.0" ?><manifest android:versionCode="29" android:versionName="3.1.5" package="al.baboon" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="15" android:targetSdkVersion="22">
+</uses-sdk>
+<uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" android:required="false">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="al.baboon.permission.MAPS_RECEIVE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_SMS" android:required="false">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" android:required="false">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_ACCOUNTS">
+</uses-permission>
+<supports-screens android:anyDensity="true" android:largeScreens="true" android:normalScreens="true" android:resizeable="true" android:xlargeScreens="true">
+</supports-screens>
+<uses-feature android:glEsVersion="0x00020000" android:required="true">
+</uses-feature>
+<permission android:name="al.baboon.permission.MAPS_RECEIVE" android:protectionLevel="0x00000002">
+</permission>
+<permission android:name="al.baboon.permission.C2D_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="al.baboon.permission.C2D_MESSAGE">
+</uses-permission>
+<application android:allowBackup="true" android:icon="@7F0C0000" android:label="@7F0E0038" android:name="al.baboon.JustEatApplication" android:theme="@7F0F0006">
+<receiver android:exported="true" android:name="com.google.android.gms.gcm.GcmReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+<action android:name="com.google.android.c2dm.intent.REGISTRATION">
+</action>
+<category android:name="al.baboon">
+</category>
+</intent-filter>
+</receiver>
+<service android:exported="false" android:name="com.localytics.android.GcmListenerService">
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+</intent-filter>
+</service>
+<service android:exported="false" android:name="com.localytics.android.InstanceIDListenerService">
+<intent-filter>
+<action android:name="com.google.android.gms.iid.InstanceID">
+</action>
+</intent-filter>
+</service>
+<service android:name="al.baboon.utils.RichPushService">
+</service>
+<activity android:name="al.baboon.utils.LocalyticsPushHeandlerActivity">
+</activity>
+<meta-data android:name="com.google.firebase.messaging.default_notification_icon" android:resource="@7F070110">
+</meta-data>
+<meta-data android:name="LOCALYTICS_APP_KEY" android:value="44aaf9d15ea7b7064556ca6-d19c6c04-e6d0-11e6-e7ab-00ccb3b53a8c">
+</meta-data>
+<service android:name="al.baboon.firebaseNotification.MyFirebaseInstanceIDService">
+<intent-filter>
+<action android:name="com.google.firebase.INSTANCE_ID_EVENT">
+</action>
+</intent-filter>
+</service>
+<service android:name="al.baboon.firebaseNotification.MyFirebaseMessagingService">
+<intent-filter>
+<action android:name="com.google.firebase.MESSAGING_EVENT">
+</action>
+</intent-filter>
+</service>
+<activity android:exported="true" android:name="com.localytics.android.PushTrackingActivity">
+</activity>
+<meta-data android:name="io.fabric.ApiKey" android:value="7b8551685eefd7292c028d058da020850f8f2c36">
+</meta-data>
+<meta-data android:name="com.google.android.geo.API_KEY" android:value="@7F0E0090">
+</meta-data>
+<meta-data android:name="com.google.android.gms.version" android:value="@7F090007">
+</meta-data>
+<meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@7F0E0083">
+</meta-data>
+<activity android:configChanges="0x000005B0" android:label="@7F0E0038" android:name="com.facebook.FacebookActivity" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<receiver android:name="al.baboon.utils.SmsReceiver">
+<intent-filter android:priority="500">
+<action android:name="android.provider.Telephony.SMS_RECEIVED">
+</action>
+</intent-filter>
+</receiver>
+<activity android:label="@7F0E0038" android:name="al.baboon.ui.checkout.old.ThreeStepsFinalisationActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F0E0185" android:name="al.baboon.ui.entry.EntryWithAddressActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="2" android:name="al.baboon.ui.SplashScreenActivity" android:screenOrientation="1" android:theme="@7F0F00E7">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+<intent-filter>
+<data android:scheme="amp44aaf9d15ea7b7064556ca6-d19c6c04-e6d0-11e6-e7ab-00ccb3b53a8c">
+</data>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+</intent-filter>
+<intent-filter>
+<data android:host="open" android:scheme="baboon">
+</data>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="baboon.al" android:scheme="http">
+</data>
+<data android:scheme="al.baboon">
+</data>
+</intent-filter>
+</activity>
+<activity android:label="@7F0E0038" android:name="al.baboon.ui.listable_restaurant.old.ListRestaurantActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F0E0038" android:name="al.baboon.ui.main.MainBaboonActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F0E00B9" android:name="al.baboon.ui.contact.ContactActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F0E0180" android:name="al.baboon.ui.myOrders.MyOrderListActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F0E0120" android:name="al.baboon.ui.userProfile.ProfileActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F0E0038" android:name="al.baboon.old.activity.CustomPlaceFullAutosuggestionActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:label="@7F0E0038" android:name="al.baboon.utilities.address_picker_util.AllInOneMapsActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:label="@7F0E0181" android:name="al.baboon.ui.order_status.OrderStatusActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="" android:name="al.baboon.ui.restaurantProfile.RestaurantActivity" android:parentActivityName="al.baboon.ui.main.MainBaboonActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".ui.main.MainBaboonActivity">
+</meta-data>
+</activity>
+<activity android:label="@7F0E0189" android:name="al.baboon.ui.userProfile.userNumberVerification.VerifyNumberActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="al.baboon.ui.multiadress_dialog.editAddress.EditAddressActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F0E0136" android:name="al.baboon.ui.favouriteRestaurant.FavoriteRestaurantActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="al.baboon.ui.searchRestaurant.SearchRestaurantActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="al.baboon.ui.restaurantReview.ReviewActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="al.baboon.ui.restaurants_list_category.TabedCategoryActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="al.baboon.ui.checkout.CheckOutActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:name="al.baboon.ui.multiadress_dialog.myAddresses.MyAddressListActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="al.baboon.ui.oferta.OfertaActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="al.baboon.ui.order_status.FirstOrderActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="al.baboon.utilities.preferences.UpdateActivity" android:screenOrientation="1">
+</activity>
+<meta-data android:name="io.branch.sdk.BranchKey" android:value="key_live_phEGy0hYtFFctZy9H0iA7aciuwde45W6">
+</meta-data>
+<meta-data android:name="io.branch.sdk.BranchKey.test" android:value="key_test_iaxGt0gWBzvcy1r4L8nLplnlqqfEphkl">
+</meta-data>
+<meta-data android:name="io.branch.sdk.TestMode" android:value="false">
+</meta-data>
+<receiver android:exported="true" android:name="al.baboon.BaboonBroadcastReceiver">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+<meta-data android:name="android.support.VERSION" android:value="26.0.2">
+</meta-data>
+<receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.analytics.AnalyticsReceiver">
+</receiver>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.analytics.AnalyticsService">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.analytics.AnalyticsJobService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<service android:exported="true" android:name="com.google.firebase.messaging.FirebaseMessagingService">
+<intent-filter android:priority="-500">
+<action android:name="com.google.firebase.MESSAGING_EVENT">
+</action>
+</intent-filter>
+</service>
+<provider android:authorities="al.baboon.crashlyticsinitprovider" android:exported="false" android:initOrder="100" android:name="com.crashlytics.android.CrashlyticsInitProvider">
+</provider>
+<receiver android:enabled="false" android:name="com.localytics.android.LocationUpdateReceiver">
+</receiver>
+<activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:01030010">
+</activity>
+<receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementReceiver">
+</receiver>
+<receiver android:enabled="true" android:exported="true" android:name="com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver" android:permission="android.permission.INSTALL_PACKAGES">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementService">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementJobService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<receiver android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+<category android:name="al.baboon">
+</category>
+</intent-filter>
+</receiver>
+<receiver android:exported="false" android:name="com.google.firebase.iid.FirebaseInstanceIdInternalReceiver">
+</receiver>
+<service android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdService">
+<intent-filter android:priority="-500">
+<action android:name="com.google.firebase.INSTANCE_ID_EVENT">
+</action>
+</intent-filter>
+</service>
+<provider android:authorities="al.baboon.firebaseinitprovider" android:exported="false" android:initOrder="100" android:name="com.google.firebase.provider.FirebaseInitProvider">
+</provider>
+<activity android:configChanges="0x00000FB0" android:exported="false" android:name="com.google.android.gms.ads.AdActivity" android:theme="@android:0103000F">
+</activity>
+</application>
+</manifest>

@@ -1,0 +1,88 @@
+<?xml version="1.0" ?><manifest android:versionCode="1" android:versionName="1.0" package="x.project.NetShair" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="7">
+</uses-sdk>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS">
+</uses-permission>
+<application android:icon="@7F020001" android:label="@7F060000">
+<activity android:name="IDEAPlusActivity" android:theme="@android:01030006">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+<intent-filter>
+<data android:mimeType="vnd.android.cursor.dir/vnd.NetShair.uploadstatus">
+</data>
+</intent-filter>
+<intent-filter>
+<data android:mimeType="vnd.android.cursor.item/vnd.NetShair.uploadstatus">
+</data>
+</intent-filter>
+</activity>
+<activity android:name=".TabMainActivity">
+</activity>
+<activity android:name=".MovieActivity">
+</activity>
+<activity android:name=".MusicActivity">
+</activity>
+<activity android:name=".PhotoActivity">
+</activity>
+<activity android:name=".NasActivity">
+</activity>
+<activity android:name=".SDCardActivity">
+</activity>
+<activity android:name=".UploadActivity">
+</activity>
+<activity android:name=".SettingActivity">
+</activity>
+<activity android:name=".PhotoGalleryActivity">
+</activity>
+<activity android:name=".PhotoGalleryWebviewActivity">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="GridViewActivity">
+</activity>
+<activity android:name="x.project.NetShair.HomeActivity">
+</activity>
+<service android:name=".xDownloadService">
+</service>
+<service android:name="x.project.NetShair.xUploadService">
+</service>
+<service android:name="x.project.NetShair.xDnssdDiscoveryService">
+</service>
+<receiver android:name="x.project.NetShair.xBroadcastReceiver">
+<intent-filter>
+<action android:name="x.project.NetShair.DOWNLOAD_START">
+</action>
+<action android:name="x.project.NetShair.DOWNLOAD_OK">
+</action>
+<action android:name="x.project.NetShair.DOWNLOAD_FAIL">
+</action>
+<action android:name="x.project.NetShair.DOWNLOAD_PROCESS">
+</action>
+<action android:name="x.project.NetShair.UPLOAD_START">
+</action>
+<action android:name="x.project.NetShair.UPLOAD_OK">
+</action>
+<action android:name="x.project.NetShair.UPLOAD_FAIL">
+</action>
+<action android:name="x.project.NetShair.UPLOAD_PROCESS">
+</action>
+</intent-filter>
+</receiver>
+<provider android:authorities="com.NetShair.uploadstatus" android:name="x.project.NetShair.xDBContentProvider">
+</provider>
+</application>
+</manifest>

@@ -1,0 +1,130 @@
+<?xml version="1.0" ?><manifest android:compileSdkVersion="28" android:compileSdkVersionCodename="9" android:versionCode="4" android:versionName="1.0.3" package="com.xiamenvisualbeauty.calendar" platformBuildVersionCode="4" platformBuildVersionName="1.0.3" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="16" android:targetSdkVersion="28">
+</uses-sdk>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<application android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:icon="@7F090000" android:label="敿�" android:name="MyWrapperProxyApplication">
+<activity android:configChanges="0x400037B4" android:hardwareAccelerated="true" android:launchMode="1" android:name="com.xiamenvisualbeauty.calendar.MainActivity" android:theme="@7F0B0001" android:windowSoftInputMode="0x00000010">
+<meta-data android:name="io.flutter.app.android.SplashScreenUntilFirstFrame" android:value="true">
+</meta-data>
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<provider android:authorities="com.xiamenvisualbeauty.calendar.flutter_downloader.provider" android:exported="false" android:grantUriPermissions="true" android:name="vn.hunghd.flutterdownloader.DownloadedFileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F0D0002">
+</meta-data>
+</provider>
+<provider android:authorities="com.xiamenvisualbeauty.calendar.fileProvider.install" android:exported="false" android:grantUriPermissions="true" android:name="androidx.core.content.FileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F0D0001">
+</meta-data>
+</provider>
+<activity android:exported="false" android:name="io.flutter.plugins.urllauncher.UrlLauncherPlugin$WebViewActivity" android:theme="@android:01030007">
+</activity>
+<activity android:launchMode="1" android:name="com.jarvan.fluwx.wxapi.WXEntryActivity" android:theme="@7F0B0000">
+</activity>
+<activity-alias android:exported="true" android:launchMode="1" android:name="com.xiamenvisualbeauty.calendar.wxapi.WXEntryActivity" android:targetActivity="com.jarvan.fluwx.wxapi.WXEntryActivity" android:theme="@7F0B0000">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:scheme="sdksample">
+</data>
+</intent-filter>
+</activity-alias>
+<activity android:launchMode="1" android:name="com.jarvan.fluwx.wxapi.WXPayEntryActivity" android:theme="@7F0B0000">
+</activity>
+<activity-alias android:exported="true" android:launchMode="1" android:name="com.xiamenvisualbeauty.calendar.wxapi.WXPayEntryActivity" android:targetActivity="com.jarvan.fluwx.wxapi.WXPayEntryActivity" android:theme="@7F0B0000">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:scheme="sdksample">
+</data>
+</intent-filter>
+</activity-alias>
+<provider android:authorities="com.xiamenvisualbeauty.calendar.flutter.image_provider" android:exported="false" android:grantUriPermissions="true" android:name="io.flutter.plugins.imagepicker.ImagePickerFileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F0D0000">
+</meta-data>
+</provider>
+<provider android:authorities="com.xiamenvisualbeauty.calendar.workmanager-init" android:directBootAware="false" android:exported="false" android:multiprocess="true" android:name="androidx.work.impl.WorkManagerInitializer">
+</provider>
+<service android:directBootAware="false" android:enabled="@7F020000" android:exported="false" android:name="androidx.work.impl.background.systemalarm.SystemAlarmService">
+</service>
+<service android:directBootAware="false" android:enabled="@7F020001" android:exported="true" android:name="androidx.work.impl.background.systemjob.SystemJobService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<receiver android:directBootAware="false" android:enabled="true" android:exported="false" android:name="androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver">
+</receiver>
+<receiver android:directBootAware="false" android:enabled="false" android:exported="false" android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryChargingProxy">
+<intent-filter>
+<action android:name="android.intent.action.ACTION_POWER_CONNECTED">
+</action>
+<action android:name="android.intent.action.ACTION_POWER_DISCONNECTED">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:directBootAware="false" android:enabled="false" android:exported="false" android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryNotLowProxy">
+<intent-filter>
+<action android:name="android.intent.action.BATTERY_OKAY">
+</action>
+<action android:name="android.intent.action.BATTERY_LOW">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:directBootAware="false" android:enabled="false" android:exported="false" android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$StorageNotLowProxy">
+<intent-filter>
+<action android:name="android.intent.action.DEVICE_STORAGE_LOW">
+</action>
+<action android:name="android.intent.action.DEVICE_STORAGE_OK">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:directBootAware="false" android:enabled="false" android:exported="false" android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$NetworkStateProxy">
+<intent-filter>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:directBootAware="false" android:enabled="false" android:exported="false" android:name="androidx.work.impl.background.systemalarm.RescheduleReceiver">
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+<action android:name="android.intent.action.TIME_SET">
+</action>
+<action android:name="android.intent.action.TIMEZONE_CHANGED">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:directBootAware="false" android:enabled="@7F020000" android:exported="false" android:name="androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver">
+<intent-filter>
+<action android:name="androidx.work.impl.background.systemalarm.UpdateProxies">
+</action>
+</intent-filter>
+</receiver>
+<provider android:authorities="com.xiamenvisualbeauty.calendar.lifecycle-process" android:exported="false" android:multiprocess="true" android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer">
+</provider>
+</application>
+</manifest>

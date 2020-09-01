@@ -1,0 +1,394 @@
+<?xml version="1.0" ?><manifest android:installLocation="0" android:versionCode="300" android:versionName="1.1.9.7" package="com.blks.superconsultant" platformBuildVersionCode="25" platformBuildVersionName="7.1.1" xmlns:android="http://schemas.android.com/apk/res/android">
+ l
+
+<uses-sdk android:minSdkVersion="18" android:targetSdkVersion="19">
+</uses-sdk>
+<permission android:name="com.blks.superconsultant.permission.JPUSH_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="com.blks.superconsultant.permission.JPUSH_MESSAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_USER_PRESENT">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.MANAGE_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW">
+</uses-permission>
+<uses-permission android:name="android.permission.CALL_PHONE">
+</uses-permission>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-feature android:name="android.hardware.camera">
+</uses-feature>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.RECORD_AUDIO">
+</uses-permission>
+<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS">
+</uses-permission>
+<meta-data android:name="android.support.VERSION" android:value="25.3.1">
+</meta-data>
+<application android:allowBackup="true" android:icon="@7F03002B" android:label="@7F080099" android:name="com.stub.StubApp" android:qihoo="activity" android:screenOrientation="1" android:theme="@7F0A00AE">
+<service android:enabled="true" android:exported="false" android:name="cn.jpush.android.service.PushService">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.REGISTER">
+</action>
+<action android:name="cn.jpush.android.intent.REPORT">
+</action>
+<action android:name="cn.jpush.android.intent.PushService">
+</action>
+<action android:name="cn.jpush.android.intent.PUSH_TIME">
+</action>
+</intent-filter>
+</service>
+<receiver android:enabled="true" android:name="cn.jpush.android.service.PushReceiver">
+<intent-filter android:priority="1000">
+<action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY">
+</action>
+<category android:name="com.blks.superconsultant">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.USER_PRESENT">
+</action>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_ADDED">
+</action>
+<action android:name="android.intent.action.PACKAGE_REMOVED">
+</action>
+<data android:scheme="package">
+</data>
+</intent-filter>
+</receiver>
+<activity android:configChanges="0x000000A0" android:exported="false" android:name="cn.jpush.android.ui.PushActivity" android:theme="@android:01030006">
+<intent-filter>
+<action android:name="cn.jpush.android.ui.PushActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="com.blks.superconsultant">
+</category>
+</intent-filter>
+</activity>
+<service android:enabled="true" android:exported="true" android:name="com.stub.plugin.Stub02">
+</service>
+<receiver android:enabled="true" android:exported="false" android:name="com.stub.plugin.Stub03">
+</receiver>
+<provider android:authorities="com.blks.superconsultant.COMMONPROVIDER" android:exported="true" android:name="com.stub.plugin.Stub04">
+</provider>
+<service android:enabled="true" android:exported="false" android:name="cn.jpush.android.service.DownloadService">
+</service>
+<receiver android:name="cn.jpush.android.service.AlarmReceiver">
+</receiver>
+<receiver android:enabled="true" android:name="com.blks.push.MyReceiver">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.REGISTRATION">
+</action>
+<action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED">
+</action>
+<action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED">
+</action>
+<action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED">
+</action>
+<action android:name="cn.jpush.android.intent.ACTION_RICHPUSH_CALLBACK">
+</action>
+<action android:name="cn.jpush.android.intent.CONNECTION">
+</action>
+<category android:name="com.blks.superconsultant">
+</category>
+</intent-filter>
+</receiver>
+<meta-data android:name="JPUSH_CHANNEL" android:value="developer-default">
+</meta-data>
+<meta-data android:name="JPUSH_APPKEY" android:value="c217024193407f36a7432bba">
+</meta-data>
+<activity android:label="@7F080099" android:name="com.blks.ui.activity.MainActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.blks.ui.activity.ShowActivity" android:screenOrientation="1" android:theme="@7F0A0130">
+</activity>
+<activity android:label="@7F080190" android:name="com.bzmaster.welcome.WelcomeActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:excludeFromRecents="true" android:label="@7F080190" android:launchMode="0" android:name="com.stub.plugin.Stub01" android:noHistory="true" android:screenOrientation="1" android:taskAffinity="com.blks.superconsultant.affinity">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:label="@7F08016F" android:launchMode="1" android:name="com.bzmaster.activity.LoginActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F08016A" android:name="com.bzmaster.personal.InformActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F080181" android:name="com.bzmaster.welcome.RegisterActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F08017C" android:name="com.blks.superconsultant.ProblemActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F080142" android:name="com.bzmaster.sales.activity.AllDashActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F08013B" android:name="com.bzmaster.sales.activity.ActiveActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F080149" android:name="com.bzmaster.sales.activity.CarOptActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:label="@7F080185" android:name="com.blks.superconsultant.ScheduleActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:label="@7F080144" android:name="com.bzmaster.apply.activity.ApprovalActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F080140" android:name="com.bzmaster.apply.activity.AddressListActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F08014D" android:name="com.bzmaster.apply.activity.CheckWorkActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F080187" android:name="com.bzmaster.personal.SetActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F080173" android:name="com.bzmaster.personal.MyOpitionActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F080152" android:name="com.bzmaster.personal.ConfirmPassWordActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F080151" android:name="com.bzmaster.personal.CollectActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F080143" android:name="com.bzmaster.sales.activity.AllSaleActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F08017A" android:launchMode="1" android:name="com.bzmaster.personal.PersonActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F080184" android:launchMode="1" android:name="com.bzmaster.sales.activity.SaleThreadActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:label="@7F080158" android:name="com.bzmaster.apply.activity.CreatSaleThreadActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:label="@7F08013A" android:name="com.bzmaster.personal.AboutActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F080170" android:name="com.bzmaster.sales.activity.ManagerOrderActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:label="@7F080172" android:name="com.bzmaster.sales.activity.ManagerOrderIndexActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F080148" android:name="com.bzmaster.sales.activity.CarIndexActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F080189" android:name="com.blks.superconsultant.ShopIndexActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F080145" android:name="com.bzmaster.apply.activity.ApprovalIndexActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.mob.tools.MobUIShell" android:screenOrientation="1" android:theme="@android:01030010" android:windowSoftInputMode="0x00000012">
+<intent-filter>
+<data android:scheme="tencent1104646053">
+</data>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004A0" android:exported="true" android:name="com.blks.superconsultant.wxapi.WXEntryActivity" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<meta-data android:name="Mob-AppKey" android:value="1ee955b364978">
+</meta-data>
+<meta-data android:name="Mob-AppSecret" android:value="9142bb10b6953f6f9aa340fc380b10da">
+</meta-data>
+<activity android:label="@7F080164" android:name="com.bzmaster.personal.ForgetPassWordActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F08017B" android:name="com.bzmaster.personal.PersonIndexActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:label="@7F080146" android:name="com.bzmaster.welcome.BeginSettingActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:label="@7F080160" android:launchMode="1" android:name="com.bzmaster.sales.activity.FlowActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:label="@7F080163" android:name="com.bzmaster.sales.activity.FlowIndexActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F080179" android:name="com.bzmaster.apply.activity.PerfromWorkHoursActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F080191" android:name="com.blks.superconsultant.WorkHoursActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F08017D" android:name="com.bzmaster.apply.activity.RecordWorkHoursActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F080147" android:name="com.blks.calendar.CalendarActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F08016E" android:name="com.blks.superconsultant.LeaveTimeActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F08015B" android:name="com.bzmaster.apply.activity.DistributeActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F080186" android:name="com.bzmaster.home.activity.SearchActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:label="@7F08014B" android:name="com.bzmaster.apply.activity.CheckRefuseActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F080176" android:name="com.bzmaster.apply.activity.OfficeTaskActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F080166" android:name="com.bzmaster.apply.activity.FreedBackActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:label="@7F08018A" android:name="com.bzmaster.sales.activity.SubscribeActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:label="@7F08018E" android:name="com.blks.superconsultant.TitleActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F08016B" android:name="com.bzmaster.personal.InformIndexActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F080169" android:launchMode="1" android:name="com.bzmaster.apply.activity.FreedbackRecordActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.blks.interfac.PhotoPicDialog" android:theme="@7F0A00DE">
+</activity>
+<activity android:label="@7F08018B" android:name="com.bzmaster.sales.activity.SubscribeAddActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F080177" android:name="com.bzmaster.apply.activity.OfficeTaskIndexActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F08015D" android:name="com.blks.superconsultant.EnterFlowActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<service android:name="com.amap.api.location.APSService">
+</service>
+<meta-data android:name="com.amap.api.v2.apikey" android:value="8922c0e03cbef8ea526af00ad9fb3f41">
+</meta-data>
+<activity android:label="@7F080167" android:name="com.bzmaster.apply.activity.FreedBackRecordIndexActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F080165" android:name="com.bzmaster.apply.activity.FreeaBackListActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F08016C" android:name="com.bzmaster.welcome.IntroduceActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="ThirdAccountActivity" android:launchMode="1" android:name="com.bzmaster.apply.activity.ThirdAccountActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.blks.superconsultant.UpdateClientInformation" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name="com.bzmaster.apply.activity.ClientFollowUp" android:screenOrientation="1">
+</activity>
+<activity android:name="com.blks.ui.activity.DetailsSaleThreadActivity">
+</activity>
+<activity android:name="com.bzmaster.personal.AccounteAndSafetyActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.blks.ui.activity.EditClientProfileActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.blks.ui.activity.DetailsActiveACtivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.blks.ui.drviecard.DriveDemoActivity" android:screenOrientation="1" android:theme="@android:01030007">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.blks.ui.drviecard.DriveCameraActivity" android:screenOrientation="0" android:theme="@android:01030007">
+</activity>
+<activity android:name="com.blks.ui.drviecard.ACameraDrive" android:screenOrientation="0" android:theme="@android:01030007">
+</activity>
+<activity android:configChanges="0x000000B0" android:name="com.blks.ui.drviecard.ARecognizeDrive" android:theme="@7F0A0140">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:launchMode="1" android:name="com.bzmaster.personal.ERPBoundActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.bzmaster.personal.ChangeOrganizationActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.blks.superconsultant.UnBoundERPActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.bzmaster.sales.activity.SubscribeIndexActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.bzmaster.apply.activity.FiltrateActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.blks.ui.activity.ClientInforActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.bzmaster.activity.DefeatManageActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.bzmaster.activity.DetailsDefeatActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.bzmaster.activity.ss.FiltrateLeadsActivity" android:screenOrientation="1">
+</activity>
+<meta-data android:name="com.google.android.gms.version" android:value="@7F0C0006">
+</meta-data>
+<activity android:label="@7F080171" android:name="com.bzmaster.activity.ManagerOrderFilterActivity" android:screenOrientation="1" android:theme="@7F0A00AE">
+</activity>
+<activity android:name="com.bzmaster.activity.ChangeCompanyActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.bzmaster.activity.ss.GetUsrListActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.bzmaster.activity.ss.SubscribeServiceActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.bzmaster.activity.ss.ManagerProcessActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name="com.bzmaster.activity.ss.ManagerWorkOrderActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name="com.bzmaster.activity.ss.SubscribeServiceAddActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.blks.superconsultant.ShopActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.bzmaster.activity.ss.ServiceIndexActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.bzmaster.activity.ss.PrepareServiceActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.bzmaster.activity.ss.ManagerWorkIndexActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="3" android:name="com.bzmaster.afterSales.fragment.managerprocess.DetailsManagerProcessActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.lzy.imagepicker.ui.ImagePreviewDelActivity" android:theme="@7F0A00E1">
+</activity>
+<activity android:name="com.bzmaster.afterSales.fragment.managerprocess.ManagerProcessCarBillActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.bzmaster.sales.activity.FlowAddActivity">
+</activity>
+<activity android:name="com.bzmaster.activity.UpDataFlowAddActivity">
+</activity>
+<activity android:name="com.bzmaster.afterSales.fragment.managerprocess.DetailsManagerPreviewActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.bzmaster.afterSales.fragment.managerprocess.DetailsManagerQualityActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.bzmaster.afterSales.fragment.managerprocess.DetailsManagerFinishCarActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.bzmaster.activity.ss.FAQActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name="com.bzmaster.activity.ss.ManagerOrderAddActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name="com.bzmaster.activity.ss.ManagerClientListActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name="com.bzmaster.activity.ss.PushMoneyActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name="com.lzy.imagepicker.ui.ImageBaseActivity">
+</activity>
+<activity android:configChanges="0x00000480" android:name="com.lzy.imagepicker.ui.ImageGridActivity" android:theme="@7F0A00E0">
+</activity>
+<activity android:configChanges="0x00000480" android:hardwareAccelerated="false" android:name="com.lzy.imagepicker.ui.ImageCropActivity" android:theme="@7F0A00E0">
+</activity>
+<activity android:configChanges="0x00000480" android:name="com.lzy.imagepicker.ui.ImagePreviewActivity" android:theme="@7F0A00E1">
+</activity>
+<provider android:authorities="com.blks.superconsultant.provider" android:exported="false" android:grantUriPermissions="true" android:name="com.lzy.imagepicker.ImagePickerProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F070000">
+</meta-data>
+</provider>
+</application>
+</manifest>

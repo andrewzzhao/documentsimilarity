@@ -1,0 +1,420 @@
+<?xml version="1.0" ?><manifest android:versionCode="80" android:versionName="1.8.0" package="com.car.tscar7" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SMS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_SMS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_CALL_LOG">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_CONTACTS">
+</uses-permission>
+<uses-permission android:name="android.permission.CALL_PHONE">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.MANAGE_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="android.permission.BLUETOOTH">
+</uses-permission>
+<uses-permission android:name="android.permission.BLUETOOTH_ADMIN">
+</uses-permission>
+<permission android:name="com.car.tscar7.permission.JPUSH_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="com.car.tscar7.permission.JPUSH_MESSAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_USER_PRESENT">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS">
+</uses-permission>
+<uses-sdk android:minSdkVersion="14" android:targetSdkVersion="21">
+</uses-sdk>
+<application android:allowBackup="true" android:hardwareAccelerated="false" android:icon="@7F02011A" android:label="@7F0B0068" android:name="com.stub.StubApp" android:qihoo="activity" android:theme="@7F0C0177">
+<activity android:label="@7F0B0068" android:name="com.car.tscar7.activity.welcomactivity" android:screenOrientation="1" android:theme="@7F0C0173">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.mob.tools.MobUIShell" android:screenOrientation="1" android:theme="@android:01030010" android:windowSoftInputMode="0x00000012">
+<intent-filter>
+<data android:scheme="tencent1105522166">
+</data>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004A0" android:exported="true" android:name="com.car.tscar7.wxapi.WXEntryActivity" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<activity android:exported="true" android:launchMode="1" android:name="com.car.tscar7.pay.PayActivity">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:scheme="wx562a87baa22833d8">
+</data>
+</intent-filter>
+</activity>
+<activity android:exported="true" android:launchMode="1" android:name="com.car.tscar7.wxapi.WXPayEntryActivity">
+</activity>
+<receiver android:name="com.car.tscar7.pay.simcpux.AppRegister">
+<intent-filter>
+<action android:name="com.tencent.mm.plugin.openapi.Intent.ACTION_REFRESH_WXAPP">
+</action>
+</intent-filter>
+</receiver>
+<activity android:configChanges="0x000000E0" android:exported="false" android:name="com.car.tscar7.Alipay.H5PayDemoActivity" android:screenOrientation="3">
+</activity>
+<activity android:configChanges="0x000004E0" android:exported="false" android:name="com.alipay.sdk.app.H5PayActivity" android:screenOrientation="3" android:windowSoftInputMode="0x00000012">
+</activity>
+<service android:name="com.amap.api.location.APSService">
+</service>
+<meta-data android:name="com.amap.api.v2.apikey" android:value="218fbd6232d519989562311690ab0712">
+</meta-data>
+<activity android:name="com.car.tscar7.activity.MainActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.car.tscar7.activity.mainActivity1" android:screenOrientation="1">
+</activity>
+<activity android:exported="true" android:launchMode="1" android:name="com.car.tscar7.activity.MaiobdActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:scheme="wx562a87baa22833d8">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.car.tscar7.activity.anzhuanActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.car.tscar7.activity.shopobdActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.car.tscar7.map.GeocoderActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.car.tscar7.activity.splashactivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.car.tscar7.activity.shopmapActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.car.tscar7.activity." android:screenOrientation="1">
+</activity>
+<activity android:name="com.car.tscar7.activity.LoginActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.car.tscar7.activity.RegisterActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.car.tscar7.activity.BuserActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.car.tscar7.activity.TcarActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.car.tscar7.activity.McarActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.car.tscar7.activity.xiangqinactivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.car.tscar7.activity.AddobdActivity" android:screenOrientation="1">
+</activity>
+<activity android:exported="true" android:launchMode="1" android:name="com.car.tscar7.activity.MaishopActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:scheme="wx562a87baa22833d8">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.car.tscar7.activity.zhifucgActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.car.tscar7.activity.wzxqActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.car.tscar7.activity.plActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.car.tscar7.activity.wzlistActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.car.tscar7.activity.wzselectActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.car.tscar7.activity.obdorderinfoActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.car.tscar7.activity.Mywzcxactivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.car.tscar7.activity.orderActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.car.tscar7.activity.orderinfoActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.car.tscar7.activity.shopActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.car.tscar7.activity.messageActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.car.tscar7.fregment.viewpagerActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.car.tscar7.activity.updatepwdActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.car.tscar7.activity.dingweiActivity" android:screenOrientation="1">
+</activity>
+<activity android:exported="true" android:launchMode="1" android:name="com.car.tscar7.activity.MaiwzActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:scheme="wx562a87baa22833d8">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.car.tscar7.activity.obd_activity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.car.tscar7.activity.guzhanActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.car.tscar7.activity.activity_car" android:screenOrientation="1">
+</activity>
+<activity android:name="com.car.tscar7.activity.activity_carx" android:screenOrientation="1">
+</activity>
+<activity android:name="com.car.tscar7.activity.webviewActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.car.tscar7.activity.gzlistActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.car.tscar7.activity.plinfoActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.car.tscar7.activity.gzlistJSActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.car.tscar7.activity.updatecarActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.car.tscar7.activity.DwmapActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.car.tscar7.activity.activity_carxin" android:screenOrientation="1">
+</activity>
+<activity android:name="com.car.tscar7.activity.WZorderinfoActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.car.tscar7.activity.yijianfankui_activity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.car.tscar7.activity.ContactUsActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.car.tscar7.activity.Detection_one_key_activity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.car.tscar7.activity.acticity_seach" android:screenOrientation="1">
+</activity>
+<activity android:name="com.car.tscar7.activity.acticity_seach_banpen" android:screenOrientation="1">
+</activity>
+<activity android:name="com.car.tscar7.activity.Login1Activity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.car.tscar7.activity.ContinueActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.car.tscar7.activity.UploadCertificateActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.car.tscar7.activity.Revise_nichen_activity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.car.tscar7.activity.DrivingRecordActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.car.tscar7.activity.JiashijiluActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.car.tscar7.activity.InformationCarActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.car.tscar7.activity.InformationCarTwoActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.car.tscar7.activity.SelectionCarActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.car.tscar7.activity.InsuredPlanActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.car.tscar7.activity.Car_Insurance_Valuation_Activity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.car.tscar7.activity.OfferFailureActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.car.tscar7.activity.Car_Insurance_Order_Activity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.car.tscar7.activity.Activity_quotationList" android:screenOrientation="1">
+</activity>
+<activity android:name="com.car.tscar7.activity.CouponsActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.car.tscar7.activity.Car_Insurance_Order_List_Activity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.car.tscar7.activity.Car_InsuranceOrder_Details_Activity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.car.tscar7.activity.CouponsDetailsActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.car.tscar7.activity.Car_Indicator_Car_Loans_Activity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.car.tscar7.activity.ScoreGraphActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.car.tscar7.activity.RankingListActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.car.tscar7.activity.ScoreRankingActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.car.tscar7.activity.Activity_Instructions_Activity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.car.tscar7.activity.Activity_Haochezhu_A" android:screenOrientation="1">
+</activity>
+<activity android:name="com.car.tscar7.activity.Activity_Haochezhu_B" android:screenOrientation="1">
+</activity>
+<activity android:name="com.car.tscar7.activity.RouteActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.car.tscar7.activity.Juhui_activity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.car.tscar7.activity.BaoxianXianqi_Activity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.car.tscar7.activity.QichebanpenActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.car.tscar7.activity.QichebanpenXiangqingActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.car.tscar7.activity.SPackageOrderDetailsActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.car.tscar7.activity.DizhiXuanzeActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.car.tscar7.activity.SPackageActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.car.tscar7.activity.SPackageOrderingActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.car.tscar7.activity.SPackageOrdering2Activity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.car.tscar7.activity.CitySelecterActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.car.tscar7.activity.DizhiActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.car.tscar7.activity.PreferentialCarInsuranceActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.car.tscar7.activity.OnlineInquiryActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.car.tscar7.activity.SubmittedSuccessfullyActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.car.tscar7.activity.Car_Insurance2_Order_List_Activity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.car.tscar7.activity.Car_InsuranceOrder_Details_Change_Activity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.car.tscar7.qiangbao.activity.Rob_Treasure_List_Acitvity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.car.tscar7.qiangbao.activity.Rob_Treasure_Details_Activity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.car.tscar7.activity.Car_UpkeepActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.car.tscar7.activity.QichebaoyangActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.car.tscar7.qiangbao.activity.Winning_Record_List_Activity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.car.tscar7.qiangbao.activity.Winning_Record_List_Details_Activity" android:screenOrientation="1">
+</activity>
+<activity android:exported="false" android:name="cn.jpush.android.ui.PopWinActivity" android:theme="@7F0C0172">
+</activity>
+<activity android:configChanges="0x000000A0" android:exported="false" android:name="cn.jpush.android.ui.PushActivity" android:theme="@android:01030006">
+<intent-filter>
+<action android:name="cn.jpush.android.ui.PushActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="com.car.tscar7">
+</category>
+</intent-filter>
+</activity>
+<service android:enabled="true" android:exported="false" android:name="cn.jpush.android.service.DownloadService">
+</service>
+<service android:enabled="true" android:exported="false" android:name="cn.jpush.android.service.PushService">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.REGISTER">
+</action>
+<action android:name="cn.jpush.android.intent.REPORT">
+</action>
+<action android:name="cn.jpush.android.intent.PushService">
+</action>
+<action android:name="cn.jpush.android.intent.PUSH_TIME">
+</action>
+</intent-filter>
+</service>
+<service android:enabled="true" android:exported="true" android:name="cn.jpush.android.service.DaemonService">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.DaemonService">
+</action>
+<category android:name="com.car.tscar7">
+</category>
+</intent-filter>
+</service>
+<receiver android:enabled="true" android:exported="false" android:name="cn.jpush.android.service.PushReceiver">
+<intent-filter android:priority="1000">
+<action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY">
+</action>
+<category android:name="com.car.tscar7">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.USER_PRESENT">
+</action>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_ADDED">
+</action>
+<action android:name="android.intent.action.PACKAGE_REMOVED">
+</action>
+<data android:scheme="package">
+</data>
+</intent-filter>
+</receiver>
+<receiver android:exported="false" android:name="cn.jpush.android.service.AlarmReceiver">
+</receiver>
+<receiver android:enabled="true" android:exported="false" android:name="com.car.tscar7.push.pushReceiver">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.REGISTRATION">
+</action>
+<action android:name="cn.jpush.android.intent.UNREGISTRATION">
+</action>
+<action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED">
+</action>
+<action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED">
+</action>
+<action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED">
+</action>
+<action android:name="cn.jpush.android.intent.ACTION_RICHPUSH_CALLBACK">
+</action>
+<action android:name="cn.jpush.android.intent.CONNECTION">
+</action>
+<category android:name="com.car.tscar7">
+</category>
+</intent-filter>
+</receiver>
+<meta-data android:name="JPUSH_CHANNEL" android:value="developer-default">
+</meta-data>
+<meta-data android:name="JPUSH_APPKEY" android:value="437ed72689e299bd5ebb79a2">
+</meta-data>
+<meta-data android:name="UMENG_APPKEY" android:value="58096b6a677baa2ccd001dbf">
+</meta-data>
+<meta-data android:name="UMENG_CHANNEL" android:value="7haoche">
+</meta-data>
+</application>
+</manifest>

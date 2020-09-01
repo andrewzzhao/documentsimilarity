@@ -1,0 +1,208 @@
+<?xml version="1.0" ?><manifest android:versionCode="8" android:versionName="1.0.6" package="com.imyuu.guanling" platformBuildVersionCode="25" platformBuildVersionName="7.1.1" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-permission android:name="android.permission.READ_LOGS">
+</uses-permission>
+<uses-sdk android:minSdkVersion="15" android:targetSdkVersion="25">
+</uses-sdk>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.RECORD_AUDIO">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_MEDIA_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.hardware.camera.autofocus">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS">
+</uses-permission>
+<uses-permission android:name="android.permission.BLUETOOTH">
+</uses-permission>
+<uses-permission android:name="android.permission.BLUETOOTH_ADMIN">
+</uses-permission>
+<meta-data android:name="android.support.VERSION" android:value="25.3.1">
+</meta-data>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.BROADCAST_PACKAGE_ADDED">
+</uses-permission>
+<uses-permission android:name="android.permission.BROADCAST_PACKAGE_CHANGED">
+</uses-permission>
+<uses-permission android:name="android.permission.BROADCAST_PACKAGE_INSTALL">
+</uses-permission>
+<uses-permission android:name="android.permission.BROADCAST_PACKAGE_REPLACED">
+</uses-permission>
+<uses-permission android:name="android.permission.RESTART_PACKAGES">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_NETWORK_STATE">
+</uses-permission>
+<application android:allowBackup="true" android:hardwareAccelerated="true" android:icon="@7F030001" android:label="@7F060021" android:name="com.tencent.StubShell.TxAppEntry" android:theme="@7F0800A3">
+<meta-data android:name="TxAppEntry" android:value="com.imyuu.guanling.APPAplication">
+</meta-data>
+<meta-data android:name="com.amap.api.v2.apikey" android:value="e2cd8a7f957dd23a5711bb41eaf81850">
+</meta-data>
+<meta-data android:name="UMENG_APPKEY" android:value="5913ce96677baa7ec90011c8">
+</meta-data>
+<meta-data android:name="UMENG_MESSAGE_SECRET" android:value="273c710ba5ad1045e9d9bf9c1568ccd1">
+</meta-data>
+<meta-data android:name="UMENG_CHANNEL" android:value="vivo">
+</meta-data>
+<activity android:configChanges="0x000004A0" android:label="@7F060021" android:name="com.imyuu.guanling.FullScreenActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F060021" android:name="com.imyuu.guanling.FilechooserActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F060021" android:name="com.imyuu.guanling.BrowserActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.imyuu.guanling.SplashActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:name="com.imyuu.guanling.ThirdPartyActivity">
+</activity>
+<activity android:name="com.imyuu.guanling.ShowNoticeActivity">
+</activity>
+<service android:exported="true" android:name="com.taobao.accs.ChannelService" android:process=":channel">
+<intent-filter>
+<action android:name="com.taobao.accs.intent.action.SERVICE">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="com.taobao.accs.intent.action.ELECTION">
+</action>
+</intent-filter>
+</service>
+<service android:exported="true" android:name="com.taobao.accs.data.MsgDistributeService">
+<intent-filter>
+<action android:name="com.taobao.accs.intent.action.RECEIVE">
+</action>
+</intent-filter>
+</service>
+<receiver android:name="com.taobao.accs.EventReceiver" android:process=":channel">
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_REMOVED">
+</action>
+<data android:scheme="package">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.USER_PRESENT">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:exported="false" android:name="com.taobao.accs.ServiceReceiver" android:process=":channel">
+<intent-filter>
+<action android:name="com.taobao.accs.intent.action.COMMAND">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="com.taobao.accs.intent.action.START_FROM_AGOO">
+</action>
+</intent-filter>
+</receiver>
+<service android:name="com.taobao.accs.ChannelService$KernelService" android:process=":channel">
+</service>
+<service android:exported="true" android:name="org.android.agoo.accs.AgooService">
+<intent-filter>
+<action android:name="com.taobao.accs.intent.action.RECEIVE">
+</action>
+</intent-filter>
+</service>
+<service android:exported="true" android:name="com.umeng.message.UmengIntentService" android:process=":channel">
+<intent-filter>
+<action android:name="org.agoo.android.intent.action.RECEIVE">
+</action>
+</intent-filter>
+</service>
+<receiver android:exported="true" android:name="com.taobao.agoo.AgooCommondReceiver">
+<intent-filter>
+<action android:name="com.imyuu.guanling.intent.action.COMMAND">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_REMOVED">
+</action>
+<data android:scheme="package">
+</data>
+</intent-filter>
+</receiver>
+<receiver android:exported="false" android:name="com.umeng.message.NotificationProxyBroadcastReceiver">
+</receiver>
+<service android:exported="false" android:name="com.umeng.message.UmengMessageCallbackHandlerService">
+<intent-filter>
+<action android:name="com.umeng.messge.registercallback.action">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="com.umeng.message.enablecallback.action">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="com.umeng.message.disablecallback.action">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="com.umeng.message.message.handler.action">
+</action>
+</intent-filter>
+</service>
+<service android:exported="false" android:name="com.umeng.message.UmengDownloadResourceService">
+</service>
+<service android:exported="true" android:name="com.umeng.message.UmengMessageIntentReceiverService" android:process=":channel">
+<intent-filter>
+<action android:name="org.android.agoo.client.MessageReceiverService">
+</action>
+</intent-filter>
+</service>
+<provider android:authorities="com.imyuu.guanling.umeng.message" android:exported="false" android:name="com.umeng.message.provider.MessageProvider">
+<grant-uri-permission android:pathPattern=".*">
+</grant-uri-permission>
+</provider>
+<activity android:exported="true" android:launchMode="1" android:name="com.imyuu.guanling.wxapi.WXPayEntryActivity">
+<receiver android:name="com.imyuu.guanling.wxapi.AppRegister">
+<intent-filter>
+<action android:name="com.tencent.mm.plugin.openapi.Intent.ACTION_REFRESH_WXAPP">
+</action>
+</intent-filter>
+</receiver>
+</activity>
+</application>
+</manifest>

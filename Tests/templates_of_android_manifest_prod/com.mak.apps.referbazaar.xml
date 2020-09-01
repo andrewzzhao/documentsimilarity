@@ -1,0 +1,112 @@
+<?xml version="1.0" ?><manifest android:versionCode="17" android:versionName="2.6" package="com.mak.apps.referbazaar" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="14" android:targetSdkVersion="27">
+</uses-sdk>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_CONTACTS">
+</uses-permission>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_SMS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_SMS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-feature android:name="android.hardware.camera" android:required="false">
+</uses-feature>
+<application android:allowBackup="true" android:icon="@7F080093" android:label="@7F0E002D" android:largeHeap="true" android:name="com.mak.app.referbazaar.core.AppApplication" android:roundIcon="@7F0D0000" android:supportsRtl="true" android:theme="@7F0F0006">
+<provider android:authorities="@7F0E0060" android:exported="false" android:grantUriPermissions="true" android:name="android.support.v4.content.FileProvider" android:readPermission="com.mak.app.referbazaar.fileprovider.READ">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F110000">
+</meta-data>
+</provider>
+<activity android:label="@7F0E002D" android:name="com.mak.app.referbazaar.ui.splashscreen.SplashActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F0E002D" android:name="com.mak.app.referbazaar.ui.login.LoginActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000010">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:label="@7F0E002D" android:name="com.mak.app.referbazaar.ui.forgotpassword.ForgotPasswordActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:label="@7F0E00E1" android:name="com.mak.app.referbazaar.ui.registration.RegistrationActivity" android:screenOrientation="1" android:theme="@7F0F0006" android:windowSoftInputMode="0x00000000">
+</activity>
+<activity android:label="@7F0E009C" android:name="com.mak.app.referbazaar.ui.otp.OTPVerificationActivity" android:screenOrientation="1" android:theme="@7F0F0006" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.mak.app.referbazaar.ui.referfriends.ReferFriendsActivity" android:screenOrientation="1" android:theme="@7F0F0009" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.mak.app.referbazaar.ui.mainscreen.MainScreenActivity" android:screenOrientation="1" android:theme="@7F0F0006" android:windowSoftInputMode="0x00000013">
+</activity>
+<activity android:name="com.mak.app.referbazaar.ui.myloan.AddLoanActivity" android:screenOrientation="1" android:theme="@7F0F0009" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.mak.app.referbazaar.ui.statistic.StatisticActivity" android:screenOrientation="1" android:theme="@7F0F0009" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.mak.app.referbazaar.ui.referral.NewReferralActivity" android:screenOrientation="1" android:theme="@7F0F0009" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.mak.app.referbazaar.ui.profile.ProfileActivity" android:screenOrientation="1" android:theme="@7F0F0006" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.mak.app.referbazaar.ui.notifications.NotificationsActivity" android:screenOrientation="1" android:theme="@7F0F0006">
+</activity>
+<activity android:name="com.mak.app.referbazaar.ui.myloan.LoanViewEditActivity" android:screenOrientation="1" android:theme="@7F0F0009" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.mak.app.referbazaar.ui.notifications.NotificationLoanViewEditActivity" android:screenOrientation="1" android:theme="@7F0F0009" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.mak.app.referbazaar.ui.myloan.LoanStatisticActivity" android:screenOrientation="1" android:theme="@7F0F0009" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:label="Paytm Verification" android:name="com.mak.app.referbazaar.ui.paytmverification.PaytmVerificationActivity" android:screenOrientation="1" android:theme="@7F0F0009" android:windowSoftInputMode="0x00000010">
+</activity>
+<service android:enabled="true" android:exported="false" android:name="com.mak.app.referbazaar.services.ContactFetchService">
+</service>
+<receiver android:name="com.mak.app.referbazaar.receivers.AlarmBootReceiver">
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:enabled="true" android:exported="false" android:name="com.mak.app.referbazaar.receivers.AlarmReceiver">
+<intent-filter>
+<action android:name="com.mak.app.referbazaar.ACTION_PAID">
+</action>
+<action android:name="com.mak.app.referbazaar.ACTION_CONTENT">
+</action>
+<action android:name="com.mak.app.referbazaar.ACTION_SET_NOTIFICATION">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name="com.mak.app.referbazaar.receivers.ReceiverSMS">
+<intent-filter android:priority="999">
+<action android:name="android.provider.Telephony.SMS_RECEIVED">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:exported="true" android:name="com.mak.app.referbazaar.utils.InstallReferrerReceiver">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+<service android:name="com.mak.app.referbazaar.services.NotificationService">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.mak.app.referbazaar.Socket.MyService" android:process=":MyService">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.mak.app.referbazaar.Socket.BroadcastNotificationService" android:process=":BroadcastNotificationService">
+</service>
+</application>
+</manifest>

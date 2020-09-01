@@ -1,0 +1,48 @@
+<?xml version="1.0" ?><manifest android:installLocation="0" android:versionCode="9" android:versionName="2.3.3" package="in.nishitp.euler" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="7" android:targetSdkVersion="17">
+</uses-sdk>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<application android:allowBackup="true" android:hardwareAccelerated="false" android:icon="@7F02005E" android:label="@7F0B001C" android:theme="@7F0C0050">
+<activity android:configChanges="0x000004A0" android:label="@7F0B001F" android:name=".MainActivity">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+ s
+
+<activity android:exported="false" android:name=".SearchableActivity">
+<intent-filter>
+<action android:name="android.intent.action.SEARCH">
+</action>
+</intent-filter>
+<meta-data android:name="android.app.searchable" android:resource="@7F050001">
+</meta-data>
+</activity>
+<activity android:configChanges="0x000004A0" android:label="My ProjectEuler.net" android:name="in.nishitp.euler.net.ActivitySync">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="Login to ProjectEuler" android:name="in.nishitp.euler.net.ActivitySyncLogin">
+</activity>
+<service android:name="in.nishitp.euler.net.EulerSyncService">
+</service>
+<activity android:configChanges="0x000004A0" android:label="Answer" android:name="in.nishitp.euler.net.EulerAnswerDialogActivity" android:theme="@android:01030010">
+</activity>
+<activity android:label="@7F0B0023" android:name="in.nishitp.euler.fragments.Reference">
+<meta-data android:name="android.app.default_searchable" android:value=".SearchableActivity">
+</meta-data>
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F0B0022" android:name=".ActivityBookmarks">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F0B0024" android:name=".ActivitySettings">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F0B0025" android:name=".ActivityAbout">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F0B0026" android:name=".ActivityFeedback">
+</activity>
+</application>
+</manifest>

@@ -1,0 +1,662 @@
+<?xml version="1.0" ?><manifest android:compileSdkVersion="29" android:compileSdkVersionCodename="10" android:installLocation="1" android:versionCode="2020060901" android:versionName="3.1.10" package="com.domobile.applockwatcher" platformBuildVersionCode="29" platformBuildVersionName="10" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="14" android:targetSdkVersion="28">
+</uses-sdk>
+<supports-screens android:anyDensity="true" android:largeScreens="true" android:normalScreens="true" android:smallScreens="true">
+</supports-screens>
+<uses-feature android:name="android.hardware.telephony" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.usb.accessory" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.usb.host" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.bluetooth" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.location" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.location.gps" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.wifi" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.camera" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.faketouch" android:required="false">
+</uses-feature>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="com.android.vending.BILLING">
+</uses-permission>
+<uses-permission android:name="android.permission.USE_FINGERPRINT">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_LOGS">
+</uses-permission>
+<uses-permission android:name="android.permission.PACKAGE_USAGE_STATS">
+</uses-permission>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS">
+</uses-permission>
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW">
+</uses-permission>
+<uses-permission android:name="android.permission.RESTART_PACKAGES">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.BLUETOOTH">
+</uses-permission>
+<uses-permission android:name="android.permission.BLUETOOTH_ADMIN">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_SYNC_SETTINGS">
+</uses-permission>
+<uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT">
+</uses-permission>
+<uses-permission android:name="com.android.launcher.permission.UNINSTALL_SHORTCUT">
+</uses-permission>
+<uses-permission android:name="android.permission.FOREGROUND_SERVICE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.INSTALL_PACKAGES">
+</uses-permission>
+<uses-permission android:name="android.permission.DELETE_PACKAGES">
+</uses-permission>
+<uses-permission android:name="android.permission.REQUEST_DELETE_PACKAGES">
+</uses-permission>
+<uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES">
+</uses-permission>
+<uses-permission android:name="com.domobile.applockwatcher.PERMISSON_STOP_WATCHDOG_AFTER_SCREEN_OFF">
+</uses-permission>
+<uses-permission android:name="com.domobile.applockwatcher.PERMISSON_MANAGE_OVERLAY">
+</uses-permission>
+<permission android:name="com.domobile.applockwatcher.SEND_CALL_STATE_BROADCAST" android:protectionLevel="0x00000002">
+</permission>
+<permission android:name="com.domobile.applockwatcher.PERMISSON_STOP_WATCHDOG_AFTER_SCREEN_OFF" android:protectionLevel="0x00000002">
+</permission>
+<permission android:name="com.domobile.applockwatcher.PERMISSION_RECEIVE_APPLOCK_BOOT_COMPLETE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE">
+</uses-permission>
+<uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE">
+</uses-permission>
+<application android:allowBackup="false" android:allowClearUserData="false" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:hardwareAccelerated="true" android:icon="@7F160000" android:label="@7F090073" android:largeHeap="true" android:manageSpaceActivity=".ui.comm.controller.ManagerSpaceActivity" android:name="com.domobile.applockwatcher.app.GlobalApp" android:networkSecurityConfig="@7F1A0001" android:requestLegacyExternalStorage="true" android:resizeableActivity="false" android:roundIcon="@7F160000" android:supportsRtl="true" android:theme="@7F18000B">
+<activity android:configChanges="0x000004B0" android:excludeFromRecents="true" android:icon="@7F160000" android:label="@7F090073" android:name="com.domobile.applockwatcher.LaunchActivity" android:theme="@7F180012">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+<meta-data android:name="android.app.shortcuts" android:resource="@7F1A0005">
+</meta-data>
+</activity>
+<activity android:configChanges="0x000004B0" android:excludeFromRecents="true" android:icon="@7F160000" android:label="@7F090073" android:name="com.domobile.applockwatcher.MainActivity" android:theme="@7F180012">
+<intent-filter>
+<action android:name="com.domobile.applockwatcher.ACTION_START_MAIN_ACTIVITY">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="open" android:scheme="applock">
+</data>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004B0" android:excludeFromRecents="true" android:icon="@7F160000" android:label="@7F090073" android:launchMode="2" android:name="com.domobile.applockwatcher.ui.main.controller.HomeActivity" android:theme="@7F18000F" android:windowSoftInputMode="0x00000013">
+</activity>
+<activity android:configChanges="0x000004B0" android:excludeFromRecents="true" android:icon="@7F160000" android:label="@7F090073" android:name="com.domobile.applockwatcher.BackAppActivity" android:theme="@7F180011" android:windowSoftInputMode="0x00000013">
+</activity>
+<activity android:configChanges="0x000004B0" android:excludeFromRecents="true" android:label="@7F090073" android:name="com.domobile.applockwatcher.ui.main.controller.UserCenterActivity" android:theme="@7F18000F" android:windowSoftInputMode="0x00000013">
+</activity>
+<activity android:configChanges="0x000004B0" android:excludeFromRecents="true" android:label="@7F090073" android:name="com.domobile.applockwatcher.ui.main.controller.HuaweiBillingActivity" android:theme="@7F18000F" android:windowSoftInputMode="0x00000013">
+</activity>
+<activity android:configChanges="0x000004B0" android:excludeFromRecents="true" android:label="@7F090073" android:name="com.domobile.applockwatcher.ui.main.controller.VIPFeedbackActivity" android:theme="@7F18000F" android:windowSoftInputMode="0x00000033">
+</activity>
+<activity android:configChanges="0x000004B0" android:excludeFromRecents="true" android:label="@7F090073" android:name="com.domobile.applockwatcher.ui.vault.controller.VaultMainActivity" android:theme="@7F18000F" android:windowSoftInputMode="0x00000013">
+</activity>
+<activity android:configChanges="0x000004B0" android:excludeFromRecents="true" android:label="@7F090073" android:name="com.domobile.applockwatcher.ui.vault.controller.VaultPhotoActivity" android:theme="@7F18000F" android:windowSoftInputMode="0x00000013">
+</activity>
+<activity android:configChanges="0x000004B0" android:excludeFromRecents="true" android:label="@7F090073" android:name="com.domobile.applockwatcher.ui.vault.controller.VaultVideoActivity" android:theme="@7F18000F" android:windowSoftInputMode="0x00000013">
+</activity>
+<activity android:configChanges="0x000004B0" android:excludeFromRecents="true" android:label="@7F090073" android:name="com.domobile.applockwatcher.ui.vault.controller.VaultDetailActivity" android:theme="@7F18000F" android:windowSoftInputMode="0x00000013">
+</activity>
+<activity android:configChanges="0x000004B0" android:excludeFromRecents="true" android:label="@7F090073" android:name="com.domobile.applockwatcher.ui.vault.controller.VaultPhotoPreviewActivity" android:theme="@7F18000F" android:windowSoftInputMode="0x00000013">
+</activity>
+<activity android:configChanges="0x000004B0" android:excludeFromRecents="true" android:label="@7F090073" android:name="com.domobile.applockwatcher.ui.vault.controller.VaultVideoPreviewActivity" android:theme="@7F18000F" android:windowSoftInputMode="0x00000013">
+</activity>
+<activity android:configChanges="0x000004B0" android:excludeFromRecents="true" android:label="@7F090073" android:name="com.domobile.applockwatcher.ui.vault.controller.VaultTextPreviewActivity" android:theme="@7F18000F" android:windowSoftInputMode="0x00000013">
+</activity>
+<activity android:configChanges="0x000004B0" android:excludeFromRecents="true" android:label="@7F090073" android:name="com.domobile.applockwatcher.ui.vault.controller.VaultFileActivity" android:theme="@7F18000F" android:windowSoftInputMode="0x00000013">
+</activity>
+<activity android:configChanges="0x000004B0" android:excludeFromRecents="true" android:label="@7F090073" android:name="com.domobile.applockwatcher.ui.vault.controller.FilePickActivity" android:theme="@7F18000F" android:windowSoftInputMode="0x00000013">
+</activity>
+<activity android:configChanges="0x000004B0" android:excludeFromRecents="true" android:label="@7F090073" android:name="com.domobile.applockwatcher.ui.vault.controller.GalleryActivity" android:theme="@7F18000F" android:windowSoftInputMode="0x00000013">
+</activity>
+<activity android:configChanges="0x000004B0" android:excludeFromRecents="true" android:label="@7F090073" android:name="com.domobile.applockwatcher.ui.vault.controller.GalleryPickActivity" android:theme="@7F18000F" android:windowSoftInputMode="0x00000013">
+</activity>
+<activity android:configChanges="0x000004B0" android:excludeFromRecents="true" android:label="@7F090073" android:name="com.domobile.applockwatcher.ui.vault.controller.MediaTransferActivity" android:theme="@7F18000F" android:windowSoftInputMode="0x00000013">
+</activity>
+<activity android:configChanges="0x000004B0" android:excludeFromRecents="true" android:label="@7F090073" android:name="com.domobile.applockwatcher.ui.vault.controller.FileTransferActivity" android:theme="@7F18000F" android:windowSoftInputMode="0x00000013">
+</activity>
+<activity android:configChanges="0x000004B0" android:excludeFromRecents="true" android:label="@7F0901F7" android:name="com.domobile.applockwatcher.ui.comm.controller.MediaReceiverActivity" android:theme="@7F180010" android:windowSoftInputMode="0x00000013">
+<intent-filter>
+<action android:name="android.intent.action.SEND">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:mimeType="image/*">
+</data>
+<data android:mimeType="video/*">
+</data>
+<data android:mimeType="audio/*">
+</data>
+<data android:mimeType="application/*">
+</data>
+<data android:mimeType="text/plain">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.SEND_MULTIPLE">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:mimeType="image/*">
+</data>
+<data android:mimeType="video/*">
+</data>
+<data android:mimeType="audio/*">
+</data>
+<data android:mimeType="application/*">
+</data>
+<data android:mimeType="text/plain">
+</data>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004B0" android:enabled="true" android:excludeFromRecents="true" android:label="@7F09024C" android:name="com.domobile.applockwatcher.ui.comm.controller.OpenAppActivity" android:theme="@7F180011" android:windowSoftInputMode="0x00000013">
+<intent-filter>
+<action android:name="android.intent.action.SEND">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:mimeType="image/*">
+</data>
+<data android:mimeType="video/*">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.SEND_MULTIPLE">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:mimeType="image/*">
+</data>
+<data android:mimeType="video/*">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.CREATE_SHORTCUT">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004B0" android:excludeFromRecents="true" android:label="@7F090073" android:name="com.domobile.applockwatcher.ui.comm.controller.ManagerSpaceActivity" android:theme="@7F18000F" android:windowSoftInputMode="0x00000013">
+</activity>
+<activity android:configChanges="0x000004B0" android:excludeFromRecents="true" android:label="@7F090073" android:name="com.domobile.applockwatcher.ui.store.AppStoreActivity" android:theme="@7F18000F" android:windowSoftInputMode="0x00000013">
+</activity>
+<activity android:configChanges="0x000004B0" android:excludeFromRecents="true" android:finishOnTaskLaunch="true" android:icon="@7F160000" android:label="@7F090073" android:name="com.domobile.applockwatcher.ui.settings.controller.GuideActivity" android:theme="@7F18000D" android:windowSoftInputMode="0x00000033">
+</activity>
+<activity android:configChanges="0x000004B0" android:excludeFromRecents="true" android:label="@7F090073" android:name="com.domobile.applockwatcher.ui.settings.controller.GoogleRepwdActivity" android:theme="@7F18000F" android:windowSoftInputMode="0x00000033">
+</activity>
+<activity android:configChanges="0x000004B0" android:excludeFromRecents="true" android:label="@7F090073" android:name="com.domobile.applockwatcher.ui.settings.controller.EmailSetupActivity" android:theme="@7F18000F" android:windowSoftInputMode="0x00000033">
+</activity>
+<activity android:configChanges="0x000004B0" android:excludeFromRecents="true" android:label="@7F090073" android:name="com.domobile.applockwatcher.ui.settings.controller.SettingsActivity" android:theme="@7F18000F" android:windowSoftInputMode="0x00000033">
+</activity>
+<activity android:configChanges="0x000004B0" android:excludeFromRecents="true" android:label="@7F090073" android:name="com.domobile.applockwatcher.ui.settings.controller.AboutActivity" android:theme="@7F18000F" android:windowSoftInputMode="0x00000033">
+</activity>
+<activity android:configChanges="0x000004B0" android:excludeFromRecents="true" android:label="@7F090073" android:name="com.domobile.applockwatcher.ui.comm.controller.UserAgreementActivity" android:theme="@7F18000F" android:windowSoftInputMode="0x00000033">
+</activity>
+<activity android:configChanges="0x000004B0" android:excludeFromRecents="true" android:label="@7F090073" android:name="com.domobile.applockwatcher.ui.settings.controller.GoogleVerifyActivity" android:theme="@7F18000F" android:windowSoftInputMode="0x00000013">
+</activity>
+<activity android:configChanges="0x000004B0" android:excludeFromRecents="true" android:label="@7F090073" android:name="com.domobile.applockwatcher.ui.settings.controller.HuaweiRepwdActivity" android:theme="@7F18000F" android:windowSoftInputMode="0x00000013">
+</activity>
+<activity android:configChanges="0x000004B0" android:excludeFromRecents="true" android:label="@7F090073" android:name="com.domobile.applockwatcher.ui.settings.controller.HuaweiVerifyActivity" android:theme="@7F18000F" android:windowSoftInputMode="0x00000013">
+</activity>
+<activity android:configChanges="0x000004B0" android:excludeFromRecents="true" android:label="@7F090073" android:name="com.domobile.applockwatcher.ui.settings.controller.HuaweiSetupActivity" android:theme="@7F18000F" android:windowSoftInputMode="0x00000013">
+</activity>
+<activity android:configChanges="0x000004B0" android:excludeFromRecents="true" android:label="@7F090073" android:name="com.domobile.applockwatcher.ui.settings.controller.QAVerifyActivity" android:theme="@7F18000F" android:windowSoftInputMode="0x00000013">
+</activity>
+<activity android:configChanges="0x000004B0" android:excludeFromRecents="true" android:label="@7F090073" android:name="com.domobile.applockwatcher.ui.lock.controller.PatternSetupActivity" android:theme="@7F18000F" android:windowSoftInputMode="0x00000013">
+</activity>
+<activity android:configChanges="0x000004B0" android:excludeFromRecents="true" android:label="@7F090073" android:name="com.domobile.applockwatcher.ui.lock.controller.NumberSetupActivity" android:theme="@7F18000F" android:windowSoftInputMode="0x00000013">
+</activity>
+<activity android:configChanges="0x000004B0" android:excludeFromRecents="true" android:label="@7F090073" android:name="com.domobile.applockwatcher.ui.fake.controller.FakeSetupActivity" android:theme="@7F18000F" android:windowSoftInputMode="0x00000013">
+</activity>
+<activity android:configChanges="0x000004B0" android:excludeFromRecents="true" android:label="@7F090073" android:name="com.domobile.applockwatcher.ui.fake.controller.FakeFSActivity" android:theme="@7F18000F" android:windowSoftInputMode="0x00000013">
+</activity>
+<activity android:configChanges="0x000004B0" android:excludeFromRecents="true" android:label="@7F090073" android:name="com.domobile.applockwatcher.ui.fake.controller.FakeFCActivity" android:theme="@7F18000F" android:windowSoftInputMode="0x00000013">
+</activity>
+<activity android:configChanges="0x000004B0" android:excludeFromRecents="true" android:finishOnTaskLaunch="true" android:icon="@7F160000" android:label="@7F090073" android:launchMode="2" android:name="com.domobile.applockwatcher.ui.lock.controller.LockActivity" android:taskAffinity="com.domobile.applockwatcher.LockActivity" android:theme="@7F180011">
+</activity>
+<activity android:configChanges="0x000004B0" android:excludeFromRecents="true" android:finishOnCloseSystemDialogs="true" android:name="com.domobile.applockwatcher.ui.lock.controller.VerifyActivity" android:taskAffinity="com.dombile.applock.VerifyActivity" android:theme="@7F18000D" android:windowSoftInputMode="0x00000013">
+</activity>
+<activity android:configChanges="0x000004B0" android:excludeFromRecents="true" android:icon="@7F160000" android:label="@7F090073" android:launchMode="2" android:name="com.domobile.applockwatcher.ui.lock.controller.FingerprintActivity" android:taskAffinity="com.domobile.applockwatcher.FingerprintActivity" android:theme="@7F180011">
+</activity>
+<activity android:configChanges="0x000004B0" android:excludeFromRecents="true" android:icon="@7F160000" android:label="@7F090073" android:name="com.domobile.applockwatcher.ui.boost.controller.BoostActivity" android:theme="@7F18000D" android:windowSoftInputMode="0x00000013">
+</activity>
+<activity android:configChanges="0x000004B0" android:excludeFromRecents="true" android:icon="@7F160000" android:label="@7F090073" android:name="com.domobile.applockwatcher.ui.boost.controller.OutBoostActivity" android:theme="@7F18000D" android:windowSoftInputMode="0x00000013">
+</activity>
+<activity android:configChanges="0x000004B0" android:excludeFromRecents="true" android:icon="@7F160000" android:label="@7F090073" android:name="com.domobile.applockwatcher.ui.clean.controller.CleanUpActivity" android:theme="@7F18000D" android:windowSoftInputMode="0x00000013">
+</activity>
+<activity android:configChanges="0x000004B0" android:excludeFromRecents="true" android:label="@7F090073" android:name="com.domobile.applockwatcher.ui.comm.controller.WebActivity" android:theme="@7F18000F" android:windowSoftInputMode="0x00000013">
+</activity>
+<activity android:configChanges="0x000004B0" android:excludeFromRecents="true" android:label="@7F090073" android:name="com.domobile.applockwatcher.ui.comm.controller.PrivacyPolicyActivity" android:theme="@7F18000F" android:windowSoftInputMode="0x00000013">
+</activity>
+<activity android:configChanges="0x000004B0" android:icon="@7F100446" android:label="@7F0900A7" android:name="com.domobile.applockwatcher.ui.browser.controller.BrowserLauncher" android:taskAffinity="com.domobile.applockwatcher.BrowserLauncher" android:theme="@7F180011" android:windowSoftInputMode="0x00000013">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004B0" android:excludeFromRecents="false" android:label="@7F090073" android:name="com.domobile.applockwatcher.ui.browser.controller.BrowserActivity" android:theme="@7F18000F" android:windowSoftInputMode="0x00000013">
+</activity>
+<activity android:configChanges="0x000004B0" android:excludeFromRecents="true" android:label="@7F090073" android:name="com.domobile.applockwatcher.ui.browser.controller.SearchActivity" android:theme="@7F180012" android:windowSoftInputMode="0x00000015">
+</activity>
+<activity android:configChanges="0x000004B0" android:excludeFromRecents="true" android:label="@7F090073" android:name="com.domobile.applockwatcher.ui.browser.controller.WebsiteActivity" android:theme="@7F18000F" android:windowSoftInputMode="0x00000013">
+</activity>
+<activity android:configChanges="0x000004B0" android:excludeFromRecents="true" android:label="@7F090073" android:name="com.domobile.applockwatcher.ui.browser.controller.BookmarkListActivity" android:theme="@7F18000F" android:windowSoftInputMode="0x00000013">
+</activity>
+<activity android:configChanges="0x000004B0" android:excludeFromRecents="true" android:label="@7F090073" android:name="com.domobile.applockwatcher.ui.browser.controller.BookmarkEditActivity" android:theme="@7F18000F" android:windowSoftInputMode="0x00000013">
+</activity>
+<activity android:configChanges="0x000004B0" android:excludeFromRecents="true" android:label="@7F090073" android:name="com.domobile.applockwatcher.ui.browser.controller.DownloadListActivity" android:theme="@7F18000F" android:windowSoftInputMode="0x00000013">
+</activity>
+<activity android:configChanges="0x000004B0" android:excludeFromRecents="true" android:label="@7F090073" android:name="com.domobile.applockwatcher.ui.browser.controller.GameListActivity" android:theme="@7F18000F" android:windowSoftInputMode="0x00000013">
+</activity>
+<activity android:configChanges="0x000004B0" android:excludeFromRecents="true" android:label="@7F090073" android:name="com.domobile.applockwatcher.ui.browser.controller.GameSceneActivity" android:theme="@7F18000F" android:windowSoftInputMode="0x00000013">
+</activity>
+<activity android:configChanges="0x000004B0" android:icon="@7F100447" android:label="@7F090190" android:name="com.domobile.applockwatcher.ui.browser.controller.GameLauncher" android:taskAffinity="com.domobile.applockwatcher.GameLauncher" android:theme="@7F180011" android:windowSoftInputMode="0x00000013">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004B0" android:icon="@7F100447" android:label="@7F090190" android:launchMode="2" android:name="com.domobile.applockwatcher.ui.browser.controller.SGameListActivity" android:taskAffinity="com.domobile.applockwatcher.GameLauncher" android:theme="@7F18000D" android:windowSoftInputMode="0x00000013">
+</activity>
+<activity android:configChanges="0x000004B0" android:icon="@7F100447" android:label="@7F090190" android:launchMode="2" android:name="com.domobile.applockwatcher.ui.browser.controller.SGameSceneActivity" android:taskAffinity="com.domobile.applockwatcher.GameLauncher" android:theme="@7F18000D" android:windowSoftInputMode="0x00000013">
+</activity>
+<activity android:configChanges="0x000004B0" android:excludeFromRecents="true" android:label="@7F090073" android:name="com.domobile.applockwatcher.ui.browser.controller.ImageDisplayActivity" android:theme="@7F18000F" android:windowSoftInputMode="0x00000013">
+</activity>
+<activity android:configChanges="0x000004B0" android:excludeFromRecents="true" android:label="@7F090073" android:name="com.domobile.applockwatcher.ui.browser.controller.VideoDisplayActivity" android:theme="@7F18000F" android:windowSoftInputMode="0x00000013">
+</activity>
+<activity android:configChanges="0x000004B0" android:excludeFromRecents="true" android:label="@7F090073" android:launchMode="2" android:name="com.domobile.applockwatcher.ui.comm.controller.DialogHostActivity" android:taskAffinity="com.domobile.applockwatcher.DatabaseErrorActivity" android:theme="@7F180011" android:windowSoftInputMode="0x00000013">
+</activity>
+<activity android:configChanges="0x000004B0" android:excludeFromRecents="true" android:label="@7F090073" android:name="com.domobile.applockwatcher.ui.comm.controller.AlertHostActivity" android:theme="@7F180012" android:windowSoftInputMode="0x00000013">
+</activity>
+<activity android:configChanges="0x000004B0" android:excludeFromRecents="true" android:label="@7F090073" android:launchMode="2" android:name="com.domobile.applockwatcher.ui.comm.controller.RewardResultActivity" android:taskAffinity="com.domobile.applockwatcher.RewardResultActivity" android:theme="@7F180011" android:windowSoftInputMode="0x00000013">
+</activity>
+<activity android:configChanges="0x000004B0" android:excludeFromRecents="true" android:label="@7F090073" android:name="com.domobile.applockwatcher.ui.comm.controller.OperateResultActivity" android:theme="@7F18000F" android:windowSoftInputMode="0x00000013">
+</activity>
+<activity android:configChanges="0x000004B0" android:excludeFromRecents="true" android:label="@7F090073" android:name="com.domobile.applockwatcher.ui.comm.controller.PrivacyGuideActivity" android:theme="@7F180011" android:windowSoftInputMode="0x00000013">
+</activity>
+<activity android:configChanges="0x000004B0" android:excludeFromRecents="true" android:label="@7F090073" android:name="com.domobile.applockwatcher.ui.permission.controller.PermissionActivity" android:theme="@7F180012" android:windowSoftInputMode="0x00000013">
+</activity>
+<activity android:configChanges="0x000004B0" android:excludeFromRecents="true" android:label="@7F090073" android:launchMode="2" android:name="com.domobile.applockwatcher.ui.permission.controller.PermissionProxyActivity" android:theme="@7F180011" android:windowSoftInputMode="0x00000013">
+</activity>
+<activity android:configChanges="0x000004B0" android:excludeFromRecents="true" android:label="@7F090073" android:name="com.domobile.applockwatcher.ui.permission.controller.PermissionGuideActivity" android:theme="@7F180011" android:windowSoftInputMode="0x00000013">
+</activity>
+<activity android:configChanges="0x000004B0" android:excludeFromRecents="true" android:label="@7F090073" android:name="com.domobile.applockwatcher.ui.settings.controller.UnlockSettingsActivity" android:theme="@7F18000F" android:windowSoftInputMode="0x00000013">
+</activity>
+<activity android:configChanges="0x000004B0" android:excludeFromRecents="true" android:label="@7F090073" android:name="com.domobile.applockwatcher.ui.settings.controller.SecuritySetupActivity" android:theme="@7F18000F" android:windowSoftInputMode="0x00000013">
+</activity>
+<activity android:configChanges="0x000004B0" android:excludeFromRecents="true" android:label="@7F090073" android:name="com.domobile.applockwatcher.ui.lock.controller.RandomBoardActivity" android:theme="@7F18000F" android:windowSoftInputMode="0x00000013">
+</activity>
+<activity android:configChanges="0x000004B0" android:excludeFromRecents="true" android:label="@7F090073" android:name="com.domobile.applockwatcher.ui.intruder.controller.IntruderMainActivity" android:theme="@7F18000F" android:windowSoftInputMode="0x00000013">
+</activity>
+<activity android:configChanges="0x000004B0" android:excludeFromRecents="true" android:label="@7F090073" android:name="com.domobile.applockwatcher.ui.intruder.controller.IntruderDetailActivity" android:theme="@7F18000F" android:windowSoftInputMode="0x00000013">
+</activity>
+<activity android:configChanges="0x000004B0" android:excludeFromRecents="true" android:label="@7F090073" android:name="com.domobile.applockwatcher.ui.intruder.controller.IntruderAlertActivity" android:theme="@7F180011" android:windowSoftInputMode="0x00000013">
+</activity>
+<activity android:configChanges="0x000004B0" android:excludeFromRecents="true" android:label="@7F090073" android:name="com.domobile.applockwatcher.ui.main.controller.AdminActiveActivity" android:theme="@7F180011" android:windowSoftInputMode="0x00000013">
+</activity>
+<activity android:configChanges="0x000004B0" android:excludeFromRecents="true" android:label="@7F090073" android:name="com.domobile.applockwatcher.ui.main.controller.HideApplockActivity" android:theme="@7F18000F" android:windowSoftInputMode="0x00000013">
+</activity>
+<activity android:configChanges="0x000004B0" android:excludeFromRecents="true" android:label="@7F090073" android:name="com.domobile.applockwatcher.ui.main.controller.SceneListActivity" android:theme="@7F18000F" android:windowSoftInputMode="0x00000013">
+</activity>
+<activity android:configChanges="0x000004B0" android:excludeFromRecents="true" android:label="@7F090073" android:name="com.domobile.applockwatcher.ui.main.controller.SceneEditActivity" android:theme="@7F18000F" android:windowSoftInputMode="0x00000013">
+</activity>
+<activity android:configChanges="0x000004B0" android:excludeFromRecents="true" android:label="@7F090073" android:name="com.domobile.applockwatcher.ui.main.controller.SceneActiveActivity" android:theme="@7F180011" android:windowSoftInputMode="0x00000013">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004A0" android:excludeFromRecents="true" android:icon="@7F160000" android:label="@7F090077" android:name="com.domobile.applockwatcher.ui.main.controller.SceneShortcutActivity">
+<intent-filter>
+<action android:name="android.intent.action.CREATE_SHORTCUT">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004B0" android:excludeFromRecents="true" android:label="@7F090073" android:name="com.domobile.applockwatcher.ui.main.controller.TimeLockActivity" android:theme="@7F18000F" android:windowSoftInputMode="0x00000013">
+</activity>
+<activity android:configChanges="0x000004B0" android:excludeFromRecents="true" android:label="@7F090073" android:name="com.domobile.applockwatcher.ui.main.controller.LocationLockActivity" android:theme="@7F18000F" android:windowSoftInputMode="0x00000013">
+</activity>
+<activity android:excludeFromRecents="true" android:finishOnCloseSystemDialogs="true" android:finishOnTaskLaunch="true" android:name="com.domobile.applockwatcher.PluginVerifyActivity" android:screenOrientation="5" android:taskAffinity="com.dombile.imagelock.pluginverifyactivity" android:windowSoftInputMode="0x00000020">
+<intent-filter>
+<action android:name="com.domobile.applock.plugins.ACTION_PLEASE_UNLOCK_APP">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004B0" android:excludeFromRecents="true" android:label="@7F090073" android:name="com.domobile.applockwatcher.ui.notice.controller.NoticeCenterActivity" android:theme="@7F18000F" android:windowSoftInputMode="0x00000013">
+</activity>
+<activity android:configChanges="0x000004B0" android:excludeFromRecents="true" android:label="@7F090073" android:name="com.domobile.applockwatcher.ui.theme.controller.ThemeListActivity" android:theme="@7F18000F" android:windowSoftInputMode="0x00000013">
+</activity>
+<activity android:configChanges="0x000004B0" android:excludeFromRecents="true" android:label="@7F090073" android:name="com.domobile.applockwatcher.ui.theme.controller.OutThemeListActivity" android:theme="@7F18000F" android:windowSoftInputMode="0x00000013">
+</activity>
+<activity android:configChanges="0x000004B0" android:excludeFromRecents="true" android:label="@7F090073" android:name="com.domobile.applockwatcher.ui.theme.controller.ThemeApplyActivity" android:theme="@7F18000F" android:windowSoftInputMode="0x00000013">
+</activity>
+<activity android:configChanges="0x000004B0" android:excludeFromRecents="true" android:label="@7F090073" android:name="com.domobile.applockwatcher.ui.theme.controller.ThemeLockActivity" android:theme="@7F18000F" android:windowSoftInputMode="0x00000013">
+</activity>
+<activity android:configChanges="0x000004B0" android:excludeFromRecents="true" android:label="@7F090073" android:name="com.domobile.applockwatcher.ui.theme.controller.LockBgActivity" android:theme="@7F18000F" android:windowSoftInputMode="0x00000013">
+</activity>
+<activity android:configChanges="0x000004B0" android:excludeFromRecents="true" android:label="@7F090073" android:name="com.domobile.applockwatcher.ui.theme.controller.BoardColorActivity" android:theme="@7F18000F" android:windowSoftInputMode="0x00000013">
+</activity>
+<activity android:configChanges="0x000004B0" android:excludeFromRecents="true" android:label="@7F090073" android:name="com.domobile.applockwatcher.ui.cropimage.AppCropImageActivity" android:theme="@7F18000F" android:windowSoftInputMode="0x00000013">
+</activity>
+<activity android:configChanges="0x000004B0" android:excludeFromRecents="true" android:label="@7F090073" android:name="com.domobile.applockwatcher.ui.cloud.controller.CloudSyncActivity" android:theme="@7F18000F" android:windowSoftInputMode="0x00000013">
+</activity>
+<activity android:configChanges="0x000004B0" android:excludeFromRecents="true" android:label="@7F090073" android:name="com.domobile.applockwatcher.ui.cloud.controller.CloudQuestionActivity" android:theme="@7F18000F" android:windowSoftInputMode="0x00000013">
+</activity>
+<activity android:configChanges="0x000004B0" android:excludeFromRecents="true" android:label="@7F090073" android:launchMode="2" android:name="com.domobile.applockwatcher.ui.cloud.controller.CloudAnswerActivity" android:theme="@7F18000F" android:windowSoftInputMode="0x00000013">
+</activity>
+<activity android:configChanges="0x000004B0" android:excludeFromRecents="true" android:label="@7F090073" android:name="com.domobile.applockwatcher.ui.comm.controller.BlankActivity" android:theme="@7F180011" android:windowSoftInputMode="0x00000013">
+</activity>
+<activity android:configChanges="0x000004B0" android:excludeFromRecents="true" android:label="@7F090073" android:name="com.domobile.applockwatcher.ui.cloud.controller.OAuthActivity" android:theme="@7F180011" android:windowSoftInputMode="0x00000013">
+</activity>
+<activity android:configChanges="0x000004B0" android:excludeFromRecents="true" android:finishOnCloseSystemDialogs="true" android:hardwareAccelerated="false" android:icon="@7F160000" android:label="@7F090073" android:name="com.domobile.applockwatcher.ui.comm.controller.AppOpenActivity" android:theme="@7F180011">
+</activity>
+<activity android:configChanges="0x000004B0" android:excludeFromRecents="true" android:label="@7F090073" android:name="com.domobile.applockwatcher.ui.comm.controller.SecurityTipsActivity" android:theme="@7F18000D" android:windowSoftInputMode="0x00000013">
+</activity>
+<activity android:configChanges="0x000004B0" android:enabled="true" android:excludeFromRecents="true" android:icon="@7F160000" android:label="@7F090073" android:name="com.domobile.applockwatcher.ui.test.controller.TestActivity" android:theme="@7F18000F" android:windowSoftInputMode="0x00000013">
+</activity>
+<service android:name="com.domobile.applockwatcher.service.ProtectorLockService">
+</service>
+<service android:foregroundServiceType="0x00000008" android:name="com.domobile.applockwatcher.service.LockService">
+<intent-filter>
+<action android:name="com.domoile.applock.ACTION_OPEN_LOCKSERVICE">
+</action>
+</intent-filter>
+</service>
+<service android:name="com.domobile.applockwatcher.service.MyJobService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<service android:name="aaa.domobile.applock.accessibility.service.MyAccessibilityService" android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE">
+<intent-filter>
+<action android:name="android.accessibilityservice.AccessibilityService">
+</action>
+</intent-filter>
+<meta-data android:name="android.accessibilityservice" android:resource="@7F1A0004">
+</meta-data>
+</service>
+<service android:name="com.domobile.applockwatcher.service.NotificationService" android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE" android:priority="2147483647">
+<intent-filter>
+<action android:name="android.service.notification.NotificationListenerService">
+</action>
+</intent-filter>
+</service>
+<receiver android:name="com.domobile.applockwatcher.receiver.CoreReceiver" android:priority="2147483647">
+<intent-filter>
+<action android:name="com.domobile.applockwatcher.ACTION_STARTUP_PROFILE_EXPORT">
+</action>
+<action android:name="com.domobile.ACTION_ALARM_LOCK">
+</action>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+<action android:name="com.android.sync.SYNC_CONN_STATUS_CHANGED">
+</action>
+<action android:name="android.bluetooth.adapter.action.STATE_CHANGED">
+</action>
+<action android:name="android.intent.action.LOCALE_CHANGED">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_ADDED">
+</action>
+<action android:name="android.intent.action.PACKAGE_REPLACED">
+</action>
+<action android:name="android.intent.action.PACKAGE_RESTARTED">
+</action>
+<action android:name="android.intent.action.PACKAGE_REMOVED">
+</action>
+<data android:scheme="package">
+</data>
+</intent-filter>
+</receiver>
+<receiver android:exported="true" android:name="com.domobile.applockwatcher.receiver.LockReceiver" android:priority="2147483647">
+<intent-filter>
+<action android:name="android.intent.action.QUICKBOOT_POWERON">
+</action>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+<action android:name="com.domobile.elock.action.CHANGE_NOTIFY">
+</action>
+<action android:name="com.domobile.applockwatcher.ACTION_START_SERVICE">
+</action>
+<action android:name="com.domobile.elock.proctect_list_change">
+</action>
+<action android:name="com.domobile.applockwatcher.ACTION_STARTUP_THEME">
+</action>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+<action android:name="android.intent.action.USER_PRESENT">
+</action>
+<action android:name="android.net.wifi.WIFI_STATE_CHANGED">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_RESTARTED">
+</action>
+<action android:name="android.intent.action.PACKAGE_REPLACED">
+</action>
+<data android:scheme="package">
+</data>
+</intent-filter>
+<intent-filter android:priority="2147483647">
+<action android:name="android.provider.Telephony.SECRET_CODE">
+</action>
+<data android:host="12345" android:scheme="android_secret_code">
+</data>
+</intent-filter>
+<intent-filter android:priority="2147483647">
+<action android:name="android.intent.action.NEW_OUTGOING_CALL">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name="com.domobile.applockwatcher.receiver.BootBroadcastReceiver">
+</receiver>
+<receiver android:name="com.domobile.applockwatcher.receiver.CodeSetReceiver">
+</receiver>
+<receiver android:name="com.domobile.applockwatcher.receiver.PackageChangedReceiver">
+</receiver>
+<receiver android:label="@7F090281" android:name="com.domobile.applockwatcher.SwitchWidget">
+<intent-filter>
+<action android:name="android.appwidget.action.APPWIDGET_UPDATE">
+</action>
+<action android:name="android.intent.action.CLOSE_SYSTEM_DIALOGS">
+</action>
+<action android:name="com.domobile.elock.proctect_list_change">
+</action>
+</intent-filter>
+<meta-data android:name="android.appwidget.provider" android:resource="@7F1A000A">
+</meta-data>
+</receiver>
+<receiver android:label="@7F090073" android:name="com.domobile.applockwatcher.AppLockWatcherDeviceAdmin" android:permission="android.permission.BIND_DEVICE_ADMIN">
+<intent-filter>
+<action android:name="android.app.action.DEVICE_ADMIN_ENABLED">
+</action>
+</intent-filter>
+<meta-data android:name="android.app.device_admin" android:resource="@7F1A0000">
+</meta-data>
+</receiver>
+<provider android:authorities="com.domobile.applockwatcher" android:enabled="true" android:exported="true" android:multiprocess="true" android:name="com.domobile.applockwatcher.provider.ProfilesProvider">
+</provider>
+<provider android:authorities="com.domobile.applockwatcher.fileprovider" android:exported="false" android:grantUriPermissions="true" android:name="com.domobile.applockwatcher.provider.GenericFileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F1A0003">
+</meta-data>
+</provider>
+<service android:exported="false" android:name="com.domobile.applockwatcher.service.AppFirebaseMsgService">
+<intent-filter>
+<action android:name="com.google.firebase.MESSAGING_EVENT">
+</action>
+</intent-filter>
+</service>
+<meta-data android:name="com.google.firebase.messaging.default_notification_icon" android:resource="@7F1002A3">
+</meta-data>
+<meta-data android:name="MAIN_DOMAIN" android:value="">
+</meta-data>
+<meta-data android:name="SERVER_DOMAIN" android:value="">
+</meta-data>
+<meta-data android:name="android.max_aspect" android:value="2.400000">
+</meta-data>
+<meta-data android:name="notch.config" android:value="portrait|landscape">
+</meta-data>
+<meta-data android:name="android.notch_support" android:value="true">
+</meta-data>
+<receiver android:enabled="true" android:exported="true" android:name="com.domobile.support.life.LifeReceiver">
+<intent-filter android:priority="1000">
+<action android:name="com.domobile.support.ACTION_LIFE_AWAKE">
+</action>
+</intent-filter>
+</receiver>
+<activity android:configChanges="0x00000090" android:exported="false" android:name="com.mintegral.msdk.shell.MTGActivity" android:theme="@7F18000F">
+</activity>
+<activity android:configChanges="0x000004A0" android:exported="false" android:name="com.mintegral.msdk.reward.player.MTGRewardVideoActivity" android:theme="@android:01030007">
+</activity>
+<activity android:configChanges="0x000004A0" android:excludeFromRecents="true" android:exported="false" android:name="com.facebook.ads.AudienceNetworkActivity" android:theme="@android:01030010">
+</activity>
+<uses-library android:name="org.apache.http.legacy" android:required="false">
+</uses-library>
+<meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@7F090167">
+</meta-data>
+<activity android:configChanges="0x000005B0" android:label="@7F090073" android:name="com.facebook.FacebookActivity" android:theme="@7F1802F1">
+</activity>
+<activity android:exported="true" android:name="com.facebook.CustomTabActivity">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="@7F09016F">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="cct.com.domobile.applockwatcher" android:scheme="fbconnect">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.facebook.CustomTabMainActivity">
+</activity>
+<service android:directBootAware="true" android:exported="false" android:name="com.google.firebase.messaging.FirebaseMessagingService">
+<intent-filter android:priority="-500">
+<action android:name="com.google.firebase.MESSAGING_EVENT">
+</action>
+</intent-filter>
+</service>
+<service android:directBootAware="true" android:exported="false" android:name="com.google.firebase.components.ComponentDiscoveryService">
+<meta-data android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar" android:value="com.google.firebase.components.ComponentRegistrar">
+</meta-data>
+<meta-data android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar" android:value="com.google.firebase.components.ComponentRegistrar">
+</meta-data>
+<meta-data android:name="com.google.firebase.components:com.google.firebase.iid.Registrar" android:value="com.google.firebase.components.ComponentRegistrar">
+</meta-data>
+<meta-data android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar" android:value="com.google.firebase.components.ComponentRegistrar">
+</meta-data>
+<meta-data android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar" android:value="com.google.firebase.components.ComponentRegistrar">
+</meta-data>
+</service>
+<receiver android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementReceiver">
+</receiver>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementService">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementJobService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<provider android:authorities="com.domobile.applockwatcher.FacebookInitProvider" android:exported="false" android:name="com.facebook.internal.FacebookInitProvider">
+</provider>
+<receiver android:exported="false" android:name="com.facebook.CurrentAccessTokenExpirationBroadcastReceiver">
+<intent-filter>
+<action android:name="com.facebook.sdk.ACTION_CURRENT_ACCESS_TOKEN_CHANGED">
+</action>
+</intent-filter>
+</receiver>
+<activity android:excludeFromRecents="true" android:exported="false" android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity" android:theme="@android:01030010">
+</activity>
+<service android:exported="true" android:name="com.google.android.gms.auth.api.signin.RevocationBoundService" android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION">
+</service>
+<activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:01030010">
+</activity>
+<provider android:authorities="com.domobile.applockwatcher.firebaseinitprovider" android:exported="false" android:initOrder="100" android:name="com.google.firebase.provider.FirebaseInitProvider">
+</provider>
+<provider android:authorities="com.domobile.applockwatcher.AudienceNetworkContentProvider" android:exported="false" android:name="com.facebook.ads.AudienceNetworkContentProvider">
+</provider>
+<meta-data android:name="com.google.android.gms.version" android:value="@7F120008">
+</meta-data>
+<provider android:authorities="com.domobile.applockwatcher.lifecycle-process" android:exported="false" android:multiprocess="true" android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer">
+</provider>
+<service android:exported="false" android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery">
+<meta-data android:name="backend:com.google.android.datatransport.cct.CctBackendFactory" android:value="cct">
+</meta-data>
+</service>
+<service android:exported="false" android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<receiver android:exported="false" android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver">
+</receiver>
+<provider android:authorities="com.domobile.applockwatcher.crashlyticsinitprovider" android:exported="false" android:initOrder="90" android:name="com.crashlytics.android.CrashlyticsInitProvider">
+</provider>
+<meta-data android:name="com.google.android.play.billingclient.version" android:value="2.2.1">
+</meta-data>
+<activity android:configChanges="0x000005B0" android:name="com.android.billingclient.api.ProxyBillingActivity" android:theme="@android:01030010">
+</activity>
+</application>
+</manifest>

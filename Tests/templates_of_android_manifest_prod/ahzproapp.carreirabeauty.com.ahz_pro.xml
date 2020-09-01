@@ -1,0 +1,308 @@
+<?xml version="1.0" ?><manifest android:compileSdkVersion="29" android:compileSdkVersionCodename="10" android:versionCode="2135" android:versionName="7.7.2" package="ahzproapp.carreirabeauty.com.ahz_pro" platformBuildVersionCode="29" platformBuildVersionName="10" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="21" android:targetSdkVersion="29">
+</uses-sdk>
+<uses-permission android:name="com.android.vending.BILLING">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.MANAGE_DOCUMENTS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE">
+</uses-permission>
+<uses-feature android:glEsVersion="0x00020000" android:required="true">
+</uses-feature>
+<uses-feature android:name="android.hardware.camera" android:required="false">
+</uses-feature>
+<application android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:icon="@7F0D0001" android:label="@7F0F0039" android:largeHeap="true" android:name="src.MyApplication" android:requestLegacyExternalStorage="true" android:roundIcon="@7F0D0001" android:supportsRtl="true" android:usesCleartextTraffic="true">
+<activity android:configChanges="0x40003FB4" android:hardwareAccelerated="true" android:launchMode="1" android:name="src.MainActivity" android:theme="@7F1001A7" android:windowSoftInputMode="0x00000010">
+<meta-data android:name="io.flutter.embedding.android.NormalTheme" android:resource="@7F1001A8">
+</meta-data>
+<meta-data android:name="io.flutter.embedding.android.SplashScreenDrawable" android:resource="@7F0801BD">
+</meta-data>
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="FLUTTER_NOTIFICATION_CLICK">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@7F0F008D">
+</meta-data>
+<activity android:configChanges="0x000005B0" android:label="@7F0F0039" android:name="com.facebook.FacebookActivity" android:theme="@7F1002DA">
+</activity>
+<provider android:authorities="com.facebook.app.FacebookContentProvider399780836859072" android:exported="true" android:name="com.facebook.FacebookContentProvider">
+</provider>
+<activity android:exported="true" android:name="com.facebook.CustomTabActivity">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="@7F0F008E">
+</data>
+</intent-filter>
+</activity>
+<service android:enabled="true" android:exported="true" android:name="src.MyFirebaseMessagingService" android:permission="com.google.android.c2dm.permission.SEND">
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+<action android:name="com.google.firebase.MESSAGING_EVENT">
+</action>
+</intent-filter>
+</service>
+<service android:name="com.clevertap.android.sdk.FcmTokenListenerService">
+<intent-filter>
+<action android:name="com.google.firebase.INSTANCE_ID_EVENT">
+</action>
+</intent-filter>
+</service>
+<service android:exported="false" android:name="com.clevertap.android.sdk.CTNotificationIntentService">
+<intent-filter>
+<action android:name="com.clevertap.PUSH_EVENT">
+</action>
+</intent-filter>
+</service>
+<meta-data android:name="CLEVERTAP_NOTIFICATION_ICON" android:value="ic_stat_ahazou">
+</meta-data>
+<meta-data android:name="flutterEmbedding" android:value="2">
+</meta-data>
+<meta-data android:name="CLEVERTAP_ACCOUNT_ID" android:value="@7F0F003E">
+</meta-data>
+<meta-data android:name="CLEVERTAP_TOKEN" android:value="@7F0F003F">
+</meta-data>
+<meta-data android:name="FCM_SENDER_ID" android:value="@7F0F0098">
+</meta-data>
+<provider android:authorities="ahzproapp.carreirabeauty.com.ahz_pro.provider" android:exported="false" android:grantUriPermissions="true" android:name="com.ahazou.share_post.ShareFileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F120000">
+</meta-data>
+</provider>
+<meta-data android:name="com.facebook.sdk.CodelessDebugLogEnabled" android:value="true">
+</meta-data>
+<receiver android:exported="true" android:name="com.smartlook.sdk.smartlook.analytics.receiver.ReferrerReceiver">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+<activity android:configChanges="0x00000020" android:name="com.clevertap.android.sdk.InAppNotificationActivity" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x00000020" android:name="com.clevertap.android.sdk.CTInboxActivity" android:theme="@7F100221">
+</activity>
+<receiver android:enabled="true" android:exported="false" android:name="com.clevertap.android.sdk.CTPushNotificationReceiver">
+</receiver>
+<service android:exported="false" android:name="com.clevertap.android.sdk.CTBackgroundIntentService" android:permission="android.permission.BIND_JOB_SERVICE">
+<intent-filter>
+<action android:name="com.clevertap.BG_EVENT">
+</action>
+</intent-filter>
+</service>
+<service android:exported="false" android:name="com.clevertap.android.sdk.CTBackgroundJobService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<activity android:name="com.facebook.CustomTabMainActivity">
+</activity>
+<service android:directBootAware="true" android:exported="false" android:name="com.google.firebase.components.ComponentDiscoveryService">
+<meta-data android:name="com.google.firebase.components:io.flutter.plugins.firebaseperformance.FlutterFirebaseAppRegistrar" android:value="com.google.firebase.components.ComponentRegistrar">
+</meta-data>
+<meta-data android:name="com.google.firebase.components:com.google.firebase.perf.FirebasePerfRegistrar" android:value="com.google.firebase.components.ComponentRegistrar">
+</meta-data>
+<meta-data android:name="com.google.firebase.components:io.flutter.plugins.firebase.firebaseremoteconfig.FlutterFirebaseAppRegistrar" android:value="com.google.firebase.components.ComponentRegistrar">
+</meta-data>
+<meta-data android:name="com.google.firebase.components:com.google.firebase.remoteconfig.RemoteConfigRegistrar" android:value="com.google.firebase.components.ComponentRegistrar">
+</meta-data>
+<meta-data android:name="com.google.firebase.components:io.flutter.plugins.firebasemessaging.FlutterFirebaseAppRegistrar" android:value="com.google.firebase.components.ComponentRegistrar">
+</meta-data>
+<meta-data android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar" android:value="com.google.firebase.components.ComponentRegistrar">
+</meta-data>
+<meta-data android:name="com.google.firebase.components:com.google.firebase.crashlytics.CrashlyticsRegistrar" android:value="com.google.firebase.components.ComponentRegistrar">
+</meta-data>
+<meta-data android:name="com.google.firebase.components:io.flutter.plugins.firebaseanalytics.FlutterFirebaseAppRegistrar" android:value="com.google.firebase.components.ComponentRegistrar">
+</meta-data>
+<meta-data android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar" android:value="com.google.firebase.components.ComponentRegistrar">
+</meta-data>
+<meta-data android:name="com.google.firebase.components:com.google.firebase.iid.Registrar" android:value="com.google.firebase.components.ComponentRegistrar">
+</meta-data>
+<meta-data android:name="com.google.firebase.components:io.flutter.plugins.firebasedynamiclinks.FlutterFirebaseAppRegistrar" android:value="com.google.firebase.components.ComponentRegistrar">
+</meta-data>
+<meta-data android:name="com.google.firebase.components:com.google.firebase.dynamiclinks.internal.FirebaseDynamicLinkRegistrar" android:value="com.google.firebase.components.ComponentRegistrar">
+</meta-data>
+<meta-data android:name="com.google.firebase.components:io.flutter.plugins.firebase.storage.FlutterFirebaseAppRegistrar" android:value="com.google.firebase.components.ComponentRegistrar">
+</meta-data>
+<meta-data android:name="com.google.firebase.components:com.google.firebase.storage.StorageRegistrar" android:value="com.google.firebase.components.ComponentRegistrar">
+</meta-data>
+<meta-data android:name="com.google.firebase.components:io.flutter.plugins.firebase.cloudfirestore.FlutterFirebaseAppRegistrar" android:value="com.google.firebase.components.ComponentRegistrar">
+</meta-data>
+<meta-data android:name="com.google.firebase.components:com.google.firebase.firestore.FirestoreRegistrar" android:value="com.google.firebase.components.ComponentRegistrar">
+</meta-data>
+<meta-data android:name="com.google.firebase.components:io.flutter.plugins.firebaseauth.FlutterFirebaseAppRegistrar" android:value="com.google.firebase.components.ComponentRegistrar">
+</meta-data>
+<meta-data android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar" android:value="com.google.firebase.components.ComponentRegistrar">
+</meta-data>
+<meta-data android:name="com.google.firebase.components:io.flutter.plugins.firebase.core.FlutterFirebaseAppRegistrar" android:value="com.google.firebase.components.ComponentRegistrar">
+</meta-data>
+<meta-data android:name="com.google.firebase.components:io.flutter.plugins.firebase.crashlytics.firebasecrashlytics.FlutterFirebaseAppRegistrar" android:value="com.google.firebase.components.ComponentRegistrar">
+</meta-data>
+<meta-data android:name="com.google.firebase.components:com.google.firebase.abt.component.AbtRegistrar" android:value="com.google.firebase.components.ComponentRegistrar">
+</meta-data>
+<meta-data android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar" android:value="com.google.firebase.components.ComponentRegistrar">
+</meta-data>
+<meta-data android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar" android:value="com.google.firebase.components.ComponentRegistrar">
+</meta-data>
+</service>
+<provider android:authorities="ahzproapp.carreirabeauty.com.ahz_pro.firebaseperfprovider" android:exported="false" android:initOrder="101" android:name="com.google.firebase.perf.provider.FirebasePerfProvider">
+</provider>
+<service android:name="io.intercom.android.sdk.fcm.IntercomFcmMessengerService">
+<intent-filter android:priority="-400">
+<action android:name="com.google.firebase.MESSAGING_EVENT">
+</action>
+<action android:name="com.google.firebase.INSTANCE_ID_EVENT">
+</action>
+</intent-filter>
+</service>
+<service android:name="io.flutter.plugins.firebasemessaging.FlutterFirebaseMessagingService">
+<intent-filter>
+<action android:name="com.google.firebase.MESSAGING_EVENT">
+</action>
+</intent-filter>
+</service>
+<service android:directBootAware="true" android:exported="false" android:name="com.google.firebase.messaging.FirebaseMessagingService">
+<intent-filter android:priority="-500">
+<action android:name="com.google.firebase.MESSAGING_EVENT">
+</action>
+</intent-filter>
+</service>
+<receiver android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.analytics.AnalyticsReceiver">
+</receiver>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.analytics.AnalyticsService">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.analytics.AnalyticsJobService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<activity android:excludeFromRecents="true" android:exported="false" android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity" android:theme="@android:01030010">
+</activity>
+<service android:exported="true" android:name="com.google.android.gms.auth.api.signin.RevocationBoundService" android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION">
+</service>
+<activity android:excludeFromRecents="true" android:exported="true" android:launchMode="2" android:name="com.google.firebase.auth.internal.FederatedSignInActivity" android:permission="com.google.firebase.auth.api.gms.permission.LAUNCH_FEDERATED_SIGN_IN" android:theme="@android:01030010">
+</activity>
+<activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x00000480" android:exported="false" android:launchMode="1" android:name="io.intercom.android.sdk.activities.IntercomMessengerActivity" android:theme="@7F1001A5" android:windowSoftInputMode="0x00000011">
+</activity>
+<activity android:configChanges="0x00000480" android:exported="false" android:name="io.intercom.android.sdk.lightbox.LightBoxActivity" android:theme="@7F1001A2" android:windowSoftInputMode="0x00000011">
+</activity>
+<activity android:exported="false" android:launchMode="1" android:name="io.intercom.android.sdk.activities.IntercomArticleActivity" android:theme="@7F1001A3" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x00000480" android:exported="false" android:launchMode="1" android:name="io.intercom.android.sdk.activities.IntercomHelpCenterActivity" android:theme="@7F1001A3" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x00000480" android:exported="false" android:launchMode="2" android:name="io.intercom.android.sdk.activities.IntercomPostActivity" android:theme="@7F1001A6" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x00000480" android:exported="false" android:launchMode="2" android:name="io.intercom.android.sdk.activities.IntercomNoteActivity" android:theme="@7F1001A4" android:windowSoftInputMode="0x00000011">
+</activity>
+<activity android:configChanges="0x00000480" android:exported="false" android:launchMode="1" android:name="io.intercom.android.sdk.activities.IntercomSheetActivity" android:theme="@7F1001A3" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x00000480" android:exported="false" android:launchMode="1" android:name="io.intercom.android.sdk.activities.IntercomVideoActivity" android:theme="@7F1001A5" android:windowSoftInputMode="0x00000002">
+</activity>
+<receiver android:exported="false" android:name="io.intercom.android.sdk.push.IntercomPushBroadcastReceiver">
+<intent-filter>
+<action android:name="io.intercom.android.sdk.INTERCOM_PUSH_OPENED">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="io.intercom.android.sdk.INTERCOM_PUSH_DISMISSED">
+</action>
+</intent-filter>
+</receiver>
+<provider android:authorities="ahzproapp.carreirabeauty.com.ahz_pro.IntercomInitializeContentProvider" android:exported="false" android:name="io.intercom.android.sdk.IntercomInitializeContentProvider">
+</provider>
+<activity android:exported="false" android:name="io.flutter.plugins.urllauncher.WebViewActivity" android:theme="@android:01030007">
+</activity>
+<provider android:authorities="ahzproapp.carreirabeauty.com.ahz_pro.flutter.image_provider" android:exported="false" android:grantUriPermissions="true" android:name="io.flutter.plugins.imagepicker.ImagePickerFileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F120001">
+</meta-data>
+</provider>
+<receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementReceiver">
+</receiver>
+<receiver android:enabled="true" android:exported="true" android:name="com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver" android:permission="android.permission.INSTALL_PACKAGES">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementService">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementJobService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<provider android:authorities="ahzproapp.carreirabeauty.com.ahz_pro.FacebookInitProvider" android:exported="false" android:name="com.facebook.internal.FacebookInitProvider">
+</provider>
+<receiver android:exported="false" android:name="com.facebook.CurrentAccessTokenExpirationBroadcastReceiver">
+<intent-filter>
+<action android:name="com.facebook.sdk.ACTION_CURRENT_ACCESS_TOKEN_CHANGED">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:exported="true" android:name="com.facebook.CampaignTrackingReceiver" android:permission="android.permission.INSTALL_PACKAGES">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+<provider android:authorities="ahzproapp.carreirabeauty.com.ahz_pro.firebaseinitprovider" android:exported="false" android:initOrder="100" android:name="com.google.firebase.provider.FirebaseInitProvider">
+</provider>
+<meta-data android:name="com.google.android.gms.version" android:value="@7F0A0008">
+</meta-data>
+<service android:exported="false" android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery">
+<meta-data android:name="backend:com.google.android.datatransport.cct.CctBackendFactory" android:value="cct">
+</meta-data>
+</service>
+<service android:exported="false" android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<receiver android:exported="false" android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver">
+</receiver>
+<activity android:name="com.intercom.input.gallery.GalleryInputFullScreenActivity" android:theme="@7F1002E4">
+</activity>
+<activity android:configChanges="0x00001580" android:name="com.intercom.input.gallery.GalleryLightBoxActivity" android:theme="@7F1002E4">
+</activity>
+<provider android:authorities="ahzproapp.carreirabeauty.com.ahz_pro.crashlyticsinitprovider" android:exported="false" android:initOrder="90" android:name="com.crashlytics.android.CrashlyticsInitProvider">
+</provider>
+<meta-data android:name="com.google.android.play.billingclient.version" android:value="2.1.0">
+</meta-data>
+<activity android:configChanges="0x000005B0" android:name="com.android.billingclient.api.ProxyBillingActivity" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x00000430" android:exported="true" android:hardwareAccelerated="true" android:label="@7F0F0039" android:name="ly.img.android.pesdk.ui.activity.PhotoEditorActivity" android:screenOrientation="1" android:theme="@android:01030007" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:configChanges="0x00000430" android:exported="true" android:hardwareAccelerated="true" android:label="@7F0F0039" android:name="ly.img.android.pesdk.ui.activity.EditorActivity" android:screenOrientation="1" android:theme="@android:01030007" android:windowSoftInputMode="0x00000020">
+</activity>
+<provider android:authorities="ahzproapp.carreirabeauty.com.ahz_pro.IMGLYAutoInit" android:enabled="true" android:exported="false" android:name="ly.img.android.IMGLYAutoInit">
+</provider>
+</application>
+</manifest>

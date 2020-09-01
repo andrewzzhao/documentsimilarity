@@ -1,0 +1,114 @@
+<?xml version="1.0" ?><manifest android:versionCode="34" android:versionName="1.0.33" package="hn.mayak.freeting" platformBuildVersionCode="19" platformBuildVersionName="4.4.2-1456859" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="9">
+</uses-sdk>
+<supports-screens android:anyDensity="true" android:largeScreens="true">
+</supports-screens>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_LOGS">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-feature android:name="android.hardware.camera">
+</uses-feature>
+<permission android:name="hn.mayak.freeting.permission.C2D_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="hn.mayak.freeting.permission.C2D_MESSAGE">
+</uses-permission>
+<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<application android:allowBackup="true" android:icon="@7F02010B" android:label="@7F060029" android:theme="@7F090003">
+<activity android:configChanges="0x000000B0" android:name="com.mocoplex.adlib.AdlibDialogActivity" android:theme="@android:0103000F">
+</activity>
+<activity android:configChanges="0x000000B0" android:name="com.mocoplex.adlib.AdlibWebBrowserActivity">
+</activity>
+<activity android:configChanges="0x000000B0" android:name="com.mocoplex.adlib.AdlibVideoPlayer" android:theme="@android:01030006">
+</activity>
+<receiver android:exported="true" android:name="com.mocoplex.rat.Receiver">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+<meta-data android:name="ADLIB_RAT_KEY" android:value="546b07ef0cf245c840b5766e">
+</meta-data>
+<meta-data android:name="com.google.android.gms.version" android:value="@7F0A0000">
+</meta-data>
+<activity android:configChanges="0x00000FB0" android:name="com.google.android.gms.ads.AdActivity">
+</activity>
+<activity android:configChanges="0x000000B0" android:label="@7F060029" android:name="hn.mayak.freeting.SplashActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000B0" android:label="@7F060029" android:launchMode="2" android:name="hn.mayak.freeting.IntroActivity" android:screenOrientation="1">
+<intent-filter>
+<data android:host="startActivity" android:scheme="mayakTing">
+</data>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000B0" android:label="@7F060029" android:name="hn.mayak.freeting.WaitingRoomActivity">
+</activity>
+<activity android:configChanges="0x000000B0" android:label="@7F060029" android:name="hn.mayak.freeting.ChattingActivity">
+</activity>
+<activity android:configChanges="0x000000B0" android:label="@7F060029" android:name="hn.mayak.freeting.RandomChattingActivity">
+</activity>
+<activity android:configChanges="0x000000B0" android:name="hn.mayak.freeting.ImageSelectorActivity" android:theme="@android:0103000A">
+</activity>
+<activity android:configChanges="0x000000B0" android:name="hn.mayak.freeting.FullScreenImgActivity" android:theme="@android:0103000A">
+</activity>
+<activity android:configChanges="0x000000B0" android:label="@7F060029" android:name="hn.mayak.freeting.PromotionActivity">
+</activity>
+<meta-data android:name="com.kakao.sdk.AppKey" android:value="@7F06005D">
+</meta-data>
+<receiver android:name="com.google.android.gcm.GCMBroadcastReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+<action android:name="com.google.android.c2dm.intent.REGISTRATION">
+</action>
+<category android:name="hn.mayak.freeting">
+</category>
+</intent-filter>
+</receiver>
+<service android:name="hn.mayak.freeting.GCMIntentService">
+</service>
+<receiver android:name="com.appfireworks.android.re.AppReEngagement">
+</receiver>
+<service android:name="com.appfireworks.android.re.AppReEngagementService">
+</service>
+</application>
+</manifest>

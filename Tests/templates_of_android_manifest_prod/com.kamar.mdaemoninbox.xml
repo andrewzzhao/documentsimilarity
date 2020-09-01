@@ -1,0 +1,56 @@
+<?xml version="1.0" ?><manifest android:versionCode="40" android:versionName="4.0" package="com.kamar.mdaemoninbox" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="8" android:targetSdkVersion="17">
+</uses-sdk>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.BROADCAST_STICKY">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-feature android:name="android.hardware.touchscreen" android:required="false">
+</uses-feature>
+<application android:debuggable="true" android:hardwareAccelerated="true" android:icon="@7F020000" android:label="@7F060001">
+<activity android:configChanges="0x00000FB0" android:label="@7F060001" android:name=".MDaemonInboxActivity">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x00000FB0" android:label="@7F060001" android:name=".PinAction">
+</activity>
+<activity android:configChanges="0x00000FB0" android:label="@7F060001" android:name="org.apache.cordova.DroidGap">
+</activity>
+<receiver android:name=".OnBootReceiver">
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+<action android:name="android.intent.action.MAIN">
+</action>
+<action android:name=".MDaemonInboxActivity">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name=".OnAlarmReceiver">
+</receiver>
+<service android:name=".AppService">
+</service>
+<receiver android:name=".NotificationCleared">
+<intent-filter>
+<action android:name=".AppService">
+</action>
+</intent-filter>
+</receiver>
+<activity android:configChanges="0x00000FB0" android:name="com.google.ads.AdActivity">
+</activity>
+</application>
+</manifest>

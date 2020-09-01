@@ -1,0 +1,466 @@
+<?xml version="1.0" ?><manifest android:versionCode="23" android:versionName="3.2" package="com.csii.xinzheng" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="23" android:targetSdkVersion="27">
+</uses-sdk>
+<uses-feature android:name="android.hardware.camera">
+</uses-feature>
+<uses-feature android:name="android.hardware.camera.autofocus">
+</uses-feature>
+<supports-screens android:anyDensity="true" android:largeScreens="true" android:normalScreens="true" android:resizeable="true" android:smallScreens="true">
+</supports-screens>
+<permission android:name="com.csii.xinzheng.permission.JPUSH_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="com.csii.xinzheng.permission.JPUSH_MESSAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_CONFIGURATION">
+</uses-permission>
+<uses-permission android:name="android.permission.RESTART_PACKAGES">
+</uses-permission>
+<uses-permission android:name="android.permission.RECORD_AUDIO">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_CONTACTS">
+</uses-permission>
+<uses-permission android:name="com.gieseckedevrient.android.hceclient.PushRecieveMsgReceiver">
+</uses-permission>
+<uses-permission android:name="com.gieseckedevrient.android.cpclientdemoapp.PushBroadCastReceiver">
+</uses-permission>
+<uses-permission android:name="android.permission.FLASHLIGHT">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-permission android:name="android.permission.NFC">
+</uses-permission>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-permission android:name="android.permission.MANAGE_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CALL_PHONE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_USER_PRESENT">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS">
+</uses-permission>
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERACT_ACROSS_USERS_FULL">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS">
+</uses-permission>
+<uses-permission android:name="android.permission.BLUETOOTH">
+</uses-permission>
+<uses-permission android:name="android.permission.BLUETOOTH_ADMIN">
+</uses-permission>
+<uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_GPS">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_ASSISTED_GPS">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_LOCATION">
+</uses-permission>
+<application android:allowBackup="false" android:icon="@7F0701CB" android:label="@7F0D002D" android:largeHeap="true" android:name="s.h.e.l.l.S" android:supportsRtl="true" android:theme="@android:01030009">
+<provider android:authorities="com.csii.xinzheng.fileProvider" android:exported="false" android:grantUriPermissions="true" android:name="android.support.v4.content.FileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F100000">
+</meta-data>
+</provider>
+<meta-data android:name="com.amap.api.v2.apikey" android:value="f5e56715c5261897a55457ed33395438">
+</meta-data>
+<meta-data android:name="JPUSH_CHANNEL" android:value="Android">
+</meta-data>
+<meta-data android:name="JPUSH_APPKEY" android:value="e527a18fdbc2e4b45a3e969a">
+</meta-data>
+<service android:enabled="true" android:exported="true" android:name="cn.jpush.android.service.DaemonService">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.DaemonService">
+</action>
+<category android:name="com.csii.xinzheng">
+</category>
+</intent-filter>
+</service>
+<activity android:name="com.csii.xiaohe.WelcomeActivity" android:screenOrientation="1" android:theme="@7F0E000E">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:label="@7F0D002D" android:name="com.csii.uiremake.activity.NewMainActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:exported="false" android:name="cn.jpush.android.ui.PushActivity" android:theme="@android:01030006">
+<intent-filter>
+<action android:name="cn.jpush.android.ui.PushActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="com.csii.xinzheng">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:name="cn.jpush.android.ui.PopWinActivity" android:theme="@7F0E00BD">
+</activity>
+<service android:exported="false" android:name="cn.jpush.android.service.PushService" android:process=":mult">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.REGISTER">
+</action>
+<action android:name="cn.jpush.android.intent.REPORT">
+</action>
+<action android:name="cn.jpush.android.intent.PushService">
+</action>
+<action android:name="cn.jpush.android.intent.PUSH_TIME">
+</action>
+</intent-filter>
+</service>
+<provider android:authorities="com.csii.xinzheng.DataProvider" android:exported="false" android:name="cn.jpush.android.service.DataProvider">
+</provider>
+<provider android:authorities="com.csii.xinzheng.DownloadProvider" android:exported="true" android:name="cn.jpush.android.service.DownloadProvider">
+</provider>
+<receiver android:enabled="true" android:exported="false" android:name="cn.jpush.android.service.PushReceiver">
+<intent-filter android:priority="1000">
+<action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY">
+</action>
+<category android:name="com.csii.xinzheng">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.USER_PRESENT">
+</action>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_ADDED">
+</action>
+<action android:name="android.intent.action.PACKAGE_REMOVED">
+</action>
+<data android:scheme="package">
+</data>
+</intent-filter>
+</receiver>
+<receiver android:exported="false" android:name="cn.jpush.android.service.AlarmReceiver">
+</receiver>
+<receiver android:enabled="true" android:exported="false" android:name="com.csii.xz.jpush.MyReceiver">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.REGISTRATION">
+</action>
+<action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED">
+</action>
+<action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED">
+</action>
+<action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED">
+</action>
+<action android:name="cn.jpush.android.intent.CONNECTION">
+</action>
+<category android:name="com.csii.xinzheng">
+</category>
+</intent-filter>
+</receiver>
+<receiver android:name="com.csii.xz.jpush.MyJPushMessageReceiver">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.RECEIVE_MESSAGE">
+</action>
+<category android:name="com.csii.xinzheng">
+</category>
+</intent-filter>
+</receiver>
+<activity android:configChanges="0x000000A0" android:launchMode="1" android:name="com.csii.ui.ViewPagerActivity" android:screenOrientation="1" android:theme="@android:01030009">
+</activity>
+<activity android:configChanges="0x000000A0" android:launchMode="2" android:name="com.csii.ui.LoginActivity" android:screenOrientation="1" android:theme="@android:01030009">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.csii.ui.MenuListActivity" android:screenOrientation="1" android:theme="@android:01030009">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.csii.ui.CustomListActivity" android:screenOrientation="1" android:theme="@android:01030009">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.csii.zxing.CaptureActivity" android:screenOrientation="1" android:theme="@android:01030009">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.csii.zxing.CreateActivity" android:screenOrientation="1" android:theme="@android:01030009">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.csii.zxing.Detailed" android:screenOrientation="1" android:theme="@android:01030009">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.csii.zxing.IndexActivity" android:screenOrientation="1" android:theme="@android:01030009">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.csii.ui.myserver.ChangeNameActivity" android:screenOrientation="1" android:theme="@android:01030009">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.csii.ui.myserver.ChangeNameConfirmAcvtivity" android:screenOrientation="1" android:theme="@android:01030009">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.csii.ui.myserver.ChangeNameResultActivity" android:screenOrientation="1" android:theme="@android:01030009">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.csii.ui.myserver.ChangeInformationActivity" android:screenOrientation="1" android:theme="@android:01030009">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.csii.ui.cashier.DayAccountActivity" android:screenOrientation="1" android:theme="@android:01030009">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.csii.ui.securitycenter.SafeAuthenticActivity" android:screenOrientation="1" android:theme="@android:01030009">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.csii.ui.securitycenter.SuspenMobileBankActivity" android:screenOrientation="1" android:theme="@android:01030009">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.csii.ui.securitycenter.DevReleaseBindingActivity" android:screenOrientation="1" android:theme="@android:01030009">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.csii.ui.securitycenter.ReservedAnswerQuestActivity" android:screenOrientation="1" android:theme="@android:01030009">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.csii.ui.securitycenter.ReservedInfoActivity" android:screenOrientation="1" android:theme="@android:01030009">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.csii.ui.securitycenter.ReservedResultActivity" android:screenOrientation="1" android:theme="@android:01030009">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.csii.ui.securitycenter.SecretQuestionActivity" android:screenOrientation="1" android:theme="@android:01030009">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.csii.ui.securitycenter.SecretResetActivity" android:screenOrientation="1" android:theme="@android:01030009">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.csii.ui.securitycenter.SecretAddActivity" android:screenOrientation="1" android:theme="@android:01030009">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.csii.ui.securitycenter.FunctionLimitActivity" android:screenOrientation="1" android:theme="@android:01030009">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.csii.ui.securitycenter.FunctionSetActivity" android:screenOrientation="1" android:theme="@android:01030009">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.csii.ui.securitycenter.FunctionConfirmActivity" android:screenOrientation="1" android:theme="@android:01030009">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.csii.ui.securitycenter.FunctionResultActivity" android:screenOrientation="1" android:theme="@android:01030009">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.csii.ui.securitycenter.AccountProtectActivity" android:screenOrientation="1" android:theme="@android:01030009">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.csii.ui.customserver.CustomServerActivity" android:screenOrientation="1" android:theme="@android:01030009">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.csii.ui.register.RegisterAuthenticationActivity" android:screenOrientation="1" android:theme="@7F0E000E">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.csii.ui.register.AuthenticationResultActivity" android:screenOrientation="1" android:theme="@android:01030009">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.csii.ui.register.RegisterInputActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.csii.ui.register.RegisterConfirmActivity" android:screenOrientation="1" android:theme="@android:01030009" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.csii.ui.register.RegisterResultActivity" android:screenOrientation="1" android:theme="@android:01030009">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.csii.update.CheckUpdateActivity" android:screenOrientation="1" android:theme="@android:01030009">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.csii.ui.nofinance.audiokey.AudioActivity" android:screenOrientation="1" android:theme="@android:01030009">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.csii.ui.nofinance.fwrx.WebPhoneActivity" android:screenOrientation="1" android:theme="@android:01030009">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.csii.ui.finance.two_dimension_code.CreateTDCPreActivity" android:screenOrientation="1" android:theme="@android:01030009">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.csii.ui.finance.two_dimension_code.CreateTDCActivity" android:screenOrientation="1" android:theme="@android:01030009">
+</activity>
+<service android:enabled="true" android:name="com.csii.antihijack.AntiService">
+</service>
+<activity android:configChanges="0x000000A0" android:name="com.csii.add.MyFaceRecognizeResultActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.csii.add.LivingActivity" android:screenOrientation="1" android:theme="@android:01030009">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.csii.add.ResetDealPwdResultActivity" android:screenOrientation="1" android:theme="@android:01030009">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.csii.add.RectCameraActivity" android:screenOrientation="0" android:theme="@android:01030009">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.csii.add.GestureModifyActivity" android:screenOrientation="1" android:theme="@android:01030009">
+</activity>
+<activity android:configChanges="0x000000A0" android:launchMode="2" android:name="com.csii.add.GestureLoginActivity" android:screenOrientation="1" android:theme="@android:01030009">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.csii.add.GusturePwdActivity" android:screenOrientation="1" android:theme="@android:01030009">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.csii.add.GestureEditActivity" android:screenOrientation="1" android:theme="@android:01030009">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.csii.add.IndicatorActivity" android:screenOrientation="1" android:theme="@7F0E01B3">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.csii.add.ShakeGetBalance" android:screenOrientation="1" android:theme="@android:01030009">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.csii.add.ShareToOtherActivity" android:screenOrientation="1" android:theme="@android:01030009">
+</activity>
+<service android:name="com.amap.api.location.APSService">
+</service>
+<activity android:configChanges="0x000000A0" android:name="com.csii.add.web.MyWebViewActivity" android:screenOrientation="1" android:theme="@android:01030009">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.csii.add.WelcomeActivity" android:screenOrientation="1" android:theme="@android:01030009">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.csii.add.FacingSetActivity" android:screenOrientation="1" android:theme="@android:01030009">
+</activity>
+<activity android:configChanges="0x000000A0" android:launchMode="2" android:name="com.csii.add.FaceLoginActivity" android:screenOrientation="1" android:theme="@android:01030009">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.csii.add.UnitedActivity" android:screenOrientation="1" android:theme="@android:01030009">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.csii.jiaozuo.QRPayCodeActivity" android:screenOrientation="1" android:theme="@android:01030009">
+</activity>
+<activity android:name="com.csii.uiremake.activity.ProductDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.csii.uiremake.activity.PropertyFundListActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.csii.uiremake.activity.PropertyFixedListActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.csii.uiremake.activity.MyNewWebActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.csii.uiremake.activity.InvestDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.csii.uiremake.activity.NewMenuListActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.csii.uiremake.activity.youle.YLLimitApplyResultActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.csii.uiremake.activity.youle.YLLimitApplyResultNewActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.csii.uiremake.activity.youle.YLReLimitApplyActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.csii.uiremake.activity.youle.YLRepayEarlyDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.csii.uiremake.activity.youle.YLRepayEarlyStateActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.csii.uiremake.activity.youle.YLRepayEarlyStatusActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.csii.uiremake.activity.youle.YLRepayPlan2Activity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.csii.uiremake.activity.youle.YLRepayPlanActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.csii.uiremake.activity.HKEDownloadCertificateActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.csii.uiremake.activity.DepositQryActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.csii.uiremake.activity.DepositQryResultActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.cloudwalk.libproject.OcrCameraActivity" android:screenOrientation="0">
+</activity>
+<activity android:name="cn.cloudwalk.libproject.LiveStartActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.cloudwalk.libproject.LiveResultActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.cloudwalk.libproject.BankCardResultActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.csii.xz.ui.XZ_SYT_ForgetPwdActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.csii.xz.ui.XZ_SYT_SMPayResultActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.csii.xz.ui.XZ_SYT_PAYActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.csii.xz.ui.XZ_SYT_TongjiAll_Activity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.csii.xz.ui.XZ_SYT_QryListActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.csii.xz.ui.XZ_SYT_QryDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.csii.xz.ui.FinanceListActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.csii.xz.ui.FinanceListDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.csii.xz.ui.VersionQryActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.csii.xz.ui.Gywm_Activity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.csii.xz.ui.Yjfk_Activity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.csii.xz.ui.XZDK_DetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.csii.xz.ui.NoticeDetailActivity" android:screenOrientation="1" android:theme="@7F0E000E">
+</activity>
+<activity android:name="com.csii.xz.ui.XZ_SYT_SettingActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.csii.xz.ui.XZ_SYT_ResetPwdActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.csii.xz.ui.XZ_SYT_ResetPwdResultActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.csii.xz.ui.SystemSettingActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.csii.xz.ui.SettingNiChengActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.csii.xz.ui.ResetPwdActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.csii.xz.ui.SettingPhoneActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.csii.xz.ui.ForgetPwdActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.csii.xz.ui.ForgetPwdConfirmActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.csii.xz.ui.XZ_SYT_ForgetPwdConfirmActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.csii.xz.ui.ProtocalWebActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.csii.xz.ui.PHD_ApplyActivity" android:screenOrientation="1" android:theme="@7F0E000E">
+</activity>
+<activity android:name="com.csii.xz.ui.LSD_ApplyActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.csii.xz.ui.XjdApplyActivity" android:screenOrientation="1" android:theme="@7F0E000E">
+</activity>
+<activity android:name="com.csii.xz.ui.DydApplyActivity" android:screenOrientation="1" android:theme="@7F0E000E">
+</activity>
+<activity android:name="com.csii.xiaohe.mine.ReplyActivity" android:screenOrientation="1" android:theme="@7F0E000E">
+</activity>
+<activity android:exported="false" android:name="com.csii.xiaohe.mine.OnlineMessageActivity" android:screenOrientation="1" android:theme="@7F0E000E">
+</activity>
+<activity android:exported="false" android:name="com.csii.xiaohe.mine.DydHistoryActivity" android:screenOrientation="1" android:theme="@7F0E000E">
+</activity>
+<activity android:exported="false" android:name="com.csii.xiaohe.mine.DydHistoryDetailActivity" android:screenOrientation="1" android:theme="@7F0E000E">
+</activity>
+<activity android:exported="false" android:name="com.csii.xiaohe.mine.AuthIDActivity" android:screenOrientation="1" android:theme="@7F0E000E">
+</activity>
+<activity android:exported="false" android:name="com.csii.xiaohe.mine.ConfirmCardNoActivity" android:screenOrientation="1" android:theme="@7F0E000E">
+</activity>
+<activity android:exported="false" android:name="com.csii.xiaohe.mine.ConfirmIDCardActivity" android:screenOrientation="1" android:theme="@7F0E000E">
+</activity>
+<activity android:exported="false" android:name="com.csii.xiaohe.mine.LoanListActivity" android:screenOrientation="1" android:theme="@7F0E000E">
+</activity>
+<activity android:exported="false" android:name="com.csii.xiaohe.mine.LoanDetailActivity" android:screenOrientation="1" android:theme="@7F0E000E">
+</activity>
+<activity android:exported="false" android:name="com.csii.xiaohe.mine.RepaymentListActivity" android:screenOrientation="1" android:theme="@7F0E000E">
+</activity>
+<activity android:exported="false" android:name="com.csii.xiaohe.mine.RepaymentDetailActivity" android:screenOrientation="1" android:theme="@7F0E000E">
+</activity>
+<activity android:exported="false" android:name="com.csii.xiaohe.mine.CardBagActivity" android:screenOrientation="1" android:theme="@7F0E000E">
+</activity>
+<activity android:exported="false" android:name="com.csii.xiaohe.mine.AddBankCardActivity" android:screenOrientation="1" android:theme="@7F0E000E">
+</activity>
+<activity android:exported="false" android:name="com.csii.xiaohe.mine.AddEmpActivity" android:screenOrientation="1" android:theme="@7F0E000E">
+</activity>
+<activity android:exported="false" android:name="com.csii.xiaohe.mine.SubmitEmpActivity" android:screenOrientation="1" android:theme="@7F0E000E">
+</activity>
+<activity android:exported="false" android:name="com.csii.xiaohe.mine.ShowEmpActivity" android:screenOrientation="1" android:theme="@7F0E000E">
+</activity>
+<activity android:exported="false" android:name="com.csii.xz.ui.LoanAuthActivity" android:screenOrientation="1" android:theme="@7F0E000E">
+</activity>
+<activity android:name="com.sensetime.sample.common.idcard.IdCardActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sensetime.sample.common.bankcard.BankCardActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sensetime.liveness.motion.MotionLivenessActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.csii.xiaohe.mine.ActivationUseActivity" android:screenOrientation="1" android:theme="@7F0E000E" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name="com.csii.xiaohe.mine.SytHelpActivity" android:screenOrientation="1" android:theme="@7F0E000E">
+</activity>
+<activity android:name="com.csii.xz.ui.BigImageActivity" android:screenOrientation="1" android:theme="@7F0E000E">
+</activity>
+<activity android:name="com.csii.xiaohe.mine.SytLoginActivity" android:theme="@7F0E000E">
+</activity>
+<activity android:exported="false" android:label="" android:name="pub.devrel.easypermissions.AppSettingsDialogHolderActivity" android:theme="@7F0E00B6">
+</activity>
+<activity android:launchMode="2" android:name="com.mylhyl.acp.AcpActivity" android:theme="@7F0E014E">
+</activity>
+</application>
+</manifest>

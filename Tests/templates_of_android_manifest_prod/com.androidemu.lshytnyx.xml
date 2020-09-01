@@ -1,0 +1,68 @@
+<?xml version="1.0" ?><manifest android:installLocation="0" android:versionCode="1" android:versionName="1.0" package="com.androidemu.lshytnyx" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="7" android:targetSdkVersion="15">
+</uses-sdk>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<application android:icon="@7F020000" android:label="@7F060000">
+<activity android:configChanges="0x000000A0" android:name="com.androidemu.lshytnyx.Home">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:name="com.androidemu.lshytnyx.FileChooser">
+</activity>
+<activity android:name="com.androidemu.lshytnyx.StateSlotsActivity">
+</activity>
+<activity android:name="com.androidemu.lshytnyx.HelpActivity">
+</activity>
+<activity android:name="com.androidemu.lshytnyx.EmulatorSettings" android:process=":emulator">
+</activity>
+<activity android:configChanges="0x00000020" android:launchMode="2" android:name="com.androidemu.lshytnyx.EmulatorActivity" android:process=":emulator" android:screenOrientation="0">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:scheme="file">
+</data>
+<data android:mimeType="application/*">
+</data>
+</intent-filter>
+</activity>
+<service android:name="com.androidemu.lshytnyx.EmulatorService" android:process=":emulator">
+</service>
+<activity android:configChanges="0x000000A0" android:launchMode="2" android:name="com.nd.dianjin.activity.OfferAppActivity">
+</activity>
+<activity android:configChanges="0x000000A0" android:launchMode="1" android:name="com.nd.dianjin.activity.DownloadManagerActivity">
+</activity>
+<activity android:configChanges="0x000000A0" android:launchMode="1" android:name="com.nd.dianjin.activity.DetailActivity" android:theme="@android:01030009">
+</activity>
+<service android:name="com.nd.dianjin.appdownload.DownloadService">
+<intent-filter>
+<action android:name="com.androidemu.lshytnyx">
+</action>
+</intent-filter>
+</service>
+<service android:name="com.nd.dianjin.service.PackageChangedService">
+</service>
+</application>
+</manifest>

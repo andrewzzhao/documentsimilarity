@@ -1,0 +1,34 @@
+<?xml version="1.0" ?><manifest android:versionCode="3" android:versionName="2.1" package="com.positive.guruGobindSinghJi" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="9" android:targetSdkVersion="21">
+</uses-sdk>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-feature android:name="android.software.live_wallpaper" android:required="true">
+</uses-feature>
+<application android:allowBackup="false" android:icon="@7F020026" android:label="@7F08001A" android:largeHeap="true">
+<activity android:label="@7F08001A" android:name="com.base.LaunchDispatcher" android:theme="@android:01030055">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.INFO">
+</category>
+</intent-filter>
+</activity>
+<service android:enabled="true" android:label="@7F08001A" android:name="com.base.HexagonalWallpaperService" android:permission="android.permission.BIND_WALLPAPER">
+<intent-filter android:priority="1">
+<action android:name="android.service.wallpaper.WallpaperService">
+</action>
+</intent-filter>
+<meta-data android:name="android.service.wallpaper" android:resource="@7F050003">
+</meta-data>
+</service>
+<activity android:exported="true" android:label="@7F08001A" android:name="com.base.SettingsActivity">
+</activity>
+<meta-data android:name="com.google.android.gms.version" android:value="@7F0A0000">
+</meta-data>
+<activity android:configChanges="0x00000FB0" android:name="com.google.android.gms.ads.AdActivity" android:theme="@android:0103000F">
+</activity>
+</application>
+</manifest>

@@ -1,0 +1,178 @@
+<?xml version="1.0" ?><manifest android:versionCode="1" android:versionName="1.0" package="com.shgr" platformBuildVersionCode="23" platformBuildVersionName="6.0-2704002" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-permission android:name="android.permission.READ_LOGS">
+</uses-permission>
+<uses-sdk android:minSdkVersion="15" android:targetSdkVersion="23">
+</uses-sdk>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.BROADCAST_PACKAGE_ADDED">
+</uses-permission>
+<uses-permission android:name="android.permission.BROADCAST_PACKAGE_CHANGED">
+</uses-permission>
+<uses-permission android:name="android.permission.BROADCAST_PACKAGE_INSTALL">
+</uses-permission>
+<uses-permission android:name="android.permission.BROADCAST_PACKAGE_REPLACED">
+</uses-permission>
+<uses-permission android:name="android.permission.RESTART_PACKAGES">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<android:uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</android:uses-permission>
+<application android:allowBackup="true" android:icon="@7F02005F" android:label="@7F060015" android:name="com.tencent.StubShell.TxAppEntry" android:supportsRtl="true" android:theme="@android:010300F0">
+<meta-data android:name="TxAppEntry" android:value="com.shgr.AppApplication">
+</meta-data>
+<meta-data android:name="UMENG_APPKEY" android:value="5859e7afc62dca3ef30023e0">
+</meta-data>
+<meta-data android:name="UMENG_MESSAGE_SECRET" android:value="58552be033f85fa9d8e143aa72d92f62">
+</meta-data>
+<meta-data android:name="UMENG_CHANNEL" android:value="Channel ID">
+</meta-data>
+<activity android:name="com.shgr.ui.main.activity.LoginActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.shgr.ui.main.activity.CreateGestureActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.shgr.ui.main.activity.GestureLoginActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.shgr.ui.main.activity.PersonalCenterActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.shgr.ui.main.activity.WillDoActivity">
+</activity>
+<activity android:name="com.shgr.ui.main.activity.HistoryTaskActivity">
+</activity>
+<activity android:name="com.shgr.ui.main.activity.WebViewActivity">
+</activity>
+<activity android:name="com.shgr.ui.main.activity.LockActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:name="com.shgr.ui.main.activity.PermissionsActivity">
+</activity>
+<service android:exported="true" android:name="com.taobao.accs.ChannelService" android:process=":channel">
+<intent-filter>
+<action android:name="com.taobao.accs.intent.action.SERVICE">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="com.taobao.accs.intent.action.ELECTION">
+</action>
+</intent-filter>
+</service>
+<service android:exported="true" android:name="com.taobao.accs.data.MsgDistributeService">
+<intent-filter>
+<action android:name="com.taobao.accs.intent.action.RECEIVE">
+</action>
+</intent-filter>
+</service>
+<receiver android:name="com.taobao.accs.EventReceiver" android:process=":channel">
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_REMOVED">
+</action>
+<data android:scheme="package">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.USER_PRESENT">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:exported="false" android:name="com.taobao.accs.ServiceReceiver" android:process=":channel">
+<intent-filter>
+<action android:name="com.taobao.accs.intent.action.COMMAND">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="com.taobao.accs.intent.action.START_FROM_AGOO">
+</action>
+</intent-filter>
+</receiver>
+<service android:name="com.taobao.accs.ChannelService$KernelService" android:process=":channel">
+</service>
+<service android:exported="true" android:name="org.android.agoo.accs.AgooService">
+<intent-filter>
+<action android:name="com.taobao.accs.intent.action.RECEIVE">
+</action>
+</intent-filter>
+</service>
+<service android:exported="true" android:name="com.umeng.message.UmengIntentService" android:process=":channel">
+<intent-filter>
+<action android:name="org.agoo.android.intent.action.RECEIVE">
+</action>
+</intent-filter>
+</service>
+<receiver android:exported="true" android:name="com.taobao.agoo.AgooCommondReceiver">
+<intent-filter>
+<action android:name="com.shgr.intent.action.COMMAND">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_REMOVED">
+</action>
+<data android:scheme="package">
+</data>
+</intent-filter>
+</receiver>
+<receiver android:exported="false" android:name="com.umeng.message.NotificationProxyBroadcastReceiver">
+</receiver>
+<service android:exported="false" android:name="com.umeng.message.UmengMessageCallbackHandlerService">
+<intent-filter>
+<action android:name="com.umeng.messge.registercallback.action">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="com.umeng.message.enablecallback.action">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="com.umeng.message.disablecallback.action">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="com.umeng.message.message.handler.action">
+</action>
+</intent-filter>
+</service>
+<service android:exported="false" android:name="com.umeng.message.UmengDownloadResourceService">
+</service>
+<service android:exported="true" android:name="com.umeng.message.UmengMessageIntentReceiverService" android:process=":channel">
+<intent-filter>
+<action android:name="org.android.agoo.client.MessageReceiverService">
+</action>
+</intent-filter>
+</service>
+<provider android:authorities="com.shgr.umeng.message" android:exported="false" android:name="com.umeng.message.provider.MessageProvider">
+<grant-uri-permission android:pathPattern=".*">
+</grant-uri-permission>
+</provider>
+</application>
+</manifest>

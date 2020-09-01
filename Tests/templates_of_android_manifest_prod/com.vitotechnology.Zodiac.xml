@@ -1,0 +1,192 @@
+<?xml version="1.0" ?><manifest android:installLocation="2" android:targetSdkVersion="22" android:theme="@android:01030007" android:versionCode="10000041" android:versionName="1.0.0.41" package="com.vitotechnology.Zodiac" platformBuildVersionCode="25" platformBuildVersionName="7.1.1" xmlns:android="http://schemas.android.com/apk/res/android">
+<supports-screens android:anyDensity="true" android:largeScreens="true" android:normalScreens="true" android:smallScreens="true" android:xlargeScreens="true">
+</supports-screens>
+<application android:banner="@7F020000" android:debuggable="false" android:icon="@7F020001" android:isGame="true" android:label="@7F05001D" android:name="com.qihoo.util.StubApp4116945369" android:qihoo="activity">
+<meta-data android:name="unityplayer.SkipPermissionsDialog" android:value="true">
+</meta-data>
+<activity android:configChanges="0x40000FFF" android:label="@7F05001D" android:name="com.vitotechnology.common.GooglePlayBillingActivity">
+<meta-data android:name="unityplayer.ForwardNativeEventsToDalvik" android:value="true">
+</meta-data>
+<intent-filter>
+<action android:name="com.vitotechnology.Zodiac.MESSAGE">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.LEANBACK_LAUNCHER">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="spacemuseum">
+</data>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x40000FFF" android:label="@7F05001D" android:launchMode="0" android:name="com.qihoo.util.StartActivity" android:noHistory="true">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<service android:enabled="true" android:exported="false" android:name="com.qihoo.util.UpdateService">
+</service>
+<activity android:exported="false" android:name="com.qihoo.util.appupdate.AppUpdateActivity" android:theme="@android:0103000F">
+</activity>
+<service android:exported="false" android:name="com.qihoo.util.QhJobService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<activity android:configChanges="0x40000FFF" android:label="@7F05001D" android:name="com.unity3d.player.VideoPlayer">
+</activity>
+<receiver android:exported="true" android:name="com.google.android.gms.gcm.GcmReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+<category android:name="com.vitotechnology.Zodiac">
+</category>
+</intent-filter>
+</receiver>
+<activity android:name="com.unity3d.plugin.downloader.UnityDownloaderActivity">
+</activity>
+<service android:name="com.unity3d.plugin.downloader.UnityDownloaderService">
+</service>
+<receiver android:name="com.unity3d.plugin.downloader.UnityAlarmReceiver">
+</receiver>
+<activity android:name="com.pushwoosh.richpages.RichPageActivity">
+</activity>
+<activity android:name="com.pushwoosh.MessageActivity">
+</activity>
+<activity android:name="com.pushwoosh.PushHandlerActivity">
+</activity>
+<activity android:name="com.pushwoosh.inapp.WebActivity" android:theme="@android:01030010">
+</activity>
+<activity android:name="com.pushwoosh.internal.utils.PermissionActivity" android:theme="@android:01030010">
+</activity>
+<service android:name="com.pushwoosh.PushAmazonIntentService">
+</service>
+<service android:name="com.pushwoosh.inapp.InAppRetrieverService">
+</service>
+<service android:exported="false" android:name="com.pushwoosh.GCMListenerService">
+<intent-filter android:priority="-50">
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+</intent-filter>
+</service>
+<service android:exported="false" android:name="com.pushwoosh.GCMInstanceIDListenerService">
+<intent-filter android:priority="-50">
+<action android:name="com.google.android.gms.iid.InstanceID">
+</action>
+</intent-filter>
+</service>
+<service android:exported="false" android:name="com.pushwoosh.GCMRegistrationService">
+</service>
+<service android:name="com.pushwoosh.location.GeoLocationService">
+</service>
+<service android:enabled="true" android:exported="true" android:isolatedProcess="false" android:label="iBeacon" android:name="com.pushwoosh.thirdparty.radiusnetworks.ibeacon.service.IBeaconService">
+</service>
+<service android:enabled="true" android:name="com.pushwoosh.thirdparty.radiusnetworks.ibeacon.IBeaconIntentProcessor">
+</service>
+<service android:name="com.pushwoosh.beacon.PushBeaconService">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.pushwoosh.internal.utils.LockScreenService">
+</service>
+<receiver android:enabled="true" android:name="com.pushwoosh.local.BootReceiver" android:permission="android.permission.RECEIVE_BOOT_COMPLETED">
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</receiver>
+<receiver android:name="com.pushwoosh.local.AlarmReceiver">
+</receiver>
+<receiver android:name="com.pushwoosh.unityplugin.IntentReceiver">
+</receiver>
+<meta-data android:name="com.google.android.gms.version" android:value="@7F040000">
+</meta-data>
+<meta-data android:name="PW_NOTIFICATION_RECEIVER" android:value="com.pushwoosh.unityplugin.IntentReceiver">
+</meta-data>
+<activity android:configChanges="0x00000FB0" android:name="com.google.android.gms.ads.AdActivity" android:theme="@android:0103000F">
+</activity>
+<activity android:name="com.google.android.gms.ads.purchase.InAppPurchaseActivity" android:theme="@7F070000">
+</activity>
+<activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:01030010">
+</activity>
+</application>
+<uses-feature android:glEsVersion="0x00020000">
+</uses-feature>
+<uses-feature android:name="android.hardware.wifi" android:required="false">
+</uses-feature>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<permission android:name="com.vitotechnology.Zodiac.permission.C2D_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="com.vitotechnology.Zodiac.permission.C2D_MESSAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE">
+</uses-permission>
+<uses-permission android:name="com.android.vending.CHECK_LICENSE">
+</uses-permission>
+<uses-permission android:name="android.permission.BROADCAST_STICKY">
+</uses-permission>
+<uses-sdk android:minSdkVersion="15" android:targetSdkVersion="25">
+</uses-sdk>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="com.amazon.device.messaging.permission.RECEIVE">
+</uses-permission>
+<uses-permission android:name="com.sec.android.provider.badge.permission.READ">
+</uses-permission>
+<uses-permission android:name="com.sec.android.provider.badge.permission.WRITE">
+</uses-permission>
+<uses-permission android:name="com.htc.launcher.permission.READ_SETTINGS">
+</uses-permission>
+<uses-permission android:name="com.htc.launcher.permission.UPDATE_SHORTCUT">
+</uses-permission>
+<uses-permission android:name="com.sonyericsson.home.permission.BROADCAST_BADGE">
+</uses-permission>
+<uses-permission android:name="com.sonymobile.home.permission.PROVIDER_INSERT_BADGE">
+</uses-permission>
+<uses-permission android:name="com.anddoes.launcher.permission.UPDATE_COUNT">
+</uses-permission>
+<uses-permission android:name="com.majeur.launcher.permission.UPDATE_BADGE">
+</uses-permission>
+<uses-permission android:name="com.huawei.android.launcher.permission.CHANGE_BADGE">
+</uses-permission>
+<uses-permission android:name="com.huawei.android.launcher.permission.READ_SETTINGS">
+</uses-permission>
+<uses-permission android:name="com.huawei.android.launcher.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_APP_BADGE">
+</uses-permission>
+<uses-permission android:name="com.oppo.launcher.permission.READ_SETTINGS">
+</uses-permission>
+<uses-permission android:name="com.oppo.launcher.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-feature android:name="android.hardware.touchscreen" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.touchscreen.multitouch" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.touchscreen.multitouch.distinct" android:required="false">
+</uses-feature>
+</manifest>

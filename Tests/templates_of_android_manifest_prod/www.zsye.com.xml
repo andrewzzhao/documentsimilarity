@@ -1,0 +1,308 @@
+<?xml version="1.0" ?><manifest android:versionCode="51" android:versionName="7.2.0" package="www.zsye.com" platformBuildVersionCode="19" platformBuildVersionName="4.4.2-1456859" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="9" android:targetSdkVersion="19">
+</uses-sdk>
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW">
+</uses-permission>
+<permission android:name="www.zsye.com.permission.JPUSH_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-permission android:name="www.zsye.com.permission.JPUSH_MESSAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_USER_PRESENT">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.CALL_PHONE">
+</uses-permission>
+<uses-permission android:name="android.permission.RESTART_PACKAGES">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-permission android:name="android.permission.MANAGE_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_ACCOUNTS">
+</uses-permission>
+<supports-screens android:anyDensity="true" android:largeScreens="true" android:normalScreens="true" android:resizeable="true" android:smallScreens="true">
+</supports-screens>
+<application android:icon="@7F0200C7" android:label="@7F0B001E" android:name="com.qihoo.util.StubApp3628365867" android:qihoo="activity" android:theme="@7F080039">
+<service android:enabled="true" android:exported="false" android:name="cn.jpush.android.service.PushService">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.REGISTER">
+</action>
+<action android:name="cn.jpush.android.intent.REPORT">
+</action>
+<action android:name="cn.jpush.android.intent.PushService">
+</action>
+<action android:name="cn.jpush.android.intent.PUSH_TIME">
+</action>
+</intent-filter>
+</service>
+<receiver android:enabled="true" android:name="cn.jpush.android.service.PushReceiver">
+<intent-filter android:priority="1000">
+<action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY">
+</action>
+<category android:name="www.zsye.com">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.USER_PRESENT">
+</action>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_ADDED">
+</action>
+<action android:name="android.intent.action.PACKAGE_REMOVED">
+</action>
+<data android:scheme="www.zsye.com">
+</data>
+</intent-filter>
+</receiver>
+<activity android:configChanges="0x000000A0" android:name="cn.jpush.android.ui.PushActivity" android:screenOrientation="1" android:theme="@android:01030010">
+<intent-filter>
+<action android:name="cn.jpush.android.ui.PushActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="www.zsye.com">
+</category>
+</intent-filter>
+</activity>
+<service android:exported="false" android:name="com.qihoo.util.QhJobService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<activity android:excludeFromRecents="true" android:exported="false" android:name="com.qihoo.util.CommonActivity" android:theme="@android:0103005F">
+</activity>
+<service android:enabled="true" android:exported="true" android:name="com.qihoo.util.CommonService">
+</service>
+<receiver android:enabled="true" android:exported="false" android:name="com.qihoo.util.CommonReceiver">
+</receiver>
+<provider android:authorities="www.zsye.com.COMMONPROVIDER" android:exported="true" android:name="com.qihoo.util.CommonProvider">
+</provider>
+<activity android:configChanges="0x000000A0" android:exported="false" android:launchMode="2" android:name="com.qihoo.ls.LsActivity" android:screenOrientation="1" android:theme="@android:01030060">
+</activity>
+<service android:exported="false" android:name="com.qihoo.ls.SoService">
+</service>
+<service android:enabled="true" android:exported="false" android:name="cn.jpush.android.service.DownloadService">
+</service>
+<receiver android:name="cn.jpush.android.service.AlarmReceiver">
+</receiver>
+<receiver android:enabled="true" android:name="www.zsye.com.filter.PushMessageReceive">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.REGISTRATION">
+</action>
+<action android:name="cn.jpush.android.intent.UNREGISTRATION">
+</action>
+<action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED">
+</action>
+<action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED">
+</action>
+<action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED">
+</action>
+<action android:name="cn.jpush.android.intent.ACTION_RICHPUSH_CALLBACK">
+</action>
+<category android:name="www.zsye.com">
+</category>
+</intent-filter>
+</receiver>
+<receiver android:name="www.zsye.com.filter.PhoneStatReceiver">
+<intent-filter>
+<action android:name="android.intent.action.PHONE_STATE">
+</action>
+<action android:name="android.intent.action.NEW_OUTGOING_CALL">
+</action>
+</intent-filter>
+</receiver>
+<meta-data android:name="JPUSH_CHANNEL" android:value="developer-default">
+</meta-data>
+<meta-data android:name="JPUSH_APPKEY" android:value="ed143bf0587d0e9ec337f344">
+</meta-data>
+<activity android:configChanges="0x000000A4" android:launchMode="1" android:name="www.zsye.com.ui.LoadingActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<service android:name="www.zsye.com.filter.MusicService">
+<intent-filter>
+<action android:name="play">
+</action>
+<action android:name="pause">
+</action>
+<action android:name="setplay">
+</action>
+<action android:name="changed">
+</action>
+<action android:name="loops">
+</action>
+<action android:name="stop">
+</action>
+<action android:name="stopnotification">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</service>
+<activity android:configChanges="0x000000A4" android:launchMode="0" android:name="www.zsye.com.ui.HomeActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:configChanges="0x000000A4" android:launchMode="1" android:name="www.zsye.com.ui.DetailsTodayActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:configChanges="0x000000A4" android:launchMode="1" android:name="www.zsye.com.ui.SourceActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:configChanges="0x000000A4" android:launchMode="1" android:name="www.zsye.com.ui.SearchActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A4" android:launchMode="1" android:name="www.zsye.com.ui.ExpertsAdviseActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:configChanges="0x000000A4" android:launchMode="0" android:name="www.zsye.com.ui.HomeWebActivity" android:screenOrientation="1" android:theme="@7F080052" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:configChanges="0x000000A4" android:launchMode="1" android:name="www.zsye.com.ui.albums.MyAlbumsActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:configChanges="0x000000A4" android:launchMode="1" android:name="www.zsye.com.ui.albums.AlbumsActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:configChanges="0x000000A4" android:launchMode="1" android:name="www.zsye.com.ui.albums.UploadPhotoActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:configChanges="0x000000A4" android:launchMode="1" android:name="www.zsye.com.ui.albums.AlbumsDetialActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:configChanges="0x000000A4" android:launchMode="1" android:name="www.zsye.com.ui.albums.HisAlbumsActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:configChanges="0x000000A4" android:launchMode="1" android:name="www.zsye.com.ui.found.PersonalDoctorActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:configChanges="0x000000A4" android:launchMode="1" android:name="www.zsye.com.ui.found.SongsListActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000000A4" android:launchMode="1" android:name="www.zsye.com.ui.found.PersonDocInformation" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000000A4" android:launchMode="1" android:name="www.zsye.com.ui.found.DetailActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:configChanges="0x000000A4" android:launchMode="1" android:name="www.zsye.com.ui.found.CommentActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:configChanges="0x000000A4" android:launchMode="1" android:name="www.zsye.com.ui.found.SongsStoryDetailsActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:configChanges="0x000000A4" android:launchMode="1" android:name="www.zsye.com.ui.found.DoctorDetailActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:configChanges="0x000000A4" android:launchMode="1" android:name="www.zsye.com.ui.found.WriteCommentActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000000A4" android:launchMode="1" android:name="www.zsye.com.ui.found.DownloadedSongListActivyt" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:configChanges="0x000000A4" android:launchMode="1" android:name="www.zsye.com.ui.found.StorysListActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000000A4" android:launchMode="1" android:name="www.zsye.com.ui.found.FlashSalesActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:configChanges="0x000000A4" android:launchMode="1" android:name="www.zsye.com.ui.qa.QuestionActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:configChanges="0x000000A4" android:launchMode="1" android:name="www.zsye.com.ui.qa.QABigPhotoActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:configChanges="0x000000A4" android:launchMode="1" android:name="www.zsye.com.ui.qa.PutQuestionActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:configChanges="0x000000A4" android:launchMode="1" android:name="www.zsye.com.ui.qa.QuestionDetailActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:configChanges="0x000000A4" android:launchMode="1" android:name="www.zsye.com.ui.qa.QuickPostActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:configChanges="0x000000A4" android:launchMode="1" android:name="www.zsye.com.ui.qa.HisQuestionActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:configChanges="0x000000A4" android:launchMode="1" android:name="www.zsye.com.ui.qa.LocalPhotosActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:configChanges="0x000000A4" android:launchMode="1" android:name="www.zsye.com.ui.personal.PPTActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:configChanges="0x000000A4" android:launchMode="1" android:name="www.zsye.com.ui.albums.BigPhotoActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:configChanges="0x000000A4" android:launchMode="1" android:name="www.zsye.com.ui.personal.AddFriendActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:configChanges="0x000000A4" android:launchMode="1" android:name="www.zsye.com.ui.personal.MyFriendsActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:configChanges="0x000000A4" android:launchMode="1" android:name="www.zsye.com.ui.personal.HisInformationActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:configChanges="0x000000A4" android:launchMode="1" android:name="www.zsye.com.ui.personal.ModifyStateActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000000A4" android:launchMode="1" android:name="www.zsye.com.ui.personal.SwitchingAccountActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:configChanges="0x000000A4" android:launchMode="1" android:name="www.zsye.com.ui.personal.PersonalCollectActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:configChanges="0x000000A4" android:launchMode="1" android:name="www.zsye.com.ui.personal.MemberBenefitsActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:configChanges="0x000000A4" android:launchMode="1" android:name="www.zsye.com.ui.personal.MyAchievementsActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:configChanges="0x000000A4" android:name="www.zsye.com.ui.personal.FindResultsActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:configChanges="0x000000A4" android:name="www.zsye.com.ui.personal.InformationActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:configChanges="0x000000A4" android:launchMode="1" android:name="www.zsye.com.ui.setting.FeedbackActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:configChanges="0x000000A4" android:name="www.zsye.com.ui.setting.AboutUsActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:configChanges="0x000000A4" android:name="www.zsye.com.ui.setting.SetActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:configChanges="0x000000A4" android:name="www.zsye.com.ui.setting.PointsDescriptionActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:configChanges="0x000000A4" android:launchMode="1" android:name="www.zsye.com.ui.signin.PerfectInformationActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000000A4" android:name="www.zsye.com.ui.signin.ForgotPasswordActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000000A4" android:name="www.zsye.com.ui.signin.ServiceAgreementActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:configChanges="0x000000A4" android:name="www.zsye.com.ui.signin.InformationUnLogActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:configChanges="0x000000A4" android:name="www.zsye.com.ui.signin.ThirdUserLoginActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000000A4" android:name="www.zsye.com.ui.signin.BindUserActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000000A4" android:name="www.zsye.com.ui.signin.LogModifyActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000000A4" android:name="www.zsye.com.ui.signin.SelectCityActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:configChanges="0x000000A4" android:name="www.zsye.com.ui.share.BindActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:configChanges="0x000000A4" android:name="www.zsye.com.ui.share.FriendsListActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000000A4" android:name="www.zsye.com.ui.share.InviteFriendActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000000A4" android:name="www.zsye.com.ui.share.ShareMsgActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000000A4" android:launchMode="1" android:name="www.zsye.com.ui.share.ShareOptionDialog" android:screenOrientation="1" android:theme="@7F080052" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="cn.sharesdk.framework.ShareSDKUIShell" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+<meta-data android:name="Adapter" android:value=".ui.share.ShareAdapter">
+</meta-data>
+</activity>
+<activity android:configChanges="0x000004A0" android:exported="true" android:name="www.zsye.com.wxapi.WXEntryActivity" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<meta-data android:name="UMENG_APPKEY" android:value="544e0c83fd98c5dc9c003fd0">
+</meta-data>
+<meta-data android:name="UMENG_CHANNEL" android:value="QQ">
+</meta-data>
+</application>
+</manifest>

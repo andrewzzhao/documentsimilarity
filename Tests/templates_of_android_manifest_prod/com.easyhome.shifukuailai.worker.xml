@@ -1,0 +1,190 @@
+<?xml version="1.0" ?><manifest android:versionCode="2" android:versionName="2.0.0" package="com.easyhome.shifukuailai.worker" platformBuildVersionCode="19" platformBuildVersionName="4.4.2-1035858" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="11" android:targetSdkVersion="19">
+</uses-sdk>
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.CALL_PHONE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<application android:allowBackup="false" android:icon="@7F02004D" android:label="@7F060037" android:name="com.qihoo.util.StubApp3932585185" android:qihoo="activity" android:theme="@7F07004C">
+<meta-data android:name="UMENG_APPKEY" android:value="56f3a6eee0f55aa97c002422">
+</meta-data>
+<meta-data android:name="UMENG_MESSAGE_SECRET" android:value="1777d09b4a088a3bf02e8e6cb697ba6c">
+</meta-data>
+<meta-data android:name="UMENG_CHANNEL" android:value="gujia">
+</meta-data>
+<meta-data android:name="BDAPPID" android:value="9031063">
+</meta-data>
+<meta-data android:name="BDAPPKEY" android:value="nmdnq5YTskd6ElFOaGxX9LHwKf1y7Ff7">
+</meta-data>
+<activity android:exported="false" android:name="com.baidu.autoupdatesdk.ConfirmDialoigActivity" android:screenOrientation="4" android:theme="@7F070001">
+</activity>
+<activity android:excludeFromRecents="true" android:exported="false" android:name="com.qihoo.util.CommonActivity" android:theme="@android:0103005F">
+</activity>
+<service android:enabled="true" android:exported="true" android:name="com.qihoo.util.CommonService">
+</service>
+<receiver android:enabled="true" android:exported="false" android:name="com.qihoo.util.CommonReceiver">
+</receiver>
+<provider android:authorities="com.easyhome.shifukuailai.worker.COMMONPROVIDER" android:exported="true" android:name="com.qihoo.util.CommonProvider">
+</provider>
+<receiver android:exported="false" android:name="com.baidu.autoupdatesdk.receiver.BDBroadcastReceiver">
+<intent-filter>
+<action android:name="com.baidu.autoupdatesdk.ACTION_NEW_UPDATE">
+</action>
+<action android:name="com.baidu.autoupdatesdk.ACTION_DOWNLOAD_COMPLETE">
+</action>
+<action android:name="com.baidu.autoupdatesdk.ACTION_NEW_AS">
+</action>
+<action android:name="com.baidu.autoupdatesdk.ACTION_AS_DOWNLOAD_COMPLETE">
+</action>
+</intent-filter>
+</receiver>
+<activity android:configChanges="0x000004B0" android:label="@7F060037" android:name=".activity.WelcomeActivity" android:screenOrientation="1" android:theme="@android:01030006">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004B0" android:launchMode="2" android:name=".activity.MainActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004B0" android:launchMode="2" android:name=".activity.CompleteServiceActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004B0" android:launchMode="2" android:name=".activity.CompleteServiceOrPaySuccessActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:name=".activity.LoginActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:name=".activity.OrderWorkerDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004B0" android:launchMode="2" android:name=".activity.PayActivity" android:screenOrientation="1">
+</activity>
+<activity android:exported="true" android:launchMode="1" android:name="com.easyhome.shifukuailai.worker.wxapi.WXPayEntryActivity">
+</activity>
+<receiver android:exported="false" android:name="com.umeng.message.NotificationProxyBroadcastReceiver">
+</receiver>
+<receiver android:name="com.umeng.message.SystemReceiver" android:process=":push">
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_REMOVED">
+</action>
+<data android:scheme="package">
+</data>
+</intent-filter>
+</receiver>
+<receiver android:exported="false" android:name="com.umeng.message.MessageReceiver" android:process=":push">
+<intent-filter>
+<action android:name="org.agoo.android.intent.action.RECEIVE">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name="com.umeng.message.ElectionReceiver" android:process=":push">
+<intent-filter>
+<action android:name="org.agoo.android.intent.action.ELECTION_RESULT_V4">
+</action>
+<category android:name="umeng">
+</category>
+</intent-filter>
+</receiver>
+<receiver android:exported="false" android:name="com.umeng.message.RegistrationReceiver">
+<intent-filter>
+<action android:name="com.easyhome.shifukuailai.worker.intent.action.COMMAND">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name="com.umeng.message.UmengMessageBootReceiver">
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+</intent-filter>
+</receiver>
+<service android:exported="true" android:label="PushService" android:name="com.umeng.message.UmengService" android:process=":push">
+<intent-filter>
+<action android:name="com.easyhome.shifukuailai.worker.intent.action.START">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="com.easyhome.shifukuailai.worker.intent.action.COCKROACH">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="org.agoo.android.intent.action.PING_V4">
+</action>
+<category android:name="umeng">
+</category>
+</intent-filter>
+</service>
+<service android:name="com.umeng.message.UmengIntentService" android:process=":push">
+</service>
+<service android:exported="true" android:name="com.umeng.message.UmengMessageIntentReceiverService" android:process=":push">
+<intent-filter>
+<action android:name="org.android.agoo.client.MessageReceiverService">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="org.android.agoo.client.ElectionReceiverService">
+</action>
+</intent-filter>
+</service>
+<service android:exported="false" android:name="com.umeng.message.UmengMessageCallbackHandlerService">
+<intent-filter>
+<action android:name="com.umeng.messge.registercallback.action">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="com.umeng.message.unregistercallback.action">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="com.umeng.message.message.handler.action">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="com.umeng.message.autoupdate.handler.action">
+</action>
+</intent-filter>
+</service>
+<service android:name="com.umeng.message.UmengDownloadResourceService">
+</service>
+<service android:exported="false" android:name="com.umeng.message.local.UmengLocalNotificationService">
+</service>
+</application>
+</manifest>

@@ -1,0 +1,248 @@
+<?xml version="1.0" ?><manifest android:versionCode="400" android:versionName="4.0.0" package="com.pa.tethermonkey" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="16" android:targetSdkVersion="26">
+</uses-sdk>
+<uses-feature android:name="android.hardware.usb.host" android:required="true">
+</uses-feature>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="com.android.vending.BILLING">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE">
+</uses-permission>
+<uses-feature android:glEsVersion="0x00020000" android:required="true">
+</uses-feature>
+<permission android:name="com.pa.tethermonkey.permission.C2D_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="com.pa.tethermonkey.permission.C2D_MESSAGE">
+</uses-permission>
+<application android:allowBackup="true" android:backupAgent="com.pa.common_base.BackupSettingsHelper" android:icon="@7F0E0000" android:label="@7F110048" android:largeHeap="true" android:name="com.pa.common_base.RycApplication" android:theme="@7F1200CF">
+<provider android:authorities="com.pa.tethermonkey.fileprovider" android:enabled="true" android:exported="false" android:grantUriPermissions="true" android:name="android.support.v4.content.FileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F140005">
+</meta-data>
+</provider>
+<meta-data android:name="com.samsung.android.icon_container.has_icon_container" android:value="true">
+</meta-data>
+<activity android:configChanges="0x000004A0" android:label="@7F11015F" android:launchMode="2" android:name="com.pa.common_base.SplashActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED">
+</action>
+</intent-filter>
+<meta-data android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED" android:resource="@7F140004">
+</meta-data>
+</activity>
+<activity android:label="@7F1102A8" android:name="com.zendesk.sdk.support.SupportActivity" android:theme="@7F1200F6" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:configChanges="0x00000080" android:label="@7F11015F" android:launchMode="2" android:name="com.pa.common_base.MainActivity" android:screenOrientation="0" android:theme="@7F120009">
+</activity>
+<activity android:name="com.pa.common_base.IntroScreen" android:theme="@7F1200CD">
+</activity>
+<activity android:label="@7F11003F" android:name="com.pa.common_base.activities.AppSettingsActivity" android:screenOrientation="6">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F11006D" android:launchMode="1" android:name="com.pa.common_base.bubblelevel.LevelActivity" android:screenOrientation="1">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".MainActivity">
+</meta-data>
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F11006D" android:launchMode="1" android:name="com.pa.common_base.bubblelevel.LevelPreferences" android:screenOrientation="1">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".MainActivity">
+</meta-data>
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F110079" android:launchMode="1" android:name="com.pa.common_base.calculators.TimeLapseActivity" android:screenOrientation="1">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".MainActivity">
+</meta-data>
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F110079" android:launchMode="1" android:name="com.pa.common_base.calculators.TimeLapse" android:screenOrientation="1">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".MainActivity">
+</meta-data>
+</activity>
+<activity android:configChanges="0x000004A0" android:label="More Apps" android:launchMode="1" android:name="com.pa.common_base.MoreAppsActivity" android:screenOrientation="1">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".MainActivity">
+</meta-data>
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F110079" android:launchMode="1" android:name="com.pa.common_base.calculators.CalcMainFrag" android:screenOrientation="1" android:theme="@7F1200CF">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".MainActivity">
+</meta-data>
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F110170" android:launchMode="1" android:name="com.pa.common_base.draganddrop.DragAndDrop" android:screenOrientation="1">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".MainActivity">
+</meta-data>
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F110157" android:launchMode="1" android:name="com.pa.common_base.inventorychecklist.inventoryChecklistHelp" android:screenOrientation="1" android:theme="@7F1200CF">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".MainActivity">
+</meta-data>
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F110157" android:launchMode="1" android:name="com.pa.common_base.inventorychecklist.InventoryFragActivity" android:screenOrientation="1" android:theme="@7F1200CF">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".MainActivity">
+</meta-data>
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F110171" android:launchMode="1" android:name="com.pa.common_base.lightMeter.LightMeterMain" android:screenOrientation="1">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".MainActivity">
+</meta-data>
+</activity>
+<activity android:configChanges="0x000004A0" android:label="Help" android:launchMode="1" android:name="com.pa.common_base.lightMeter.lightmeterHelp" android:screenOrientation="1">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".MainActivity">
+</meta-data>
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F1100F1" android:launchMode="1" android:name="com.pa.common_base.DonationsActivity" android:screenOrientation="1">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".MainActivity">
+</meta-data>
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F1102D6" android:launchMode="1" android:name="com.pa.common_base.UpgradeActivity" android:screenOrientation="1" android:theme="@7F1200CF">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".MainActivity">
+</meta-data>
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F1102D6" android:launchMode="1" android:name="com.pa.common_base.UpgradeActivityDiscounted" android:screenOrientation="1" android:theme="@7F1200CF">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".MainActivity">
+</meta-data>
+</activity>
+<activity android:excludeFromRecents="true" android:finishOnTaskLaunch="true" android:launchMode="3" android:name="org.acra.CrashReportDialog" android:theme="@android:0103000B">
+</activity>
+<activity android:name="com.pa.common_base.usbotgcables" android:screenOrientation="1">
+</activity>
+<activity android:name="com.pa.common_base.helpfaq">
+</activity>
+<activity android:name="com.pa.common_base.activities.ScriptBuilder" android:screenOrientation="6">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F1102CB" android:name="com.pa.common_base.WelcomeActivity" android:theme="@7F1200CF">
+</activity>
+<receiver android:name="com.zendesk.sdk.power.BatteryStateBroadcastReceiver">
+<intent-filter>
+<action android:name="android.intent.action.BATTERY_LOW">
+</action>
+<action android:name="android.intent.action.BATTERY_OKAY">
+</action>
+</intent-filter>
+</receiver>
+<activity android:label="@7F1100E1" android:name="com.zendesk.sdk.feedback.ui.ContactZendeskActivity" android:windowSoftInputMode="0x00000014">
+</activity>
+<activity android:label="@7F1100E1" android:name="com.zendesk.sdk.requests.ViewRequestActivity" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:label="@7F11025A" android:name="com.zendesk.sdk.requests.RequestActivity">
+</activity>
+<activity android:configChanges="0x00000480" android:name="com.zendesk.sdk.support.ViewArticleActivity">
+</activity>
+<receiver android:exported="false" android:name="com.zendesk.sdk.deeplinking.ZendeskDeepLinkingBroadcastReceiver">
+<intent-filter>
+<action android:name="com.zendesk.sdk.deeplinking">
+</action>
+</intent-filter>
+</receiver>
+<service android:exported="false" android:name="com.zopim.android.sdk.widget.ChatWidgetService">
+</service>
+<activity android:label="@7F1100BB" android:name="com.zopim.android.sdk.prechat.ZopimChatActivity" android:theme="@7F1201F2" android:windowSoftInputMode="0x00000011">
+<intent-filter android:priority="-1000">
+<action android:name="zopim.action.RESUME_CHAT">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:label="@7F110237" android:name="com.zopim.android.sdk.chatlog.ZopimCommentActivity" android:theme="@7F1201F2" android:windowSoftInputMode="0x00000010">
+</activity>
+<receiver android:name="com.google.android.gms.cast.framework.media.MediaIntentReceiver">
+</receiver>
+<service android:name="com.google.android.gms.cast.framework.media.MediaNotificationService">
+</service>
+<service android:name="com.google.android.gms.cast.framework.ReconnectionService">
+</service>
+<meta-data android:name="android.support.VERSION" android:value="26.0.2">
+</meta-data>
+<service android:exported="false" android:name="com.zopim.android.sdk.api.ChatService">
+</service>
+<provider android:authorities="com.pa.tethermonkey.belvedere.attachments" android:exported="false" android:grantUriPermissions="true" android:name="com.zendesk.belvedere.BelvedereFileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F140001">
+</meta-data>
+</provider>
+<activity android:name="com.jakewharton.processphoenix.ProcessPhoenix" android:process=":phoenix" android:theme="@android:01030010">
+</activity>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.tagmanager.TagManagerService">
+</service>
+<activity android:exported="true" android:name="com.google.android.gms.tagmanager.TagManagerPreviewActivity" android:noHistory="true">
+<intent-filter>
+<data android:scheme="tagmanager.c.com.pa.tethermonkey">
+</data>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+</intent-filter>
+</activity>
+<receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementReceiver">
+</receiver>
+<receiver android:enabled="true" android:exported="true" android:name="com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver" android:permission="android.permission.INSTALL_PACKAGES">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementService">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementJobService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<activity android:configChanges="0x00000FB0" android:exported="false" android:name="com.google.android.gms.ads.AdActivity" android:theme="@android:0103000F">
+</activity>
+<receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.analytics.AnalyticsReceiver">
+</receiver>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.analytics.AnalyticsService">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.analytics.AnalyticsJobService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<activity android:exported="true" android:name="com.google.android.gms.appinvite.PreviewActivity" android:theme="@7F120166">
+<intent-filter>
+<action android:name="com.google.android.gms.appinvite.ACTION_PREVIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:excludeFromRecents="true" android:exported="false" android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity" android:theme="@android:01030010">
+</activity>
+<service android:exported="true" android:name="com.google.android.gms.auth.api.signin.RevocationBoundService" android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION">
+</service>
+<activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:01030010">
+</activity>
+<service android:exported="true" android:name="com.google.firebase.messaging.FirebaseMessagingService">
+<intent-filter android:priority="-500">
+<action android:name="com.google.firebase.MESSAGING_EVENT">
+</action>
+</intent-filter>
+</service>
+<receiver android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+<category android:name="com.pa.tethermonkey">
+</category>
+</intent-filter>
+</receiver>
+<service android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdService">
+<intent-filter android:priority="-500">
+<action android:name="com.google.firebase.INSTANCE_ID_EVENT">
+</action>
+</intent-filter>
+</service>
+<provider android:authorities="com.pa.tethermonkey.firebaseinitprovider" android:exported="false" android:initOrder="100" android:name="com.google.firebase.provider.FirebaseInitProvider">
+</provider>
+<meta-data android:name="com.google.android.gms.version" android:value="@7F0A000C">
+</meta-data>
+</application>
+</manifest>

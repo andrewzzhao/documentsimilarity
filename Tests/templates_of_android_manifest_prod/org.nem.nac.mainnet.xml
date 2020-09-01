@@ -1,0 +1,106 @@
+<?xml version="1.0" ?><manifest android:versionCode="111" android:versionName="1.0.72" package="org.nem.nac.mainnet" platformBuildVersionCode="25" platformBuildVersionName="7.1.1" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="15" android:targetSdkVersion="25">
+</uses-sdk>
+<uses-permission android:name="android.permission.USE_FINGERPRINT">
+</uses-permission>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_CONTACTS">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_CONTACTS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_LOGS">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-feature android:name="android.hardware.camera" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.camera.autofocus" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.camera.front" android:required="false">
+</uses-feature>
+<meta-data android:name="android.support.VERSION" android:value="25.3.1">
+</meta-data>
+<application android:allowBackup="true" android:icon="@7F030000" android:label="@7F070170" android:name="org.nem.nac.application.NacApplication" android:theme="@7F090040">
+<receiver android:name="org.nem.nac.notifications.AlarmReceiver">
+</receiver>
+<receiver android:exported="false" android:name="org.nem.nac.broadcastreceivers.NotificationDeleteReceiver">
+</receiver>
+<service android:name="org.nem.nac.notifications.UpdatesNotificationService">
+</service>
+<activity android:excludeFromRecents="true" android:finishOnTaskLaunch="true" android:launchMode="3" android:name="org.acra.CrashReportDialog" android:process=":error_report" android:theme="@7F0900A8">
+</activity>
+<activity android:label="@7F070170" android:name="org.nem.nac.ui.activities.SplashActivity" android:screenOrientation="1" android:theme="@7F0900BA">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="@7F07016F">
+</data>
+<data android:host="transaction">
+</data>
+<data android:host="getaccounts">
+</data>
+</intent-filter>
+</activity>
+<activity android:label="@7F070143" android:name="org.nem.nac.ui.activities.LoginActivity" android:noHistory="true" android:screenOrientation="1" android:theme="@7F090040" android:windowSoftInputMode="0x00000014">
+</activity>
+<activity android:label="@7F070139" android:name="org.nem.nac.ui.activities.AddAccountActivity" android:noHistory="true" android:screenOrientation="1" android:theme="@7F090040">
+</activity>
+<activity android:clearTaskOnLaunch="true" android:label="@7F070138" android:name="org.nem.nac.ui.activities.AccountListActivity" android:screenOrientation="1" android:theme="@7F090040">
+</activity>
+<activity android:label="@7F07013D" android:name="org.nem.nac.ui.activities.DashboardActivity" android:screenOrientation="1" android:theme="@7F090040" android:windowSoftInputMode="0x00000033">
+</activity>
+<activity android:label="@7F07013C" android:name="org.nem.nac.ui.activities.CreateAccountActivity" android:noHistory="true" android:screenOrientation="1" android:theme="@7F090040">
+</activity>
+<activity android:label="@7F070149" android:name="org.nem.nac.ui.activities.ScanQrActivity" android:screenOrientation="1" android:theme="@7F090040">
+</activity>
+<activity android:label="@7F07014B" android:name="org.nem.nac.ui.activities.ServersListActivity" android:screenOrientation="1" android:theme="@7F090040">
+</activity>
+<activity android:label="@7F070146" android:name="org.nem.nac.ui.activities.MoreActivity" android:screenOrientation="1" android:theme="@7F090040">
+</activity>
+<activity android:label="@7F070145" android:name="org.nem.nac.ui.activities.MessagesActivity" android:screenOrientation="1" android:theme="@7F090040">
+</activity>
+<activity android:label="@7F070148" android:name="org.nem.nac.ui.activities.NewTransactionActivity" android:screenOrientation="1" android:theme="@7F090040">
+</activity>
+<activity android:label="@7F07013E" android:name="org.nem.nac.ui.activities.ExportAccountActivity" android:screenOrientation="1" android:theme="@7F090040">
+</activity>
+<activity android:label="@7F07018D" android:name="org.nem.nac.ui.activities.QrTabsActivity" android:screenOrientation="1" android:theme="@7F090040">
+</activity>
+<activity android:label="@7F070141" android:name="org.nem.nac.ui.activities.InvoiceActivity" android:screenOrientation="1" android:theme="@7F090040">
+</activity>
+<activity android:label="@7F070147" android:name="org.nem.nac.ui.activities.MultisigActivity" android:screenOrientation="1" android:theme="@7F090040">
+</activity>
+<activity android:label="@7F07013A" android:name="org.nem.nac.ui.activities.AddressBookActivity" android:screenOrientation="1" android:theme="@7F090040" android:windowSoftInputMode="0x00000033">
+</activity>
+<activity android:excludeFromRecents="true" android:label="@7F07014A" android:name="org.nem.nac.ui.activities.SelectSenderActivity" android:screenOrientation="1" android:theme="@7F0900A8">
+</activity>
+<activity android:label="@7F07013F" android:name="org.nem.nac.ui.activities.HarvestDetailsActivity" android:screenOrientation="1" android:theme="@7F090040">
+</activity>
+<activity android:label="@7F07013B" android:name="org.nem.nac.ui.activities.ConfigurationActivity" android:screenOrientation="1" android:theme="@7F090040">
+</activity>
+<activity android:label="@7F070142" android:name="org.nem.nac.ui.activities.LogActivity" android:theme="@7F090040">
+</activity>
+<activity android:label="@7F07014D" android:name="org.nem.nac.ui.activities.UnconfirmedListActivity" android:noHistory="true" android:theme="@7F090040">
+</activity>
+<activity android:excludeFromRecents="true" android:finishOnTaskLaunch="true" android:launchMode="3" android:name="org.acra.dialog.CrashReportDialog" android:theme="@android:0103000B">
+</activity>
+<service android:exported="false" android:name="org.acra.sender.SenderService" android:process=":acra">
+</service>
+</application>
+</manifest>

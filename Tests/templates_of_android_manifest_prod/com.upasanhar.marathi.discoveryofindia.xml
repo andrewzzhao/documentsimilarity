@@ -1,0 +1,94 @@
+<?xml version="1.0" ?><manifest android:versionCode="8" android:versionName="8.0" package="com.upasanhar.marathi.discoveryofindia" platformBuildVersionCode="16" platformBuildVersionName="4.1.2-543062" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="14" android:targetSdkVersion="16">
+</uses-sdk>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PROFILE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<permission android:name="com.upasanhar.marathi.discoveryofindia.permission.C2D_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="com.upasanhar.marathi.discoveryofindia.permission.C2D_MESSAGE">
+</uses-permission>
+<application android:allowBackup="true" android:description="@7F060059" android:icon="@7F02006A" android:label="@7F060042" android:name="com.upasanhar.marathi.discoveryofindia.Application" android:theme="@7F090006">
+<meta-data android:name="com.google.android.gms.version" android:value="@7F070000">
+</meta-data>
+<meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@7F06003F">
+</meta-data>
+<activity android:label="@7F060042" android:name="com.facebook.LoginActivity">
+</activity>
+<activity android:label="@7F060042" android:name="com.aksharsmriti.commons.activities.MainActivity">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:label="@7F060042" android:name="com.aksharsmriti.commons.activities.TOSActivity">
+</activity>
+<activity android:label="@7F060042" android:name="com.aksharsmriti.commons.activities.ShareActivity">
+</activity>
+<activity android:label="@7F060042" android:name="com.aksharsmriti.commons.activities.GetEmailActivity">
+</activity>
+<activity android:label="@7F060042" android:name="com.aksharsmriti.commons.activities.PushActivity">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.aksharsmriti.commons.activities.MainActivity">
+</meta-data>
+</activity>
+<activity android:label="@7F060042" android:name="com.aksharsmriti.commons.activities.WebActivity">
+</activity>
+<activity android:configChanges="0x00000FB0" android:name="com.google.android.gms.ads.AdActivity">
+</activity>
+<service android:name="com.parse.PushService">
+</service>
+<receiver android:name="com.parse.ParseBroadcastReceiver">
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+<action android:name="android.intent.action.USER_PRESENT">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:exported="false" android:name="com.aksharsmriti.commons.receivers.Receiver">
+<intent-filter>
+<action android:name="com.parse.push.intent.RECEIVE">
+</action>
+<action android:name="com.parse.push.intent.DELETE">
+</action>
+<action android:name="com.parse.push.intent.OPEN">
+</action>
+<action android:name="android.intent.action.USER_PRESENT">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name="com.parse.GcmBroadcastReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+<action android:name="com.google.android.c2dm.intent.REGISTRATION">
+</action>
+<category android:name="com.upasanhar.marathi.discoveryofindia">
+</category>
+</intent-filter>
+</receiver>
+</application>
+</manifest>

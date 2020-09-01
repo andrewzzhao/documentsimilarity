@@ -1,0 +1,533 @@
+<?xml version="1.0" ?><manifest android:versionCode="42" android:versionName="3.5.0" package="com.ksytech.weishangyi" platformBuildVersionCode="24" platformBuildVersionName="7.000000" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="18" android:targetSdkVersion="22">
+</uses-sdk>
+<uses-permission android:name="android.permission.CALL_PHONE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_CONTACTS">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_CONTACTS">
+</uses-permission>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-permission android:name="android.permission.RECORD_AUDIO">
+</uses-permission>
+<uses-permission android:name="android.permission.RECORD_VIDEO">
+</uses-permission>
+<uses-permission android:name="android.permission.CAPTURE_AUDIO_OUTPUT">
+</uses-permission>
+<uses-permission android:name="android.permission.CAPTURE_VIDEO_OUTPUT">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.MANAGE_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERACT_ACROSS_USERS_FULL">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.FLASHLIGHT">
+</uses-permission>
+<uses-permission android:name="android.permission.BLUETOOTH">
+</uses-permission>
+<uses-permission android:name="android.permission.BLUETOOTH_ADMIN">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-permission android:name="android.permission.BLUETOOTH">
+</uses-permission>
+�
+<uses-permission android:name="android.permission.BLUETOOTH_ADMIN">
+</uses-permission>
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW">
+</uses-permission>
+�
+<uses-permission android:name="getui.permission.GetuiService.com.ksytech.kuosanyun">
+</uses-permission>
+<uses-permission android:name="android.permission.MOUNT_FORMAT_FILESYSTEMS">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS">
+</uses-permission>
+<uses-feature android:name="android.hardware.camera">
+</uses-feature>
+<uses-feature android:name="android.hardware.camera.autofocus">
+</uses-feature>
+<uses-feature android:glEsVersion="0x00020000" android:required="true">
+</uses-feature>
+<permission android:name="getui.permission.GetuiService.com.ksytech.weishangyi" android:protectionLevel="0x00000000">
+</permission>
+ .
+
+<permission android:name="android.permission.FLASHLIGHT" android:permissionGroup="android.permission-group.HARDWARE_CONTROLS" android:protectionLevel="0x00000000">
+</permission>
+<uses-feature android:name="android.hardware.camera.front" android:required="false">
+</uses-feature>
+<meta-data android:name="android.support.VERSION" android:value="25.3.0">
+</meta-data>
+<uses-permission android:name="android.permission.BROADCAST_PACKAGE_ADDED">
+</uses-permission>
+<uses-permission android:name="android.permission.BROADCAST_PACKAGE_CHANGED">
+</uses-permission>
+<uses-permission android:name="android.permission.BROADCAST_PACKAGE_INSTALL">
+</uses-permission>
+<uses-permission android:name="android.permission.BROADCAST_PACKAGE_REPLACED">
+</uses-permission>
+<uses-permission android:name="android.permission.RESTART_PACKAGES">
+</uses-permission>
+<application android:allowBackup="true" android:hardwareAccelerated="true" android:icon="@7F020167" android:label="@7F07003E" android:largeHeap="true" android:name="com.ksytech.weishangyi.common.MyApplication" android:supportsRtl="true" android:theme="@android:01030009">
+<meta-data android:name="com.google.android.gms.version" android:value="@7F080000">
+</meta-data>
+ // 塾㔀⼀ť੣�
+<meta-data android:name="QBSDKAppKey" android:value="StM060M7y1VwDz4DYweVB1oe">
+</meta-data>
+<meta-data android:name="PUSH_APPID" android:value="nAE2rMlOrP98xvwaFuwlc9">
+</meta-data>
+<meta-data android:name="PUSH_APPKEY" android:value="jJPgU0FArL7tdpGPjEh7s5">
+</meta-data>
+<meta-data android:name="PUSH_APPSECRET" android:value="iL9rFEx3CKAzRmIsBCMjg7">
+</meta-data>
+<provider android:authorities="downloads.com.ksytech.weishangyi" android:exported="true" android:name="com.igexin.download.DownloadProvider" android:process=":pushservice">
+</provider>
+<service android:name="com.ksytech.weishangyi.receiver.DemoIntentService">
+</service>
+<service android:exported="true" android:label="NotificationCenterUser" android:name="com.ksytech.weishangyi.receiver.DemoPushService" android:process=":pushservice">
+</service>
+<receiver android:name="com.igexin.sdk.PushReceiver">
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+<action android:name="android.intent.action.USER_PRESENT">
+</action>
+<action android:name="com.igexin.sdk.action.refreshls">
+</action>
+<action android:name="android.intent.action.MEDIA_MOUNTED">
+</action>
+<action android:name="android.intent.action.ACTION_POWER_CONNECTED">
+</action>
+<action android:name="android.intent.action.ACTION_POWER_DISCONNECTED">
+</action>
+</intent-filter>
+</receiver>
+<activity android:excludeFromRecents="true" android:exported="false" android:name="com.igexin.sdk.PushActivity" android:process=":pushservice" android:taskAffinity="com.igexin.sdk.PushActivityTask" android:theme="@android:01030010">
+</activity>
+<activity android:excludeFromRecents="true" android:exported="true" android:name="com.igexin.sdk.GActivity" android:process=":pushservice" android:taskAffinity="com.igexin.sdk.PushActivityTask" android:theme="@android:01030010">
+</activity>
+<service android:name="com.igexin.download.DownloadService" android:process=":pushservice">
+</service>
+<service android:name="com.ksytech.weishangyi.LiveVideo.RecordService">
+</service>
+<receiver android:name="com.igexin.download.DownloadReceiver">
+<intent-filter>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+</receiver>
+<activity android:label="@7F07003E" android:name="com.ksytech.weishangyi.activitys.SplashActivity" android:screenOrientation="1" android:theme="@7F0A00AA">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:name="com.ksytech.weishangyi.activitys.MainActivity" android:screenOrientation="1" android:taskAffinity="aa.bb" android:theme="@7F0A00AF" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:label="@7F07003E" android:name="com.ksytech.weishangyi.activitys.UpdateProgressActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F07003E" android:name="com.ksytech.weishangyi.activitys.PushNewsActivity" android:screenOrientation="1" android:theme="@android:01030006">
+<intent-filter>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<meta-data android:name="UMENG_APPKEY" android:value="55b85fce67e58ef5dc0024fd">
+</meta-data>
+<meta-data android:name="UMENG_CHANNEL" android:value="ChannelDEV">
+</meta-data>
+<meta-data android:name="UMENG_MESSAGE_SECRET" android:value="14d715fb058a93f9046da57e3bd14651">
+</meta-data>
+<activity android:name="com.ksytech.weishangyi.activitys.AddImageActivity" android:theme="@android:0103000D" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:configChanges="0x000000E0" android:exported="false" android:name="com.alipay.sdk.app.H5PayActivity" android:screenOrientation="3">
+</activity>
+<activity android:configChanges="0x000000E0" android:exported="false" android:name="com.alipay.sdk.auth.AuthActivity" android:screenOrientation="3">
+</activity>
+<activity android:name="com.ksytech.weishangyi.activitys.Open_camera" android:screenOrientation="1" android:theme="@7F0A00E2">
+</activity>
+<activity android:name="com.ksytech.weishangyi.activitys.Login" android:screenOrientation="1" android:theme="@android:0103000D">
+</activity>
+<activity android:launchMode="3" android:name="com.ksytech.weishangyi.activitys.Empty" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<activity android:name="com.ksytech.weishangyi.activitys.KSYCoreWebViewActivity" android:screenOrientation="1" android:theme="@android:0103000D">
+</activity>
+<activity android:name="com.ksytech.weishangyi.activitys.KSYGamesAdActivity" android:screenOrientation="1" android:theme="@android:0103000D">
+</activity>
+<activity android:name="com.ksytech.weishangyi.activitys.KSYSegmentWebActivity" android:screenOrientation="1" android:theme="@android:0103000D">
+</activity>
+<activity android:name="com.ksytech.weishangyi.activitys.KSYEditAriticleActivity" android:screenOrientation="1" android:theme="@android:0103000D">
+</activity>
+<activity android:name="com.ksytech.weishangyi.activitys.KSYEditUserAdActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ksytech.weishangyi.activitys.BaseSampleActivity">
+</activity>
+<activity android:label="@7F0700B7" android:name="com.ksytech.weishangyi.activitys.KSYCropPhotoActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ksytech.weishangyi.activitys.EditTopAdActivity">
+</activity>
+<activity android:name="com.ksytech.weishangyi.activitys.TextActivity" android:screenOrientation="1" android:theme="@android:0103000D">
+</activity>
+<activity android:name="com.ksytech.weishangyi.activitys.AlipayActivity" android:screenOrientation="1" android:theme="@android:0103000D">
+</activity>
+<activity android:launchMode="2" android:name="com.ksytech.weishangyi.homepage.LoginAndRegisterActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:name="com.ksytech.weishangyi.homepage.ForgetPassWordActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ksytech.weishangyi.activitys.End_WebActivity">
+</activity>
+<activity android:label="@7F07003E" android:launchMode="2" android:name="com.ksytech.weishangyi.LiveVideoPlayer.LiveVideoPlayerActivity" android:screenOrientation="1" android:theme="@7F0A0129">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F07003E" android:name="com.ksytech.weishangyi.LiveVideoPlayer.VideoPlayerActivity" android:theme="@7F0A00E1">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:mimeType="video/*">
+</data>
+<data android:mimeType="audio/*">
+</data>
+<data android:scheme="http">
+</data>
+<data android:scheme="file">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.ksytech.weishangyi.MovieRecorder.MovieRecordActivity">
+</activity>
+<activity android:name="com.ksytech.weishangyi.activitys.BrandPlayerActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ksytech.weishangyi.activitys.BrandActivity">
+</activity>
+<activity android:name="com.ksytech.weishangyi.littleArticle.LittleArticleListActivity">
+</activity>
+<activity android:name="com.ksytech.weishangyi.littleArticle.ArticleDetailActivity">
+</activity>
+<activity android:name="com.ksytech.weishangyi.forwardVideo.ForwardVideoActivity">
+</activity>
+<activity android:name="com.ksytech.weishangyi.activitys.BrandAdminActivity">
+</activity>
+<activity android:name="com.ksytech.weishangyi.activitys.AddGoodsActivity">
+</activity>
+<activity android:name="com.ksytech.weishangyi.activitys.MyPagerActivity">
+</activity>
+<activity android:exported="true" android:launchMode="1" android:name="com.ksytech.weishangyi.wxapi.WXPayEntryActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ksytech.weishangyi.wxPay.PayActivity" android:screenOrientation="1">
+</activity>
+<receiver android:name="com.ksytech.weishangyi.wxPay.AppRegister" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.tencent.mm.plugin.openapi.Intent.ACTION_REFRESH_WXAPP">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name="com.ksytech.weishangyi.receiver.NetBroadcastReceiver">
+<intent-filter>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+</receiver>
+<activity android:name="com.ksytech.weishangyi.shareAction.shareActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ksytech.weishangyi.community.HomePageActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ksytech.weishangyi.wxPhotoPicker.PhotoPickerActivity" android:screenOrientation="1" android:theme="@7F0A012E">
+</activity>
+<activity android:name="com.ksytech.weishangyi.wxPhotoPicker.PhotoPagerActivity" android:screenOrientation="1" android:theme="@7F0A012E">
+</activity>
+<activity android:name="com.ksytech.weishangyi.community.ImagePagerActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ksytech.weishangyi.community.PlayVideoActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ksytech.weishangyi.MovieRecorder.RecordeActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ksytech.weishangyi.MovieRecorder.NewRecordVideoActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ksytech.weishangyi.MovieRecorder.PlayVideosActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ksytech.weishangyi.community.ToWebActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ksytech.weishangyi.NewArticleAds.ArticleListActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ksytech.weishangyi.NewArticleAds.AdsListActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ksytech.weishangyi.activitys.scancode.MipcaActivityCapture">
+</activity>
+<activity android:name="com.ksytech.weishangyi.activitys.scancode.CodeShowActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ksytech.weishangyi.activitys.HomeActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ksytech.weishangyi.activitys.accounting.AccountActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name="com.ksytech.weishangyi.activitys.accounting.NewGoodsActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ksytech.weishangyi.activitys.accounting.OrderActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ksytech.weishangyi.NewArticleAds.AdsDialog.TalkDialog" android:screenOrientation="1" android:theme="@7F0A0190">
+</activity>
+<activity android:name="com.ksytech.weishangyi.NewArticleAds.AdsDialog.CarAdDialog" android:theme="@7F0A0190">
+</activity>
+<activity android:name="com.ksytech.weishangyi.NewArticleAds.AdsDialog.CardAdDialog" android:theme="@7F0A0190">
+</activity>
+<activity android:name="com.ksytech.weishangyi.NewArticleAds.AdsDialog.SlideUnlockAdDialog" android:theme="@7F0A0190">
+</activity>
+<activity android:name="com.ksytech.weishangyi.NewArticleAds.AdsDialog.MarqueeAdDialog" android:theme="@7F0A0190">
+</activity>
+<activity android:name="com.ksytech.weishangyi.NewArticleAds.AdsDialog.SpiritLevelAdDialog" android:theme="@7F0A0190">
+</activity>
+<activity android:name="com.ksytech.weishangyi.NewArticleAds.AdsDialog.TonglantuAdDialog" android:theme="@7F0A0190">
+</activity>
+<activity android:name="com.ksytech.weishangyi.NewArticleAds.AdsDialog.TopAdDialog" android:theme="@7F0A0190">
+</activity>
+<activity android:name="com.ksytech.weishangyi.NewArticleAds.AdsDialog.QRcodeAdDialog" android:theme="@7F0A0190">
+</activity>
+<activity android:name="com.ksytech.weishangyi.NewArticleAds.AdsDialog.CouponAdDialog" android:theme="@7F0A0190">
+</activity>
+<activity android:name="com.ksytech.weishangyi.NewArticleAds.AdsDialog.TuwenAdDialog" android:theme="@7F0A0190">
+</activity>
+<activity android:name="com.ksytech.weishangyi.NewArticleAds.AdsDialog.VoiceAdDialog" android:theme="@7F0A0190">
+</activity>
+<activity android:name="com.ksytech.weishangyi.NewArticleAds.AdsDialog.BaseDialog">
+</activity>
+<activity android:name="com.ksytech.weishangyi.NewOneKeyVideo.OneKeyVideoActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ksytech.weishangyi.ImageEdit.mosaic.MosaicActivity" android:screenOrientation="1" android:theme="@7F0A0196">
+</activity>
+<activity android:name="com.ksytech.weishangyi.NewOneKeyVideo.CircleFriendsActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F0700B6" android:name="com.ksytech.weishangyi.activitys.accounting.ui.ImageActivity" android:screenOrientation="1" android:theme="@7F0A0121">
+</activity>
+<activity android:name="com.ksytech.weishangyi.WeiShangTrain.ShowTrainActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F0700B8" android:name="com.ksytech.weishangyi.WeiShangTrain.RecordingActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F0700B4" android:name="com.ksytech.weishangyi.ui.CropImageActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ksytech.weishangyi.LiveVideo.NewStreamingBaseActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ksytech.weishangyi.LiveAudio.LiveAudioActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ksytech.weishangyi.ui.CropLiveAdImageActivity" android:screenOrientation="1">
+</activity>
+<service android:enabled="true" android:exported="true" android:name="com.ksytech.weishangyi.WeiShangTrain.MediaService">
+</service>
+<activity android:name="com.ksytech.weishangyi.activitys.Tracking_Logistics_Activity" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<activity android:name="com.ksytech.weishangyi.activitys.PermisssiondigActivity" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<service android:enabled="true" android:exported="true" android:name="com.ksytech.weishangyi.receiver.DownLoadService">
+</service>
+<activity android:name="com.ksytech.weishangyi.littleArticle.NewArticleDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ksytech.weishangyi.tabFragment.topic.TopicDetailActivity" android:screenOrientation="1" android:theme="@7F0A012F">
+</activity>
+<activity android:name="com.ksytech.weishangyi.redRain.RedRainActivity" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<activity android:name="com.ksytech.weishangyi.tabFragment.topic.TopicReviewActivity">
+</activity>
+<activity android:name="com.ksytech.weishangyi.tabFragment.topic.AddTopicActivity">
+</activity>
+<activity android:label="@7F0700B5" android:name="com.ksytech.weishangyi.beautyArticle.EditArticleActivity">
+</activity>
+<activity android:label="@7F0700B9" android:name="com.ksytech.weishangyi.beautyArticle.TextEditActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.ksytech.weishangyi.beautyArticle.PreviewActivity" android:theme="@7F0A012F">
+</activity>
+<activity android:name="com.ksytech.weishangyi.LiveWheat.CapStreamingActivity">
+</activity>
+<activity android:name="com.ksytech.weishangyi.WecatAddFans.WecatSuperAddFansActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.ksytech.weishangyi.VideoMake.OneMinuteVideoActivity" android:screenOrientation="0">
+</activity>
+<activity android:name="com.ksytech.weishangyi.activitys.AllVideoActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000CB0" android:launchMode="2" android:name="com.ksytech.weishangyi.video.play.VideoPlayActivity" android:screenOrientation="1" android:theme="@7F0A00AF">
+</activity>
+<activity android:name="com.ksytech.weishangyi.tabFragment.mine.MineVideoActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ksytech.weishangyi.tabFragment.admin.AdminVideoActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ksytech.weishangyi.video.play.VerticalPlayActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:name="com.ksytech.weishangyi.VideoMake.TenSecondVideoActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ksytech.weishangyi.yunJob.LinePathActivity">
+</activity>
+<activity android:name="com.ksytech.weishangyi.VideoMake.TenSecondTemplateActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ksytech.weishangyi.yunJob.TaskFeedBackActivity">
+</activity>
+<activity android:configChanges="0x00000CB0" android:name="com.ksytech.weishangyi.video.play.PLVideoPlayActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ksytech.weishangyi.video.play.PLVerticalPlayActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ksytech.weishangyi.activitys.MineActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ksytech.weishangyi.yunJob.SelectPhotoActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A4" android:exported="false" android:name="com.tk.mediapicker.ui.activity.AlbumActivity" android:screenOrientation="1" android:theme="@7F0A012F">
+</activity>
+<activity android:configChanges="0x000000A4" android:exported="false" android:name="com.tk.mediapicker.ui.activity.AlbumPreActivity" android:screenOrientation="1" android:theme="@7F0A012F">
+</activity>
+<activity android:configChanges="0x000004A4" android:exported="false" android:name="com.tk.mediapicker.ui.activity.CameraResultActivity" android:screenOrientation="1" android:theme="@7F0A012F">
+</activity>
+<activity android:configChanges="0x000000A4" android:exported="false" android:name="com.tk.mediapicker.ui.activity.MediaPreActivity" android:screenOrientation="1" android:theme="@7F0A012F">
+</activity>
+<activity android:configChanges="0x000004A4" android:exported="false" android:name="com.tk.mediapicker.ui.activity.RECResultActivity" android:screenOrientation="1" android:theme="@7F0A012F">
+</activity>
+<activity android:configChanges="0x000000A4" android:exported="false" android:name="com.tk.mediapicker.ui.activity.FileListActivity" android:screenOrientation="1" android:theme="@7F0A012F">
+</activity>
+<meta-data android:name="com.tk.mediapicker.MyGlideModule" android:value="GlideModule">
+</meta-data>
+<service android:exported="true" android:name="com.taobao.accs.ChannelService" android:process=":channel">
+<intent-filter>
+<action android:name="com.taobao.accs.intent.action.SERVICE">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="com.taobao.accs.intent.action.ELECTION">
+</action>
+</intent-filter>
+</service>
+<service android:exported="true" android:name="com.taobao.accs.data.MsgDistributeService">
+<intent-filter>
+<action android:name="com.taobao.accs.intent.action.RECEIVE">
+</action>
+</intent-filter>
+</service>
+<receiver android:name="com.taobao.accs.EventReceiver" android:process=":channel">
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_REMOVED">
+</action>
+<data android:scheme="package">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.USER_PRESENT">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name="com.taobao.accs.ServiceReceiver" android:process=":channel">
+<intent-filter>
+<action android:name="com.taobao.accs.intent.action.COMMAND">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="com.taobao.accs.intent.action.START_FROM_AGOO">
+</action>
+</intent-filter>
+</receiver>
+<service android:name="com.taobao.accs.ChannelService$KernelService" android:process=":channel">
+</service>
+<service android:exported="true" android:name="org.android.agoo.accs.AgooService">
+<intent-filter>
+<action android:name="com.taobao.accs.intent.action.RECEIVE">
+</action>
+</intent-filter>
+</service>
+<service android:exported="true" android:name="com.umeng.message.UmengIntentService" android:process=":channel">
+<intent-filter>
+<action android:name="org.agoo.android.intent.action.RECEIVE">
+</action>
+</intent-filter>
+</service>
+<service android:exported="true" android:name="com.umeng.message.XiaomiIntentService" android:process=":channel">
+<intent-filter>
+<action android:name="org.agoo.android.intent.action.RECEIVE">
+</action>
+</intent-filter>
+</service>
+<receiver android:exported="true" android:name="com.taobao.agoo.AgooCommondReceiver" android:process=":channel">
+<intent-filter>
+<action android:name="com.ksytech.weishangyi.intent.action.COMMAND">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_REMOVED">
+</action>
+<data android:scheme="package">
+</data>
+</intent-filter>
+</receiver>
+<service android:exported="true" android:name="com.umeng.message.UmengMessageIntentReceiverService" android:process=":channel">
+<intent-filter>
+<action android:name="org.android.agoo.client.MessageReceiverService">
+</action>
+</intent-filter>
+</service>
+<receiver android:exported="false" android:name="com.umeng.message.NotificationProxyBroadcastReceiver">
+</receiver>
+<service android:exported="false" android:name="com.umeng.message.UmengMessageCallbackHandlerService">
+<intent-filter>
+<action android:name="com.umeng.messge.registercallback.action">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="com.umeng.message.enablecallback.action">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="com.umeng.message.disablecallback.action">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="com.umeng.message.message.handler.action">
+</action>
+</intent-filter>
+</service>
+<service android:exported="false" android:name="com.umeng.message.UmengDownloadResourceService">
+</service>
+<provider android:authorities="com.ksytech.weishangyi.umeng.message" android:exported="false" android:name="com.umeng.message.provider.MessageProvider">
+<grant-uri-permission android:pathPattern=".*">
+</grant-uri-permission>
+</provider>
+</application>
+</manifest>

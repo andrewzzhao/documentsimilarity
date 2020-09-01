@@ -1,0 +1,58 @@
+<?xml version="1.0" ?><manifest android:installLocation="0" android:versionCode="167" android:versionName="1.0.0" android:windowSoftInputMode="0x00000020" package="com.blastis.livechat" xmlns:android="http://schemas.android.com/apk/res/android">
+<supports-screens android:anyDensity="true" android:largeScreens="true" android:normalScreens="true" android:resizeable="true" android:smallScreens="true" android:xlargeScreens="true">
+</supports-screens>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<application android:debuggable="false" android:hardwareAccelerated="true" android:icon="@7F020003" android:label="@7F040000">
+<activity android:configChanges="0x000004B4" android:label="@7F040000" android:name=".LiveChat" android:screenOrientation="-1" android:windowSoftInputMode="0x00000000">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:label="@7F040000" android:name="com.phonegap.DroidGap">
+<intent-filter>
+</intent-filter>
+</activity>
+<activity android:name="com.plugin.gcm.PushHandlerActivity">
+</activity>
+<receiver android:name="com.plugin.gcm.CordovaGCMBroadcastReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+<action android:name="com.google.android.c2dm.intent.REGISTRATION">
+</action>
+<category android:name="com.blastis.livechat">
+</category>
+</intent-filter>
+</receiver>
+<service android:name="com.plugin.gcm.GCMIntentService">
+</service>
+</application>
+<uses-sdk android:minSdkVersion="7">
+</uses-sdk>
+<uses-permission android:name="android.permission.GET_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE">
+</uses-permission>
+<permission android:name="com.blastis.livechat.permission.C2D_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="com.blastis.livechat.permission.C2D_MESSAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.RECORD_AUDIO">
+</uses-permission>
+<uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+</manifest>

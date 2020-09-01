@@ -1,0 +1,592 @@
+<?xml version="1.0" ?><manifest android:versionCode="110556" android:versionName="4.3.8" package="com.ishowtu.hairfamily" platformBuildVersionCode="25" platformBuildVersionName="7.1.1" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="15" android:targetSdkVersion="19">
+</uses-sdk>
+<permission android:name="com.ishowtu.hairfamily.permission.JPUSH_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="com.ishowtu.hairfamily.permission.JPUSH_MESSAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_USER_PRESENT">
+</uses-permission>
+<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS">
+</uses-permission>
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_CONTACTS">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_CONTACTS">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_SMS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_SMS">
+</uses-permission>
+<uses-permission android:name="android.permission.FLASHLIGHT">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-permission android:name="android.permission.RECORD_AUDIO">
+</uses-permission>
+<uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.CALL_PHONE">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-permission android:name="android.permission.BROADCAST_PACKAGE_ADDED">
+</uses-permission>
+<uses-permission android:name="android.permission.BROADCAST_PACKAGE_CHANGED">
+</uses-permission>
+<uses-permission android:name="android.permission.BROADCAST_PACKAGE_INSTALL">
+</uses-permission>
+<uses-permission android:name="android.permission.BROADCAST_PACKAGE_REPLACED">
+</uses-permission>
+<uses-permission android:name="android.permission.RESTART_PACKAGES">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT">
+</uses-permission>
+<uses-permission android:name="com.android.launcher.permission.READ_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION">
+</uses-permission>
+<uses-permission android:name="android.permission.DISABLE_KEYGUARD">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_LOGS">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS">
+</uses-permission>
+<uses-permission android:name="android.permission.BLUETOOTH">
+</uses-permission>
+<uses-permission android:name="android.permission.BLUETOOTH_ADMIN">
+</uses-permission>
+<uses-feature android:name="android.hardware.camera" android:required="true">
+</uses-feature>
+<uses-feature android:name="android.hardware.camera.autofocus" android:required="true">
+</uses-feature>
+<uses-feature android:name="android.hardware.camera.setParameters" android:required="true">
+</uses-feature>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-permission android:name="android.permission.SEND_SMS">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SMS">
+</uses-permission>
+<application android:allowBackup="true" android:hardwareAccelerated="true" android:icon="@7F0201C1" android:label="@7F090100" android:largeHeap="true" android:name="com.tencent.StubShell.TxAppEntry" android:persistent="true" android:theme="@7F07000A">
+<meta-data android:name="TxAppEntry" android:value="com.feiyangweilai.base.HairStyleShowApplication">
+</meta-data>
+<meta-data android:name="LOGGING" android:value="true">
+</meta-data>
+<meta-data android:name="ALPHA" android:value="true">
+</meta-data>
+<meta-data android:name="com.amap.api.v2.apikey" android:value="3e85967e5733317e2a64540b4a449477">
+</meta-data>
+<service android:name="com.amap.api.location.APSService">
+</service>
+<meta-data android:name="TA_APPKEY" android:value="AFI6BNA2G13C">
+</meta-data>
+<meta-data android:name="InstallChannel" android:value="HairStyleShow">
+</meta-data>
+<activity android:configChanges="0x000000A0" android:exported="false" android:name="com.sina.weibo.sdk.component.WeiboSdkBrowser" android:windowSoftInputMode="0x00000010">
+</activity>
+<service android:exported="false" android:name="com.sina.weibo.sdk.net.DownloadService">
+</service>
+<activity android:launchMode="2" android:name="com.tencent.tauth.AuthActivity" android:noHistory="true">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="tencent1101012990">
+</data>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.tencent.connect.common.AssistActivity" android:theme="@android:01030010">
+</activity>
+<service android:name="com.cloudfocus.streamer.StreamerService">
+</service>
+<activity android:name="com.feiyangweilai.client.hairstyleshow.GuidActivity" android:theme="@android:01030010">
+</activity>
+<activity android:label="@7F090100" android:name="com.feiyangweilai.client.commonui.LayoutShowActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000F0" android:label="@7F090100" android:launchMode="2" android:name="com.feiyangweilai.client.hairstyleshow.MainActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:label="@7F090100" android:name="com.feiyangweilai.client.hairstyleshow.SplashActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:label="@7F090100" android:name="com.feiyangweilai.client.account.login.LoginActivity" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<activity android:label="@7F090100" android:name="com.feiyangweilai.client.account.login.NewLoginActivity" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<activity android:label="@7F090100" android:name="com.feiyangweilai.client.account.login.RegisterActivity" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<activity android:label="@7F090100" android:name="com.feiyangweilai.client.account.login.BindPhoneActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090100" android:name="com.feiyangweilai.client.account.MyFansActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090100" android:name="com.feiyangweilai.client.account.money.SendGroupPayChecksActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090100" android:name="com.feiyangweilai.client.account.setting.MyShopDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090100" android:name="com.feiyangweilai.client.account.MyPublishesActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090100" android:name="com.feiyangweilai.client.account.MyPublishDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090100" android:name="com.feiyangweilai.client.account.MyPublishChangeActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090100" android:name="com.feiyangweilai.client.account.setting.AccountSafeActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090100" android:name="com.feiyangweilai.client.account.MyBalanceActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090100" android:name="com.feiyangweilai.client.account.MyCollectionsActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090100" android:name="com.feiyangweilai.client.account.MyCoinsActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090100" android:name="com.feiyangweilai.client.account.MyEqualActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090100" android:name="com.feiyangweilai.client.account.MyHistoryActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090100" android:name="com.feiyangweilai.client.account.MyCommentsActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090100" android:name="com.feiyangweilai.client.account.setting.PaymentSetActivity" android:screenOrientation="1">
+</activity>
+<activity android:alwaysRetainTaskState="true" android:configChanges="0x000004A0" android:exported="false" android:launchMode="2" android:name="com.tencent.smtt.sdk.VideoActivity">
+<intent-filter>
+<action android:name="com.tencent.smtt.tbs.video.PLAY">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:alwaysRetainTaskState="true" android:configChanges="0x000004A0" android:label="@7F090100" android:name="com.feiyangweilai.client.commonui.CommonWebViewActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+<intent-filter>
+<action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY">
+</action>
+</intent-filter>
+</activity>
+<activity android:label="@7F090100" android:name="com.feiyangweilai.client.account.setting.DrawGesturePasswordActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090100" android:name="com.feiyangweilai.client.account.money.SendPayChecksActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090100" android:name="com.feiyangweilai.client.account.money.TransferMoneyActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090100" android:name="com.feiyangweilai.client.account.money.TransferXiuBiActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090100" android:name="com.feiyangweilai.client.account.money.TransferKaActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090100" android:name="com.feiyangweilai.client.account.money.MipcaCaptureActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090100" android:name="com.feiyangweilai.client.account.money.PaymentQRActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090100" android:name="com.feiyangweilai.client.account.money.SupplierPayQrcodeNotifyActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090100" android:name="com.feiyangweilai.client.account.MyCardOrTicketActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090100" android:name="com.feiyangweilai.client.account.MyNearByActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090100" android:name="com.feiyangweilai.client.commonui.CardDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090100" android:name="com.feiyangweilai.client.commonui.CardCouponActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.feiyangweilai.client.account.publishdynamic.ChoosePicsActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.feiyangweilai.client.account.publishdynamic.ImageGridActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.feiyangweilai.client.account.publishdynamic.DynamicPublishActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.feiyangweilai.client.account.publishdynamic.PhotoActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.feiyangweilai.client.account.publishdynamic.ReplyListActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090100" android:name="com.feiyangweilai.client.account.setting.ChooseModifyPswTypeActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090100" android:name="com.feiyangweilai.client.account.psw.ModifyPaymentPswActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090100" android:name="com.feiyangweilai.client.account.psw.ResetPaymentPswActivity" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<activity android:label="@7F090100" android:name="com.feiyangweilai.client.account.psw.ResetPaymentPswActivityNew" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<activity android:label="@7F090100" android:name="com.feiyangweilai.client.im.activity.ChatActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.feiyangweilai.client.im.activity.ContextMenuActivity" android:theme="@7F070012">
+</activity>
+<activity android:label="@7F090100" android:name="com.feiyangweilai.client.account.information.IndividualInformationActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090100" android:name="com.feiyangweilai.client.account.information.ModifyUserNameActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090100" android:name="com.feiyangweilai.client.account.information.ModifySignalActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090100" android:name="com.feiyangweilai.client.account.information.BindPaypalActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090100" android:name="com.feiyangweilai.client.account.information.ShowIndividualQrCodeActvity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090100" android:name="com.feiyangweilai.client.account.information.QrCodeActvity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090100" android:name="com.feiyangweilai.client.account.information.BindCardActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090100" android:name="com.feiyangweilai.client.im.activity.friend.AddFriendActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090100" android:name="com.feiyangweilai.client.im.activity.friend.SetRemarkActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090100" android:name="com.feiyangweilai.client.im.activity.friend.MobileFriendActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:label="@7F090100" android:name="com.feiyangweilai.client.im.activity.GroupsActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090100" android:name="com.feiyangweilai.client.im.activity.MyFriendActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090100" android:name="com.feiyangweilai.client.im.activity.ZhuanFaActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090100" android:name="com.feiyangweilai.client.account.information.ModifyLocationActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090100" android:name="com.feiyangweilai.client.account.money.BatchTransferMoneyActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090100" android:name="com.feiyangweilai.client.account.money.BatchTransferMoneyEnsureActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090100" android:name="com.feiyangweilai.client.im.activity.NewGroupActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090100" android:name="com.feiyangweilai.client.im.activity.GroupPickContactsActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090100" android:name="com.feiyangweilai.client.im.activity.GroupDetailsActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090100" android:name="com.feiyangweilai.client.im.activity.GroupMemberActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090100" android:name="com.feiyangweilai.client.hairstyleshow.MessageCenterActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090100" android:name="com.feiyangweilai.client.commonui.CommonEditActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090100" android:name="com.feiyangweilai.client.im.activity.GroupQRCodeActivity" android:screenOrientation="1">
+</activity>
+<activity android:exported="true" android:launchMode="1" android:name="external.feiyangweilai.payment.wxpay.WXEntryActivity" android:screenOrientation="1" android:theme="@android:0103000F">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:scheme="sdksample">
+</data>
+</intent-filter>
+</activity>
+<activity android:label="@7F090100" android:name="com.feiyangweilai.client.account.MyShopListActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090100" android:name="com.feiyangweilai.client.account.ShopDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090100" android:name="com.feiyangweilai.client.account.payment.ChoosePaymentMethodActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090100" android:name="com.feiyangweilai.client.account.payment.PaymentModeActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090100" android:name="com.feiyangweilai.client.account.payment.RechargeAccountActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090100" android:name="com.feiyangweilai.client.account.payment.ChooseWithdrawlMethodActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090100" android:name="com.feiyangweilai.client.account.payment.WithdrawlAccountActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090100" android:name="com.feiyangweilai.client.account.payment.AccountDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:label="@7F090100" android:name="com.feiyangweilai.client.commonui.ChooseCityActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:label="@7F090100" android:name="com.feiyangweilai.client.account.information.HairCutterAuthorizationActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090100" android:name="com.feiyangweilai.client.account.money.RedPackDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090100" android:name="com.feiyangweilai.client.im.activity.friend.AddFriendReasonActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090100" android:name="com.feiyangweilai.client.im.activity.friend.AddFriendSearchResultListActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090100" android:name="com.feiyangweilai.client.im.activity.friend.FriendInformationActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090100" android:name="com.feiyangweilai.client.account.order.OrderPinlunActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090100" android:name="com.feiyangweilai.client.account.information.SearchShopByMobileActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090100" android:name="com.feiyangweilai.client.hairstyleshow.ZoneFragmentActivity" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<activity android:label="@7F090100" android:name="com.feiyangweilai.client.hairstyleshow.MyXiuBaActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090100" android:name="com.feiyangweilai.client.hairstyleshow.XiuBaFragmentActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090100" android:name="com.feiyangweilai.client.hairstyleshow.SearchXiuBaFragmentActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090100" android:name="com.feiyangweilai.client.hairstyleshow.JuBaoFragmentActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090100" android:name="com.feiyangweilai.client.hairstyleshow.ZoneDetailActivity" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<activity android:label="@7F090100" android:name="com.feiyangweilai.client.hairstyleshow.PlayerActivity" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x000000A0" android:label="@7F090100" android:name="com.feiyangweilai.client.hairstyleshow.RecorderActivity" android:screenOrientation="1" android:theme="@android:01030010" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:label="@7F090100" android:name="com.feiyangweilai.client.hairstyleshow.NewRecorderActivity" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<activity android:label="@7F090100" android:name="com.feiyangweilai.client.hairstyleshow.QuanxianActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090100" android:name="com.feiyangweilai.client.hairstyleshow.UserRegisterActivity" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<activity android:label="@7F090100" android:name="com.feiyangweilai.client.account.information.ShopperAuthorizationActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090100" android:name="com.feiyangweilai.client.account.PublishHairStyleActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090100" android:name="com.feiyangweilai.client.commonui.PhotoViewActivity" android:screenOrientation="1" android:theme="@android:0103000E">
+</activity>
+<activity android:label="@7F090100" android:name="com.feiyangweilai.client.account.order.OrderGoodsQrCodeActvity" android:screenOrientation="1">
+</activity>
+<activity android:label="我收款" android:name="com.feiyangweilai.client.account.money.ReceiveMoneyActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090100" android:name="com.feiyangweilai.client.im.activity.GroupSimpleDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090100" android:launchMode="2" android:name="com.sini.smarteyesdk.SiniVideoActivity" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:label="@7F090100" android:name="com.sini.smarteyesdk.MonitorListActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090100" android:name="com.sini.smarteyesdk.AddMonitorActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090100" android:name="com.feiyangweilai.client.account.bank.BankCardListActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090100" android:name="com.feiyangweilai.client.account.bank.AddBankCardActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090100" android:name="com.feiyangweilai.client.account.payment.WithdrawlBankActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090100" android:name="com.feiyangweilai.client.account.setting.PrivateSetActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090100" android:name="com.feiyangweilai.client.account.information.RealNameActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090100" android:name="com.feiyangweilai.client.account.information.ServiceJoinActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090100" android:name="com.feiyangweilai.client.account.information.LocationActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090100" android:name="com.feiyangweilai.client.shouyin.ShouyinHomeActivity" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<activity android:label="@7F090100" android:name="com.feiyangweilai.client.shouyin.FaceDetect" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<receiver android:name="external.feiyangweilai.payment.wxpay.AppRegister">
+<intent-filter>
+<action android:name="com.tencent.mm.plugin.openapi.Intent.ACTION_REFRESH_WXAPP">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name="com.feiyangweilai.base.receiver.NetworkBroadcast">
+<intent-filter>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name="com.feiyangweilai.base.receiver.UpdateBroadcast">
+<intent-filter>
+<action android:name="android.intent.action.DOWNLOAD_COMPLETE">
+</action>
+</intent-filter>
+</receiver>
+<activity android:name="external.feiyangweilai.easemob.easeui.ui.EaseBaiduMapActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="external.feiyangweilai.easemob.easeui.ui.EaseShowBigImageActivity" android:screenOrientation="1" android:theme="@android:0103000E">
+</activity>
+<activity android:name="external.feiyangweilai.easemob.easeui.ui.EaseShowVideoActivity" android:screenOrientation="1">
+</activity>
+<meta-data android:name="EASEMOB_APPKEY" android:value="gs921302#xiufaxing">
+</meta-data>
+<service android:exported="true" android:name="com.hyphenate.chat.EMChatService">
+</service>
+<receiver android:name="com.hyphenate.chat.EMMonitorReceiver">
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_REMOVED">
+</action>
+<data android:scheme="package">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+<action android:name="android.intent.action.USER_PRESENT">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:exported="false" android:name="external.feiyangweilai.easemob.easeui.receiver.GCMPushBroadCast">
+<intent-filter>
+<action android:name="com.easemob.sdk.push">
+</action>
+<category android:name="com.easemob.chatuidemo">
+</category>
+</intent-filter>
+</receiver>
+<service android:enabled="true" android:name="com.baidu.location.f" android:process=":remote">
+</service>
+<meta-data android:name="com.baidu.lbsapi.API_KEY" android:value="3ecea51f560650b1ed8a4b99808f52e8">
+</meta-data>
+<activity android:exported="true" android:label="@7F090100" android:launchMode="1" android:name="com.ishowtu.hairfamily.wxapi.WXPayEntryActivity">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:scheme="wx97111f68355b018d">
+</data>
+</intent-filter>
+</activity>
+<activity android:exported="true" android:label="@7F090100" android:launchMode="1" android:name="com.ishowtu.hairfamily.wxapi.WXEntryActivity">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:scheme="wx97111f68355b018d">
+</data>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:name="com.alipay.sdk.app.H5PayActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:name="com.melink.bqmmsdk.ui.store.EmojiPackageList" android:screenOrientation="1" android:theme="@7F07002B">
+</activity>
+<activity android:name="com.melink.bqmmsdk.ui.store.EmojiPackageDetail" android:screenOrientation="1" android:theme="@7F07002B">
+</activity>
+<activity android:name="com.melink.bqmmsdk.ui.store.EmojiPackageDown" android:screenOrientation="1" android:theme="@7F07002B">
+</activity>
+<activity android:name="com.melink.bqmmsdk.ui.store.EmojiPackageMyCollection" android:screenOrientation="1" android:theme="@7F07002B">
+</activity>
+<activity android:name="com.melink.bqmmsdk.ui.store.EmojiPackageSetting" android:screenOrientation="1" android:theme="@7F07002B">
+</activity>
+<activity android:name="com.melink.bqmmsdk.ui.store.EmojiDetail" android:screenOrientation="1" android:theme="@7F07002B">
+</activity>
+<activity android:name="com.melink.bqmmsdk.ui.store.ServiceDeclaration" android:screenOrientation="1" android:theme="@7F07002B">
+</activity>
+<activity android:name="com.melink.bqmmsdk.ui.store.EmojiPackageSort" android:screenOrientation="1" android:theme="@7F070024">
+</activity>
+<activity android:name="com.sdu.didi.openapi.DiDiWebActivity" android:screenOrientation="1" android:theme="@android:0103006C">
+</activity>
+<activity android:name="com.feiyangweilai.client.hairstyleshow.TestGroupAvatarActivity">
+</activity>
+<activity android:exported="false" android:name="cn.jpush.android.ui.PopWinActivity" android:theme="@7F070012">
+</activity>
+<activity android:configChanges="0x000000A0" android:exported="false" android:name="cn.jpush.android.ui.PushActivity" android:theme="@android:01030006">
+<intent-filter>
+<action android:name="cn.jpush.android.ui.PushActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="com.ishowtu.hairfamily">
+</category>
+</intent-filter>
+</activity>
+<service android:enabled="true" android:exported="false" android:name="cn.jpush.android.service.DownloadService">
+</service>
+<service android:enabled="true" android:exported="false" android:name="cn.jpush.android.service.PushService">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.REGISTER">
+</action>
+<action android:name="cn.jpush.android.intent.REPORT">
+</action>
+<action android:name="cn.jpush.android.intent.PushService">
+</action>
+<action android:name="cn.jpush.android.intent.PUSH_TIME">
+</action>
+</intent-filter>
+</service>
+<service android:enabled="true" android:exported="true" android:name="cn.jpush.android.service.DaemonService">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.DaemonService">
+</action>
+<category android:name="com.ishowtu.hairfamily">
+</category>
+</intent-filter>
+</service>
+<receiver android:enabled="true" android:exported="false" android:name="cn.jpush.android.service.PushReceiver">
+<intent-filter android:priority="1000">
+<action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY">
+</action>
+<category android:name="com.ishowtu.hairfamily">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.USER_PRESENT">
+</action>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_ADDED">
+</action>
+<action android:name="android.intent.action.PACKAGE_REMOVED">
+</action>
+<data android:scheme="package">
+</data>
+</intent-filter>
+</receiver>
+<receiver android:exported="false" android:name="cn.jpush.android.service.AlarmReceiver">
+</receiver>
+<receiver android:enabled="true" android:exported="false" android:name="com.feiyangweilai.base.receiver.JPushReceiver">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.REGISTRATION">
+</action>
+<action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED">
+</action>
+<action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED">
+</action>
+<action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED">
+</action>
+<action android:name="cn.jpush.android.intent.ACTION_RICHPUSH_CALLBACK">
+</action>
+<action android:name="cn.jpush.android.intent.CONNECTION">
+</action>
+<category android:name="com.ishowtu.hairfamily">
+</category>
+</intent-filter>
+</receiver>
+<meta-data android:name="JPUSH_CHANNEL" android:value="hairfamily">
+</meta-data>
+<meta-data android:name="JPUSH_APPKEY" android:value="2d5935583a6e8a8c2bc7a755">
+</meta-data>
+<meta-data android:name="SUPERID_APPKEY" android:value="1feabb193cd6da4e70034593">
+</meta-data>
+<meta-data android:name="SUPERID_SECRET" android:value="63d695f47be9fcea71d59b02">
+</meta-data>
+<activity android:label="@7F090100" android:name="com.isnc.facesdk.aty.Aty_FaceDetect" android:screenOrientation="1" android:theme="@android:010300F0">
+</activity>
+<activity android:label="@7F090100" android:name="com.isnc.facesdk.aty.Aty_NormalFaceDetect" android:screenOrientation="1" android:theme="@android:010300F0">
+</activity>
+<activity android:label="@7F090100" android:name="com.isnc.facesdk.aty.Aty_AgreeItem" android:screenOrientation="1" android:theme="@android:010300F0">
+</activity>
+<activity android:label="@7F090100" android:name="com.isnc.facesdk.aty.Aty_Auth" android:screenOrientation="1" android:theme="@android:010300F0">
+</activity>
+<activity android:label="@7F090100" android:name="com.isnc.facesdk.aty.Aty_EditUserinfo" android:screenOrientation="1" android:theme="@android:010300F0">
+</activity>
+<activity android:label="@7F090100" android:name="com.isnc.facesdk.aty.Aty_ClipPicture" android:screenOrientation="1" android:theme="@android:010300F0">
+</activity>
+<activity android:label="@7F090100" android:name="com.isnc.facesdk.aty.Aty_CountryPage" android:screenOrientation="1" android:theme="@android:010300F0">
+</activity>
+<activity android:label="@7F090100" android:name="com.isnc.facesdk.aty.Aty_SecureEmail" android:screenOrientation="1" android:theme="@android:010300F0">
+</activity>
+</application>
+</manifest>

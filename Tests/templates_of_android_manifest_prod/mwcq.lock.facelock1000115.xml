@@ -1,0 +1,180 @@
+<?xml version="1.0" ?><manifest android:versionCode="1" android:versionName="1.5.1" package="mwcq.lock.facelock1000115" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="10" android:targetSdkVersion="15">
+</uses-sdk>
+<uses-permission android:name="android.permission.EXPAND_STATUS_BAR">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_SURFACE_FLINGER">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.RECORD_AUDIO">
+</uses-permission>
+<uses-feature android:name="android.hardware.camera">
+</uses-feature>
+<uses-feature android:name="android.hardware.camera.autofocus">
+</uses-feature>
+<uses-permission android:name="android.permission.READ_CONTACTS">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_CONTACTS">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_MMS">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_WAP_PUSH">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_SMS">
+</uses-permission>
+<uses-permission android:name="android.permission.SEND_SMS">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_SMS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_CONTACTS">
+</uses-permission>
+<uses-permission android:name="android.permission.RESTART_PACKAGES">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SMS">
+</uses-permission>
+<uses-permission android:name="android.permission.CALL_PHONE">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.DISABLE_KEYGUARD">
+</uses-permission>
+<uses-permission android:name="android.permission.CALL_PHONE">
+</uses-permission>
+<uses-permission android:name="android.permission.SEND_SMS">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<application android:debuggable="true" android:icon="@7F020027" android:label="@7F070000" android:name="mwcq.lock.facelock1000115.FaceLockApplication" android:theme="@7F0A0000">
+<activity android:label="@7F070006" android:launchMode="2" android:name=".FacelockActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F070000" android:name=".ImageAcqisitionActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F070000" android:launchMode="2" android:name=".FacelockPreferenceActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:label="@7F070000" android:name="mwcq.promgr.mgr.ProMgrActivity" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:name="mwcq.promgr.mgr.SetPasswordActivity" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:name="mwcq.promgr.mgr.ConfirmPasswordActivity" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<service android:name="mwcq.lock.lockservice.LockService1000115" android:persistent="true" android:process=":remote">
+<intent-filter>
+<action android:name="mwcq.lock.lockservice.LockService1000115">
+</action>
+</intent-filter>
+</service>
+<activity android:label="@7F070000" android:launchMode="2" android:name=".FacelockDialogActivity" android:screenOrientation="1">
+</activity>
+<service android:exported="true" android:name="mwcq.promgr.service.AppProtectService">
+</service>
+<receiver android:name="mwcq.promgr.timmer.Alarmreceiver">
+<intent-filter>
+<action android:name="arui.alarm.action">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name="mwcq.promgr.service.ProtectBC">
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+</intent-filter>
+</receiver>
+<service android:name="mwcq.promgr.service.AppStartListenerService">
+</service>
+<service android:name="mwcq.promgr.service.ForegroundService">
+</service>
+<receiver android:name="mwcq.promgr.service.AppStartReceiver1000115">
+<intent-filter>
+<action android:name="mwcq.promgr.service.AppStartReceiver1000115">
+</action>
+</intent-filter>
+</receiver>
+<activity android:label="@7F070031" android:name=".FaceImagebrowseActivity">
+</activity>
+<activity android:label="@7F070037" android:name=".WeiboActivity">
+</activity>
+<activity android:label="@7F070000" android:name=".MwcqLockGuidePagesActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.xbwx.AppWebView">
+</activity>
+<activity android:label="@7F070000" android:name=".packages.PackagesActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F070000" android:name="mwcq.lock.facelock1000115.packages.FaceMatchActivity">
+</activity>
+<activity android:label="@7F070000" android:name="mwcq.lock.facelock1000115.packages.ImageOPTActivity">
+</activity>
+<activity android:label="@7F070000" android:name="mwcq.lock.facelock1000115.packages.WebPackage" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F070000" android:name="mwcq.lock.facelock1000115.packages.MwcqHisBrowserActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F070000" android:name="mwcq.lock.facelock1000115.packages.WebPackageActivity">
+</activity>
+<activity android:label="@7F070000" android:name="mwcq.lock.facelock1000115.packages.MwcqSysBrowserActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F070000" android:name=".PhotoSurfaceActivity">
+</activity>
+<service android:name="mwcq.lock.facelock1000115.SoundService" android:persistent="true" android:process=":remote">
+<intent-filter>
+<action android:name="mwcq.lock.facelock1000115.SoundService">
+</action>
+</intent-filter>
+</service>
+</application>
+</manifest>

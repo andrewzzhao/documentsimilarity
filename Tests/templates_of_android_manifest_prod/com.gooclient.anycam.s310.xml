@@ -1,0 +1,314 @@
+<?xml version="1.0" ?><manifest android:hardwareAccelerated="true" android:versionCode="1503656662" android:versionName="3.2.7 2017/08/25" package="com.gooclient.anycam.s310" platformBuildVersionCode="22" platformBuildVersionName="5.1.1-1819727" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="17" android:targetSdkVersion="21">
+</uses-sdk>
+<supports-screens android:anyDensity="true" android:largeScreens="true" android:normalScreens="true" android:resizeable="true" android:smallScreens="true" android:xlargeScreens="true">
+</supports-screens>
+<uses-feature android:name="android.hardware.wifi" android:required="true">
+</uses-feature>
+<uses-feature android:name="android.hardware.microphone" android:required="true">
+</uses-feature>
+<uses-permission android:name="android.permission.DISABLE_KEYGUARD">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS">
+</uses-permission>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-feature android:name="android.hardware.camera">
+</uses-feature>
+<uses-permission android:name="android.permission.RECORD_AUDIO">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_CONFIGURATION">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.RESTART_PACKAGES">
+</uses-permission>
+<uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT">
+</uses-permission>
+<uses-permission android:name="com.android.launcher.permission.READ_SETTINGS">
+</uses-permission>
+<uses-permission android:name="com.android.launcher.permission.UNINSTALL_SHORTCUT">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_LOGS">
+</uses-permission>
+<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE">
+</uses-permission>
+<application android:allowBackup="true" android:icon="@7F02019C" android:label="@7F0702FF" android:name="com.stub.StubApp" android:persistent="true" android:qihoo="activity" android:theme="@7F09000F">
+ //
+
+<activity android:launchMode="1" android:name="com.gooclient.anycam.activity.welcome.SplashActivity" android:screenOrientation="1" android:theme="@android:0103000F">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:excludeFromRecents="true" android:launchMode="0" android:name="com.stub.plugin.Stub01" android:noHistory="true" android:taskAffinity="com.gooclient.anycam.s310.affinity">
+</activity>
+<service android:enabled="true" android:exported="true" android:name="com.stub.plugin.Stub02">
+</service>
+<receiver android:enabled="true" android:exported="false" android:name="com.stub.plugin.Stub03">
+</receiver>
+<provider android:authorities="com.gooclient.anycam.s310.COMMONPROVIDER" android:exported="true" android:name="com.stub.plugin.Stub04">
+</provider>
+<activity android:label="@7F07004E" android:name="com.gooclient.anycam.activity.welcome.WelcomeActivity" android:screenOrientation="1" android:theme="@7F09000F">
+</activity>
+<service android:name="com.gooclient.anycam.activity.service.PushService">
+</service>
+<receiver android:exported="true" android:name="com.google.android.gms.gcm.GcmReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+<category android:name="com.langtao.gcmdemo">
+</category>
+</intent-filter>
+</receiver>
+<service android:exported="false" android:name="com.langtao.ltpush.gcm.MyGcmListenerService">
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+</intent-filter>
+</service>
+<service android:exported="false" android:name="com.langtao.ltpush.gcm.MyInstanceIDListenerService">
+<intent-filter>
+<action android:name="com.google.android.gms.iid.InstanceID">
+</action>
+</intent-filter>
+</service>
+<meta-data android:name="LT_PUSH_KEY" android:value="2WqyfJh0UYlKUMU0/Kbu6YCo8ZhaCqaS5Md1Kqc=">
+</meta-data>
+<meta-data android:name="LT_PUSH_URL" android:value="lbs.push2u.com">
+</meta-data>
+<receiver android:enabled="true" android:exported="false" android:name="com.gooclient.anycam.notification.PushReceiver">
+<intent-filter>
+<action android:name="com.goolink.service.GPushServices">
+</action>
+</intent-filter>
+</receiver>
+<service android:name="com.goolink.service.PushServices">
+</service>
+<service android:name="com.gooclient.anycam.activity.service.WifiSingleService">
+</service>
+<activity android:name="com.gooclient.anycam.activity.service.TestSocketMainActivity">
+</activity>
+<activity android:name="com.gooclient.anycam.activity.service.HelloActivity">
+</activity>
+<activity android:name="com.gooclient.anycam.activity.SoftAboutActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.gooclient.anycam.activity.localfile.Pic_Vid_gridviewActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.gooclient.anycam.activity.localfile.LocalFileActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.gooclient.anycam.activity.localfile.LocalFileGridViewActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.gooclient.anycam.activity.message.ImageShower" android:screenOrientation="1" android:theme="@7F09000D">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.gooclient.anycam.activity.message.AlarmMediaPlay" android:screenOrientation="4">
+</activity>
+<activity android:name="com.gooclient.anycam.activity.message.AlarmItemActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.gooclient.anycam.activity.message.DeviceAlarmMessageActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.gooclient.anycam.activity.video.GlnkPlayActivity" android:screenOrientation="4">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.gooclient.anycam.activity.video.GlnkVodSearchActivity" android:screenOrientation="4">
+</activity>
+<activity android:name="com.gooclient.anycam.activity.device.DeviceAddActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.gooclient.anycam.activity.device.DeviceAddSmartWifiActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.gooclient.anycam.activity.device.DeviceEditSmartWifiActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.gooclient.anycam.activity.device.ProtectionActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.gooclient.anycam.activity.user.FeedBackActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.gooclient.anycam.activity.SettingActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.gooclient.anycam.activity.user.ExperienceActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.gooclient.anycam.activity.user.ChannelActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.gooclient.anycam.activity.device.DeviceEditActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:name="com.gooclient.anycam.activity.device.ResetDeviceActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.gooclient.anycam.activity.device.ScanQRCode" android:screenOrientation="1">
+</activity>
+<activity android:name="com.gooclient.anycam.activity.device.InputDeviceName" android:screenOrientation="1">
+</activity>
+<activity android:name="com.gooclient.anycam.activity.device.ChoosetoAddActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.gooclient.anycam.activity.device.ConfigNetworkActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.gooclient.anycam.activity.device.DeviceListActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.gooclient.anycam.activity.user.ResetPswdActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.gooclient.anycam.activity.user.AccountActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name="com.gooclient.anycam.activity.user.LoginActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.gooclient.anycam.activity.user.SignUpActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.gooclient.anycam.activity.user.ForgotPasswordActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:hardwareAccelerated="false" android:name="com.gooclient.anycam.activity.message.MessageActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="2" android:name="com.gooclient.anycam.activity.main.MainActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.gooclient.anycam.activity.device.LockPasswordActivity" android:screenOrientation="2">
+</activity>
+<activity android:name="com.gooclient.anycam.activity.device.DeviceSettingActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.gooclient.anycam.activity.device.DeviceFirmwareUpdateActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.gooclient.anycam.activity.device.DeviceMotion_detectActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.gooclient.anycam.activity.device.DevicePlaned_recordActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.gooclient.anycam.activity.device.DeviceAdd433Activity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.gooclient.anycam.activity.device.DeviceList433Activity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.gooclient.anycam.activity.cloudrecord.CloudRecordFormActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:name="com.gooclient.anycam.activity.cloudrecord.StripePayActivity" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.gooclient.anycam.activity.video.GlnkCloudRecordPlayActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.gooclient.anycam.activity.device.UpdateFirmwareActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.gooclient.anycam.activity.device.UpdateFirmwareActivity2" android:screenOrientation="1">
+</activity>
+<activity android:name="com.gooclient.anycam.activity.device.DeviceEdit433Activity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.gooclient.anycam.views.SceneActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.gooclient.anycam.activity.message.MessageListActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.gooclient.anycam.activity.device.SearchingDeviceActivity">
+</activity>
+<activity android:name="com.gooclient.anycam.activity.device.DeviceInitSetActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.gooclient.anycam.activity.device.DeviceVideoSetActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.gooclient.anycam.activity.cloudrecord.GetStorageFreeActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.gooclient.anycam.activity.cloudrecord.WebPayActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.gooclient.anycam.activity.device.DeviceMotion_detecUpActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.gooclient.anycam.activity.device.DeviceAddSoundWaveActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.gooclient.anycam.activity.device.DeviceSmartAdd" android:screenOrientation="1">
+</activity>
+<receiver android:name="com.gooclient.anycam.broadcast.WifiReceiver">
+<intent-filter>
+<action android:name="android.net.wifi.RSSI_CHANGED">
+</action>
+<action android:name="android.net.wifi.STATE_CHANGE">
+</action>
+<action android:name="android.net.wifi.WIFI_STATE_CHANGED">
+</action>
+</intent-filter>
+</receiver>
+<activity android:name="com.gooclient.anycam.activity.device.DeviceAddApOrSoundwaveOrSmarkActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.gooclient.anycam.activity.device.DeviceAddApActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.gooclient.anycam.activity.device.DeviceAddDanPinApActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.gooclient.anycam.activity.device.DeviceAddDanPinOrOthersActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.gooclient.anycam.activity.device.DeviceAPIllustrationActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.gooclient.anycam.activity.device.Device433LearnActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.gooclient.anycam.activity.device.DevicePlaned_recordUpActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.gooclient.anycam.activity.device.LockPasswordUpActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<service android:name="com.gooclient.anycam.activity.message.DownloadPngService">
+<intent-filter>
+<action android:name="com.gooclient.anycam.downloadpng">
+</action>
+</intent-filter>
+</service>
+<activity android:label="@7F070305" android:name="com.gooclient.anycam.v12.wxapi.WechatPayActivity" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<activity android:label="@7F070305" android:name="com.gooclient.anycam.v12.wxapi.WechatPayActivity2" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<activity android:exported="true" android:launchMode="1" android:name="com.gooclient.anycam.v12.wxapi.WXPayEntryActivity">
+</activity>
+<activity android:label="@7F070304" android:name="com.gooclient.anycam.v12.wxapi.PaySelectActivity" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<activity android:name="com.gooclient.anycam.activity.registered.GetVerifyCodeActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.gooclient.anycam.activity.registered.RegisteredView" android:screenOrientation="1">
+</activity>
+<activity android:name="com.gooclient.anycam.activity.AroundDeviceListActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.gooclient.anycam.activity.device.SmartConfigNetworkActivity">
+</activity>
+<activity android:name="com.gooclient.anycam.activity.user.ResetQuestionActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.mob.tools.MobUIShell" android:theme="@android:01030010" android:windowSoftInputMode="0x00000012">
+<meta-data android:name="AuthorizeAdapter" android:value="cn.sharesdk.demo.MyAdapter">
+</meta-data>
+<intent-filter>
+<data android:scheme="db-7janx53ilz11gbs">
+</data>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004A0" android:exported="true" android:name="com.gooclient.anycam.v12.wxapi.WXEntryActivity" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.gooclient.anycam.activity.video.YuyanPlayActivity" android:screenOrientation="4">
+</activity>
+<activity android:name="com.gooclient.anycam.activity.device.SDcardActivity" android:screenOrientation="1">
+</activity>
+<meta-data android:name="UMENG_APPKEY" android:value="57885bce67e58edd3a001dc8">
+</meta-data>
+<meta-data android:name="UMENG_CHANNEL" android:value="Wandoujia">
+</meta-data>
+<activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:01030010">
+</activity>
+<meta-data android:name="com.google.android.gms.version" android:value="@7F0E0005">
+</meta-data>
+<provider android:authorities="com.gooclient.anycam.s310.firebaseinitprovider" android:exported="false" android:initOrder="100" android:name="com.google.firebase.provider.FirebaseInitProvider">
+</provider>
+</application>
+</manifest>

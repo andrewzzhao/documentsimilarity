@@ -1,0 +1,130 @@
+<?xml version="1.0" ?><manifest android:versionCode="1" android:versionName="1.0" package="co.android.apps2u" platformBuildVersionCode="23" platformBuildVersionName="6.0-2704002" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="14" android:targetSdkVersion="23">
+</uses-sdk>
+<uses-permission android:name="android.permission.GET_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_ACCOUNTS">
+</uses-permission>
+<permission android:name="co.android.apps2u.permission.C2D_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="co.android.apps2u.permission.C2D_MESSAGE">
+</uses-permission>
+<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-permission android:name="com.sec.android.provider.badge.permission.READ">
+</uses-permission>
+<uses-permission android:name="com.sec.android.provider.badge.permission.WRITE">
+</uses-permission>
+<uses-permission android:name="com.htc.launcher.permission.READ_SETTINGS">
+</uses-permission>
+<uses-permission android:name="com.htc.launcher.permission.UPDATE_SHORTCUT">
+</uses-permission>
+<uses-permission android:name="com.sonyericsson.home.permission.BROADCAST_BADGE">
+</uses-permission>
+<uses-permission android:name="com.anddoes.launcher.permission.UPDATE_COUNT">
+</uses-permission>
+<uses-permission android:name="com.majeur.launcher.permission.UPDATE_BADGE">
+</uses-permission>
+<uses-feature android:glEsVersion="0x00020000" android:required="true">
+</uses-feature>
+<application android:allowBackup="true" android:icon="@7F030000" android:label="@7F080034" android:name="co.android.apps2u.Application" android:supportsRtl="true" android:theme="@7F0B008D">
+<meta-data android:name="com.onesignal.NotificationOpened.DEFAULT" android:value="DISABLE">
+</meta-data>
+<activity android:name="co.android.apps2u.activities.MainActivity" android:theme="@7F0B008E">
+</activity>
+<activity android:name="co.android.apps2u.activities.AppsActivity" android:theme="@7F0B008E">
+</activity>
+<activity android:name="co.android.apps2u.activities.DescriptionActivity" android:theme="@7F0B008E">
+</activity>
+<activity android:name="co.android.apps2u.activities.GamesActivity" android:theme="@7F0B008E">
+</activity>
+<activity android:name="co.android.apps2u.activities.DownloadManager" android:theme="@7F0B008E">
+</activity>
+<activity android:name="co.android.apps2u.activities.AppManagerActivity" android:theme="@7F0B008E">
+</activity>
+<meta-data android:name="co.android.apps2u.utils.GlideConfiguration" android:value="GlideModule">
+</meta-data>
+<activity android:name="co.android.apps2u.activities.MoreActivity" android:theme="@7F0B008E">
+</activity>
+<activity android:name="co.android.apps2u.activities.SearchActivity" android:theme="@7F0B008E">
+</activity>
+<service android:exported="false" android:name="co.android.apps2u.service.OnesignalNotificationService">
+<intent-filter>
+<action android:name="com.onesignal.NotificationExtender">
+</action>
+</intent-filter>
+</service>
+<activity android:name="co.android.apps2u.activities.ContactUsActivity" android:theme="@7F0B008E">
+</activity>
+<activity android:name="co.android.apps2u.activities.SplashActivity" android:theme="@7F0B008E">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<meta-data android:name="onesignal_app_id" android:value="62b31c8a-d949-46cd-a114-84a96d1dcb93">
+</meta-data>
+<meta-data android:name="onesignal_google_project_number" android:value="str:593413352528">
+</meta-data>
+<receiver android:name="com.onesignal.GcmBroadcastReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+<category android:name="co.android.apps2u">
+</category>
+</intent-filter>
+</receiver>
+<receiver android:name="com.onesignal.NotificationOpenedReceiver">
+</receiver>
+<service android:name="com.onesignal.GcmIntentService">
+</service>
+<service android:name="com.onesignal.SyncService" android:stopWithTask="false">
+</service>
+<activity android:name="com.onesignal.PermissionsActivity" android:theme="@android:01030010">
+</activity>
+<service android:name="com.onesignal.NotificationRestoreService">
+</service>
+<receiver android:name="com.onesignal.BootUpReceiver">
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+<action android:name="android.intent.action.QUICKBOOT_POWERON">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name="com.onesignal.UpgradeReceiver">
+<intent-filter>
+<action android:name="android.intent.action.MY_PACKAGE_REPLACED">
+</action>
+</intent-filter>
+</receiver>
+<meta-data android:name="com.google.android.gms.version" android:value="@7F0C0006">
+</meta-data>
+<provider android:authorities="co.android.apps2u.google_measurement_service" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementContentProvider">
+</provider>
+<receiver android:enabled="true" android:name="com.google.android.gms.measurement.AppMeasurementReceiver">
+<intent-filter>
+<action android:name="com.google.android.gms.measurement.UPLOAD">
+</action>
+</intent-filter>
+</receiver>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementService">
+</service>
+</application>
+</manifest>

@@ -1,0 +1,384 @@
+<?xml version="1.0" ?><manifest android:versionCode="8" android:versionName="2.2.1" package="com.gyenno.mhi" platformBuildVersionCode="23" platformBuildVersionName="6.0-2704002" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="14" android:targetSdkVersion="22">
+</uses-sdk>
+<uses-permission android:name="android.permission.BLUETOOTH">
+</uses-permission>
+<uses-permission android:name="android.permission.BLUETOOTH_ADMIN">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.RECORD_AUDIO">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.CALL_PHONE">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.DISABLE_KEYGUARD">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_SMS">
+</uses-permission>
+<uses-permission android:name="android.permission.SEND_SMS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_SMS">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SMS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_CALENDAR">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_CALENDAR">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_CONTACTS">
+</uses-permission>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_GPS">
+</uses-permission>
+<uses-permission android:name="android.permission.FLASHLIGHT">
+</uses-permission>
+<uses-permission android:name="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE">
+</uses-permission>
+<uses-permission android:name="android.permission.BIND_ACCESSIBILITY_SERVICE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_CALL_LOG">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_CALL_LOG">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERACT_ACROSS_USERS_FULL">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<android:uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</android:uses-permission>
+<application android:allowBackup="true" android:icon="@7F020196" android:label="@7F070056" android:name="com.gyenno.mhi.MHIApplication" android:theme="@7F0A0082">
+<activity android:name="com.gyenno.mhi.ui.MainActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F070056" android:name="com.gyenno.mhi.ui.WelcomeActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000A0" android:label="@7F0702B4" android:name="com.gyenno.mhi.ui.LoginActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+</activity>
+<service android:enabled="true" android:exported="false" android:name="com.gyenno.mhi.service.DataTransactorService" android:screenOrientation="1">
+</service>
+<service android:name="com.gyenno.mhi.service.CallService">
+</service>
+<service android:name="com.gyenno.mhi.service.SmsService">
+</service>
+<service android:label="@7F070056" android:name="com.gyenno.mhi.service.NLService" android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE">
+<intent-filter>
+<action android:name="android.service.notification.NotificationListenerService">
+</action>
+</intent-filter>
+</service>
+<service android:name="com.gyenno.mhi.service.MService" android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE">
+<intent-filter>
+<action android:name="android.accessibilityservice.AccessibilityService">
+</action>
+</intent-filter>
+<meta-data android:name="android.accessibilityservice" android:resource="@7F050000">
+</meta-data>
+</service>
+<activity android:label="@7F07029A" android:name="com.gyenno.mhi.ui.AddFriendActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F070297" android:name="com.gyenno.mhi.ui.AchievementActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F07029B" android:name="com.gyenno.mhi.ui.BehaviorAerobicActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F07029C" android:name="com.gyenno.mhi.ui.BehaviorIntakeActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F07029D" android:name="com.gyenno.mhi.ui.BehaviorSleepActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F0702BA" android:name="com.gyenno.mhi.ui.RegisterActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F0702BC" android:name="com.gyenno.mhi.ui.ValidateActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F0702BB" android:name="com.gyenno.mhi.ui.SetPasswordActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F0702AD" android:name="com.gyenno.mhi.ui.FindPasswordActivity" android:screenOrientation="1">
+</activity>
+<service android:enabled="true" android:exported="false" android:name="com.gyenno.mhi.service.SensorService">
+</service>
+<activity android:label="@7F07029E" android:name="com.gyenno.mhi.ui.ChattingActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F0702B1" android:name="com.gyenno.mhi.ui.HealthModelActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F0702B2" android:name="com.gyenno.mhi.ui.HealthModelDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F0702AE" android:name="com.gyenno.mhi.ui.FriendInteractActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F0702B7" android:name="com.gyenno.mhi.ui.MyBarcodeActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F0702B8" android:name="com.gyenno.mhi.ui.PrivacyActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F070296" android:name="com.gyenno.mhi.ui.AboutActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F0702AA" android:name="com.gyenno.mhi.ui.DeviceTypeActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F070298" android:name="com.gyenno.mhi.ui.AddDeviceCupActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F070299" android:name="com.gyenno.mhi.ui.AddDeviceWatchActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F0702BF" android:name="com.gyenno.mhi.ui.WatchSettingsActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F0702B6" android:name="com.gyenno.mhi.ui.ModifyPasswordActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.gyenno.mhi.ui.CupSettingSyncActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.gyenno.mhi.ui.CupSettingActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.gyenno.mhi.ui.CupNameGuideActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.gyenno.mhi.ui.CupRemindTypeActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.gyenno.mhi.ui.CupAdvanceSettingActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.gyenno.mhi.ui.CupRemindIntervalActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.gyenno.mhi.ui.CupFavoriteTempActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.gyenno.mhi.ui.CupHighTempActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.gyenno.mhi.ui.CupTargetActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.gyenno.mhi.ui.CupRemindActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.gyenno.mhi.ui.CupSearchActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name="com.gyenno.mhi.ui.AddDevicesActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:label="@7F07034C" android:name="com.gyenno.mhi.ui.WatchTesting">
+</activity>
+<activity android:name="com.gyenno.mhi.upgrade.cup.CupDfuActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F07030A" android:name="com.gyenno.mhi.ui.WatchMatchActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F070305" android:name="com.gyenno.mhi.ui.WatchGuideActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F0702FB" android:name="com.gyenno.mhi.ui.WatchSettingActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F070341" android:name="com.gyenno.mhi.ui.WatchSettingNotificationActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.gyenno.mhi.ui.WatchSettingUpgradeActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.gyenno.mhi.ui.WatchForceUnbondActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.gyenno.mhi.ui.MyDevicesActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.gyenno.mhi.ui.WatchPairedActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.gyenno.mhi.ui.HealthModelCategoryActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.gyenno.mhi.ui.FAQActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.gyenno.mhi.ui.GyennoPrivacy" android:screenOrientation="1">
+</activity>
+<activity android:name="com.gyenno.mhi.upgrade.watch.SearchWatchWifi" android:screenOrientation="1">
+</activity>
+<activity android:name="com.gyenno.mhi.upgrade.watch.WatchStartUpgrade" android:screenOrientation="1">
+</activity>
+<activity android:name="com.gyenno.mhi.upgrade.watch.WatchUpgrading" android:screenOrientation="1">
+</activity>
+<activity android:name="com.gyenno.mhi.ui.WatchWearTypeActivity">
+</activity>
+<service android:enabled="true" android:exported="true" android:name="com.ingenic.iwds.app.NotificationProxyService" android:priority="0">
+<intent-filter>
+<action android:name="com.ingenic.iwds.app.NotificationProxyService">
+</action>
+</intent-filter>
+</service>
+<service android:enabled="true" android:exported="true" android:name="com.ingenic.iwds.slpt.WatchFaceService">
+<intent-filter>
+<action android:name="com.ingenic.iwds.slpt.WatchFaceService">
+</action>
+</intent-filter>
+</service>
+<service android:enabled="true" android:exported="true" android:name="com.ingenic.iwds.smartsense.SensorService">
+<intent-filter>
+<action android:name="com.ingenic.iwds.smartsense.SensorService">
+</action>
+</intent-filter>
+</service>
+<service android:enabled="true" android:exported="true" android:name="com.ingenic.iwds.smartlocation.RemoteLocationService">
+<intent-filter>
+<action android:name="com.ingenic.iwds.smartlocation.RemoteLocationService">
+</action>
+</intent-filter>
+</service>
+<service android:enabled="true" android:exported="true" android:name="com.ingenic.iwds.smartvibrate.VibrateService">
+<intent-filter>
+<action android:name="com.ingenic.iwds.smartvibrate.VibrateService">
+</action>
+</intent-filter>
+</service>
+<service android:enabled="true" android:exported="true" android:name="com.ingenic.iwds.uniconnect.ConnectionService">
+<intent-filter>
+<action android:name="com.ingenic.iwds.uniconnect.ConnectionService">
+</action>
+</intent-filter>
+</service>
+<service android:enabled="true" android:exported="true" android:name="com.ingenic.iwds.cloud.CloudService">
+<intent-filter>
+<action android:name="com.ingenic.iwds.cloud.CloudService">
+</action>
+</intent-filter>
+</service>
+<service android:name="com.gyenno.mhi.upgrade.cup.DfuService">
+</service>
+<receiver android:name="com.gyenno.mhi.message.BleMessageReceiver">
+<intent-filter>
+<action android:name="com.gyenno.bledata">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name="com.gyenno.mhi.message.BleConnectReceiver">
+<intent-filter>
+<action android:name="com.gyenno.BLE_CONNECT_ACTION">
+</action>
+</intent-filter>
+</receiver>
+<activity android:label="@7F0702BD" android:name="com.gyenno.mhi.ui.WatchSettingNameActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F0702BE" android:name="com.gyenno.mhi.ui.WatchSettingSyncActivity" android:screenOrientation="1">
+</activity>
+<receiver android:enabled="true" android:exported="false" android:name="com.gyenno.mhi.service.AlarmReceiver">
+</receiver>
+<activity android:exported="true" android:label="@7F070056" android:launchMode="1" android:name="com.gyenno.mhi.wxapi.WXEntryActivity" android:theme="@7F0A0085">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:scheme="GYENNO">
+</data>
+</intent-filter>
+</activity>
+<service android:enabled="true" android:name="com.baidu.location.f" android:permission="android.permission.BAIDU_LOCATION_SERVICE" android:process=":remote">
+</service>
+<meta-data android:name="UMENG_APPKEY" android:value="@7F070364">
+</meta-data>
+<meta-data android:name="UMENG_CHANNEL" android:value="Gyenno">
+</meta-data>
+<meta-data android:name="com.baidu.lbsapi.API_KEY" android:value="@7F070362">
+</meta-data>
+<meta-data android:name="RONG_CLOUD_APP_KEY" android:value="@7F070363">
+</meta-data>
+<activity android:label="@7F0702AF" android:name="com.gyenno.mhi.ui.GuideActivity">
+</activity>
+<activity android:label="@7F0702B9" android:name="com.gyenno.mhi.ui.ProfileActivity" android:parentActivityName="com.gyenno.mhi.ui.BaseActivity" android:theme="@7F0A0082">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.gyenno.mhi.ui.BaseActivity">
+</meta-data>
+</activity>
+<activity android:label="@7F0702B0" android:name="com.gyenno.mhi.ui.GyennoNewsActivity" android:theme="@7F0A0082">
+</activity>
+<activity android:name="com.gyenno.mhi.ui.InteractDetailActivity">
+</activity>
+<activity android:name="com.gyenno.mhi.ui.InteractGuideActivity" android:theme="@7F0A0086">
+</activity>
+<activity android:name="com.gyenno.mhi.ui.CountryActivity">
+</activity>
+<service android:name="io.rong.push.PushService" android:process="io.rong.push">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="io.rong.push">
+</action>
+</intent-filter>
+</service>
+<service android:name="io.rong.push.CommandService" android:process="io.rong.push">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="io.rong.command">
+</action>
+</intent-filter>
+</service>
+<receiver android:name="io.rong.push.PushReceiver" android:process="io.rong.push">
+<intent-filter>
+<action android:name="io.rong.imlib.action.push.heartbeat">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.USER_PRESENT">
+</action>
+<action android:name="android.intent.action.ACTION_POWER_CONNECTED">
+</action>
+<action android:name="android.intent.action.ACTION_POWER_DISCONNECTED">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_REMOVED">
+</action>
+<data android:scheme="package">
+</data>
+</intent-filter>
+</receiver>
+<activity android:name="io.rong.imkit.tools.SelectPictureActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="io.rong.imkit.tools.PreviewPictureActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="io.rong.imkit.tools.RongWebviewActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="io.rong.imkit.widget.provider.TakingPicturesActivity" android:screenOrientation="1">
+</activity>
+<service android:name="io.rong.imlib.ipc.RongService" android:process=":ipc">
+</service>
+<service android:name="io.rong.imlib.ReConnectService">
+</service>
+<receiver android:name="io.rong.imlib.ConnectChangeReceiver">
+</receiver>
+<receiver android:name="io.rong.imlib.ipc.PushMessageReceiver">
+<intent-filter>
+<action android:name="io.rong.push.message">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name="io.rong.imlib.HeartbeatReceiver" android:process=":ipc">
+</receiver>
+<activity android:name="com.gyenno.barcode.MipcaActivityCapture">
+</activity>
+<service android:name="com.gyenno.bluetoothkit.BluetoothServiceImpl">
+</service>
+<activity android:label="@7F0702B5" android:name="com.wq.photo.MediaChoseActivity">
+</activity>
+<activity android:label="@7F0702A0" android:name="com.wq.photo.CropImageActivity">
+</activity>
+<service android:name="com.umeng.update.net.DownloadingService" android:process=":DownloadingService">
+</service>
+<activity android:name="com.umeng.update.UpdateDialogActivity" android:theme="@android:01030010">
+</activity>
+</application>
+</manifest>

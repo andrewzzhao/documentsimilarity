@@ -1,0 +1,302 @@
+<?xml version="1.0" ?><manifest android:versionCode="25" android:versionName="V3.0" package="com.klcxkj.ddc" platformBuildVersionCode="20" platformBuildVersionName="4.4W-1246132" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-permission android:name="com.android.launcher.permission.READ_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_LOGS">
+</uses-permission>
+<uses-permission android:name="android.permission.FLASHLIGHT">
+</uses-permission>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-permission android:name="android.hardware.camera">
+</uses-permission>
+<uses-feature android:name="android.hardware.camera.autofocus">
+</uses-feature>
+<uses-permission android:name="android.permission.MANAGE_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_ACCOUNTS">
+</uses-permission>
+<permission android:name="com.klcxkj.ddc.permission.JPUSH_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="com.klcxkj.ddc.permission.JPUSH_MESSAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_USER_PRESENT">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_NETWORK_STATE">
+</uses-permission>
+<uses-sdk android:minSdkVersion="11" android:targetSdkVersion="21">
+</uses-sdk>
+<application android:allowBackup="true" android:debuggable="true" android:icon="@7F02004F" android:label="@7F070000" android:name="com.tencent.StubShell.TxAppEntry" android:theme="@7F080001">
+<meta-data android:name="TxAppEntry" android:value="com.klcxkj.ddc.RSApplication">
+</meta-data>
+<service android:enabled="true" android:name="com.baidu.location.f" android:process=":remote">
+<intent-filter>
+<action android:name="com.baidu.location.service_v2.2">
+</action>
+</intent-filter>
+</service>
+<activity android:configChanges="0x000000A0" android:exported="false" android:name="cn.jpush.android.ui.PushActivity">
+<intent-filter>
+<action android:name="cn.jpush.android.ui.PushActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="com.klcxkj.ddc">
+</category>
+</intent-filter>
+</activity>
+<service android:enabled="true" android:exported="false" android:name="cn.jpush.android.service.DownloadService">
+</service>
+<service android:enabled="true" android:exported="false" android:name="cn.jpush.android.service.PushService">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.REGISTER">
+</action>
+<action android:name="cn.jpush.android.intent.REPORT">
+</action>
+<action android:name="cn.jpush.android.intent.PushService">
+</action>
+<action android:name="cn.jpush.android.intent.PUSH_TIME">
+</action>
+</intent-filter>
+</service>
+<receiver android:enabled="true" android:exported="false" android:name="cn.jpush.android.service.PushReceiver">
+<intent-filter android:priority="1000">
+<action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY">
+</action>
+<category android:name="com.klcxkj.ddc">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.USER_PRESENT">
+</action>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_ADDED">
+</action>
+<action android:name="android.intent.action.PACKAGE_REMOVED">
+</action>
+<data android:scheme="package">
+</data>
+</intent-filter>
+</receiver>
+<receiver android:name="cn.jpush.android.service.AlarmReceiver">
+</receiver>
+<receiver android:enabled="true" android:exported="false" android:name="com.klcxkj.ddc.network.MyReceiver">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.REGISTRATION">
+</action>
+<action android:name="cn.jpush.android.intent.UNREGISTRATION">
+</action>
+<action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED">
+</action>
+<action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED">
+</action>
+<action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED">
+</action>
+<action android:name="cn.jpush.android.intent.ACTION_RICHPUSH_CALLBACK">
+</action>
+<action android:name="cn.jpush.android.intent.CONNECTION">
+</action>
+<category android:name="com.klcxkj.ddc">
+</category>
+</intent-filter>
+</receiver>
+<meta-data android:name="JPUSH_CHANNEL" android:value="developer-default">
+</meta-data>
+<meta-data android:name="JPUSH_APPKEY" android:value="793ccc333bf57044ed24dd36">
+</meta-data>
+<meta-data android:name="com.baidu.lbsapi.API_KEY" android:value="T08BvlSF1ud0UrRIB4H2BcEK">
+</meta-data>
+<activity android:label="@7F070000" android:name="com.klcxkj.ddc.activity.ACT_SplashScreen" android:screenOrientation="1" android:theme="@android:0103000E">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:scheme="wx434df320194659bc">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.klcxkj.ddc.activity.ACT_GuidePage" android:screenOrientation="1" android:theme="@android:0103000D">
+</activity>
+<activity android:name="com.klcxkj.ddc.activity.ACT_Register" android:screenOrientation="1" android:theme="@android:0103000D">
+</activity>
+<activity android:name="com.klcxkj.ddc.activity.ACT_CityList" android:screenOrientation="1" android:theme="@android:0103000D" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:name="com.klcxkj.ddc.activity.ACT_SchoolList" android:screenOrientation="1" android:theme="@android:0103000D" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:name="com.klcxkj.ddc.activity.ACT_Login_WithoutPassword" android:screenOrientation="1" android:theme="@android:0103000D">
+</activity>
+<activity android:name="com.klcxkj.ddc.activity.ACT_Login" android:screenOrientation="1" android:theme="@android:0103000D">
+</activity>
+<activity android:name="com.klcxkj.ddc.activity.ACT_Main" android:screenOrientation="1" android:theme="@android:0103000D">
+</activity>
+<activity android:name="com.klcxkj.ddc.activity.ACT_CampusCardApply" android:screenOrientation="1" android:theme="@android:0103000D">
+</activity>
+<activity android:name="com.klcxkj.ddc.activity.ACT_CampusCardBind" android:screenOrientation="1" android:theme="@android:0103000D">
+</activity>
+<activity android:name="com.klcxkj.ddc.activity.ACT_CampusCardLoss" android:screenOrientation="1" android:theme="@android:0103000D">
+</activity>
+<activity android:name="com.klcxkj.ddc.activity.ACT_CampusCardBill" android:screenOrientation="1" android:theme="@android:0103000D">
+</activity>
+<activity android:name="com.klcxkj.ddc.activity.ACT_CampusCardApplyRechage" android:screenOrientation="1" android:theme="@android:0103000D">
+</activity>
+<activity android:name="com.klcxkj.ddc.activity.ACT_CampusCardApplyRechageReport" android:screenOrientation="1" android:theme="@android:0103000D">
+</activity>
+<activity android:name="com.klcxkj.ddc.activity.ACT_Rechage" android:screenOrientation="1" android:theme="@android:0103000D">
+</activity>
+<activity android:name="com.klcxkj.ddc.activity.ACT_Me" android:screenOrientation="1" android:theme="@android:0103000D">
+</activity>
+<activity android:name="com.klcxkj.ddc.activity.ACT_MeAccountChangePassword" android:screenOrientation="1" android:theme="@android:0103000D">
+</activity>
+<activity android:name="com.klcxkj.ddc.activity.ACT_MeMessageCenter" android:screenOrientation="1" android:theme="@android:0103000D">
+</activity>
+<activity android:name="com.klcxkj.ddc.activity.ACT_MeAccountChangeMyInfo" android:screenOrientation="1" android:theme="@android:0103000D">
+</activity>
+<activity android:name="com.klcxkj.ddc.activity.ACT_ForgetPassword" android:screenOrientation="1" android:theme="@android:0103000D">
+</activity>
+<activity android:name="com.klcxkj.ddc.activity.ACT_MeMessageDetail" android:screenOrientation="1" android:theme="@android:0103000D">
+</activity>
+<activity android:name="com.klcxkj.ddc.activity.ACT_MeFunctionIntroduction" android:screenOrientation="1" android:theme="@android:0103000D">
+</activity>
+<activity android:name="com.klcxkj.ddc.activity.ACT_MeFunctionIntroductionShow" android:screenOrientation="1" android:theme="@android:0103000D">
+</activity>
+<activity android:name="com.klcxkj.ddc.activity.ACT_SearchStation" android:screenOrientation="1" android:theme="@android:0103000D">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.klcxkj.ddc.activity.ACT_SearchStation2" android:screenOrientation="1" android:theme="@android:0103000D">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.klcxkj.ddc.activity.ACT_SearchStation3" android:screenOrientation="1" android:theme="@android:0103000D">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.klcxkj.ddc.activity.ACT_SearchStation4" android:screenOrientation="1" android:theme="@android:0103000D">
+</activity>
+<activity android:name="com.klcxkj.ddc.activity.ACT_SidebarAccount" android:screenOrientation="1" android:theme="@android:0103000D">
+</activity>
+<activity android:name="com.klcxkj.ddc.activity.ACT_SidebarWallet" android:screenOrientation="1" android:theme="@android:0103000D">
+</activity>
+<activity android:name="com.klcxkj.ddc.activity.ACT_SidebarSetting" android:screenOrientation="1" android:theme="@android:0103000D">
+</activity>
+<activity android:name="com.klcxkj.ddc.activity.ACT_SidebarCoupons" android:screenOrientation="1" android:theme="@android:0103000D">
+</activity>
+<activity android:name="com.klcxkj.ddc.activity.ACT_SidebarCouponsHistory" android:screenOrientation="1" android:theme="@android:0103000D">
+</activity>
+<activity android:name="com.klcxkj.ddc.activity.ACT_SidebarNews2" android:screenOrientation="1" android:theme="@android:0103000D">
+</activity>
+<activity android:name="com.klcxkj.ddc.activity.ACT_SettingRidicule" android:screenOrientation="1" android:theme="@android:0103000D">
+</activity>
+<activity android:name="com.klcxkj.ddc.activity.ACT_SettingRepair" android:screenOrientation="1" android:theme="@android:0103000D">
+</activity>
+<activity android:name="com.klcxkj.ddc.activity.ACT_SettingContactUs" android:screenOrientation="1" android:theme="@android:0103000D">
+</activity>
+<activity android:name="com.klcxkj.ddc.activity.ACT_SettingRidiculeReport" android:screenOrientation="1" android:theme="@android:0103000D">
+</activity>
+<activity android:name="com.klcxkj.ddc.activity.ACT_SettingAbout" android:screenOrientation="1" android:theme="@android:0103000D">
+</activity>
+<activity android:name="com.klcxkj.ddc.activity.ACT_Bill" android:screenOrientation="1" android:theme="@android:0103000D">
+</activity>
+<activity android:name="com.klcxkj.ddc.activity.ACT_BillRechargeDetail" android:screenOrientation="1" android:theme="@android:0103000D">
+</activity>
+<activity android:name="com.klcxkj.ddc.activity.ACT_BillConsumeDetail" android:screenOrientation="1" android:theme="@android:0103000D">
+</activity>
+<activity android:name="com.klcxkj.ddc.activity.ACT_ChargeSao" android:screenOrientation="1" android:theme="@android:0103000D">
+</activity>
+<activity android:name="com.klcxkj.ddc.activity.ACT_ChargeNumber" android:screenOrientation="1" android:theme="@android:0103000D">
+</activity>
+<activity android:name="com.klcxkj.ddc.activity.ACT_ChargeTime" android:screenOrientation="1" android:theme="@android:0103000D">
+</activity>
+<activity android:name="com.klcxkj.ddc.activity.ACT_ChargeOutlet" android:screenOrientation="1" android:theme="@android:0103000D">
+</activity>
+<activity android:name="com.klcxkj.ddc.activity.ACT_ChargeOutlet_New" android:screenOrientation="1" android:theme="@android:0103000D">
+</activity>
+<activity android:name="com.klcxkj.ddc.activity.ACT_ChargeMain" android:screenOrientation="1" android:theme="@android:0103000D">
+</activity>
+<activity android:name="com.klcxkj.ddc.activity.ACT_ChargeStationDetail" android:screenOrientation="1" android:theme="@android:0103000D">
+</activity>
+<activity android:name="com.klcxkj.ddc.activity.ACT_ChargeUseCoupons" android:screenOrientation="1" android:theme="@android:0103000D">
+</activity>
+<activity android:name="com.klcxkj.ddc.activity.ACT_ChargeBillDetail" android:screenOrientation="1" android:theme="@android:0103000D">
+</activity>
+<activity android:name="com.klcxkj.ddc.activity.MipcaActivityCapture" android:screenOrientation="1" android:theme="@android:0103000D">
+</activity>
+<activity android:name="com.klcxkj.ddc.activity.ACT_RegisterServiceTerms" android:screenOrientation="1" android:theme="@android:0103000D">
+</activity>
+<activity android:name="com.klcxkj.ddc.activity.ACT_SidebarCouponsUse" android:screenOrientation="1" android:theme="@android:0103000D">
+</activity>
+<activity android:name="com.klcxkj.ddc.activity.ACT_SettingAbout_New" android:screenOrientation="1" android:theme="@android:0103000D">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.zxing.activity.CaptureActivity" android:screenOrientation="1" android:theme="@android:01030007" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.ericssonlabs.CaptureActivity" android:screenOrientation="1" android:theme="@android:01030007" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000000E0" android:exported="false" android:name="com.alipay.sdk.app.H5PayActivity" android:screenOrientation="3" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.mob.tools.MobUIShell" android:screenOrientation="1" android:theme="@android:01030010" android:windowSoftInputMode="0x00000012">
+<intent-filter>
+<data android:scheme="tencent100371282">
+</data>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004A0" android:exported="true" android:name="com.klcxkj.ddc.wxapi.WXEntryActivity" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<activity android:exported="true" android:launchMode="1" android:name="com.klcxkj.ddc.wxapi.WXPayEntryActivity" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+</application>
+</manifest>

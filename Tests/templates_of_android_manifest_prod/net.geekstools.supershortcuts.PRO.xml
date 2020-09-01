@@ -1,0 +1,174 @@
+<?xml version="1.0" ?><manifest android:compileSdkVersion="28" android:compileSdkVersionCodename="9" android:versionCode="88" android:versionName="4.300.000.88_PRO" package="net.geekstools.supershortcuts.PRO" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="26" android:targetSdkVersion="28">
+</uses-sdk>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.FOREGROUND_SERVICE">
+</uses-permission>
+<uses-permission android:name="android.permission.PACKAGE_USAGE_STATS">
+</uses-permission>
+<uses-permission android:name="com.android.vending.CHECK_LICENSE">
+</uses-permission>
+<uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT">
+</uses-permission>
+<uses-permission android:name="com.android.launcher.permission.UNINSTALL_SHORTCUT">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE">
+</uses-permission>
+<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE">
+</uses-permission>
+<permission android:name="net.geekstools.supershortcuts.PRO.permission.C2D_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="net.geekstools.supershortcuts.PRO.permission.C2D_MESSAGE">
+</uses-permission>
+<application android:allowBackup="true" android:appCategory="7" android:fullBackupContent="false" android:icon="@7F060033" android:label="@7F0B0007" android:largeHeap="true" android:resizeableActivity="true" android:roundIcon="@7F060035" android:screenOrientation="7" android:supportsRtl="true" android:theme="@7F0C0000">
+<meta-data android:name="com.google.android.gms.version" android:value="@7F080001">
+</meta-data>
+<meta-data android:name="com.google.firebase.messaging.default_notification_icon" android:resource="@7F060038">
+</meta-data>
+<meta-data android:name="com.google.firebase.messaging.default_notification_color" android:resource="@7F04000D">
+</meta-data>
+<activity android:name="net.geekstools.supershortcuts.PRO.Configurations" android:resizeableActivity="true">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:name="net.geekstools.supershortcuts.PRO.normal.NormalAppSelectionList" android:resizeableActivity="true">
+</activity>
+<activity android:name="net.geekstools.supershortcuts.PRO.advanced.AdvanceShortcuts" android:resizeableActivity="true" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name="net.geekstools.supershortcuts.PRO.advanced.AdvanceAppSelectionList">
+</activity>
+<activity android:label="@7F0B0007" android:name="net.geekstools.supershortcuts.PRO.advanced.LoadCategoryItems" android:noHistory="true" android:resizeableActivity="true" android:theme="@7F0C000D">
+<intent-filter>
+<action android:name="load_category_action">
+</action>
+<action android:name="load_category_action_shortcut">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:name="net.geekstools.supershortcuts.PRO.split.SplitShortcuts" android:resizeableActivity="true" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name="net.geekstools.supershortcuts.PRO.split.SplitAppSelectionList">
+</activity>
+<activity android:configChanges="0x00000D80" android:name="net.geekstools.supershortcuts.PRO.split.SplitTransparentPair" android:resizeableActivity="true" android:supportsPictureInPicture="true" android:theme="@7F0C000D">
+<intent-filter>
+<action android:name="load_split_action_pair">
+</action>
+<action android:name="load_split_action_pair_shortcut">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x00000D80" android:name="net.geekstools.supershortcuts.PRO.split.SplitTransparentSingle" android:resizeableActivity="true" android:supportsPictureInPicture="true" android:theme="@7F0C000D">
+<intent-filter>
+<action android:name="load_split_action_single">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:label="@7F0B0055" android:name="net.geekstools.supershortcuts.PRO.Util.SettingGUI">
+<intent-filter android:autoVerify="true" android:label="@7F0B0007">
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="geeksempire.net" android:pathPrefix="/FAQ/super.html" android:scheme="http">
+</data>
+<data android:host="geeksempire.net" android:pathPrefix="/FAQ/super.html" android:scheme="https">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="net.geekstools.supershortcuts.PRO.DeepLinkedShortcuts" android:theme="@7F0C000D">
+<intent-filter android:autoVerify="true" android:label="@7F0B0007">
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="www.geeksempire.net" android:pathPrefix="/super.html" android:scheme="https">
+</data>
+</intent-filter>
+</activity>
+<service android:name="net.geekstools.supershortcuts.PRO.split.SplitScreenService" android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE">
+<intent-filter>
+<action android:name="android.accessibilityservice.AccessibilityService">
+</action>
+</intent-filter>
+<meta-data android:name="android.accessibilityservice" android:resource="@7F0E0002">
+</meta-data>
+</service>
+<service android:name="net.geekstools.supershortcuts.PRO.LicenseValidator">
+</service>
+<service android:icon="@7F060033" android:name="net.geekstools.supershortcuts.PRO.CloudNotificationHandler">
+<intent-filter>
+<action android:name="com.google.firebase.MESSAGING_EVENT">
+</action>
+</intent-filter>
+</service>
+<service android:exported="true" android:name="com.google.firebase.messaging.FirebaseMessagingService">
+<intent-filter android:priority="-500">
+<action android:name="com.google.firebase.MESSAGING_EVENT">
+</action>
+</intent-filter>
+</service>
+<service android:name="com.google.firebase.components.ComponentDiscoveryService">
+<meta-data android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar" android:value="com.google.firebase.components.ComponentRegistrar">
+</meta-data>
+<meta-data android:name="com.google.firebase.components:com.google.firebase.iid.Registrar" android:value="com.google.firebase.components.ComponentRegistrar">
+</meta-data>
+</service>
+<receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementReceiver">
+</receiver>
+<receiver android:enabled="true" android:exported="true" android:name="com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver" android:permission="android.permission.INSTALL_PACKAGES">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementService">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementJobService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<receiver android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+<category android:name="net.geekstools.supershortcuts.PRO">
+</category>
+</intent-filter>
+</receiver>
+<service android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdService">
+<intent-filter android:priority="-500">
+<action android:name="com.google.firebase.INSTANCE_ID_EVENT">
+</action>
+</intent-filter>
+</service>
+<activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:01030010">
+</activity>
+<provider android:authorities="net.geekstools.supershortcuts.PRO.firebaseinitprovider" android:exported="false" android:initOrder="100" android:name="com.google.firebase.provider.FirebaseInitProvider">
+</provider>
+<meta-data android:name="android.support.VERSION" android:value="26.1.0">
+</meta-data>
+<meta-data android:name="android.arch.lifecycle.VERSION" android:value="27.0.0-SNAPSHOT">
+</meta-data>
+<meta-data android:name="com.google.android.wearable.beta.app" android:resource="@7F0E0000">
+</meta-data>
+</application>
+</manifest>

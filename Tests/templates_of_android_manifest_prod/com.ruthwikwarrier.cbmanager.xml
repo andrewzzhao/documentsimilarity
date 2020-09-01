@@ -1,0 +1,60 @@
+<?xml version="1.0" ?><manifest android:versionCode="1" android:versionName="1.0" package="com.ruthwikwarrier.cbmanager" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="16" android:targetSdkVersion="26">
+</uses-sdk>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW">
+</uses-permission>
+<uses-permission android:name="android.permission.BIND_ACCESSIBILITY_SERVICE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-permission android:name="android.permission.PACKAGE_USAGE_STATS">
+</uses-permission>
+<application android:allowBackup="true" android:icon="@7F0D0001" android:label="@7F0E002B" android:roundIcon="@7F0D0002" android:supportsRtl="true" android:theme="@7F0F0007">
+<activity android:name="com.ruthwikwarrier.cbmanager.activities.MainActivity">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:documentLaunchMode="1" android:excludeFromRecents="true" android:label="@7F0E0054" android:launchMode="3" android:name="com.ruthwikwarrier.cbmanager.activities.MainDialogActivity" android:theme="@7F0F0006">
+</activity>
+<service android:enabled="true" android:exported="true" android:name="com.ruthwikwarrier.cbmanager.services.CBWatchService" android:permission="android.permission.BIND_JOB_SERVICE">
+<intent-filter>
+<action android:name="com.ruthwikwarrier.cbmanager.services.CBWatchService">
+</action>
+</intent-filter>
+</service>
+<service android:exported="false" android:name="com.ruthwikwarrier.cbmanager.services.ClipActionBridge">
+</service>
+<receiver android:enabled="true" android:exported="true" android:name="com.ruthwikwarrier.cbmanager.receivers.LaunchServiceAtStartup">
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+</intent-filter>
+</receiver>
+<activity android:label="@7F0E0055" android:name="com.ruthwikwarrier.cbmanager.activities.SettingsActivity">
+</activity>
+<activity android:name="com.ruthwikwarrier.cbmanager.activities.AddEditActivity">
+</activity>
+<activity android:name="com.ruthwikwarrier.cbmanager.activities.CrashActivity">
+</activity>
+<activity android:name="com.ruthwikwarrier.cbmanager.activities.AboutActivity">
+</activity>
+<activity android:name="com.karumi.dexter.DexterActivity" android:theme="@7F0F00AF">
+</activity>
+<meta-data android:name="android.support.VERSION" android:value="26.1.0">
+</meta-data>
+<meta-data android:name="android.arch.lifecycle.VERSION" android:value="27.0.0-SNAPSHOT">
+</meta-data>
+<meta-data android:name="com.android.vending.derived.apk.id" android:value="1">
+</meta-data>
+</application>
+</manifest>

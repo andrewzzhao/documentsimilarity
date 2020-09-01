@@ -1,0 +1,136 @@
+<?xml version="1.0" ?><manifest android:versionCode="29" android:versionName="1.29" package="com.intelliuno.nineonenine" platformBuildVersionCode="23" platformBuildVersionName="6.0-2704002" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="16" android:targetSdkVersion="23">
+</uses-sdk>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CALL_PHONE">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.MANAGE_DOCUMENTS">
+</uses-permission>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-feature android:name="android.hardware.camera" android:required="false">
+</uses-feature>
+<uses-permission android:name="android.hardware.camera.autofocus" android:required="false">
+</uses-permission>
+<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE">
+</uses-permission>
+<uses-feature android:glEsVersion="0x00020000" android:required="true">
+</uses-feature>
+<application android:allowBackup="true" android:icon="@7F030001" android:label="@7F08004D" android:largeHeap="true" android:supportsRtl="true" android:theme="@7F0A009E">
+<activity android:name="com.intelliuno.nineonenine.MainLauncherActivity">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:label="@7F08004D" android:name="com.intelliuno.nineonenine.MainActivity" android:screenOrientation="1">
+</activity>
+<service android:enabled="true" android:name="com.intelliuno.nineonenine.UPLocationService">
+</service>
+<service android:enabled="true" android:name="com.intelliuno.nineonenine.UPServerSyncService">
+</service>
+<service android:enabled="true" android:name="com.intelliuno.nineonenine.GPSTracker">
+</service>
+<receiver android:enabled="true" android:exported="false" android:name="com.intelliuno.nineonenine.BootCompleted">
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name="com.intelliuno.nineonenine.InternetEnabledReceiver">
+<intent-filter>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+</receiver>
+<activity android:name="com.intelliuno.nineonenine.RoleSelectorActivity">
+</activity>
+<activity android:name="com.intelliuno.nineonenine.ViewSiteActivity">
+</activity>
+<meta-data android:name="com.google.android.gms.version" android:value="@7F0C0004">
+</meta-data>
+<activity android:name="com.intelliuno.nineonenine.QuestionHKActivity">
+</activity>
+<activity android:name="com.intelliuno.nineonenine.QuestionQRTActivity">
+</activity>
+<activity android:name="com.intelliuno.nineonenine.QuestionRAActivity">
+</activity>
+<activity android:name="com.intelliuno.nineonenine.SiteMenuActivity">
+</activity>
+<activity android:name="com.intelliuno.nineonenine.FileSubmitActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.intelliuno.nineonenine.PhotoIntentActivity" android:screenOrientation="1">
+</activity>
+<provider android:authorities="com.intelliuno.nineonenine.fileprovider" android:exported="false" android:grantUriPermissions="true" android:name="android.support.v4.content.FileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F060000">
+</meta-data>
+</provider>
+<activity android:name="com.intelliuno.nineonenine.OfflineUpdateActivity">
+</activity>
+<activity android:name="com.intelliuno.nineonenine.DynamicQuestionHKOldActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.intelliuno.nineonenine.PhotoIntentV2Activity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.intelliuno.nineonenine.PhotoIntentV3Activity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.intelliuno.nineonenine.DynamicQuestionH4AKOldActivity">
+</activity>
+<activity android:name="com.intelliuno.nineonenine.PhotoIntentoldActivity">
+</activity>
+<activity android:name="com.intelliuno.nineonenine.DynamicQuestionHKNewActivity">
+</activity>
+<activity android:name="com.intelliuno.nineonenine.DynamicQuestionHK4AActivity">
+</activity>
+<activity android:name="com.intelliuno.nineonenine.PhotoIntentV4Activity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000FB0" android:name="com.google.android.gms.ads.AdActivity" android:theme="@android:0103000F">
+</activity>
+<activity android:name="com.google.android.gms.ads.purchase.InAppPurchaseActivity" android:theme="@7F0A011C">
+</activity>
+<activity android:exported="true" android:name="com.google.android.gms.appinvite.PreviewActivity" android:theme="@7F0A011B">
+<intent-filter>
+<action android:name="com.google.android.gms.appinvite.ACTION_PREVIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:excludeFromRecents="true" android:exported="false" android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity" android:theme="@android:01030010">
+</activity>
+<service android:exported="true" android:name="com.google.android.gms.auth.api.signin.RevocationBoundService" android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION">
+</service>
+<provider android:authorities="com.intelliuno.nineonenine.google_measurement_service" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementContentProvider">
+</provider>
+<receiver android:enabled="true" android:name="com.google.android.gms.measurement.AppMeasurementReceiver">
+<intent-filter>
+<action android:name="com.google.android.gms.measurement.UPLOAD">
+</action>
+</intent-filter>
+</receiver>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementService">
+</service>
+<meta-data android:name="com.android.vending.derived.apk.id" android:value="1">
+</meta-data>
+</application>
+</manifest>

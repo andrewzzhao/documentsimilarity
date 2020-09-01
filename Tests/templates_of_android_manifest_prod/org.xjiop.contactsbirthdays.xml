@@ -1,0 +1,118 @@
+<?xml version="1.0" ?><manifest android:compileSdkVersion="29" android:compileSdkVersionCodename="10" android:versionCode="75" android:versionName="1.6.6" package="org.xjiop.contactsbirthdays" platformBuildVersionCode="29" platformBuildVersionName="10" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="16" android:targetSdkVersion="29">
+</uses-sdk>
+<uses-permission android:maxSdkVersion="22" android:name="android.permission.GET_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_CONTACTS">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_CONTACTS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-permission android:name="android.permission.QUICKBOOT_POWERON">
+</uses-permission>
+<uses-permission android:name="com.samsung.android.providers.context.permission.WRITE_USE_APP_FEATURE_SURVEY">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE">
+</uses-permission>
+<uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE">
+</uses-permission>
+<application android:allowBackup="true" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:fullBackupContent="true" android:icon="@7F0E0000" android:label="@7F10002F" android:name="org.xjiop.contactsbirthdays.Application" android:roundIcon="@7F0E0001" android:theme="@7F1100E7">
+<activity android:launchMode="2" android:name="org.xjiop.contactsbirthdays.MainActivity" android:windowSoftInputMode="0x00000030">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:label="@7F100075" android:name="org.xjiop.contactsbirthdays.EventsEditorActivity" android:theme="@7F1100E7">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".MainActivity">
+</meta-data>
+</activity>
+<activity android:exported="false" android:label="@7F10010B" android:name="org.xjiop.contactsbirthdays.SettingsActivity" android:theme="@7F1100E7">
+</activity>
+<receiver android:exported="false" android:name="org.xjiop.contactsbirthdays.AlarmEventsReceiver">
+</receiver>
+<receiver android:enabled="true" android:name="org.xjiop.contactsbirthdays.SnoozingReceiver">
+</receiver>
+<receiver android:exported="false" android:name="org.xjiop.contactsbirthdays.TestNotificationReceiver">
+</receiver>
+<receiver android:enabled="true" android:exported="true" android:name="org.xjiop.contactsbirthdays.BootReceiver">
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+<action android:name="android.intent.action.QUICKBOOT_POWERON">
+</action>
+<action android:name="com.htc.intent.action.QUICKBOOT_POWERON">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.MY_PACKAGE_REPLACED">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name="org.xjiop.contactsbirthdays.widget.Widget">
+<intent-filter>
+<action android:name="android.appwidget.action.APPWIDGET_UPDATE">
+</action>
+</intent-filter>
+<meta-data android:name="android.appwidget.provider" android:resource="@7F130007">
+</meta-data>
+</receiver>
+<service android:name="org.xjiop.contactsbirthdays.widget.WidgetService" android:permission="android.permission.BIND_REMOTEVIEWS">
+</service>
+<provider android:authorities="org.xjiop.contactsbirthdays.fileprovider" android:exported="false" android:grantUriPermissions="true" android:name="androidx.core.content.FileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F130000">
+</meta-data>
+</provider>
+<service android:directBootAware="true" android:exported="false" android:name="com.google.firebase.components.ComponentDiscoveryService">
+<meta-data android:name="com.google.firebase.components:com.google.firebase.crashlytics.CrashlyticsRegistrar" android:value="com.google.firebase.components.ComponentRegistrar">
+</meta-data>
+<meta-data android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar" android:value="com.google.firebase.components.ComponentRegistrar">
+</meta-data>
+<meta-data android:name="com.google.firebase.components:com.google.firebase.iid.Registrar" android:value="com.google.firebase.components.ComponentRegistrar">
+</meta-data>
+<meta-data android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar" android:value="com.google.firebase.components.ComponentRegistrar">
+</meta-data>
+</service>
+<service android:exported="false" android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery">
+<meta-data android:name="backend:com.google.android.datatransport.cct.CctBackendFactory" android:value="cct">
+</meta-data>
+</service>
+<service android:exported="false" android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<receiver android:exported="false" android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver">
+</receiver>
+<receiver android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+</intent-filter>
+</receiver>
+<provider android:authorities="org.xjiop.contactsbirthdays.firebaseinitprovider" android:exported="false" android:initOrder="100" android:name="com.google.firebase.provider.FirebaseInitProvider">
+</provider>
+<activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:01030010">
+</activity>
+<receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementReceiver">
+</receiver>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementService">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementJobService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<meta-data android:name="com.google.android.gms.version" android:value="@7F0A0008">
+</meta-data>
+<meta-data android:name="com.android.vending.derived.apk.id" android:value="1">
+</meta-data>
+</application>
+</manifest>

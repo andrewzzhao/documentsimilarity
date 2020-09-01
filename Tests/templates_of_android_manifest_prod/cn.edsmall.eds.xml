@@ -1,0 +1,618 @@
+<?xml version="1.0" ?><manifest android:versionCode="16" android:versionName="1.2.1" package="cn.edsmall.eds" platformBuildVersionCode="25" platformBuildVersionName="7.1.1" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="16" android:targetSdkVersion="23">
+</uses-sdk>
+<permission android:name="cn.edsmall.eds.permission.JPUSH_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="android.permission.CALL_PHONE">
+</uses-permission>
+<uses-permission android:name="android.permission.MANAGE_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="android.permission.BLUETOOTH_ADMIN">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_LOGS">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_INGS">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-permission android:name="android.permission.BLUETOOTH">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_USER_PRESENT">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW">
+</uses-permission>
+<uses-permission android:name="android.permission.SYSTEM_OVERLAY_WINDOW">
+</uses-permission>
+<uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES">
+</uses-permission>
+<uses-feature android:name="android.hardware.camera">
+</uses-feature>
+<uses-feature android:name="android.hardware.camera.autofocus">
+</uses-feature>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-permission android:name="android.permission.MANAGE_DOCUMENTS">
+</uses-permission>
+<uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_CONFIGURATION">
+</uses-permission>
+<uses-feature android:name="android.hardware.location.gps" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.location.network" android:required="false">
+</uses-feature>
+<uses-permission android:name="cn.edsmall.eds.permission.JPUSH_MESSAGE">
+</uses-permission>
+<application android:allowBackup="true" android:icon="@7F030009" android:label="@7F080068" android:largeHeap="true" android:name="cn.edsmall.eds.sys.EdsShopApplication" android:supportsRtl="true" android:theme="@7F0A00A4">
+<activity android:configChanges="0x000000A0" android:name="cn.edsmall.eds.activity.index.IndexActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+<meta-data android:name="IndexActivity" android:value="启畒">
+</meta-data>
+</activity>
+<activity android:name="cn.edsmall.eds.activity.index.LoginActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000013">
+<meta-data android:name="LoginActivity" android:value="登录�">
+</meta-data>
+</activity>
+<activity android:configChanges="0x000000A0" android:name="cn.edsmall.eds.activity.HomeActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000013">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="@7F080067" android:path="/home" android:scheme="@7F080069">
+</data>
+</intent-filter>
+<meta-data android:name="HomeActivity" android:value="�">
+</meta-data>
+</activity>
+<activity android:name="cn.edsmall.eds.activity.buy.BuyProductDetailActivity" android:screenOrientation="1">
+<meta-data android:name="BuyProductDetailActivity" android:value="畠">
+</meta-data>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="@7F080067" android:path="/product/detail" android:scheme="@7F080069">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="cn.edsmall.eds.activity.mine.QRCodeScannerActivity" android:screenOrientation="1">
+<meta-data android:name="QRCodeScannerActivity" android:value="繎码扫�">
+</meta-data>
+</activity>
+<activity android:name="cn.edsmall.eds.activity.buy.OrderSubmitActivity" android:screenOrientation="1">
+<meta-data android:name="OrderSubmitActivity" android:value="生成单">
+</meta-data>
+</activity>
+<activity android:name="cn.edsmall.eds.activity.mine.MineServiceActivity" android:screenOrientation="1">
+<meta-data android:name="MineAddressManageActivity" android:value="收〧䁗筗理">
+</meta-data>
+</activity>
+<activity android:name="cn.edsmall.eds.activity.mine.MineAddressEditActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+<meta-data android:name="MineAddressEditActivity" android:value="剭/编收〧䁗�">
+</meta-data>
+</activity>
+<activity android:configChanges="0x000000A4" android:launchMode="2" android:name="cn.edsmall.eds.activity.buy.BuySearchActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000013">
+<meta-data android:name="BuySearchActivity" android:value="搜索扵">
+</meta-data>
+</activity>
+<activity android:name="cn.edsmall.eds.activity.mine.AboutActivity" android:screenOrientation="1">
+<meta-data android:name="AboutActivity" android:value="关ፎ捦�">
+</meta-data>
+</activity>
+<activity android:name="cn.edsmall.eds.activity.index.MPasswordActivity" android:screenOrientation="1">
+<meta-data android:name="MPasswordActivity" android:value="找孖码-㥏孥码�">
+</meta-data>
+</activity>
+<activity android:configChanges="0x000000E0" android:exported="false" android:name="com.alipay.sdk.app.H5PayActivity" android:screenOrientation="3">
+<meta-data android:name="H5PayActivity" android:value="H5支兎畿">
+</meta-data>
+</activity>
+<activity android:configChanges="0x000000E0" android:exported="false" android:name="com.alipay.sdk.auth.AuthActivity" android:screenOrientation="3">
+</activity>
+<activity android:name="cn.edsmall.eds.activity.buy.ProductFilterActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="@7F080067" android:path="/product/list" android:scheme="@7F080069">
+</data>
+</intent-filter>
+<meta-data android:name="ProductFilterActivity" android:value="商᝔桒">
+</meta-data>
+</activity>
+<activity android:name="cn.edsmall.eds.activity.buy.ProductFilterActivityV2" android:screenOrientation="1">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="@7F080067" android:path="/product/list" android:scheme="@7F080069">
+</data>
+</intent-filter>
+<meta-data android:name="ProductFilterActivity" android:value="商᝔桒">
+</meta-data>
+</activity>
+<activity android:name="cn.edsmall.eds.activity.mine.MineSettingActivity" android:screenOrientation="1">
+<meta-data android:name="MineSettingActivity" android:value="ᩦ湙�">
+</meta-data>
+</activity>
+<activity android:name="cn.edsmall.eds.activity.mine.ModifyPasswordActivity" android:screenOrientation="1">
+<meta-data android:name="ModifyPasswordActivity" android:value="㥏孥码">
+</meta-data>
+</activity>
+<activity android:name="cn.edsmall.eds.activity.mine.IntroductionActivity" android:screenOrientation="1">
+<meta-data android:name="IntroductionActivity" android:value="个筎湎�">
+</meta-data>
+</activity>
+<activity android:name="cn.edsmall.eds.activity.mine.NewIntroductionActivity" android:screenOrientation="1">
+<meta-data android:name="NewIntroductionActivity" android:value="㥦⩥乎置">
+</meta-data>
+</activity>
+<activity android:name="cn.edsmall.eds.activity.mine.GenderActivity" android:screenOrientation="1">
+<meta-data android:name="GenderActivity" android:value="性别置">
+</meta-data>
+</activity>
+<activity android:name="cn.edsmall.eds.activity.mine.MailboxActivity" android:screenOrientation="1">
+<meta-data android:name="MailboxActivity" android:value="湻�">
+</meta-data>
+</activity>
+<activity android:name="cn.edsmall.eds.activity.mine.RealNameActivity" android:screenOrientation="1">
+<meta-data android:name="RealNameActivity" android:value="真奛名置">
+</meta-data>
+</activity>
+<activity android:name="cn.edsmall.eds.activity.index.FindPasswordActivity" android:screenOrientation="1">
+<meta-data android:name="FindPasswordActivity" android:value="找孖码">
+</meta-data>
+</activity>
+<activity android:name="cn.edsmall.eds.activity.mine.MyJournyeActivity" android:screenOrientation="1">
+<meta-data android:name="MyJournyeActivity" android:value="我�">
+</meta-data>
+</activity>
+<activity android:name="cn.edsmall.eds.activity.mine.HelpActivity" android:screenOrientation="1">
+<meta-data android:name="H5Activity" android:value="H5网�">
+</meta-data>
+</activity>
+<activity android:launchMode="2" android:name="cn.edsmall.eds.activity.index.PhoneVCodeLoginActivity" android:screenOrientation="1">
+<meta-data android:name="VCodeLoginActivity" android:value="码登录">
+</meta-data>
+</activity>
+<activity android:name="cn.edsmall.eds.activity.buy.NewProductActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="@7F080067" android:path="/product/new" android:scheme="@7F080069">
+</data>
+</intent-filter>
+<meta-data android:name="NewProductActivity" android:value="本周上�">
+</meta-data>
+</activity>
+<activity android:name="cn.edsmall.eds.activity.mine.MyInfoActivity" android:screenOrientation="1">
+<meta-data android:name="MyInfoActivity" android:value="个低息ٻ�">
+</meta-data>
+</activity>
+<activity android:name="cn.edsmall.eds.activity.buy.OrderPaySucceedActivity" android:screenOrientation="1">
+<meta-data android:name="OrderPaySucceedActivity" android:value="支၎剢">
+</meta-data>
+</activity>
+<activity android:name="cn.edsmall.eds.activity.buy.OrderDetailActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="OrderDetailActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+<meta-data android:name="OrderDetailActivity" android:value="单�">
+</meta-data>
+</activity>
+<activity android:name="cn.edsmall.eds.activity.buy.OrderListActivity" android:screenOrientation="1">
+<meta-data android:name="OrderListActivity" android:value="单列�">
+</meta-data>
+</activity>
+<activity android:name="cn.edsmall.eds.activity.mine.PdfPreviewActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="android.intent.action.SEND">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+<meta-data android:name="PdfPreviewActivity" android:value="@7F0802C3">
+</meta-data>
+</activity>
+<activity android:name="cn.edsmall.eds.activity.buy.OrderRefundActivity" android:screenOrientation="1">
+<meta-data android:name="OrderRefundActivity" android:value="申㸀�">
+</meta-data>
+</activity>
+<activity android:launchMode="1" android:name="cn.edsmall.eds.activity.index.RegisterActivity" android:screenOrientation="1">
+<meta-data android:name="RegisterActivity" android:value="公引畛">
+</meta-data>
+</activity>
+<activity android:name="cn.edsmall.eds.activity.index.WelcomeActivity" android:screenOrientation="1">
+<meta-data android:name="WelcomeActivity" android:value="欢�">
+</meta-data>
+</activity>
+<activity android:name="cn.edsmall.eds.activity.buy.OrderRefundDetailActivity" android:screenOrientation="1">
+<meta-data android:name="OrderRefundDetailActivity" android:value="协商N款">
+</meta-data>
+</activity>
+<activity android:name="cn.edsmall.eds.activity.buy.OrderRefundDetailCloseActivity" android:screenOrientation="1">
+<meta-data android:name="OrderRefundDetailCloseActivity" android:value="㸀ѫٙ⁴�">
+</meta-data>
+</activity>
+<activity android:name="cn.edsmall.eds.activity.buy.OrderRefundServiceActivity" android:screenOrientation="1">
+<meta-data android:name="OrderRefundServiceActivity" android:value="平乓入">
+</meta-data>
+</activity>
+<activity android:name="cn.edsmall.eds.activity.buy.BuyProductParamsActivity" android:screenOrientation="1">
+<meta-data android:name="BuyProductParamsActivity" android:value="格示意明">
+</meta-data>
+</activity>
+<activity android:name="cn.edsmall.eds.activity.buy.OrderRefundTipActivity" android:screenOrientation="1">
+<meta-data android:name="OrderRefundTipActivity" android:value="㸀ѫٙ�">
+</meta-data>
+</activity>
+<activity android:name="cn.edsmall.eds.activity.buy.AllBrandActivity" android:screenOrientation="1">
+<meta-data android:name="AllBrandActivity" android:value="䱔❲桙�">
+</meta-data>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="@7F080067" android:path="/brand/list" android:scheme="@7F080069">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="cn.edsmall.eds.activity.buy.BuyHotProductRankActivity" android:screenOrientation="1">
+<meta-data android:name="BuyHotProductRankActivity" android:value="噰楓-䱣�">
+</meta-data>
+</activity>
+<activity android:name="cn.edsmall.eds.activity.mine.MineLogisticsActivity" android:screenOrientation="1">
+<meta-data android:name="MineLogisticsActivity" android:value="物流公筓理">
+</meta-data>
+</activity>
+<activity android:name="cn.edsmall.eds.activity.mine.MineEditLogisticsActivity" android:screenOrientation="1">
+<meta-data android:name="MineEditLogisticsActivity" android:value="@7F080274">
+</meta-data>
+</activity>
+<activity android:name="cn.edsmall.eds.activity.buy.OrderSelectLogisticsActivity" android:screenOrientation="1">
+<meta-data android:name="OrderSelectLogisticsActivity" android:value="@7F080305">
+</meta-data>
+</activity>
+<activity android:name="cn.edsmall.eds.activity.buy.BuyCartActivity" android:screenOrientation="1">
+<meta-data android:name="BuyCartActivity" android:value="椭晲">
+</meta-data>
+</activity>
+<activity android:name="cn.edsmall.eds.activity.buy.BuyDownloadProductActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.edsmall.eds.activity.design.DesignFilterProductActivity" android:screenOrientation="1">
+<meta-data android:name="DesignFilterProductActivity" android:value="呎�">
+</meta-data>
+</activity>
+<activity android:configChanges="0x000004A0" android:imeOptions="0x10000000" android:name="cn.edsmall.eds.activity.design.DesignActivity" android:screenOrientation="0">
+<meta-data android:name="DesignActivity" android:value="䵟">
+</meta-data>
+</activity>
+<activity android:name="cn.edsmall.eds.activity.design.DesignFilterBgActivity" android:screenOrientation="1">
+<meta-data android:name="DesignFilterBgActivity" android:value="场景�">
+</meta-data>
+</activity>
+<activity android:name="cn.edsmall.eds.activity.design.DesignFilterBgActivityV2" android:screenOrientation="1">
+<meta-data android:name="DesignFilterBgActivityV2" android:value="场景�">
+</meta-data>
+</activity>
+<activity android:name="cn.edsmall.eds.activity.design.DesignSaveActivity" android:screenOrientation="1">
+<meta-data android:name="DesignSaveActivity" android:value="䡥佨存">
+</meta-data>
+</activity>
+<activity android:name="cn.edsmall.eds.activity.design.DesignDetailActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+<meta-data android:name="DesignDetailActivity" android:value="䡥恨">
+</meta-data>
+</activity>
+<activity android:name="cn.edsmall.eds.activity.buy.BuyProductFilterActivity" android:screenOrientation="1">
+<meta-data android:name="BuyProductFilterActivity" android:value="呎�">
+</meta-data>
+</activity>
+<activity android:name="cn.edsmall.eds.activity.design.DesignShareActivity" android:screenOrientation="1">
+<meta-data android:name="DesignShareActivity" android:value="@7F0801BA">
+</meta-data>
+</activity>
+<activity android:name="cn.edsmall.eds.activity.design.DesignTakePictureActivity" android:screenOrientation="1">
+<meta-data android:name="DesignTakePictureActivity" android:value="穢�">
+</meta-data>
+</activity>
+<activity android:name="cn.edsmall.eds.activity.index.RegisterCheckInvitationActivity" android:screenOrientation="1">
+<meta-data android:name="RegisterCheckInvitationActivity" android:value="">
+</meta-data>
+</activity>
+<activity android:name="cn.edsmall.eds.activity.index.RegisterCheckMobileActivity" android:screenOrientation="1">
+<meta-data android:name="RegisterCheckMobileActivity" android:value="">
+</meta-data>
+</activity>
+<activity android:name="cn.edsmall.eds.activity.index.RegisterSetPasswordActivity" android:screenOrientation="1">
+<meta-data android:name="RegisterSetPasswordActivity" android:value="">
+</meta-data>
+</activity>
+<activity android:name="cn.edsmall.eds.activity.mine.MineFavoriteActivityV2" android:screenOrientation="1">
+<meta-data android:name="MineFavoriteActivityV2" android:value="">
+</meta-data>
+</activity>
+<activity android:name="cn.edsmall.eds.activity.mine.PermissionActivity" android:screenOrientation="1">
+<meta-data android:name="PermissionActivity" android:value="权湐�">
+</meta-data>
+</activity>
+<activity android:configChanges="0x000004A0" android:imeOptions="0x10000000" android:name="cn.edsmall.eds.activity.design.DesignActivityV2" android:screenOrientation="0">
+<meta-data android:name="DesignActivityV2" android:value="䵟">
+</meta-data>
+</activity>
+<activity android:name="cn.edsmall.eds.activity.buy.BuySearchProductByPhoneActivity" android:screenOrientation="1">
+<meta-data android:name="BuySearchProductByPhoneActivity" android:value="">
+</meta-data>
+</activity>
+<activity android:name="cn.edsmall.eds.sharesdk.BuyProductImagerActivity" android:screenOrientation="1">
+<meta-data android:name="BuyProductImagerActivity" android:value="呎䝖ٲ乒">
+</meta-data>
+</activity>
+<activity android:name="cn.edsmall.eds.activity.mine.VideoActivity" android:screenOrientation="1">
+<meta-data android:name="VideoActivity" android:value="">
+</meta-data>
+</activity>
+<activity android:name="cn.edsmall.eds.activity.buy.BuyCartActivityV2" android:screenOrientation="1">
+<meta-data android:name="BuyCartActivityV2" android:value="椭晲">
+</meta-data>
+</activity>
+<activity android:name="cn.edsmall.eds.activity.design.TestActivity" android:screenOrientation="1">
+<meta-data android:name="TestActivity" android:value="TestActivity">
+</meta-data>
+</activity>
+<activity android:name="cn.edsmall.eds.activity.buy.SearchPictureHistoryActivity" android:screenOrientation="1">
+<meta-data android:name="SearchPictureHistoryActivity" android:value="卓搜索">
+</meta-data>
+</activity>
+<meta-data android:name="cn.edsmall.eds.glide.OkHttpGlideModule" android:value="GlideModule">
+</meta-data>
+<meta-data android:name="BaiduMobAd_STAT_ID" android:value="c74beaaea2">
+</meta-data>
+<meta-data android:name="BaiduMobAd_CHANNEL" android:value="Baidu Market">
+</meta-data>
+<meta-data android:name="BaiduMobAd_EXCEPTION_LOG" android:value="true">
+</meta-data>
+<meta-data android:name="BaiduMobAd_SEND_STRATEGY" android:value="APP_START">
+</meta-data>
+<meta-data android:name="BaiduMobAd_ONLY_WIFI" android:value="false">
+</meta-data>
+<meta-data android:name="BaiduMobAd_CELL_LOCATION" android:value="true">
+</meta-data>
+<meta-data android:name="BaiduMobAd_GPS_LOCATION" android:value="true">
+</meta-data>
+<meta-data android:name="BaiduMobAd_WIFI_LOCATION" android:value="true">
+</meta-data>
+<service android:enabled="true" android:exported="false" android:name="cn.jpush.android.service.PushService" android:process=":pushcore">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.REGISTER">
+</action>
+<action android:name="cn.jpush.android.intent.REPORT">
+</action>
+<action android:name="cn.jpush.android.intent.PushService">
+</action>
+<action android:name="cn.jpush.android.intent.PUSH_TIME">
+</action>
+</intent-filter>
+</service>
+<service android:enabled="true" android:exported="true" android:name="cn.jpush.android.service.DaemonService">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.DaemonService">
+</action>
+<category android:name="cn.edsmall.eds">
+</category>
+</intent-filter>
+</service>
+<receiver android:enabled="true" android:exported="false" android:name="cn.jpush.android.service.PushReceiver" android:process=":pushcore">
+<intent-filter android:priority="1000">
+<action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY">
+</action>
+<category android:name="cn.edsmall.eds">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.USER_PRESENT">
+</action>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_ADDED">
+</action>
+<action android:name="android.intent.action.PACKAGE_REMOVED">
+</action>
+<data android:scheme="package">
+</data>
+</intent-filter>
+</receiver>
+<activity android:configChanges="0x000000A0" android:exported="false" android:name="cn.jpush.android.ui.PushActivity" android:theme="@android:01030006">
+<intent-filter>
+<action android:name="cn.jpush.android.ui.PushActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="cn.edsmall.eds">
+</category>
+</intent-filter>
+</activity>
+<service android:enabled="true" android:exported="false" android:name="cn.jpush.android.service.DownloadService">
+</service>
+<receiver android:exported="false" android:name="cn.jpush.android.service.AlarmReceiver">
+</receiver>
+<receiver android:enabled="true" android:name="cn.edsmall.eds.receiver.JpushReceiver">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.REGISTRATION">
+</action>
+<action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED">
+</action>
+<action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED">
+</action>
+<action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED">
+</action>
+<action android:name="cn.jpush.android.intent.ACTION_RICHPUSH_CALLBACK">
+</action>
+<action android:name="cn.jpush.android.intent.CONNECTION">
+</action>
+<category android:name="cn.edsmall.eds">
+</category>
+</intent-filter>
+</receiver>
+<meta-data android:name="JPUSH_CHANNEL" android:value="developer-default">
+</meta-data>
+<meta-data android:name="JPUSH_APPKEY" android:value="8904d6cd8a70f7c307ba2028">
+</meta-data>
+<activity android:name="cn.edsmall.eds.activity.index.VCodeLoginActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.edsmall.eds.activity.buy.NegotiatedPaymentActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.edsmall.eds.activity.mine.WebClauseActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.edsmall.eds.activity.mine.WebRefundActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name="cn.edsmall.eds.activity.buy.WebActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.edsmall.eds.activity.design.DesignDetailPicShowActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.edsmall.eds.activity.buy.SerachPictureActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.mob.tools.MobUIShell" android:screenOrientation="1" android:theme="@android:01030010" android:windowSoftInputMode="0x00000012">
+<intent-filter>
+<data android:scheme="tencent1105801453">
+</data>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004A0" android:exported="true" android:name="cn.edsmall.eds.wxapi.WXEntryActivity" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+ //百ぞ噗
+
+<meta-data android:name="com.baidu.lbsapi.API_KEY" android:value="ozwfsiQw6p7M9zoO1PxfSwLiHjBwnG2W">
+</meta-data>
+<service android:enabled="true" android:name="com.baidu.location.f" android:process=":remote">
+</service>
+<activity android:name="cn.edsmall.eds.activity.buy.BuyBrandShopActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="@7F080067" android:path="/brand" android:scheme="@7F080069">
+</data>
+</intent-filter>
+<meta-data android:name="BuyBrandShopActivity" android:value="�">
+</meta-data>
+</activity>
+<activity android:name="cn.edsmall.eds.activity.buy.SerachPictureResultActivity" android:windowSoftInputMode="0x00000022">
+<meta-data android:name="SerachPictureResultActivity" android:value="SerachPictureResultActivity">
+</meta-data>
+</activity>
+<provider android:authorities="cn.edsmall.eds.fileprovider" android:exported="false" android:grantUriPermissions="true" android:name="android.support.v4.content.FileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F060000">
+</meta-data>
+</provider>
+<service android:exported="false" android:name="cn.edsmall.eds.tinker.service.SampleResultService">
+</service>
+<meta-data android:name="android.max_aspect" android:value="2.100000">
+</meta-data>
+<meta-data android:name="com.bumptech.glide.integration.okhttp3.OkHttpGlideModule" android:value="GlideModule">
+</meta-data>
+<activity android:configChanges="0x000004B0" android:name="cn.finalteam.galleryfinal.PhotoSelectActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004B0" android:name="cn.finalteam.galleryfinal.PhotoEditActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004B0" android:name="cn.finalteam.galleryfinal.PhotoPreviewActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.bugtags.library.BugtagsActivity" android:theme="@android:01030011">
+</activity>
+<service android:name="com.bugtags.library.BugtagsService">
+</service>
+<receiver android:name="com.bugtags.library.BugtagsReceiver">
+<intent-filter>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+</receiver>
+<activity android:exported="false" android:name="cn.jpush.android.ui.PopWinActivity" android:theme="@7F0A00E3">
+</activity>
+<service android:exported="false" android:name="com.tencent.tinker.lib.service.TinkerPatchService" android:process=":patch">
+</service>
+<service android:exported="false" android:name="com.tencent.tinker.lib.service.TinkerPatchService$InnerService" android:process=":patch">
+</service>
+<service android:exported="false" android:name="com.tencent.tinker.lib.service.DefaultTinkerResultService">
+</service>
+<activity android:configChanges="0x000000A0" android:name="com.uuzuche.lib_zxing.activity.CaptureActivity" android:screenOrientation="1" android:theme="@7F0A0132" android:windowSoftInputMode="0x00000003">
+</activity>
+<meta-data android:name="TINKER_ID" android:value="tinker_id_eds_tinker_id_1.0.0">
+</meta-data>
+</application>
+</manifest>

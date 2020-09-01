@@ -1,0 +1,158 @@
+<?xml version="1.0" ?><manifest android:versionCode="11" android:versionName="2.1" package="com.rrstore.rrback" platformBuildVersionCode="17" platformBuildVersionName="4.2.2-1425461" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="8" android:targetSdkVersion="17">
+</uses-sdk>
+<permission android:name="com.rrstore.rrback.permission.JPUSH_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="android.permission.CALL_PHONE">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="com.rrstore.rrback.permission.JPUSH_MESSAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_USER_PRESENT">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS">
+</uses-permission>
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW">
+</uses-permission>
+<application android:allowBackup="true" android:icon="@7F020012" android:label="@7F070000" android:name="com.qihoo.util.StubApp2091532957" android:qihoo="activity" android:theme="@7F080002">
+<activity android:label="@7F070000" android:name=".activity.SjLoginActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<service android:enabled="false" android:exported="false" android:name="com.qihoo.util.QhJobService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<activity android:name=".activity.MenuTabActivity" android:screenOrientation="1">
+</activity>
+<activity android:name=".activity.OrdernewActivity" android:screenOrientation="1">
+</activity>
+<activity android:name=".activity.OrderOverActivity" android:screenOrientation="1">
+</activity>
+<activity android:name=".activity.OrdershopActivity" android:screenOrientation="1">
+</activity>
+<activity android:name=".activity.OrdersetActivity" android:screenOrientation="1">
+</activity>
+<activity android:name=".activity.CommentActivity" android:screenOrientation="1" android:theme="@android:0103000D">
+</activity>
+<activity android:name=".activity.UserDetail" android:screenOrientation="1" android:theme="@android:0103000D">
+</activity>
+<activity android:name=".activity.MoneyTowithdrawal" android:screenOrientation="1" android:theme="@android:0103000D">
+</activity>
+<activity android:name=".activity.UserMoneyActivity_" android:screenOrientation="1" android:theme="@android:0103000D">
+</activity>
+<activity android:name=".activity.ShopNoticeActivity_" android:screenOrientation="1">
+</activity>
+<activity android:name=".activity.ShopTypeActivity" android:screenOrientation="1">
+</activity>
+<activity android:name=".activity.ShopGoodsActivity" android:screenOrientation="1">
+</activity>
+<activity android:name=".activity.SearchOverOrder" android:screenOrientation="1">
+</activity>
+<meta-data android:name="UMENG_APPKEY" android:value="570b51c767e58eabde0008f1">
+</meta-data>
+<meta-data android:name="UMENG_CHANNEL" android:value="乎⥏䙒孕">
+</meta-data>
+<service android:name="com.umeng.common.net.DownloadingService" android:process=":DownloadingService">
+</service>
+<activity android:name="com.umeng.fb.ConversationActivity">
+</activity>
+<activity android:name="com.umeng.fb.ContactActivity">
+</activity>
+<activity android:configChanges="0x000000A0" android:exported="false" android:name="cn.jpush.android.ui.PushActivity" android:theme="@android:01030006">
+<intent-filter>
+<action android:name="cn.jpush.android.ui.PushActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="com.rrstore.rrback">
+</category>
+</intent-filter>
+</activity>
+<service android:enabled="true" android:exported="false" android:name="cn.jpush.android.service.DownloadService">
+</service>
+<service android:enabled="true" android:exported="false" android:name="cn.jpush.android.service.PushService">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.REGISTER">
+</action>
+<action android:name="cn.jpush.android.intent.REPORT">
+</action>
+<action android:name="cn.jpush.android.intent.PushService">
+</action>
+<action android:name="cn.jpush.android.intent.PUSH_TIME">
+</action>
+</intent-filter>
+</service>
+<service android:enabled="true" android:exported="true" android:name="cn.jpush.android.service.DaemonService">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.DaemonService">
+</action>
+<category android:name="com.rrstore.rrback">
+</category>
+</intent-filter>
+</service>
+<receiver android:enabled="true" android:exported="false" android:name="cn.jpush.android.service.PushReceiver">
+<intent-filter android:priority="1000">
+<action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY">
+</action>
+<category android:name="com.rrstore.rrback">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.USER_PRESENT">
+</action>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_ADDED">
+</action>
+<action android:name="android.intent.action.PACKAGE_REMOVED">
+</action>
+<data android:scheme="package">
+</data>
+</intent-filter>
+</receiver>
+<receiver android:exported="false" android:name="cn.jpush.android.service.AlarmReceiver">
+</receiver>
+<receiver android:enabled="true" android:exported="false" android:name="com.rrstore.rrback.receiver.MyReceiver">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.REGISTRATION">
+</action>
+<action android:name="cn.jpush.android.intent.UNREGISTRATION">
+</action>
+<action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED">
+</action>
+<action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED">
+</action>
+<action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED">
+</action>
+<action android:name="cn.jpush.android.intent.ACTION_RICHPUSH_CALLBACK">
+</action>
+<action android:name="cn.jpush.android.intent.CONNECTION">
+</action>
+<category android:name="com.rrstore.rrback">
+</category>
+</intent-filter>
+</receiver>
+<meta-data android:name="JPUSH_CHANNEL" android:value="developer-default">
+</meta-data>
+<meta-data android:name="JPUSH_APPKEY" android:value="2ef4786fc182c2283bc8790c">
+</meta-data>
+</application>
+</manifest>

@@ -1,0 +1,248 @@
+<?xml version="1.0" ?><manifest android:versionCode="11" android:versionName="1.1.11" package="com.meixincall" platformBuildVersionCode="25" platformBuildVersionName="7.1.1" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="21" android:targetSdkVersion="25">
+</uses-sdk>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_CONTACTS">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_CONTACTS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_CALL_LOG">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_CALL_LOG">
+</uses-permission>
+<uses-permission android:name="android.permission.CALL_PHONE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-feature android:name="android.hardware.camera">
+</uses-feature>
+<uses-feature android:name="android.hardware.camera.autofocus">
+</uses-feature>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.BROADCAST_PACKAGE_ADDED">
+</uses-permission>
+<uses-permission android:name="android.permission.BROADCAST_PACKAGE_CHANGED">
+</uses-permission>
+<uses-permission android:name="android.permission.BROADCAST_PACKAGE_INSTALL">
+</uses-permission>
+<uses-permission android:name="android.permission.BROADCAST_PACKAGE_REPLACED">
+</uses-permission>
+<uses-permission android:name="android.permission.RESTART_PACKAGES">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<meta-data android:name="android.support.VERSION" android:value="25.3.1">
+</meta-data>
+<application android:allowBackup="true" android:icon="@7F030009" android:label="@7F080024" android:name="com.meixincall.AppApplication" android:theme="@7F0A00A6">
+<activity android:configChanges="0x00000080" android:label="@7F080024" android:name="com.meixincall.activity.LaunchActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000020">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:name="com.meixincall.activity.MainActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:name="com.meixincall.activity.VerifyPhoneActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.meixincall.activity.LoginActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.meixincall.activity.VerifyCodeActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.meixincall.activity.PasswordSetActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.meixincall.activity.CallActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.meixincall.activity.RechargeActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.meixincall.activity.PasswordRecoveryActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.meixincall.activity.PasswordModifyActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.meixincall.activity.SetAccountActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.meixincall.activity.BindAccountActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.meixincall.activity.ChangeAccountActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.meixincall.activity.MoreActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.meixincall.activity.SetCommonActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.meixincall.activity.SetCallActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.meixincall.activity.RechargeInfoActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.meixincall.activity.QrCodeActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.meixincall.activity.RechargeZxingResultActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.meixincall.activity.AboutAppActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.meixincall.activity.FeedbackActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.meixincall.activity.RechargeOnlineActivity" android:screenOrientation="1">
+</activity>
+<activity android:exported="true" android:launchMode="1" android:name="com.meixincall.wxapi.WXPayEntryActivity">
+</activity>
+<service android:enabled="true" android:exported="true" android:name="com.meixincall.net.AppUpdateDownloadService" android:process=":downloadService">
+</service>
+<receiver android:name="com.meixincall.broadcast.CallBroadcastReceiver">
+<intent-filter android:priority="1000">
+<action android:name="android.intent.action.PHONE_STATE">
+</action>
+<action android:name="android.intent.action.NEW_OUTGOING_CALL">
+</action>
+</intent-filter>
+</receiver>
+<provider android:authorities="com.meixun.fileprovider" android:exported="false" android:grantUriPermissions="true" android:name="android.support.v4.content.FileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F060000">
+</meta-data>
+</provider>
+<meta-data android:name="UMENG_APPKEY" android:value="58f5b67faed179537f001949">
+</meta-data>
+<meta-data android:name="UMENG_MESSAGE_SECRET" android:value="81fe3b47a490273fea244957ffae8188">
+</meta-data>
+<meta-data android:name="UMENG_CHANNEL" android:value="Umeng">
+</meta-data>
+<activity android:launchMode="1" android:name="com.meixincall.activity.MsgDetailActivity">
+</activity>
+<activity android:name="com.meixincall.activity.MsgListActivity">
+</activity>
+<service android:exported="true" android:name="com.taobao.accs.ChannelService" android:process=":channel">
+<intent-filter>
+<action android:name="com.taobao.accs.intent.action.SERVICE">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="com.taobao.accs.intent.action.ELECTION">
+</action>
+</intent-filter>
+</service>
+<service android:exported="true" android:name="com.taobao.accs.data.MsgDistributeService">
+<intent-filter>
+<action android:name="com.taobao.accs.intent.action.RECEIVE">
+</action>
+</intent-filter>
+</service>
+<receiver android:name="com.taobao.accs.EventReceiver" android:process=":channel">
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_REMOVED">
+</action>
+<data android:scheme="package">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.USER_PRESENT">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name="com.taobao.accs.ServiceReceiver" android:process=":channel">
+<intent-filter>
+<action android:name="com.taobao.accs.intent.action.COMMAND">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="com.taobao.accs.intent.action.START_FROM_AGOO">
+</action>
+</intent-filter>
+</receiver>
+<service android:name="com.taobao.accs.ChannelService$KernelService" android:process=":channel">
+</service>
+<service android:exported="true" android:name="org.android.agoo.accs.AgooService">
+<intent-filter>
+<action android:name="com.taobao.accs.intent.action.RECEIVE">
+</action>
+</intent-filter>
+</service>
+<service android:exported="true" android:name="com.umeng.message.UmengIntentService" android:process=":channel">
+<intent-filter>
+<action android:name="org.agoo.android.intent.action.RECEIVE">
+</action>
+</intent-filter>
+</service>
+<service android:exported="true" android:name="com.umeng.message.XiaomiIntentService" android:process=":channel">
+<intent-filter>
+<action android:name="org.agoo.android.intent.action.RECEIVE">
+</action>
+</intent-filter>
+</service>
+<receiver android:exported="true" android:name="com.taobao.agoo.AgooCommondReceiver" android:process=":channel">
+<intent-filter>
+<action android:name="com.meixincall.intent.action.COMMAND">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_REMOVED">
+</action>
+<data android:scheme="package">
+</data>
+</intent-filter>
+</receiver>
+<service android:exported="true" android:name="com.umeng.message.UmengMessageIntentReceiverService" android:process=":channel">
+<intent-filter>
+<action android:name="org.android.agoo.client.MessageReceiverService">
+</action>
+</intent-filter>
+</service>
+<receiver android:exported="false" android:name="com.umeng.message.NotificationProxyBroadcastReceiver">
+</receiver>
+<service android:exported="false" android:name="com.umeng.message.UmengMessageCallbackHandlerService">
+<intent-filter>
+<action android:name="com.umeng.messge.registercallback.action">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="com.umeng.message.enablecallback.action">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="com.umeng.message.disablecallback.action">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="com.umeng.message.message.handler.action">
+</action>
+</intent-filter>
+</service>
+<service android:exported="false" android:name="com.umeng.message.UmengDownloadResourceService">
+</service>
+<provider android:authorities="com.meixincall.umeng.message" android:exported="false" android:name="com.umeng.message.provider.MessageProvider">
+<grant-uri-permission android:pathPattern=".*">
+</grant-uri-permission>
+</provider>
+</application>
+</manifest>

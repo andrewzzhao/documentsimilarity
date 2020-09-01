@@ -1,0 +1,369 @@
+<?xml version="1.0" ?><manifest android:versionCode="31" android:versionName="2.3.1" package="cn.ylzsc.ebp" platformBuildVersionCode="17" platformBuildVersionName="4.2.2-1425461" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="11" android:targetSdkVersion="22">
+</uses-sdk>
+<supports-screens android:anyDensity="true" android:largeScreens="true" android:normalScreens="true" android:resizeable="true" android:smallScreens="true">
+</supports-screens>
+<permission android:name="cn.ylzsc.ebp.permission.JPUSH_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-permission android:name="cn.ylzsc.ebp.permission.JPUSH_MESSAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_USER_PRESENT">
+</uses-permission>
+<uses-permission android:name="android.permission.MANAGE_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.SEND_SMS">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_DOWNLOAD_MANAGER">
+</uses-permission>
+<uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION">
+</uses-permission>
+<uses-permission android:name="android.permission.DISABLE_KEYGUARD">
+</uses-permission>
+<uses-permission android:name="android.permission.RECORD_AUDIO">
+</uses-permission>
+<uses-permission android:name="android.permission.CALL_PHONE">
+</uses-permission>
+<uses-permission android:name="com.android.launcher.permission.READ_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_LOGS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_NETWORK_STATE">
+</uses-permission>
+<uses-feature android:name="android.hardware.camera">
+</uses-feature>
+<uses-feature android:name="android.hardware.camera.autofocus">
+</uses-feature>
+<uses-permission android:name="android.permission.DISABLE_KEYGUARD">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+�
+<uses-permission android:name="android.permission.RECEIVE_SMS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<application android:icon="@7F0201B3" android:label="@7F0D0054" android:name="cn.ylzsc.ebp.application.BaseApplication" android:theme="@7F0E001F">
+<meta-data android:name="com.baidu.lbsapi.API_KEY" android:value="g3qrnCzKK3eymBuSavbmqsPL">
+</meta-data>
+<service android:enabled="true" android:name="com.baidu.location.f" android:process=":remote">
+<intent-filter>
+<action android:name="com.baidu.location.service_v2.2">
+</action>
+</intent-filter>
+</service>
+<service android:enabled="true" android:exported="false" android:name="cn.jpush.android.service.PushService">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.REGISTER">
+</action>
+<action android:name="cn.jpush.android.intent.REPORT">
+</action>
+<action android:name="cn.jpush.android.intent.PushService">
+</action>
+<action android:name="cn.jpush.android.intent.PUSH_TIME">
+</action>
+</intent-filter>
+</service>
+<service android:enabled="true" android:exported="true" android:name="cn.jpush.android.service.DaemonService">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.DaemonService">
+</action>
+<category android:name="cn.ylzsc.ebp">
+</category>
+</intent-filter>
+</service>
+<receiver android:enabled="true" android:name="cn.jpush.android.service.PushReceiver">
+<intent-filter android:priority="1000">
+<action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY">
+</action>
+<category android:name="cn.ylzsc.ebp">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.USER_PRESENT">
+</action>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_ADDED">
+</action>
+<action android:name="android.intent.action.PACKAGE_REMOVED">
+</action>
+<data android:scheme="package">
+</data>
+</intent-filter>
+</receiver>
+<activity android:name="cn.ylzsc.ebp.activity.FIndWebAcitivty" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:exported="false" android:name="cn.jpush.android.ui.PushActivity">
+<intent-filter>
+<action android:name="cn.jpush.android.ui.PushActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="cn.ylzsc.ebp">
+</category>
+</intent-filter>
+</activity>
+<service android:enabled="true" android:exported="false" android:name="cn.jpush.android.service.DownloadService">
+</service>
+<receiver android:name="cn.jpush.android.service.AlarmReceiver">
+</receiver>
+<receiver android:enabled="true" android:name="cn.ylzsc.ebp.view.MyReceiver">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.REGISTRATION">
+</action>
+<action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED">
+</action>
+<action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED">
+</action>
+<action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED">
+</action>
+<action android:name="cn.jpush.android.intent.ACTION_RICHPUSH_CALLBACK">
+</action>
+<action android:name="cn.jpush.android.intent.CONNECTION">
+</action>
+<category android:name="cn.ylzsc.ebp">
+</category>
+</intent-filter>
+</receiver>
+<meta-data android:name="JPUSH_CHANNEL" android:value="developer-default">
+</meta-data>
+<meta-data android:name="JPUSH_APPKEY" android:value="3ea836d851d55c1a431898b4">
+</meta-data>
+<activity android:configChanges="0x000000A0" android:exported="true" android:launchMode="1" android:name="cn.ylzsc.ebp.wxapi.WXPayEntryActivity" android:screenOrientation="1" android:theme="@android:01030010">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:scheme="wx8d7d1a1a0bbc1972">
+</data>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000E0" android:exported="false" android:name="com.alipay.sdk.app.H5PayActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:launchMode="2" android:name="com.tencent.tauth.AuthActivity" android:noHistory="true" android:screenOrientation="1">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="tencent1105165947">
+</data>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.tencent.connect.common.AssistActivity" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<activity android:name="cn.ylzsc.ebp.activity.QuickLoginActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.ylzsc.ebp.activity.MyRealthReport" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F0D0054" android:name=".activity.StartActivity" android:screenOrientation="1" android:theme="@android:01030006">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="ylzsc" android:scheme="ebpapp">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="cn.ylzsc.ebp.activity.AdvertisementActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F0D0054" android:launchMode="2" android:name=".activity.MainActivity" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:label="@7F0D0054" android:name=".activity.LoginActivity" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:label="@7F0D0054" android:name=".activity.RegisterActivity" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:name="cn.ylzsc.ebp.activity.FeedbackActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F0D0054" android:name=".activity.ChengShi_XuanzeActivity" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:label="@7F0D0054" android:name=".activity.ZhuYe_DingweiActivity" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:label="@7F0D0054" android:name=".activity.ForgetPasswordActivity" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000000A0" android:label="@7F0D0054" android:name=".activity.SearchAddressActivity" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:label="@7F0D0054" android:name=".activity.AddAddressActivity" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:label="@7F0D0054" android:name=".activity.CityActivity" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:label="@7F0D0054" android:name=".activity.AboutActivity" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:label="@7F0D0054" android:name=".activity.MyAddressActivity" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:label="@7F0D0054" android:name=".activity.MyOrderActivity" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:label="@7F0D0054" android:name=".activity.MyMessageActivity" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:label="@7F0D0054" android:name=".activity.MyCouponActivity" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:label="@7F0D0054" android:name=".activity.IdeaBackActivity" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:label="@7F0D0054" android:name=".activity.ChangeInfoActivity" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:name="cn.ylzsc.ebp.activity.CustomerServiceActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F0D0054" android:name=".activity.ShoppingCartActivity" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:label="@7F0D0054" android:name=".activity.OrderActivity" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:label="@7F0D0054" android:name=".activity.SubmitOrderActivity" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:name="cn.ylzsc.ebp.activity.ExchangeInfoActivity" android:screenOrientation="1">
+</activity>
+<activity android:hardwareAccelerated="true" android:label="@7F0D0054" android:name=".activity.ShopActivity" android:screenOrientation="1" android:theme="@android:01030006" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:configChanges="0x000000A0" android:label="@7F0D0054" android:name=".activity.ShoppingCart_FlipActivity" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<activity android:name="cn.ylzsc.ebp.activity.SelectMoreImageActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.ylzsc.ebp.activity.ReturnGoodActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F0D0054" android:name=".activity.TheHotActivity" android:theme="@android:01030006">
+</activity>
+<activity android:label="@7F0D0054" android:name=".activity.NearFoodActivity" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:name="cn.ylzsc.ebp.activity.NewsClassnitifationActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.ylzsc.ebp.activity.ExchangeGoodActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F0D0054" android:name=".activity.PayModeActivity" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:name="cn.ylzsc.ebp.activity.HealthCollocationActivitys" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F0D0054" android:name=".activity.RemarkActivity" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000000A0" android:label="@7F0D0054" android:name=".activity.SelectTimeActivity" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<activity android:name="cn.ylzsc.ebp.activity.SpaceImageDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:label="@7F0D0054" android:name=".activity.UploadImgActivity" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x000000A0" android:label="@7F0D0054" android:name=".activity.ExitActivity" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<activity android:label="@7F0D0054" android:name=".activity.ChangeNameActivity" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:label="@7F0D0054" android:name=".activity.ChangePasswordActivity" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:label="@7F0D0054" android:name=".activity.ChangeTelPhoneActivity" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:name="cn.ylzsc.ebp.activity.HealthCollocationActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F0D0054" android:name=".activity.CanUseCouponActivity" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:label="@7F0D0054" android:name=".activity.MyMessageDetailActivity" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000000A0" android:label="@7F0D0054" android:name=".activity.TelPhoneActivity" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x000000A0" android:label="@7F0D0054" android:name=".activity.PingJiaActivity" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<activity android:label="@7F0D0054" android:name=".activity.MainSearchActivity" android:screenOrientation="1" android:theme="@android:01030006" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:configChanges="0x000000A0" android:label="@7F0D0054" android:name=".activity.BigImageActivity" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<activity android:label="@7F0D0054" android:name=".activity.CollectShopActivity" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:label="@7F0D009D" android:name=".activity.MenuActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F0D009E" android:name=".activity.FoodDetailsActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F0D009F" android:name=".activity.PaySuccessActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F0D00A0" android:name=".activity.PayFailActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F0D00A1" android:name=".activity.MainActivityActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F0D00A2" android:name="cn.ylzsc.ebp.activity.WelcomeActivity" android:screenOrientation="1">
+</activity>
+<activity android:exported="true" android:label="@7F0D00A2" android:name="cn.ylzsc.ebp.wxapi.WXEntryActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.ylzsc.ebp.activity.BoundPhoneActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.ylzsc.ebp.activity.AskAndCustomerActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.ylzsc.ebp.activity.GoodInfoActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.ylzsc.ebp.activity.SearchResultActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.ylzsc.ebp.activity.SearchActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.ylzsc.ebp.activity.SingleGoodActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.ylzsc.ebp.activity.CartClassificationActivity" android:screenOrientation="1">
+</activity>
+<receiver android:name="cn.ylzsc.ebp.download.DownLoadBroadcastReceiver">
+<intent-filter>
+<action android:name="android.intent.action.DOWNLOAD_COMPLETE">
+</action>
+</intent-filter>
+</receiver>
+<meta-data android:name="TD_APP_ID" android:value="8CD3F2E1A1445E2E901A79D94A883E4C">
+</meta-data>
+<meta-data android:name="TD_CHANNEL_ID" android:value="10003">
+</meta-data>
+</application>
+</manifest>

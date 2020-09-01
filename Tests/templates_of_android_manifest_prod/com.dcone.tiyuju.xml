@@ -1,0 +1,272 @@
+<?xml version="1.0" ?><manifest android:versionCode="2" android:versionName="1.0.1" package="com.dcone.tiyuju" platformBuildVersionCode="22" platformBuildVersionName="5.1.1-1819727" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="14" android:targetSdkVersion="22">
+</uses-sdk>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_LOGS">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-permission android:name="android.permission.SET_DEBUG_APP">
+</uses-permission>
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="android.permission.USE_CREDENTIALS">
+</uses-permission>
+<uses-permission android:name="android.permission.MANAGE_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="com.android.launcher.permission.READ_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.CALL_PHONE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_UPDATES">
+</uses-permission>
+<uses-permission android:name="android.permission.BROADCAST_PACKAGE_ADDED">
+</uses-permission>
+<uses-permission android:name="android.permission.BROADCAST_PACKAGE_CHANGED">
+</uses-permission>
+<uses-permission android:name="android.permission.BROADCAST_PACKAGE_INSTALL">
+</uses-permission>
+<uses-permission android:name="android.permission.BROADCAST_PACKAGE_REPLACED">
+</uses-permission>
+<uses-permission android:name="android.permission.RESTART_PACKAGES">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_NETWORK_STATE">
+</uses-permission>
+<application android:allowBackup="true" android:debuggable="true" android:icon="@7F0200DB" android:label="@7F060037" android:name="com.dcone.BaseApplication" android:supportsRtl="true" android:theme="@7F08007B">
+<activity android:name="com.dcone.activity.TestActivity">
+</activity>
+<activity android:configChanges="0x400024A4" android:name="com.dcone.MainActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:configChanges="0x400024A4" android:name="com.dcone.activity.SplashActivity">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<meta-data android:name="com.baidu.lbsapi.API_KEY" android:value="TsqQvQCEAFUjT6S1x5l8ANpNWhnuNEuq">
+</meta-data>
+<meta-data android:name="UMENG_APPKEY" android:value="58f070db45297d300400019e">
+</meta-data>
+<meta-data android:name="UMENG_MESSAGE_SECRET" android:value="69c64920e08ecc63c1327d39eeff6db0">
+</meta-data>
+<meta-data android:name="UMENG_CHANNEL" android:value="UMENG">
+</meta-data>
+<activity android:name="com.dceast.lib.weather.activity.WeatherActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.vc.android.crash.CrashActivity">
+</activity>
+<activity android:name="com.vc.android.photoup.PhotoPickerActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.vc.android.crash.MyCrashActivity">
+</activity>
+<service android:exported="true" android:name="com.taobao.accs.ChannelService" android:process=":channel">
+<intent-filter>
+<action android:name="com.taobao.accs.intent.action.SERVICE">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="com.taobao.accs.intent.action.ELECTION">
+</action>
+</intent-filter>
+</service>
+<service android:exported="true" android:name="com.taobao.accs.data.MsgDistributeService">
+<intent-filter>
+<action android:name="com.taobao.accs.intent.action.RECEIVE">
+</action>
+</intent-filter>
+</service>
+<receiver android:name="com.taobao.accs.EventReceiver" android:process=":channel">
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_REMOVED">
+</action>
+<data android:scheme="package">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.USER_PRESENT">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name="com.taobao.accs.ServiceReceiver" android:process=":channel">
+<intent-filter>
+<action android:name="com.taobao.accs.intent.action.COMMAND">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="com.taobao.accs.intent.action.START_FROM_AGOO">
+</action>
+</intent-filter>
+</receiver>
+<service android:name="com.taobao.accs.ChannelService$KernelService" android:process=":channel">
+</service>
+<service android:exported="true" android:name="org.android.agoo.accs.AgooService">
+<intent-filter>
+<action android:name="com.taobao.accs.intent.action.RECEIVE">
+</action>
+</intent-filter>
+</service>
+<service android:exported="true" android:name="com.umeng.message.UmengIntentService" android:process=":channel">
+<intent-filter>
+<action android:name="org.agoo.android.intent.action.RECEIVE">
+</action>
+</intent-filter>
+</service>
+<service android:exported="true" android:name="com.umeng.message.XiaomiIntentService" android:process=":channel">
+<intent-filter>
+<action android:name="org.agoo.android.intent.action.RECEIVE">
+</action>
+</intent-filter>
+</service>
+<receiver android:exported="true" android:name="com.taobao.agoo.AgooCommondReceiver" android:process=":channel">
+<intent-filter>
+<action android:name="com.dcone.tiyuju.intent.action.COMMAND">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_REMOVED">
+</action>
+<data android:scheme="package">
+</data>
+</intent-filter>
+</receiver>
+<service android:exported="true" android:name="com.umeng.message.UmengMessageIntentReceiverService" android:process=":channel">
+<intent-filter>
+<action android:name="org.android.agoo.client.MessageReceiverService">
+</action>
+</intent-filter>
+</service>
+<receiver android:exported="false" android:name="com.umeng.message.NotificationProxyBroadcastReceiver">
+</receiver>
+<service android:exported="false" android:name="com.umeng.message.UmengMessageCallbackHandlerService">
+<intent-filter>
+<action android:name="com.umeng.messge.registercallback.action">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="com.umeng.message.enablecallback.action">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="com.umeng.message.disablecallback.action">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="com.umeng.message.message.handler.action">
+</action>
+</intent-filter>
+</service>
+<service android:exported="false" android:name="com.umeng.message.UmengDownloadResourceService">
+</service>
+<provider android:authorities="com.dcone.tiyuju.umeng.message" android:exported="false" android:name="com.umeng.message.provider.MessageProvider">
+<grant-uri-permission android:pathPattern=".*">
+</grant-uri-permission>
+</provider>
+<activity android:name="com.dceast.lib.cordova.WebViewActivity" android:screenOrientation="1">
+</activity>
+<service android:enabled="true" android:name="com.baidu.location.f" android:process=":remote">
+<intent-filter>
+<action android:name="com.baidu.location.service_v2.2">
+</action>
+</intent-filter>
+</service>
+<meta-data android:name="com.google.android.gms.version" android:value="@7F0A0005">
+</meta-data>
+<activity android:name="com.dceast.lib.question.ContainerActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.dceast.lib.question.QuestionDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.dceast.lib.question.QuestionListActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.dceast.lib.question.SelectPositionActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.dceast.lib.question.ShowPhotoActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x400024A4" android:name="com.dceast.lib.usercenter.ForgotPasswordActivity">
+</activity>
+<activity android:configChanges="0x400024A4" android:name="com.dceast.lib.usercenter.ForgotPasswordConfimActivity">
+</activity>
+<activity android:configChanges="0x400024A4" android:name="com.dceast.lib.usercenter.LoginActivity">
+</activity>
+<activity android:configChanges="0x400024A4" android:name="com.dceast.lib.usercenter.RegisterActivity">
+</activity>
+<activity android:configChanges="0x400024A4" android:name="com.dceast.lib.usercenter.RegisterConfirmActivity">
+</activity>
+<activity android:configChanges="0x400024A4" android:name="com.dceast.lib.usercenter.SettingsActivity">
+</activity>
+<activity android:configChanges="0x400024A4" android:name="com.dceast.lib.usercenter.AboutActivity">
+</activity>
+<activity android:configChanges="0x400024A4" android:name="com.dceast.lib.usercenter.FeedbackActivity">
+</activity>
+<activity android:configChanges="0x400024A4" android:name="com.dceast.lib.usercenter.FeedbackListActivity">
+</activity>
+<activity android:configChanges="0x400024A4" android:name="com.dceast.lib.usercenter.MsgBoxActivity">
+</activity>
+<activity android:configChanges="0x400024A4" android:name="com.dceast.lib.usercenter.MsgListActivity">
+</activity>
+<activity android:configChanges="0x400024A4" android:name="com.dceast.lib.usercenter.CropImageActivity">
+</activity>
+<activity android:configChanges="0x400024A4" android:name="com.dceast.lib.usercenter.ProfileActivity">
+</activity>
+<activity android:configChanges="0x400024A4" android:name="com.dceast.lib.usercenter.ModifyPasswordActivity">
+</activity>
+<activity android:configChanges="0x400024A4" android:name="com.dceast.lib.usercenter.ModifyPhoneActivity">
+</activity>
+<activity android:configChanges="0x400024A4" android:name="com.dceast.lib.usercenter.ModifyUserInfoActivity">
+</activity>
+<activity android:name="com.dceast.lib.news.NewsDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.dceast.lib.news.NewsMainActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.vc.pay.alipay.PayActivity">
+</activity>
+<activity android:configChanges="0x000000E0" android:exported="false" android:name="com.alipay.sdk.app.H5PayActivity" android:screenOrientation="3" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:configChanges="0x000000E0" android:exported="false" android:name="com.alipay.sdk.auth.AuthActivity" android:screenOrientation="3">
+</activity>
+<activity android:launchMode="1" android:name="com.vc.pay.wxapi.WXEntryActivity">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:scheme="wxd930ea5d5a258f4f">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.vc.pay.wxapi.PayActivity">
+</activity>
+</application>
+</manifest>

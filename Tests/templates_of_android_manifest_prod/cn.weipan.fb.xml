@@ -1,0 +1,250 @@
+<?xml version="1.0" ?><manifest android:compileSdkVersion="28" android:compileSdkVersionCodename="9" android:versionCode="13" android:versionName="4.1.0" package="cn.weipan.fb" platformBuildVersionCode="28" platformBuildVersionName="9" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="16" android:targetSdkVersion="28">
+</uses-sdk>
+<uses-permission android:name="android.permission.BLUETOOTH">
+</uses-permission>
+<uses-permission android:name="android.permission.BLUETOOTH_ADMIN">
+</uses-permission>
+<uses-permission android:name="com.pos.permission.PRINTER">
+</uses-permission>
+<uses-permission android:name="com.pos.permission.SECURITY">
+</uses-permission>
+<uses-permission android:name="com.pos.permission.ACCESSORY_DATETIME">
+</uses-permission>
+<uses-permission android:name="android.permission.CALL_PHONE">
+</uses-permission>
+<uses-permission android:name="android.permission.FLASHLIGHT">
+</uses-permission>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_USER_PRESENT">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_CONTACTS">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.RECORD_AUDIO">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES">
+</uses-permission>
+<permission android:name="cn.weipan.fb.permission.JPUSH_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="cn.weipan.fb.permission.JPUSH_MESSAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS">
+</uses-permission>
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS">
+</uses-permission>
+<application android:allowBackup="true" android:appComponentFactory="android.support.v4.app.CoreComponentFactory" android:icon="@7F07007A" android:label="@7F0D0027" android:name="cn.weipan.fb.common.AppContext" android:networkSecurityConfig="@7F100001" android:theme="@7F0E0008">
+<meta-data android:name="android.max_aspect" android:value="2.100000">
+</meta-data>
+<meta-data android:name="design_width" android:value="1080">
+</meta-data>
+<meta-data android:name="design_height" android:value="1920">
+</meta-data>
+<service android:name="cn.weipan.fb.service.PushService" android:process=":pushcore">
+<intent-filter>
+<action android:name="cn.jiguang.user.service.action">
+</action>
+</intent-filter>
+</service>
+<receiver android:name="cn.weipan.fb.service.MyJPushMessageReceiver">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.RECEIVE_MESSAGE">
+</action>
+<category android:name="cn.weipan.fb">
+</category>
+</intent-filter>
+</receiver>
+<provider android:authorities="cn.weipan.fb.fileprovider" android:exported="false" android:grantUriPermissions="true" android:name="android.support.v4.content.FileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F100000">
+</meta-data>
+</provider>
+<activity android:name="cn.weipan.fb.common.Appstart" android:theme="@7F0E00EA">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:launchMode="2" android:name="cn.weipan.fb.act.MainActivity" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:name="cn.weipan.fb.act.BaseActivity">
+</activity>
+<activity android:name="cn.weipan.fb.act.BaseNoLoginActivity">
+</activity>
+<activity android:name="cn.weipan.fb.act.BaseBaseActivity">
+</activity>
+<activity android:name="cn.weipan.fb.act.GuideActivity">
+</activity>
+<activity android:name="cn.weipan.fb.act.InformationActivity">
+</activity>
+<activity android:name="cn.weipan.fb.act.LoginNewActivity">
+</activity>
+<activity android:name="cn.weipan.fb.act.FeedBackActivity">
+</activity>
+<activity android:name="cn.weipan.fb.act.LoginPwd">
+</activity>
+<activity android:name="cn.weipan.fb.act.LoginRegisterActivity">
+</activity>
+<activity android:name="cn.weipan.fb.act.ReturnMoneyPwd">
+</activity>
+<activity android:name="cn.weipan.fb.act.NewMessage">
+</activity>
+<activity android:name="cn.weipan.fb.act.shouye.SaoMaActivity">
+</activity>
+<activity android:name="cn.weipan.fb.act.shouye.PosActivity">
+</activity>
+<activity android:name="cn.weipan.fb.act.shouye.TrueMoneyActivity">
+</activity>
+<activity android:name="cn.weipan.fb.act.shouye.PayMoneyActivity">
+</activity>
+<activity android:name="cn.weipan.fb.act.SettingActivity">
+</activity>
+<activity android:name="cn.weipan.fb.act.ReceivablesSuccessActivity">
+</activity>
+<activity android:name="cn.weipan.fb.act.SystemMessageActivity">
+</activity>
+<activity android:name="cn.weipan.fb.act.RegionSelectActivity">
+</activity>
+<activity android:name="cn.weipan.fb.act.shouye.ZhiHuiMaActivity">
+</activity>
+<activity android:name="cn.weipan.fb.act.shouye.TuiKuanDanHao">
+</activity>
+<activity android:name="cn.weipan.fb.act.shouye.TuiKuanZhangDanXiangQing">
+</activity>
+<activity android:name="cn.weipan.fb.act.shouye.TuiKuanMiMaActivity">
+</activity>
+<activity android:name="cn.weipan.fb.act.shouye.HeXiaoSuccessActivity">
+</activity>
+<activity android:name="cn.weipan.fb.act.shouye.ShouKuanMaActivity">
+</activity>
+<activity android:name="cn.weipan.fb.act.JpushMessageActivity">
+</activity>
+<activity android:name="cn.weipan.fb.act.BoseWebActivity">
+</activity>
+<activity android:name="cn.weipan.fb.act.zhangdan.ShouKuanQuShiWebActivity">
+</activity>
+<activity android:name="cn.weipan.fb.act.zhangdan.NextWebActivity">
+</activity>
+<activity android:name="cn.weipan.fb.act.zhangdan.BaseZhangDanWebActivity">
+</activity>
+<activity android:name="cn.weipan.fb.act.BannerActivity">
+</activity>
+<activity android:name="cn.weipan.fb.act.shouye.ChoseShouKuanMaActivity">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.uuzuche.lib_zxing.activity.CaptureActivity" android:screenOrientation="1" android:theme="@7F0E0153" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000004A0" android:multiprocess="true" android:name="com.blankj.utilcode.util.PermissionUtils$PermissionActivity" android:theme="@7F0E0000" android:windowSoftInputMode="0x00000003">
+</activity>
+<provider android:authorities="cn.weipan.fb.utilcode.provider" android:exported="false" android:grantUriPermissions="true" android:multiprocess="true" android:name="com.blankj.utilcode.util.Utils$FileProvider4UtilCode">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F100002">
+</meta-data>
+</provider>
+<activity android:exported="false" android:name="cn.jpush.android.ui.PopWinActivity" android:theme="@7F0E00C9">
+</activity>
+<activity android:configChanges="0x000000A0" android:exported="false" android:name="cn.jpush.android.ui.PushActivity" android:theme="@android:01030006">
+<intent-filter>
+<action android:name="cn.jpush.android.ui.PushActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="cn.weipan.fb">
+</category>
+</intent-filter>
+</activity>
+<service android:enabled="true" android:exported="false" android:name="cn.jpush.android.service.PushService" android:process=":pushcore">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.REGISTER">
+</action>
+<action android:name="cn.jpush.android.intent.REPORT">
+</action>
+<action android:name="cn.jpush.android.intent.PushService">
+</action>
+<action android:name="cn.jpush.android.intent.PUSH_TIME">
+</action>
+</intent-filter>
+</service>
+<service android:enabled="true" android:exported="true" android:name="cn.jpush.android.service.DaemonService">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.DaemonService">
+</action>
+<category android:name="cn.weipan.fb">
+</category>
+</intent-filter>
+</service>
+<activity android:exported="true" android:name="cn.jpush.android.service.JNotifyActivity" android:taskAffinity="jpush.custom" android:theme="@android:01030010">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.JNotifyActivity">
+</action>
+<category android:name="cn.weipan.fb">
+</category>
+</intent-filter>
+</activity>
+<receiver android:enabled="true" android:exported="false" android:name="cn.jpush.android.service.PushReceiver">
+<intent-filter android:priority="1000">
+<action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY">
+</action>
+<category android:name="cn.weipan.fb">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.USER_PRESENT">
+</action>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_ADDED">
+</action>
+<action android:name="android.intent.action.PACKAGE_REMOVED">
+</action>
+<data android:scheme="package">
+</data>
+</intent-filter>
+</receiver>
+<receiver android:exported="false" android:name="cn.jpush.android.service.AlarmReceiver">
+</receiver>
+<provider android:authorities="cn.weipan.fb.DataProvider" android:exported="false" android:name="cn.jpush.android.service.DataProvider" android:process=":pushcore">
+</provider>
+<provider android:authorities="cn.weipan.fb.DownloadProvider" android:exported="true" android:name="cn.jpush.android.service.DownloadProvider">
+</provider>
+<meta-data android:name="JPUSH_CHANNEL" android:value="developer-default">
+</meta-data>
+<meta-data android:name="JPUSH_APPKEY" android:value="9395e56efbdf680843ab15ba">
+</meta-data>
+</application>
+</manifest>

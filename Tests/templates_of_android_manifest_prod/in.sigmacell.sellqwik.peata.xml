@@ -1,0 +1,232 @@
+<?xml version="1.0" ?><manifest android:versionCode="14" android:versionName="2.0.2" package="in.sigmacell.sellqwik.peata" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="8" android:targetSdkVersion="16">
+</uses-sdk>
+<supports-screens android:largeScreens="true" android:xlargeScreens="true">
+</supports-screens>
+<uses-feature android:name="android.hardware.camera">
+</uses-feature>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_CONTACTS">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_CONTACTS">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<permission android:name="in.sigmacell.sellqwik.peata.permission.C2D_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="in.sigmacell.sellqwik.peata.permission.C2D_MESSAGE">
+</uses-permission>
+<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_LOGS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<application android:allowBackup="true" android:icon="@7F0200B2" android:label="@7F0C001A" android:name="in.sigmacell.sellqwik.Sigmacell" android:theme="@7F0B0087">
+<receiver android:enabled="false" android:name="in.sigmacell.sellqwik.screens.sales.SimpleWidgetProvider">
+<intent-filter>
+<action android:name="android.appwidget.action.APPWIDGET_UPDATE">
+</action>
+</intent-filter>
+<meta-data android:name="android.appwidget.provider" android:resource="@7F050002">
+</meta-data>
+</receiver>
+<receiver android:enabled="false" android:name="in.sigmacell.sellqwik.screens.sales.LocationWidgetProvider">
+<intent-filter>
+<action android:name="android.appwidget.action.APPWIDGET_UPDATE">
+</action>
+</intent-filter>
+<meta-data android:name="android.appwidget.provider" android:resource="@7F050000">
+</meta-data>
+</receiver>
+<meta-data android:name="com.google.android.gms.version" android:value="@7F090005">
+</meta-data>
+<meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="AIzaSyAX_zcudrC-oifhwmc33TgxIyOutsGWxI8">
+</meta-data>
+<activity android:hardwareAccelerated="false" android:label="@7F0C001A" android:name="in.sigmacell.sellqwik.screens.SplashScreen" android:theme="@android:0103000A">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004A0" android:exported="true" android:icon="@7F0200A6" android:name="in.sigmacell.sellqwik.screens.HomeActivity" android:windowSoftInputMode="0x00000010">
+<meta-data android:name="android.app.default_searchable" android:value="in.sigmacell.sellqwik.screens.SearchResultsActivity">
+</meta-data>
+</activity>
+<activity android:configChanges="0x000004A0" android:exported="true" android:icon="@7F0200A6" android:name="in.sigmacell.sellqwik.screens.HomeActivityCircle">
+</activity>
+<activity android:hardwareAccelerated="false" android:icon="@7F0200A6" android:name="in.sigmacell.sellqwik.screens.StoreLocatorActivity">
+</activity>
+<activity android:exported="true" android:icon="@7F0200A6" android:name="in.sigmacell.sellqwik.screens.PopupActivity" android:theme="@android:01030073" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:configChanges="0x000004A0" android:icon="@7F0200A6" android:name="in.sigmacell.sellqwik.screens.CategoryDetailsActivity">
+</activity>
+<activity android:icon="@7F0200A6" android:name="in.sigmacell.sellqwik.screens.SearchActivity">
+</activity>
+<activity android:icon="@7F0200A6" android:name="in.sigmacell.sellqwik.screens.SubCategoryListingActivity">
+</activity>
+<activity android:icon="@7F0200A6" android:name="in.sigmacell.sellqwik.screens.SearchDetailsActivity">
+</activity>
+<activity android:icon="@7F0200A6" android:name="in.sigmacell.sellqwik.screens.EventDetailsActivity">
+</activity>
+<activity android:icon="@7F0200A6" android:name="in.sigmacell.sellqwik.screens.CustomerSelectionActivity">
+</activity>
+<activity android:icon="@7F0200A6" android:name="in.sigmacell.sellqwik.screens.CustomerInfo">
+</activity>
+<activity android:icon="@7F0200A6" android:name="in.sigmacell.sellqwik.screens.PopupStatusActivity" android:theme="@android:01030075">
+</activity>
+<provider android:authorities="in.sigmacell.sellqwik.peata.DTO.DB.DB" android:exported="false" android:name="in.sigmacell.sellqwik.DTO.DB.DB">
+</provider>
+<receiver android:name="com.google.android.gcm.GCMBroadcastReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+<action android:name="com.google.android.c2dm.intent.REGISTRATION">
+</action>
+<category android:name="in.sigmacell.sellqwik.peata">
+</category>
+</intent-filter>
+</receiver>
+<receiver android:enabled="true" android:exported="false" android:name="in.sigmacell.sellqwik.service.BootCompleted">
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+</intent-filter>
+</receiver>
+<service android:name="in.sigmacell.sellqwik.peata.GCMIntentService">
+</service>
+<activity android:configChanges="0x000004A0" android:icon="@7F0200A6" android:name="in.sigmacell.sellqwik.screens.ProductDetailsActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:icon="@7F0200A6" android:name="in.sigmacell.sellqwik.screens.ProductDetailsActivityWithPager">
+</activity>
+<receiver android:name="in.sigmacell.sellqwik.service.SampleAlarmReceiver">
+</receiver>
+<activity android:configChanges="0x000004A0" android:icon="@7F0200A6" android:name="in.sigmacell.sellqwik.screens.CategoryListingActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:icon="@7F0200A6" android:name="in.sigmacell.sellqwik.screens.OrderScreen1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000004A0" android:icon="@7F0200A6" android:name="in.sigmacell.sellqwik.screens.sales.InstantOrderActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:icon="@7F0200A6" android:name="in.sigmacell.sellqwik.screens.sales.OrderInstant">
+</activity>
+<activity android:configChanges="0x000004A0" android:icon="@7F0200A6" android:name="in.sigmacell.sellqwik.screens.OrderScreen2">
+</activity>
+<activity android:icon="@7F0200A6" android:name="in.sigmacell.sellqwik.screens.DataInputActivity">
+</activity>
+<activity android:icon="@7F0200A6" android:name="in.sigmacell.sellqwik.screens.MapActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:icon="@7F0200A6" android:name="in.sigmacell.sellqwik.screens.OrderScreen4">
+</activity>
+<activity android:configChanges="0x000004A0" android:icon="@7F0200A6" android:name="in.sigmacell.sellqwik.screens.OrderScreen3" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:icon="@7F0200A6" android:name="in.sigmacell.sellqwik.screens.LoginActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:icon="@7F0200A6" android:name="in.sigmacell.sellqwik.screens.SettingsScreen" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:icon="@7F0200A6" android:name="in.sigmacell.sellqwik.screens.AboutScreen" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:icon="@7F0200A6" android:name="in.sigmacell.sellqwik.screens.AboutContactDetailsActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:icon="@7F0200A6" android:name="in.sigmacell.sellqwik.screens.FaDataInputActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:icon="@7F0200A6" android:name="in.sigmacell.sellqwik.screens.UserList" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:icon="@7F0200A6" android:name="in.sigmacell.sellqwik.screens.FCategoryDetailsActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:icon="@7F0200A6" android:name="in.sigmacell.sellqwik.screens.NotificationDetailActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<receiver android:name="in.sigmacell.sellqwik.screens.BaseActivity$UpdateReceiver">
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_REPLACED">
+</action>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+<data android:path="in.sigmacell.sellqwik.peata" android:scheme="package">
+</data>
+</intent-filter>
+</receiver>
+<receiver android:name="in.sigmacell.sellqwik.screens.sales.AlarmReceiver">
+<intent-filter>
+<action android:name="android.media.action.DISPLAY_NOTIFICATION">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</receiver>
+<activity android:icon="@7F0200A6" android:name="in.sigmacell.sellqwik.screens.Order2Popup" android:theme="@android:01030073" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="in.sigmacell.sellqwik.screens.TranparentActivity" android:theme="@android:01030007">
+</activity>
+<activity android:icon="@7F0200A6" android:name="in.sigmacell.sellqwik.screens.EnquiryInputActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:icon="@7F0200A6" android:name="in.sigmacell.sellqwik.screens.sales.DeliveryScreen" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:icon="@7F0200A6" android:name="in.sigmacell.sellqwik.screens.PlainActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="in.sigmacell.sellqwik.screens.HomeActivityList" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:configChanges="0x000004A0" android:exported="true" android:name="in.sigmacell.sellqwik.screens.HomeActivityInstantProduct" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:icon="@7F0200A6" android:name="in.sigmacell.sellqwik.screens.GeneratePinActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:icon="@7F0200A6" android:name="in.sigmacell.sellqwik.screens.PageActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:icon="@7F0200A6" android:name="in.sigmacell.sellqwik.screens.sales.CustomerCallActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:exported="true" android:icon="@7F0200A6" android:name="in.sigmacell.sellqwik.screens.sales.QualifyDoctorScreen" android:screenOrientation="14">
+</activity>
+<activity android:icon="@7F0200A6" android:name="in.sigmacell.sellqwik.screens.LegalActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:icon="@7F0200A6" android:name="in.sigmacell.sellqwik.screens.NotificationTextActivity" android:theme="@android:01030073" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:icon="@7F0200A6" android:name="in.sigmacell.sellqwik.screens.SearchResultsActivity">
+</activity>
+<activity android:icon="@7F0200A6" android:name="in.sigmacell.sellqwik.screens.VideoViewActivity">
+</activity>
+<activity android:icon="@7F0200A6" android:name="in.sigmacell.sellqwik.screens.TourActivity">
+</activity>
+<activity android:icon="@7F0200A6" android:name="in.sigmacell.sellqwik.screens.SalesOrderListActivity">
+</activity>
+<activity android:icon="@7F0200A6" android:name="in.sigmacell.sellqwik.screens.SalesOrderInfoActivity">
+</activity>
+<activity android:icon="@7F0200A6" android:name="in.sigmacell.sellqwik.screens.myMapActivity">
+</activity>
+<activity android:icon="@7F0200A6" android:name="in.sigmacell.sellqwik.screens.Disclaimer">
+</activity>
+<activity android:icon="@7F0200A6" android:name="in.sigmacell.sellqwik.screens.HonoClass">
+</activity>
+<activity android:icon="@7F0200A6" android:name="in.sigmacell.sellqwik.screens.VisionClass">
+</activity>
+<activity android:icon="@7F0200A6" android:name="in.sigmacell.sellqwik.screens.InfraClass">
+</activity>
+<activity android:icon="@7F0200A6" android:name="in.sigmacell.sellqwik.screens.AboutClass">
+</activity>
+<activity android:icon="@7F0200A6" android:name="in.sigmacell.sellqwik.screens.PaymentMathodClass">
+</activity>
+<activity android:icon="@7F0200A6" android:name="in.sigmacell.sellqwik.screens.PaymentStatus">
+</activity>
+<service android:name="in.sigmacell.sellqwik.service.SellqwikLocationService">
+</service>
+<meta-data android:name="com.google.android.gms.version" android:value="@7F090005">
+</meta-data>
+</application>
+</manifest>

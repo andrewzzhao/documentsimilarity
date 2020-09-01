@@ -1,0 +1,384 @@
+<?xml version="1.0" ?><manifest android:versionCode="8" android:versionName="2.5.2" package="com.baowei.wwb" platformBuildVersionCode="25" platformBuildVersionName="7.1.1" xmlns:android="http://schemas.android.com/apk/res/android">
+ // android-writing-exception-to-parcel
+
+<uses-sdk android:minSdkVersion="16" android:targetSdkVersion="22">
+</uses-sdk>
+<permission android:name="com.baowei.wwb.permission.JPUSH_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_CONTACTS">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-permission android:name="android.permission.CALL_PHONE">
+</uses-permission>
+<uses-feature android:name="android.hardware.camera">
+</uses-feature>
+<uses-feature android:name="android.hardware.camera.autofocus">
+</uses-feature>
+<uses-permission android:name="com.android.launcher.permission.READ_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="com.baowei.wwb.permission.JPUSH_MESSAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_USER_PRESENT">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERACT_ACROSS_USERS_FULL">
+</uses-permission>
+<meta-data android:name="android.support.VERSION" android:value="25.3.1">
+</meta-data>
+<application android:allowBackup="true" android:debuggable="true" android:icon="@7F030001" android:label="@7F090129" android:name="com.stub.StubApp" android:qihoo="activity" android:supportsRtl="true" android:theme="@7F0A00A9">
+ //2017-1-4张晓威穞
+
+<activity android:name="com.baowei.wwb.login.activity.LogoActivity">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:excludeFromRecents="true" android:launchMode="0" android:name="com.stub.plugin.Stub01" android:noHistory="true" android:taskAffinity="com.baowei.wwb.affinity">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<service android:enabled="true" android:exported="true" android:name="com.stub.plugin.Stub02">
+</service>
+<receiver android:enabled="true" android:exported="false" android:name="com.stub.plugin.Stub03">
+</receiver>
+<provider android:authorities="com.baowei.wwb.COMMONPROVIDER" android:exported="true" android:name="com.stub.plugin.Stub04">
+</provider>
+<activity android:label="@7F090129" android:launchMode="2" android:name="com.baowei.wwb.login.activity.LoginActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090129" android:launchMode="1" android:name="com.baowei.wwb.login.activity.ForgetActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090129" android:launchMode="1" android:name="com.baowei.wwb.login.activity.ForgetTwoActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090129" android:launchMode="1" android:name="com.baowei.wwb.mine.activity.SettingActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090129" android:launchMode="1" android:name="com.baowei.wwb.login.activity.OrgChooseActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="0" android:name="com.baowei.wwb.work.activity.report.ReportActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="0" android:name="com.baowei.wwb.work.activity.report.ReportMixedActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="2" android:name="com.baowei.wwb.work.activity.report.ReportListActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name="com.baowei.wwb.work.activity.report.DeviceListActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name="com.baowei.wwb.work.activity.report.SourceListActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name="com.baowei.wwb.work.activity.report.DeviceFilterActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name="com.baowei.wwb.work.activity.report.DeviceTypeListActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name="com.baowei.wwb.work.activity.report.ProjectListActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="2" android:name="com.baowei.wwb.work.activity.repair.RepairListActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name="com.baowei.wwb.work.activity.repair.RepairLocalListActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090129" android:launchMode="1" android:name="com.baowei.wwb.mine.activity.MyProfileActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090129" android:launchMode="1" android:name="com.baowei.wwb.mine.activity.OrgInfoActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090129" android:launchMode="1" android:name="com.baowei.wwb.mine.activity.SingleEditActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090129" android:launchMode="2" android:name="com.baowei.wwb.work.activity.order.MyOrderActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090129" android:launchMode="2" android:name="com.baowei.wwb.work.activity.order.OrderListActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090129" android:launchMode="1" android:name="com.baowei.wwb.work.activity.other.SwitchActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090129" android:launchMode="1" android:name="com.baowei.wwb.work.activity.other.ScanActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090129" android:launchMode="1" android:name="com.baowei.wwb.work.activity.review.ReviewDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090129" android:launchMode="1" android:name="com.baowei.wwb.work.activity.repair.AssignActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090129" android:launchMode="1" android:name="com.baowei.wwb.work.activity.repair.PubLeaveWordActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090129" android:launchMode="2" android:name="com.baowei.wwb.message.activity.WorkRemindActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090129" android:launchMode="1" android:name="com.baowei.wwb.message.activity.MsgInfoActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090129" android:launchMode="1" android:name="com.baowei.wwb.message.activity.ProjectADActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090129" android:launchMode="1" android:name="com.baowei.wwb.work.activity.order.OrderDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090129" android:launchMode="1" android:name="com.baowei.wwb.work.activity.other.PhotoViewActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090129" android:launchMode="2" android:name="com.baowei.wwb.contact.activity.InviteActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090129" android:launchMode="1" android:name="com.baowei.wwb.contact.activity.StaffEditActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090129" android:launchMode="1" android:name="com.baowei.wwb.work.activity.invite.InputInviteActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090129" android:launchMode="1" android:name="com.baowei.wwb.work.activity.invite.PersonInfoActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090129" android:launchMode="1" android:name="com.baowei.wwb.work.activity.invite.OrgInfoActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090129" android:launchMode="1" android:name="com.baowei.wwb.work.activity.repair.RepairEditActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090129" android:launchMode="2" android:name="com.baowei.wwb.work.activity.publish.PublishActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090129" android:launchMode="1" android:name="com.baowei.wwb.work.activity.publish.ProjectPublishDetail" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090129" android:launchMode="1" android:name="com.baowei.wwb.work.activity.publish.OrgPublishDetail" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090129" android:launchMode="1" android:name="com.baowei.wwb.work.activity.publish.EditPublishProjectDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090129" android:launchMode="1" android:name="com.baowei.wwb.work.activity.publish.EditPublishOrgDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090129" android:launchMode="1" android:name="com.baowei.wwb.work.activity.other.OrderStatusListActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090129" android:launchMode="1" android:name="com.baowei.wwb.work.activity.other.OrderStatusDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090129" android:launchMode="1" android:name="com.baowei.wwb.work.activity.other.SysStatusDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090129" android:launchMode="1" android:name="com.baowei.wwb.work.activity.repair.HistoryDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090129" android:launchMode="1" android:name="com.baowei.wwb.work.activity.deviceManager.DeviceManagerListActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090129" android:launchMode="1" android:name="com.baowei.wwb.work.activity.deviceManager.DeviceDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090129" android:launchMode="1" android:name="com.baowei.wwb.work.activity.deviceManager.DevicePositionActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090129" android:launchMode="1" android:name="com.baowei.wwb.mine.activity.WebContentActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090129" android:launchMode="1" android:name="com.baowei.wwb.mine.activity.FeedBackActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090129" android:launchMode="1" android:name="com.baowei.wwb.message.activity.OrgConfirmActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name="me.iwf.photopicker.PhotoPickerActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name="me.iwf.photopicker.PhotoPagerActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name="com.baowei.wwb.work.activity.repair.RepairDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name="com.baowei.wwb.work.activity.repair.RepairRecordDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name="com.baowei.wwb.work.activity.project.ProjectManagerListActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name="com.baowei.wwb.work.activity.project.NewProjectActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="0" android:name="com.baowei.wwb.work.activity.project.DepUserActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name="com.baowei.wwb.work.activity.project.ProjectDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name="com.baowei.wwb.work.activity.project.AddPersonActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name="com.baowei.wwb.login.activity.RegisterActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name="com.baowei.wwb.login.activity.RegisterTwoActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name="com.baowei.wwb.login.activity.OrgRegisterActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="2" android:name="com.baowei.wwb.MainActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name="com.baowei.wwb.common.view.MakingActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name="com.baowei.wwb.work.activity.repair.RepairProcessing" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name="com.baowei.wwb.work.activity.review.ReviewNGActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name="com.baowei.wwb.work.activity.other.OrderListOfMapActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name="com.baowei.wwb.mine.activity.MyQrcodeActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090129" android:launchMode="1" android:name="com.baowei.wwb.message.activity.RobitActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="2" android:name="com.baowei.wwb.contact.activity.ContactsActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name="com.baowei.wwb.contact.activity.ContactDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name="com.baowei.wwb.contact.activity.DepSelectActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name="com.baowei.wwb.contact.activity.DepRegisterActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name="com.baowei.wwb.contact.activity.MyProjectListActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name="com.baowei.wwb.contact.activity.AdListActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name="com.baowei.wwb.contact.activity.AdPubActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name="com.baowei.wwb.contact.activity.OrgManageActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name="com.baowei.wwb.contact.activity.AddDesignedPersonVisiableActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="0" android:name="com.baowei.wwb.contact.activity.DepUserForAddActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name="com.baowei.wwb.contact.activity.CooperateOrgInfoActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name="com.baowei.wwb.contact.activity.CooperateOrgDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name="com.baowei.wwb.work.activity.inspection.MyInspectionActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="2" android:name="com.baowei.wwb.work.activity.inspection.InspectDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name="com.baowei.wwb.work.activity.inspection.MapAndSignActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name="com.baowei.wwb.work.activity.inspection.SignActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="2" android:name="com.baowei.wwb.work.activity.deviceManager.DeviceInputActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name="com.baowei.wwb.work.activity.deviceManager.DeviceOrderListActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name="com.baowei.wwb.work.activity.deviceManager.DeviceListActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name="com.baowei.wwb.work.activity.parts.SelectPartsActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name="com.baowei.wwb.work.activity.parts.AddPartsNoActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name="com.baowei.wwb.work.activity.inspection.SelectNearbyDevice" android:screenOrientation="1">
+</activity>
+<service android:name="com.amap.api.location.APSService">
+</service>
+<meta-data android:name="com.amap.api.v2.apikey" android:value="b59c82abad306e1c375da9aaca1cb1e8">
+</meta-data>
+<activity android:exported="false" android:name="cn.jpush.android.ui.PopWinActivity" android:theme="@7F0A00E2">
+</activity>
+<activity android:configChanges="0x000000A0" android:exported="false" android:name="cn.jpush.android.ui.PushActivity" android:theme="@android:01030006">
+<intent-filter>
+<action android:name="cn.jpush.android.ui.PushActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="com.baowei.wwb">
+</category>
+</intent-filter>
+</activity>
+<service android:enabled="true" android:exported="false" android:name="cn.jpush.android.service.DownloadService">
+</service>
+<service android:enabled="true" android:exported="false" android:name="cn.jpush.android.service.PushService">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.REGISTER">
+</action>
+<action android:name="cn.jpush.android.intent.REPORT">
+</action>
+<action android:name="cn.jpush.android.intent.PushService">
+</action>
+<action android:name="cn.jpush.android.intent.PUSH_TIME">
+</action>
+</intent-filter>
+</service>
+<receiver android:enabled="true" android:exported="false" android:name="cn.jpush.android.service.PushReceiver">
+<intent-filter android:priority="1000">
+<action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY">
+</action>
+<category android:name="com.baowei.wwb">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.USER_PRESENT">
+</action>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_ADDED">
+</action>
+<action android:name="android.intent.action.PACKAGE_REMOVED">
+</action>
+<data android:scheme="package">
+</data>
+</intent-filter>
+</receiver>
+<receiver android:exported="false" android:name="cn.jpush.android.service.AlarmReceiver">
+</receiver>
+<receiver android:enabled="true" android:exported="false" android:name="com.baowei.wwb.common.view.MyReceiver">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.REGISTRATION">
+</action>
+<action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED">
+</action>
+<action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED">
+</action>
+<action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED">
+</action>
+<action android:name="cn.jpush.android.intent.ACTION_RICHPUSH_CALLBACK">
+</action>
+<action android:name="cn.jpush.android.intent.CONNECTION">
+</action>
+<category android:name="com.baowei.wwb">
+</category>
+</intent-filter>
+</receiver>
+<meta-data android:name="JPUSH_CHANNEL" android:value="developer-default">
+</meta-data>
+<meta-data android:name="JPUSH_APPKEY" android:value="d35a0f3c86b3986e26c4fa88">
+</meta-data>
+<meta-data android:name="com.baowei.wwb.common.util.GlideConfiguration" android:value="GlideModule">
+</meta-data>
+<activity android:configChanges="0x000004A0" android:exported="true" android:name="com.baowei.wwb.wxapi.WXEntryActivity" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<activity android:launchMode="2" android:name="com.umeng.qq.tencent.AuthActivity" android:noHistory="true">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="tencent1105678407">
+</data>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.umeng.qq.tencent.AssistActivity" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<meta-data android:name="UMENG_APPKEY" android:value="58abe73c1c5dd029750022fc">
+</meta-data>
+<provider android:authorities="com.baowei.wwb.provider" android:exported="false" android:grantUriPermissions="true" android:name="android.support.v4.content.FileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F070000">
+</meta-data>
+</provider>
+<meta-data android:name="design_width" android:value="640">
+</meta-data>
+<meta-data android:name="design_height" android:value="1336">
+</meta-data>
+<provider android:authorities="com.baowei.wwb.AgentWebFileProvider" android:exported="false" android:grantUriPermissions="true" android:name="com.just.library.AgentWebFileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F070001">
+</meta-data>
+</provider>
+<receiver android:name="com.just.library.RealDownLoader$NotificationBroadcastReceiver">
+</receiver>
+</application>
+</manifest>

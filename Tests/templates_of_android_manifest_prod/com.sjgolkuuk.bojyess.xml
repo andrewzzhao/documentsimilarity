@@ -1,0 +1,136 @@
+<?xml version="1.0" ?><manifest android:versionCode="23" android:versionName="1.5.3" package="com.sjgolkuuk.bojyess" platformBuildVersionCode="23" platformBuildVersionName="6.0-2438415" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="8" android:targetSdkVersion="10">
+</uses-sdk>
+<permission android:name="com.bibimeng.zhezhi.permission.JPUSH_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="com.bibimeng.zhezhi.permission.JPUSH_MESSAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_USER_PRESENT">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<application android:icon="@7F020015" android:label="孛爱繢" android:theme="@android:01030006">
+<activity android:configChanges="0x000000B0" android:label="孛爱繢" android:name="com.bibimeng.zhezhi.SplashScreen" android:screenOrientation="1" android:src="@7F020059">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:name="com.bibimeng.zhezhi.Xiaohuajia" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.bibimeng.zhezhi.Xiaohuajia">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.bibimeng.zhezhi.Dinosaur" android:screenOrientation="1" android:theme="@android:01030007">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.bibimeng.zhezhi.Clothes" android:screenOrientation="1" android:theme="@android:01030007">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.bibimeng.zhezhi.Sea" android:screenOrientation="1" android:theme="@android:01030007">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.bibimeng.zhezhi.Animal" android:screenOrientation="1" android:theme="@android:01030007">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.bibimeng.zhezhi.Vehicle" android:screenOrientation="1" android:theme="@android:01030007">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.bibimeng.zhezhi.Flowers" android:screenOrientation="1" android:theme="@android:01030007">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.bibimeng.zhezhi.Food" android:screenOrientation="1" android:theme="@android:01030007">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.bibimeng.zhezhi.Other" android:screenOrientation="1" android:theme="@android:01030007">
+</activity>
+<activity android:name="com.umeng.fb.ConversationActivity">
+</activity>
+<activity android:name="com.umeng.fb.ContactActivity">
+</activity>
+<activity android:configChanges="0x00000090" android:launchMode="2" android:name="com.umeng.socialize.view.ShareActivity" android:noHistory="true" android:theme="@7F0B0010" android:windowSoftInputMode="0x00000014">
+</activity>
+<activity android:name="com.tencent.tauth.AuthActivity">
+</activity>
+<meta-data android:name="UMENG_APPKEY" android:value="52cec9ad56240b1c0b02be27">
+</meta-data>
+<meta-data android:name="UMENG_CHANNEL" android:value="mumayi">
+</meta-data>
+<service android:enabled="true" android:exported="false" android:name="cn.jpush.android.service.PushService">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.REGISTER">
+</action>
+<action android:name="cn.jpush.android.intent.REPORT">
+</action>
+<action android:name="cn.jpush.android.intent.PushService">
+</action>
+<action android:name="cn.jpush.android.intent.PUSH_TIME">
+</action>
+</intent-filter>
+</service>
+<receiver android:enabled="true" android:name="cn.jpush.android.service.PushReceiver">
+<intent-filter android:priority="1000">
+<action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY">
+</action>
+<category android:name="com.bibimeng.zhezhi">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.USER_PRESENT">
+</action>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_ADDED">
+</action>
+<action android:name="android.intent.action.PACKAGE_REMOVED">
+</action>
+<data android:scheme="package">
+</data>
+</intent-filter>
+</receiver>
+<activity android:configChanges="0x000000A0" android:name="cn.jpush.android.ui.PushActivity" android:theme="@android:01030010">
+<intent-filter>
+<action android:name="cn.jpush.android.ui.PushActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="com.bibimeng.zhezhi">
+</category>
+</intent-filter>
+</activity>
+<service android:enabled="true" android:exported="false" android:name="cn.jpush.android.service.DownloadService">
+</service>
+<receiver android:name="cn.jpush.android.service.AlarmReceiver">
+</receiver>
+<meta-data android:name="JPUSH_APPKEY" android:value="d90a47e64f7f87e410940faa">
+</meta-data>
+</application>
+</manifest>

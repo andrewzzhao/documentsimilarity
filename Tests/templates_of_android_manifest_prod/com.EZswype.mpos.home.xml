@@ -1,0 +1,244 @@
+<?xml version="1.0" ?><manifest android:versionCode="37" android:versionName="3.0" package="com.EZswype.mpos.home" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="14" android:targetSdkVersion="27">
+</uses-sdk>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.BLUETOOTH">
+</uses-permission>
+<uses-permission android:name="android.permission.BLUETOOTH_ADMIN">
+</uses-permission>
+<uses-permission android:name="android.permission.BLUETOOTH_PRIVILEGED">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CALL_PHONE">
+</uses-permission>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-permission android:name="android.permission.FLASHLIGHT">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES">
+</uses-permission>
+<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<permission android:name="com.EZswype.mpos.home.permission.C2D_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="com.EZswype.mpos.home.permission.C2D_MESSAGE">
+</uses-permission>
+<uses-feature android:name="android.hardware.camera" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.telephony" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.camera.flash" android:required="false">
+</uses-feature>
+<uses-permission android:name="android.permission.RECEIVE_SMS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_SMS">
+</uses-permission>
+<uses-permission android:name="android.permission.SEND_SMS">
+</uses-permission>
+<uses-feature android:name="android.hardware.camera.autofocus" android:required="false">
+</uses-feature>
+<application android:allowBackup="true" android:icon="@7F0800C0" android:label="@7F0D0025" android:largeHeap="true" android:name="android.support.multidex.MultiDexApplication" android:supportsRtl="true" android:theme="@7F0E0006">
+<receiver android:name="com.ezswypelocal.mpos.home.IncomingSms">
+<intent-filter>
+<action android:name="android.provider.Telephony.SMS_RECEIVED">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:exported="true" android:name="com.google.android.gms.gcm.GcmReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+<category android:name="com.EZswype.mpos.home">
+</category>
+</intent-filter>
+</receiver>
+<service android:exported="false" android:name="com.ezswypelocal.mpos.gcm.MyGcmListenerService">
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+</intent-filter>
+</service>
+<service android:exported="false" android:name="com.ezswypelocal.mpos.gcm.MyInstanceIDListenerService">
+<intent-filter>
+<action android:name="com.google.android.gms.iid.InstanceID">
+</action>
+</intent-filter>
+</service>
+<service android:exported="false" android:name="com.ezswypelocal.mpos.gcm.RegistrationIntentService">
+</service>
+<service android:name="com.ezswypelocal.mpos.vm20.DemoService">
+</service>
+<activity android:name="com.ezswypelocal.mpos.home.SplashActivity">
+</activity>
+<activity android:name="com.ezswypelocal.mpos.home.TermsAndConditionActivity">
+</activity>
+<activity android:label="@7F0D0025" android:name="com.ezswypelocal.mpos.home.ActivityLogin_New" android:screenOrientation="1" android:theme="@7F0E00AA" android:windowSoftInputMode="0x00000002">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="com.ezswypelocal.mpos.home.ActivityLogin_New">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:name="com.ezswypelocal.mpos.vm20.DeviceSelectActivity" android:theme="@7F0E0122">
+</activity>
+<activity android:label=" " android:name="com.ezswypelocal.mpos.qrsale.SimpleScannerFragmentActivity" android:screenOrientation="1" android:theme="@7F0E00AA" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:label=" " android:name="com.ezswypelocal.mpos.home.OTPActivity" android:screenOrientation="1" android:theme="@7F0E00AA" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:name="com.ezswypelocal.mpos.home.HomeFragment_Activity" android:screenOrientation="1" android:theme="@7F0E0122" android:windowSoftInputMode="0x00000010">
+<intent-filter>
+<action android:name="com.ezswypelocal.mpos.home.HomeFragment_Activity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:name="com.ezswypelocal.mpos.accounts.TransactionDetailActivity" android:screenOrientation="1" android:theme="@7F0E00AA" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:name="com.ezswypelocal.mpos.home.MobikwikThankyouActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:label=" " android:name="com.ezswypelocal.mpos.thankyou.ThankyouActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:label=" " android:name="com.ezswypelocal.mpos.thankyou.ThankyouActivityVm20" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:label=" " android:name="com.ezswypelocal.mpos.register.RegisterActivity" android:parentActivityName="com.ezswypelocal.mpos.home.ActivityLogin_New" android:screenOrientation="1" android:theme="@7F0E0009" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:label=" " android:name="com.ezswypelocal.mpos.home.ForgetPassword" android:parentActivityName="com.ezswypelocal.mpos.home.ActivityLogin_New" android:screenOrientation="1" android:theme="@7F0E0009" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:label=" " android:name="com.ezswypelocal.mpos.register.Proprietor" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:label=" " android:name="com.ezswypelocal.mpos.register.PartnershipFirm" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:label=" " android:name="com.ezswypelocal.mpos.register.PrivateLimitedCompany" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:label=" " android:name="com.ezswypelocal.mpos.register.SubmitFormActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:label=" " android:name="com.ezswypelocal.mpos.register.ThankyouRegistration" android:screenOrientation="1" android:theme="@7F0E00AA" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:name="com.ezswypelocal.mpos.home.CardTransactionFailed" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ezswypelocal.mpos.home.VoidThankYou" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ezswypelocal.mpos.vm20.Vm20VoidThankYou" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ezswypelocal.mpos.home.CardTransactionReversal" android:screenOrientation="1">
+</activity>
+<activity android:label="Cash@Pos" android:name="com.ezswypelocal.mpos.home.CashAtPosActivity" android:theme="@7F0E0066">
+</activity>
+<activity android:name="com.ezswypelocal.mpos.home.SaleActivity" android:theme="@7F0E0122" android:windowSoftInputMode="0x00000010">
+<intent-filter>
+<action android:name="com.ezswypelocal.mpos.home.SaleActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:name="com.ezswypelocal.mpos.gcm.GcmHandlerActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ezswypelocal.mpos.wallet.WalletThankYou" android:screenOrientation="1">
+</activity>
+<meta-data android:name="io.fabric.ApiKey" android:value="080183d05d6147bfdb8e52a12cd8980c9205df8e">
+</meta-data>
+<activity android:name="com.ezswypelocal.mpos.wallet.ScanQrActivity">
+</activity>
+<activity android:name="com.ezswypelocal.mpos.loyality.LoyaltyActivity" android:screenOrientation="1" android:theme="@7F0E011E">
+</activity>
+<activity android:name="com.ezswypelocal.mpos.vm20.VM20Main" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ezswypelocal.mpos.settings.AdminActivity">
+</activity>
+<activity android:name="com.ezswypelocal.mpos.vm20.TestActivity">
+</activity>
+<activity android:name="com.ezswypelocal.mpos.thankyou.ThankYouVM20">
+</activity>
+<activity android:name="com.ezswypelocal.mpos.home.Activity_Login">
+</activity>
+<activity android:name="com.ezswypelocal.mpos.home.HomeFragmentActivityNew" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ezswypelocal.mpos.home.FragmentOne" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ezswypelocal.mpos.settings.FragmentTwo" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ezswypelocal.mpos.help.Support_Activity" android:parentActivityName="com.ezswypelocal.mpos.home.HomeFragmentActivityNew" android:screenOrientation="1" android:theme="@7F0E0009">
+</activity>
+<activity android:name="com.ezswypelocal.mpos.home.MainActivity" android:screenOrientation="1" android:theme="@7F0E0009" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:name="com.ezswypelocal.mpos.accounts.RecentTransactionNew" android:parentActivityName="com.ezswypelocal.mpos.home.HomeFragmentActivityNew" android:screenOrientation="1" android:theme="@7F0E0009">
+</activity>
+<activity android:name="com.ezswypelocal.mpos.accounts.AllTransactionNew" android:parentActivityName="com.ezswypelocal.mpos.accounts.RecentTransactionNew" android:screenOrientation="1" android:theme="@7F0E0009">
+</activity>
+<activity android:name="com.ezswypelocal.mpos.settings.ConfigCommNew" android:parentActivityName="com.ezswypelocal.mpos.home.HomeFragmentActivityNew" android:screenOrientation="1" android:theme="@7F0E0009">
+</activity>
+<activity android:name="com.ezswypelocal.mpos.settings.UpdatePasswordNew" android:parentActivityName="com.ezswypelocal.mpos.home.HomeFragmentActivityNew" android:screenOrientation="1" android:theme="@7F0E0009">
+</activity>
+<activity android:name="com.ezswypelocal.mpos.reports.ReportsNew" android:parentActivityName="com.ezswypelocal.mpos.home.HomeFragmentActivityNew" android:screenOrientation="1" android:theme="@7F0E0009">
+</activity>
+<activity android:name="com.ezswypelocal.mpos.gcm.PayoutNew" android:parentActivityName="com.ezswypelocal.mpos.home.HomeFragmentActivityNew" android:screenOrientation="1" android:theme="@7F0E0009">
+</activity>
+<activity android:name="com.ezswypelocal.mpos.home.Main2Activity" android:screenOrientation="1" android:theme="@7F0E0009">
+</activity>
+<activity android:name="com.ezswypelocal.mpos.help.HelpNew" android:parentActivityName="com.ezswypelocal.mpos.home.HomeFragmentActivityNew" android:screenOrientation="1" android:theme="@7F0E0009">
+</activity>
+<activity android:name="com.ezswypelocal.mpos.help.FAQNew" android:screenOrientation="1" android:theme="@7F0E0009">
+</activity>
+<activity android:name="com.ezswypelocal.mpos.help.TakeTourNew" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ezswypelocal.mpos.home.WalletStepNew" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ezswypelocal.mpos.home.WalletStepNew2" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ezswypelocal.mpos.wallet.EzWallet" android:parentActivityName="com.ezswypelocal.mpos.home.HomeFragmentActivityNew" android:screenOrientation="1" android:theme="@7F0E0009">
+</activity>
+<activity android:name="com.ezswypelocal.mpos.reports.MDRReportNew" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ezswypelocal.mpos.thankyou.ThankYouVM20New" android:screenOrientation="1">
+</activity>
+<provider android:authorities="com.EZswype.mpos.home.google_measurement_service" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementContentProvider">
+</provider>
+<receiver android:enabled="true" android:name="com.google.android.gms.measurement.AppMeasurementReceiver">
+<intent-filter>
+<action android:name="com.google.android.gms.measurement.UPLOAD">
+</action>
+</intent-filter>
+</receiver>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementService">
+</service>
+<meta-data android:name="android.support.VERSION" android:value="25.4.0">
+</meta-data>
+<activity android:name="com.vistrav.ask.AskActivity">
+</activity>
+<receiver android:name="com.vistrav.ask.Ask$Receiver">
+<intent-filter>
+<action android:name="com.vistrav.ask.PERMISSION_RESULT_INTENT">
+</action>
+</intent-filter>
+</receiver>
+<meta-data android:name="com.google.android.gms.version" android:value="@7F0A0006">
+</meta-data>
+</application>
+</manifest>

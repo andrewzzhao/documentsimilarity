@@ -1,0 +1,368 @@
+<?xml version="1.0" ?><manifest android:installLocation="1" android:versionCode="56" android:versionName="1.2.26" package="com.aplus.launcher" platformBuildVersionCode="56" platformBuildVersionName="1.2.26" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="21" android:targetSdkVersion="26">
+</uses-sdk>
+<permission android:description="@7F100173" android:label="@7F100177" android:name="com.android.launcher.permission.INSTALL_SHORTCUT" android:protectionLevel="0x00000001">
+</permission>
+<permission android:label="QSB" android:name="com.aplus.launcher.permission.QSB" android:protectionLevel="0x00000000">
+</permission>
+<permission android:description="@7F100174" android:label="@7F100178" android:name="com.aplus.launcher.permission.READ_SETTINGS" android:protectionLevel="0x00000000">
+</permission>
+<permission android:description="@7F100175" android:label="@7F100179" android:name="com.aplus.launcher.permission.WRITE_SETTINGS" android:protectionLevel="0x00000003">
+</permission>
+<uses-permission android:name="android.permission.CALL_PHONE">
+</uses-permission>
+<uses-permission android:name="android.permission.SET_WALLPAPER">
+</uses-permission>
+<uses-permission android:name="android.permission.SET_WALLPAPER_HINTS">
+</uses-permission>
+<uses-permission android:name="android.permission.BIND_APPWIDGET">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-permission android:name="android.permission.EXPAND_STATUS_BAR">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="com.aplus.launcher.permission.READ_SETTINGS">
+</uses-permission>
+<uses-permission android:name="com.aplus.launcher.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="com.aplus.launcher.permission.QSB">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE">
+</uses-permission>
+<uses-feature android:glEsVersion="0x00020000" android:required="true">
+</uses-feature>
+<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE">
+</uses-permission>
+<uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT">
+</uses-permission>
+<uses-permission android:name="com.android.vending.BILLING">
+</uses-permission>
+<application android:allowBackup="true" android:backupAgent="ch.deletescape.lawnchair.LauncherBackupAgent" android:fullBackupContent="@7F130007" android:fullBackupOnly="true" android:hardwareAccelerated="true" android:icon="@7F0D0000" android:label="@7F100061" android:largeHeap="true" android:name="ch.deletescape.lawnchair.App" android:restoreAnyVersion="true" android:supportsRtl="true">
+<activity android:clearTaskOnLaunch="true" android:configChanges="0x00000070" android:enabled="true" android:excludeFromRecents="true" android:launchMode="2" android:name="ch.deletescape.lawnchair.Launcher" android:resumeWhilePausing="true" android:stateNotNeeded="true" android:taskAffinity="" android:theme="@7F1100C6" android:windowSoftInputMode="0x00000020">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.HOME">
+</category>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.MONKEY">
+</category>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+<meta-data android:name="android.max_aspect" android:value="2.100000">
+</meta-data>
+<meta-data android:name="android.app.shortcuts" android:resource="@7F13001A">
+</meta-data>
+</activity>
+<activity android:autoRemoveFromRecents="true" android:label="@7F1001CD" android:name="ch.deletescape.lawnchair.settings.ui.SettingsActivity" android:theme="@7F110105">
+<intent-filter>
+<action android:name="android.intent.action.APPLICATION_PREFERENCES">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:finishOnCloseSystemDialogs="true" android:label="@7F10017E" android:name="ch.deletescape.wallpaperpicker.WallpaperPickerActivity" android:screenOrientation="1" android:theme="@7F11017A">
+<intent-filter>
+<action android:name="android.intent.action.SET_WALLPAPER">
+</action>
+</intent-filter>
+</activity>
+<activity android:finishOnCloseSystemDialogs="true" android:label="@7F1000C6" android:name="ch.deletescape.wallpaperpicker.WallpaperCropActivity" android:screenOrientation="1" android:theme="@7F110179">
+<intent-filter>
+<action android:name="android.service.wallpaper.CROP_AND_SET_WALLPAPER">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:mimeType="image/*">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="ch.deletescape.lawnchair.kustomsupport.AutoFinishTransparentActivity" android:theme="@7F11016F">
+</activity>
+<provider android:authorities="com.aplus.launcher.kustomsupport.kustom5secsprovider" android:exported="true" android:grantUriPermissions="true" android:name="ch.deletescape.lawnchair.kustomsupport.Kustom5SecsProvider">
+</provider>
+<provider android:authorities="com.aplus.launcher.settings" android:exported="false" android:name="ch.deletescape.lawnchair.LauncherProvider" android:readPermission="ch.deletescape.lawnchair.permission.READ_SETTINGS" android:writePermission="ch.deletescape.lawnchair.permission.WRITE_SETTINGS">
+</provider>
+<receiver android:name="ch.deletescape.lawnchair.InstallShortcutReceiver" android:permission="com.android.launcher.permission.INSTALL_SHORTCUT">
+<intent-filter>
+<action android:name="com.android.launcher.action.INSTALL_SHORTCUT">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name="ch.deletescape.lawnchair.AppWidgetsRestoredReceiver">
+<intent-filter>
+<action android:name="android.appwidget.action.APPWIDGET_HOST_RESTORED">
+</action>
+</intent-filter>
+</receiver>
+<service android:label="@7F100161" android:name="ch.deletescape.lawnchair.notification.NotificationListener" android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE">
+<intent-filter>
+<action android:name="android.service.notification.NotificationListenerService">
+</action>
+</intent-filter>
+</service>
+<service android:exported="false" android:label="@7F1000AC" android:name="ch.deletescape.lawnchair.dynamicui.ColorExtractionService" android:process=":color_extraction">
+</service>
+<meta-data android:name="android.nfc.disable_beam_default" android:value="true">
+</meta-data>
+<activity android:name="ch.deletescape.lawnchair.iconpack.EditIconActivity" android:parentActivityName="ch.deletescape.lawnchair.Launcher" android:theme="@7F110108">
+</activity>
+<activity android:name="ch.deletescape.lawnchair.iconpack.IconPickerActivity" android:parentActivityName="ch.deletescape.lawnchair.iconpack.EditIconActivity" android:theme="@7F110108">
+</activity>
+<meta-data android:name="com.google.android.awareness.API_KEY" android:value="null">
+</meta-data>
+<meta-data android:name="com.google.android.geo.API_KEY" android:value="null">
+</meta-data>
+<meta-data android:name="android.max_aspect" android:value="2.100000">
+</meta-data>
+<meta-data android:name="com.samsung.android.non_immersive" android:value="true">
+</meta-data>
+<activity android:name="ch.deletescape.lawnchair.BlankActivity" android:theme="@7F11016F">
+</activity>
+<activity-alias android:enabled="false" android:name="ch.deletescape.lawnchair.FakeLauncher" android:targetActivity="ch.deletescape.lawnchair.BlankActivity">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.HOME">
+</category>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity-alias>
+<activity android:icon="@7F0800DF" android:label="Themes" android:name="ch.deletescape.lawnchair.personal.activity.ThemeActivity" android:roundIcon="@7F0800DF" android:theme="@7F110165">
+<intent-filter>
+<action android:name="android.intent.action.CREATE_SHORTCUT">
+</action>
+<action android:name="android.intent.action.SET_WALLPAPER">
+</action>
+</intent-filter>
+</activity>
+<activity android:icon="@7F0800DF" android:label="Themes" android:name="ch.deletescape.lawnchair.personal.personality.PersonalityActivity" android:roundIcon="@7F0800DF" android:screenOrientation="1" android:taskAffinity="com.appsflyer.task.theme" android:theme="@7F110170">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.SET_WALLPAPER">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:name="ch.deletescape.lawnchair.personal.personality.wallpaper.DetailWallpaperActivity" android:screenOrientation="1" android:theme="@7F110170">
+</activity>
+<activity android:name="ch.deletescape.lawnchair.personal.personality.wallpaper.SetWallpaperActivity" android:screenOrientation="1" android:theme="@7F110170">
+</activity>
+<activity android:icon="@7F0800AC" android:label="" android:name="ch.deletescape.lawnchair.personal.activity.WebAdActivity" android:roundIcon="@7F0800AC" android:theme="@7F110166">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:icon="@7F0800DF" android:name="ch.deletescape.lawnchair.personal.activity.PreviewIconPackActivity" android:theme="@7F110165">
+</activity>
+<activity android:label="@7F100168" android:name="ch.deletescape.lawnchair.personal.activity.OfflineActivity" android:theme="@7F110165">
+</activity>
+<activity android:name="ch.deletescape.lawnchair.personal.activity.PreviewWallpaperActivity" android:theme="@7F110165">
+</activity>
+<activity android:name="ch.deletescape.lawnchair.personal.activity.InstallActivity" android:theme="@7F110166">
+</activity>
+<activity android:autoRemoveFromRecents="true" android:excludeFromRecents="true" android:icon="@7F08005E" android:label="Market" android:name="ch.deletescape.lawnchair.personal.activity.StoreActivity" android:theme="@7F110165">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+<intent-filter>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+<category android:name="android.intent.category.STORE">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="true" android:icon="@7F0800DB" android:label="Shuffle" android:name="ch.deletescape.lawnchair.personal.activity.RandomActivity" android:theme="@android:01030011">
+<intent-filter>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+<action android:name="android.intent.action.CREATE_SHORTCUT">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<receiver android:name="ch.deletescape.lawnchair.personal.receiver.PackageInstallReceiver">
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_INSTALL">
+</action>
+<action android:name="android.intent.action.PACKAGE_ADDED">
+</action>
+<data android:scheme="package">
+</data>
+</intent-filter>
+</receiver>
+<activity android:excludeFromRecents="true" android:name="ch.deletescape.lawnchair.personal.activity.SplashActivity" android:theme="@7F110165">
+</activity>
+<activity android:label="@7F100089" android:name="ch.deletescape.lawnchair.backup.BackupListActivity" android:parentActivityName="ch.deletescape.lawnchair.settings.ui.SettingsActivity" android:theme="@7F110108">
+</activity>
+<activity android:label="@7F100156" android:name="ch.deletescape.lawnchair.backup.NewBackupActivity" android:parentActivityName="ch.deletescape.lawnchair.backup.BackupListActivity" android:theme="@7F110108">
+</activity>
+<activity android:label="@7F1001B6" android:name="ch.deletescape.lawnchair.backup.RestoreBackupActivity" android:parentActivityName="ch.deletescape.lawnchair.backup.BackupListActivity" android:theme="@7F110108">
+</activity>
+<activity android:name="ch.deletescape.lawnchair.personal.personality.theme.PreviewThemeActivity" android:screenOrientation="1" android:theme="@7F110170">
+</activity>
+<receiver android:name="ch.deletescape.lawnchair.personal.personality.theme.ApplyThemeReceiver">
+</receiver>
+<meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@7F1000EF">
+</meta-data>
+<provider android:authorities="com.aplus.launcher.provider" android:exported="false" android:grantUriPermissions="true" android:name="android.support.v4.content.FileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F13000F">
+</meta-data>
+</provider>
+<meta-data android:name="io.fabric.ApiKey" android:value="1f4c68c7526c0b8026dd5077fc8d1b8ef422e2ff">
+</meta-data>
+<activity android:autoRemoveFromRecents="true" android:excludeFromRecents="true" android:label="@7F10003D" android:name="ch.deletescape.lawnchair.dragndrop.AddItemActivity" android:theme="@android:0103023A">
+<intent-filter>
+<action android:name="android.content.pm.action.CONFIRM_PIN_SHORTCUT">
+</action>
+<action android:name="android.content.pm.action.CONFIRM_PIN_APPWIDGET">
+</action>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004A0" android:icon="@7F080096" android:label="" android:name="com.appsflyer.adx.ads.MonsterFullscreenAdActivity" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<activity android:icon="@7F080096" android:label="" android:name="com.google.android.gms.ads.AdActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:icon="@7F080096" android:label="" android:name="com.facebook.ads.AudienceNetworkActivity">
+</activity>
+<activity android:exported="true" android:icon="@7F080095" android:label="Favorite" android:name="com.appsflyer.adx.ads.suggest.SuggestActivity" android:theme="@android:01030010">
+</activity>
+<activity android:icon="@7F080096" android:label="" android:launchMode="2" android:name="com.appsflyer.adx.ads.MonsterPopupAdsActivity" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x000005B0" android:icon="@7F080096" android:name="com.appsflyer.adx.feedback.FeedbackActivity" android:screenOrientation="1" android:theme="@android:01030010" android:windowSoftInputMode="0x00000032">
+</activity>
+<activity android:icon="@7F080096" android:name="com.appsflyer.adx.update.UpdateAppActivity" android:theme="@android:01030010">
+</activity>
+<activity android:icon="@7F080096" android:label="" android:name="com.appsflyer.adx.ads.TransparentAdsActivity" android:theme="@android:01030010">
+</activity>
+<activity android:icon="@7F080096" android:label="" android:name="com.appsflyer.adx.ads.AutoCloseActivity" android:theme="@android:01030010">
+</activity>
+<activity android:name="ch.deletescape.lawnchair.gestures.dt2s.SleepTimeoutActivity" android:screenOrientation="14" android:theme="@7F11010B">
+</activity>
+<receiver android:description="@7F1000DB" android:name="ch.deletescape.lawnchair.gestures.dt2s.SleepDeviceAdmin" android:permission="android.permission.BIND_DEVICE_ADMIN">
+<meta-data android:name="android.app.device_admin" android:resource="@7F13001B">
+</meta-data>
+<intent-filter>
+<action android:name="android.app.action.DEVICE_ADMIN_ENABLED">
+</action>
+</intent-filter>
+</receiver>
+<activity android:configChanges="0x000004A0" android:exported="false" android:name="com.facebook.ads.internal.ipc.RemoteANActivity" android:process=":adnw">
+</activity>
+<service android:exported="false" android:name="com.facebook.ads.internal.ipc.AdsProcessPriorityService">
+</service>
+<service android:exported="false" android:name="com.facebook.ads.internal.ipc.AdsMessengerService" android:process=":adnw">
+</service>
+<service android:exported="true" android:name="com.google.firebase.messaging.FirebaseMessagingService">
+<intent-filter android:priority="-500">
+<action android:name="com.google.firebase.MESSAGING_EVENT">
+</action>
+</intent-filter>
+</service>
+<service android:exported="false" android:name="com.google.firebase.components.ComponentDiscoveryService">
+<meta-data android:name="com.google.firebase.components:com.google.firebase.remoteconfig.RemoteConfigRegistrar" android:value="com.google.firebase.components.ComponentRegistrar">
+</meta-data>
+<meta-data android:name="com.google.firebase.components:com.google.firebase.abt.component.AbtRegistrar" android:value="com.google.firebase.components.ComponentRegistrar">
+</meta-data>
+<meta-data android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar" android:value="com.google.firebase.components.ComponentRegistrar">
+</meta-data>
+<meta-data android:name="com.google.firebase.components:com.google.firebase.iid.Registrar" android:value="com.google.firebase.components.ComponentRegistrar">
+</meta-data>
+</service>
+<receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementReceiver">
+</receiver>
+<receiver android:enabled="true" android:exported="true" android:name="com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver" android:permission="android.permission.INSTALL_PACKAGES">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementService">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementJobService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<receiver android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+</intent-filter>
+</receiver>
+<service android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdService">
+<intent-filter android:priority="-500">
+<action android:name="com.google.firebase.INSTANCE_ID_EVENT">
+</action>
+</intent-filter>
+</service>
+<activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:01030010">
+</activity>
+<meta-data android:name="com.google.android.gms.version" android:value="@7F0A0024">
+</meta-data>
+<activity android:name="me.jfenn.attribouter.activities.AboutActivity" android:theme="@7F110010">
+</activity>
+<provider android:authorities="com.aplus.launcher.com.squareup.picasso" android:exported="false" android:name="com.squareup.picasso.PicassoProvider">
+</provider>
+<activity android:name="com.amqtech.permissions.helper.ui.activity.PermissionsFlowActivity" android:theme="@7F110164">
+</activity>
+<receiver android:name="com.appsflyer.adx.broadcast.LogClickReceiver">
+</receiver>
+<activity android:label="" android:name="com.appsflyer.adx.ads.suggest.DetailSuggestAppActivity" android:theme="@android:01030010">
+</activity>
+<activity android:exported="true" android:label="" android:name="com.appsflyer.adx.store.StoreActivity" android:theme="@android:01030010">
+</activity>
+<activity android:name="com.appsflyer.adx.iap.RemoveAdsActivity" android:theme="@android:01030010">
+</activity>
+<service android:name="com.appsflyer.adx.firebase.CloudMessageService">
+<intent-filter>
+<action android:name="com.google.firebase.MESSAGING_EVENT">
+</action>
+</intent-filter>
+</service>
+<service android:name="com.appsflyer.adx.firebase.CloudMessageID">
+<intent-filter>
+<action android:name="com.google.firebase.INSTANCE_ID_EVENT">
+</action>
+</intent-filter>
+</service>
+<provider android:authorities="com.aplus.launcher.MonsterProvider" android:exported="true" android:name="com.appsflyer.adx.MonsterProvider">
+</provider>
+<receiver android:exported="true" android:name="com.appsflyer.adx.broadcast.InstallReferrer">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+<activity android:configChanges="0x000004A0" android:hardwareAccelerated="true" android:name="com.adcolony.sdk.AdColonyInterstitialActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:hardwareAccelerated="true" android:name="com.adcolony.sdk.AdColonyAdViewActivity">
+</activity>
+</application>
+</manifest>

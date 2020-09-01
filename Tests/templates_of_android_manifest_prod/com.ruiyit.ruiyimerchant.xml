@@ -1,0 +1,218 @@
+<?xml version="1.0" ?><manifest android:versionCode="18" android:versionName="1.5.8" package="com.ruiyit.ruiyimerchant" platformBuildVersionCode="24" platformBuildVersionName="7.000000" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="16" android:targetSdkVersion="24">
+</uses-sdk>
+<uses-permission android:name="android.permission.CALL_PHONE">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<permission android:name="com.ruiyit.ruiyimerchant.permission.JPUSH_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="com.ruiyit.ruiyimerchant.permission.JPUSH_MESSAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_USER_PRESENT">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<meta-data android:name="android.support.VERSION" android:value="25.3.1">
+</meta-data>
+<application android:allowBackup="true" android:icon="@7F030000" android:label="@7F09002A" android:name="com.stub.StubApp" android:protect="activity" android:supportsRtl="true" android:theme="@7F0B00AE">
+<activity android:configChanges="0x000000A0" android:exported="false" android:name="cn.jpush.android.ui.PushActivity" android:theme="@android:01030006">
+<intent-filter>
+<action android:name="cn.jpush.android.ui.PushActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="com.ruiyit.ruiyimerchant">
+</category>
+</intent-filter>
+</activity>
+<activity android:excludeFromRecents="true" android:exported="false" android:launchMode="2" android:name="com.stub.stub02.Stub01" android:noHistory="true" android:taskAffinity="com.ruiyit.ruiyimerchant.util" android:theme="@android:0103005F">
+</activity>
+<service android:enabled="true" android:exported="true" android:name="com.stub.stub02.Stub02">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.stub.stub02.Stub03">
+</service>
+<receiver android:enabled="true" android:exported="false" android:name="com.stub.stub02.Stub05">
+</receiver>
+<provider android:authorities="com.ruiyit.ruiyimerchant.COMMONPROVIDER" android:exported="true" android:name="com.stub.stub02.Stub04">
+</provider>
+<activity android:configChanges="0x000000A0" android:exported="false" android:launchMode="2" android:name="com.stub.stub05.Stub01" android:screenOrientation="1" android:theme="@android:01030060">
+</activity>
+<service android:exported="false" android:name="com.stub.stub05.Stub02">
+</service>
+<service android:enabled="true" android:exported="false" android:name="cn.jpush.android.service.DownloadService">
+</service>
+<service android:name="cn.jpush.android.service.PushService" android:process=":mult">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.REGISTER">
+</action>
+<action android:name="cn.jpush.android.intent.REPORT">
+</action>
+<action android:name="cn.jpush.android.intent.PushService">
+</action>
+<action android:name="cn.jpush.android.intent.PUSH_TIME">
+</action>
+</intent-filter>
+</service>
+<service android:enabled="true" android:exported="true" android:name="cn.jpush.android.service.DaemonService">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.DaemonService">
+</action>
+<category android:name="com.ruiyit.ruiyimerchant">
+</category>
+</intent-filter>
+</service>
+<receiver android:enabled="true" android:name="cn.jpush.android.service.PushReceiver">
+<intent-filter android:priority="1000">
+<action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY">
+</action>
+<category android:name="com.ruiyit.ruiyimerchant">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.USER_PRESENT">
+</action>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_ADDED">
+</action>
+<action android:name="android.intent.action.PACKAGE_REMOVED">
+</action>
+<data android:scheme="package">
+</data>
+</intent-filter>
+</receiver>
+<meta-data android:name="UMENG_APPKEY" android:value="58467985734be422e4000fac">
+</meta-data>
+<receiver android:exported="false" android:name="cn.jpush.android.service.AlarmReceiver">
+</receiver>
+<meta-data android:name="JPUSH_CHANNEL" android:value="developer-default">
+</meta-data>
+<meta-data android:name="JPUSH_APPKEY" android:value="20d220ed34dfbb2ed844a110">
+</meta-data>
+<activity android:name="com.ruiyit.ruiyimerchant.page.activity.SplashActivity" android:theme="@7F0B018E">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:name="com.ruiyit.ruiyimerchant.page.activity.LoginActivity" android:theme="@7F0B018E">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.ruiyit.ruiyimerchant.page.activity.HomeActivity" android:screenOrientation="1" android:theme="@7F0B00AA">
+</activity>
+<activity android:name="com.ruiyit.ruiyimerchant.page.activity.RegisterActivity" android:theme="@7F0B00AA">
+</activity>
+<activity android:name="com.ruiyit.ruiyimerchant.page.activity.ChangePwdActivity" android:theme="@7F0B00AA">
+</activity>
+<activity android:name="com.ruiyit.ruiyimerchant.page.activity.ForgetActivity" android:theme="@7F0B00AA">
+</activity>
+<activity android:name="com.ruiyit.ruiyimerchant.page.activity.XinXiActivity">
+</activity>
+<activity android:name="com.ruiyit.ruiyimerchant.page.activity.DealActivity" android:theme="@7F0B00AA">
+</activity>
+<activity android:name="com.ruiyit.ruiyimerchant.page.activity.JinJianFirstActivity" android:theme="@7F0B00AA">
+</activity>
+<activity android:name="com.ruiyit.ruiyimerchant.page.activity.JinJianSecondActivity" android:theme="@7F0B00AA">
+</activity>
+<activity android:name="com.ruiyit.ruiyimerchant.page.activity.JinJianThirthActivity" android:theme="@7F0B00AA">
+</activity>
+<activity android:name="com.ruiyit.ruiyimerchant.page.activity.ProvinceActivity" android:theme="@7F0B00AA">
+</activity>
+<activity android:name="com.ruiyit.ruiyimerchant.page.activity.CityActivity" android:theme="@7F0B00AA">
+</activity>
+<activity android:name="com.ruiyit.ruiyimerchant.page.activity.XianActivity" android:theme="@7F0B00AA">
+</activity>
+<activity android:name="com.ruiyit.ruiyimerchant.page.activity.PayActivity" android:theme="@7F0B00AA">
+</activity>
+<activity android:name="com.ruiyit.ruiyimerchant.page.activity.BankCardActivity" android:theme="@7F0B00AA">
+</activity>
+<activity android:name="com.ruiyit.ruiyimerchant.page.activity.KoulvActivity" android:theme="@7F0B00AA">
+</activity>
+<activity android:name="com.ruiyit.ruiyimerchant.page.activity.AdvertActivity" android:theme="@7F0B018E">
+</activity>
+<activity android:name="com.ruiyit.ruiyimerchant.page.activity.GuideActivity" android:theme="@7F0B018E">
+</activity>
+<activity android:name="com.ruiyit.ruiyimerchant.page.activity.DealWebActivity" android:theme="@7F0B00AA">
+</activity>
+<activity android:name="com.ruiyit.ruiyimerchant.page.activity.SendCodeActivity" android:theme="@7F0B00AA">
+</activity>
+<activity android:name="com.ruiyit.ruiyimerchant.page.activity.XieyiActivity" android:theme="@7F0B00AA">
+</activity>
+<activity android:name="com.ruiyit.ruiyimerchant.page.activity.PdfActivity" android:theme="@7F0B00AA">
+</activity>
+<activity android:name="com.ruiyit.ruiyimerchant.page.activity.MoreActivity" android:theme="@7F0B00AA">
+</activity>
+<activity android:name="com.ruiyit.ruiyimerchant.page.activity.KaifaActivity" android:theme="@7F0B00AA">
+</activity>
+<activity android:name="com.ruiyit.ruiyimerchant.page.activity.clearActivity" android:theme="@7F0B00AA">
+</activity>
+<activity android:name="com.ruiyit.ruiyimerchant.page.activity.AuthenActivity" android:theme="@7F0B00AA">
+</activity>
+<activity android:name="com.ruiyit.ruiyimerchant.page.activity.ComboActivity">
+</activity>
+<activity android:name="com.ruiyit.ruiyimerchant.page.activity.BenifitActivity">
+</activity>
+<activity android:name="com.ruiyit.ruiyimerchant.page.activity.UnicomActivity">
+</activity>
+<activity android:name="com.ruiyit.ruiyimerchant.page.activity.RechargeActivity">
+</activity>
+<activity android:name="com.ruiyit.ruiyimerchant.page.activity.WithdrawalActivity">
+</activity>
+<provider android:authorities="com.ruiyit.ruiyimerchant.fileprovider" android:exported="false" android:grantUriPermissions="true" android:name="android.support.v4.content.FileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F070000">
+</meta-data>
+</provider>
+<activity android:name="com.xys.libzxing.zxing.activity.CaptureActivity">
+</activity>
+</application>
+</manifest>

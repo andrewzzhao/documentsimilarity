@@ -1,0 +1,186 @@
+<?xml version="1.0" ?><manifest android:compileSdkVersion="29" android:compileSdkVersionCodename="10" android:versionCode="1591999920" android:versionName="6.0.9" package="photo.editor.polarr" platformBuildVersionCode="29" platformBuildVersionName="10" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="26" android:targetSdkVersion="29" android:versionCode="1" android:versionName="1.0.0">
+</uses-sdk>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-permission android:name="android.permission.USE_CREDENTIALS">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_MEDIA_LOCATION">
+</uses-permission>
+<uses-permission android:name="com.android.vending.BILLING">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-feature android:glEsVersion="0x00030000" android:required="true">
+</uses-feature>
+<uses-feature android:name="android.hardware.camera" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.camera.autofocus" android:required="false">
+</uses-feature>
+<supports-screens android:anyDensity="true" android:largeScreens="true" android:normalScreens="true" android:resizeable="true" android:smallScreens="false" android:xlargeScreens="true">
+</supports-screens>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE">
+</uses-permission>
+<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE">
+</uses-permission>
+<application android:allowBackup="false" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:extractNativeLibs="true" android:icon="@7F0D0001" android:label="@7F0F001D" android:largeHeap="true" android:name="co.polarr.polarrphotoeditor.base.BaseApplication" android:supportsRtl="true" android:theme="@7F1001A1" android:usesCleartextTraffic="true">
+<meta-data android:name="android.notch_support" android:value="true">
+</meta-data>
+<activity android:label="@7F0F008D" android:name="co.polarr.polarrphotoeditor.QRScannerActivity" android:parentActivityName="co.polarr.polarrphotoeditor.EditorActivity" android:screenOrientation="10" android:theme="@7F1001A1">
+</activity>
+<activity android:label="@7F0F008C" android:name="co.polarr.polarrphotoeditor.gallery.GalleryListActivity" android:parentActivityName="co.polarr.polarrphotoeditor.EditorActivity" android:screenOrientation="1" android:theme="@7F1001A1">
+</activity>
+<activity android:label="@7F0F008C" android:name="co.polarr.polarrphotoeditor.gallery.GalleryImageActivity" android:screenOrientation="1" android:theme="@7F1001A1">
+</activity>
+<activity android:label="@7F0F008C" android:name="co.polarr.polarrphotoeditor.gallery.PreviewImageActivity" android:screenOrientation="1" android:theme="@7F1001A1">
+</activity>
+<activity android:configChanges="0x000005B0" android:label="@7F0F001D" android:name="com.facebook.FacebookActivity" android:theme="@7F1002BA">
+</activity>
+<activity android:exported="true" android:name="com.facebook.CustomTabActivity">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="@7F0F0057">
+</data>
+</intent-filter>
+</activity>
+<activity android:alwaysRetainTaskState="true" android:clearTaskOnLaunch="false" android:configChanges="0x00000D80" android:finishOnTaskLaunch="false" android:label="@7F0F001D" android:launchMode="2" android:name="co.polarr.polarrphotoeditor.EditorActivity" android:screenOrientation="1" android:theme="@7F1001A1" android:windowSoftInputMode="0x00000020">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:mimeType="image/*">
+</data>
+</intent-filter>
+<intent-filter>
+<data android:host="open" android:scheme="polarr">
+</data>
+<data android:host="greereward" android:scheme="polarr">
+</data>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.SEND">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:mimeType="application/vnd.google.panorama360+jpg">
+</data>
+<data android:mimeType="image/jpeg">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.EDIT">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:mimeType="application/vnd.google.panorama360+jpg">
+</data>
+<data android:mimeType="image/jpeg">
+</data>
+</intent-filter>
+</activity>
+<activity android:exported="true" android:name="photo.editor.polarr.wxapi.WXPayEntryActivity" android:theme="@7F1001A3">
+</activity>
+<provider android:authorities="photo.editor.polarr.EditorActivity" android:exported="false" android:grantUriPermissions="true" android:name="androidx.core.content.FileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F120000">
+</meta-data>
+</provider>
+<provider android:authorities="photo.editor.polarr.EditorActivity" android:exported="false" android:grantUriPermissions="true" android:name="android.support.v4.content.FileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F120000">
+</meta-data>
+</provider>
+<meta-data android:name="com.google.android.gms.vision.DEPENDENCIES" android:value="barcode">
+</meta-data>
+<meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@7F0F0056">
+</meta-data>
+<uses-library android:name="org.apache.http.legacy" android:required="false">
+</uses-library>
+<activity android:name="co.polarr.utils.ppe.agent.AgentActivity">
+</activity>
+<activity android:name="com.facebook.CustomTabMainActivity">
+</activity>
+<service android:directBootAware="true" android:exported="false" android:name="com.google.firebase.components.ComponentDiscoveryService">
+<meta-data android:name="com.google.firebase.components:com.google.firebase.crashlytics.ndk.CrashlyticsNdkRegistrar" android:value="com.google.firebase.components.ComponentRegistrar">
+</meta-data>
+<meta-data android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar" android:value="com.google.firebase.components.ComponentRegistrar">
+</meta-data>
+<meta-data android:name="com.google.firebase.components:com.google.firebase.crashlytics.CrashlyticsRegistrar" android:value="com.google.firebase.components.ComponentRegistrar">
+</meta-data>
+<meta-data android:name="com.google.firebase.components:com.google.firebase.iid.Registrar" android:value="com.google.firebase.components.ComponentRegistrar">
+</meta-data>
+<meta-data android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar" android:value="com.google.firebase.components.ComponentRegistrar">
+</meta-data>
+</service>
+<receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementReceiver">
+</receiver>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementService">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementJobService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<receiver android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+</intent-filter>
+</receiver>
+<provider android:authorities="photo.editor.polarr.firebaseinitprovider" android:exported="false" android:initOrder="100" android:name="com.google.firebase.provider.FirebaseInitProvider">
+</provider>
+<activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:01030010">
+</activity>
+<meta-data android:name="com.google.android.gms.version" android:value="@7F090010">
+</meta-data>
+<provider android:authorities="photo.editor.polarr.FacebookInitProvider" android:exported="false" android:name="com.facebook.internal.FacebookInitProvider">
+</provider>
+<receiver android:exported="false" android:name="com.facebook.CurrentAccessTokenExpirationBroadcastReceiver">
+<intent-filter>
+<action android:name="com.facebook.sdk.ACTION_CURRENT_ACCESS_TOKEN_CHANGED">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:exported="true" android:name="com.facebook.CampaignTrackingReceiver" android:permission="android.permission.INSTALL_PACKAGES">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+<service android:exported="false" android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery">
+<meta-data android:name="backend:com.google.android.datatransport.cct.CctBackendFactory" android:value="cct">
+</meta-data>
+</service>
+<service android:exported="false" android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<receiver android:exported="false" android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver">
+</receiver>
+<meta-data android:name="com.google.android.play.billingclient.version" android:value="2.0.3">
+</meta-data>
+<activity android:configChanges="0x000005B0" android:name="com.android.billingclient.api.ProxyBillingActivity" android:theme="@android:01030010">
+</activity>
+<provider android:authorities="photo.editor.polarr.lifecycle-process" android:exported="false" android:multiprocess="true" android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer">
+</provider>
+</application>
+</manifest>

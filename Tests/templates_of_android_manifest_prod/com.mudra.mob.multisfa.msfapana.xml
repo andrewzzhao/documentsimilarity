@@ -1,0 +1,142 @@
+<?xml version="1.0" ?><manifest android:versionCode="13" android:versionName="1.1.2" package="com.mudra.mob.multisfa.msfapana" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="15" android:targetSdkVersion="26">
+</uses-sdk>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.CLEAR_APP_CACHE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-feature android:name="android.hardware.camera" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.camera.front" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.camera.autofocus" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.camera.flash" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.screen.landscape" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.wifi" android:required="false">
+</uses-feature>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE">
+</uses-permission>
+<permission android:name="com.mudra.mob.multisfa.msfapana.permission.C2D_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="com.mudra.mob.multisfa.msfapana.permission.C2D_MESSAGE">
+</uses-permission>
+<application android:allowBackup="true" android:icon="@7F0C0011" android:label="@7F0E001F" android:roundIcon="@7F0C0012" android:supportsRtl="true" android:theme="@7F0F0006">
+<activity android:name="com.mudra.mob.multisfa.msfapana.SplashScreen" android:theme="@7F0F0007">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:name="com.mudra.mob.multisfa.msfapana.Login" android:theme="@7F0F0009" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:label="Main Menu" android:name="com.mudra.mob.multisfa.msfapana.MainMenu">
+</activity>
+<activity android:label="Attendance Menu" android:name="com.mudra.mob.multisfa.msfapana.AttendanceMenu">
+</activity>
+<activity android:label="Attendance" android:name="com.mudra.mob.multisfa.msfapana.Present">
+</activity>
+<activity android:label="Leave" android:name="com.mudra.mob.multisfa.msfapana.Leave">
+</activity>
+<activity android:label="Attendance MIS" android:name="com.mudra.mob.multisfa.msfapana.AttendanceMIS">
+</activity>
+<activity android:label="Sales Menu" android:name="com.mudra.mob.multisfa.msfapana.SalesMenu">
+</activity>
+<activity android:label="Purchase" android:name="com.mudra.mob.multisfa.msfapana.SellIn">
+</activity>
+<activity android:label="Sell Out" android:name="com.mudra.mob.multisfa.msfapana.SellOut">
+</activity>
+<activity android:label="MIS" android:name="com.mudra.mob.multisfa.msfapana.SellOutMIS">
+</activity>
+<activity android:name="com.mudra.mob.multisfa.msfapana.Welcome">
+</activity>
+<activity android:label="Purchase" android:name="com.mudra.mob.multisfa.msfapana.Purchase">
+</activity>
+<activity android:label="Resignation" android:name="com.mudra.mob.multisfa.msfapana.Resignation">
+</activity>
+<activity android:label="MIS" android:name="com.mudra.mob.multisfa.msfapana.MIS">
+</activity>
+<activity android:label="User Guide" android:name="com.mudra.mob.multisfa.msfapana.UserGuide">
+</activity>
+<activity android:label="Your Opinion Matters" android:name="com.mudra.mob.multisfa.msfapana.YOM">
+</activity>
+<activity android:label="Aap ki Awaaz" android:name="com.mudra.mob.multisfa.msfapana.AKA">
+</activity>
+<service android:name="com.mudra.mob.multisfa.msfapana.common.MyFirebaseMessagingService">
+<intent-filter>
+<action android:name="com.google.firebase.MESSAGING_EVENT">
+</action>
+</intent-filter>
+</service>
+<service android:name="com.mudra.mob.multisfa.msfapana.common.MyFirebaseInstanceIDService">
+<intent-filter>
+<action android:name="com.google.firebase.INSTANCE_ID_EVENT">
+</action>
+</intent-filter>
+</service>
+<service android:exported="true" android:name="com.google.firebase.messaging.FirebaseMessagingService">
+<intent-filter android:priority="-500">
+<action android:name="com.google.firebase.MESSAGING_EVENT">
+</action>
+</intent-filter>
+</service>
+<meta-data android:name="android.support.VERSION" android:value="26.0.0">
+</meta-data>
+<activity android:clearTaskOnLaunch="true" android:name="com.journeyapps.barcodescanner.CaptureActivity" android:screenOrientation="6" android:stateNotNeeded="true" android:theme="@7F0F0193" android:windowSoftInputMode="0x00000003">
+</activity>
+<receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementReceiver">
+</receiver>
+<receiver android:enabled="true" android:exported="true" android:name="com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver" android:permission="android.permission.INSTALL_PACKAGES">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementService">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementJobService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<receiver android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+<category android:name="com.mudra.mob.multisfa.msfapana">
+</category>
+</intent-filter>
+</receiver>
+<receiver android:exported="false" android:name="com.google.firebase.iid.FirebaseInstanceIdInternalReceiver">
+</receiver>
+<service android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdService">
+<intent-filter android:priority="-500">
+<action android:name="com.google.firebase.INSTANCE_ID_EVENT">
+</action>
+</intent-filter>
+</service>
+<provider android:authorities="com.mudra.mob.multisfa.msfapana.firebaseinitprovider" android:exported="false" android:initOrder="100" android:name="com.google.firebase.provider.FirebaseInitProvider">
+</provider>
+<meta-data android:name="com.google.android.gms.version" android:value="@7F090007">
+</meta-data>
+</application>
+</manifest>

@@ -1,0 +1,229 @@
+<?xml version="1.0" ?><manifest android:versionCode="164" android:versionName="18.02.28" package="com.datawind.meranet" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="14" android:targetSdkVersion="15">
+</uses-sdk>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_SYNC_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<application android:allowBackup="true" android:configChanges="0x000004A0" android:icon="@7F08007B" android:label="@7F0E0032" android:name="com.datawind.meranet.application.UbisurferApplication" android:theme="@android:0103006B">
+<service android:name="com.datami.smi.SmiIntentService">
+</service>
+<activity android:configChanges="0x000004A0" android:label="@7F0E0032" android:launchMode="2" android:name="com.datawind.meranet.WebBrowserActivity">
+<intent-filter>
+<action android:name="com.datawind.meranet.action.EnableBrowsing">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.datawind.meranet.MyVideo">
+</activity>
+<activity android:configChanges="0x000004A0" android:icon="@7F08007B" android:label="@7F0E0032" android:launchMode="2" android:name="com.datawind.meranet.Ubisurfer" android:noHistory="true" android:theme="@android:0103006E" android:windowSoftInputMode="0x00000002">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<category android:name="android.intent.category.APP_BROWSER">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.speech.action.VOICE_SEARCH_RESULTS">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="http">
+</data>
+<data android:scheme="https">
+</data>
+<data android:scheme="about">
+</data>
+<data android:host="dw.activate" android:pathPrefix="/" android:scheme="https">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:scheme="http">
+</data>
+<data android:scheme="https">
+</data>
+<data android:mimeType="text/html">
+</data>
+<data android:mimeType="text/plain">
+</data>
+<data android:mimeType="application/xhtml+xml">
+</data>
+<data android:mimeType="application/vnd.wap.xhtml+xml">
+</data>
+</intent-filter>
+<intent-filter android:priority="-101">
+<action android:name="android.nfc.action.NDEF_DISCOVERED">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:scheme="http">
+</data>
+<data android:scheme="https">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.WEB_SEARCH">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="http">
+</data>
+<data android:scheme="https">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.MEDIA_SEARCH">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.SEARCH">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F0E0032" android:name="com.datawind.meranet.alerts.DisableDataActivity" android:theme="@android:0103006E">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F0E0032" android:name="com.datawind.meranet.alerts.EnableDataActivity" android:theme="@android:0103006E">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.datawind.databalanceController.views.WelcomeFirewallActivity" android:theme="@android:0103000B">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="3" android:name="com.datawind.databalanceController.views.PhoneNumberVerificationActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F0E0161" android:launchMode="3" android:name="com.datawind.databalanceController.views.PinVerificationActivity">
+</activity>
+<activity android:launchMode="3" android:name="com.datawind.databalanceController.activities.LauncherActivityForDataBalanceController" android:theme="@android:01030011">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="Ubisurfer" android:launchMode="3" android:name="com.datawind.databalanceController.views.ForcedForegroundActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F0E0077" android:launchMode="3" android:name="com.datawind.databalanceController.views.FirewallActionActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F0E0077" android:launchMode="3" android:name="com.datawind.licenceController.activities.FreeDataFirewallActionActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F0E0048" android:launchMode="3" android:name="com.datawind.databalanceController.views.CarrierBalanceVerificationActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.datawind.databalanceController.views.UserWarning" android:theme="@android:01030011">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.datawind.databalanceController.views.FireWallStartActivity" android:theme="@android:0103000B">
+</activity>
+<service android:name="com.datawind.databalanceController.netmon.SleepWakeService">
+<intent-filter>
+<action android:name="com.datawind.databalanceController.netmon.SleepWakeService">
+</action>
+</intent-filter>
+</service>
+<service android:name="com.datawind.licenceController.activities.ConnectivityMonitoringService">
+<intent-filter>
+<action android:name="com.datawind.licenceController.activities.ConnectivityMonitoringService">
+</action>
+</intent-filter>
+</service>
+<service android:label="@7F0E0032" android:name="com.datawind.databalanceController.dwnetworkfirewall.ServiceSinkhole" android:permission="android.permission.BIND_VPN_SERVICE">
+<intent-filter>
+<action android:name="android.net.VpnService">
+</action>
+</intent-filter>
+</service>
+<service android:name="com.datawind.databalanceController.services.UssdResponseReaderService" android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE">
+<intent-filter>
+<action android:name="android.accessibilityservice.AccessibilityService">
+</action>
+</intent-filter>
+<meta-data android:name="android.accessibilityservice" android:resource="@7F110000">
+</meta-data>
+// created below
+</service>
+<receiver android:name="com.datawind.databalanceController.receivers.HttpRequestAlarmReceiver">
+</receiver>
+<receiver android:name="com.datawind.databalanceController.receivers.BatteryLevelReceiver">
+<intent-filter>
+<action android:name="android.intent.action.ACTION_BATTERY_LOW">
+</action>
+<action android:name="android.intent.action.ACTION_BATTERY_OKAY">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name="com.datawind.meranet.receivers.ShutdownReceiver">
+<intent-filter>
+<action android:name="android.intent.action.ACTION_SHUTDOWN">
+</action>
+<action android:name="android.intent.action.QUICKBOOT_POWEROFF">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:enabled="true" android:exported="true" android:label="BootReceiver" android:name="com.datawind.meranet.alarms.BootReceiver" android:permission="android.permission.RECEIVE_BOOT_COMPLETED">
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+<action android:name="android.intent.action.QUICKBOOT_POWERON">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:enabled="true" android:exported="true" android:name="com.datawind.meranet.receivers.OnWakeUpBroadcastReceiver">
+<intent-filter>
+<action android:name="android.intent.action.SCREEN_ON">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:enabled="true" android:exported="true" android:name="com.datawind.meranet.alarms.AlarmReceiver">
+</receiver>
+<activity android:label="@7F0E015E" android:name="com.datawind.licenceController.activities.InputLicence">
+</activity>
+<activity android:launchMode="2" android:name="com.datawind.adsloader.MainActivity">
+</activity>
+<meta-data android:name="android.support.VERSION" android:value="26.0.1">
+</meta-data>
+</application>
+</manifest>

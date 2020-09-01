@@ -1,0 +1,62 @@
+<?xml version="1.0" ?><manifest android:versionCode="2" android:versionName="2.1.4" package="com.pixoplay.batteryreminder" platformBuildVersionCode="21" platformBuildVersionName="5.0.1-1624448" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="9" android:targetSdkVersion="23">
+</uses-sdk>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<application android:allowBackup="true" android:icon="@7F020073" android:label="@7F0B0037" android:theme="@android:0103000A">
+<activity android:label="@7F0B0037" android:name="com.pixoplay.batteryreminder.CompanySplash">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<receiver android:enabled="true" android:exported="true" android:name="com.pixoplay.batteryreminder.BatteryLevelReceiver">
+<intent-filter>
+<action android:name="android.intent.action.ACTION_BATTERY_CHANGED">
+</action>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+</intent-filter>
+</receiver>
+<service android:name="com.pixoplay.batteryreminder.SpeakingBatteryPercentage">
+</service>
+<activity android:name="com.pixoplay.batteryreminder.MainActivity">
+</activity>
+<activity android:name="com.pixoplay.batteryreminder.SelectImageActivity">
+</activity>
+<activity android:configChanges="0x00000FB0" android:name="com.google.android.gms.ads.AdActivity">
+</activity>
+<meta-data android:name="com.google.android.gms.version" android:value="@7F090005">
+</meta-data>
+<activity android:name="com.startapp.android.publish.list3d.List3DActivity" android:theme="@android:01030005">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.startapp.android.publish.OverlayActivity" android:theme="@android:0103000F">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.startapp.android.publish.FullScreenActivity" android:theme="@android:01030005">
+</activity>
+<service android:enabled="true" android:name="com.pixoplay.batteryreminder.service.CallingService">
+</service>
+<receiver android:name="com.pixoplay.batteryreminder.ads.DownloadReceiver">
+</receiver>
+<service android:name="com.pixoplay.batteryreminder.ads.DownloadAppService">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.analytics.CampaignTrackingService">
+</service>
+<receiver android:exported="true" android:name="com.pixoplay.batteryreminder.ads.AdsInstallReceiver">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+</application>
+</manifest>

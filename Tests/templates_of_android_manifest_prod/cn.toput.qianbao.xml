@@ -1,0 +1,112 @@
+<?xml version="1.0" ?><manifest android:compileSdkVersion="28" android:compileSdkVersionCodename="9" android:versionCode="210" android:versionName="2.1.0" package="cn.toput.qianbao" platformBuildVersionCode="210" platformBuildVersionName="2.1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-permission android:name="android.permission.READ_LOGS">
+</uses-permission>
+<uses-sdk android:minSdkVersion="15" android:targetSdkVersion="28">
+</uses-sdk>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW">
+</uses-permission>
+<uses-permission android:name="getui.permission.GetuiService.cn.toput.qianbao">
+</uses-permission>
+<permission android:name="getui.permission.GetuiService.cn.toput.qianbao" android:protectionLevel="0x00000000">
+</permission>
+<application android:allowBackup="true" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:icon="@7F0C0001" android:label="@7F0E0027" android:name="com.tencent.StubShell.TxAppEntry" android:supportsRtl="true" android:theme="@7F0F000E">
+<meta-data android:name="TxAppEntry" android:value="cn.toput.wangcai.android.XjdApplication">
+</meta-data>
+<meta-data android:name="UMENG_APPKEY" android:value="5ac43d70f43e481d9c000034">
+</meta-data>
+<meta-data android:name="UMENG_CHANNEL" android:value="vivo">
+</meta-data>
+<activity android:name="cn.toput.wangcai.android.ui.main.MainActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.toput.wangcai.android.ui.welcome.WelcomeActivity" android:screenOrientation="1" android:theme="@7F0F01B1">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:name="cn.toput.wangcai.android.ui.rec.RecDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.toput.wangcai.android.ui.product.ProductActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.toput.wangcai.android.ui.web.WebActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="cn.toput.wangcai.android.ui.login.LoginActivity" android:screenOrientation="1" android:theme="@7F0F00DC">
+</activity>
+<activity android:name="cn.toput.wangcai.android.ui.user.UserInfoActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.toput.wangcai.android.ui.user.CollectionActivity" android:screenOrientation="1">
+</activity>
+<service android:exported="true" android:label="PushService" android:name="cn.toput.wangcai.android.service.PushService" android:process=":pushservice">
+</service>
+<service android:name="cn.toput.wangcai.android.service.ReceiveIntentService">
+</service>
+<activity android:name="cn.toput.wangcai.android.ui.user.SettingActivity" android:screenOrientation="1">
+</activity>
+<provider android:authorities="cn.toput.qianbao.fileProvider" android:exported="false" android:grantUriPermissions="true" android:name="androidx.core.content.FileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F110000">
+</meta-data>
+</provider>
+<meta-data android:name="PUSH_APPID" android:value="i1rGrfo3tV8HX58S7Y2nK5">
+</meta-data>
+<meta-data android:name="PUSH_APPKEY" android:value="QTeTyLRJgt8dcgBkEr3fd7">
+</meta-data>
+<meta-data android:name="PUSH_APPSECRET" android:value="aphYsqXMrC6qMp7JM348M6">
+</meta-data>
+<service android:exported="true" android:label="NotificationCenter" android:name="com.igexin.sdk.PushService" android:process=":pushservice">
+<intent-filter>
+<action android:name="com.igexin.sdk.action.service.message">
+</action>
+</intent-filter>
+</service>
+<receiver android:name="com.igexin.sdk.PushReceiver">
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+<action android:name="android.intent.action.USER_PRESENT">
+</action>
+<action android:name="com.igexin.sdk.action.refreshls">
+</action>
+<action android:name="android.intent.action.MEDIA_MOUNTED">
+</action>
+<action android:name="android.intent.action.ACTION_POWER_CONNECTED">
+</action>
+<action android:name="android.intent.action.ACTION_POWER_DISCONNECTED">
+</action>
+</intent-filter>
+</receiver>
+<activity android:excludeFromRecents="true" android:exported="false" android:name="com.igexin.sdk.PushActivity" android:process=":pushservice" android:taskAffinity="com.igexin.sdk.PushActivityTask" android:theme="@android:01030010">
+</activity>
+<activity android:excludeFromRecents="true" android:exported="true" android:name="com.igexin.sdk.GActivity" android:process=":pushservice" android:taskAffinity="com.igexin.sdk.PushActivityTask" android:theme="@android:01030010">
+</activity>
+</application>
+</manifest>

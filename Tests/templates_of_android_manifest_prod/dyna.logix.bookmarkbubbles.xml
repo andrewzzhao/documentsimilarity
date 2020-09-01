@@ -1,0 +1,366 @@
+<?xml version="1.0" ?><manifest android:installLocation="1" android:versionCode="9552" android:versionName="9.55" package="dyna.logix.bookmarkbubbles" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="16" android:targetSdkVersion="26">
+</uses-sdk>
+<uses-permission android:name="android.permission.USE_CREDENTIALS">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NOTIFICATION_POLICY">
+</uses-permission>
+<uses-permission android:name="android.permission.BLUETOOTH">
+</uses-permission>
+<uses-permission android:name="android.permission.BLUETOOTH_ADMIN">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="android.permission.CALL_PHONE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-feature android:name="android.hardware.telephony" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.wifi" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.bluetooth" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.bluetooth" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.bluetooth_le" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.sensor.accelerometer" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.location" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.location.network" android:required="false">
+</uses-feature>
+<permission android:description="@7F1103BE" android:label="@7F1103BE" android:name="dyna.logix.bookmarkbubbles.STATE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="dyna.logix.bookmarkbubbles.STATE">
+</uses-permission>
+<uses-permission android:name="net.dinglisch.android.tasker.PERMISSION_RUN_TASKS">
+</uses-permission>
+<uses-permission android:name="com.android.vending.BILLING">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT">
+</uses-permission>
+<uses-permission android:name="com.android.launcher.permission.UNINSTALL_SHORTCUT">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_CONTACTS">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_CONTACTS">
+</uses-permission>
+<uses-permission android:maxSdkVersion="18" android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW">
+</uses-permission>
+<application android:allowBackup="true" android:hardwareAccelerated="true" android:icon="@7F080135" android:label="@7F110307" android:theme="@7F120006">
+<meta-data android:name="com.google.android.gms.version" android:value="@7F0B000E">
+</meta-data>
+<activity android:configChanges="0x000006A0" android:launchMode="2" android:name="dyna.logix.bookmarkbubbles.FindMyPhoneActivity" android:theme="@android:01030007">
+</activity>
+<service android:name="dyna.logix.bookmarkbubbles.util.WeatherService">
+</service>
+<service android:exported="false" android:name="dyna.logix.bookmarkbubbles.util.WeatherJob">
+<intent-filter>
+<action android:name="com.firebase.jobdispatcher.ACTION_EXECUTE">
+</action>
+</intent-filter>
+</service>
+<receiver android:exported="true" android:name="dyna.logix.bookmarkbubbles.WearActionReceiver">
+<intent-filter android:priority="0">
+<action android:name="dyna.pw">
+</action>
+<action android:name="dyna.wf">
+</action>
+<action android:name="dyna.bt">
+</action>
+<action android:name="dyna.rng">
+</action>
+<action android:name="android.intent.action.PHONE_STATE">
+</action>
+<action android:name="android.media.RINGER_MODE_CHANGED">
+</action>
+<action android:name="android.net.wifi.WIFI_STATE_CHANGED">
+</action>
+<action android:name="android.intent.action.ACTION_POWER_DISCONNECTED">
+</action>
+<action android:name="android.bluetooth.adapter.action.STATE_CHANGED">
+</action>
+</intent-filter>
+</receiver>
+<service android:exported="true" android:name="dyna.logix.bookmarkbubbles.WearDialService">
+</service>
+<service android:name="dyna.logix.bookmarkbubbles.BatteryMonitor">
+</service>
+<service android:exported="true" android:name="dyna.logix.bookmarkbubbles.util.BatteryJobService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<activity android:excludeFromRecents="true" android:icon="@7F080168" android:label="@7F11008A" android:name="dyna.logix.bookmarkbubbles.util.PickLiveInfo" android:theme="@7F1200BC">
+</activity>
+<activity android:exported="true" android:icon="@7F0801C5" android:label="@7F1102D2" android:name="dyna.logix.bookmarkbubbles.util.NotificationBubble" android:theme="@7F1200BC">
+</activity>
+<activity android:configChanges="0x000004A0" android:excludeFromRecents="true" android:label="@7F110142" android:name="dyna.logix.bookmarkbubbles.util.ClockBubble" android:theme="@7F1200BC">
+</activity>
+<activity android:configChanges="0x000004A0" android:icon="@7F0800E6" android:label="@7F11010C" android:launchMode="2" android:name="dyna.logix.bookmarkbubbles.WearAppListActivity">
+<intent-filter>
+<action android:name="dyna.logix.bookmarkbubbles.SETTINGS">
+</action>
+<category android:name="com.google.android.wearable.watchface.category.COMPANION_CONFIGURATION">
+</category>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x00000420" android:excludeFromRecents="true" android:icon="@7F080109" android:label="@7F11004C" android:launchMode="2" android:name="dyna.logix.bookmarkbubbles.ListPhoneAppsActivity">
+</activity>
+<activity android:configChanges="0x00000420" android:excludeFromRecents="true" android:icon="@7F08014E" android:label="@7F1102FB" android:launchMode="2" android:name="dyna.logix.bookmarkbubbles.util.GetLocationPermission" android:theme="@7F1200BA">
+</activity>
+<activity android:configChanges="0x00000420" android:excludeFromRecents="true" android:icon="@7F080135" android:label="@7F1102FB" android:name="dyna.logix.bookmarkbubbles.util.GetDoNotDisturbPermission" android:theme="@7F1200BA">
+</activity>
+<service android:enabled="true" android:exported="false" android:name="dyna.logix.bookmarkbubbles.util.BroadCastReceiverService">
+</service>
+<meta-data android:name="android.max_aspect" android:value="2.100000">
+</meta-data>
+<uses-library android:name="com.sec.android.app.multiwindow" android:required="false">
+</uses-library>
+<meta-data android:name="com.sec.android.support.multiwindow" android:value="true">
+</meta-data>
+<meta-data android:name="com.samsung.android.sdk.multiwindow.penwindow.enable" android:value="true">
+</meta-data>
+<meta-data android:name="com.sec.android.multiwindow.DEFAULT_SIZE_W" android:value="100dp">
+</meta-data>
+<meta-data android:name="com.sec.android.multiwindow.DEFAULT_SIZE_H" android:value="100dp">
+</meta-data>
+<meta-data android:name="com.sec.android.multiwindow.MINIMUM_SIZE_W" android:value="100dp">
+</meta-data>
+<meta-data android:name="com.sec.android.multiwindow.MINIMUM_SIZE_H" android:value="100dp">
+</meta-data>
+<activity android:clearTaskOnLaunch="true" android:icon="@7F080135" android:launchMode="2" android:name="dyna.logix.bookmarkbubbles.PickPrimaryActivity" android:theme="@android:01030007">
+</activity>
+<service android:name="dyna.logix.bookmarkbubbles.FloatTweakService">
+</service>
+<service android:name="dyna.logix.bookmarkbubbles.FloatMeasureService">
+</service>
+<service android:name="dyna.logix.bookmarkbubbles.FloatLookOKService">
+</service>
+<service android:name="dyna.logix.bookmarkbubbles.util.FloatWidgetEdit">
+</service>
+<service android:name="dyna.logix.bookmarkbubbles.util.AnimationService">
+</service>
+<activity android:configChanges="0x00000420" android:excludeFromRecents="true" android:icon="@7F080109" android:label="@7F11004C" android:launchMode="2" android:name="dyna.logix.bookmarkbubbles.ListAppsActivity">
+</activity>
+<activity android:configChanges="0x00000420" android:excludeFromRecents="true" android:icon="@7F080118" android:label="@7F11004F" android:launchMode="2" android:name="dyna.logix.bookmarkbubbles.ListContactsActivity">
+</activity>
+<activity android:icon="@7F080104" android:label="@7F11039D" android:launchMode="2" android:name="dyna.logix.bookmarkbubbles.ShareWWW" android:theme="@7F1200C6">
+<intent-filter>
+<action android:name="android.intent.action.SEND">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:mimeType="text/plain">
+</data>
+</intent-filter>
+</activity>
+<receiver android:icon="@7F080133" android:label="@7F110252" android:name="dyna.logix.bookmarkbubbles.MyWidgetProvider">
+<intent-filter>
+<action android:name="android.appwidget.action.APPWIDGET_UPDATE">
+</action>
+</intent-filter>
+<meta-data android:name="android.appwidget.provider" android:resource="@7F140003">
+</meta-data>
+</receiver>
+<receiver android:icon="@7F080118" android:label="@7F110134" android:name="dyna.logix.bookmarkbubbles.MyContactsWidgetProvider">
+<intent-filter>
+<action android:name="android.appwidget.action.APPWIDGET_UPDATE">
+</action>
+</intent-filter>
+<meta-data android:name="android.appwidget.provider" android:resource="@7F140002">
+</meta-data>
+</receiver>
+<receiver android:icon="@7F080109" android:label="@7F110088" android:name="dyna.logix.bookmarkbubbles.MyAppsWidgetProvider">
+<intent-filter>
+<action android:name="android.appwidget.action.APPWIDGET_UPDATE">
+</action>
+</intent-filter>
+<meta-data android:name="android.appwidget.provider" android:resource="@7F140001">
+</meta-data>
+</receiver>
+<activity android:launchMode="2" android:name="dyna.logix.bookmarkbubbles.util.GetPermission" android:theme="@7F1200BA">
+</activity>
+<activity android:icon="@7F0800F7" android:launchMode="2" android:name="dyna.logix.bookmarkbubbles.DeleteWidgetContent" android:theme="@7F1200BA">
+</activity>
+<activity android:icon="@7F0800F4" android:name="dyna.logix.bookmarkbubbles.util.EditBubbleTask" android:theme="@7F1200BA">
+</activity>
+<activity android:icon="@7F0800F5" android:name="dyna.logix.bookmarkbubbles.GoProActivity" android:theme="@7F1200BA">
+</activity>
+<activity android:launchMode="2" android:name="dyna.logix.bookmarkbubbles.util.RestoreOrphansActivity" android:theme="@7F1200BA">
+</activity>
+<activity android:name="eu.janmuller.android.simplecropimage.CropImage">
+</activity>
+<receiver android:exported="true" android:name="dyna.logix.bookmarkbubbles.AppInstalled">
+<intent-filter>
+<action android:name="dyna.ins">
+</action>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+<action android:name="android.intent.action.MY_PACKAGE_REPLACED">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_ADDED">
+</action>
+<action android:name="android.intent.action.PACKAGE_REMOVED">
+</action>
+<action android:name="android.intent.action.PACKAGE_REPLACED">
+</action>
+<action android:name="android.intent.action.PACKAGE_FULLY_REMOVED">
+</action>
+<data android:scheme="package">
+</data>
+</intent-filter>
+</receiver>
+<receiver android:exported="true" android:name="dyna.logix.bookmarkbubbles.util.State" android:permission="dyna.logix.bookmarkbubbles.STATE">
+</receiver>
+<service android:name="dyna.logix.bookmarkbubbles.ContactUpdaterService">
+</service>
+<service android:exported="true" android:name="dyna.logix.bookmarkbubbles.ContactUpdaterJobService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<service android:name="dyna.logix.bookmarkbubbles.util.CreateDeleteButton" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<provider android:authorities="dyna.logix.bookmarkbubbles.provider" android:exported="true" android:name="dyna.logix.bookmarkbubbles.BubbleImageProvider">
+</provider>
+<provider android:authorities="dyna.logix.bookmarkbubbles.cloud" android:exported="true" android:name="dyna.logix.bookmarkbubbles.io.CloudZipProvider">
+</provider>
+<activity android:excludeFromRecents="true" android:label="@7F110206" android:name="dyna.logix.bookmarkbubbles.io.CloudZipReceiver" android:theme="@7F1200BC">
+<intent-filter>
+<action android:name="android.intent.action.SEND">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:mimeType="application/zip">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.SEND_MULTIPLE">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:mimeType="application/zip">
+</data>
+</intent-filter>
+</activity>
+<activity android:excludeFromRecents="true" android:launchMode="3" android:name="dyna.logix.bookmarkbubbles.util.enableFloat" android:theme="@7F1200BC">
+</activity>
+<activity android:icon="@7F080109" android:label="@7F110315" android:name="dyna.logix.bookmarkbubbles.util.CreateAppsFolder" android:theme="@7F1200BC">
+<intent-filter>
+<action android:name="android.intent.action.CREATE_SHORTCUT">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:icon="@7F080118" android:label="@7F110317" android:name="dyna.logix.bookmarkbubbles.util.CreateContactsFolder" android:theme="@7F1200BC">
+<intent-filter>
+<action android:name="android.intent.action.CREATE_SHORTCUT">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:icon="@7F080133" android:label="@7F110316" android:name="dyna.logix.bookmarkbubbles.util.CreateBookmarkFolder" android:theme="@7F1200BC">
+<intent-filter>
+<action android:name="android.intent.action.CREATE_SHORTCUT">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004A0" android:excludeFromRecents="true" android:launchMode="3" android:name="dyna.logix.bookmarkbubbles.util.FolderDialog" android:theme="@7F1200B8">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004A0" android:excludeFromRecents="true" android:launchMode="3" android:name="dyna.logix.bookmarkbubbles.util.Flower" android:theme="@7F1200BB">
+</activity>
+<activity android:label="@7F110081" android:name="dyna.logix.bookmarkbubbles.drawer.WelcomeActivity" android:theme="@7F1200C6">
+<intent-filter>
+<action android:name="dyna.logix.bookmarkbubbles.SETTINGS">
+</action>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="com.google.android.wearable.watchface.category.COMPANION_CONFIGURATION">
+</category>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+<category android:name="android.intent.category.MULTIWINDOW_LAUNCHER">
+</category>
+<category android:name="android.intent.category.PENWINDOW_LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="true" android:icon="@7F080135" android:label="@7F1103DB" android:name="dyna.logix.bookmarkbubbles.tasker.EditActivity" android:theme="@7F120169" android:uiOptions="0x00000001" android:windowSoftInputMode="0x00000010">
+<intent-filter>
+<action android:name="com.twofortyfouram.locale.intent.action.EDIT_SETTING">
+</action>
+</intent-filter>
+</activity>
+<receiver android:exported="true" android:name="dyna.logix.bookmarkbubbles.tasker.FireReceiver">
+<intent-filter>
+<action android:name="com.twofortyfouram.locale.intent.action.FIRE_SETTING">
+</action>
+</intent-filter>
+</receiver>
+<activity android:exported="true" android:name="dyna.logix.bookmarkbubbles.util.HelpMeasure" android:screenOrientation="1" android:theme="@7F1200C6">
+</activity>
+<service android:enabled="true" android:exported="false" android:name="dyna.logix.bookmarkbubbles.util.AppInstallWatcherService">
+</service>
+<activity android:name="dyna.logix.bookmarkbubbles.util.Api26Explain" android:theme="@7F1200BA">
+</activity>
+<meta-data android:name="android.support.VERSION" android:value="26.1.0">
+</meta-data>
+<service android:name="dyna.logix.bookmarkbubbles.shared.MessageListenerService">
+<intent-filter>
+<action android:name="com.google.android.gms.wearable.DATA_CHANGED">
+</action>
+<data android:host="*" android:pathPrefix="/" android:scheme="wear">
+</data>
+</intent-filter>
+</service>
+<service android:exported="true" android:name="dyna.logix.bookmarkbubbles.shared.CallURL">
+</service>
+<uses-library android:name="com.google.android.wearable" android:required="false">
+</uses-library>
+<activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:01030010">
+</activity>
+<service android:exported="true" android:name="com.firebase.jobdispatcher.GooglePlayReceiver" android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE">
+<intent-filter>
+<action android:name="com.google.android.gms.gcm.ACTION_TASK_READY">
+</action>
+</intent-filter>
+</service>
+<meta-data android:name="android.arch.lifecycle.VERSION" android:value="27.0.0-SNAPSHOT">
+</meta-data>
+<meta-data android:name="com.google.android.wearable.beta.app" android:resource="@7F140000">
+</meta-data>
+</application>
+</manifest>

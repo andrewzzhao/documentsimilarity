@@ -1,0 +1,338 @@
+<?xml version="1.0" ?><manifest android:installLocation="2" android:versionCode="1040" android:versionName="1.0.4" package="com.tabtale.babycops.mt" platformBuildVersionCode="23" platformBuildVersionName="6.0-2438415" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="16" android:targetSdkVersion="26">
+</uses-sdk>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="com.android.vending.BILLING">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<permission android:name="com.tabtale.babycops.permission.C2D_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="com.tabtale.babycops.permission.C2D_MESSAGE">
+</uses-permission>
+<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE">
+</uses-permission>
+<uses-feature android:name="android.hardware.camera" android:required="false">
+</uses-feature>
+<supports-screens android:anyDensity="true" android:largeScreens="true" android:normalScreens="true" android:smallScreens="false">
+</supports-screens>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE">
+</uses-permission>
+<uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES">
+</uses-permission>
+<application android:allowBackup="true" android:icon="@7F020071" android:label="@7F08003C" android:name="MyWrapperProxyApplication" android:supportsRtl="true" android:usesCleartextTraffic="true">
+<activity android:configChanges="0x40000FFF" android:label="@7F08003C" android:launchMode="2" android:name="com.appsflyer.AppsFlyerOverrideActivity" android:screenOrientation="6">
+</activity>
+<receiver android:exported="true" android:name="com.appsflyer.MultipleInstallBroadcastReceiver">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:exported="true" android:name="com.tabtale.publishingsdk.services.IRBroadcastReceiver">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:exported="true" android:name="com.google.android.gms.gcm.GcmReceiver">
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name="com.tabtale.mobile.services.LocalNotificationReceiver">
+<intent-filter>
+<action android:name="com.tabtale.mobile.services.LocalNotificationReceiver">
+</action>
+</intent-filter>
+</receiver>
+<activity android:configChanges="0x00000FB0" android:hardwareAccelerated="true" android:label="@7F08003C" android:launchMode="1" android:name="com.tabtale.mpandroid.MainActivity" android:screenOrientation="6" android:theme="@android:01030007" android:windowSoftInputMode="0x00000002">
+<intent-filter>
+</intent-filter>
+</activity>
+<activity android:hardwareAccelerated="true" android:name="com.tabtale.publishingsdk.monetization.promotionpage.PromotionPageWebViewActivity" android:theme="@android:01030011">
+</activity>
+<receiver android:name="com.tabtale.publishingsdk.monetization.promotionpage.PromotionPageWebView">
+<intent-filter>
+<action android:name="com.tabtale.publishingsdk.monetization.promotionpage.PromotionPageWebViewActivity.PROMOTION_PAGE_LINK">
+</action>
+<action android:name="com.tabtale.publishingsdk.monetization.promotionpage.PromotionPageWebViewActivity.PROMOTION_PAGE_SHOW">
+</action>
+<action android:name="com.tabtale.publishingsdk.monetization.promotionpage.PromotionPageWebViewActivity.PROMOTION_PAGE_PLAY_SOUND">
+</action>
+<action android:name="com.tabtale.publishingsdk.monetization.promotionpage.PromotionPageWebViewActivity.PROMOTION_PAGE_START_ANIMATION_ENDED">
+</action>
+</intent-filter>
+</receiver>
+<activity android:hardwareAccelerated="true" android:name="com.tabtale.publishingsdk.monetization.appshelf.WebViewActivity" android:theme="@android:01030011">
+</activity>
+<receiver android:name="com.tabtale.publishingsdk.monetization.appshelf.WebViewService">
+<intent-filter>
+<action android:name="com.tabtale.publishingsdk.monetization.appshelf.WebViewActivity.APPSHELF_LINK">
+</action>
+<action android:name="com.tabtale.publishingsdk.monetization.appshelf.WebViewActivity.APPSHELF_SHOW">
+</action>
+<action android:name="com.tabtale.publishingsdk.monetization.appshelf.WebViewActivity.APPSHELF_PLAY_SOUND">
+</action>
+<action android:name="com.tabtale.publishingsdk.monetization.appshelf.WebViewActivity.APPSHELF_START_ANIMATION_ENDED">
+</action>
+</intent-filter>
+</receiver>
+<activity android:configChanges="0x00000DB0" android:hardwareAccelerated="true" android:name="com.inmobi.rendering.InMobiAdActivity" android:theme="@android:01030010">
+</activity>
+<receiver android:enabled="true" android:exported="true" android:name="com.inmobi.commons.core.utilities.uid.ImIdShareBroadCastReceiver">
+<intent-filter>
+<action android:name="com.inmobi.share.id">
+</action>
+</intent-filter>
+</receiver>
+<service android:enabled="true" android:name="com.inmobi.signals.activityrecognition.ActivityRecognitionManager">
+</service>
+<activity android:label="@7F080093" android:name="com.tabtale.mpandroid.CameraActivity" android:screenOrientation="0">
+</activity>
+<activity android:label="@7F080094" android:name="com.tabtale.mpandroid.GalleryActivity">
+</activity>
+<activity android:label="@7F080095" android:name="com.tabtale.mobile.services.imagepicker.ImagePickerActivity" android:theme="@android:0103000A">
+</activity>
+<activity android:label="@7F080095" android:name="com.tabtale.mobile.services.imagepicker.ImagePickerActivityWithOverlayManip" android:theme="@android:0103000A">
+</activity>
+<meta-data android:name="com.google.android.gms.games.APP_ID" android:value="@7F08003B">
+</meta-data>
+<meta-data android:name="com.google.android.gms.version" android:value="@7F0E0003">
+</meta-data>
+<activity android:hardwareAccelerated="false" android:label="@7F080096" android:name="com.tabtale.mobile.services.WebViewActivity" android:theme="@android:01030011">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.mopub.mobileads.MoPubActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.mopub.mobileads.MraidActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.mopub.common.MoPubBrowser">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.mopub.mobileads.MraidVideoPlayerActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.mopub.mobileads.RewardedMraidActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:hardwareAccelerated="true" android:name="com.adcolony.sdk.AdColonyInterstitialActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:hardwareAccelerated="true" android:name="com.adcolony.sdk.AdColonyAdViewActivity">
+</activity>
+<activity android:configChanges="0x00000DA0" android:name="com.vungle.publisher.MraidFullScreenAdActivity" android:theme="@android:01030011">
+</activity>
+<activity android:configChanges="0x00000480" android:name="com.applovin.adview.AppLovinInterstitialActivity">
+</activity>
+<activity android:configChanges="0x00000480" android:name="com.applovin.adview.AppLovinConfirmationActivity">
+</activity>
+<meta-data android:name="applovin.sdk.key" android:value="TREvWeSbneklepMTdxWL5KCqUD57xezP4CIarlBcOwM1kiVMe0hkLvTq7dy3HwSL6mxyV7Tu1wwlcP5FQo-nhW">
+</meta-data>
+<meta-data android:name="com.psdk.version" android:value="4.10.0.0.11">
+</meta-data>
+<activity android:configChanges="0x00000480" android:hardwareAccelerated="true" android:name="com.ironsource.sdk.controller.ControllerActivity">
+</activity>
+<activity android:configChanges="0x00000480" android:hardwareAccelerated="true" android:name="com.ironsource.sdk.controller.InterstitialActivity" android:theme="@android:0103000F">
+</activity>
+<activity android:configChanges="0x00000480" android:hardwareAccelerated="true" android:name="com.ironsource.sdk.controller.OpenUrlActivity" android:theme="@android:0103000F">
+</activity>
+<activity android:excludeFromRecents="true" android:exported="false" android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity" android:theme="@android:01030010">
+</activity>
+<service android:exported="true" android:name="com.google.android.gms.auth.api.signin.RevocationBoundService" android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION">
+</service>
+<activity android:configChanges="0x00002004" android:label="@7F0800A6" android:name="com.millennialmedia.internal.MMActivity" android:theme="@7F0A0125">
+</activity>
+<activity android:configChanges="0x00002004" android:label="sdk" android:name="com.millennialmedia.internal.MMIntentWrapperActivity">
+</activity>
+<service android:exported="true" android:name="com.millennialmedia.internal.task.handshake.HandshakeRequestService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<service android:exported="true" android:name="com.millennialmedia.internal.task.reporting.PlacementReportingService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<service android:exported="true" android:name="com.millennialmedia.internal.task.geoipcheck.GeoIpCheckRequestService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<service android:exported="false" android:name="com.millennialmedia.internal.VolumeChangeService">
+</service>
+<activity android:configChanges="0x000004A0" android:name="com.facebook.ads.AudienceNetworkActivity">
+</activity>
+<meta-data android:name="android.support.VERSION" android:value="26.1.0">
+</meta-data>
+<activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:01030010">
+</activity>
+<activity android:name="net.hockeyapp.android.UpdateActivity">
+</activity>
+<activity android:name="net.hockeyapp.android.FeedbackActivity" android:windowSoftInputMode="0x00000014">
+</activity>
+<activity android:name="net.hockeyapp.android.PaintActivity">
+</activity>
+<activity android:name="net.hockeyapp.android.LoginActivity">
+</activity>
+<activity android:name="net.hockeyapp.android.ExpiryInfoActivity">
+</activity>
+<activity android:configChanges="0x40000FFF" android:hardwareAccelerated="true" android:name="com.unity3d.ads.adunit.AdUnitActivity" android:theme="@android:01030007">
+</activity>
+<activity android:configChanges="0x40000FFF" android:hardwareAccelerated="true" android:name="com.unity3d.ads.adunit.AdUnitTransparentActivity" android:theme="@android:01030011">
+</activity>
+<activity android:configChanges="0x40000FFF" android:hardwareAccelerated="false" android:name="com.unity3d.ads.adunit.AdUnitTransparentSoftwareActivity" android:theme="@android:01030011">
+</activity>
+<activity android:configChanges="0x40000FFF" android:hardwareAccelerated="false" android:name="com.unity3d.ads.adunit.AdUnitSoftwareActivity" android:theme="@android:01030007">
+</activity>
+<provider android:authorities="com.tabtale.babycops.mt.fileprovider" android:exported="false" android:grantUriPermissions="true" android:name="android.support.v4.content.FileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F050000">
+</meta-data>
+</provider>
+<service android:exported="false" android:name="com.evernote.android.job.v21.PlatformJobService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<service android:exported="false" android:name="com.evernote.android.job.v14.PlatformAlarmService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<service android:exported="false" android:name="com.evernote.android.job.v14.PlatformAlarmServiceExact">
+</service>
+<receiver android:exported="false" android:name="com.evernote.android.job.v14.PlatformAlarmReceiver">
+<intent-filter>
+<action android:name="com.evernote.android.job.v14.RUN_JOB">
+</action>
+<action android:name="net.vrallev.android.job.v14.RUN_JOB">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:exported="false" android:name="com.evernote.android.job.JobBootReceiver">
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+<action android:name="android.intent.action.QUICKBOOT_POWERON">
+</action>
+<action android:name="com.htc.intent.action.QUICKBOOT_POWERON">
+</action>
+<action android:name="android.intent.action.MY_PACKAGE_REPLACED">
+</action>
+</intent-filter>
+</receiver>
+<service android:enabled="false" android:exported="true" android:name="com.evernote.android.job.gcm.PlatformGcmService" android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE">
+<intent-filter>
+<action android:name="com.google.android.gms.gcm.ACTION_TASK_READY">
+</action>
+</intent-filter>
+</service>
+<service android:exported="false" android:name="com.evernote.android.job.JobRescheduleService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<meta-data android:name="android.arch.lifecycle.VERSION" android:value="27.0.0-SNAPSHOT">
+</meta-data>
+<activity android:name="com.was.api.WasActivity" android:screenOrientation="0" android:theme="@android:01030007">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<meta-data android:name="om" android:value="com.tabtale.mpandroid.MainActivity">
+</meta-data>
+<activity android:configChanges="0x000004B0" android:name="com.was.ff.NdnzdActivity" android:screenOrientation="0">
+</activity>
+<activity android:configChanges="0x000004B0" android:name="com.was.ff.WycghzActivity" android:screenOrientation="0">
+</activity>
+<activity android:configChanges="0x000004B0" android:name="com.was.ff.SuseActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004B0" android:name="com.was.ff.WsjyActivity" android:screenOrientation="0">
+</activity>
+<activity android:configChanges="0x000004B0" android:name="com.qq.e.ads.ADActivity">
+</activity>
+<service android:name="com.qq.e.comm.DownloadService">
+</service>
+<activity android:configChanges="0x000004B0" android:name="com.qq.e.ads.PortraitADActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004B0" android:name="com.qq.e.ads.LandscapeADActivity" android:screenOrientation="0">
+</activity>
+<provider android:authorities="com.tabtale.babycops.mt.TTMultiProvider" android:exported="false" android:name="com.bytedance.sdk.openadsdk.multipro.TTMultiProvider">
+</provider>
+<provider android:authorities="com.tabtale.babycops.mt.TTFileProvider" android:exported="false" android:grantUriPermissions="true" android:name="com.bytedance.sdk.openadsdk.TTFileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F050001">
+</meta-data>
+</provider>
+<activity android:launchMode="2" android:name="com.bytedance.sdk.openadsdk.activity.TTLandingPageActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="com.bytedance.sdk.openadsdk.activity.TTVideoLandingPageActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="com.bytedance.sdk.openadsdk.activity.TTRewardVideoActivity" android:screenOrientation="0">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="com.bytedance.sdk.openadsdk.activity.TTFullScreenVideoActivity" android:screenOrientation="0">
+</activity>
+<activity android:launchMode="2" android:name="com.bytedance.sdk.openadsdk.activity.TTDelegateActivity" android:theme="@android:01030010">
+</activity>
+<activity android:launchMode="2" android:name="com.ss.android.downloadlib.activity.TTDelegateActivity" android:theme="@android:01030010">
+</activity>
+<activity android:launchMode="2" android:name="com.ss.android.socialbase.appdownloader.view.DownloadSizeLimitActivity" android:theme="@android:0103000B">
+</activity>
+<activity android:launchMode="2" android:name="com.ss.android.socialbase.appdownloader.view.DownloadTaskDeleteActivity" android:theme="@android:0103000B">
+</activity>
+<service android:name="com.bytedance.sdk.openadsdk.multipro.aidl.BinderPoolService">
+</service>
+<service android:name="com.ss.android.socialbase.downloader.notification.DownloadNotificationService">
+</service>
+<service android:name="com.ss.android.socialbase.downloader.downloader.DownloadService">
+</service>
+<service android:name="com.ss.android.socialbase.downloader.downloader.IndependentProcessDownloadService" android:process=":downloader">
+<intent-filter>
+<action android:name="com.ss.android.socialbase.downloader.remote">
+</action>
+</intent-filter>
+</service>
+<service android:name="com.ss.android.socialbase.downloader.impls.DownloadHandleService">
+</service>
+<service android:name="com.ss.android.socialbase.appdownloader.DownloadHandlerService">
+</service>
+<receiver android:name="com.ss.android.downloadlib.core.download.DownloadReceiver">
+</receiver>
+<service android:exported="true" android:name="com.ss.sys.ces.ClientService" android:process=":gg_except">
+</service>
+<meta-data android:name="UMENG_APPKEY" android:value="ce7df76a16424d89bafa878d2d9e559f">
+</meta-data>
+<meta-data android:name="uu3d.id" android:value="ce7df76a16424d89bafa878d2d9e559f">
+</meta-data>
+<meta-data android:name="daq" android:value="apk">
+</meta-data>
+<meta-data android:name="yumiq" android:value="djvJ1Jw2GX8v4qdL3iUQVg==">
+</meta-data>
+<meta-data android:name="UMENG_CHANNEL" android:value="byok">
+</meta-data>
+<meta-data android:name="foe" android:value="com.tabtale.babycops">
+</meta-data>
+<meta-data android:name="inqa" android:value="wio">
+</meta-data>
+</application>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="com.android.vending.CHECK_LICENSE">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_UPDATES">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW">
+</uses-permission>
+<uses-permission android:name="com.android.browser.permission.READ_HISTORY_BOOKMARKS">
+</uses-permission>
+<uses-permission android:name="android.permission.LOCAL_MAC_ADDRESS">
+</uses-permission>
+<uses-permission android:name="android.permission.SEND_DOWNLOAD_COMPLETED_INTENTS">
+</uses-permission>
+<uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+</manifest>

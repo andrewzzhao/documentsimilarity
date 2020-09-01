@@ -1,0 +1,2094 @@
+<?xml version="1.0" ?><manifest android:compileSdkVersion="28" android:compileSdkVersionCodename="9" android:versionCode="40" android:versionName="3.3.1" package="com.shhxzq.ztb" platformBuildVersionCode="28" platformBuildVersionName="9" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="15" android:targetSdkVersion="28">
+</uses-sdk>
+<supports-screens android:anyDensity="true" android:largeScreens="true" android:normalScreens="true" android:resizeable="true" android:smallScreens="true">
+</supports-screens>
+<uses-permission android:name="android.permission.RECEIVE_USER_PRESENT">
+</uses-permission>
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES">
+</uses-permission>
+<uses-permission android:name="android.permission.RESTART_PACKAGES">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS">
+</uses-permission>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-feature android:name="android.hardware.camera.autofocus">
+</uses-feature>
+<uses-permission android:name="android.permission.RECORD_AUDIO">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="com.shhxzq.ztb.permission.MIPUSH_RECEIVE">
+</uses-permission>
+<permission android:name="com.shhxzq.ztb.permission.MIPUSH_RECEIVE" android:protectionLevel="0x00000002">
+</permission>
+<permission android:name="com.shhxzq.ztb.permission.JPUSH_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="com.shhxzq.ztb.permission.JPUSH_MESSAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS">
+</uses-permission>
+<uses-permission android:name="android.permission.FLASHLIGHT">
+</uses-permission>
+<uses-feature android:name="android.hardware.camera">
+</uses-feature>
+<uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS">
+</uses-permission>
+<application android:allowBackup="false" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:configChanges="0x000000A0" android:hardwareAccelerated="true" android:icon="@7F070055" android:label="@7F0C0077" android:largeHeap="true" android:name="com.shhxzq.ztb.app.WinnerApplication" android:networkSecurityConfig="@7F0F0001" android:persistent="true" android:resizeableActivity="true" android:screenOrientation="1" android:supportsRtl="true" android:theme="@7F0D01D3">
+<activity android:configChanges="0x000000A0" android:launchMode="2" android:name="com.shhxzq.ztb.ui.splash.SplashActivity" android:screenOrientation="1" android:theme="@7F0D01F0" android:windowSoftInputMode="0x00000003">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:host="splash" android:scheme="hxztb">
+</data>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000A0" android:launchMode="1" android:name="com.shhxzq.ztb.ui.guide.GuideActivity" android:screenOrientation="1" android:theme="@7F0D01F0" android:windowSoftInputMode="0x00000003">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="guide" android:scheme="ztb_launch">
+</data>
+</intent-filter>
+</activity>
+<activity android:label="" android:name="com.shhxzq.ztb.ui.common.UriEntranceActivity" android:theme="@7F0D0008">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:host="entrance" android:scheme="ztb">
+</data>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="com.shhxzq.ztb.ui.main.MainActivity" android:screenOrientation="1" android:theme="@7F0D00C0" android:windowSoftInputMode="0x00000003">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="main" android:scheme="hxztb">
+</data>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.shhxzq.ztb.ui.account.social.SocialAccountActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="mine" android:path="/active" android:scheme="hxztb">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.shhxzq.ztb.ui.account.user.SocialCompleteAccountInfoActivity" android:screenOrientation="1">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="social" android:path="/completeinfo" android:scheme="ztb_account">
+</data>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000A0" android:launchMode="2" android:name="com.shhxzq.ztb.ui.account.social.HadBindPhoneNumberActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="social" android:path="/hadbindphone" android:scheme="ztb_account">
+</data>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.shhxzq.ztb.ui.account.social.ChangePhoneActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="social" android:path="/changebindphone" android:scheme="ztb_account">
+</data>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.shhxzq.ztb.ui.account.social.VerfiyPhoneAndAccountActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="social" android:path="/verfiyphoneandaccount" android:scheme="ztb_account">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.shhxzq.ztb.ui.account.user.BindFundAccountActivity" android:screenOrientation="1">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="social" android:path="/bindfundaccount" android:scheme="ztb_account">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.shhxzq.ztb.ui.account.user.VerifyFundAccountActivity" android:screenOrientation="1">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="social" android:path="/verifyfundaccount" android:scheme="ztb_account">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.shhxzq.ztb.ui.account.user.FundAccountInfoActivity" android:screenOrientation="1">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="social" android:path="/fundaccountinfo" android:scheme="ztb_account">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.shhxzq.ztb.ui.account.user.ChangeBindFundAccountActivity" android:screenOrientation="1">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="social" android:path="/changebindfundaccount" android:scheme="ztb_account">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.shhxzq.ztb.ui.account.home.BusinessTransactionActivity" android:screenOrientation="1">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="businesstransaction" android:scheme="ztb_account">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.shhxzq.ztb.ui.account.business.ZhuanQianActivity" android:screenOrientation="1">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="signed" android:scheme="ztb_account">
+</data>
+</intent-filter>
+</activity>
+<activity android:launchMode="2" android:name="com.shhxzq.ztb.ui.account.business.OpenSzHongkongStockActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="hkstockopen" android:scheme="ztb_account">
+</data>
+</intent-filter>
+</activity>
+<activity android:launchMode="2" android:name="com.shhxzq.ztb.ui.account.business.OpenStibActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="openstib" android:scheme="ztb_account">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.shhxzq.ztb.ui.account.user.PersonalInfoActivity" android:screenOrientation="1">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="user" android:path="/info" android:scheme="ztb_trade">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.shhxzq.ztb.ui.account.user.EditAddressActivity" android:screenOrientation="1">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="user" android:path="/editaddress" android:scheme="ztb_account">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.shhxzq.ztb.ui.account.user.DocumentInformationActivity" android:screenOrientation="1">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="user" android:path="/documentInfo" android:scheme="ztb_account">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.shhxzq.ztb.ui.account.user.AccountActivity" android:screenOrientation="1">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="user" android:path="/querystockholder" android:scheme="ztb_account">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.shhxzq.ztb.ui.account.cancelaccount.CancelHomeActivity" android:screenOrientation="1">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="user" android:path="/cancelhome" android:scheme="ztb_account">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.shhxzq.ztb.ui.account.cancelaccount.CancelMsgVerifyActivity" android:screenOrientation="1">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="user" android:path="/cancelmsgverify" android:scheme="ztb_account">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.shhxzq.ztb.ui.account.cancelaccount.CancelIdcardVerifyActivity" android:screenOrientation="1">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="user" android:path="/cancelidcardverify" android:scheme="ztb_account">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.shhxzq.ztb.ui.account.cancelaccount.CancelAccountRequestActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="user" android:path="/cancelrequest" android:scheme="ztb_account">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.shhxzq.ztb.ui.account.cancelaccount.CancelBusinessHandleActivity" android:screenOrientation="1">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="user" android:path="/cancelhandle" android:scheme="ztb_account">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.shhxzq.ztb.ui.account.cancelaccount.CancelRequestSucessActivity" android:screenOrientation="1">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="user" android:path="/cancelresult" android:scheme="ztb_account">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.shhxzq.ztb.ui.account.user.ModifyPhoneNumberActivity" android:screenOrientation="1">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="user" android:path="/modifyphone" android:scheme="ztb_account">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.shhxzq.ztb.ui.account.user.ModifyBankcardActivity" android:screenOrientation="1">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="user" android:path="/modifybankcard" android:scheme="ztb_account">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.shhxzq.ztb.ui.account.user.ModifyBankcardAbnormalActivity" android:screenOrientation="1">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="user" android:path="/modifybankcardabnormal" android:scheme="ztb_account">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.shhxzq.ztb.ui.account.user.ModifyBankcardResultActivity" android:screenOrientation="1">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="user" android:path="/modifybankcardresult" android:scheme="ztb_account">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.shhxzq.ztb.ui.account.user.ModifyBindBankcardActivity" android:screenOrientation="1">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="user" android:path="/modifybindbankcard" android:scheme="ztb_account">
+</data>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.shhxzq.ztb.ui.account.user.PasswordActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="user" android:path="/modifypwd" android:scheme="ztb_account">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.shhxzq.ztb.ui.account.user.ResetPasswordActivity" android:screenOrientation="1">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="user" android:path="/resetpwd" android:scheme="ztb_account">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.shhxzq.ztb.ui.account.user.ResetPwdResultActivity" android:screenOrientation="1">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="user" android:path="/resetpwd_result" android:scheme="ztb_account">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.shhxzq.ztb.ui.account.msg.MessageCenterActivity" android:screenOrientation="1">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="mine" android:path="/msg/home" android:scheme="hxztb">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.shhxzq.ztb.ui.account.msg.MsgListMoreActivity" android:screenOrientation="1">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="mine" android:path="/msg/list" android:scheme="hxztb">
+</data>
+</intent-filter>
+</activity>
+<activity android:label="@7F0C01F4" android:launchMode="2" android:name="com.shhxzq.ztb.ui.account.l2.MyServicesActivity" android:screenOrientation="1">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="mine" android:path="/serviceslist" android:scheme="hxztb">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.shhxzq.ztb.ui.account.l2.Level2BankActivity" android:screenOrientation="1">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="l2" android:path="/bank" android:scheme="ztb_account">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.shhxzq.ztb.ui.account.l2.Level2UserInfoVerifyActivity" android:screenOrientation="1">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="l2" android:path="/userinfoverify" android:scheme="ztb_account">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.shhxzq.ztb.ui.account.l2.Level2PayResultActivity" android:screenOrientation="1">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="l2" android:path="/payresult" android:scheme="ztb_account">
+</data>
+</intent-filter>
+</activity>
+<activity android:launchMode="1" android:name="com.shhxzq.ztb.ui.account.user.SocialMyActivity" android:screenOrientation="1">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="social" android:path="/my" android:scheme="ztb_account">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.shhxzq.ztb.ui.account.user.SocialMyCollectActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="2" android:name="com.shhxzq.ztb.ui.account.user.SocialUserInfoActivity" android:screenOrientation="1">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="social" android:path="/favorite" android:scheme="ztb_account">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.shhxzq.ztb.ui.setting.SocialSettingActivity" android:screenOrientation="1">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="social" android:path="/setting" android:scheme="ztb_account">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.shhxzq.ztb.ui.account.user.ChangeNicknameActivity" android:screenOrientation="1">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="social" android:path="/changenickname" android:scheme="ztb_account">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.shhxzq.ztb.ui.account.user.avatar.GridImageActivity" android:screenOrientation="1" android:theme="@7F0D00C5">
+</activity>
+<activity android:launchMode="2" android:name="com.shhxzq.ztb.ui.account.query.QueryAccHomeActivity" android:screenOrientation="1">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="account" android:path="/query/home" android:scheme="hxztb">
+</data>
+</intent-filter>
+</activity>
+<activity android:launchMode="1" android:name="com.shhxzq.ztb.ui.account.query.QueryAccountActivity" android:screenOrientation="1">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="account" android:path="/query/securityacc" android:scheme="hxztb">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.shhxzq.ztb.ui.account.query.QueryAccIdCardActivity" android:screenOrientation="1">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="account" android:path="/query/accidcard" android:scheme="hxztb">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.shhxzq.ztb.ui.account.query.QueryAcctInfoConfirmActivity" android:screenOrientation="1">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="account" android:path="/query/acctinfoconfirm" android:scheme="hxztb">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.shhxzq.ztb.ui.account.query.CheckAccountActivity" android:screenOrientation="1">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="account" android:path="/query/checkaccount" android:scheme="hxztb">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.shhxzq.ztb.ui.account.query.QueryAccResultActivity" android:screenOrientation="1">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="account" android:path="/accresult" android:scheme="hxztb">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.shhxzq.ztb.ui.home.HomeActiveCenterActivity" android:screenOrientation="1">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="events" android:path="/home" android:scheme="ztb_account">
+</data>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.shhxzq.ztb.ui.setting.SettingActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="setting" android:scheme="ztb_setting">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.shhxzq.ztb.ui.setting.AboutUsActivity" android:screenOrientation="1">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="mine" android:path="/setting/about" android:scheme="hxztb">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.shhxzq.ztb.ui.setting.DeviceIdActivity" android:screenOrientation="1">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="deviceid" android:scheme="ztb_setting">
+</data>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.shhxzq.ztb.ui.setting.SiteSelectActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="siteselect" android:scheme="ztb_setting">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.shhxzq.ztb.ui.common.UserOperationResultActivity" android:screenOrientation="1">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="resultpage" android:scheme="ztb_common">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.shhxzq.stock.ui.common.WebViewActivity" android:screenOrientation="1">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="detail" android:scheme="ztb_info">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.shhxzq.ztb.ui.common.ZtbWebViewActivity" android:screenOrientation="1">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="info" android:scheme="hxztb">
+</data>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.shhxzq.stock.ui.common.CommentWebViewActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="info" android:scheme="ztb">
+</data>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000A0" android:launchMode="1" android:name="com.shhxzq.ztb.ui.trade.setting.TradeSettingActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="mine" android:path="/setting" android:scheme="hxztb">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.shhxzq.ztb.ui.trade.hkstock.HKStockTradeHomeActivity" android:screenOrientation="1">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="hkstock" android:path="/home" android:scheme="ztb_trade">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.shhxzq.ztb.ui.trade.hkstock.HKStockTradeDespActivity" android:screenOrientation="1">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="hkstock" android:path="/desp" android:scheme="ztb_trade">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.shhxzq.ztb.ui.trade.hkstock.HKStockTradeBalanceDespActivity" android:screenOrientation="1">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="hkstock" android:path="/balancedesp" android:scheme="ztb_trade">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.shhxzq.ztb.ui.trade.hkstock.HKStockTradeRateInfoActivity" android:screenOrientation="1">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="hkstock" android:path="/rateinfo" android:scheme="ztb_trade">
+</data>
+</intent-filter>
+</activity>
+<activity android:launchMode="2" android:name="com.shhxzq.ztb.ui.trade.pledge.PledgeMainActivity" android:screenOrientation="1">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="pledge" android:path="/home" android:scheme="ztb_trade">
+</data>
+</intent-filter>
+</activity>
+<activity android:launchMode="2" android:name="com.shhxzq.ztb.ui.trade.pledge.PledgehistoryQueryMoreActivity" android:screenOrientation="1">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="pledge" android:path="/pledgehistory" android:scheme="ztb_trade">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.shhxzq.ztb.ui.trade.pledge.PledgeOpenOkActivity" android:screenOrientation="1">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="pledge" android:path="/advertise" android:scheme="ztb_trade">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.shhxzq.ztb.ui.trade.pledge.PledgeDangerActivity" android:screenOrientation="1">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="pledge" android:path="/entry" android:scheme="ztb_trade">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.shhxzq.ztb.ui.trade.pledge.PledgeAddActivity" android:screenOrientation="1">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="pledge" android:path="/add" android:scheme="ztb_trade">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.shhxzq.ztb.ui.trade.pledge.LendAndGiveBackDetailActivity" android:screenOrientation="1">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="pledge" android:path="/ticketlist" android:scheme="ztb_trade">
+</data>
+</intent-filter>
+</activity>
+<activity android:launchMode="2" android:name="com.shhxzq.ztb.ui.trade.pledge.SelectPledgeTicketActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000020">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="pledge" android:path="/select" android:scheme="ztb_trade">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.shhxzq.ztb.ui.trade.pledge.PledgedTicketConfirmActivity" android:screenOrientation="1">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="pledge" android:path="/confirm" android:scheme="ztb_trade">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.shhxzq.ztb.ui.trade.pledge.PledgeAddOkActivity" android:screenOrientation="1">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="pledge" android:path="/suppleconfirm" android:scheme="ztb_trade">
+</data>
+</intent-filter>
+</activity>
+<activity android:launchMode="1" android:name="com.shhxzq.ztb.ui.trade.pledge.SuppPledgeResultActivity" android:screenOrientation="1">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="pledge" android:path="/suppleresult" android:scheme="ztb_trade">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.shhxzq.ztb.ui.trade.pledge.BackMoneyActivity" android:screenOrientation="1">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="pledge" android:path="/repay" android:scheme="ztb_trade">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.shhxzq.ztb.ui.trade.pledge.PledgeQueryActivity" android:screenOrientation="1">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="pledge" android:path="/query" android:scheme="ztb_trade">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.shhxzq.ztb.ui.trade.pledge.PledgeQueryDetailsActivity" android:screenOrientation="1">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="pledge" android:path="/querydetail" android:scheme="ztb_trade">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.shhxzq.ztb.ui.trade.pledge.PledgeOpenActivity" android:screenOrientation="1">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="pledge" android:path="/open" android:scheme="ztb_trade">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.shhxzq.ztb.ui.trade.pledge.PledgeOpenResultActivity" android:screenOrientation="1">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="pledge" android:path="/openresult" android:scheme="ztb_trade">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.shhxzq.ztb.ui.trade.finance.otc.OtcMainActivity" android:screenOrientation="1">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="otc" android:path="/holdhome" android:scheme="ztb_trade">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.shhxzq.ztb.ui.trade.finance.otc.OtcProductHoldDetailActivity" android:screenOrientation="1">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="otc" android:path="/holddetail" android:scheme="ztb_trade">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.shhxzq.ztb.ui.trade.finance.HistoryProductlistActivity" android:screenOrientation="1">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="finance" android:path="/historylist" android:scheme="ztb_trade">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.shhxzq.ztb.ui.trade.finance.otc.ProductDetailsActivity" android:screenOrientation="1">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="otc" android:path="/detail" android:scheme="ztb_trade">
+</data>
+</intent-filter>
+</activity>
+<activity android:launchMode="1" android:name="com.shhxzq.ztb.ui.trade.finance.otc.DqbProductPurchaseActivity" android:screenOrientation="1">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="otc" android:path="/purchase" android:scheme="ztb_trade">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.shhxzq.ztb.ui.trade.finance.otc.TradeRecordMoreActivity" android:screenOrientation="1">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="otc" android:path="/record" android:scheme="ztb_trade">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.shhxzq.ztb.ui.trade.finance.otc.TradeDetailsActivity" android:screenOrientation="1">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="otc" android:path="/recorddetail" android:scheme="ztb_trade">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.shhxzq.ztb.ui.trade.finance.otc.PDFViewerActivity" android:screenOrientation="1">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="otc" android:path="/pdfviewer" android:scheme="ztb_trade">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.shhxzq.ztb.ui.trade.finance.otc.LegacyPdfActivity" android:screenOrientation="1">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="otc" android:path="/pdfviewer" android:scheme="ztb_trade">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.shhxzq.ztb.ui.trade.finance.otc.ProductPurchaseResultActivity" android:screenOrientation="1">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="otc" android:path="/purchaseresult" android:scheme="ztb_trade">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.shhxzq.ztb.ui.trade.finance.otc.OtcNoticeActivity" android:screenOrientation="1">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="otc" android:path="/notice" android:scheme="ztb_trade">
+</data>
+</intent-filter>
+</activity>
+<activity android:launchMode="1" android:name="com.shhxzq.ztb.ui.trade.simulatetrade.SimulateCreateGroupActivtty" android:screenOrientation="1">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="social" android:path="/simulate_creategroup" android:scheme="ztb_account">
+</data>
+</intent-filter>
+</activity>
+<activity android:launchMode="2" android:name="com.shhxzq.ztb.ui.trade.simulatetrade.SelectGroupActivity" android:screenOrientation="1">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="social" android:path="/simulate_selectgroup" android:scheme="ztb_account">
+</data>
+</intent-filter>
+</activity>
+<activity android:launchMode="2" android:name="com.shhxzq.ztb.ui.trade.simulatetrade.SimulateListGroupActivity" android:screenOrientation="1">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="social" android:path="/simulate_listgroup" android:scheme="ztb_account">
+</data>
+</intent-filter>
+</activity>
+<activity android:launchMode="1" android:name="com.shhxzq.ztb.ui.trade.simulatetrade.SimulateCombinationDetailActivity" android:screenOrientation="1">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="social" android:path="/simulate_detail" android:scheme="ztb_account">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.shhxzq.ztb.ui.trade.simulatetrade.ModifyCombinationInfoActivity" android:screenOrientation="1">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="social" android:path="/simulate_modifyinfo" android:scheme="ztb_account">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.shhxzq.ztb.ui.trade.simulatetrade.PositionsDetailActivity" android:screenOrientation="1">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="social" android:path="/simulate_positionsdetail" android:scheme="ztb_account">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.shhxzq.ztb.ui.trade.simulatetrade.SimSpecificPositionActivity" android:screenOrientation="1">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="mine" android:path="/simulate/positionsdetail" android:scheme="hxztb">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.shhxzq.ztb.ui.trade.simulatetrade.SimProfitAnalyzeActivity" android:screenOrientation="1">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="mine" android:path="/simulate/profitanalyze" android:scheme="hxztb">
+</data>
+</intent-filter>
+</activity>
+<activity android:launchMode="2" android:name="com.shhxzq.ztb.ui.trade.simulatetrade.SimulateAdjustHolderActivity" android:screenOrientation="1">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="social" android:path="/simulate_adjustholding" android:scheme="ztb_account">
+</data>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.shhxzq.ztb.ui.trade.simulatetrade.SimulateTradeActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="social" android:path="/simulate_trade" android:scheme="ztb_account">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.shhxzq.ztb.ui.trade.simulatetrade.SimulateQueryActivity" android:screenOrientation="1">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="social" android:path="/simulate_query" android:scheme="ztb_account">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.shhxzq.ztb.ui.trade.simulatetrade.SimulateHistoryQueryActivity" android:screenOrientation="1">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="social" android:path="/simulate_historydeal" android:scheme="ztb_account">
+</data>
+</intent-filter>
+</activity>
+<activity android:launchMode="2" android:name="com.shhxzq.ztb.ui.trade.simulatetrade.SimulateTradeContestActivity" android:screenOrientation="1">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="mine" android:path="/simulate/home" android:scheme="hxztb">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.shhxzq.ztb.ui.trade.simulatetrade.SimulateContestInviteActivity" android:screenOrientation="1">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="social" android:path="/simulate_invite" android:scheme="ztb_account">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.shhxzq.ztb.ui.trade.finance.QueryActivity" android:screenOrientation="1">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="finance" android:path="/querylist" android:scheme="ztb_trade">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.shhxzq.ztb.ui.trade.finance.VipTradeDetailActivity" android:screenOrientation="1">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="finance" android:path="/querydetail" android:scheme="ztb_trade">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.shhxzq.ztb.ui.trade.finance.ProductListActivity" android:screenOrientation="1">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="finance" android:path="/productlist" android:scheme="ztb_trade">
+</data>
+</intent-filter>
+</activity>
+<activity android:launchMode="1" android:name="com.shhxzq.ztb.ui.trade.finance.vip.VipProductPurchaseActivity" android:screenOrientation="1">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="vip" android:path="/purchase" android:scheme="ztb_trade">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.shhxzq.ztb.ui.trade.finance.vip.VipProductPurchaseResultActivity" android:screenOrientation="1">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="vip" android:path="/purchaseresult" android:scheme="ztb_trade">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.shhxzq.ztb.ui.trade.finance.vip.VipfinancialSellActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="vip" android:path="/sell" android:scheme="ztb_trade">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.shhxzq.ztb.ui.trade.finance.vip.VipHistoryMoreActivity" android:screenOrientation="1">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="vip" android:path="/history" android:scheme="ztb_trade">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.shhxzq.ztb.ui.trade.finance.vip.VipHoldDetailActivity" android:screenOrientation="1">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="vip" android:path="/hold_detail" android:scheme="ztb_trade">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.shhxzq.ztb.ui.trade.finance.vip.VipHoldTradeRecordMoreActivity" android:screenOrientation="1">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="vip" android:path="/trade_record" android:scheme="ztb_trade">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.shhxzq.ztb.ui.trade.finance.vip.VipOpenDeclareActivity" android:screenOrientation="1">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="vip" android:path="/open_declare" android:scheme="ztb_trade">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.shhxzq.ztb.ui.trade.finance.vip.VipProductDetailsActivity" android:screenOrientation="1">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="vip" android:path="/product_detail" android:scheme="ztb_trade">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.shhxzq.ztb.ui.trade.finance.vip.widget.SmsVerifyActivity" android:theme="@7F0D00E7">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="vip" android:path="/smsverify" android:scheme="ztb_trade">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.shhxzq.ztb.ui.trade.finance.vip.VipPositionActivity" android:screenOrientation="1">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="vip" android:path="/position" android:scheme="ztb_trade">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.shhxzq.ztb.ui.account.user.MemberCenterHomeActivity" android:screenOrientation="1">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="mine" android:path="/membercenter" android:scheme="hxztb">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.shhxzq.stock.debug.CrashListActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.shhxzq.stock.debug.CrashViewerActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.shhxzq.stock.debug.DebugActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.shhxzq.ztb.ui.oa.ui.OpenAccountHomeActivity" android:screenOrientation="1">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="oa" android:path="/home" android:scheme="hxztb">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.shhxzq.ztb.ui.oa.ui.MessageVerifyActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="oa" android:path="/msgverify" android:scheme="hxztb">
+</data>
+</intent-filter>
+</activity>
+<activity android:launchMode="2" android:name="com.shhxzq.ztb.ui.oa.ui.IdentityCardVerifyActivity" android:screenOrientation="1">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="oa" android:path="/idedit" android:scheme="hxztb">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.shhxzq.ztb.ui.oa.ui.VideoQueueActivity" android:screenOrientation="1">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="oa" android:path="/videoqueue" android:scheme="hxztb">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.shhxzq.ztb.ui.oa.ui.VideoPrepareActivity" android:screenOrientation="1">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="oa" android:path="/videoprepare" android:scheme="hxztb">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.shhxzq.ztb.ui.oa.ui.CreateAccountAndSetPwdActivity" android:screenOrientation="1">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="oa" android:path="/setpwd" android:scheme="hxztb">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.shhxzq.ztb.ui.oa.ui.BindBankActivity" android:screenOrientation="1">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="oa" android:path="/bindbank" android:scheme="hxztb">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.shhxzq.ztb.ui.oa.ui.EmptyActivity" android:theme="@android:0103000F">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="oa" android:path="/transition" android:scheme="hxztb">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.shhxzq.ztb.ui.oa.ui.VideoActivity" android:screenOrientation="1">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="oa" android:path="/video" android:scheme="hxztb">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.shhxzq.ztb.ui.oa.ui.OpenAccountResultActivity" android:screenOrientation="1">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="oa" android:path="/result" android:scheme="hxztb">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.shhxzq.ztb.ui.oa.ui.WebViewWithNextBtnActivity" android:screenOrientation="1">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="oa" android:path="/h5" android:scheme="hxztb">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.shhxzq.ztb.ui.oa.ui.ZhuanHuRequestActivity" android:screenOrientation="1">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="oa" android:path="/change" android:scheme="hxztb">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.shhxzq.ztb.ui.oa.ui.SelectBankListActivity" android:screenOrientation="1">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="oa" android:path="/selectbanklist" android:scheme="hxztb">
+</data>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.shhxzq.stock.ui.quote.selfstock.EditMyStockActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="edit" android:scheme="ztb_selfsotck">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.shhxzq.stock.ui.quote.selfstock.SelfStockInfoActivity" android:screenOrientation="1">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="info" android:scheme="ztb_selfsotck">
+</data>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="com.shhxzq.stock.ui.quote.quoteList.QuoteListActivity" android:screenOrientation="1">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="quote" android:path="/list" android:scheme="hxztb">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.shhxzq.stock.ui.quote.moneyFlow.MoneyFlowListActivity" android:screenOrientation="1">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="quote" android:path="/moneyflowlist" android:scheme="hxztb">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.shhxzq.stock.ui.quote.detail.StockDetailActivity" android:screenOrientation="-1" android:theme="@7F0D00E8">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="quote" android:path="/stockinfo" android:scheme="hxztb">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.shhxzq.stock.ui.quote.remind.RemindSettingActivity" android:screenOrientation="1">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="quote" android:path="/remindsetting" android:scheme="hxztb">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.shhxzq.stock.ui.quote.remind.RepeatPeriodActivity">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="quote" android:path="/repeatperiod" android:scheme="hxztb">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.shhxzq.stock.ui.quote.detail.tick.TradeDetailActivity" android:screenOrientation="1">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="quote" android:path="/tradedetail" android:scheme="hxztb">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.shhxzq.stock.ui.quote.detail.FiveHundredPriceActivity" android:screenOrientation="1">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="quote" android:path="/fivehundredprice" android:scheme="hxztb">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.shhxzq.stock.ui.quote.StockPostActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000005">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="quote" android:path="/comment" android:scheme="hxztb">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.shhxzq.stock.ui.quote.selfstock.SelfStockDetailActivity" android:screenOrientation="1">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="quote" android:path="/selfstocklist" android:scheme="hxztb">
+</data>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="com.shhxzq.stock.ui.quote.securitySelection.ZtSelectStockActivity" android:screenOrientation="1">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="quote" android:path="/selectioncondition" android:scheme="hxztb">
+</data>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="com.shhxzq.stock.ui.quote.securitySelection.SelectStockDetailActivity" android:screenOrientation="1">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="quote" android:path="/conditiondetail" android:scheme="hxztb">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.shhxzq.stock.ui.quote.securitySelection.StockSchemeListActivity" android:screenOrientation="1">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="quote" android:path="/tactfullylist" android:scheme="hxztb">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.shhxzq.stock.ui.quote.securitySelection.MySelectSchemeListActivity" android:screenOrientation="1">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="quote" android:path="/mytactfullylist" android:scheme="hxztb">
+</data>
+</intent-filter>
+</activity>
+<activity android:launchMode="1" android:name="com.shhxzq.stock.ui.quote.similarKline.SimilarKlineDetailActivity" android:screenOrientation="1">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="quote" android:path="/similarklinedetail" android:scheme="hxztb">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.shhxzq.stock.ui.quote.similarKline.SimilarKlineTopActivity" android:screenOrientation="1">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="quote" android:path="/similarklinetop" android:scheme="hxztb">
+</data>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.shhxzq.stock.ui.trade.normaltrade.NormalTradeActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="normaltrade" android:scheme="ztb_trade">
+</data>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.shhxzq.stock.ui.trade.setting.FundAccMgrActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="accmgr" android:scheme="ztb_trade">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.shhxzq.stock.ui.trade.normaltrade.quicktrade.QuickTradeActivity" android:theme="@android:0103006F" android:windowAnimationStyle="@android:01030002" android:windowSoftInputMode="0x00000003">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="quicktrade" android:scheme="ztb_trade">
+</data>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.shhxzq.stock.ui.trade.normaltrade.HoldingActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="holding" android:scheme="ztb_trade">
+</data>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.shhxzq.stock.ui.trade.normaltrade.NormalQueryActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="generalquery" android:scheme="ztb_trade">
+</data>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.shhxzq.stock.ui.trade.normaltrade.NewNormalQueryActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="query" android:scheme="ztb_trade">
+</data>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.shhxzq.stock.ui.trade.normaltrade.NewQueryActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="query" android:scheme="ztb_trade">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.shhxzq.stock.ui.trade.repurchase.RepurchaseMainActivity" android:screenOrientation="1">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="repurchase" android:path="/list" android:scheme="ztb_trade">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.shhxzq.stock.ui.trade.repurchase.IntroduceActivity" android:screenOrientation="1">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="repurchase" android:path="/desp" android:scheme="ztb_trade">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.shhxzq.stock.ui.trade.repurchase.RepurchaseActivity" android:screenOrientation="1">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="repurchase" android:path="/pruchase" android:scheme="ztb_trade">
+</data>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000A0" android:launchMode="2" android:name="com.shhxzq.stock.ui.trade.newstock.NewStockHomeActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="newstock" android:path="/ipo" android:scheme="ztb_trade">
+</data>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.shhxzq.stock.ui.trade.newstock.NewStockOnekeyApllyActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="newstock" android:path="/onekey" android:scheme="ztb_trade">
+</data>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.shhxzq.stock.ui.trade.newstock.NewStockApplyDetailsActivity" android:screenOrientation="1">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="newstock" android:path="/detail" android:scheme="ztb_trade">
+</data>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.shhxzq.stock.ui.trade.newstock.NewStockIntelligentActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="newstock" android:path="/setting" android:scheme="ztb_trade">
+</data>
+</intent-filter>
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.shhxzq.stock.ui.trade.newstock.NewstockIntroduceActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="newstock" android:path="/introduce" android:scheme="ztb_trade">
+</data>
+</intent-filter>
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+</intent-filter>
+</activity>
+<activity android:name="com.shhxzq.stock.ui.trade.normaltrade.AccountStatementDetailActivity" android:screenOrientation="1">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="query" android:path="/statementdetail" android:scheme="ztb_trade">
+</data>
+</intent-filter>
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+</intent-filter>
+</activity>
+<activity android:name="com.shhxzq.stock.ui.trade.normaltrade.HoldingTimelineActivity" android:screenOrientation="1">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="holding" android:path="/timeline" android:scheme="ztb_trade">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.shhxzq.stock.ui.trade.normaltrade.HoldingTimelineMainActivity" android:screenOrientation="1">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="holding" android:path="/timelinecycle" android:scheme="ztb_trade">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.shhxzq.stock.ui.trade.bank.TransferAccountActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="transfer" android:scheme="ztb_trade">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.shhxzq.stock.ui.trade.bank.BankSelectActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="transfer" android:path="/bankselect" android:scheme="ztb_trade">
+</data>
+</intent-filter>
+</activity>
+<activity android:launchMode="1" android:name="com.shhxzq.stock.ui.trade.bank.BankPasswordActivity" android:theme="@7F0D00B3">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="transfer" android:path="/bankpwd" android:scheme="ztb_trade">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.shhxzq.stock.ui.trade.bank.TransferFlowActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="transfer" android:path="/flow" android:scheme="ztb_trade">
+</data>
+</intent-filter>
+</activity>
+<activity android:launchMode="2" android:name="com.shhxzq.stock.ui.trade.analysis.AccountOverViewActivtiy" android:screenOrientation="1">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="mine" android:path="/accountoverview" android:scheme="hxztb">
+</data>
+</intent-filter>
+</activity>
+<activity android:launchMode="1" android:name="com.shhxzq.stock.ui.trade.analysis.StockAnalysisActivtiy" android:screenOrientation="1">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="mine" android:path="/stockanalysis" android:scheme="hxztb">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.shhxzq.stock.ui.trade.analysis.HistoryPositionActivity" android:screenOrientation="1">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="historyposition" android:scheme="ztb_trade">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.shhxzq.stock.ui.account.login.NewLoginActivity" android:screenOrientation="1">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="login" android:scheme="ztb_account">
+</data>
+</intent-filter>
+</activity>
+<activity android:launchMode="1" android:name="com.shhxzq.stock.ui.account.lock.LockActivity" android:theme="@7F0D00B3">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="lock" android:scheme="ztb_account">
+</data>
+</intent-filter>
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="lock" android:scheme="hxxjb">
+</data>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:name="com.shhxzq.ztb.ui.setting.NetworkActivity" android:screenOrientation="1">
+</activity>
+<service android:name="com.shhxzq.ztb.ui.oa.services.LogCatService">
+</service>
+<receiver android:name="com.shhxzq.ztb.receiver.UpdateReceiver">
+<intent-filter>
+<action android:name="android.intent.action.DOWNLOAD_COMPLETE">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:enabled="true" android:exported="false" android:name="com.shhxzq.ztb.receiver.MyReceiver">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.REGISTRATION">
+</action>
+<action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED">
+</action>
+<action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED">
+</action>
+<action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED">
+</action>
+<action android:name="cn.jpush.android.intent.CONNECTION">
+</action>
+<category android:name="com.shhxzq.ztb">
+</category>
+</intent-filter>
+</receiver>
+<meta-data android:name="com.taobao.android.hotfix.IDSECRET" android:value="@7F0C01D0">
+</meta-data>
+<meta-data android:name="com.taobao.android.hotfix.APPSECRET" android:value="@7F0C01D1">
+</meta-data>
+<meta-data android:name="com.taobao.android.hotfix.RSASECRET" android:value="@7F0C01D2">
+</meta-data>
+<service android:exported="true" android:name="com.taobao.sophix.aidl.DownloadService">
+<intent-filter>
+<action android:name="com.taobao.hotfix.action">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</service>
+<service android:exported="false" android:name="org.openudid.OpenUDID_service">
+<intent-filter>
+<action android:name="org.OpenUDID.GETUDID">
+</action>
+</intent-filter>
+</service>
+<receiver android:exported="true" android:name="ly.count.android.sdk.ReferrerReceiver">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+<service android:enabled="true" android:exported="false" android:name="com.xiaomi.push.service.XMJobService" android:permission="android.permission.BIND_JOB_SERVICE" android:process=":pushservice">
+</service>
+<service android:enabled="true" android:name="com.xiaomi.push.service.XMPushService" android:process=":pushservice">
+</service>
+<service android:enabled="true" android:exported="true" android:name="com.xiaomi.mipush.sdk.PushMessageHandler">
+</service>
+<service android:enabled="true" android:name="com.xiaomi.mipush.sdk.MessageHandleService">
+</service>
+<receiver android:exported="true" android:name="com.shhxzq.ztb.receiver.XiaoMiPushReceiver">
+<intent-filter>
+<action android:name="com.xiaomi.mipush.RECEIVE_MESSAGE">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="com.xiaomi.mipush.MESSAGE_ARRIVED">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="com.xiaomi.mipush.ERROR">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.USER_PRESENT">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.ACTION_POWER_CONNECTED">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.ACTION_POWER_DISCONNECTED">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:exported="true" android:name="com.xiaomi.push.service.receivers.NetworkStatusReceiver">
+<intent-filter>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</receiver>
+<receiver android:exported="false" android:name="com.xiaomi.push.service.receivers.PingReceiver" android:process=":pushservice">
+<intent-filter>
+<action android:name="com.xiaomi.push.PING_TIMER">
+</action>
+</intent-filter>
+</receiver>
+<activity android:launchMode="2" android:name="com.tencent.tauth.AuthActivity" android:noHistory="true">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="tencent1105584117">
+</data>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.tencent.connect.common.AssistActivity" android:theme="@android:01030010">
+</activity>
+<activity android:exported="true" android:launchMode="3" android:name="com.shhxzq.ztb.wxapi.WXEntryActivity">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:scheme="sdksample">
+</data>
+</intent-filter>
+</activity>
+<receiver android:name="com.shhxzq.ztb.wxapi.AppRegister" android:permission="com.tencent.mm.plugin.permission.SEND">
+<intent-filter>
+<action android:name="com.tencent.mm.plugin.openapi.Intent.ACTION_REFRESH_WXAPP">
+</action>
+</intent-filter>
+</receiver>
+<meta-data android:name="com.shhxzq.stock.permissions.MyGlideModule" android:value="GlideModule">
+</meta-data>
+<service android:exported="false" android:name="es.voghdev.pdfviewpager.library.service.CopyAssetService">
+</service>
+<activity android:exported="false" android:name="cn.jpush.android.ui.PopWinActivity" android:theme="@7F0D00C2">
+</activity>
+<activity android:configChanges="0x000000A0" android:exported="false" android:name="cn.jpush.android.ui.PushActivity" android:theme="@android:01030006">
+<intent-filter>
+<action android:name="cn.jpush.android.ui.PushActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="com.shhxzq.ztb">
+</category>
+</intent-filter>
+</activity>
+<service android:enabled="true" android:exported="false" android:name="cn.jpush.android.service.PushService" android:process=":pushcore">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.REGISTER">
+</action>
+<action android:name="cn.jpush.android.intent.REPORT">
+</action>
+<action android:name="cn.jpush.android.intent.PushService">
+</action>
+<action android:name="cn.jpush.android.intent.PUSH_TIME">
+</action>
+</intent-filter>
+</service>
+<service android:enabled="true" android:exported="true" android:name="cn.jpush.android.service.DaemonService">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.DaemonService">
+</action>
+<category android:name="com.shhxzq.ztb">
+</category>
+</intent-filter>
+</service>
+<receiver android:enabled="true" android:exported="false" android:name="cn.jpush.android.service.PushReceiver">
+<intent-filter android:priority="1000">
+<action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY">
+</action>
+<category android:name="com.shhxzq.ztb">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.USER_PRESENT">
+</action>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_ADDED">
+</action>
+<action android:name="android.intent.action.PACKAGE_REMOVED">
+</action>
+<data android:scheme="package">
+</data>
+</intent-filter>
+</receiver>
+<receiver android:exported="false" android:name="cn.jpush.android.service.AlarmReceiver">
+</receiver>
+<provider android:authorities="com.shhxzq.ztb.DataProvider" android:exported="true" android:name="cn.jpush.android.service.DataProvider">
+</provider>
+<meta-data android:name="JPUSH_CHANNEL" android:value="developer-default">
+</meta-data>
+<meta-data android:name="JPUSH_APPKEY" android:value="24dd99b1abcd70ddde88d579">
+</meta-data>
+<activity android:configChanges="0x000000A0" android:name="exocr.idcard.CaptureActivity" android:screenOrientation="0" android:theme="@android:01030007" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="exocr.bankcard.CardRecoActivity" android:theme="@android:01030007">
+</activity>
+<receiver android:name="com.shhxzq.ztb.net.http.HttpEngine$NetWorkChangeBroadRecriver">
+<intent-filter>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+<action android:name="com.shhxzq.ztb.http.recriver">
+</action>
+</intent-filter>
+</receiver>
+<uses-library android:name="android.test.runner">
+</uses-library>
+</application>
+</manifest>

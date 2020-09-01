@@ -1,0 +1,38 @@
+<?xml version="1.0" ?><manifest android:versionCode="9" android:versionName="1.9" package="org.ken1020.nfctool" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="10">
+</uses-sdk>
+<uses-permission android:name="android.permission.NFC">
+</uses-permission>
+<uses-feature android:name="android.hardware.nfc" android:required="false">
+</uses-feature>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<application android:icon="@7F020000" android:label="@7F060000">
+<activity android:configChanges="0x000000A0" android:label="@7F060000" android:name=".AndroidNfcActivity">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000A0" android:label="@7F060000" android:name=".DefaultNfcReaderActivity">
+<intent-filter>
+<action android:name="android.nfc.action.NDEF_DISCOVERED">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:mimeType="edi/*">
+</data>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000A0" android:label="@7F060000" android:name=".DefaultNfcTagWriterActivity">
+</activity>
+<activity android:configChanges="0x000000A0" android:label="@7F060000" android:name=".DefaultNfcBeamWriterActivity">
+</activity>
+</application>
+</manifest>

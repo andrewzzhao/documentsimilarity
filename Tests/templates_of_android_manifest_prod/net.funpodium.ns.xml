@@ -1,0 +1,664 @@
+<?xml version="1.0" ?><manifest android:compileSdkVersion="29" android:compileSdkVersionCodename="10" android:versionCode="449" android:versionName="1.14.0" package="net.funpodium.ns" platformBuildVersionCode="29" platformBuildVersionName="10" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="23" android:targetSdkVersion="29">
+</uses-sdk>
+<permission android:name="net.funpodium.ns.permission.JPUSH_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="net.funpodium.ns.permission.JPUSH_MESSAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_SMS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_SMS">
+</uses-permission>
+<uses-permission android:maxSdkVersion="25" android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW">
+</uses-permission>
+<uses-permission android:name="android.permission.BROADCAST_PACKAGE_ADDED">
+</uses-permission>
+<uses-permission android:name="android.permission.BROADCAST_PACKAGE_CHANGED">
+</uses-permission>
+<uses-permission android:name="android.permission.BROADCAST_PACKAGE_INSTALL">
+</uses-permission>
+<uses-permission android:name="android.permission.BROADCAST_PACKAGE_REPLACED">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-feature android:name="android.hardware.camera">
+</uses-feature>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_USER_PRESENT">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="net.funpodium.ns.permission.MIPUSH_RECEIVE">
+</uses-permission>
+<permission android:name="net.funpodium.ns.permission.MIPUSH_RECEIVE" android:protectionLevel="0x00000003">
+</permission>
+<uses-permission android:name="com.meizu.flyme.push.permission.RECEIVE">
+</uses-permission>
+<permission android:name="net.funpodium.ns.push.permission.MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="net.funpodium.ns.push.permission.MESSAGE">
+</uses-permission>
+<uses-permission android:name="com.meizu.c2dm.permission.RECEIVE">
+</uses-permission>
+<permission android:name="net.funpodium.ns.permission.C2D_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="net.funpodium.ns.permission.C2D_MESSAGE">
+</uses-permission>
+<uses-permission android:name="com.coloros.mcs.permission.RECIEVE_MCS_MESSAGE">
+</uses-permission>
+<uses-permission android:name="com.heytap.mcs.permission.RECIEVE_MCS_MESSAGE">
+</uses-permission>
+<uses-permission android:name="com.vivo.notification.permission.BADGE_ICON">
+</uses-permission>
+<application android:allowBackup="true" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:extractNativeLibs="false" android:icon="@7F0E0000" android:label="@7F100021" android:name="net.funpodium.ns.NSApplication" android:supportsRtl="true" android:theme="@7F110008" android:usesCleartextTraffic="true">
+<activity android:exported="true" android:launchMode="2" android:name="net.funpodium.ns.wxapi.WXEntryActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="net.funpodium.ns.view.settings.AboutUsWebViewActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="net.funpodium.ns.view.FeedbackActivity" android:screenOrientation="1">
+</activity>
+<uses-library android:name="org.apache.http.legacy" android:required="false">
+</uses-library>
+<activity android:launchMode="2" android:name="com.tencent.tauth.AuthActivity" android:noHistory="true">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="tecent1109803517">
+</data>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.tencent.connect.common.AssistActivity" android:screenOrientation="3" android:theme="@android:01030010">
+</activity>
+<activity android:exported="true" android:launchMode="2" android:name="net.funpodium.ns.ManufacturerChannelMessageActivity" android:screenOrientation="1">
+</activity>
+<meta-data android:name="com.vivo.push.api_key" android:value="e935f12e-cddd-4ad0-b97b-c43a66b69920">
+</meta-data>
+<meta-data android:name="com.vivo.push.app_id" android:value="20099">
+</meta-data>
+<meta-data android:name="com.huawei.hms.client.appid" android:value="appid=101117307">
+</meta-data>
+<receiver android:name="net.funpodium.ns.MeizuTestReceiver">
+<intent-filter>
+<action android:name="com.meizu.flyme.push.intent.MESSAGE">
+</action>
+<action android:name="com.meizu.flyme.push.intent.REGISTER.FEEDBACK">
+</action>
+<action android:name="com.meizu.flyme.push.intent.UNREGISTER.FEEDBACK">
+</action>
+<action android:name="com.meizu.c2dm.intent.REGISTRATION">
+</action>
+<action android:name="com.meizu.c2dm.intent.RECEIVE">
+</action>
+<category android:name="net.funpodium.ns">
+</category>
+</intent-filter>
+</receiver>
+<activity android:configChanges="0x000000A0" android:exported="true" android:name="cn.jpush.android.ui.PushActivity" android:theme="@android:01030006">
+<intent-filter>
+<action android:name="cn.jpush.android.ui.PushActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="net.funpodium.ns">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="true" android:name="cn.jpush.android.ui.PopWinActivity">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="cn.jpush.android.ui.PopWinActivity">
+</action>
+<category android:name="net.funpodium.ns">
+</category>
+</intent-filter>
+</activity>
+<receiver android:enabled="true" android:exported="true" android:name="net.funpodium.ns.JPushReceiver">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.REGISTRATION">
+</action>
+<action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED">
+</action>
+<action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED">
+</action>
+<action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED">
+</action>
+<action android:name="cn.jpush.android.intent.NOTIFICATION_CLICK_ACTION">
+</action>
+<action android:name="cn.jpush.android.intent.CONNECTION">
+</action>
+<category android:name="net.funpodium.ns">
+</category>
+</intent-filter>
+</receiver>
+<receiver android:enabled="true" android:exported="false" android:name="net.funpodium.ns.JMessageReceiver">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.RECEIVE_MESSAGE">
+</action>
+<category android:name="net.funpodium.ns">
+</category>
+</intent-filter>
+</receiver>
+<provider android:authorities="net.funpodium.ns.TTFileProvider" android:exported="false" android:grantUriPermissions="true" android:name="com.bytedance.sdk.openadsdk.TTFileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F130000">
+</meta-data>
+</provider>
+<provider android:authorities="net.funpodium.ns.TTFileProvider" android:exported="false" android:grantUriPermissions="true" android:name="com.bytedance.sdk.openadsdk.TTFileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F130000">
+</meta-data>
+</provider>
+<service android:enabled="true" android:exported="false" android:name="net.funpodium.ns.JService" android:process=":pushcore">
+<intent-filter>
+<action android:name="cn.jiguang.user.service.action">
+</action>
+</intent-filter>
+</service>
+<service android:exported="true" android:name="com.taobao.accs.ChannelService" android:process=":channel">
+<intent-filter>
+<action android:name="com.taobao.accs.intent.action.SERVICE">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="com.taobao.accs.intent.action.ELECTION">
+</action>
+</intent-filter>
+</service>
+<service android:exported="true" android:name="com.taobao.accs.data.MsgDistributeService">
+<intent-filter>
+<action android:name="com.taobao.accs.intent.action.RECEIVE">
+</action>
+</intent-filter>
+</service>
+<receiver android:name="com.taobao.accs.EventReceiver" android:process=":channel">
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_REMOVED">
+</action>
+<data android:scheme="package">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.USER_PRESENT">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name="com.taobao.accs.ServiceReceiver" android:process=":channel">
+<intent-filter>
+<action android:name="com.taobao.accs.intent.action.COMMAND">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="com.taobao.accs.intent.action.START_FROM_AGOO">
+</action>
+</intent-filter>
+</receiver>
+<service android:name="com.taobao.accs.internal.AccsJobService" android:permission="android.permission.BIND_JOB_SERVICE" android:process=":channel">
+</service>
+<service android:name="com.taobao.accs.ChannelService$KernelService" android:process=":channel">
+</service>
+<service android:exported="true" android:name="org.android.agoo.accs.AgooService">
+<intent-filter>
+<action android:name="com.taobao.accs.intent.action.RECEIVE">
+</action>
+</intent-filter>
+</service>
+<service android:exported="true" android:name="com.umeng.message.UmengIntentService" android:process=":channel">
+<intent-filter>
+<action android:name="org.agoo.android.intent.action.RECEIVE">
+</action>
+</intent-filter>
+</service>
+<service android:exported="true" android:name="com.umeng.message.XiaomiIntentService" android:process=":channel">
+<intent-filter>
+<action android:name="org.agoo.android.intent.action.RECEIVE">
+</action>
+</intent-filter>
+</service>
+<receiver android:exported="true" android:name="com.taobao.agoo.AgooCommondReceiver" android:process=":channel">
+<intent-filter>
+<action android:name="net.funpodium.ns.intent.action.COMMAND">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_REMOVED">
+</action>
+<data android:scheme="package">
+</data>
+</intent-filter>
+</receiver>
+<service android:exported="true" android:name="com.umeng.message.UmengMessageIntentReceiverService" android:process=":channel">
+<intent-filter>
+<action android:name="org.android.agoo.client.MessageReceiverService">
+</action>
+</intent-filter>
+</service>
+<receiver android:exported="false" android:name="com.umeng.message.NotificationProxyBroadcastReceiver">
+</receiver>
+<service android:exported="false" android:name="com.umeng.message.UmengMessageCallbackHandlerService" android:permission="android.permission.BIND_JOB_SERVICE">
+<intent-filter>
+<action android:name="com.umeng.messge.registercallback.action">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="com.umeng.message.enablecallback.action">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="com.umeng.message.disablecallback.action">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="com.umeng.message.message.handler.action">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="com.umeng.message.message.sendmessage.action">
+</action>
+</intent-filter>
+</service>
+<service android:exported="false" android:name="com.umeng.message.UmengDownloadResourceService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<provider android:authorities="net.funpodium.ns.umeng.message" android:exported="false" android:name="com.umeng.message.provider.MessageProvider">
+<grant-uri-permission android:pathPattern=".*">
+</grant-uri-permission>
+</provider>
+<service android:enabled="true" android:exported="true" android:name="net.funpodium.ns.view.media.MediaService">
+<intent-filter>
+<action android:name="android.media.browse.MediaBrowserService">
+</action>
+</intent-filter>
+</service>
+<activity android:name="net.funpodium.ns.view.advertise.AdsWebViewActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="net.funpodium.ns.view.advertise.FullscreenAdsActivity" android:screenOrientation="1" android:theme="@7F1100E7">
+</activity>
+<activity android:name="net.funpodium.ns.view.settings.AboutUsOptionsActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="net.funpodium.ns.view.user.setup.UserSetupActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="net.funpodium.ns.view.settings.DeleteAccountActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="net.funpodium.ns.view.ReportActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="net.funpodium.ns.view.article.WebViewShareActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name="net.funpodium.ns.view.settings.UserPrivacyProtectInstructionActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="net.funpodium.ns.view.forum.ForumReplyActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="net.funpodium.ns.view.forum.ForumArticlePageActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:name="net.funpodium.ns.view.forum.ForumPostActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="net.funpodium.ns.view.forum.ForumPostInstructionActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="net.funpodium.ns.view.settings.NotificationActivity" android:screenOrientation="1">
+</activity>
+<meta-data android:name="com.openinstall.APP_KEY" android:value="y346df">
+</meta-data>
+<provider android:authorities="net.funpodium.ns.fileprovider" android:exported="false" android:grantUriPermissions="true" android:name="androidx.core.content.FileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F130000">
+</meta-data>
+</provider>
+<receiver android:name="net.funpodium.ns.SMSListener">
+<intent-filter>
+<action android:name="android.provider.Telephony.SMS_RECEIVED">
+</action>
+</intent-filter>
+</receiver>
+<activity android:name="net.funpodium.ns.view.settings.InterestPreferencePickerActivity" android:parentActivityName="net.funpodium.ns.view.MainActivity" android:screenOrientation="1">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value="net.funpodium.ns.view.MainActivity">
+</meta-data>
+</activity>
+<activity android:launchMode="2" android:name="net.funpodium.ns.view.launch.LauncherActivity" android:screenOrientation="1" android:theme="@7F1100ED">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="y346df">
+</data>
+</intent-filter>
+<intent-filter>
+<data android:scheme="growing.ad13db7ef4915b37">
+</data>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+</intent-filter>
+<intent-filter>
+<data android:scheme="growing.87ace299a9d5e8c9">
+</data>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+</intent-filter>
+<intent-filter>
+<data android:scheme="growing.8fb91ba845ff8d04">
+</data>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+</intent-filter>
+<intent-filter>
+<data android:scheme="growing.ce2c14c494d65a1a">
+</data>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+</intent-filter>
+</activity>
+<activity android:launchMode="2" android:name="net.funpodium.ns.view.MainActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="net.funpodium.ns.view.registration.LoginActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="net.funpodium.ns.view.article.ArticlePageActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:name="net.funpodium.ns.view.settings.AboutPageActivity" android:parentActivityName="net.funpodium.ns.view.MainActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="net.funpodium.ns.view.match.detail.MatchPageActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="net.funpodium.ns.view.home.TopicListActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="net.funpodium.ns.view.article.CommentPageActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="net.funpodium.ns.view.statistic.TopPlayerListActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="net.funpodium.ns.view.entitypage.player.PlayerPageActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="net.funpodium.ns.view.entitypage.team.TeamPageActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="net.funpodium.ns.view.settings.profile.ProfileEditActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="net.funpodium.ns.view.article.WebViewActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="net.funpodium.ns.view.settings.AppConfigActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="net.funpodium.extension.tt.ads.TtFullscreenAdsFragment">
+</activity>
+<service android:name="com.ss.android.socialbase.downloader.notification.DownloadNotificationService">
+</service>
+<service android:name="com.ss.android.socialbase.downloader.downloader.DownloadService">
+</service>
+<service android:name="com.ss.android.socialbase.downloader.downloader.IndependentProcessDownloadService" android:process=":downloader">
+<intent-filter>
+<action android:name="com.ss.android.socialbase.downloader.remote">
+</action>
+</intent-filter>
+</service>
+<service android:name="com.ss.android.socialbase.downloader.impls.DownloadHandleService">
+</service>
+<service android:enabled="true" android:exported="true" android:name="com.ss.android.socialbase.downloader.impls.RetryJobSchedulerService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<service android:name="com.ss.android.socialbase.downloader.downloader.SqlDownloadCacheService">
+</service>
+<service android:name="com.ss.android.socialbase.appdownloader.DownloadHandlerService">
+</service>
+<activity android:launchMode="2" android:name="com.ss.android.socialbase.appdownloader.view.DownloadTaskDeleteActivity" android:theme="@android:0103000B">
+</activity>
+<activity android:launchMode="2" android:name="com.ss.android.socialbase.appdownloader.view.JumpUnknownSourceActivity" android:theme="@android:0103000B">
+</activity>
+<activity android:launchMode="2" android:name="com.ss.android.downloadlib.activity.TTDelegateActivity" android:theme="@android:01030010">
+</activity>
+<receiver android:name="com.ss.android.downloadlib.core.download.DownloadReceiver">
+</receiver>
+<activity android:configChanges="0x000004A0" android:launchMode="0" android:name="com.bytedance.sdk.openadsdk.activity.TTLandingPageActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="0" android:name="com.bytedance.sdk.openadsdk.activity.TTPlayableLandingPageActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="0" android:name="com.bytedance.sdk.openadsdk.activity.TTVideoLandingPageActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="0" android:name="com.bytedance.sdk.openadsdk.activity.TTRewardVideoActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="0" android:name="com.bytedance.sdk.openadsdk.activity.TTRewardExpressVideoActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="0" android:name="com.bytedance.sdk.openadsdk.activity.TTFullScreenVideoActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="0" android:name="com.bytedance.sdk.openadsdk.activity.TTFullScreenExpressVideoActivity">
+</activity>
+<activity android:launchMode="2" android:name="com.bytedance.sdk.openadsdk.activity.TTDelegateActivity" android:theme="@android:01030010">
+</activity>
+<service android:name="com.bytedance.sdk.openadsdk.multipro.aidl.BinderPoolService">
+</service>
+<receiver android:enabled="true" android:exported="true" android:name="com.bytedance.embedapplog.collector.Collector">
+</receiver>
+<service android:name="com.bytedance.tea.crash.upload.CrashUploadService" android:process=":npth">
+</service>
+<provider android:authorities="net.funpodium.ns.GrowingIOSettingsProvider" android:name="com.growingio.android.sdk.collection.GrowingIOSettingsProvider">
+</provider>
+<service android:enabled="true" android:exported="false" android:name="cn.jpush.android.service.PushService" android:process=":pushcore">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.REGISTER">
+</action>
+<action android:name="cn.jpush.android.intent.REPORT">
+</action>
+<action android:name="cn.jpush.android.intent.PushService">
+</action>
+<action android:name="cn.jpush.android.intent.PUSH_TIME">
+</action>
+</intent-filter>
+</service>
+<service android:enabled="true" android:exported="true" android:name="cn.jpush.android.service.DaemonService">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.DaemonService">
+</action>
+<category android:name="net.funpodium.ns">
+</category>
+</intent-filter>
+</service>
+<receiver android:enabled="true" android:exported="false" android:name="cn.jpush.android.service.PushReceiver">
+<intent-filter android:priority="1000">
+<action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY">
+</action>
+<category android:name="net.funpodium.ns">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.USER_PRESENT">
+</action>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_ADDED">
+</action>
+<action android:name="android.intent.action.PACKAGE_REMOVED">
+</action>
+<data android:scheme="package">
+</data>
+</intent-filter>
+</receiver>
+<receiver android:exported="false" android:name="cn.jpush.android.service.AlarmReceiver">
+</receiver>
+<receiver android:exported="false" android:name="cn.jpush.android.service.SchedulerReceiver">
+</receiver>
+<provider android:authorities="net.funpodium.ns.DataProvider" android:exported="false" android:name="cn.jpush.android.service.DataProvider" android:process=":pushcore">
+</provider>
+<provider android:authorities="net.funpodium.ns.DownloadProvider" android:exported="true" android:name="cn.jpush.android.service.DownloadProvider">
+</provider>
+<activity android:exported="true" android:name="cn.jpush.android.service.JNotifyActivity" android:taskAffinity="jpush.custom" android:theme="@android:01030010">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.JNotifyActivity">
+</action>
+<category android:name="net.funpodium.ns">
+</category>
+</intent-filter>
+</activity>
+<receiver android:name="cn.jpush.android.asus.AsusPushMessageReceiver">
+</receiver>
+<meta-data android:name="JPUSH_CHANNEL" android:value="developer-default">
+</meta-data>
+<meta-data android:name="JPUSH_APPKEY" android:value="975241181a352c0fa8173eec">
+</meta-data>
+<service android:enabled="true" android:name="com.xiaomi.push.service.XMPushService" android:process=":pushservice">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.xiaomi.push.service.XMJobService" android:permission="android.permission.BIND_JOB_SERVICE" android:process=":pushservice">
+</service>
+<service android:enabled="true" android:exported="true" android:name="com.xiaomi.mipush.sdk.PushMessageHandler">
+</service>
+<service android:enabled="true" android:name="com.xiaomi.mipush.sdk.MessageHandleService">
+</service>
+<receiver android:exported="true" android:name="com.xiaomi.push.service.receivers.NetworkStatusReceiver">
+<intent-filter>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</receiver>
+<receiver android:exported="false" android:name="com.xiaomi.push.service.receivers.PingReceiver" android:process=":pushservice">
+<intent-filter>
+<action android:name="com.xiaomi.push.PING_TIMER">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:exported="true" android:name="org.android.agoo.xiaomi.MiPushBroadcastReceiver">
+<intent-filter>
+<action android:name="com.xiaomi.mipush.RECEIVE_MESSAGE">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="com.xiaomi.mipush.MESSAGE_ARRIVED">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="com.xiaomi.mipush.ERROR">
+</action>
+</intent-filter>
+</receiver>
+<activity android:configChanges="0x40002484" android:excludeFromRecents="true" android:exported="false" android:hardwareAccelerated="true" android:name="com.huawei.hms.activity.BridgeActivity" android:theme="@android:0103000F">
+<meta-data android:name="hwc-theme" android:value="androidhwext:style/Theme.Emui.Translucent">
+</meta-data>
+</activity>
+<activity android:configChanges="0x40002484" android:excludeFromRecents="true" android:exported="false" android:hardwareAccelerated="true" android:name="com.huawei.android.hms.agent.common.HMSAgentActivity" android:theme="@android:0103000F">
+<meta-data android:name="hwc-theme" android:value="androidhwext:style/Theme.Emui.Translucent">
+</meta-data>
+</activity>
+<activity android:configChanges="0x00000480" android:exported="false" android:name="com.huawei.updatesdk.service.otaupdate.AppUpdateActivity" android:theme="@7F1102FB">
+<meta-data android:name="hwc-theme" android:value="androidhwext:style/Theme.Emui.Translucent.NoTitleBar">
+</meta-data>
+</activity>
+<activity android:configChanges="0x000004A0" android:exported="false" android:name="com.huawei.updatesdk.support.pm.PackageInstallerActivity" android:theme="@7F1102FB">
+<meta-data android:name="hwc-theme" android:value="androidhwext:style/Theme.Emui.Translucent">
+</meta-data>
+</activity>
+<receiver android:name="org.android.agoo.huawei.HuaweiPushReceiver">
+<intent-filter>
+<action android:name="com.huawei.android.push.intent.REGISTRATION">
+</action>
+<action android:name="com.huawei.android.push.intent.RECEIVE">
+</action>
+<action android:name="com.huawei.android.push.intent.CLICK">
+</action>
+<action android:name="com.huawei.intent.action.PUSH_STATE">
+</action>
+</intent-filter>
+</receiver>
+<service android:exported="false" android:name="com.huawei.updatesdk.service.deamon.download.DownloadService">
+</service>
+<service android:exported="true" android:name="com.meizu.cloud.pushsdk.NotificationService">
+</service>
+<receiver android:exported="false" android:name="com.meizu.cloud.pushsdk.SystemReceiver">
+<intent-filter>
+<action android:name="com.meizu.cloud.pushservice.action.PUSH_SERVICE_START">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</receiver>
+<service android:name="com.heytap.mcssdk.PushService" android:permission="com.coloros.mcs.permission.SEND_MCS_MESSAGE">
+<intent-filter>
+<action android:name="com.coloros.mcs.action.RECEIVE_MCS_MESSAGE">
+</action>
+</intent-filter>
+</service>
+<service android:name="com.heytap.mcssdk.AppPushService" android:permission="com.heytap.mcs.permission.SEND_MCS_MESSAGE">
+<intent-filter>
+<action android:name="com.heytap.mcs.action.RECEIVE_MCS_MESSAGE">
+</action>
+</intent-filter>
+</service>
+<service android:exported="true" android:name="com.vivo.push.sdk.service.CommandClientService">
+</service>
+<activity android:exported="true" android:name="com.vivo.push.sdk.LinkProxyClientActivity" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<receiver android:name="org.android.agoo.vivo.PushMessageReceiverImpl">
+<intent-filter>
+<action android:name="com.vivo.pushclient.action.RECEIVE">
+</action>
+</intent-filter>
+</receiver>
+<service android:exported="false" android:name="org.acra.sender.SenderService" android:permission="android.permission.BIND_JOB_SERVICE" android:process=":acra">
+</service>
+<provider android:authorities="net.funpodium.ns.acra" android:exported="false" android:grantUriPermissions="true" android:name="org.acra.attachment.AcraContentProvider" android:process=":acra">
+</provider>
+<provider android:authorities="net.funpodium.ns.lifecycle-process" android:exported="false" android:multiprocess="true" android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer">
+</provider>
+</application>
+</manifest>

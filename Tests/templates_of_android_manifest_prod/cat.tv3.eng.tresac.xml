@@ -1,0 +1,336 @@
+<?xml version="1.0" ?><manifest android:installLocation="2" android:versionCode="20190516" android:versionName="3.2.8" package="cat.tv3.eng.tresac" platformBuildVersionCode="27" platformBuildVersionName="8.1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="21" android:targetSdkVersion="26">
+</uses-sdk>
+<permission android:name="cat.tv3.eng.tresac.permission.A4S_SEND" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="cat.tv3.eng.tresac.permission.A4S_SEND">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<meta-data android:name="android.support.VERSION" android:value="25.3.0">
+</meta-data>
+<permission android:name="cat.tv3.eng.tresac.permission.C2D_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<permission android:name="cat.tv3.eng.tresac.provider.A4S_READ_DATABASE" android:protectionLevel="0x00000002">
+</permission>
+<permission android:name="cat.tv3.eng.tresac.provider.A4S_WRITE_DATABASE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="cat.tv3.eng.tresac.permission.C2D_MESSAGE">
+</uses-permission>
+<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE">
+</uses-permission>
+<uses-permission android:name="com.sec.android.provider.badge.permission.READ">
+</uses-permission>
+<uses-permission android:name="com.sec.android.provider.badge.permission.WRITE">
+</uses-permission>
+<uses-permission android:name="com.htc.launcher.permission.READ_SETTINGS">
+</uses-permission>
+<uses-permission android:name="com.htc.launcher.permission.UPDATE_SHORTCUT">
+</uses-permission>
+<uses-permission android:name="com.sonyericsson.home.permission.BROADCAST_BADGE">
+</uses-permission>
+<uses-permission android:name="com.sonymobile.home.permission.PROVIDER_INSERT_BADGE">
+</uses-permission>
+<uses-permission android:name="com.anddoes.launcher.permission.UPDATE_COUNT">
+</uses-permission>
+<uses-permission android:name="com.majeur.launcher.permission.UPDATE_BADGE">
+</uses-permission>
+<uses-permission android:name="com.huawei.android.launcher.permission.CHANGE_BADGE">
+</uses-permission>
+<uses-permission android:name="com.huawei.android.launcher.permission.READ_SETTINGS">
+</uses-permission>
+<uses-permission android:name="com.huawei.android.launcher.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_APP_BADGE">
+</uses-permission>
+<uses-permission android:name="com.oppo.launcher.permission.READ_SETTINGS">
+</uses-permission>
+<uses-permission android:name="com.oppo.launcher.permission.WRITE_SETTINGS">
+</uses-permission>
+<application android:allowBackup="true" android:icon="@7F030001" android:label="@7F0A0104" android:name="cat.ccma.tv3.TV3Application" android:networkSecurityConfig="@7F080000" android:supportsRtl="true" android:theme="@7F0C0069">
+<receiver android:name="cat.ccma.tv3.service.PushHandler" android:permission="cat.tv3.eng.tresac.permission.A4S_SEND">
+<intent-filter>
+<action android:name="com.ad4screen.sdk.intent.action.CLICKED">
+</action>
+<category android:name="com.ad4screen.sdk.intent.category.PUSH_NOTIFICATIONS">
+</category>
+<category android:name="com.ad4screen.sdk.intent.category.INAPP_NOTIFICATIONS">
+</category>
+</intent-filter>
+</receiver>
+<activity android:label="@7F0A0104" android:launchMode="1" android:name="cat.ccma.tv3.view.activities.SplashActivity" android:theme="@7F0C006B">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x00000480" android:label="@7F0A0104" android:launchMode="2" android:name="cat.ccma.tv3.view.activities.MainActivity" android:theme="@7F0C0069">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="programa" android:scheme="tv3">
+</data>
+<data android:host="video" android:scheme="tv3">
+</data>
+<data android:host="directe" android:scheme="tv3">
+</data>
+<data android:host="i" android:scheme="tv3">
+</data>
+</intent-filter>
+</activity>
+<activity android:label="@7F0A0104" android:name="cat.ccma.tv3.view.activities.DetailActivity" android:theme="@7F0C0069">
+</activity>
+<activity android:label="@7F0A0104" android:name="cat.ccma.tv3.view.activities.ShowDetailActivity" android:theme="@7F0C0069">
+</activity>
+<activity android:label="@7F0A0182" android:name="cat.ccma.tv3.view.activities.SettingsDetailActivity" android:theme="@7F0C0069">
+</activity>
+<activity android:name="cat.ccma.tv3.view.activities.SearchActivity" android:theme="@7F0C0069">
+</activity>
+<activity android:label="@7F0A015D" android:name="cat.ccma.tv3.view.activities.LoginActivity">
+</activity>
+<activity android:label="@7F0A015C" android:name="cat.ccma.tv3.view.activities.SettingsActivity" android:theme="@7F0C0069">
+</activity>
+<activity android:name="cat.ccma.tv3.view.activities.WebViewActivity" android:theme="@7F0C0069">
+</activity>
+<service android:exported="false" android:name="cat.ccma.tv3.service.MyAccengageMessagingService">
+<intent-filter>
+<action android:name="com.google.firebase.MESSAGING_EVENT">
+</action>
+</intent-filter>
+</service>
+<meta-data android:name="io.fabric.ApiKey" android:value="96c06083963183ec6a85b22d7711fd16311d2ef1">
+</meta-data>
+<meta-data android:name="com.google.firebase.messaging.default_notification_channel_id" android:value="@7F0A0114">
+</meta-data>
+<provider android:authorities="cat.tv3.eng.tresac.crashlyticsinitprovider" android:exported="false" android:initOrder="90" android:name="com.crashlytics.android.CrashlyticsInitProvider">
+</provider>
+<receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementReceiver">
+</receiver>
+<receiver android:enabled="true" android:exported="true" android:name="com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver" android:permission="android.permission.INSTALL_PACKAGES">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementService">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementJobService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<meta-data android:name="com.google.android.gms.version" android:value="@7F0E0008">
+</meta-data>
+<activity android:configChanges="0x000000A0" android:name="cat.tv3.mvp.view.activity.MVPFSActivity" android:screenOrientation="0" android:theme="@7F0C0167">
+<intent-filter>
+<data android:host="mvp.tv3.cat" android:scheme="http">
+</data>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000024A0" android:name="cat.tv3.mvp.view.activity.PortraitMVPActivity" android:theme="@7F0C015A">
+<intent-filter>
+<data android:host="mvp.tv3.cat" android:scheme="http">
+</data>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+</intent-filter>
+</activity>
+<service android:description="@7F0A0197" android:enabled="true" android:exported="false" android:label="@7F0A0174" android:name="cat.tv3.mvp.players.audio.services.MVPAudioMediaPlayerClientInterface" android:stopWithTask="false">
+</service>
+<receiver android:enabled="true" android:exported="false" android:name="cat.tv3.mvp.players.audio.receivers.MVPAudioMediaPlayerReceiver">
+</receiver>
+<meta-data android:name="com.google.android.gms.cast.framework.OPTIONS_PROVIDER_CLASS_NAME" android:value="cat.tv3.mvp.players.cast.CastOptionsProvider">
+</meta-data>
+<receiver android:enabled="true" android:exported="false" android:name="cat.tv3.mvp.players.cast.CastMediaIntentReceiver">
+</receiver>
+<receiver android:name="com.google.android.gms.cast.framework.media.MediaIntentReceiver">
+</receiver>
+<service android:name="com.google.android.gms.cast.framework.media.MediaNotificationService">
+</service>
+<service android:name="com.google.android.gms.cast.framework.ReconnectionService">
+</service>
+<activity android:name="com.worldline.t21customtabs.WebViewActivity" android:theme="@7F0C0114">
+</activity>
+<activity android:configChanges="0x00000D80" android:name="com.smartadserver.android.library.ui.SASInterstitialActivity" android:theme="@7F0C0117">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.mopub.common.privacy.ConsentDialogActivity">
+</activity>
+<activity android:name="com.applovin.adview.AppLovinConfirmationActivity">
+</activity>
+<activity android:configChanges="0x00000FB0" android:exported="false" android:name="com.google.android.gms.ads.AdActivity" android:theme="@android:0103000F">
+</activity>
+<service android:exported="false" android:name="cat.ccma.ccmapush.service.MyFirebaseInstanceIDService">
+<intent-filter>
+<action android:name="com.google.firebase.INSTANCE_ID_EVENT">
+</action>
+</intent-filter>
+</service>
+<service android:exported="false" android:name="cat.ccma.ccmapush.service.RegistrationIntentService">
+</service>
+<receiver android:name="com.ad4screen.sdk.A4SLocationReceiver" android:process=":A4SService">
+<intent-filter>
+<action android:name="android.location.PROVIDERS_CHANGED">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</receiver>
+<receiver android:name="com.ad4screen.sdk.GeofencingReceiver">
+<intent-filter>
+<action android:name="com.ad4screen.sdk.geofence.TRANSITION">
+</action>
+<category android:name="cat.tv3.eng.tresac">
+</category>
+</intent-filter>
+</receiver>
+<activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:01030010">
+</activity>
+<service android:exported="false" android:name="com.ad4screen.sdk.RefreshTokenService">
+<intent-filter>
+<action android:name="com.google.firebase.INSTANCE_ID_EVENT">
+</action>
+</intent-filter>
+</service>
+<service android:name="com.ad4screen.sdk.plugins.fcm.FcmMessageListenerService">
+<intent-filter>
+<action android:name="com.google.firebase.MESSAGING_EVENT">
+</action>
+</intent-filter>
+</service>
+<receiver android:exported="true" android:name="com.ad4screen.sdk.ReferrerHandler">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+<activity android:name="com.ad4screen.sdk.A4SPopup" android:taskAffinity="" android:theme="@7F0C0052">
+</activity>
+<activity android:configChanges="0x000004B0" android:name="com.ad4screen.sdk.A4SInterstitial" android:theme="@7F0C0051">
+</activity>
+<receiver android:exported="true" android:name="com.ad4screen.sdk.A4SIDFVHandler">
+<intent-filter>
+<action android:name="com.ad4screen.sdk.intent.action.QUERY">
+</action>
+<category android:name="com.ad4screen.sdk.intent.category.ANONYM_ID">
+</category>
+</intent-filter>
+</receiver>
+<provider android:authorities="cat.tv3.eng.tresac.ad4screen.provider" android:name="com.ad4screen.sdk.provider.A4SProvider" android:process=":A4SService" android:readPermission="cat.tv3.eng.tresac.provider.A4S_READ_DATABASE" android:writePermission="cat.tv3.eng.tresac.provider.A4S_WRITE_DATABASE">
+</provider>
+<provider android:authorities="cat.tv3.eng.tresac.acccrashappprovider" android:exported="false" android:name="com.ad4screen.sdk.service.modules.crash.CrashLogAppProvider">
+</provider>
+<provider android:authorities="cat.tv3.eng.tresac.acccrashsdkprovider" android:exported="false" android:name="com.ad4screen.sdk.service.modules.crash.CrashLogSdkProvider" android:process=":A4SService">
+</provider>
+<receiver android:name="com.ad4screen.sdk.NotificationActionsReceiver" android:process=":A4SService">
+<intent-filter>
+<action android:name="com.ad4screen.sdk.notification.CLICK">
+</action>
+<action android:name="com.ad4screen.sdk.notification.action.CLICK">
+</action>
+<category android:name="cat.tv3.eng.tresac">
+</category>
+</intent-filter>
+</receiver>
+<service android:name="com.ad4screen.sdk.service.modules.crash.CrashLogJobIntentService" android:permission="android.permission.BIND_JOB_SERVICE" android:process=":A4SService">
+</service>
+<receiver android:name="com.ad4screen.sdk.NotificationDismissReceiver" android:process=":A4SService">
+<intent-filter>
+<action android:name="com.ad4screen.sdk.notification.action.DISMISS">
+</action>
+<category android:name="cat.tv3.eng.tresac">
+</category>
+</intent-filter>
+</receiver>
+<service android:name="com.ad4screen.sdk.service.ActivityLifecycleListenerService">
+</service>
+<service android:name="com.ad4screen.sdk.AccLocalNotificationListenerService">
+</service>
+<service android:label="A4S Service" android:name="com.ad4screen.sdk.A4SService" android:process=":A4SService">
+<meta-data android:name="com.ad4screen.partnerid" android:value="@7F0A00DC">
+</meta-data>
+<meta-data android:name="com.ad4screen.privatekey" android:value="@7F0A00DD">
+</meta-data>
+<meta-data android:name="com.ad4screen.senderid" android:value="@7F0A00DF">
+</meta-data>
+<meta-data android:name="com.accengage.pushoptin" android:value="@7F0A00DE">
+</meta-data>
+<meta-data android:name="com.accengage.optindata" android:value="@7F0A00DB">
+</meta-data>
+<meta-data android:name="com.ad4screen.logging" android:value="@7F0A00D7">
+</meta-data>
+<meta-data android:name="com.ad4screen.no_geoloc" android:value="@7F0A00D8">
+</meta-data>
+<meta-data android:name="com.ad4screen.idsprovider" android:value="@7F0A00D5">
+</meta-data>
+<meta-data android:name="com.ad4screen.debuggable" android:value="@7F0A00D2">
+</meta-data>
+<meta-data android:name="com.ad4screen.usbstorage" android:value="@7F0A00E2">
+</meta-data>
+<meta-data android:name="com.ad4screen.advertiser_id" android:value="@7F0A009A">
+</meta-data>
+<meta-data android:name="com.ad4screen.notifications.icon" android:value="@7F0A00DA">
+</meta-data>
+<meta-data android:name="com.ad4screen.notifications.accent_color" android:value="@7F0A00D9">
+</meta-data>
+<meta-data android:name="com.ad4screen.webview.script_url" android:value="@7F0A00E3">
+</meta-data>
+<meta-data android:name="com.ad4screen.location.priority" android:value="@7F0A00D6">
+</meta-data>
+<meta-data android:name="com.ad4screen.tracking_mode" android:value="@7F0A00E0">
+</meta-data>
+<meta-data android:name="com.ad4screen.cache.delay" android:value="@7F0A009B">
+</meta-data>
+<meta-data android:name="com.ad4screen.unsecurepush" android:value="@7F0A00E1">
+</meta-data>
+</service>
+<service android:exported="true" android:name="com.google.firebase.messaging.FirebaseMessagingService">
+<intent-filter android:priority="-500">
+<action android:name="com.google.firebase.MESSAGING_EVENT">
+</action>
+</intent-filter>
+</service>
+<receiver android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+<category android:name="cat.tv3.eng.tresac">
+</category>
+</intent-filter>
+</receiver>
+<receiver android:exported="false" android:name="com.google.firebase.iid.FirebaseInstanceIdInternalReceiver">
+</receiver>
+<service android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdService">
+<intent-filter android:priority="-500">
+<action android:name="com.google.firebase.INSTANCE_ID_EVENT">
+</action>
+</intent-filter>
+</service>
+<provider android:authorities="cat.tv3.eng.tresac.firebaseinitprovider" android:exported="false" android:initOrder="100" android:name="com.google.firebase.provider.FirebaseInitProvider">
+</provider>
+</application>
+</manifest>

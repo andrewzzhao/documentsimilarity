@@ -1,0 +1,410 @@
+<?xml version="1.0" ?><manifest android:versionCode="61" android:versionName="3.8.0" package="com.qorosauto.qorosqloud" platformBuildVersionCode="25" platformBuildVersionName="7.1.1" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="14" android:targetSdkVersion="25">
+</uses-sdk>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_CONFIGURATION">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.CALL_PHONE">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_CONTACTS">
+</uses-permission>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-permission android:name="android.permission.FLASHLIGHT">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.RECORD_AUDIO">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_LOGS">
+</uses-permission>
+<permission android:name="com.qorosauto.qorosqloud.permission.JPUSH_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="com.qorosauto.qorosqloud.permission.JPUSH_MESSAGE">
+</uses-permission>
+<application android:allowBackup="true" android:hardwareAccelerated="true" android:icon="@7F030000" android:label="@7F08009F" android:name="com.qorosauto.qorosqloud.QorosApplication" android:supportsRtl="true" android:theme="@7F0A00A4">
+<meta-data android:name="com.amap.api.v2.apikey" android:value="19a3e376b87290bcde582bcfd46e3838">
+</meta-data>
+<meta-data android:name="JPUSH_CHANNEL" android:value="developer-default">
+</meta-data>
+<meta-data android:name="JPUSH_APPKEY" android:value="e1c20f0cf06deb712f1cec4d">
+</meta-data>
+<meta-data android:name="UMENG_APPKEY" android:value="53ce2e2a56240b332c0216a6">
+</meta-data>
+<meta-data android:name="UMENG_CHANNEL" android:value="tenxun">
+</meta-data>
+<meta-data android:name="BaiduMobAd_CHANNEL" android:value="tenxun">
+</meta-data>
+<meta-data android:name="BaiduMobAd_STAT_ID" android:value="dbdb7e4ba8">
+</meta-data>
+<service android:name="com.amap.api.location.APSService">
+</service>
+<service android:enabled="true" android:exported="false" android:name="cn.jpush.android.service.PushService">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.REGISTER">
+</action>
+<action android:name="cn.jpush.android.intent.REPORT">
+</action>
+<action android:name="cn.jpush.android.intent.PushService">
+</action>
+<action android:name="cn.jpush.android.intent.PUSH_TIME">
+</action>
+</intent-filter>
+</service>
+<service android:enabled="true" android:exported="true" android:name="cn.jpush.android.service.DaemonService">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.DaemonService">
+</action>
+<category android:name="com.qorosauto.qorosqloud">
+</category>
+</intent-filter>
+</service>
+<receiver android:enabled="true" android:exported="false" android:name="cn.jpush.android.service.PushReceiver">
+<intent-filter android:priority="1000">
+<action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY">
+</action>
+<category android:name="com.qorosauto.qorosqloud">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.USER_PRESENT">
+</action>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_ADDED">
+</action>
+<action android:name="android.intent.action.PACKAGE_REMOVED">
+</action>
+<data android:scheme="package">
+</data>
+</intent-filter>
+</receiver>
+<activity android:configChanges="0x000000A0" android:exported="false" android:name="cn.jpush.android.ui.PushActivity">
+<intent-filter>
+<action android:name="cn.jpush.android.ui.PushActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="com.qorosauto.qorosqloud">
+</category>
+</intent-filter>
+</activity>
+<service android:enabled="true" android:exported="false" android:name="cn.jpush.android.service.DownloadService">
+</service>
+<receiver android:name="cn.jpush.android.service.AlarmReceiver">
+</receiver>
+<receiver android:enabled="true" android:name="com.qorosauto.qorosqloud.jpush.JPushReceiver">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.REGISTRATION">
+</action>
+<action android:name="cn.jpush.android.intent.UNREGISTRATION">
+</action>
+<action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED">
+</action>
+<action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED">
+</action>
+<action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED">
+</action>
+<action android:name="cn.jpush.android.intent.ACTION_RICHPUSH_CALLBACK">
+</action>
+<action android:name="cn.jpush.android.intent.CONNECTION">
+</action>
+<category android:name="com.qorosauto.qorosqloud">
+</category>
+</intent-filter>
+</receiver>
+<activity android:label="@7F08009F" android:name="com.qorosauto.qorosqloud.ui.ActivitySplash" android:screenOrientation="1" android:theme="@7F0A00A7">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:label="@7F08009F" android:name="com.qorosauto.qorosqloud.ui.ActivityLogin" android:screenOrientation="1" android:theme="@7F0A00A7" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:name="com.qorosauto.qorosqloud.ui.welcome.AccountConfigurationActivity" android:screenOrientation="1" android:theme="@7F0A003C">
+</activity>
+<activity android:name="com.qorosauto.qorosqloud.ui.welcome.ActivityWelcome" android:screenOrientation="1" android:theme="@7F0A003C">
+</activity>
+<activity android:name="com.qorosauto.qorosqloud.ui.welcome.ActivityWelcomeFirst" android:screenOrientation="1" android:theme="@7F0A003C">
+</activity>
+<activity android:name="com.qorosauto.qorosqloud.ui.welcome.ActivityWelcomeNickname" android:screenOrientation="1" android:theme="@7F0A003C" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:name="com.qorosauto.qorosqloud.ui.welcome.ActivityWelcomeEmail" android:screenOrientation="1" android:theme="@7F0A003C" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:name="com.qorosauto.qorosqloud.ui.welcome.ActivityWelcomeBirthday" android:screenOrientation="1" android:theme="@7F0A003C" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:name="com.qorosauto.qorosqloud.ui.welcome.ActivityWelcomeFriendCircle" android:screenOrientation="1" android:theme="@7F0A003C" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:name="com.qorosauto.qorosqloud.ui.welcome.ActivityWelcomeLocation" android:screenOrientation="1" android:theme="@7F0A003C" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:name="com.qorosauto.qorosqloud.ui.welcome.ActivityWelcomeFriendRank" android:screenOrientation="1" android:theme="@7F0A003C" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:name="com.qorosauto.qorosqloud.ui.welcome.ActivityWelcomeSex" android:screenOrientation="1" android:theme="@7F0A003C" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:name="com.qorosauto.qorosqloud.ui.welcome.ActivityWelcomeHeadIcon" android:screenOrientation="1" android:theme="@7F0A003C" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:name="com.qorosauto.qorosqloud.ui.welcome.ActivityWelcomeSetDoing" android:screenOrientation="1" android:theme="@7F0A003C" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:name="com.qorosauto.qorosqloud.ui.welcome.ActivityWelcomeSetCompleted" android:screenOrientation="1" android:theme="@7F0A003C" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:name="com.qorosauto.qorosqloud.ui.welcome.ActivityWelcomeCongratulation" android:screenOrientation="1" android:theme="@7F0A003C" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:name="com.qorosauto.qorosqloud.ui.welcome.ActivityWelcomeSetCompletedFlash" android:screenOrientation="1" android:theme="@7F0A003C" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:label="@7F08009F" android:name="com.qorosauto.qorosqloud.ui.dashboard.ActivityMain" android:screenOrientation="1" android:theme="@7F0A00A7">
+</activity>
+<activity android:label="@7F080475" android:name="com.qorosauto.qorosqloud.ui.mycar.ActivityNewCost" android:screenOrientation="1" android:theme="@7F0A003C">
+</activity>
+<activity android:label="@7F080475" android:name="com.qorosauto.qorosqloud.ui.navigation.ActivityRoutePlan" android:screenOrientation="1" android:theme="@7F0A003C" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:label="@7F08047F" android:name="com.qorosauto.qorosqloud.ui.mycar.ActivityTyrePressure" android:screenOrientation="1" android:theme="@7F0A003C">
+</activity>
+<activity android:label="@7F08045A" android:name="com.qorosauto.qorosqloud.ui.mycar.ActivityCarInfo" android:screenOrientation="1" android:theme="@7F0A003C">
+</activity>
+<activity android:label="@7F08047C" android:name="com.qorosauto.qorosqloud.ui.mycar.ActivitySeatBeltReminder" android:screenOrientation="1" android:theme="@7F0A003C">
+</activity>
+<activity android:label="@7F08046F" android:name="com.qorosauto.qorosqloud.ui.mycar.ActivityMaintenanceReservation" android:screenOrientation="1" android:theme="@7F0A003C" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:label="@7F080478" android:name="com.qorosauto.qorosqloud.ui.mycar.ActivityProblemSymptom" android:screenOrientation="1" android:theme="@7F0A003C">
+</activity>
+<activity android:label="@7F08046E" android:name="com.qorosauto.qorosqloud.ui.mycar.ActivityMaintenanceRecord" android:screenOrientation="1" android:theme="@7F0A003C">
+</activity>
+<activity android:label="@7F08045B" android:name="com.qorosauto.qorosqloud.ui.mycar.ActivityCarLocation" android:screenOrientation="1" android:theme="@7F0A003C">
+</activity>
+<activity android:label="@7F080467" android:name="com.qorosauto.qorosqloud.ui.mycar.ActivityGeoFencing" android:screenOrientation="1" android:theme="@7F0A003C">
+</activity>
+<activity android:label="@7F080470" android:name="com.qorosauto.qorosqloud.ui.mycar.ActivityMaintenanceStatus" android:screenOrientation="1" android:theme="@7F0A003C">
+</activity>
+<activity android:label="@7F080462" android:name="com.qorosauto.qorosqloud.ui.mycar.ActivityEvaluate" android:screenOrientation="1" android:theme="@7F0A003C">
+</activity>
+<activity android:label="@7F08046D" android:name="com.qorosauto.qorosqloud.ui.mycar.ActivityMaintenanceDetail" android:screenOrientation="1" android:theme="@7F0A003C">
+</activity>
+<activity android:label="@7F08047D" android:name="com.qorosauto.qorosqloud.ui.mycar.ActivitySelectDealer" android:screenOrientation="1" android:theme="@7F0A003C">
+</activity>
+<activity android:label="@7F080475" android:name="com.qorosauto.qorosqloud.ui.navigation.ActivityFavorites" android:screenOrientation="1" android:theme="@7F0A003C" android:windowSoftInputMode="0x00000030">
+</activity>
+<activity android:label="@7F080482" android:name="com.qorosauto.qorosqloud.ui.setting.ActivityUserSetting" android:screenOrientation="1" android:theme="@7F0A003C">
+</activity>
+<activity android:label="@7F080475" android:name="com.qorosauto.qorosqloud.ui.setting.ActivityCarSetting" android:screenOrientation="1" android:theme="@7F0A003C">
+</activity>
+<activity android:label="@7F080475" android:name="com.qorosauto.qorosqloud.ui.setting.ActivityPrivacySetting" android:screenOrientation="1" android:theme="@7F0A003C">
+</activity>
+<receiver android:name="com.qorosauto.qorosqloud.receiver.NetworkStatusReceiver">
+<intent-filter>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+</receiver>
+<activity android:label="@7F080468" android:name="com.qorosauto.qorosqloud.ui.social.ActivityGroup" android:screenOrientation="1" android:theme="@7F0A003C">
+</activity>
+<activity android:label="@7F080476" android:name="com.qorosauto.qorosqloud.ui.social.ActivitySendFriendMessage" android:screenOrientation="1" android:theme="@7F0A003C" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:label="@7F080460" android:name="com.qorosauto.qorosqloud.ui.social.ActivityCreateGroup" android:screenOrientation="1" android:theme="@7F0A003C" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:label="@7F08045F" android:name="com.qorosauto.qorosqloud.ui.social.ActivityCreateEvent" android:screenOrientation="1" android:theme="@7F0A003C" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:name="com.qorosauto.qorosqloud.ui.social.ActivityGroupInvite" android:screenOrientation="1" android:theme="@7F0A003C">
+</activity>
+<activity android:name="com.qorosauto.qorosqloud.ui.social.ActivityEventInvite" android:screenOrientation="1" android:theme="@7F0A003C">
+</activity>
+<activity android:name="com.qorosauto.qorosqloud.ui.social.ActivityEventDetail" android:screenOrientation="1" android:theme="@7F0A003C">
+</activity>
+<activity android:label="@7F080463" android:name="com.qorosauto.qorosqloud.ui.social.ActivityEventEdit" android:screenOrientation="1" android:theme="@7F0A003C">
+</activity>
+<activity android:name="com.qorosauto.qorosqloud.ui.navigation.ActivityEditDestName" android:screenOrientation="1" android:theme="@7F0A003C" android:windowSoftInputMode="0x00000014">
+</activity>
+<activity android:name="com.qorosauto.qorosqloud.ui.setting.ActivityPassword" android:screenOrientation="1" android:theme="@7F0A003C">
+</activity>
+<activity android:name="com.qorosauto.qorosqloud.ui.setting.ActivityChangeMobile" android:screenOrientation="1" android:theme="@7F0A003C">
+</activity>
+<activity android:name="com.qorosauto.qorosqloud.ui.social.ActivityJoinGroup" android:screenOrientation="1" android:theme="@7F0A003C">
+</activity>
+<activity android:name="com.qorosauto.qorosqloud.ui.setting.ActivityServiceOrders" android:screenOrientation="1" android:theme="@7F0A003C">
+</activity>
+<activity android:name="com.qorosauto.qorosqloud.ui.social.ActivityPhoto" android:screenOrientation="1" android:theme="@7F0A003C">
+</activity>
+<activity android:label="@7F080459" android:name="com.qorosauto.qorosqloud.ui.social.ActivityAlbum" android:screenOrientation="1" android:theme="@7F0A003C">
+</activity>
+<activity android:label="@7F08046A" android:name="com.qorosauto.qorosqloud.ui.social.ActivityFriendDetail" android:screenOrientation="1" android:theme="@7F0A003C">
+</activity>
+<activity android:label="@7F08045E" android:name="com.qorosauto.qorosqloud.ui.navigation.ActivityChooseCity" android:screenOrientation="1" android:theme="@7F0A003C">
+</activity>
+<activity android:label="@7F080471" android:name="com.qorosauto.qorosqloud.ui.navigation.ActivityMapSetting" android:screenOrientation="1" android:theme="@7F0A003C">
+</activity>
+<activity android:label="@7F08045D" android:name="com.qorosauto.qorosqloud.ui.setting.ActivityChooseCar" android:screenOrientation="1" android:theme="@7F0A003C">
+</activity>
+<activity android:name="com.qorosauto.qorosqloud.ui.social.ActivityMessage" android:screenOrientation="1" android:theme="@7F0A003C">
+</activity>
+<activity android:label="@7F080465" android:name="com.qorosauto.qorosqloud.ui.social.ActivityFriendList" android:screenOrientation="1" android:theme="@7F0A003C">
+</activity>
+<activity android:label="@7F080472" android:name="com.qorosauto.qorosqloud.ui.social.ActivityMessageList" android:screenOrientation="1" android:theme="@7F0A003C">
+</activity>
+<activity android:name="com.qorosauto.qorosqloud.ui.mycar.ActivityDealerDetail" android:screenOrientation="1" android:theme="@7F0A003C">
+</activity>
+<activity android:label="@7F080472" android:name="com.qorosauto.qorosqloud.ui.acheivement.ActivityNewEcoPointList" android:screenOrientation="1" android:theme="@7F0A003C">
+</activity>
+<activity android:label="@7F080472" android:name="com.qorosauto.qorosqloud.ui.navigation.ActivitySaveRouteSuc" android:screenOrientation="1" android:theme="@7F0A003C">
+</activity>
+<activity android:name="com.qorosauto.qorosqloud.ui.navigation.ActivityParkDetail" android:screenOrientation="1" android:theme="@7F0A003C">
+</activity>
+<activity android:name="com.qorosauto.qorosqloud.ui.navigation.ActivityPoiDetail" android:screenOrientation="1" android:theme="@7F0A003C">
+</activity>
+<activity android:name="com.qorosauto.qorosqloud.ui.acheivement.ActivityEcoRank" android:screenOrientation="1" android:theme="@7F0A003C">
+</activity>
+<activity android:name="com.qorosauto.qorosqloud.ui.acheivement.ActivityCoinDetail" android:screenOrientation="1" android:theme="@7F0A003C">
+</activity>
+<activity android:name="com.qorosauto.qorosqloud.ui.message.MessageTypeListActivity" android:screenOrientation="1" android:theme="@7F0A003C">
+</activity>
+<activity android:name="com.qorosauto.qorosqloud.ui.account.ActivityAccount" android:screenOrientation="1" android:theme="@7F0A003C" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:name="com.qorosauto.qorosqloud.ui.secondverify.ActivitySecondVerification" android:screenOrientation="1" android:theme="@7F0A003C" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:name="com.qorosauto.qorosqloud.ui.account.ActivityVINScan" android:screenOrientation="1" android:theme="@7F0A003C">
+</activity>
+<activity android:name="com.qorosauto.qorosqloud.ui.setting.ActivityQRScan" android:screenOrientation="1" android:theme="@7F0A003C">
+</activity>
+<activity android:name="com.qorosauto.qorosqloud.ui.setting.ActivityScanResult" android:screenOrientation="1" android:theme="@7F0A003C">
+</activity>
+<activity android:name="com.qorosauto.qorosqloud.ui.social.ActivitySearchFriend" android:screenOrientation="1" android:theme="@7F0A003C" android:windowSoftInputMode="0x00000014">
+</activity>
+<activity android:label="@7F080516" android:name="com.qorosauto.qorosqloud.ui.acheivement.ActivityAllBadge" android:screenOrientation="1" android:theme="@7F0A003C">
+</activity>
+<activity android:label="@7F080480" android:name="com.qorosauto.qorosqloud.ui.social.ActivityUpdateGroup" android:screenOrientation="1" android:theme="@7F0A003C">
+</activity>
+<activity android:label="@7F080480" android:name="com.qorosauto.qorosqloud.ui.livechat.ActivityAssistance" android:theme="@7F0A003C" android:windowSoftInputMode="0x00000011">
+</activity>
+<activity android:label="@7F080476" android:name="com.qorosauto.qorosqloud.ui.social.ActivitySendGroupMessage" android:screenOrientation="1" android:theme="@7F0A003C" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:name="com.qorosauto.qorosqloud.ui.social.ActivityGroupInviteResult" android:screenOrientation="1" android:theme="@7F0A003C">
+</activity>
+<activity android:label="@7F08046A" android:name="com.qorosauto.qorosqloud.ui.social.ActivityMemberDetailForOwner" android:screenOrientation="1" android:theme="@7F0A003C">
+</activity>
+<activity android:label="@7F08046A" android:name="com.qorosauto.qorosqloud.ui.social.ActivityMemberDetailForMember" android:screenOrientation="1" android:theme="@7F0A003C">
+</activity>
+<activity android:label="@7F080456" android:name="com.qorosauto.qorosqloud.ui.social.ActivityAccedingGroup" android:screenOrientation="1" android:theme="@7F0A003C">
+</activity>
+<activity android:name="com.qorosauto.qorosqloud.ui.acheivement.ActivityMyBadges" android:screenOrientation="1" android:theme="@7F0A003C">
+</activity>
+<activity android:name="com.qorosauto.qorosqloud.ui.acheivement.ActivityBadgeToGet" android:screenOrientation="1" android:theme="@7F0A003C">
+</activity>
+<activity android:name="com.qorosauto.qorosqloud.ui.ActivityWebView" android:screenOrientation="1" android:theme="@7F0A003C">
+</activity>
+<activity android:name="com.qorosauto.qorosqloud.ui.ActivityFullWebView" android:screenOrientation="1" android:theme="@7F0A003C">
+</activity>
+<activity android:name="com.qorosauto.qorosqloud.ui.ActivityGameView" android:screenOrientation="1" android:theme="@7F0A003C">
+</activity>
+<activity android:name="com.qorosauto.qorosqloud.ui.market.ActivityQoinDetailList" android:screenOrientation="1" android:theme="@7F0A003C">
+</activity>
+<activity android:label="@7F080518" android:name="com.qorosauto.qorosqloud.ui.market.ActivityPremiunServiceDetail" android:screenOrientation="1" android:theme="@7F0A003C">
+</activity>
+<activity android:label="@7F080517" android:name="com.qorosauto.qorosqloud.ui.market.ActivityHowToRedeem" android:screenOrientation="1" android:theme="@7F0A003C">
+</activity>
+<activity android:name="com.qorosauto.qorosqloud.ui.setting.ActivityCutPhoto" android:screenOrientation="1" android:theme="@7F0A003C">
+</activity>
+<activity android:name="com.qorosauto.qorosqloud.ui.setting.ActivityPreviewPhoto" android:screenOrientation="1" android:theme="@7F0A003C">
+</activity>
+<activity android:name="com.qorosauto.qorosqloud.ui.cannotlogin.ActivityCannotLogin" android:screenOrientation="1" android:theme="@7F0A003C" android:windowSoftInputMode="0x00000021">
+</activity>
+<activity android:name="com.qorosauto.qorosqloud.ui.ActivityFlashContent" android:screenOrientation="1" android:theme="@7F0A003C">
+</activity>
+<activity android:name="com.qorosauto.qorosqloud.ui.ActivityAboutUs" android:screenOrientation="1" android:theme="@7F0A003C">
+</activity>
+<activity android:label="@7F08047B" android:name="com.qorosauto.qorosqloud.ui.social.ActivityRidersGroup" android:screenOrientation="1" android:theme="@7F0A003C">
+</activity>
+<activity android:label="@7F080474" android:name="com.qorosauto.qorosqloud.ui.social.ActivityNearbyUser" android:screenOrientation="1" android:theme="@7F0A003C">
+</activity>
+<activity android:name="com.qorosauto.qorosqloud.ui.social.ActivityProfileSetting" android:screenOrientation="1" android:theme="@7F0A003C">
+</activity>
+<activity android:label="@7F080464" android:name="com.qorosauto.qorosqloud.ui.social.ActivityFriendInvite" android:screenOrientation="1" android:theme="@7F0A003C">
+</activity>
+<activity android:name="com.qorosauto.qorosqloud.ui.social.ActivitySearchMessageList" android:screenOrientation="1" android:theme="@7F0A003C" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:label="@7F08046C" android:name="com.qorosauto.qorosqloud.ui.social.ActivityLocation" android:screenOrientation="1" android:theme="@7F0A003C">
+</activity>
+<activity android:name="com.qorosauto.qorosqloud.ui.social.ActivitySearchLocation" android:screenOrientation="1" android:theme="@7F0A003C">
+</activity>
+<activity android:name="com.qorosauto.qorosqloud.ui.social.ActivityScanMessagePhoto" android:screenOrientation="1" android:theme="@7F0A003C">
+</activity>
+<activity android:label="@7F080469" android:name="com.qorosauto.qorosqloud.ui.social.ActivityGroupApply" android:screenOrientation="1" android:theme="@7F0A003C">
+</activity>
+<activity android:name="com.qorosauto.qorosqloud.ui.social.ActivityAddFriend" android:screenOrientation="1" android:theme="@7F0A003C">
+</activity>
+<activity android:name="com.qorosauto.qorosqloud.ui.social.ActivitySearchGroup" android:screenOrientation="1" android:theme="@7F0A003C" android:windowSoftInputMode="0x00000004">
+</activity>
+<activity android:name="com.qorosauto.qorosqloud.ui.market.ActivityQoinExchange" android:screenOrientation="1" android:theme="@7F0A003C">
+</activity>
+<activity android:name="com.qorosauto.qorosqloud.ui.account.ActivitySignUserProtocol" android:screenOrientation="1" android:theme="@7F0A003C">
+</activity>
+<activity android:exported="true" android:name="com.qorosauto.qorosqloud.wxapi.WXEntryActivity" android:screenOrientation="1" android:theme="@7F0A00AA">
+</activity>
+<activity android:name="com.qorosauto.qorosqloud.ui.mycar.ActivityBookMaintenance" android:screenOrientation="1" android:theme="@7F0A003C" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:name="com.qorosauto.qorosqloud.ui.ActivityNetworkError" android:screenOrientation="1" android:theme="@7F0A003C" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:name="com.qorosauto.qorosqloud.ui.account.ActivityPrivacyPolicy" android:screenOrientation="1" android:theme="@7F0A003C">
+</activity>
+<activity android:name="com.qorosauto.qorosqloud.ui.ActivityVideoFirstEnter" android:screenOrientation="1" android:theme="@7F0A003C">
+</activity>
+<activity android:name="com.qorosauto.qorosqloud.ui.account.ActivityAccountError" android:screenOrientation="1" android:theme="@7F0A003C">
+</activity>
+<activity android:label="@7F08003E" android:name="com.bosch.yiyun.ManualMainActivity" android:screenOrientation="1" android:theme="@7F0A003C">
+</activity>
+<activity android:label="@7F08003E" android:launchMode="2" android:name="com.bosch.yiyun.ManualContentActivity" android:screenOrientation="1" android:theme="@7F0A003C" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:label="@7F08003E" android:launchMode="2" android:name="com.bosch.yiyun.SearchActivity" android:screenOrientation="1" android:theme="@7F0A003C">
+</activity>
+<activity android:label="@7F08003E" android:launchMode="2" android:name="com.bosch.yiyun.SecondIndexActivity" android:screenOrientation="1" android:theme="@7F0A003C">
+</activity>
+<activity android:label="@7F08003E" android:launchMode="2" android:name="com.bosch.yiyunCf16.activities.EnterAc" android:screenOrientation="1" android:theme="@7F0A00A6">
+</activity>
+<activity android:label="@7F08003E" android:launchMode="2" android:name="com.bosch.yiyunCf16.activities.SearchAc" android:screenOrientation="1" android:theme="@7F0A00A6">
+</activity>
+<activity android:label="@7F08003E" android:launchMode="2" android:name="com.bosch.yiyunCf16.activities.DownLoadAc" android:screenOrientation="1" android:theme="@7F0A00A6">
+</activity>
+<activity android:label="@7F08003E" android:launchMode="0" android:name="com.bosch.yiyunCf16.activities.ContentListAc" android:screenOrientation="1" android:theme="@7F0A00A6">
+</activity>
+<activity android:label="@7F08003E" android:launchMode="2" android:name="com.bosch.yiyunCf16.activities.ManualAc" android:screenOrientation="1" android:theme="@7F0A00A6">
+</activity>
+<activity android:label="@7F08003E" android:launchMode="2" android:name="com.bosch.yiyunCf16.activities.ManualFSAc" android:screenOrientation="1" android:theme="@7F0A00A6">
+</activity>
+<activity android:label="@7F08003E" android:launchMode="2" android:name="com.bosch.yiyunCf16.activities.FavoriteAc" android:screenOrientation="1" android:theme="@7F0A00A6">
+</activity>
+<activity android:label="@7F08003E" android:launchMode="2" android:name="com.bosch.TransitionAC" android:screenOrientation="1" android:theme="@7F0A00A6">
+</activity>
+<activity android:label="@7F0801A1" android:name="com.qorosauto.qorosqloud.ui.acheivement.ActivityCoinDetailNew" android:screenOrientation="1" android:theme="@7F0A003C">
+</activity>
+<activity android:name="com.qorosauto.qorosqloud.ui.acheivement.ActivityCoinItemDetail" android:screenOrientation="1" android:theme="@7F0A003C">
+</activity>
+<activity android:name="com.qorosauto.qorosqloud.ui.setting.ActivitySignAgreement" android:screenOrientation="1" android:theme="@7F0A003C">
+</activity>
+</application>
+</manifest>

@@ -1,0 +1,152 @@
+<?xml version="1.0" ?><manifest android:compileSdkVersion="23" android:compileSdkVersionCodename="6.0-2438415" android:versionCode="1000102" android:versionName="1.0.1.1220" package="com.yunbu.nightmare" platformBuildVersionCode="29" platformBuildVersionName="10" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="15" android:targetSdkVersion="26">
+</uses-sdk>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<application android:allowBackup="false" android:debuggable="false" android:icon="@7F04000F" android:isGame="true" android:label="@7F070000" android:name="com.zeus.sdk.AresApplication" android:roundIcon="@7F04000F" android:supportsRtl="true" android:theme="@android:0103000E" android:usesCleartextTraffic="true">
+<activity android:configChanges="0x40000FFF" android:launchMode="2" android:name="com.android.terror.game.MainActivity" android:screenOrientation="6">
+<meta-data android:name="unityplayer.UnityActivity" android:value="true">
+</meta-data>
+<intent-filter>
+<action android:name="com.yunbu.nightmare.ACTION">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+<intent-filter>
+<data android:scheme="com.yunbu.nightmare.magic">
+</data>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+</intent-filter>
+</activity>
+<meta-data android:name="android.max_aspect" android:value="2.200000">
+</meta-data>
+<uses-library android:name="org.apache.http.legacy" android:required="false">
+</uses-library>
+<activity android:configChanges="0x000004B0" android:exported="false" android:launchMode="2" android:name="com.zeus.sdk.ad.base.activity.AppUpdateActivity" android:theme="@7F080001">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:launchMode="2" android:name="com.zeus.sdk.ad.base.activity.SplashInterstitialAdActivity" android:screenOrientation="1">
+</activity>
+<uses-library android:name="org.apache.http.legacy" android:required="false">
+</uses-library>
+<activity android:configChanges="0x000000E0" android:exported="false" android:name="com.alipay.sdk.app.H5PayActivity" android:screenOrientation="3">
+</activity>
+<activity android:configChanges="0x000000E0" android:exported="false" android:name="com.alipay.sdk.app.H5AuthActivity" android:screenOrientation="3">
+</activity>
+<activity android:configChanges="0x000000E0" android:exported="true" android:launchMode="3" android:name="com.alipay.sdk.app.PayResultActivity" android:theme="@android:01030010">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="true" android:launchMode="2" android:name="com.alipay.sdk.app.AlipayResultActivity" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x000004A0" android:exported="true" android:launchMode="2" android:name="com.magic.pay.api.activity.MagicPayActivity" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004A0" android:exported="true" android:launchMode="2" android:name="com.magic.pay.api.activity.MagicQRPayActivity" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<provider android:authorities="com.yunbu.nightmare.TTFileProvider" android:exported="false" android:grantUriPermissions="true" android:name="com.bytedance.sdk.openadsdk.TTFileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F0A0000">
+</meta-data>
+</provider>
+<provider android:authorities="com.yunbu.nightmare.TTMultiProvider" android:exported="false" android:name="com.bytedance.sdk.openadsdk.multipro.TTMultiProvider">
+</provider>
+<service android:name="com.ss.android.socialbase.downloader.notification.DownloadNotificationService">
+</service>
+<service android:name="com.ss.android.socialbase.downloader.downloader.DownloadService">
+</service>
+<service android:name="com.ss.android.socialbase.downloader.downloader.IndependentProcessDownloadService" android:process=":downloader">
+<intent-filter>
+<action android:name="com.ss.android.socialbase.downloader.remote">
+</action>
+</intent-filter>
+</service>
+<service android:name="com.ss.android.socialbase.downloader.impls.DownloadHandleService">
+</service>
+<service android:name="com.ss.android.socialbase.appdownloader.DownloadHandlerService">
+</service>
+<activity android:launchMode="2" android:name="com.ss.android.socialbase.appdownloader.view.DownloadSizeLimitActivity" android:theme="@android:0103000B">
+</activity>
+<activity android:launchMode="2" android:name="com.ss.android.socialbase.appdownloader.view.DownloadTaskDeleteActivity" android:theme="@android:0103000B">
+</activity>
+<activity android:launchMode="2" android:name="com.ss.android.downloadlib.activity.TTDelegateActivity" android:theme="@android:01030010">
+</activity>
+<receiver android:name="com.ss.android.downloadlib.core.download.DownloadReceiver">
+</receiver>
+<receiver android:enabled="true" android:exported="true" android:name="com.bytedance.embedapplog.collector.Collector">
+</receiver>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="com.bytedance.sdk.openadsdk.activity.TTLandingPageActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="com.bytedance.sdk.openadsdk.activity.TTPlayableLandingPageActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="com.bytedance.sdk.openadsdk.activity.TTVideoLandingPageActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="com.bytedance.sdk.openadsdk.activity.TTRewardVideoActivity" android:screenOrientation="0">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="com.bytedance.sdk.openadsdk.activity.TTRewardExpressVideoActivity" android:screenOrientation="0">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="com.bytedance.sdk.openadsdk.activity.TTFullScreenVideoActivity" android:screenOrientation="0">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="com.bytedance.sdk.openadsdk.activity.TTFullScreenExpressVideoActivity" android:screenOrientation="0">
+</activity>
+<activity android:launchMode="2" android:name="com.bytedance.sdk.openadsdk.activity.TTDelegateActivity" android:theme="@android:01030010">
+</activity>
+<service android:name="com.bytedance.sdk.openadsdk.multipro.aidl.BinderPoolService">
+</service>
+<service android:name="com.bytedance.tea.crash.upload.CrashUploadService" android:process=":npth">
+</service>
+<uses-library android:name="org.apache.http.legacy" android:required="false">
+</uses-library>
+<provider android:authorities="com.yunbu.nightmare.fileprovider" android:exported="false" android:grantUriPermissions="true" android:name="android.support.v4.content.FileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F0A0001">
+</meta-data>
+</provider>
+<service android:exported="false" android:name="com.qq.e.comm.DownloadService">
+</service>
+<activity android:configChanges="0x000004B0" android:name="com.qq.e.ads.ADActivity">
+</activity>
+<activity android:configChanges="0x000004B0" android:name="com.qq.e.ads.PortraitADActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004B0" android:name="com.qq.e.ads.LandscapeADActivity" android:screenOrientation="0">
+</activity>
+<meta-data android:name="ZEUS_APPLICATION_PROXY_NAME" android:value="com.zeus.plugin.UmengProxyApplication,com.zeus.pay.chaos.ChaosProxyApplication,com.zeus.sdk.ad.AresAdProxyApplication">
+</meta-data>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="com.zeus.sdk.ad.SplashAdActivity" android:screenOrientation="1" android:theme="@android:0103000A">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+</application>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+</manifest>

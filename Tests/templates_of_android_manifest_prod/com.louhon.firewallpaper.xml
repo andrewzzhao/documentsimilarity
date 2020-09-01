@@ -1,0 +1,44 @@
+<?xml version="1.0" ?><manifest android:versionCode="1" android:versionName="1.0" package="com.louhon.firewallpaper" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="7">
+</uses-sdk>
+<application android:icon="@7F020000" android:label="@7F070001">
+<meta-data android:name="APP_ID" android:value="54F8FB0B7F8D5AF8EBCA413DABE05B59">
+</meta-data>
+<meta-data android:name="APP_INTERVAL" android:value="30">
+</meta-data>
+<meta-data android:name="APP_TESTMODE" android:value="false">
+</meta-data>
+<activity android:name="com.tencent.mobwin.MobinWINBrowserActivity">
+</activity>
+<service android:label="@7F070001" android:name=".FireWallpaperService" android:permission="android.permission.BIND_WALLPAPER">
+<intent-filter>
+<action android:name="android.service.wallpaper.WallpaperService">
+</action>
+</intent-filter>
+<meta-data android:name="android.service.wallpaper" android:resource="@7F040000">
+</meta-data>
+</service>
+<activity android:exported="true" android:label="@7F070007" android:name=".SettingsActivity" android:theme="@android:01030062">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.PREFERENCE">
+</category>
+</intent-filter>
+</activity>
+</application>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+</manifest>

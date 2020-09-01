@@ -1,0 +1,32 @@
+<?xml version="1.0" ?><manifest android:versionCode="7" android:versionName="1.0.7" package="de.uschonha.roman.watchface" platformBuildVersionCode="25" platformBuildVersionName="7.1.1" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="22" android:targetSdkVersion="22">
+</uses-sdk>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<application android:allowBackup="true" android:icon="@7F020001" android:label="@7F080001" android:theme="@7F060001">
+<activity android:label="@7F080003" android:name="de.uschonha.roman.watchface.MainActivity">
+<intent-filter>
+<action android:name="de.uschonha.roman.watchface.CONFIG_DIGITAL">
+</action>
+<category android:name="com.google.android.wearable.watchface.category.COMPANION_CONFIGURATION">
+</category>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<receiver android:label="Roman Clock" android:name="de.uschonha.roman.watchface.WidgetProviderRound">
+<intent-filter>
+<action android:name="android.appwidget.action.APPWIDGET_UPDATE">
+</action>
+<action android:name="de.uschonha.roman.watchface.CLOCK_WIDGET_UPDATE">
+</action>
+</intent-filter>
+<meta-data android:name="android.appwidget.provider" android:resource="@7F040001">
+</meta-data>
+</receiver>
+<meta-data android:name="com.google.android.wearable.beta.app" android:resource="@7F040000">
+</meta-data>
+</application>
+</manifest>

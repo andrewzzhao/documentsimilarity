@@ -1,0 +1,902 @@
+<?xml version="1.0" ?><manifest android:compileSdkVersion="28" android:compileSdkVersionCodename="9" android:versionCode="32300" android:versionName="3.23.00" package="com.balancehero.truebalance" platformBuildVersionCode="28" platformBuildVersionName="9" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="19" android:targetSdkVersion="27">
+</uses-sdk>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.CALL_PHONE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.BIND_ACCESSIBILITY_SERVICE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_SMS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_CONTACTS">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_SMS" android:protectionLevel="0x00000002">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.USE_CREDENTIALS">
+</uses-permission>
+<uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES">
+</uses-permission>
+<uses-permission android:name="com.android.alarm.permission.SET_ALARM">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.SEND_SMS">
+</uses-permission>
+<uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_CONTACTS">
+</uses-permission>
+<uses-permission android:name="android.permission.MANAGE_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_SYNC_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-permission android:name="android.permission.PACKAGE_USAGE_STATS">
+</uses-permission>
+<uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE">
+</uses-permission>
+<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE">
+</uses-permission>
+<application android:allowBackup="false" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:icon="@7F0F0000" android:label="True Balance" android:largeHeap="true" android:name="com.balancehero.TBApplication" android:resizeableActivity="false" android:roundIcon="@7F0F0002" android:supportsRtl="true" android:theme="@7F13000B">
+<meta-data android:name="com.google.android.gms.version" android:value="@7F0B0008">
+</meta-data>
+<meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@7F120291">
+</meta-data>
+<meta-data android:name="firebase_performance_collection_enabled" android:value="true">
+</meta-data>
+<meta-data android:name="io.fabric.ApiKey" android:value="50b45887eae8474abb2aa667e5375bec8e864928">
+</meta-data>
+<provider android:authorities="com.balancehero.truebalance" android:enabled="true" android:exported="false" android:name="com.balancehero.truebalance.database.provider.TrueBalanceContentProvider">
+</provider>
+<activity android:configChanges="0x000005B4" android:name="com.balancehero.activity.WebActivity" android:screenOrientation="7">
+</activity>
+<activity android:configChanges="0x000005B4" android:name="com.balancehero.activity.IntroActivity" android:screenOrientation="7" android:theme="@7F13000E" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000005B4" android:name="com.balancehero.truebalance.rewards.earncpi.EarnCpiActivity" android:screenOrientation="7" android:theme="@7F130018">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="@7F1201A8" android:pathPrefix="@7F120486" android:scheme="@7F1201A9">
+</data>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000005B4" android:name="com.balancehero.truebalance.gem.GemActivity" android:screenOrientation="7" android:theme="@7F13001B">
+</activity>
+<activity android:configChanges="0x000005B4" android:hardwareAccelerated="true" android:name="com.balancehero.truebalance.serviceguide.ServiceGuideActivity" android:screenOrientation="7" android:theme="@7F13001B">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="@7F1201A8" android:pathPrefix="@7F120483" android:scheme="@7F1201A9">
+</data>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000005B4" android:name="com.balancehero.truebalance.help.SendEmailActivity" android:screenOrientation="7" android:theme="@7F13001B" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:configChanges="0x000005B4" android:name="com.balancehero.truebalance.settings.VersionActivity" android:screenOrientation="7" android:theme="@7F13001B">
+</activity>
+<activity android:configChanges="0x000005B4" android:name="com.balancehero.truebalance.help.HelpActivity" android:screenOrientation="7" android:theme="@7F13001B">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="@7F1201A8" android:pathPrefix="@7F120485" android:scheme="@7F1201A9">
+</data>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000005B4" android:exported="false" android:name="com.balancehero.test.SettingsHiddenActivity" android:screenOrientation="7" android:theme="@7F1304FB">
+</activity>
+<activity android:configChanges="0x000005B4" android:exported="false" android:name="com.balancehero.test.PreferenceModifingActivity" android:screenOrientation="7" android:theme="@7F130007">
+</activity>
+<activity android:configChanges="0x000005B4" android:exported="false" android:name="com.balancehero.test.SqlActivity" android:screenOrientation="7" android:theme="@7F130007">
+</activity>
+<activity android:configChanges="0x000005B4" android:exported="false" android:name="com.balancehero.test.MakeImitatedSimInfoActivity" android:screenOrientation="7" android:theme="@7F130007">
+</activity>
+<activity android:configChanges="0x000005B4" android:exported="false" android:name="com.balancehero.test.AccountTestActivity" android:screenOrientation="7" android:theme="@7F130007">
+</activity>
+<activity android:configChanges="0x000005B4" android:name="com.balancehero.statistics.StatMainActivity" android:screenOrientation="7" android:theme="@7F13001B">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="@7F1201A8" android:pathPrefix="@7F120499" android:scheme="@7F1201A9">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.balancehero.statistics.StatPermissionGuideActivity" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x000005B4" android:name="com.balancehero.truebalance.notice.list.NotificationActivity" android:screenOrientation="7" android:theme="@7F13001B">
+</activity>
+<activity android:configChanges="0x000005B4" android:name="com.balancehero.truebalance.notice.list.braze.BrazeImageActivity" android:screenOrientation="7" android:theme="@7F130014">
+</activity>
+<activity android:configChanges="0x000005B4" android:name="com.balancehero.truebalance.notice.list.news.detail.NewsDetailActivity" android:screenOrientation="7" android:theme="@7F13001B">
+</activity>
+<activity android:configChanges="0x000005B4" android:name="com.balancehero.activity.coach.AccCoachActivity" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x000005B4" android:name="com.balancehero.truebalance.help.FAQActivity" android:screenOrientation="7" android:theme="@7F13001B">
+</activity>
+<activity android:configChanges="0x000005B4" android:name="com.balancehero.truebalance.help.AnswerActivity" android:screenOrientation="7" android:theme="@7F13001B">
+</activity>
+<activity android:configChanges="0x000005B4" android:name="com.balancehero.truebalance.help.CustomerCareActivity" android:screenOrientation="7" android:theme="@7F13001B">
+</activity>
+<activity android:configChanges="0x000005B4" android:name="com.balancehero.truebalance.help.RequestHistoryActivity" android:screenOrientation="7" android:theme="@7F13001B">
+</activity>
+<activity android:configChanges="0x00000404" android:hardwareAccelerated="true" android:name="com.balancehero.truebalance.cpi.custom.CustomCpiActivity" android:screenOrientation="7" android:theme="@7F130018">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="@7F1201A8" android:pathPrefix="@7F120487" android:scheme="@7F1201A9">
+</data>
+</intent-filter>
+</activity>
+<activity android:autoRemoveFromRecents="true" android:excludeFromRecents="true" android:label="" android:launchMode="1" android:name="com.balancehero.balanceusage.UsagePopupActivity" android:noHistory="true" android:theme="@7F1303F2">
+</activity>
+<activity android:configChanges="0x000005B4" android:name="com.balancehero.truebalance.settings.WebViewActivity" android:screenOrientation="7">
+</activity>
+<activity android:configChanges="0x000005B4" android:name="com.balancehero.truebalance.cpi.custom.CustomCpiWebViewActivity" android:screenOrientation="7">
+</activity>
+<activity android:name="com.balancehero.truebalance.recharge.plan.RechargeSelectPlanActivity" android:screenOrientation="7" android:theme="@7F13001B" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:name="com.balancehero.truebalance.payment.SavedCardsActivity" android:screenOrientation="7" android:theme="@7F13001B">
+</activity>
+<activity android:hardwareAccelerated="true" android:name="com.balancehero.truebalance.settings.AppSettingsActivity" android:screenOrientation="7" android:theme="@7F13001B" android:windowSoftInputMode="0x00000003">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="@7F1201A8" android:pathPrefix="@7F12047D" android:scheme="@7F1201A9">
+</data>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x00000024" android:launchMode="1" android:name="com.balancehero.truebalance.SplashActivity" android:screenOrientation="7" android:theme="@7F13000E" android:windowSoftInputMode="0x00000003">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:name="com.balancehero.truebalance.user.component.activity.RegisterOrLoginActivity" android:screenOrientation="7" android:theme="@7F13000D" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.balancehero.truebalance.main.MainActivity" android:screenOrientation="7" android:theme="@7F13001E" android:windowSoftInputMode="0x00000013">
+</activity>
+<activity android:name="com.balancehero.truebalance.balancecheck.onboarding.BalanceCheckProgressActivity" android:screenOrientation="7" android:theme="@7F13001E" android:windowSoftInputMode="0x00000013">
+</activity>
+<activity android:name="com.balancehero.truebalance.recharge.search.SearchMobileNumberActivity" android:screenOrientation="7" android:theme="@7F13001B">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="@7F1201A8" android:pathPrefix="@7F120497" android:scheme="@7F1201A9">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:mimeType="vnd.android.cursor.item/vnd.com.balancehero.truebalance.recharge">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.balancehero.truebalance.account.AccountActivity" android:screenOrientation="7" android:theme="@7F13001B">
+</activity>
+<activity android:name="com.balancehero.truebalance.account.profile.ProfileActivity" android:screenOrientation="7" android:theme="@7F13001B" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:name="com.balancehero.truebalance.account.upgrade.AccountUpgradeActivity" android:screenOrientation="7" android:theme="@7F130018">
+</activity>
+<activity android:name="com.balancehero.truebalance.luckywheel.LuckyWheelActivity" android:screenOrientation="7" android:theme="@7F130012">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="@7F1201A8" android:pathPrefix="@7F12048A" android:scheme="@7F1201A9">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.balancehero.truebalance.wallet.deposit.DepositActivity" android:screenOrientation="7" android:theme="@7F13001B" android:windowSoftInputMode="0x00000013">
+</activity>
+<activity android:name="com.balancehero.truebalance.wallet.beneficiary.activity.AddBeneficiaryActivity" android:screenOrientation="7" android:theme="@7F13001B" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:name="com.balancehero.truebalance.wallet.beneficiary.activity.EditBeneficiaryActivity" android:screenOrientation="7" android:theme="@7F13001B" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:name="com.balancehero.truebalance.wallet.history.BalanceHistoryActivity" android:screenOrientation="7" android:theme="@7F13001B">
+</activity>
+<activity android:label="" android:name="com.balancehero.truebalance.wallet.history.detail.BalanceHistoryDetailActivity" android:screenOrientation="7" android:theme="@7F13001B">
+</activity>
+<activity android:label="" android:name="com.balancehero.truebalance.wallet.result.WalletTransactionResultActivity" android:screenOrientation="7" android:theme="@7F13001B">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="" android:launchMode="2" android:name="com.balancehero.truebalance.notice.NoticeActivity" android:theme="@7F1301A9">
+</activity>
+<activity android:label="" android:name="com.balancehero.truebalance.wallet.mpin.reset.ResetMpinActivity" android:screenOrientation="7" android:theme="@7F13000F" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:label="" android:name="com.balancehero.truebalance.account.upgrade.security.SecurityUpgradeActivity" android:screenOrientation="7" android:theme="@7F130018">
+</activity>
+<activity android:label="" android:name="com.balancehero.truebalance.wallet.delete.deregisterverify.DeregisterVerificationActivity" android:parentActivityName="com.balancehero.truebalance.balance.info.BalanceInfoDetailActivity" android:screenOrientation="7" android:theme="@7F13001B">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".balance.info.BalanceInfoDetailActivity">
+</meta-data>
+</activity>
+<activity android:name="com.balancehero.truebalance.wallet.delete.DeleteWalletAccountActivity" android:screenOrientation="7" android:theme="@7F13001B">
+</activity>
+<activity android:name="com.balancehero.truebalance.wallet.delete.lastwithdraw.DeleteWithdrawActivity" android:screenOrientation="7" android:theme="@7F13001B">
+</activity>
+<activity android:name="com.balancehero.truebalance.recharge.plan.all.RechargeAllPlanActivity" android:screenOrientation="7" android:theme="@7F13001B">
+</activity>
+<activity android:name="com.balancehero.truebalance.user.component.activity.UserVerificationActivity" android:screenOrientation="7" android:theme="@7F13000D" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:name="com.balancehero.truebalance.user.component.activity.RegisterResultActivity" android:screenOrientation="7" android:theme="@7F13000D" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.balancehero.truebalance.settings.AppSettingsLanguageActivity" android:screenOrientation="7" android:theme="@7F13001B" android:windowSoftInputMode="0x00000003">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="@7F1201A8" android:pathPrefix="@7F120489" android:scheme="@7F1201A9">
+</data>
+</intent-filter>
+</activity>
+<activity android:label="" android:name="com.balancehero.truebalance.recharge.bill.list.BillOperatorListActivity" android:screenOrientation="7" android:theme="@7F13001B" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:label="" android:name="com.balancehero.truebalance.recharge.bill.amount.EnterBillAmountActivity" android:screenOrientation="7" android:theme="@7F13001B" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.balancehero.truebalance.recharge.bill.details.BillDetailsActivity" android:screenOrientation="7" android:theme="@7F13001B" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:name="com.balancehero.truebalance.recharge.bill.plan.BillAllPlanActivity" android:screenOrientation="7" android:theme="@7F13001B" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:name="com.balancehero.truebalance.recharge.bill.history.OrderHistoryActivity" android:screenOrientation="7" android:theme="@7F13001B" android:windowSoftInputMode="0x00000012">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="@7F1201A8" android:pathPrefix="@7F12048E" android:scheme="@7F1201A9">
+</data>
+</intent-filter>
+</activity>
+<activity android:label="" android:name="com.balancehero.truebalance.promotion.PromoCodeActivity" android:screenOrientation="7" android:theme="@7F13001B">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="@7F1201A8" android:pathPrefix="@7F120490" android:scheme="@7F1201A9">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.balancehero.truebalance.recharge.bill.details.samplebill.SampleBillActivity" android:screenOrientation="7" android:theme="@7F13001B" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:name="com.balancehero.truebalance.recharge.bill.details.selectsheet.SelectBottomSheetActivity" android:theme="@7F130015">
+</activity>
+<activity android:name="com.balancehero.truebalance.giftcard.purchase.select.ui.SelectGiftCardActivity" android:screenOrientation="7" android:theme="@7F13001B" android:windowSoftInputMode="0x00000013">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="@7F1201A8" android:pathPrefix="@7F120481" android:scheme="@7F1201A9">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:mimeType="vnd.android.cursor.item/vnd.com.balancehero.truebalance.giftcard">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.balancehero.truebalance.giftcard.purchase.send.ui.GiftCardSendToActivity" android:screenOrientation="7" android:theme="@7F13001B" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:name="com.balancehero.truebalance.giftcard.purchase.shop.ui.GiftCardShopActivity" android:screenOrientation="7" android:theme="@7F13001B" android:windowSoftInputMode="0x00000012">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="@7F1201A8" android:pathPrefix="@7F120482" android:scheme="@7F1201A9">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.balancehero.truebalance.notice.ServiceStatusNoticeActivity" android:screenOrientation="7" android:theme="@7F13001B">
+</activity>
+<activity android:name="com.balancehero.truebalance.payment.payu.ui.PayUPGWebViewActivity" android:screenOrientation="7" android:theme="@7F130018">
+</activity>
+<activity android:name="com.balancehero.truebalance.membership.group.GroupActivity" android:screenOrientation="7" android:theme="@7F13001B">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="@7F1201A8" android:pathPrefix="@7F120493" android:scheme="@7F1201A9">
+</data>
+<data android:host="@7F1201A8" android:pathPrefix="@7F120492" android:scheme="@7F1201A9">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.balancehero.truebalance.membership.group.member.GroupMemberActivity" android:screenOrientation="7" android:theme="@7F13001B">
+</activity>
+<activity android:name="com.balancehero.truebalance.membership.group.join.JoinGroupActivity" android:screenOrientation="7" android:theme="@7F13001B" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.balancehero.truebalance.membership.group.delete.GroupMemberDeleteActivity" android:screenOrientation="7" android:theme="@7F13001B">
+</activity>
+<activity android:label="" android:name="com.balancehero.truebalance.membership.main.MembershipMainActivity" android:screenOrientation="7" android:theme="@7F13001B">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="@7F1201A8" android:pathPrefix="@7F120495" android:scheme="@7F1201A9">
+</data>
+</intent-filter>
+</activity>
+<activity android:label="" android:name="com.balancehero.truebalance.membership.income.TotalIncomeActivity" android:screenOrientation="7" android:theme="@7F13001B">
+</activity>
+<activity android:label="" android:name="com.balancehero.truebalance.membership.income.group.GroupIncomeActivity" android:screenOrientation="7" android:theme="@7F13001B">
+</activity>
+<activity android:label="" android:name="com.balancehero.truebalance.membership.income.sales.SalesIncomeActivity" android:screenOrientation="7" android:theme="@7F13001B">
+</activity>
+<activity android:name="com.balancehero.truebalance.membership.stars.MembershipStarsActivity" android:screenOrientation="7" android:theme="@7F13001B">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="@7F1201A8" android:pathPrefix="@7F120496" android:scheme="@7F1201A9">
+</data>
+</intent-filter>
+</activity>
+<activity android:label="" android:name="com.balancehero.truebalance.membership.information.MembershipInformationActivity" android:screenOrientation="7" android:theme="@7F13001B">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="@7F1201A8" android:pathPrefix="@7F120491" android:scheme="@7F1201A9">
+</data>
+<data android:host="@7F1201A8" android:pathPrefix="@7F120494" android:scheme="@7F1201A9">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.balancehero.truebalance.balance.main.ui.BalanceMainActivity" android:screenOrientation="7" android:theme="@7F130014">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="@7F1201A8" android:pathPrefix="@7F12049C" android:scheme="@7F1201A9">
+</data>
+<data android:host="@7F1201A8" android:pathPrefix="@7F12049A" android:scheme="@7F1201A9">
+</data>
+<data android:host="@7F1201A8" android:pathPrefix="@7F12049E" android:scheme="@7F1201A9">
+</data>
+<data android:host="@7F1201A8" android:pathPrefix="@7F12049F" android:scheme="@7F1201A9">
+</data>
+<data android:host="@7F1201A8" android:pathPrefix="@7F12049D" android:scheme="@7F1201A9">
+</data>
+<data android:host="@7F1201A8" android:pathPrefix="@7F12049B" android:scheme="@7F1201A9">
+</data>
+</intent-filter>
+</activity>
+<activity android:launchMode="1" android:name="com.balancehero.truebalance.giftcard.FilterUriActivity" android:noHistory="true" android:screenOrientation="7" android:theme="@7F130014">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="@7F120619" android:pathPrefix="@7F1204A4" android:scheme="https">
+</data>
+<data android:host="@7F120619" android:pathPrefix="@7F1204A4" android:scheme="http">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.balancehero.truebalance.account.transaction.UserTransactionCapActivity" android:screenOrientation="7" android:theme="@7F13001B" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:name="com.balancehero.truebalance.membership.history.IncomeHistoryActivity" android:screenOrientation="7" android:theme="@7F13001B">
+</activity>
+<activity android:name="com.balancehero.truebalance.wallet.transfer.TransferMainActivity" android:screenOrientation="7" android:theme="@7F13001B" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:name="com.balancehero.truebalance.wallet.transfer.RecentTransferHistoryActivity" android:screenOrientation="7" android:theme="@7F13001B" android:windowSoftInputMode="0x00000014">
+</activity>
+<receiver android:exported="true" android:name="com.balancehero.receiver.TBBroadcastReceiver">
+<intent-filter android:priority="999">
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+</intent-filter>
+<intent-filter android:priority="999">
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+<intent-filter android:priority="999">
+<action android:name="android.intent.action.PACKAGE_REPLACED">
+</action>
+<data android:scheme="package">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name="com.balancehero.receiver.NotificationClickReceiver">
+</receiver>
+<receiver android:exported="false" android:name="com.balancehero.receiver.BackgroundBroadcastReceiver">
+<intent-filter>
+<action android:name="com.balancehero.truebalance.Alarm.ACTION_ALARM_ALERT">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:exported="true" android:name="com.balancehero.receiver.TBSmsReceiver" android:permission="android.permission.BROADCAST_SMS">
+<intent-filter android:priority="999">
+<action android:name="android.provider.Telephony.SMS_RECEIVED">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:exported="true" android:name="com.balancehero.receiver.SelectSimReceiver">
+<intent-filter android:priority="999">
+<action android:name="android.intent.action.NEW_OUTGOING_CALL">
+</action>
+<action android:name="android.intent.action.PHONE_STATE">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:exported="true" android:name="com.balancehero.receiver.TBSimCardChangeReceiver">
+<intent-filter android:priority="999">
+<action android:name="android.intent.action.SIM_STATE_CHANGED">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:enabled="true" android:name="com.google.android.gms.analytics.CampaignTrackingReceiver">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:exported="true" android:name="com.google.ads.conversiontracking.InstallReceiver">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:exported="false" android:name="com.balancehero.truebalance.LocalBroadcastReceiver">
+<intent-filter>
+<action android:name="com.balancehero.truebalance.action.ACTION_SEND_LAUNCH_LOG">
+</action>
+<action android:name="com.balancehero.truebalance.action.ACTION_SEND_ALIVE_LOG">
+</action>
+<action android:name="com.balancehero.truebalance.action.ACTION_SEND_DAILY_LOG">
+</action>
+<action android:name="com.balancehero.truebalance.action.ACTION_SEND_WEEKLY_LOG">
+</action>
+<action android:name="com.balancehero.truebalance.action.ACTION_SHOW_LUCKYBOX_NOTIFICATION">
+</action>
+<action android:name="com.balancehero.truebalance.action.ACTION_MOVE_SCREEN">
+</action>
+</intent-filter>
+</receiver>
+<service android:exported="false" android:name="com.balancehero.accountsync.ContactsAggregateAppService">
+</service>
+<service android:exported="false" android:name="com.balancehero.truebalance.accessibility.AccessibilityEventHandlerService">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.analytics.CampaignTrackingService">
+</service>
+<service android:name="com.balancehero.truebalance.push.service.TrueBalanceFirebaseMessagingService">
+<intent-filter>
+<action android:name="com.google.firebase.MESSAGING_EVENT">
+</action>
+</intent-filter>
+</service>
+<service android:name="com.balancehero.statistics.StatPermissionCheckService">
+</service>
+<receiver android:exported="false" android:name="com.balancehero.truebalance.notifications.WidgetNotificationActionReceiver">
+<intent-filter>
+<action android:name="com.balancehero.truebalance.action.ACTION_TAB_WIDGET_NOTIFICATION">
+</action>
+</intent-filter>
+</receiver>
+<activity android:configChanges="0x00000004" android:excludeFromRecents="true" android:name="com.balancehero.activity.PushPopupActivity" android:theme="@7F1301A9">
+</activity>
+<service android:enabled="@7F050003" android:label="‥吀爀甀攀 䈀愀氀愀渀挀攀 ─" android:name="com.balancehero.truebalance.TBAccessibilityService" android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE" android:process="@7F12003C" android:stopWithTask="false">
+<intent-filter android:priority="999">
+<action android:name="android.accessibilityservice.AccessibilityService">
+</action>
+</intent-filter>
+<meta-data android:name="android.accessibilityservice" android:resource="@7F150000">
+</meta-data>
+</service>
+<service android:name="com.balancehero.activity.coach.AccessibilityToastService">
+</service>
+<activity android:hardwareAccelerated="false" android:name="com.balancehero.activity.coach.AccessibilityGuideActivity" android:screenOrientation="7" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:name="com.balancehero.activity.coach.AccessibilityGuideAutoStartGuideActivity" android:theme="@android:01030010">
+</activity>
+<activity android:name="com.balancehero.truebalance.balancecheck.accessibility.AccessibilityGuideRoadMapActivity" android:screenOrientation="7" android:theme="@7F13001B">
+</activity>
+<activity android:name="com.balancehero.truebalance.simdetail.SimDetailActivity" android:screenOrientation="7" android:theme="@7F13001B">
+</activity>
+<activity android:name="com.balancehero.truebalance.payment.ui.BHPaymentActivity" android:screenOrientation="7" android:theme="@7F13001B" android:windowSoftInputMode="0x00000013">
+</activity>
+<activity android:name="com.balancehero.truebalance.payment.result.ui.PaymentResultActivity" android:screenOrientation="7" android:theme="@7F13001B">
+</activity>
+<activity android:name="com.balancehero.truebalance.recharge.history.detail.ui.OrderHistoryDetailActivity" android:screenOrientation="7" android:theme="@7F13001B">
+</activity>
+<activity android:name="com.balancehero.truebalance.giftcard.redeem.ui.RedeemGiftCardActivity" android:screenOrientation="7" android:theme="@7F13001B">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="@7F1201A8" android:pathPrefix="@7F120480" android:scheme="@7F1201A9">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.balancehero.truebalance.giftcard.history.ui.RedeemedGiftCardHistoryActivity" android:screenOrientation="7" android:theme="@7F13001B">
+</activity>
+<activity android:name="com.balancehero.truebalance.giftcard.redeem.ui.RedeemedGiftCardResultActivity" android:screenOrientation="7" android:theme="@7F13001B" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:label="" android:name="com.balancehero.truebalance.account.upgrade.KycUpgradeSelectActivity" android:noHistory="true" android:screenOrientation="7" android:theme="@7F130018" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:label="" android:name="com.balancehero.truebalance.account.upgrade.KycCompliantRequestActivity" android:noHistory="true" android:screenOrientation="7" android:theme="@7F13001B" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:label="" android:name="com.balancehero.truebalance.balance.info.BalanceInfoDetailActivity" android:screenOrientation="7" android:theme="@7F13001B" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.balancehero.truebalance.membership.otherbenefits.OtherBenefitsActivity" android:screenOrientation="7" android:theme="@7F13001B" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:label="" android:name="com.balancehero.truebalance.account.upgrade.KycUpgradeResultActivity" android:noHistory="true" android:screenOrientation="7" android:theme="@7F13001B">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="@7F1201A8" android:pathPrefix="@7F120488" android:scheme="@7F1201A9">
+</data>
+</intent-filter>
+</activity>
+<activity android:label="" android:name="com.balancehero.truebalance.account.upgrade.KycCompliantRequestedActivity" android:noHistory="true" android:screenOrientation="7" android:theme="@7F13001B" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:name="com.balancehero.truebalance.recharge.search.callhistory.ui.CallHistoryActivity" android:screenOrientation="7" android:theme="@7F13001B" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:label="" android:name="com.balancehero.truebalance.wallet.history.detail.TransferHistoryDetailActivity" android:screenOrientation="7" android:theme="@7F13001B">
+</activity>
+<activity android:label="" android:name="com.balancehero.messageengine.log.MessageResultActivity" android:theme="@7F130015">
+</activity>
+<activity android:label="" android:name="com.balancehero.truebalance.rewards.invitefriends.InviteFriendsActivity" android:screenOrientation="7" android:theme="@7F13001B">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="@7F1201A8" android:pathPrefix="@7F120498" android:scheme="@7F1201A9">
+</data>
+</intent-filter>
+</activity>
+<activity android:label="" android:name="com.balancehero.truebalance.paylater.PayLaterMainActivity" android:screenOrientation="7" android:theme="@7F13001B">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="@7F1201A8" android:pathPrefix="@7F12048F" android:scheme="@7F1201A9">
+</data>
+</intent-filter>
+</activity>
+<activity android:label="" android:name="com.balancehero.truebalance.paylater.PayLaterTncActivity" android:screenOrientation="7" android:theme="@7F13001B">
+</activity>
+<activity android:label="" android:name="com.balancehero.truebalance.accountForRefund.BankAccountForRefundActvity" android:screenOrientation="7" android:theme="@7F13001B">
+</activity>
+<activity android:label="" android:name="com.balancehero.truebalance.paylater.HappyWebViewActivity" android:screenOrientation="7" android:theme="@7F13001B">
+</activity>
+<activity android:label="" android:name="com.balancehero.truebalance.paylater.PayLaterRepaymentListActivity" android:screenOrientation="7" android:theme="@7F13001B">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="@7F1201A8" android:pathPrefix="@7F120484" android:scheme="@7F1201A9">
+</data>
+</intent-filter>
+</activity>
+<activity android:label="" android:name="com.balancehero.truebalance.recharge.history.detail.ui.PayLaterOrderHistoryDetailActivity" android:noHistory="true" android:screenOrientation="7" android:theme="@7F13001B">
+</activity>
+<activity android:label="" android:name="com.balancehero.truebalance.commerce.phone.display.ui.CommercePhoneDisplayActivity" android:screenOrientation="7" android:theme="@7F13001B">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="@7F1201A8" android:pathPrefix="@7F12047F" android:scheme="@7F1201A9">
+</data>
+</intent-filter>
+</activity>
+<activity android:label="" android:name="com.balancehero.truebalance.commerce.phone.detail.ui.CommercePhoneDetailActivity" android:screenOrientation="7" android:theme="@7F13001B">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="@7F1201A8" android:pathPrefix="@7F12047E" android:scheme="@7F1201A9">
+</data>
+</intent-filter>
+</activity>
+<activity android:label="" android:name="com.balancehero.truebalance.commerce.phone.orderconfirm.ui.CommerceOrderConfirmActivity" android:screenOrientation="7" android:theme="@7F13001B">
+</activity>
+<activity android:label="" android:name="com.balancehero.truebalance.commerce.address.ui.MyAddressListActivity" android:screenOrientation="7" android:theme="@7F13001B" android:windowSoftInputMode="0x00000023">
+</activity>
+<activity android:label="" android:name="com.balancehero.truebalance.commerce.address.ui.EditMyAddressActivity" android:screenOrientation="7" android:theme="@7F13001B" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:label="" android:name="com.balancehero.truebalance.commerce.history.ui.CommercePhoneOrderHistoryDetailActivity" android:noHistory="true" android:screenOrientation="7" android:theme="@7F13001B" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:label="" android:name="com.balancehero.truebalance.commerce.history.ui.TrackOrderWebViewActivity" android:screenOrientation="7" android:theme="@7F13001B">
+</activity>
+<receiver android:exported="false" android:name="com.balancehero.truebalance.accessibility.AccessibilityOffUSSDCallBroadcastReceiver">
+<intent-filter>
+<action android:name="com.bh.tb.makeUssdCall">
+</action>
+<action android:name="com.bh.tb.makeUssdCallsOneByOne">
+</action>
+<action android:name="com.bh.tb.makeUssdStoreCall">
+</action>
+<action android:name="com.bh.tb.makeUssdCallbyNum">
+</action>
+</intent-filter>
+</receiver>
+<service android:exported="false" android:name="com.balancehero.truebalance.ApplicationConfigurationService">
+</service>
+<receiver android:name="com.appboy.AppboyGcmReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+<category android:name="com.balancehero.truebalance">
+</category>
+</intent-filter>
+</receiver>
+<receiver android:exported="false" android:name="com.balancehero.truebalance.AppboyBroadcastReceiver">
+<intent-filter>
+<action android:name="com.balancehero.truebalance.intent.APPBOY_PUSH_RECEIVED">
+</action>
+<action android:name="com.balancehero.truebalance.intent.APPBOY_NOTIFICATION_OPENED">
+</action>
+</intent-filter>
+</receiver>
+<service android:name="com.balancehero.truebalance.log.css.autolog.AutoCSSLogService">
+</service>
+<service android:exported="false" android:name="com.balancehero.truebalance.log.fingerprint.FingerPrintService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<service android:exported="false" android:name="com.balancehero.service.SMSInterpretingService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<service android:name="com.balancehero.accountsync.AccountAuthenticatorService">
+<intent-filter>
+<action android:name="android.accounts.AccountAuthenticator">
+</action>
+</intent-filter>
+<meta-data android:name="android.accounts.AccountAuthenticator" android:resource="@7F150001">
+</meta-data>
+</service>
+<service android:exported="true" android:name="com.balancehero.accountsync.ContactsSyncAdapterService">
+<intent-filter>
+<action android:name="android.content.SyncAdapter">
+</action>
+</intent-filter>
+<meta-data android:name="android.content.SyncAdapter" android:resource="@7F150007">
+</meta-data>
+<meta-data android:name="android.provider.CONTACTS_STRUCTURE" android:resource="@7F150003">
+</meta-data>
+</service>
+<service android:exported="true" android:name="com.balancehero.accountsync.ContactsAggregateAppJobService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<service android:exported="false" android:name="com.balancehero.truebalance.log.service.LogUploadScheduleService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<service android:exported="false" android:name="com.balancehero.truebalance.log.service.LogUploadService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<activity android:name="com.appboy.ui.AppboyWebViewActivity">
+</activity>
+<activity android:name="com.appboy.ui.activities.AppboyFeedActivity">
+</activity>
+<receiver android:name="com.zendesk.sdk.power.BatteryStateBroadcastReceiver">
+<intent-filter>
+<action android:name="android.intent.action.BATTERY_LOW">
+</action>
+<action android:name="android.intent.action.BATTERY_OKAY">
+</action>
+</intent-filter>
+</receiver>
+<activity android:label="@7F1201D8" android:name="com.zendesk.sdk.feedback.ui.ContactZendeskActivity" android:windowSoftInputMode="0x00000014">
+</activity>
+<activity android:label="@7F1201D8" android:name="com.zendesk.sdk.requests.ViewRequestActivity" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:label="@7F1205A9" android:name="com.zendesk.sdk.requests.RequestActivity">
+</activity>
+<activity android:configChanges="0x00000480" android:name="com.zendesk.sdk.support.ViewArticleActivity">
+</activity>
+<activity android:label="@7F120662" android:name="com.zendesk.sdk.support.SupportActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<receiver android:exported="false" android:name="com.zendesk.sdk.deeplinking.ZendeskDeepLinkingBroadcastReceiver">
+<intent-filter>
+<action android:name="com.zendesk.sdk.deeplinking">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.analytics.AnalyticsReceiver">
+</receiver>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.analytics.AnalyticsService">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.analytics.AnalyticsJobService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<activity android:excludeFromRecents="true" android:exported="false" android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity" android:theme="@android:01030010">
+</activity>
+<service android:exported="true" android:name="com.google.android.gms.auth.api.signin.RevocationBoundService" android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION">
+</service>
+<receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementReceiver">
+</receiver>
+<receiver android:enabled="true" android:exported="true" android:name="com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver" android:permission="android.permission.INSTALL_PACKAGES">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementService">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementJobService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<service android:exported="true" android:name="com.google.firebase.messaging.FirebaseMessagingService">
+<intent-filter android:priority="-500">
+<action android:name="com.google.firebase.MESSAGING_EVENT">
+</action>
+</intent-filter>
+</service>
+<service android:exported="false" android:name="com.google.firebase.components.ComponentDiscoveryService">
+<meta-data android:name="com.google.firebase.components:com.google.firebase.crash.component.FirebaseCrashRegistrar" android:value="com.google.firebase.components.ComponentRegistrar">
+</meta-data>
+<meta-data android:name="com.google.firebase.components:com.google.firebase.iid.Registrar" android:value="com.google.firebase.components.ComponentRegistrar">
+</meta-data>
+</service>
+<provider android:authorities="com.balancehero.truebalance.crashlyticsinitprovider" android:exported="false" android:initOrder="90" android:name="com.crashlytics.android.CrashlyticsInitProvider">
+</provider>
+<activity android:name="com.payu.custombrowser.CBActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<service android:name="com.payu.custombrowser.services.SnoozeService">
+</service>
+<activity android:name="com.payu.custombrowser.upiintent.PaymentResponseActivity" android:theme="@7F1303D0">
+</activity>
+<activity android:name="com.payu.custombrowser.PreLollipopPaymentsActivity">
+<intent-filter>
+<data android:scheme="com.balancehero.truebalance.success">
+</data>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+</intent-filter>
+<intent-filter>
+<data android:scheme="com.balancehero.truebalance.failure">
+</data>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+</intent-filter>
+</activity>
+<activity android:name="com.payu.custombrowser.PrePaymentsActivity">
+</activity>
+<activity android:name="com.payu.magicretry.MainActivity">
+</activity>
+<service android:name="com.appboy.services.AppboyDataSyncService">
+</service>
+<receiver android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+</intent-filter>
+</receiver>
+<service android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdService">
+<intent-filter android:priority="-500">
+<action android:name="com.google.firebase.INSTANCE_ID_EVENT">
+</action>
+</intent-filter>
+</service>
+<activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:01030010">
+</activity>
+<provider android:authorities="com.balancehero.truebalance.firebaseinitprovider" android:exported="false" android:initOrder="100" android:name="com.google.firebase.provider.FirebaseInitProvider">
+</provider>
+<activity android:configChanges="0x00000FB0" android:exported="false" android:name="com.google.android.gms.ads.AdActivity" android:theme="@android:0103000F">
+</activity>
+<provider android:authorities="com.balancehero.truebalance.belvedere.attachments" android:exported="false" android:grantUriPermissions="true" android:name="com.zendesk.belvedere.BelvedereFileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F150002">
+</meta-data>
+</provider>
+<provider android:authorities="com.balancehero.truebalance.lifecycle-process" android:exported="false" android:multiprocess="true" android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer">
+</provider>
+</application>
+</manifest>

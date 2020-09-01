@@ -1,0 +1,435 @@
+<?xml version="1.0" ?><manifest android:compileSdkVersion="28" android:compileSdkVersionCodename="9" android:versionCode="18" android:versionName="2.2.1" package="com.hx8518.yuecai" platformBuildVersionCode="18" platformBuildVersionName="2.2.1" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="19" android:targetSdkVersion="27">
+</uses-sdk>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.RECORD_AUDIO">
+</uses-permission>
+<uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="com.sec.android.provider.badge.permission.READ">
+</uses-permission>
+<uses-permission android:name="com.sec.android.provider.badge.permission.WRITE">
+</uses-permission>
+<uses-permission android:name="com.htc.launcher.permission.READ_SETTINGS">
+</uses-permission>
+<uses-permission android:name="com.htc.launcher.permission.UPDATE_SHORTCUT">
+</uses-permission>
+<uses-permission android:name="com.sonyericsson.home.permission.BROADCAST_BADGE">
+</uses-permission>
+<uses-permission android:name="com.sonymobile.home.permission.PROVIDER_INSERT_BADGE">
+</uses-permission>
+<uses-permission android:name="com.anddoes.launcher.permission.UPDATE_COUNT">
+</uses-permission>
+<uses-permission android:name="com.majeur.launcher.permission.UPDATE_BADGE">
+</uses-permission>
+<uses-permission android:name="com.huawei.android.launcher.permission.CHANGE_BADGE">
+</uses-permission>
+<uses-permission android:name="com.huawei.android.launcher.permission.READ_SETTINGS">
+</uses-permission>
+<uses-permission android:name="com.huawei.android.launcher.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.BROADCAST_PACKAGE_ADDED">
+</uses-permission>
+<uses-permission android:name="android.permission.BROADCAST_PACKAGE_CHANGED">
+</uses-permission>
+<uses-permission android:name="android.permission.BROADCAST_PACKAGE_INSTALL">
+</uses-permission>
+<uses-permission android:name="android.permission.BROADCAST_PACKAGE_REPLACED">
+</uses-permission>
+<uses-permission android:name="android.permission.RESTART_PACKAGES">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.FLASHLIGHT">
+</uses-permission>
+<uses-feature android:name="android.hardware.camera.autofocus" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.camera.flash" android:required="false">
+</uses-feature>
+<uses-permission android:name="android.permission.READ_APP_BADGE">
+</uses-permission>
+<uses-permission android:name="com.oppo.launcher.permission.READ_SETTINGS">
+</uses-permission>
+<uses-permission android:name="com.oppo.launcher.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="me.everything.badger.permission.BADGE_COUNT_READ">
+</uses-permission>
+<uses-permission android:name="me.everything.badger.permission.BADGE_COUNT_WRITE">
+</uses-permission>
+<permission android:name="com.hx8518.yuecai.permission.MIPUSH_RECEIVE" android:protectionLevel="0x00000003">
+</permission>
+<uses-permission android:name="com.hx8518.yuecai.permission.MIPUSH_RECEIVE">
+</uses-permission>
+<application android:allowBackup="true" android:appComponentFactory="android.support.v4.app.CoreComponentFactory" android:hardwareAccelerated="true" android:icon="@7F0E0046" android:label="@7F0F0028" android:largeHeap="true" android:name="com.hx8518.yuecai.base.YuecaiApplication" android:supportsRtl="true" android:theme="@7F10000D">
+<activity android:name="com.hx8518.yuecai.activity.LaunchActivity">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<meta-data android:name="android.max_aspect" android:value="2.400000">
+</meta-data>
+<receiver android:name="com.hx8518.yuecai.push.MyReceiver">
+<intent-filter>
+<action android:name="com.hx8518.yuecai.android.intent.IM_MESSAGE_RECEIVED">
+</action>
+</intent-filter>
+</receiver>
+<provider android:authorities="com.hx8518.yuecai.provider" android:exported="false" android:grantUriPermissions="true" android:name="android.support.v4.content.FileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F120000">
+</meta-data>
+</provider>
+<activity android:name="com.hx8518.yuecai.activity.ForgetPasswordActivity">
+</activity>
+<activity android:launchMode="2" android:name="com.hx8518.yuecai.activity.RegisterActivity" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:launchMode="2" android:name="com.hx8518.yuecai.activity.LoginActivity" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:hardwareAccelerated="true" android:name="com.hx8518.yuecai.activity.JsBridgeWebActivity">
+</activity>
+<activity android:configChanges="0x00000480" android:hardwareAccelerated="true" android:name="com.hx8518.yuecai.activity.WebActivity" android:screenOrientation="4">
+</activity>
+<activity android:hardwareAccelerated="true" android:name="com.hx8518.yuecai.activity.CerSucessWebActivity">
+</activity>
+<activity android:name="com.hx8518.yuecai.activity.SharePopActivity" android:theme="@android:01030010">
+</activity>
+<activity android:name="com.hx8518.yuecai.activity.LableActivity">
+</activity>
+<activity android:name="com.hx8518.yuecai.activity.MyQrcodeActivity">
+</activity>
+<activity android:launchMode="2" android:name="com.hx8518.yuecai.activity.CirclePublishActivity">
+</activity>
+<activity android:name="com.hx8518.yuecai.activity.AddFriendsActivity">
+</activity>
+<activity android:name="com.hx8518.yuecai.activity.PhotoActivity">
+</activity>
+<activity android:launchMode="2" android:name="com.hx8518.yuecai.activity.MainActivity" android:windowSoftInputMode="0x00000030">
+</activity>
+<activity android:name="com.hx8518.yuecai.activity.PrivacyPolicyActivity">
+</activity>
+<activity android:name="com.hx8518.yuecai.activity.TestPicActivity">
+</activity>
+<activity android:name="com.hx8518.yuecai.activity.ImageGridActivity">
+</activity>
+<activity android:name="com.hx8518.yuecai.activity.SettingActivity">
+</activity>
+<activity android:name="com.hx8518.yuecai.activity.ImagePagerActivity">
+</activity>
+<activity android:name="com.hx8518.yuecai.activity.ContactsActivity">
+</activity>
+<activity android:name="com.hx8518.yuecai.activity.CaiyouquanDetialActivity">
+</activity>
+<activity android:name="com.hx8518.yuecai.activity.UpdateUserActivity" android:windowSoftInputMode="0x00000015">
+</activity>
+<activity android:name="com.hx8518.yuecai.activity.PreSettingActivity" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:launchMode="2" android:name="com.hx8518.yuecai.activity.ChatActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.hx8518.yuecai.activity.RegisterSucceedActivity">
+</activity>
+<activity android:name="com.hx8518.yuecai.activity.CFPAuthActivity">
+</activity>
+<activity android:name="com.hx8518.yuecai.activity.CityPickerActivity" android:windowSoftInputMode="0x00000030">
+</activity>
+<activity android:name="com.hx8518.yuecai.activity.TalkShowActivity">
+</activity>
+<activity android:name="com.hx8518.yuecai.activity.MyBankCardActivity">
+</activity>
+<activity android:name="com.hx8518.yuecai.activity.CertificationActivity">
+</activity>
+<activity android:name="com.hx8518.yuecai.activity.RoleTypeActivity">
+</activity>
+<activity android:name="com.hx8518.yuecai.activity.ResetPasswordActivity">
+</activity>
+<activity android:name="com.hx8518.yuecai.activity.AddBackCardActivity">
+</activity>
+<activity android:name="com.hx8518.yuecai.activity.AddArticleActivity">
+</activity>
+<activity android:name="com.hx8518.yuecai.activity.MyTradeWebActivity">
+</activity>
+<activity android:name="com.hx8518.yuecai.activity.BackCardAuthenticationActivity">
+</activity>
+<activity android:name="com.hx8518.yuecai.activity.MyTradingActivity">
+</activity>
+<activity android:name="com.hx8518.yuecai.activity.NotificationActivity">
+</activity>
+<activity android:name="com.hx8518.yuecai.city.CitySelectMActivity" android:windowSoftInputMode="0x00000022">
+</activity>
+<service android:name="com.hx8518.yuecai.UpdateService">
+</service>
+<service android:enabled="true" android:name="com.baidu.location.f" android:process=":remote">
+</service>
+<meta-data android:name="com.baidu.lbsapi.API_KEY" android:value="T7QgcnhMb6RjyDGaDZPSGI0reggkCkqd">
+</meta-data>
+ //key�
+<meta-data android:name="UMENG_APPKEY" android:value="58d0a5f57f2c74502b000fb3">
+</meta-data>
+<meta-data android:name="UMENG_MESSAGE_SECRET" android:value="06e5af2dc63bc8369f1d87e2d6b2a51c">
+</meta-data>
+<meta-data android:name="UMENG_CHANNEL" android:value="QQ">
+</meta-data>
+<activity android:configChanges="0x000004A0" android:exported="true" android:name="com.hx8518.yuecai.wxapi.WXEntryActivity" android:theme="@android:01030010">
+</activity>
+<activity android:launchMode="2" android:name="com.tencent.tauth.AuthActivity" android:noHistory="true">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="tencent1105413747">
+</data>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.tencent.connect.common.AssistActivity" android:theme="@android:01030010">
+</activity>
+<activity android:name="com.hx8518.yuecai.activity.SendOrderActivity">
+</activity>
+<activity android:name="com.hx8518.yuecai.activity.ProductListActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="com.hx8518.yuecai.activity.PlannerIndexActivity">
+</activity>
+<activity android:launchMode="1" android:name="com.hx8518.yuecai.activity.BuyerMainIndexActivity">
+</activity>
+<activity android:name="com.hx8518.yuecai.activity.VideoPlayerActivity" android:screenOrientation="4">
+</activity>
+<activity android:name="com.hx8518.yuecai.activity.NewFriendActivity">
+</activity>
+<activity android:name="com.hx8518.yuecai.activity.PlannerListActivity">
+</activity>
+<activity android:name="com.hx8518.yuecai.activity.VideoListActivity">
+</activity>
+<activity android:name="com.hx8518.yuecai.activity.MyPlannerActivity">
+</activity>
+<activity android:launchMode="3" android:name="com.hx8518.yuecai.activity.ProductFilterActivity">
+</activity>
+<activity android:name="com.hx8518.yuecai.activity.UploadCertificationActivity">
+</activity>
+<activity android:name="com.hx8518.yuecai.activity.StarListActivity">
+</activity>
+<activity android:name="com.hx8518.yuecai.activity.QRCodeScanActivity">
+</activity>
+<activity android:name="com.hx8518.yuecai.activity.BigCastIndexActivity">
+</activity>
+<activity android:name="com.hx8518.yuecai.activity.ActUpdatePasswd">
+</activity>
+<activity android:name="com.hx8518.yuecai.activity.AccountSafetyActivity">
+</activity>
+<activity android:name="com.hx8518.yuecai.activity.ActUpdatePhoneManager">
+</activity>
+<activity android:name="com.hx8518.yuecai.activity.InformationActivity">
+</activity>
+<activity android:name="com.hx8518.yuecai.activity.UpdateIntroduceActivity">
+</activity>
+<activity android:name="com.hx8518.yuecai.activity.NewsListActivity">
+</activity>
+<activity android:name="com.hx8518.yuecai.PhotoPicker.PickPhotosActiviy">
+</activity>
+<activity android:name="com.hx8518.yuecai.activity.UploadDocumentActivity">
+</activity>
+<activity android:name="com.hx8518.yuecai.activity.UploadCertificatePhoto">
+</activity>
+<activity android:name="com.hx8518.yuecai.activity.UploadCertivicateAudioActivity">
+</activity>
+<activity android:name="com.hx8518.yuecai.activity.MyOrderListActivity">
+</activity>
+<activity android:name="com.hx8518.yuecai.activity.AskQuestionActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.hx8518.yuecai.activity.MyQAActivity">
+</activity>
+<activity android:name="com.hx8518.yuecai.activity.WebStartActivity">
+</activity>
+<activity android:name="com.hx8518.yuecai.activity.ProductNoticeListActivity">
+</activity>
+<activity android:name="com.hx8518.yuecai.activity.VipHomeWebActivity">
+</activity>
+<activity android:name="com.SuperKotlin.pictureviewer.ImagePagerActivity">
+</activity>
+<activity android:name="com.hx8518.yuecai.activity.EditAnswerActivity" android:windowSoftInputMode="0x00000014">
+</activity>
+<activity android:name="com.hx8518.yuecai.activity.SettingNotificationActivity">
+</activity>
+<activity android:name="com.hx8518.yuecai.activity.SelectProductActivity">
+</activity>
+<activity android:name="com.hx8518.yuecai.activity.QuestionDetialActivity">
+</activity>
+<activity android:name="com.hx8518.yuecai.activity.AnswerDetialActivity">
+</activity>
+<activity android:name="com.hx8518.yuecai.activity.SuperStarIndexActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.hx8518.yuecai.activity.InformationNewActivity">
+</activity>
+<activity android:name="com.hx8518.yuecai.activity.InviteToAnswerActivity">
+</activity>
+<activity android:name="com.hx8518.yuecai.activity.MessageActivity">
+</activity>
+<activity android:name="com.hx8518.yuecai.push.PermissionsActivity">
+</activity>
+<service android:exported="true" android:name="com.taobao.accs.ChannelService" android:process=":channel">
+<intent-filter>
+<action android:name="com.taobao.accs.intent.action.SERVICE">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="com.taobao.accs.intent.action.ELECTION">
+</action>
+</intent-filter>
+</service>
+<service android:exported="true" android:name="com.taobao.accs.data.MsgDistributeService">
+<intent-filter>
+<action android:name="com.taobao.accs.intent.action.RECEIVE">
+</action>
+</intent-filter>
+</service>
+<receiver android:name="com.taobao.accs.EventReceiver" android:process=":channel">
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_REMOVED">
+</action>
+<data android:scheme="package">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.USER_PRESENT">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name="com.taobao.accs.ServiceReceiver" android:process=":channel">
+<intent-filter>
+<action android:name="com.taobao.accs.intent.action.COMMAND">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="com.taobao.accs.intent.action.START_FROM_AGOO">
+</action>
+</intent-filter>
+</receiver>
+<service android:name="com.taobao.accs.ChannelService$KernelService" android:process=":channel">
+</service>
+<service android:exported="true" android:name="org.android.agoo.accs.AgooService">
+<intent-filter>
+<action android:name="com.taobao.accs.intent.action.RECEIVE">
+</action>
+</intent-filter>
+</service>
+<service android:exported="true" android:name="com.umeng.message.UmengIntentService" android:process=":channel">
+<intent-filter>
+<action android:name="org.agoo.android.intent.action.RECEIVE">
+</action>
+</intent-filter>
+</service>
+<service android:exported="true" android:name="com.umeng.message.XiaomiIntentService" android:process=":channel">
+<intent-filter>
+<action android:name="org.agoo.android.intent.action.RECEIVE">
+</action>
+</intent-filter>
+</service>
+<receiver android:exported="true" android:name="com.taobao.agoo.AgooCommondReceiver" android:process=":channel">
+<intent-filter>
+<action android:name="com.umeng.soexample.intent.action.COMMAND">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_REMOVED">
+</action>
+<data android:scheme="package">
+</data>
+</intent-filter>
+</receiver>
+<service android:exported="true" android:name="com.umeng.message.UmengMessageIntentReceiverService" android:process=":channel">
+<intent-filter>
+<action android:name="org.android.agoo.client.MessageReceiverService">
+</action>
+</intent-filter>
+</service>
+<receiver android:exported="false" android:name="com.umeng.message.NotificationProxyBroadcastReceiver">
+</receiver>
+<service android:exported="false" android:name="com.umeng.message.UmengMessageCallbackHandlerService">
+<intent-filter>
+<action android:name="com.umeng.messge.registercallback.action">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="com.umeng.message.enablecallback.action">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="com.umeng.message.disablecallback.action">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="com.umeng.message.message.handler.action">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="com.umeng.message.message.sendmessage.action">
+</action>
+</intent-filter>
+</service>
+<service android:exported="false" android:name="com.umeng.message.UmengDownloadResourceService">
+</service>
+<provider android:authorities="com.hx8518.yuecai.umeng.message" android:exported="false" android:name="com.umeng.message.provider.MessageProvider">
+<grant-uri-permission android:pathPattern=".*">
+</grant-uri-permission>
+</provider>
+<service android:enabled="true" android:exported="true" android:name="com.xiaomi.mipush.sdk.PushMessageHandler">
+</service>
+<service android:enabled="true" android:name="com.xiaomi.mipush.sdk.MessageHandleService">
+</service>
+<receiver android:exported="true" android:name="org.android.agoo.xiaomi.MiPushBroadcastReceiver">
+<intent-filter>
+<action android:name="com.xiaomi.mipush.RECEIVE_MESSAGE">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="com.xiaomi.mipush.ERROR">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name="org.android.agoo.huawei.HuaWeiReceiver">
+<intent-filter>
+<action android:name="com.huawei.android.push.intent.REGISTRATION">
+</action>
+<action android:name="com.huawei.android.push.intent.RECEIVE">
+</action>
+<action android:name="com.huawei.intent.action.PUSH">
+</action>
+<action android:name="com.huawei.intent.action.PUSH_STATE">
+</action>
+</intent-filter>
+</receiver>
+</application>
+</manifest>

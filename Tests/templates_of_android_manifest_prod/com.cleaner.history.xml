@@ -1,0 +1,70 @@
+<?xml version="1.0" ?><manifest android:versionCode="2" android:versionName="1.0.2" package="com.cleaner.history" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="7" android:targetSdkVersion="16">
+</uses-sdk>
+<uses-permission android:name="android.permission.CLEAR_APP_CACHE">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_PACKAGE_SIZE">
+</uses-permission>
+<uses-permission android:name="com.android.browser.permission.READ_HISTORY_BOOKMARKS">
+</uses-permission>
+<uses-permission android:name="com.android.browser.permission.WRITE_HISTORY_BOOKMARKS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_SMS">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SMS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_CONTACTS">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_CONTACTS">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT">
+</uses-permission>
+<uses-permission android:name="com.android.launcher.permission.UNINSTALL_SHORTCUT">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<application android:allowBackup="true" android:icon="@7F020000" android:label="@7F060001" android:name="com.cleaner.history.HistoryApplication" android:theme="@android:01030006">
+<receiver android:name=".setting.BootBroadcastReceiver">
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+</intent-filter>
+</receiver>
+<service android:name="com.cleaner.history.service.AutoCleanService">
+<intent-filter>
+<action android:name="com.cleaner.history.service.HistoryService">
+</action>
+</intent-filter>
+</service>
+<activity android:label="@7F060001" android:launchMode="2" android:name="com.cleaner.history.MainActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000A0" android:launchMode="2" android:name=".setting.SetActivity" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000000A0" android:name=".setting.SetCleanListActivity" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:clearTaskOnLaunch="true" android:configChanges="0x000000A0" android:excludeFromRecents="true" android:launchMode="3" android:name="com.cleaner.history.quickclean.QuickCleanActivity" android:screenOrientation="1" android:theme="@android:01030010">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<meta-data android:name="UMENG_APPKEY" android:value="50ee54e25270157cac000017">
+</meta-data>
+<meta-data android:name="UMENG_CHANNEL" android:value="Google.Play">
+</meta-data>
+</application>
+</manifest>

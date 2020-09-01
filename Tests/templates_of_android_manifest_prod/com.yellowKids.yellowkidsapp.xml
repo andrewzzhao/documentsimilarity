@@ -1,0 +1,360 @@
+<?xml version="1.0" ?><manifest android:versionCode="10005" android:versionName="1.1.6" package="com.yellowKids.yellowkidsapp" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="17" android:targetSdkVersion="26">
+</uses-sdk>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.MEDIA_CONTENT_CONTROL">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_LOGS">
+</uses-permission>
+<supports-screens android:anyDensity="true" android:largeScreens="true" android:normalScreens="true" android:resizeable="true" android:smallScreens="true">
+</supports-screens>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.RECORD_AUDIO">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-permission android:name="com.android.launcher.permission.READ_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.BROADCAST_STICKY">
+</uses-permission>
+<permission android:name="com.yellowKids.yellowkidsapp.permission.JPUSH_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="com.yellowKids.yellowkidsapp.permission.JPUSH_MESSAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_USER_PRESENT">
+</uses-permission>
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_NETWORK_STATE">
+</uses-permission>
+<application android:allowBackup="true" android:hardwareAccelerated="true" android:icon="@7F0D0005" android:label="@7F0F003B" android:largeHeap="true" android:name="com.tencent.StubShell.TxAppEntry" android:screenOrientation="1" android:supportsRtl="true" android:theme="@7F10000B">
+<meta-data android:name="TxAppEntry" android:value="com.yellowKids.yellowkidsapp.application.YMApplication">
+</meta-data>
+<meta-data android:name="LBChannel" android:value="tencent">
+</meta-data>
+<meta-data android:name="tencent" android:value="2">
+</meta-data>
+<meta-data android:name="huawei" android:value="3">
+</meta-data>
+<meta-data android:name="360" android:value="4">
+</meta-data>
+<meta-data android:name="ali" android:value="5">
+</meta-data>
+<meta-data android:name="normal" android:value="6">
+</meta-data>
+<meta-data android:name="xiaomi" android:value="7">
+</meta-data>
+<service android:name="com.yellowKids.yellowkidsapp.service.MyUpdateService">
+</service>
+<receiver android:name="com.chiclam.android.receiver.ApkInstallReceiver">
+<intent-filter>
+<action android:name="android.intent.action.DOWNLOAD_COMPLETE">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:enabled="true" android:name="com.yellowKids.yellowkidsapp.broadcast_reseiver.MyReceiver">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.REGISTRATION">
+</action>
+<action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED">
+</action>
+<action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED">
+</action>
+<action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED">
+</action>
+<action android:name="cn.jpush.android.intent.CONNECTION">
+</action>
+<category android:name="com.yellowKids.yellowkidsapp">
+</category>
+</intent-filter>
+</receiver>
+<provider android:authorities="com.yellowKids.yellowkidsapp.provider" android:exported="false" android:grantUriPermissions="true" android:name="android.support.v4.content.FileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F120001">
+</meta-data>
+</provider>
+<activity android:name="com.yellowKids.yellowkidsapp.ui.login.LaunchADActivity" android:screenOrientation="1" android:theme="@7F1000E1">
+</activity>
+<activity android:name="com.yellowKids.yellowkidsapp.ui.login.LoginActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="2" android:name="com.yellowKids.yellowkidsapp.ui.home.MainActivity" android:screenOrientation="1" android:theme="@7F1000E2">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<meta-data android:name="com.amap.api.v2.apikey" android:value="6d7c677ecaaff78859925f1ad2d3a97c">
+</meta-data>
+<activity android:name="com.yalantis.ucrop.UCropActivity" android:screenOrientation="1" android:theme="@7F10000B">
+</activity>
+<activity android:name="com.zaaach.citypicker.CityPickerActivity" android:screenOrientation="1" android:theme="@7F1000B5" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name="com.yellowKids.yellowkidsapp.ui.home.SearchActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:name="com.yellowKids.yellowkidsapp.ui.activity.ActivityDetailsActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.yellowKids.yellowkidsapp.ui.activity.ActivitySponsorActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.yellowKids.yellowkidsapp.ui.activity.ApplyActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.yellowKids.yellowkidsapp.ui.activity.EditOrderActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:name="com.yellowKids.yellowkidsapp.ui.activity.PayActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:scheme="wx8febbb94bc3ae9c5">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.yellowKids.yellowkidsapp.ui.activity.SubscribeActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.yellowKids.yellowkidsapp.ui.my.MyInfoActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.yellowKids.yellowkidsapp.ui.my.ConsumptionDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.yellowKids.yellowkidsapp.ui.my.MyPointActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.yellowKids.yellowkidsapp.ui.my.AddressManageActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.yellowKids.yellowkidsapp.ui.my.EditAddressActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.yellowKids.yellowkidsapp.ui.my.DefaultOutPeopleActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.yellowKids.yellowkidsapp.ui.my.AddOutPeopleActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.yellowKids.yellowkidsapp.ui.my.MyCouponActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:name="com.yellowKids.yellowkidsapp.ui.my.PointDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.yellowKids.yellowkidsapp.ui.my.PointConversionActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.yellowKids.yellowkidsapp.ui.my.MyCollectionActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.yellowKids.yellowkidsapp.ui.my.MyOrderActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.yellowKids.yellowkidsapp.ui.my.AddChildActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.yellowKids.yellowkidsapp.ui.my.EditPhoneActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.yellowKids.yellowkidsapp.ui.recommend.RecommendDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.yellowKids.yellowkidsapp.ui.my.CommentActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:name="com.yellowKids.yellowkidsapp.ui.activity.ActivityMoreActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.yellowKids.yellowkidsapp.ui.my.OrderDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000E0" android:exported="false" android:name="com.alipay.sdk.app.H5PayActivity" android:screenOrientation="3">
+</activity>
+<activity android:configChanges="0x000000E0" android:exported="false" android:name="com.alipay.sdk.auth.AuthActivity" android:screenOrientation="3">
+</activity>
+<activity android:name="com.yellowKids.yellowkidsapp.ui.my.AboutUsActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.yellowKids.yellowkidsapp.ui.my.FeedBackActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="2" android:name="com.tencent.tauth.AuthActivity" android:noHistory="true">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="tencent1106090739">
+</data>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.tencent.connect.common.AssistActivity" android:theme="@android:01030010">
+</activity>
+<activity android:name="com.yellowKids.yellowkidsapp.ui.activity.MapWebActivity">
+</activity>
+<activity android:exported="true" android:name="com.yellowKids.yellowkidsapp.wxapi.WXEntryActivity" android:screenOrientation="1">
+</activity>
+<activity android:exported="true" android:name="com.yellowKids.yellowkidsapp.wxapi.WXPayEntryActivity" android:screenOrientation="1" android:theme="@android:01030011">
+</activity>
+<activity android:name="com.yellowKids.yellowkidsapp.ui.my.UsualQuestionActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.yellowKids.yellowkidsapp.ui.my.UserAgreementActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.yellowKids.yellowkidsapp.ui.activity.ADActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.yellowKids.yellowkidsapp.ui.message.EaseChatActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.yellowKids.yellowkidsapp.ui.my.GroupActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.yellowKids.yellowkidsapp.ui.my.GroupOrderActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.yellowKids.yellowkidsapp.ui.recommend.ReadContentActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:name="com.yellowKids.yellowkidsapp.ui.benefit.PublicBenefitActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.yellowKids.yellowkidsapp.ui.recommend.CommentDetailActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:name="com.yellowKids.yellowkidsapp.ui.benefit.BenefitDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.yellowKids.yellowkidsapp.ui.activity.ActivityListActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.yellowKids.yellowkidsapp.ui.activity.YearTicketActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.yellowKids.yellowkidsapp.ui.activity.YearTicketEditOrderActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.yellowKids.yellowkidsapp.ui.activity.EditOrderActivityNew" android:screenOrientation="1">
+</activity>
+<service android:name="me.shenfan.updateapp.UpdateService">
+</service>
+<meta-data android:name="android.support.VERSION" android:value="26.1.0">
+</meta-data>
+<service android:name="com.amap.api.location.APSService">
+</service>
+<activity android:configChanges="0x000000A0" android:name="me.weyye.hipermission.PermissionActivity" android:screenOrientation="1" android:theme="@7F1000B8">
+</activity>
+<activity android:configChanges="0x000000A0" android:launchMode="2" android:name="com.luck.picture.lib.ui.PictureAlbumDirectoryActivity" android:screenOrientation="1" android:theme="@7F100150">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="com.luck.picture.lib.ui.PictureImageGridActivity" android:screenOrientation="1" android:theme="@7F100150">
+</activity>
+<activity android:name="com.luck.picture.lib.ui.PicturePreviewActivity" android:screenOrientation="1" android:theme="@7F100150">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.luck.picture.lib.ui.PictureVideoPlayActivity" android:screenOrientation="4">
+</activity>
+<activity android:name="com.luck.picture.lib.ui.PictureExternalPreviewActivity" android:screenOrientation="1" android:theme="@7F100150">
+</activity>
+<activity android:name="com.hyphenate.helpdesk.easeui.ui.ShowBigImageActivity" android:screenOrientation="1" android:theme="@7F1001BD">
+</activity>
+<activity android:name="com.hyphenate.helpdesk.easeui.ui.ShowNormalFileActivity" android:screenOrientation="1" android:theme="@7F1001BD">
+</activity>
+<activity android:name="com.hyphenate.helpdesk.easeui.ui.ShowVideoActivity" android:screenOrientation="1" android:theme="@7F1001BD">
+</activity>
+<activity android:configChanges="0x00000FF0" android:name="com.hyphenate.helpdesk.easeui.ui.BaseChatActivity" android:screenOrientation="1" android:theme="@7F1001BD">
+</activity>
+<activity android:name="com.hyphenate.helpdesk.easeui.ui.ImageGridActivity" android:screenOrientation="1" android:theme="@7F1001BD" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.hyphenate.helpdesk.easeui.ui.RecorderVideoActivity" android:screenOrientation="1" android:theme="@7F1001BD" android:windowSoftInputMode="0x00000003">
+</activity>
+<service android:exported="true" android:name="com.hyphenate.chat.EMChatService">
+</service>
+<service android:exported="true" android:name="com.hyphenate.chat.EMJobService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<receiver android:name="com.hyphenate.chat.EMMonitorReceiver">
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_REMOVED">
+</action>
+<data android:scheme="package">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+<action android:name="android.intent.action.USER_PRESENT">
+</action>
+</intent-filter>
+</receiver>
+<activity android:configChanges="0x000000A0" android:exported="false" android:name="com.sina.weibo.sdk.web.WeiboSdkWebActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:launchMode="2" android:name="com.sina.weibo.sdk.share.WbShareTransActivity" android:theme="@android:01030011">
+<intent-filter>
+<action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:name="cn.jpush.android.ui.PopWinActivity" android:theme="@7F1000C2">
+</activity>
+<activity android:configChanges="0x000000A0" android:exported="false" android:name="cn.jpush.android.ui.PushActivity" android:theme="@android:01030006">
+<intent-filter>
+<action android:name="cn.jpush.android.ui.PushActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="com.yellowKids.yellowkidsapp">
+</category>
+</intent-filter>
+</activity>
+<service android:enabled="true" android:exported="false" android:name="cn.jpush.android.service.PushService" android:process=":pushcore">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.REGISTER">
+</action>
+<action android:name="cn.jpush.android.intent.REPORT">
+</action>
+<action android:name="cn.jpush.android.intent.PushService">
+</action>
+<action android:name="cn.jpush.android.intent.PUSH_TIME">
+</action>
+</intent-filter>
+</service>
+<service android:enabled="true" android:exported="true" android:name="cn.jpush.android.service.DaemonService">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.DaemonService">
+</action>
+<category android:name="com.yellowKids.yellowkidsapp">
+</category>
+</intent-filter>
+</service>
+<receiver android:enabled="true" android:exported="false" android:name="cn.jpush.android.service.PushReceiver">
+<intent-filter android:priority="1000">
+<action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY">
+</action>
+<category android:name="com.yellowKids.yellowkidsapp">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.USER_PRESENT">
+</action>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_ADDED">
+</action>
+<action android:name="android.intent.action.PACKAGE_REMOVED">
+</action>
+<data android:scheme="package">
+</data>
+</intent-filter>
+</receiver>
+<receiver android:exported="false" android:name="cn.jpush.android.service.AlarmReceiver">
+</receiver>
+<meta-data android:name="JPUSH_CHANNEL" android:value="developer-default">
+</meta-data>
+<meta-data android:name="JPUSH_APPKEY" android:value="4dbfe7b9e03df4d1608fa6ec">
+</meta-data>
+<meta-data android:name="android.arch.lifecycle.VERSION" android:value="27.0.0-SNAPSHOT">
+</meta-data>
+</application>
+</manifest>

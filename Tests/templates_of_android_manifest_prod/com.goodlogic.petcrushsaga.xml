@@ -1,0 +1,120 @@
+<?xml version="1.0" ?><manifest android:versionCode="72" android:versionName="6.2" package="com.goodlogic.petcrushsaga" platformBuildVersionCode="19" platformBuildVersionName="4.4.2-1456859" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="10" android:targetSdkVersion="23">
+</uses-sdk>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.MANAGE_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_LOGS">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.BROADCAST_PACKAGE_ADDED">
+</uses-permission>
+<uses-permission android:name="android.permission.BROADCAST_PACKAGE_CHANGED">
+</uses-permission>
+<uses-permission android:name="android.permission.BROADCAST_PACKAGE_INSTALL">
+</uses-permission>
+<uses-permission android:name="android.permission.BROADCAST_PACKAGE_REPLACED">
+</uses-permission>
+<uses-permission android:name="android.permission.RESTART_PACKAGES">
+</uses-permission>
+<uses-permission android:name="com.android.vending.BILLING">
+</uses-permission>
+<application android:icon="@7F02004C" android:label="@7F060081">
+<activity android:configChanges="0x000004B0" android:label="@7F060081" android:name=".MainActivity" android:screenOrientation="1" android:theme="@android:01030007">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.goodlogic.common.chat.ChatActivity" android:screenOrientation="1" android:theme="@android:01030010" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.mob.tools.MobUIShell" android:screenOrientation="1" android:theme="@android:01030010" android:windowSoftInputMode="0x00000012">
+</activity>
+<receiver android:exported="false" android:name="com.umeng.message.NotificationProxyBroadcastReceiver">
+</receiver>
+<receiver android:name="com.umeng.message.RegistrationReceiver">
+<intent-filter>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_REMOVED">
+</action>
+<data android:scheme="package">
+</data>
+</intent-filter>
+</receiver>
+<receiver android:name="com.umeng.message.UmengBroadcastReceiver">
+<intent-filter>
+<action android:name="org.agoo.android.intent.action.RECEIVE">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="com.goodlogic.petcrushsaga.intent.action.COMMAND">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="org.agoo.android.intent.action.RE_ELECTION_V2">
+</action>
+</intent-filter>
+</receiver>
+<service android:exported="true" android:name="com.umeng.message.UmengService" android:process=":umengService_v1">
+<intent-filter>
+<action android:name="com.goodlogic.petcrushsaga.intent.action.START">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="com.goodlogic.petcrushsaga.intent.action.COCKROACH">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="org.agoo.android.intent.action.PING">
+</action>
+</intent-filter>
+</service>
+<service android:exported="true" android:name="org.android.agoo.service.ElectionService" android:process=":umengService_v1">
+<intent-filter>
+<action android:name="org.agoo.android.intent.action.ELECTION_V2">
+</action>
+</intent-filter>
+</service>
+<service android:name="com.umeng.message.UmengIntentService">
+</service>
+<service android:name="com.umeng.message.UmengDownloadResourceService">
+</service>
+<meta-data android:name="UMENG_MESSAGE_SECRET" android:value="ebccce8ae821db6944767af7fe627645">
+</meta-data>
+<meta-data android:name="com.google.android.gms.version" android:value="@7F0A0000">
+</meta-data>
+<activity android:configChanges="0x00000FB0" android:name="com.google.android.gms.ads.AdActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.vungle.publisher.FullScreenAdActivity" android:theme="@android:01030007">
+</activity>
+<meta-data android:name="UMENG_APPKEY" android:value="53df97d3fd98c51360007cdc">
+</meta-data>
+<meta-data android:name="UMENG_CHANNEL" android:value="google">
+</meta-data>
+</application>
+</manifest>

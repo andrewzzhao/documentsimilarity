@@ -1,0 +1,84 @@
+<?xml version="1.0" ?><manifest android:compileSdkVersion="28" android:compileSdkVersionCodename="9" android:versionCode="6" android:versionName="3.0.2" package="com.ld.youqianla" platformBuildVersionCode="28" platformBuildVersionName="9" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="19" android:targetSdkVersion="28">
+</uses-sdk>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-permission android:name="android.permission.FLASHLIGHT">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES">
+</uses-permission>
+<uses-permission android:name="android.permission.FOREGROUND_SERVICE">
+</uses-permission>
+<application android:allowBackup="true" android:appComponentFactory="android.support.v4.app.CoreComponentFactory" android:icon="@7F0B0020" android:label="@7F0C0027" android:name="com.ld.youqianla.base.BaseApplication" android:roundIcon="@7F0B0021" android:supportsRtl="true" android:theme="@7F0D0005" android:usesCleartextTraffic="true">
+<activity android:name="com.ld.youqianla.activity.WelcomeActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:launchMode="1" android:name="com.ld.youqianla.activity.ALoginActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name="com.ld.youqianla.activity.ARegisterActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name="com.ld.youqianla.activity.AContentActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name="com.ld.youqianla.activity.AboutActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name="com.ld.youqianla.activity.BContentActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name="com.ld.youqianla.activity.CSActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name="com.ld.youqianla.activity.SettingActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name="com.ld.youqianla.activity.VersionActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name="com.ld.youqianla.activity.CreateGestureActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name="com.ld.youqianla.activity.ProtocolActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name="com.ld.youqianla.activity.QuotaActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name="com.ld.youqianla.activity.BLoginActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name="com.ld.youqianla.activity.BAdvertActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name="com.ld.youqianla.activity.WebActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name="com.ld.youqianla.activity.GestureLoginActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.ld.youqianla.activity.CameraActivity" android:theme="@android:0103000E">
+</activity>
+<provider android:authorities="com.youqianla.FileProvider" android:exported="false" android:grantUriPermissions="true" android:name="android.support.v4.content.FileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F0F0000">
+</meta-data>
+</provider>
+<receiver android:exported="true" android:name="com.ld.youqianla.receiver.NetReceiver" android:screenOrientation="1">
+<intent-filter>
+<action android:name="android.net.wifi.WIFI_STATE_CHANGED">
+</action>
+<action android:name="android.net.wifi.STATE_CHANGE">
+</action>
+</intent-filter>
+</receiver>
+<service android:exported="false" android:name="com.ld.youqianla.service.DownloadService">
+</service>
+<service android:name="com.liulishuo.filedownloader.services.FileDownloadService$SharedMainProcessService">
+</service>
+<service android:name="com.liulishuo.filedownloader.services.FileDownloadService$SeparateProcessService" android:process=":filedownloader">
+</service>
+</application>
+</manifest>

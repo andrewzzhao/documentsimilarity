@@ -1,0 +1,578 @@
+<?xml version="1.0" ?><manifest android:installLocation="0" android:versionCode="50202" android:versionName="5.2.02" package="com.imjingjing.jingjing" platformBuildVersionCode="25" platformBuildVersionName="7.1.1" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="15" android:targetSdkVersion="22">
+</uses-sdk>
+<uses-feature android:name="android.hardware.camera" android:required="true">
+</uses-feature>
+<uses-feature android:name="android.hardware.camera.autofocus" android:required="false">
+</uses-feature>
+<uses-feature android:glEsVersion="0x00020000" android:required="true">
+</uses-feature>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.RECORD_AUDIO">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.BLUETOOTH">
+</uses-permission>
+<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS">
+</uses-permission>
+<uses-permission android:name="com.android.launcher.permission.READ_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.BROADCAST_STICKY">
+</uses-permission>
+<uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="android.permission.USE_CREDENTIALS">
+</uses-permission>
+<uses-permission android:name="android.permission.MANAGE_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.CALL_PHONE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_LOGS">
+</uses-permission>
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW">
+</uses-permission>
+<uses-permission android:name="android.permission.SET_DEBUG_APP">
+</uses-permission>
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_CONTACTS">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_CONTACTS">
+</uses-permission>
+<uses-permission android:name="android.permission.SEND_SMS">
+</uses-permission>
+<uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS">
+</uses-permission>
+<uses-permission android:name="android.permission.BLUETOOTH_ADMIN">
+</uses-permission>
+<uses-permission android:name="android.permission.DISABLE_KEYGUARD">
+</uses-permission>
+<uses-permission android:name="android.permission.USE_SIP">
+</uses-permission>
+<uses-permission android:name="android.permission.CONFIGURE_SIP">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PROFILE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_CALL_LOG">
+</uses-permission>
+<uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_SMS">
+</uses-permission>
+<uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_SMS">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SMS">
+</uses-permission>
+<uses-permission android:name="android.permission.EXPAND_STATUS_BAR">
+</uses-permission>
+<uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT">
+</uses-permission>
+<uses-permission android:name="com.android.launcher.permission.UNINSTALL_SHORTCUT">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_USER_PRESENT">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<permission android:name="com.imjingjing.jingjing.permission.JPUSH_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="com.imjingjing.jingjing.permission.JPUSH_MESSAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS">
+</uses-permission>
+<permission android:name="com.imjingjing.jingjing.permission.MIPUSH_RECEIVE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="com.imjingjing.jingjing.permission.MIPUSH_RECEIVE">
+</uses-permission>
+<application android:allowBackup="false" android:allowClearUserData="false" android:icon="@7F030006" android:label="@7F0A00E9" android:largeHeap="true" android:name="com.stub.StubApp" android:protect="activity" android:supportsRtl="true" android:theme="@7F0B00F3">
+<meta-data android:name="com.imjingjing.jingjing.glidemodule.MyGlideModule" android:value="GlideModule">
+</meta-data>
+<service android:enabled="true" android:exported="true" android:name="com.xiaomi.mipush.sdk.PushMessageHandler">
+</service>
+<service android:enabled="true" android:name="com.xiaomi.mipush.sdk.MessageHandleService">
+</service>
+<receiver android:exported="true" android:name="com.hyphenate.chat.EMMipushReceiver">
+<intent-filter>
+<action android:name="com.xiaomi.mipush.RECEIVE_MESSAGE">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="com.xiaomi.mipush.MESSAGE_ARRIVED">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="com.xiaomi.mipush.ERROR">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name="com.hyphenate.chat.EMHuaweiPushReceiver">
+ /&gt;
+
+<intent-filter>
+<action android:name="com.huawei.android.push.intent.REGISTRATION">
+</action>
+<action android:name="com.huawei.android.push.intent.RECEIVE">
+</action>
+</intent-filter>
+<meta-data android:name="CS_cloud_ablitity" android:value="successRateAnalytics">
+</meta-data>
+</receiver>
+<receiver android:name="com.huawei.android.pushagent.PushEventReceiver" android:process=":pushservice">
+<intent-filter>
+<action android:name="com.huawei.android.push.intent.REFRESH_PUSH_CHANNEL">
+</action>
+<action android:name="com.huawei.intent.action.PUSH">
+</action>
+<action android:name="com.huawei.intent.action.PUSH_ON">
+</action>
+<action android:name="com.huawei.android.push.PLUGIN">
+</action>
+</intent-filter>
+</receiver>
+<service android:name="com.huawei.android.pushagent.PushService" android:process=":pushservice">
+</service>
+<meta-data android:name="UMENG_APPKEY" android:value="55c09287e0f55a95ac000c92">
+</meta-data>
+<meta-data android:name="com.baidu.lbsapi.API_KEY" android:value="cZ6rKfNbS0ej2ASUVN4G6wiZ">
+</meta-data>
+<activity android:exported="false" android:name="cn.jpush.android.ui.PopWinActivity" android:theme="@7F0B00FC">
+</activity>
+<activity android:excludeFromRecents="true" android:exported="false" android:launchMode="2" android:name="com.stub.stub02.Stub01" android:noHistory="true" android:taskAffinity="com.imjingjing.jingjing.util" android:theme="@android:0103005F">
+</activity>
+<service android:enabled="true" android:exported="true" android:name="com.stub.stub02.Stub02">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.stub.stub02.Stub03">
+</service>
+<receiver android:enabled="true" android:exported="false" android:name="com.stub.stub02.Stub05">
+</receiver>
+<provider android:authorities="com.imjingjing.jingjing.COMMONPROVIDER" android:exported="true" android:name="com.stub.stub02.Stub04">
+</provider>
+<activity android:configChanges="0x000000A0" android:exported="false" android:launchMode="2" android:name="com.stub.stub05.Stub01" android:screenOrientation="1" android:theme="@android:01030060">
+</activity>
+<service android:exported="false" android:name="com.stub.stub05.Stub02">
+</service>
+<activity android:configChanges="0x000000A0" android:exported="false" android:name="cn.jpush.android.ui.PushActivity" android:theme="@android:01030006">
+<intent-filter>
+<action android:name="cn.jpush.android.ui.PushActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="com.imjingjing.jingjing">
+</category>
+</intent-filter>
+</activity>
+<service android:enabled="true" android:exported="false" android:name="cn.jpush.android.service.DownloadService">
+</service>
+<service android:enabled="true" android:exported="false" android:name="cn.jpush.android.service.PushService">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.REGISTER">
+</action>
+<action android:name="cn.jpush.android.intent.REPORT">
+</action>
+<action android:name="cn.jpush.android.intent.PushService">
+</action>
+<action android:name="cn.jpush.android.intent.PUSH_TIME">
+</action>
+</intent-filter>
+</service>
+<service android:enabled="true" android:exported="true" android:name="cn.jpush.android.service.DaemonService">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.DaemonService">
+</action>
+<category android:name="com.imjingjing.jingjing">
+</category>
+</intent-filter>
+</service>
+<receiver android:enabled="true" android:exported="false" android:name="cn.jpush.android.service.PushReceiver">
+<intent-filter android:priority="1000">
+<action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY">
+</action>
+<category android:name="com.imjingjing.jingjing">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.USER_PRESENT">
+</action>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_ADDED">
+</action>
+<action android:name="android.intent.action.PACKAGE_REMOVED">
+</action>
+<data android:scheme="package">
+</data>
+</intent-filter>
+</receiver>
+<receiver android:exported="false" android:name="cn.jpush.android.service.AlarmReceiver">
+</receiver>
+<receiver android:enabled="true" android:exported="false" android:name="com.imjingjing.jingjing.receiver.MyReceiver">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.REGISTRATION">
+</action>
+<action android:name="cn.jpush.android.intent.UNREGISTRATION">
+</action>
+<action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED">
+</action>
+<action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED">
+</action>
+<action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED">
+</action>
+<action android:name="cn.jpush.android.intent.ACTION_RICHPUSH_CALLBACK">
+</action>
+<action android:name="cn.jpush.android.intent.CONNECTION">
+</action>
+<category android:name="com.imjingjing.jingjing">
+</category>
+</intent-filter>
+</receiver>
+<meta-data android:name="JPUSH_CHANNEL" android:value="developer-default">
+</meta-data>
+<meta-data android:name="JPUSH_APPKEY" android:value="5a6b98233f8f5b0f54753b69">
+</meta-data>
+<activity android:name="com.imjingjing.jingjing.activity.JJClubAddFavActivity" android:screenOrientation="1">
+</activity>
+<activity android:alwaysRetainTaskState="false" android:excludeFromRecents="true" android:launchMode="2" android:name="com.imjingjing.jingjing.activity.LoadResouseActivity" android:process=":load" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.imjingjing.jingjing.activity.LoadResouseActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:name="com.imjingjing.jingjing.activity.SplashActivity" android:screenOrientation="1" android:theme="@7F0B0040">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:alwaysRetainTaskState="true" android:label="@7F0A00E9" android:launchMode="2" android:name="com.imjingjing.jingjing.main.HomeMainActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:label="@7F0A00E9" android:name="com.imjingjing.jingjing.activity.TagActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F0A00E9" android:name="com.imjingjing.jingjing.activity.ImagePagerActivity" android:process=":picture" android:screenOrientation="1" android:theme="@7F0B00F5">
+</activity>
+<activity android:name="com.imjingjing.jingjing.activity.JJWebView" android:screenOrientation="1">
+</activity>
+<activity android:name="com.imjingjing.jingjing.activity.SettingActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.imjingjing.jingjing.activity.PersonalCenteAttention" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004E0" android:exported="false" android:name="com.alipay.sdk.app.H5PayActivity" android:screenOrientation="3" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:name="com.imjingjing.jingjing.activity.MoneyBagActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.imjingjing.jingjing.activity.WithdrawalsActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.imjingjing.jingjing.activity.VipCenterActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.imjingjing.jingjing.activity.VipCenterBuyActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.imjingjing.jingjing.activity.VipPriliDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.imjingjing.jingjing.activity.HelloFinishActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.imjingjing.jingjing.activity.HelloSendMsgActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.imjingjing.jingjing.activity.PendingMsgActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name="com.imjingjing.jingjing.activity.TopicDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.imjingjing.jingjing.activity$SmallCircle.SmallCircleMyCreateActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.imjingjing.jingjing.activity.RechargeActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:name="com.imjingjing.jingjing.activity.BindingPhoneActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.imjingjing.jingjing.activity.ThirdBindingActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.imjingjing.jingjing.activity.FeedbackActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.imjingjing.jingjing.activity.AngelDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="2" android:name="com.imjingjing.jingjing.activity.AngellShareReportActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="2" android:name="com.imjingjing.jingjing.activity.PersonalCenterChangePhotos" android:screenOrientation="1">
+</activity>
+<activity android:name="com.hyphenate.chatuidemo.ui.ChatActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.hyphenate.chatuidemo.ui.ContextMenuActivity" android:screenOrientation="1" android:theme="@7F0B00F8">
+</activity>
+<activity android:name="com.hyphenate.easeui.ui.EaseShowBigImageActivity" android:screenOrientation="1" android:theme="@7F0B01C0">
+</activity>
+<activity android:name="com.hyphenate.easeui.ui.EaseShowNormalFileActivity" android:screenOrientation="1" android:theme="@7F0B01C0">
+</activity>
+<activity android:name="com.hyphenate.easeui.ui.EaseShowVideoActivity" android:screenOrientation="1" android:theme="@7F0B01C0">
+</activity>
+<meta-data android:name="EASEMOB_APPKEY" android:value="imjingjing#imjingjing">
+</meta-data>
+<service android:exported="true" android:name="com.hyphenate.chat.EMChatService">
+</service>
+<receiver android:name="com.hyphenate.chat.EMMonitorReceiver">
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_REMOVED">
+</action>
+<data android:scheme="package">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+<action android:name="android.intent.action.USER_PRESENT">
+</action>
+</intent-filter>
+</receiver>
+<activity android:launchMode="2" android:name="com.tencent.tauth.AuthActivity" android:noHistory="true">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="tencent101236286">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.tencent.connect.common.AssistActivity" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x000004A0" android:exported="true" android:name="com.imjingjing.jingjing.wxapi.WXEntryActivity" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<activity android:exported="true" android:launchMode="1" android:name="com.imjingjing.jingjing.wxapi.WXPayEntryActivity">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.imjingjing.jingjing.WBShareActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000A0" android:exported="false" android:name="com.sina.weibo.sdk.component.WeiboSdkBrowser" android:windowSoftInputMode="0x00000010">
+</activity>
+<service android:exported="false" android:name="com.sina.weibo.sdk.net.DownloadService">
+</service>
+<service android:name="com.umeng.update.net.DownloadingService" android:process=":DownloadingService">
+</service>
+<activity android:name="com.umeng.update.UpdateDialogActivity" android:theme="@android:01030010">
+</activity>
+<activity android:launchMode="2" android:name="com.imjingjing.jingjing.activity.ManagerActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.imjingjing.jingjing.activity.AboutMeActivity">
+</activity>
+<activity android:name="com.imjingjing.jingjing.activity.MyServicesActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name="com.imjingjing.jingjing.activity.AddServiceActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.imjingjing.jingjing.activity.ProblemDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="2" android:name="com.imjingjing.jingjing.activity.ChatRoomActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:launchMode="2" android:name="com.imjingjing.jingjing.activity.PersonalCenterApplyAudit" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="2" android:name="com.imjingjing.jingjing.activity.PersonalCenterApplyAngle" android:screenOrientation="1">
+</activity>
+<activity android:label="䝖ॲ�" android:name="com.photoselector.ui.PhotoSelectorActivity" android:process=":photoselector" android:screenOrientation="1">
+</activity>
+<activity android:label="䝖ॲ�" android:name="com.photoselector.ui.PhotoPreviewActivity" android:process=":photoselector" android:screenOrientation="1">
+</activity>
+<activity android:name="com.imjingjing.jingjing.activity.ProblemEditActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.imjingjing.jingjing.activity.XListViewActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name="com.imjingjing.jingjing.activity.AwardActivity" android:screenOrientation="1" android:theme="@android:0103000F">
+</activity>
+<activity android:name="com.imjingjing.jingjing.activity.EditPersonalInformation" android:screenOrientation="1">
+</activity>
+<activity android:name="com.imjingjing.jingjing.activity.SystemMessageActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.imjingjing.jingjing.activity.GcMessageActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.imjingjing.jingjing.activity.NoticePhonePhoto" android:screenOrientation="1">
+</activity>
+<activity android:name="com.imjingjing.jingjing.activity.FindAngelActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.imjingjing.jingjing.activity.ChooseCategory" android:screenOrientation="1">
+</activity>
+<activity android:name="com.imjingjing.jingjing.activity.AngelCategoryActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.imjingjing.jingjing.activity.WorkEditorActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.imjingjing.jingjing.activity.StudyEditorActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.imjingjing.jingjing.activity.CompanyChooseActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.imjingjing.jingjing.activity.CompanyPositionActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.imjingjing.jingjing.activity.AboutMeAndWorkStudyActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.imjingjing.jingjing.activity.SettingAboutMeActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.imjingjing.jingjing.activity.MenuContentActivity" android:screenOrientation="1" android:theme="@7F0B00F8">
+</activity>
+<activity android:name="com.imjingjing.jingjing.activity.AngelPhotoDetail" android:screenOrientation="1">
+</activity>
+<activity android:name="com.imjingjing.jingjing.activity.AngelPhotoSelectActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.imjingjing.jingjing.activity.AngelImagePageActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.imjingjing.jingjing.activity.TransactionManagerActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.imjingjing.jingjing.activity.TransactionServiceActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.imjingjing.jingjing.activity.TransactionDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.imjingjing.jingjing.activity.AngelyDynamicAct" android:screenOrientation="1">
+</activity>
+<activity android:name="com.imjingjing.jingjing.activity.CityChooseActivit" android:screenOrientation="1">
+</activity>
+<activity android:name="com.imjingjing.jingjing.activity.AgeSetActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.imjingjing.jingjing.activity.SingleSearchShowActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:label="@7F0A01FF" android:name="com.imjingjing.jingjing.test.TestActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.imjingjing.jingjing.activity.PublishServiceHelp" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<activity android:name="com.imjingjing.jingjing.activity.FindPWDActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.imjingjing.jingjing.activity.LoginActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.imjingjing.jingjing.activity.DetailInfoRegistActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.imjingjing.jingjing.activity.ResetPWDActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.imjingjing.jingjing.activity.JJGiftAnimationAct" android:screenOrientation="1" android:theme="@7F0B0101">
+</activity>
+<activity android:launchMode="1" android:name="com.imjingjing.jingjing.activity.SweetAnimaActivity" android:screenOrientation="1" android:theme="@android:0103000F">
+</activity>
+<activity android:label="@7F0A0319" android:name="com.imjingjing.jingjing.activity.DebugACT" android:screenOrientation="1" android:theme="@7F0B0106">
+</activity>
+<activity android:name="com.imjingjing.jingjing.activity.UploadCoverPhotoACT" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<activity android:name="com.imjingjing.jingjing.activity.MyNeedACT" android:screenOrientation="1">
+</activity>
+<activity android:name="com.imjingjing.jingjing.activity.BlackListACT" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F0A0325" android:name="com.imjingjing.jingjing.activity.TestWeb" android:screenOrientation="1" android:theme="@7F0B0106">
+</activity>
+<activity android:name="com.imjingjing.jingjing.activity.PubRequiActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.imjingjing.jingjing.activity.MeetOffLineActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.imjingjing.jingjing.activity.MeetOffLineSucces" android:screenOrientation="1">
+</activity>
+<activity android:name="com.imjingjing.jingjing.test.TestDTACT" android:screenOrientation="1">
+</activity>
+<activity android:name="com.imjingjing.jingjing.activity.SetCoverACT" android:screenOrientation="1">
+</activity>
+<activity android:name="com.imjingjing.jingjing.activity.RecommendACT" android:screenOrientation="1">
+</activity>
+<activity android:name="com.imjingjing.jingjing.activity.CompleteInfoACT" android:screenOrientation="1">
+</activity>
+<activity android:name="com.imjingjing.jingjing.activity.NewPublishDynamic" android:screenOrientation="1">
+</activity>
+<activity android:name="com.imjingjing.jingjing.activity.YouYingYangACT" android:screenOrientation="1">
+</activity>
+<activity android:name="com.imjingjing.jingjing.activity.JYQRedPacketACT" android:screenOrientation="1">
+</activity>
+<activity android:name="com.imjingjing.jingjing.activity.CircleDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.imjingjing.jingjing.activity.SetDataACT" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<activity android:name="com.imjingjing.jingjing.activity.NewAngelDynamic" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name="com.imjingjing.jingjing.activity.HBGZActivity" android:screenOrientation="1" android:theme="@android:0103000F">
+</activity>
+<activity android:name="com.imjingjing.jingjing.activity.AboutJJ" android:screenOrientation="1">
+</activity>
+<activity android:name="com.imjingjing.jingjing.activity.SmallCircleALLActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.imjingjing.jingjing.activity.HotCircleActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.imjingjing.jingjing.activity.SmallCircle.SmallCircleAlllistActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.imjingjing.jingjing.activity.CreateSmallCircleActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.imjingjing.jingjing.activity.SmallCircle.SearchSmallCircleActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.imjingjing.jingjing.activity.ServiceClassifyActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.imjingjing.jingjing.activity.GoodsClassifyActvity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.imjingjing.jingjing.activity.GoodsSearchActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.imjingjing.jingjing.activity.MyGoodsCollectionActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.imjingjing.jingjing.activity.MyGoodsManageActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.imjingjing.jingjing.activity.GoodsPublishActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:name="com.imjingjing.jingjing.activity.GoodsDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.imjingjing.jingjing.activity.GoodsAllCommentActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:name="com.imjingjing.jingjing.activity.UserGoodsShopActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.imjingjing.jingjing.activity.GoodsShowListActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.imjingjing.jingjing.activity.JJFriendCenterActivity" android:screenOrientation="1">
+</activity>
+<service android:enabled="true" android:exported="true" android:name="com.hyphenate.easeui.service.MusicMangerService">
+</service>
+<activity android:configChanges="0x000004A4" android:name="com.tencent.bugly.beta.ui.BetaActivity" android:theme="@android:0103000F">
+</activity>
+<provider android:authorities="com.imjingjing.jingjing.fileProvider" android:exported="false" android:grantUriPermissions="true" android:name="com.tencent.bugly.beta.utils.BuglyFileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F070000">
+</meta-data>
+</provider>
+<service android:exported="false" android:name="com.tencent.bugly.beta.tinker.TinkerResultService">
+</service>
+<service android:exported="false" android:name="com.tencent.tinker.lib.service.TinkerPatchService" android:process=":patch">
+</service>
+<service android:exported="false" android:name="com.tencent.tinker.lib.service.TinkerPatchService$InnerService" android:process=":patch">
+</service>
+<service android:exported="false" android:name="com.tencent.tinker.lib.service.DefaultTinkerResultService">
+</service>
+<meta-data android:name="TINKER_ID" android:value="base-5.2.02">
+</meta-data>
+<meta-data android:name="TINKER_PATCH_APPLICATION" android:value="com.imjingjing.jingjing.application.App">
+</meta-data>
+</application>
+</manifest>

@@ -1,0 +1,108 @@
+<?xml version="1.0" ?><manifest android:versionCode="590" android:versionName="5.8.5" package="com.zhongchouke.zhongchouke" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="16" android:targetSdkVersion="20">
+</uses-sdk>
+<supports-screens android:anyDensity="true" android:largeScreens="true" android:normalScreens="true" android:resizeable="true" android:smallScreens="true" android:xlargeScreens="true">
+</supports-screens>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="com.huawei.android.launcher.permission.CHANGE_BADGE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.RECORD_AUDIO">
+</uses-permission>
+<uses-permission android:name="android.permission.FLASHLIGHT">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-permission android:name="android.permission.BLUETOOTH_ADMIN">
+</uses-permission>
+<uses-permission android:name="android.permission.BLUETOOTH">
+</uses-permission>
+<permission android:name="android.permission.INTERACT_ACROSS_USERS_FULL" android:protectionLevel="0x00000002">
+</permission>
+<uses-feature android:name="android.hardware.camera">
+</uses-feature>
+<uses-feature android:name="android.hardware.camera.autofocus" android:required="false">
+</uses-feature>
+<application android:allowBackup="false" android:debuggable="false" android:hardwareAccelerated="true" android:icon="@7F020019" android:label="@7F040000" android:largeHeap="true" android:name="com.uzmap.pkg.uzapp.UZApplication">
+<meta-data android:name="uz_version" android:value="1.2.71">
+</meta-data>
+<meta-data android:name="android.max_aspect" android:value="2.100000">
+</meta-data>
+<activity android:configChanges="0x00000DB4" android:label="@7F040000" android:launchMode="2" android:name="com.uzmap.pkg.EntranceActivity" android:screenOrientation="1" android:theme="@7F050000" android:windowSoftInputMode="0x00000000">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<provider android:authorities="com.zhongchouke.zhongchouke.ups" android:exported="false" android:label="udmg" android:name="com.uzmap.pkg.uzapp.UProvider">
+</provider>
+<service android:enabled="true" android:label="upns" android:name="com.uzmap.pkg.uzsocket.UPnsService" android:process=":remote">
+</service>
+<receiver android:enabled="true" android:exported="false" android:label="upns" android:name="com.uzmap.pkg.uzapp.UPExtraBridge" android:process=":remote">
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_REMOVED">
+</action>
+<action android:name="android.intent.action.PACKAGE_ADDED">
+</action>
+<data android:scheme="package">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.DOWNLOAD_COMPLETE">
+</action>
+<action android:name="android.intent.action.DOWNLOAD_NOTIFICATION_CLICKED">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.apicloud.notification">
+</action>
+</intent-filter>
+</receiver>
+<activity android:configChanges="0x00000084" android:name="com.uzmap.pkg.uzmodules.uzimageBrowser.activity.GalleryActivity" android:screenOrientation="1" android:theme="@android:01030009">
+</activity>
+<activity android:configChanges="0x00000084" android:name="com.uzmap.pkg.uzmodules.uzimageBrowser.activity.ImageActivity" android:screenOrientation="1" android:theme="@android:01030009">
+</activity>
+<activity android:exported="true" android:name="com.zhongchouke.zhongchouke.wxapi.WXEntryActivity" android:theme="@android:01030011">
+</activity>
+</application>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS">
+</uses-permission>
+</manifest>

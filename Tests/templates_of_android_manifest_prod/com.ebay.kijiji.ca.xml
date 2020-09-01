@@ -1,0 +1,650 @@
+<?xml version="1.0" ?><manifest android:compileSdkVersion="28" android:compileSdkVersionCodename="9" android:installLocation="0" android:versionCode="250068" android:versionName="10.0.2" package="com.ebay.kijiji.ca" platformBuildVersionCode="28" platformBuildVersionName="9" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="21" android:targetSdkVersion="28">
+</uses-sdk>
+<permission android:name="com.ebay.kijiji.ca.openid.CONTENT_PROVIDER" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="ecg.move.ca.debug.openid.CONTENT_PROVIDER">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.FOREGROUND_SERVICE">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE">
+</uses-permission>
+<uses-feature android:name="android.hardware.camera">
+</uses-feature>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-feature android:name="android.hardware.location.network" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.location.gps" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.wifi" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.location" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.touchscreen" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.telephony" android:required="false">
+</uses-feature>
+<uses-permission android:maxSdkVersion="22" android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE">
+</uses-permission>
+<uses-feature android:glEsVersion="0x00020000" android:required="true">
+</uses-feature>
+<application android:allowBackup="false" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:icon="@7F08017C" android:label="@7F110315" android:largeHeap="true" android:name="com.ebay.app.common.utils.AppInstance" android:networkSecurityConfig="@7F140002" android:resizeableActivity="false" android:supportsRtl="false" android:theme="@7F12025E">
+<meta-data android:name="build_id" android:value="250068">
+</meta-data>
+<meta-data android:name="asset_statements" android:resource="@7F110350">
+</meta-data>
+<provider android:authorities="com.ebay.kijiji.ca.OpenIdProvider" android:exported="true" android:multiprocess="true" android:name="ecg.move.contentprovider.provider.OpenIdTokenProvider" android:permission="com.ebay.kijiji.ca.openid.CONTENT_PROVIDER">
+</provider>
+<uses-library android:name="org.apache.http.legacy" android:required="false">
+</uses-library>
+<meta-data android:name="firebase_performance_collection_enabled" android:value="true">
+</meta-data>
+<meta-data android:name="com.google.android.gms.ads.AD_MANAGER_APP" android:value="true">
+</meta-data>
+<meta-data android:name="com.ebay.mts.Logging" android:value="true">
+</meta-data>
+<meta-data android:name="com.ebay.mts.UseProductionServers" android:value="true">
+</meta-data>
+<meta-data android:name="com.google.android.gms.version" android:value="@7F0B001B">
+</meta-data>
+<meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="@7F11042E">
+</meta-data>
+<meta-data android:name="io.fabric.ApiKey" android:value="61c7eba18ada4d04a2b00fef61d00d84c9217e36">
+</meta-data>
+<meta-data android:name="com.ebay.app.common.glide.EcgGlideModule" android:value="GlideModule">
+</meta-data>
+<activity android:configChanges="0x00000FB0" android:exported="false" android:name="com.google.android.gms.ads.AdActivity" android:theme="@android:0103000F">
+</activity>
+<service android:name="com.google.android.gms.analytics.CampaignTrackingService">
+</service>
+<receiver android:enabled="true" android:exported="false" android:name="com.ebay.app.postAd.receivers.EditImageSelectionReceiver">
+</receiver>
+<receiver android:enabled="true" android:exported="true" android:name="com.ebay.app.common.analytics.CampaignReceiver">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+<activity android:label="@7F110315" android:name="com.ebay.app.common.startup.SplashScreenActivity" android:screenOrientation="1" android:theme="@7F1201D3">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:name="com.ebay.app.home.activities.HomeActivity" android:screenOrientation="1" android:theme="@7F120150">
+</activity>
+<activity android:name="com.ebay.app.notificationCenter.activities.NotificationCenterActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ebay.app.notificationCenter.activities.WelcomeNotificationActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name="com.ebay.app.p2pPayments.activities.PayPalMarketingTutorialActivity" android:screenOrientation="1" android:theme="@7F12025C">
+</activity>
+<activity android:name="com.ebay.app.userAccount.edit.activities.EditUserProfileActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ebay.app.common.activities.LocationSuggestionActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ebay.app.search.browse.activities.BrowseActivity" android:parentActivityName="com.ebay.app.home.activities.HomeActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ebay.app.search.browse.activities.BrowseAdListActivity" android:parentActivityName="com.ebay.app.search.browse.activities.BrowseActivity" android:screenOrientation="1" android:theme="@7F12025E">
+</activity>
+<activity android:name="com.ebay.app.search.activities.SearchActivity" android:screenOrientation="1">
+<meta-data android:name="android.app.searchable" android:resource="@7F140000">
+</meta-data>
+<intent-filter>
+<action android:name="android.intent.action.SEARCH">
+</action>
+</intent-filter>
+</activity>
+<activity android:name="com.ebay.app.search.activities.SearchAdListActivity" android:screenOrientation="1" android:theme="@7F12025E" android:windowSoftInputMode="0x00000004">
+</activity>
+<activity android:name="com.ebay.app.search.activities.LocationSearchActivity" android:screenOrientation="1" android:theme="@7F12025B">
+</activity>
+<activity android:name="com.ebay.app.search.map.activities.MapSearchActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ebay.app.search.activities.ViewAddressLocationActivity" android:screenOrientation="1" android:theme="@7F12025B">
+</activity>
+<activity android:name="com.ebay.app.search.activities.ClusterAdListActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ebay.app.search.map.activities.MapClusterAdDetailsActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ebay.app.search.map.activities.MapSingleAdDetailsActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ebay.app.search.savedSearch.activities.SavedSearchActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ebay.app.search.savedSearch.activities.SavedSearchAdListActivity" android:parentActivityName="com.ebay.app.search.savedSearch.activities.SavedSearchActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ebay.app.myAds.activities.MyAdsActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ebay.app.userRatings.submitRating.SubmitRatingActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ebay.app.userRatings.submitRatingConfirmation.SubmitRatingConfirmationActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ebay.app.common.adDetails.activities.ZoomImageActivity" android:screenOrientation="1" android:theme="@7F12025D">
+</activity>
+<activity android:name="com.ebay.app.common.adDetails.activities.ExtendedInfoActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000480" android:launchMode="1" android:name="com.ebay.app.postAd.activities.PostActivity" android:parentActivityName="com.ebay.app.home.activities.HomeActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name="com.ebay.app.postAd.activities.PostAdFullScreenPictureActivity" android:screenOrientation="1" android:theme="@7F12025B">
+</activity>
+<activity android:name="com.ebay.app.postAd.activities.PostCompleteActivity" android:parentActivityName="com.ebay.app.myAds.activities.MyAdsActivity" android:screenOrientation="1" android:theme="@7F120262">
+</activity>
+<activity android:name="com.ebay.app.postAd.activities.PostInProgressActivity" android:parentActivityName="com.ebay.app.postAd.activities.PostActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ebay.app.postAd.activities.EditAdActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ebay.app.postAd.activities.PostAdmarktLimitActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ebay.app.postAd.activities.EditCompleteActivity" android:parentActivityName="com.ebay.app.myAds.activities.MyAdsActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004B0" android:name="com.ebay.app.featurePurchase.activities.FeaturePurchaseActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004B0" android:name="com.ebay.app.featurePurchase.activities.PostFlowFeaturePurchaseActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004B0" android:name="com.ebay.app.featurePurchase.activities.ActivatePayableAdActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ebay.app.featurePurchase.activities.RepostWithBumpUpActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ebay.app.contactPoster.activities.ContactPosterActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name="com.ebay.app.settings.activities.SettingsActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name="com.ebay.app.about.activities.AboutActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ebay.app.about.activities.CopyrightActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ebay.app.common.activities.WebViewActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name="com.ebay.app.userAccount.login.activities.LoginActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:name="com.ebay.app.userAccount.login.activities.LinkedLoginActivity" android:parentActivityName="com.ebay.app.home.activities.HomeActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name="com.ebay.app.userAccount.login.activities.ForgotPasswordActivity" android:parentActivityName="com.ebay.app.home.activities.HomeActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name="com.ebay.app.userAccount.login.activities.ResetPasswordActivity" android:parentActivityName="com.ebay.app.home.activities.HomeActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ebay.app.search.browse.activities.CategoryLandingScreenActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ebay.app.featurePurchase.activities.BumpUpActivity" android:parentActivityName="com.ebay.app.myAds.activities.MyAdsActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ebay.app.common.activities.NavBarTutorialActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ebay.app.userAccount.register.activities.RegistrationActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ebay.app.messageBoxSdk.activities.MessageBoxSdkActivity" android:screenOrientation="1" android:theme="@7F120260">
+</activity>
+<activity android:name="com.ebay.app.messageBoxSdk.activities.MessageBoxSdkChatActivity" android:parentActivityName="com.ebay.app.messageBoxSdk.activities.MessageBoxSdkActivity" android:screenOrientation="1" android:theme="@7F120260" android:windowSoftInputMode="0x00000001">
+</activity>
+<activity android:name="com.ebay.app.messageBox.activities.MessageBoxChatZoomImageActivity" android:screenOrientation="1" android:theme="@7F12025D">
+</activity>
+<activity android:name="com.ebay.app.messageBox.activities.MessageBoxDisplayNameActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ebay.app.common.activities.SingleAdDetailsActivity" android:parentActivityName="com.ebay.app.home.activities.HomeActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:name="com.ebay.app.favorites.activities.FavoritesSingleAdDetailsActivity" android:parentActivityName="com.ebay.app.myAds.activities.MyAdsActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:name="com.ebay.app.postAd.activities.PreviewAdDetailsActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ebay.app.common.activities.AdDeepLinkActivity" android:noHistory="true" android:screenOrientation="1">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="@7F110316" android:scheme="android-app">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.ebay.app.common.activities.ShortcutLauncherActivity" android:noHistory="true" android:screenOrientation="1">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="shortcutsearch" android:scheme="@7F1105D0">
+</data>
+<data android:host="shortcutpost" android:scheme="@7F1105D0">
+</data>
+<data android:host="shortcutmyads" android:scheme="@7F1105D0">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.ebay.app.common.activities.ExternalDeepLinkActivity" android:noHistory="true" android:screenOrientation="1">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="search" android:scheme="@7F1105D0">
+</data>
+<data android:host="login" android:scheme="@7F1105D0">
+</data>
+<data android:host="home" android:scheme="@7F1105D0">
+</data>
+<data android:host="viewad" android:scheme="@7F1105D0">
+</data>
+<data android:host="post" android:scheme="@7F1105D0">
+</data>
+<data android:host="category" android:scheme="@7F1105D0">
+</data>
+<data android:host="messagebox" android:scheme="@7F1105D0">
+</data>
+<data android:host="myads" android:scheme="@7F1105D0">
+</data>
+<data android:host="mobilepayment" android:scheme="@7F1105D0">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.ebay.app.common.activities.UniversalDeepLinkActivity" android:noHistory="true" android:screenOrientation="1">
+<intent-filter android:autoVerify="true">
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="@7F1105C7">
+</data>
+<data android:path="/">
+</data>
+<data android:pathPrefix="@7F110557" android:scheme="https">
+</data>
+<data android:pathPrefix="@7F110557" android:scheme="http">
+</data>
+<data android:pathPrefix="@7F110374" android:scheme="https">
+</data>
+<data android:pathPrefix="@7F110374" android:scheme="http">
+</data>
+<data android:pathPrefix="@7F11058A" android:scheme="https">
+</data>
+<data android:pathPrefix="@7F11058A" android:scheme="http">
+</data>
+<data android:pathPrefix="@7F1103F7" android:scheme="https">
+</data>
+<data android:pathPrefix="@7F1103F7" android:scheme="http">
+</data>
+<data android:pathPrefix="@7F110448" android:scheme="https">
+</data>
+<data android:pathPrefix="@7F110448" android:scheme="http">
+</data>
+<data android:host="@7F1105C8" android:pathPrefix="@7F110448" android:scheme="https">
+</data>
+<data android:host="@7F1105C8" android:pathPrefix="@7F110448" android:scheme="http">
+</data>
+<data android:pathPrefix="@7F1103B6" android:scheme="https">
+</data>
+<data android:pathPrefix="@7F1103B6" android:scheme="http">
+</data>
+<data android:pathPrefix="@7F1104B8" android:scheme="https">
+</data>
+<data android:pathPrefix="@7F1104B8" android:scheme="http">
+</data>
+<data android:pathPrefix="@7F11044A" android:scheme="https">
+</data>
+<data android:pathPrefix="@7F11044A" android:scheme="http">
+</data>
+<data android:pathPrefix="@7F11057B" android:scheme="https">
+</data>
+<data android:pathPrefix="@7F11057B" android:scheme="http">
+</data>
+<data android:pathPrefix="@7F1105DD" android:scheme="https">
+</data>
+<data android:pathPrefix="@7F1105DD" android:scheme="http">
+</data>
+<data android:pathPrefix="@7F110445" android:scheme="https">
+</data>
+<data android:pathPrefix="@7F110445" android:scheme="http">
+</data>
+<data android:pathPrefix="@7F1104BE" android:scheme="https">
+</data>
+<data android:pathPrefix="@7F1104BE" android:scheme="http">
+</data>
+<data android:pathPrefix="@7F11051B" android:scheme="https">
+</data>
+<data android:pathPrefix="@7F11051B" android:scheme="http">
+</data>
+<data android:pathPrefix="@7F110537" android:scheme="https">
+</data>
+<data android:pathPrefix="@7F110537" android:scheme="http">
+</data>
+<data android:pathPrefix="@7F1103D3" android:scheme="https">
+</data>
+<data android:pathPrefix="@7F1103D3" android:scheme="http">
+</data>
+<data android:pathPrefix="@7F110554" android:scheme="https">
+</data>
+<data android:pathPrefix="@7F110554" android:scheme="http">
+</data>
+<data android:host="@7F1105C8" android:pathPrefix="@7F110554" android:scheme="https">
+</data>
+<data android:host="@7F1105C8" android:pathPrefix="@7F110554" android:scheme="http">
+</data>
+<data android:pathPrefix="@7F1103BF" android:scheme="https">
+</data>
+<data android:pathPrefix="@7F1103BF" android:scheme="http">
+</data>
+<data android:pathPrefix="@7F1102D6" android:scheme="https">
+</data>
+<data android:pathPrefix="@7F1102D6" android:scheme="http">
+</data>
+<data android:pathPrefix="@7F1103D4" android:scheme="https">
+</data>
+<data android:pathPrefix="@7F1103D4" android:scheme="http">
+</data>
+<data android:pathPrefix="@7F110595" android:scheme="https">
+</data>
+<data android:pathPrefix="@7F110595" android:scheme="http">
+</data>
+<data android:pathPrefix="@7F110594" android:scheme="https">
+</data>
+<data android:pathPrefix="@7F110594" android:scheme="http">
+</data>
+<data android:pathPrefix="@7F1102DA" android:scheme="https">
+</data>
+<data android:pathPrefix="@7F1102DA" android:scheme="http">
+</data>
+<data android:pathPrefix="@7F1105F7" android:scheme="https">
+</data>
+<data android:pathPrefix="@7F1105F7" android:scheme="http">
+</data>
+<data android:host="@7F1105C8" android:pathPrefix="@7F1105F7" android:scheme="https">
+</data>
+<data android:host="@7F1105C8" android:pathPrefix="@7F1105F7" android:scheme="http">
+</data>
+<data android:pathPrefix="@7F1105F6" android:scheme="https">
+</data>
+<data android:pathPrefix="@7F1105F6" android:scheme="http">
+</data>
+<data android:pathPrefix="@7F11052C" android:scheme="https">
+</data>
+<data android:pathPrefix="@7F11052C" android:scheme="http">
+</data>
+<data android:pathPrefix="@7F11055A" android:scheme="http">
+</data>
+<data android:pathPrefix="@7F11055A" android:scheme="https">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.ebay.app.postAd.activities.SendPictureActivity" android:noHistory="true" android:screenOrientation="1">
+<intent-filter>
+<action android:name="android.intent.action.SEND">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:mimeType="image/*">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.SEND_MULTIPLE">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:mimeType="image/*">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.ebay.app.favorites.activities.FavoritesAdDetailsActivity" android:parentActivityName="com.ebay.app.home.activities.HomeActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:name="com.ebay.app.myAds.activities.MyAdsAdDetailsActivity" android:parentActivityName="com.ebay.app.myAds.activities.MyAdsActivity" android:screenOrientation="1">
+</activity>
+<activity android:hardwareAccelerated="@7F050003" android:name="com.ebay.app.search.activities.SearchAdDetailsActivity" android:parentActivityName="com.ebay.app.home.activities.HomeActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:hardwareAccelerated="@7F050003" android:name="com.ebay.app.search.activities.WidgetAdDetailsActivity" android:parentActivityName="com.ebay.app.home.activities.HomeActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:name="com.ebay.app.recommendations.activities.SimilarAdDetailsActivity" android:parentActivityName="com.ebay.app.home.activities.HomeActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:name="com.ebay.app.recommendations.activities.SimilarAdListActivity" android:parentActivityName="com.ebay.app.home.activities.HomeActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ebay.app.search.activities.PostersAdListActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ebay.app.common.activities.NotificationMediatorActivity" android:noHistory="true" android:screenOrientation="1">
+</activity>
+<activity android:enabled="false" android:label="@7F110315" android:name="com.google.android.gms.tagmanager.PreviewActivity" android:noHistory="true">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:scheme="tagmanager.c.com.ebay.kijiji.ca">
+</data>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+</intent-filter>
+</activity>
+<activity android:name="com.ebay.app.imagepicker.image_library.ImageLibraryActivity" android:uiOptions="0x00000001">
+</activity>
+<activity android:label="@7F1103CD" android:name="com.ebay.app.imagepicker.image_library.ImageLibraryFoldersActivity">
+</activity>
+<activity android:name="com.ebay.app.p2pPayments.activities.P2pLinkConfirmationLaunchActivity" android:noHistory="true" android:screenOrientation="1">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="p2p-pay" android:pathPrefix="/paypal/link" android:scheme="@7F1105D0">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.ebay.app.p2pPayments.activities.P2pStepUpAuthLaunchActivity" android:noHistory="true" android:screenOrientation="1">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="p2p-pay" android:pathPrefix="/paypal/step-up-auth" android:scheme="@7F1105D0">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.ebay.app.p2pPayments.activities.P2pStepUpAuthWebViewActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name="com.ebay.app.p2pPayments.activities.P2pStepUpAuthSuccessActivity" android:parentActivityName="com.ebay.app.p2pPayments.activities.P2pPaymentReviewRequestActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name="com.ebay.app.p2pPayments.activities.P2pFundingSourceNavigationAbortedActivity" android:parentActivityName="com.ebay.app.p2pPayments.activities.P2pPaymentReviewRequestActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name="com.ebay.app.p2pPayments.activities.P2pLinkConfirmationActivity" android:parentActivityName="com.ebay.app.p2pPayments.activities.PayPalMarketingTutorialActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name="com.ebay.app.p2pPayments.activities.P2pUnlinkStartActivity" android:parentActivityName="com.ebay.app.settings.activities.SettingsActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name="com.ebay.app.p2pPayments.activities.P2pErrorActivity" android:parentActivityName="com.ebay.app.p2pPayments.activities.PayPalMarketingTutorialActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name="com.ebay.app.p2pPayments.activities.P2pNoActiveFundingSourceActivity" android:parentActivityName="com.ebay.app.p2pPayments.activities.P2pPaymentReviewRequestActivity" android:screenOrientation="1">
+</activity>
+<meta-data android:name="apptentive_log_level" android:value="INFO">
+</meta-data>
+<activity android:name="com.ebay.app.barcodereader.activities.BarcodeCaptureActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ebay.app.p2pPayments.activities.BuyerVerificationActivity" android:screenOrientation="1" android:theme="@7F12025C">
+</activity>
+<activity android:name="com.ebay.app.p2pPayments.activities.P2pEnterAmountActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000015">
+</activity>
+<activity android:name="com.ebay.app.p2pPayments.activities.P2pInvoiceActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name="com.ebay.app.p2pPayments.activities.P2pPaymentReviewRequestActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name="com.ebay.app.p2pPayments.activities.P2pChooseFundingOptionActivity" android:noHistory="true" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ebay.app.p2pPayments.activities.P2pPaymentConfirmationActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name="com.ebay.app.p2pPayments.activities.P2pSellerRequestConfirmationActivity" android:noHistory="true" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ebay.app.userAccount.register.activate.ActivationActivity">
+</activity>
+<activity android:hardwareAccelerated="@7F050003" android:name="com.ebay.app.home.activities.HomeFeedAdDetailsActivity" android:parentActivityName="com.ebay.app.home.activities.HomeActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:name="com.theartofdev.edmodo.cropper.CropImageActivity" android:screenOrientation="1" android:theme="@7F120091">
+</activity>
+<activity android:name="com.ebay.app.gdpr.web.GdprWebActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ebay.app.radialSearch.RadialSearchActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ebay.app.settings.activities.MessagingPreferenceActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ebay.app.landingScreen.kijijiVillage.KijijiVillageLandingScreenActivity" android:parentActivityName="com.ebay.app.home.activities.HomeActivity" android:screenOrientation="1">
+</activity>
+<provider android:authorities="com.ebay.kijiji.ca" android:exported="false" android:grantUriPermissions="true" android:name="androidx.core.content.FileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F140003">
+</meta-data>
+</provider>
+<receiver android:name="com.ebay.app.common.push.DismissNotificationsReceiver">
+</receiver>
+<receiver android:name="com.ebay.app.messageBox.push.notifications.ConversationRemoteInputReceiver">
+</receiver>
+<receiver android:name="com.ebay.app.postAd.notifications.DraftAdReminder$DraftAdReminderReceiver">
+</receiver>
+<service android:name="com.ebay.app.common.push.fcm.EcgFcmListenerService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<receiver android:exported="true" android:name="com.ebay.app.common.receivers.LocaleChangedReceiver">
+<intent-filter>
+<action android:name="android.intent.action.LOCALE_CHANGED">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:exported="true" android:name="com.ebay.app.common.push.fcm.EcgFcmReceiver" android:permission="com.google.android.c2dm.permission.SEND" android:priority="500">
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+<category android:name="com.ebay.app.common.push.fcm">
+</category>
+</intent-filter>
+</receiver>
+<receiver android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+</receiver>
+<service android:name="com.ebay.app.common.push.fcm.EcgFcmMessagingService">
+<intent-filter>
+<action android:name="com.google.firebase.INSTANCE_ID_EVENT">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="com.google.firebase.MESSAGING_EVENT">
+</action>
+</intent-filter>
+</service>
+<service android:name="com.ebay.app.postAd.transmission.PostAdService">
+</service>
+<service android:exported="false" android:name="com.ebay.app.postAd.transmission.UploadPhotoService">
+</service>
+<service android:name="com.ebay.app.contactPoster.services.AttachmentUploadAndEmailService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<provider android:authorities="com.ebay.kijiji.ca.messageBox.fileprovider" android:exported="false" android:grantUriPermissions="true" android:name="com.ebayclassifiedsgroup.messageBox.network.ebayPictureService.EpsFileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F140001">
+</meta-data>
+</provider>
+<activity android:name="com.ebayclassifiedsgroup.messageBox.FullScreenImageActivity" android:theme="@7F120297">
+</activity>
+<activity android:configChanges="0x00000080" android:name="com.ebayclassifiedsgroup.messageBox.meetme.hub.MeetMeHubActivity" android:screenOrientation="1" android:theme="@7F120298">
+</activity>
+<activity android:name="com.ebayclassifiedsgroup.messageBox.image.ImagePickerActivity" android:theme="@7F120299">
+</activity>
+<provider android:authorities="com.ebay.kijiji.ca.ApptentiveAttachmentFileProvider" android:enabled="true" android:exported="false" android:grantUriPermissions="true" android:name="com.apptentive.android.sdk.debug.ApptentiveAttachmentFileProvider">
+</provider>
+<activity android:name="com.apptentive.android.sdk.ApptentiveViewActivity" android:theme="@7F12004D">
+</activity>
+<receiver android:enabled="true" android:exported="false" android:name="com.apptentive.android.sdk.debug.LogBroadcastReceiver">
+</receiver>
+<receiver android:exported="false" android:name="com.apptentive.android.sdk.module.engagement.notification.ApptentiveNotificationInteractionBroadcastReceiver">
+</receiver>
+<activity android:exported="false" android:hardwareAccelerated="true" android:label="@7F110503" android:name="com.google.android.libraries.places.widget.AutocompleteActivity" android:theme="@7F12017E" android:windowSoftInputMode="0x00000025">
+</activity>
+<service android:directBootAware="true" android:exported="false" android:name="com.google.firebase.components.ComponentDiscoveryService">
+<meta-data android:name="com.google.firebase.components:com.google.firebase.storage.StorageRegistrar" android:value="com.google.firebase.components.ComponentRegistrar">
+</meta-data>
+<meta-data android:name="com.google.firebase.components:com.google.firebase.perf.FirebasePerfRegistrar" android:value="com.google.firebase.components.ComponentRegistrar">
+</meta-data>
+<meta-data android:name="com.google.firebase.components:com.google.firebase.remoteconfig.RemoteConfigRegistrar" android:value="com.google.firebase.components.ComponentRegistrar">
+</meta-data>
+<meta-data android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar" android:value="com.google.firebase.components.ComponentRegistrar">
+</meta-data>
+<meta-data android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar" android:value="com.google.firebase.components.ComponentRegistrar">
+</meta-data>
+<meta-data android:name="com.google.firebase.components:com.google.firebase.iid.Registrar" android:value="com.google.firebase.components.ComponentRegistrar">
+</meta-data>
+<meta-data android:name="com.google.firebase.components:com.google.firebase.abt.component.AbtRegistrar" android:value="com.google.firebase.components.ComponentRegistrar">
+</meta-data>
+<meta-data android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar" android:value="com.google.firebase.components.ComponentRegistrar">
+</meta-data>
+</service>
+<provider android:authorities="com.ebay.kijiji.ca.firebaseperfprovider" android:exported="false" android:initOrder="101" android:name="com.google.firebase.perf.provider.FirebasePerfProvider">
+</provider>
+<service android:exported="false" android:name="com.google.firebase.messaging.FirebaseMessagingService">
+<intent-filter android:priority="-500">
+<action android:name="com.google.firebase.MESSAGING_EVENT">
+</action>
+</intent-filter>
+</service>
+<receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.analytics.AnalyticsReceiver">
+</receiver>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.analytics.AnalyticsService">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.analytics.AnalyticsJobService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementReceiver">
+</receiver>
+<receiver android:enabled="true" android:exported="true" android:name="com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver" android:permission="android.permission.INSTALL_PACKAGES">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementService">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementJobService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<activity android:excludeFromRecents="true" android:exported="false" android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity" android:theme="@android:01030010">
+</activity>
+<service android:exported="true" android:name="com.google.android.gms.auth.api.signin.RevocationBoundService" android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION">
+</service>
+<activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:01030010">
+</activity>
+<provider android:authorities="com.ebay.kijiji.ca.firebaseinitprovider" android:exported="false" android:initOrder="100" android:name="com.google.firebase.provider.FirebaseInitProvider">
+</provider>
+<provider android:authorities="com.ebay.kijiji.ca.mobileadsinitprovider" android:exported="false" android:initOrder="100" android:name="com.google.android.gms.ads.MobileAdsInitProvider">
+</provider>
+<service android:exported="false" android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery">
+<meta-data android:name="backend:com.google.android.datatransport.cct.CctBackendFactory" android:value="cct">
+</meta-data>
+</service>
+<service android:exported="false" android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<receiver android:exported="false" android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver">
+</receiver>
+<service android:exported="false" android:name="androidx.room.MultiInstanceInvalidationService">
+</service>
+<provider android:authorities="com.ebay.kijiji.ca.lifecycle-process" android:exported="false" android:multiprocess="true" android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer">
+</provider>
+<provider android:authorities="com.ebay.kijiji.ca.crashlyticsinitprovider" android:exported="false" android:initOrder="90" android:name="com.crashlytics.android.CrashlyticsInitProvider">
+</provider>
+</application>
+</manifest>

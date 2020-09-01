@@ -1,0 +1,82 @@
+<?xml version="1.0" ?><manifest android:versionCode="55" android:versionName="1.1.91" package="sitoberger.galaxyinvaders" platformBuildVersionCode="23" platformBuildVersionName="6.0-2704002" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="15" android:targetSdkVersion="23">
+</uses-sdk>
+<uses-permission android:name="com.android.vending.CHECK_LICENSE">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="com.android.vending.BILLING">
+</uses-permission>
+<uses-feature android:glEsVersion="0x00020000" android:required="true">
+</uses-feature>
+<application android:allowBackup="true" android:hardwareAccelerated="true" android:icon="@7F030001" android:label="@7F080035" android:name="sitoberger.galaxyinvaders.GalaxyInvaders" android:theme="@android:01030007">
+<service android:name="sitoberger.galaxyinvaders.PlayDownloaderService">
+</service>
+<receiver android:enabled="true" android:name="com.google.android.gms.analytics.AnalyticsReceiver">
+<intent-filter>
+<action android:name="com.google.android.gms.analytics.ANALYTICS_DISPATCH">
+</action>
+</intent-filter>
+</receiver>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.analytics.AnalyticsService">
+</service>
+<receiver android:exported="true" android:name="com.google.android.gms.analytics.CampaignTrackingReceiver">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+<service android:name="com.google.android.gms.analytics.CampaignTrackingService">
+</service>
+<receiver android:name="sitoberger.galaxyinvaders.DownloadAlarmReceiver">
+</receiver>
+<meta-data android:name="com.google.android.gms.games.APP_ID" android:value="@7F080034">
+</meta-data>
+<meta-data android:name="com.google.android.gms.version" android:value="@7F0C000D">
+</meta-data>
+<activity android:configChanges="0x000000A0" android:icon="@7F030001" android:label="@7F080035" android:name="sitoberger.galaxyinvaders.NativeExtension" android:screenOrientation="1">
+<meta-data android:name="android.app.lib_name" android:value="GalaxyInvaders">
+</meta-data>
+</activity>
+<activity android:configChanges="0x000004A0" android:icon="@7F030001" android:label="GalaxyInvaders" android:name="sitoberger.galaxyinvaders.DownloaderActivity">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x00000FB0" android:name="com.google.android.gms.ads.AdActivity" android:theme="@android:0103000F">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.jirbo.adcolony.AdColonyOverlay" android:theme="@android:01030011">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.jirbo.adcolony.AdColonyFullscreen" android:theme="@android:0103000A">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.jirbo.adcolony.AdColonyBrowser" android:theme="@android:0103000A">
+</activity>
+<activity android:configChanges="0x000004A0" android:excludeFromRecents="true" android:hardwareAccelerated="true" android:name="com.chartboost.sdk.CBImpressionActivity" android:theme="@android:01030011">
+</activity>
+<activity android:configChanges="0x40000FFF" android:hardwareAccelerated="true" android:name="com.unity3d.ads.android.view.UnityAdsFullscreenActivity" android:theme="@android:01030007">
+</activity>
+<provider android:authorities="sitoberger.galaxyinvaders.google_measurement_service" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementContentProvider">
+</provider>
+<receiver android:enabled="true" android:name="com.google.android.gms.measurement.AppMeasurementReceiver">
+<intent-filter>
+<action android:name="com.google.android.gms.measurement.UPLOAD">
+</action>
+</intent-filter>
+</receiver>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementService">
+</service>
+<activity android:name="com.google.android.gms.ads.purchase.InAppPurchaseActivity" android:theme="@7F0B00EF">
+</activity>
+</application>
+</manifest>

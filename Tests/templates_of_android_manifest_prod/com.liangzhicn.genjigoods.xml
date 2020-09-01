@@ -1,0 +1,390 @@
+<?xml version="1.0" ?><manifest android:versionCode="43" android:versionName="1.2.6" package="com.liangzhicn.genjigoods" platformBuildVersionCode="25" platformBuildVersionName="7.1.1" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="16" android:targetSdkVersion="20">
+</uses-sdk>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_CONTACTS">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_CONTACTS">
+</uses-permission>
+<uses-permission android:name="android.permission.CALL_PHONE">
+</uses-permission>
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW">
+</uses-permission>
+<uses-permission android:name="com.android.launcher.permission.READ_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.DISABLE_KEYGUARD">
+</uses-permission>
+<uses-permission android:name="baidu.push.permission.WRITE_PUSHINFOPROVIDER.com.liangzhicn.genjigoods">
+</uses-permission>
+<permission android:name="baidu.push.permission.WRITE_PUSHINFOPROVIDER.com.liangzhicn.genjigoods" android:protectionLevel="0x00000000">
+</permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.MANAGE_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_SMS">
+</uses-permission>
+<uses-permission android:name="android.permission.RECORD_AUDIO">
+</uses-permission>
+<uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS">
+</uses-permission>
+<uses-permission android:name="android.permission.NFC">
+</uses-permission>
+<uses-feature android:name="android.hardware.nfc.hce">
+</uses-feature>
+<uses-permission android:name="org.simalliance.openmobileapi.SMARTCARD">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-permission android:name="com.sec.android.provider.badge.permission.READ">
+</uses-permission>
+<uses-permission android:name="com.sec.android.provider.badge.permission.WRITE">
+</uses-permission>
+<uses-permission android:name="com.htc.launcher.permission.READ_SETTINGS">
+</uses-permission>
+<uses-permission android:name="com.htc.launcher.permission.UPDATE_SHORTCUT">
+</uses-permission>
+<uses-permission android:name="com.sonyericsson.home.permission.BROADCAST_BADGE">
+</uses-permission>
+<uses-permission android:name="com.anddoes.launcher.permission.UPDATE_COUNT">
+</uses-permission>
+<uses-permission android:name="com.majeur.launcher.permission.UPDATE_BADGE">
+</uses-permission>
+<uses-permission android:name="com.huawei.android.launcher.permission.READ_SETTINGS">
+</uses-permission>
+<uses-permission android:name="com.huawei.android.launcher.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="com.huawei.android.launcher.permission.CHANGE_BADGE">
+</uses-permission>
+<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_NETWORK_STATE">
+</uses-permission>
+<application android:allowBackup="true" android:icon="@7F030000" android:label="@7F0900E5" android:name="com.liangzhicn.genjigoods.GenjigoodsApplication" android:supportsRtl="true" android:theme="@7F0B00B2">
+<meta-data android:name="design_width" android:value="720">
+</meta-data>
+<meta-data android:name="design_height" android:value="1280">
+</meta-data>
+<activity android:configChanges="0x000004A0" android:name="com.mob.tools.MobUIShell" android:screenOrientation="1" android:theme="@android:01030010" android:windowSoftInputMode="0x00000012">
+<intent-filter>
+<data android:scheme="tencent100371282">
+</data>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004A0" android:exported="true" android:name="com.liangzhicn.genjigoods.wxapi.WXEntryActivity" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<receiver android:name="com.liangzhicn.genjigoods.bdpush.BDPushMessageReceiver">
+<intent-filter>
+<action android:name="com.baidu.android.pushservice.action.MESSAGE">
+</action>
+<action android:name="com.baidu.android.pushservice.action.RECEIVE">
+</action>
+<action android:name="com.baidu.android.pushservice.action.notification.CLICK">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name="com.baidu.android.pushservice.PushServiceReceiver" android:process=":bdservice_v1">
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+<action android:name="com.baidu.android.pushservice.action.notification.SHOW">
+</action>
+<action android:name="com.baidu.android.pushservice.action.media.CLICK">
+</action>
+<action android:name="android.intent.action.MEDIA_MOUNTED">
+</action>
+<action android:name="android.intent.action.USER_PRESENT">
+</action>
+<action android:name="android.intent.action.ACTION_POWER_CONNECTED">
+</action>
+<action android:name="android.intent.action.ACTION_POWER_DISCONNECTED">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name="com.baidu.android.pushservice.RegistrationReceiver" android:process=":bdservice_v1">
+<intent-filter>
+<action android:name="com.baidu.android.pushservice.action.METHOD">
+</action>
+<action android:name="com.baidu.android.pushservice.action.BIND_SYNC">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_REMOVED">
+</action>
+<data android:scheme="package">
+</data>
+</intent-filter>
+</receiver>
+<service android:exported="true" android:name="com.baidu.android.pushservice.PushService" android:process=":bdservice_v1">
+<intent-filter>
+<action android:name="com.baidu.android.pushservice.action.PUSH_SERVICE">
+</action>
+</intent-filter>
+</service>
+<service android:exported="true" android:name="com.baidu.android.pushservice.CommandService">
+</service>
+<provider android:authorities="com.liangzhicn.genjigoods.bdpush" android:exported="true" android:name="com.baidu.android.pushservice.PushInfoProvider" android:protectionLevel="0x00000002" android:writePermission="baidu.push.permission.WRITE_PUSHINFOPROVIDER.com.liangzhicn.genjigoods">
+</provider>
+<meta-data android:name="UMENG_APPKEY" android:value="581c591ecae7e709bb00014c">
+</meta-data>
+<meta-data android:name="UMENG_CHANNEL" android:value="qq">
+</meta-data>
+<service android:exported="false" android:name="com.alibaba.mobileim.appmonitor.tiptool.TooltipService">
+</service>
+<service android:exported="true" android:name="com.alibaba.tcms.service.TCMSService" android:process=":TcmsService">
+</service>
+<service android:exported="true" android:name="com.alibaba.tcms.service.ListenerService">
+</service>
+<activity android:exported="true" android:launchMode="1" android:name="com.liangzhicn.genjigoods.wxapi.WXPayEntryActivity" android:theme="@7F0B01CA">
+</activity>
+<activity android:configChanges="0x000004E0" android:exported="false" android:name="com.alipay.sdk.app.H5PayActivity" android:screenOrientation="3" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:configChanges="0x000000E0" android:exported="false" android:name="com.alipay.sdk.app.H5AuthActivity" android:screenOrientation="3" android:windowSoftInputMode="0x00000012">
+</activity>
+<uses-library android:name="org.simalliance.openmobileapi" android:required="false">
+</uses-library>
+<activity android:configChanges="0x000000A0" android:excludeFromRecents="true" android:label="@7F0900E5" android:name="com.unionpay.uppay.PayActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.unionpay.UPPayWapActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:configChanges="0x00000480" android:name="com.lzy.imagepicker.ui.ImagePreviewDelActivity" android:screenOrientation="1" android:theme="@7F0B00E4">
+</activity>
+<activity android:configChanges="0x00000480" android:name="com.liangzhicn.genjigoods.SplashActivity" android:screenOrientation="1" android:theme="@7F0B00E8">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x00000480" android:launchMode="2" android:name="com.liangzhicn.genjigoods.main.ui.MainActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000023">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="genjigoods.com" android:scheme="genjigoods">
+</data>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x00000480" android:name="com.liangzhicn.genjigoods.WelcomeGuideActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000480" android:name="com.liangzhicn.genjigoods.img.ImageDetailsActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000480" android:name="com.liangzhicn.genjigoods.web.WebActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000480" android:name="com.liangzhicn.genjigoods.web.WebStringActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000480" android:name="com.liangzhicn.genjigoods.member.ui.RechargeActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000005">
+</activity>
+<activity android:configChanges="0x00000480" android:exported="false" android:name="com.liangzhicn.genjigoods.member.ui.RechargeNextActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000480" android:name="com.liangzhicn.genjigoods.distribution.ui.DistributionActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000480" android:name="com.liangzhicn.genjigoods.member.ui.AddNewAddressActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:configChanges="0x00000480" android:name="com.liangzhicn.genjigoods.member.ui.ChangeAddressActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:configChanges="0x00000480" android:name="com.liangzhicn.genjigoods.member.ui.SelectOtherAddressActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000480" android:name="com.liangzhicn.genjigoods.member.ui.FavoritesActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000480" android:name="com.liangzhicn.genjigoods.member.ui.RechargeSucceedActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000480" android:name="com.liangzhicn.genjigoods.member.ui.AboutMeActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000480" android:name="com.liangzhicn.genjigoods.member.ui.SettingActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000480" android:name="com.liangzhicn.genjigoods.member.ui.ChangeInfoActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000480" android:name="com.liangzhicn.genjigoods.member.ui.ChangeTelephoneActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000480" android:name="com.liangzhicn.genjigoods.shopping_cart.ui.ShoppingCartActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000480" android:name="com.liangzhicn.genjigoods.login.ui.LoginActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:configChanges="0x00000480" android:name="com.liangzhicn.genjigoods.login.ui.SelectCountryActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000480" android:name="com.liangzhicn.genjigoods.login.ui.BindingTelephoneActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:configChanges="0x00000480" android:name="com.liangzhicn.genjigoods.login.ui.BindingAgentActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:configChanges="0x00000480" android:name="com.liangzhicn.genjigoods.home.ui.SearchGoodsActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:configChanges="0x00000480" android:name="com.liangzhicn.genjigoods.home.ui.NewMsgActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000480" android:name="com.liangzhicn.genjigoods.home.ui.NewMsgListActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000480" android:name="com.liangzhicn.genjigoods.goods.ui.GoodsListActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000480" android:name="com.liangzhicn.genjigoods.goods.ui.GoodsInfoActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000480" android:name="com.liangzhicn.genjigoods.goods.ui.CommentsActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000480" android:name="com.liangzhicn.genjigoods.order.ui.ConfirmOrderActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000480" android:name="com.liangzhicn.genjigoods.order.ui.PaymentActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000480" android:name="com.liangzhicn.genjigoods.order.ui.MyOrderActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000480" android:name="com.liangzhicn.genjigoods.order.ui.OrderDetailsActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000480" android:name="com.liangzhicn.genjigoods.order.ui.CommentActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000480" android:name="com.liangzhicn.genjigoods.order.ui.OrderRefundActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000480" android:name="com.liangzhicn.genjigoods.order.ui.PaymentSucceedActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000480" android:name="com.liangzhicn.genjigoods.coupon.ui.MyCouponActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000480" android:name="com.liangzhicn.genjigoods.coupon.ui.CouponCenterActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000480" android:name="com.liangzhicn.genjigoods.coupon.ui.SelectCouponActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000480" android:name="com.liangzhicn.genjigoods.coupon.ui.CouponDetailsActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000480" android:name="com.liangzhicn.genjigoods.category.ui.CategoryActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:launchMode="1" android:name="com.alibaba.mobileim.ui.WxChattingActvity" android:screenOrientation="1" android:theme="@7F0B00A5" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:configChanges="0x000000A0" android:launchMode="1" android:name="com.alibaba.mobileim.ui.WxConversationActivity" android:screenOrientation="1" android:theme="@7F0B00AA">
+</activity>
+<activity android:hardwareAccelerated="false" android:launchMode="1" android:name="com.alibaba.mobileim.ui.chat.MultiImageActivity" android:screenOrientation="4" android:theme="@7F0B00A9" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:hardwareAccelerated="false" android:launchMode="1" android:name="com.alibaba.mobileim.kit.imageviewer.ShowImageActivity" android:screenOrientation="1" android:theme="@7F0B00A9" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.alibaba.mobileim.ui.multi.lightservice.MultiPickGalleryActivity" android:screenOrientation="1" android:theme="@7F0B00AA">
+</activity>
+<activity android:configChanges="0x000000A0" android:launchMode="1" android:name="com.alibaba.mobileim.ui.FeedbackActvity" android:screenOrientation="1" android:theme="@7F0B00AC" android:windowSoftInputMode="0x00000012">
+</activity>
+<service android:name="com.alibaba.tcms.service.WXKernalService">
+</service>
+<activity android:configChanges="0x000000A0" android:launchMode="1" android:name="com.alibaba.mobileim.kit.CloudPwdSettingHintActivity" android:screenOrientation="1" android:theme="@7F0B00AA">
+</activity>
+<activity android:name="com.alibaba.mobileim.login.WaitProgresssActivity">
+</activity>
+<activity android:configChanges="0x000000A0" android:launchMode="2" android:name="com.alibaba.mobileim.ui.atmessage.AtMsgListActivity" android:screenOrientation="1" android:theme="@7F0B00AA">
+</activity>
+<activity android:configChanges="0x000000A0" android:launchMode="2" android:name="com.alibaba.mobileim.ui.atmessage.SendAtMessageDetailActivity" android:screenOrientation="1" android:theme="@7F0B00AA">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.alibaba.mobileim.kit.chat.SelectTribeMemberActivity" android:screenOrientation="1" android:theme="@7F0B00AA" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.alibaba.mobileim.kit.chat.EnlargeChattingTextActivity" android:theme="@android:01030006" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:exported="true" android:launchMode="3" android:name="com.alibaba.tcms.service.MonitorActivity" android:process=":TcmsService" android:theme="@android:0103000F">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.alibaba.mobileim.kit.video.IMPlayVideoDetailActivity" android:screenOrientation="1" android:theme="@android:01030006">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="svideo.m.taobao.com" android:path="/av/implayer.html" android:scheme="http">
+</data>
+<data android:host="svideo.m.taobao.com" android:path="/av/implayer.html" android:scheme="https">
+</data>
+<data android:path="/av/implayer.html">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.alibaba.mobileim.appmonitor.floatview.FloatViewActivity">
+</activity>
+<activity android:name="com.lzy.imagepicker.ui.ImageBaseActivity">
+</activity>
+<activity android:configChanges="0x00000480" android:name="com.lzy.imagepicker.ui.ImageGridActivity" android:theme="@7F0B00E3">
+</activity>
+<activity android:configChanges="0x00000480" android:hardwareAccelerated="false" android:name="com.lzy.imagepicker.ui.ImageCropActivity" android:theme="@7F0B00E3">
+</activity>
+<activity android:configChanges="0x00000480" android:name="com.lzy.imagepicker.ui.ImagePreviewActivity" android:theme="@7F0B00E4">
+</activity>
+<provider android:authorities="com.liangzhicn.genjigoods.provider" android:exported="false" android:grantUriPermissions="true" android:name="com.lzy.imagepicker.ImagePickerProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F070000">
+</meta-data>
+</provider>
+<meta-data android:name="BDAPPID" android:value="8898372">
+</meta-data>
+<meta-data android:name="BDAPPKEY" android:value="A0qwaWQpx3KUxt5SevIs6an4XNUfH45D">
+</meta-data>
+<activity android:exported="false" android:name="com.baidu.autoupdatesdk.ConfirmDialoigActivity" android:screenOrientation="4" android:theme="@7F0B01BC">
+</activity>
+<receiver android:exported="false" android:name="com.baidu.autoupdatesdk.receiver.BDBroadcastReceiver">
+<intent-filter>
+<action android:name="com.baidu.autoupdatesdk.ACTION_NEW_UPDATE">
+</action>
+<action android:name="com.baidu.autoupdatesdk.ACTION_DOWNLOAD_COMPLETE">
+</action>
+<action android:name="com.baidu.autoupdatesdk.ACTION_NEW_AS">
+</action>
+<action android:name="com.baidu.autoupdatesdk.ACTION_AS_DOWNLOAD_COMPLETE">
+</action>
+</intent-filter>
+</receiver>
+<meta-data android:name="com.ljz.base.glide.okhttp3.OkHttpGlideModule" android:value="GlideModule">
+</meta-data>
+<activity android:name="com.ljz.base.common.photo.GetSimplePhotoActivity">
+</activity>
+<service android:label="@7F0900E5" android:name="com.ljz.base.common.service.NotificationService" android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE">
+<intent-filter>
+<action android:name="android.service.notification.NotificationListenerService">
+</action>
+</intent-filter>
+</service>
+<receiver android:name="com.ljz.base.netstate.NetworkStateReceiver">
+<intent-filter>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+<action android:name="android.gzcpc.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+</receiver>
+<activity android:excludeFromRecents="true" android:name="com.zxy.recovery.core.RecoveryActivity" android:noHistory="true" android:process=":recover" android:screenOrientation="1" android:theme="@7F0B0041">
+</activity>
+<service android:enabled="true" android:exported="false" android:name="com.zxy.recovery.core.RecoveryService" android:process=":recover">
+</service>
+</application>
+</manifest>

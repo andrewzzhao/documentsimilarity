@@ -1,0 +1,402 @@
+<?xml version="1.0" ?><manifest android:compileSdkVersion="28" android:compileSdkVersionCodename="9" android:versionCode="37" android:versionName="2.6.0" package="com.star.qiangdan" platformBuildVersionCode="37" platformBuildVersionName="2.6.0" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="19" android:targetSdkVersion="28">
+</uses-sdk>
+<permission android:name="com.star.qiangdan.permission.JPUSH_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="com.star.qiangdan.permission.JPUSH_MESSAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_USER_PRESENT">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.MANAGE_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="android.permission.CALL_PHONE">
+</uses-permission>
+<uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES">
+</uses-permission>
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-permission android:name="android.hardware.camera.autofocus">
+</uses-permission>
+<uses-permission android:name="android.permission.NFC">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<supports-screens android:anyDensity="true" android:largeScreens="true" android:normalScreens="true" android:resizeable="true" android:smallScreens="true">
+</supports-screens>
+<uses-feature android:name="android.hardware.camera2.full">
+</uses-feature>
+<uses-feature android:name="android.hardware.camera">
+</uses-feature>
+<uses-feature android:name="android.hardware.camera.autofocus">
+</uses-feature>
+<application android:allowBackup="true" android:appComponentFactory="android.support.v4.app.CoreComponentFactory" android:icon="@7F0E000D" android:label="@7F10002B" android:name="com.stub.StubApp" android:networkSecurityConfig="@7F130002" android:roundIcon="@7F0E000D" android:supportsRtl="true" android:theme="@7F11000A" android:vmSafeMode="true">
+<service android:enabled="true" android:exported="false" android:name="cn.jpush.android.service.PushService" android:process=":pushcore">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.REGISTER">
+</action>
+<action android:name="cn.jpush.android.intent.REPORT">
+</action>
+<action android:name="cn.jpush.android.intent.PushService">
+</action>
+<action android:name="cn.jpush.android.intent.PUSH_TIME">
+</action>
+</intent-filter>
+</service>
+<provider android:authorities="com.star.qiangdan.myfileprovider" android:exported="false" android:grantUriPermissions="true" android:name="com.star.qiangdan.provider.MyProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F130001">
+</meta-data>
+</provider>
+<service android:enabled="true" android:exported="true" android:name="cn.jpush.android.service.DaemonService">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.DaemonService">
+</action>
+<category android:name="com.star.qiangdan">
+</category>
+</intent-filter>
+</service>
+<service android:enabled="true" android:name="com.baidu.location.f" android:process=":remote">
+</service>
+<meta-data android:name="com.baidu.lbsapi.API_KEY" android:value="FiObWqcCWpDCDGxE9z4A3qRzG5L5NUnR">
+</meta-data>
+<receiver android:enabled="true" android:exported="false" android:name="cn.jpush.android.service.PushReceiver">
+<intent-filter android:priority="1000">
+<action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY">
+</action>
+<category android:name="com.star.qiangdan">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.USER_PRESENT">
+</action>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_ADDED">
+</action>
+<action android:name="android.intent.action.PACKAGE_REMOVED">
+</action>
+<data android:scheme="package">
+</data>
+</intent-filter>
+</receiver>
+<activity android:configChanges="0x000000A0" android:exported="false" android:name="cn.jpush.android.ui.PushActivity" android:theme="@android:01030006">
+<intent-filter>
+<action android:name="cn.jpush.android.ui.PushActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="com.star.qiangdan">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000A0" android:exported="false" android:name="cn.jpush.android.ui.PopWinActivity" android:theme="@7F1100D6">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="com.star.qiangdan">
+</category>
+</intent-filter>
+</activity>
+<service android:enabled="true" android:exported="false" android:name="cn.jpush.android.service.DownloadService">
+</service>
+<receiver android:exported="false" android:name="cn.jpush.android.service.AlarmReceiver">
+</receiver>
+<receiver android:name="com.star.qiangdan.receiver.MyJPushMessageReceiver">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.RECEIVE_MESSAGE">
+</action>
+<category android:name="com.star.qiangdan">
+</category>
+</intent-filter>
+</receiver>
+<receiver android:enabled="true" android:name="com.star.qiangdan.receiver.MyReceiver">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.REGISTRATION">
+</action>
+<action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED">
+</action>
+<action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED">
+</action>
+<action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED">
+</action>
+<action android:name="cn.jpush.android.intent.CONNECTION">
+</action>
+<category android:name="com.star.qiangdan">
+</category>
+</intent-filter>
+</receiver>
+<meta-data android:name="JPUSH_CHANNEL" android:value="developer-default">
+</meta-data>
+<meta-data android:name="JPUSH_APPKEY" android:value="86b153c4e333a8cd359e4a58">
+</meta-data>
+<meta-data android:name="UMENG_APPKEY" android:value="59e6b43e99f0c77c0e00011e">
+</meta-data>
+<meta-data android:name="UMENG_CHANNEL" android:value="vivo">
+</meta-data>
+<activity android:exported="true" android:label="@7F10002B" android:launchMode="2" android:name="com.star.qiangdan.wxapi.WXEntryActivity" android:taskAffinity="com.star.qiangdan" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x000004E0" android:launchMode="1" android:name="com.pingplusplus.android.PaymentActivity" android:theme="@android:01030010">
+</activity>
+<activity-alias android:exported="true" android:name="com.star.qiangdan.wxapi.WXPayEntryActivity" android:targetActivity="com.pingplusplus.android.PaymentActivity">
+</activity-alias>
+<activity android:configChanges="0x000004E0" android:exported="false" android:name="com.alipay.sdk.app.H5PayActivity" android:screenOrientation="3">
+</activity>
+<activity android:configChanges="0x000004E0" android:exported="false" android:name="com.alipay.sdk.auth.AuthActivity" android:screenOrientation="3">
+</activity>
+<activity android:launchMode="2" android:name="com.star.qiangdan.activity.MainActivity">
+</activity>
+<activity android:name="com.star.qiangdan.activity.WebActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.zaaach.citypicker.CityPickerTwoActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:name="com.zaaach.citypicker.CityPickerActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:name="com.star.qiangdan.activity.FeedbackActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.star.qiangdan.activity.AboutUsActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.star.qiangdan.activity.MySettingActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.star.qiangdan.activity.MyInfoActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.star.qiangdan.activity.MyCertificationActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.star.qiangdan.activity.PersonCertificationActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.star.qiangdan.activity.CompanyCertificationActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="2" android:name="com.star.qiangdan.activity.LoginActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="2" android:name="com.star.qiangdan.activity.LoginMessageActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.star.qiangdan.activity.RegistActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.star.qiangdan.activity.FindPasswordActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.star.qiangdan.activity.ResetPwActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.star.qiangdan.activity.CardExampleActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.star.qiangdan.activity.WorkinfoExampleActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name="com.star.qiangdan.activity.BillDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.star.qiangdan.activity.MyBillDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.star.qiangdan.activity.BillSuccessActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.star.qiangdan.activity.BillFailedActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.star.qiangdan.activity.MessageActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.star.qiangdan.activity.MessageDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.star.qiangdan.activity.MyWalletActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.star.qiangdan.activity.SetchargePasswordActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.star.qiangdan.activity.InputPasswordActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.star.qiangdan.activity.ChargeRecordListActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.star.qiangdan.activity.ChargeDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.star.qiangdan.activity.ChargeInDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.star.qiangdan.activity.ChangePwdActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.star.qiangdan.activity.RechargeActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.star.qiangdan.activity.SelectRechargeActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.star.qiangdan.activity.WelcomeActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:name="com.star.qiangdan.activity.GuideActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.star.qiangdan.activity.ChargeSuccessActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.star.qiangdan.activity.PushSettingActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.star.qiangdan.activity.WalletSettingActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.star.qiangdan.activity.TestPasswordActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.star.qiangdan.activity.NewPersonCertificationActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.star.qiangdan.activity.PersonCardActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.star.qiangdan.activity.CompanyCardActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.star.qiangdan.activity.InfoShowActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.star.qiangdan.activity.CheckingActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.star.qiangdan.activity.CheckFailedActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.star.qiangdan.activity.MyHmessageActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.star.qiangdan.activity.CompanyPickerActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="2" android:name="com.star.qiangdan.activity.MyCouponActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.star.qiangdan.activity.UseRuleActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.star.qiangdan.activity.SelectCouponActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="2" android:name="com.star.qiangdan.activity.CouponCenterActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.star.qiangdan.activity.PointCenterActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.star.qiangdan.activity.PointListActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.star.qiangdan.activity.PointExchangeActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.star.qiangdan.activity.FaceDetectExpActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.star.qiangdan.activity.IdCardActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.star.qiangdan.activity.FaceOnlineVerifyActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.star.qiangdan.activity.FaceOnlineChangePhoneActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.star.qiangdan.activity.ShowPhoneActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.star.qiangdan.activity.CheckPhoneActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.star.qiangdan.activity.BindPhoneActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.star.qiangdan.activity.RechargeNewActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.star.qiangdan.activity.PersonScanCardActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.star.qiangdan.activity.SelectRechargeTypeActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.star.qiangdan.activity.SelectRechargeCouponActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.star.qiangdan.activity.zyPictureActivity.SelectPictureActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.star.qiangdan.activity.zyPictureActivity.PictureTypeDetailActivity">
+</activity>
+<activity android:name="com.star.qiangdan.activity.zyPictureActivity.BigPictureActivity">
+</activity>
+<activity android:name="com.star.qiangdan.activity.zyPictureActivity.SearchPictureActivity">
+</activity>
+<activity android:name="com.star.qiangdan.activity.HistoryCouponActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.star.qiangdan.activity.ChargebackActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.star.qiangdan.activity.ChargebackRequestActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.star.qiangdan.activity.ChargebackDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.star.qiangdan.activity.BigImageActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.star.qiangdan.activity.CityPickerActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.star.qiangdan.activity.NoopsycheOrderActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.star.qiangdan.activity.NoopsycheOrderDoingActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.star.qiangdan.activity.NoopsycheOrderDoneActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.star.qiangdan.activity.VerifyPhoneActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000480" android:name="com.baidu.ocr.ui.camera.CameraActivity" android:theme="@android:0103006D">
+</activity>
+<activity android:configChanges="0x00000480" android:name="me.nereo.multi_image_selector.MultiImageSelectorActivity">
+</activity>
+<activity android:name="com.soundcloud.android.crop.CropImageActivity">
+</activity>
+<provider android:authorities="com.star.qiangdan.fileprovider" android:exported="false" android:grantUriPermissions="true" android:name="android.support.v4.content.FileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F130000">
+</meta-data>
+</provider>
+<activity android:configChanges="0x00000480" android:label="@7F10002B" android:name="com.darsh.multipleimageselect.activities.AlbumSelectActivity" android:theme="@7F1100D5">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x00000480" android:label="@7F10002B" android:name="com.darsh.multipleimageselect.activities.ImageSelectActivity" android:theme="@7F1100D5">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<provider android:authorities="com.star.qiangdan.lifecycle-trojan" android:exported="false" android:multiprocess="true" android:name="android.arch.lifecycle.ProcessLifecycleOwnerInitializer">
+</provider>
+<provider android:authorities="com.star.qiangdan.DataProvider" android:exported="false" android:name="cn.jpush.android.service.DataProvider">
+</provider>
+<provider android:authorities="com.star.qiangdan.DownloadProvider" android:exported="true" android:name="cn.jpush.android.service.DownloadProvider">
+</provider>
+<provider android:authorities="com.star.qiangdan.com.mob.MobProvider" android:exported="false" android:multiprocess="true" android:name="com.mob.MobProvider">
+</provider>
+<meta-data android:name="Mob-AppKey" android:value="2196feecce601">
+</meta-data>
+<meta-data android:name="Mob-AppSeret" android:value="dc46d289ff02b1ff21b90ce0b0362009">
+</meta-data>
+<activity android:configChanges="0x000004A0" android:name="com.mob.tools.MobUIShell" android:theme="@android:01030010" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:launchMode="2" android:name="cn.sharesdk.tencent.qq.ReceiveActivity" android:noHistory="true">
+<intent-filter>
+<data android:scheme="tencent1106169375">
+</data>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+</intent-filter>
+</activity>
+</application>
+<uses-permission android:name="android.permission.PACKAGE_USAGE_STATS">
+</uses-permission>
+<uses-permission android:name="android.permission.BLUETOOTH">
+</uses-permission>
+</manifest>

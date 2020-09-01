@@ -1,0 +1,92 @@
+<?xml version="1.0" ?><manifest android:versionCode="14" android:versionName="0.23" package="fm.shtyle" platformBuildVersionCode="21" platformBuildVersionName="5.0.1-1624448" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="14" android:targetSdkVersion="21">
+</uses-sdk>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.MANAGE_DOCUMENTS">
+</uses-permission>
+<uses-permission android:name="android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_INTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_INTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="com.quickblox.qmunicate.permission.C2D_MESSAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PROFILE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_CONTACTS">
+</uses-permission>
+<uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.RECORD_AUDIO">
+</uses-permission>
+<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.USE_CREDENTIALS">
+</uses-permission>
+<permission android:name="fm.shtyle.permission.C2D_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<application android:allowBackup="true" android:hardwareAccelerated="true" android:icon="@7F0200B2" android:label="@7F0B0012" android:name="fm.shtyle.ThisApplication" android:theme="@7F0C0000">
+<activity android:label="@7F0B005B" android:name="fm.shtyle.activity.LoginActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:label="@7F0B0013" android:name="fm.shtyle.activity.ConversationActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F0B0012" android:name="fm.shtyle.activity.MainActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:label="@7F0B006D" android:name="fm.shtyle.activity.PhotosActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F0B006A" android:name="fm.shtyle.activity.PhotoViewActivity" android:screenOrientation="1">
+</activity>
+<receiver android:exported="true" android:name="fm.shtyle.util.GcmBroadcastReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+<action android:name="com.google.android.c2dm.intent.REGISTRATION">
+</action>
+<category android:name="fm.shtyle">
+</category>
+</intent-filter>
+</receiver>
+<service android:name="fm.shtyle.util.GcmIntentService">
+</service>
+<activity android:name="com.facebook.LoginActivity">
+</activity>
+<meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@7F0B0054">
+</meta-data>
+<meta-data android:name="com.google.android.gms.version" android:value="@7F0A0001">
+</meta-data>
+<meta-data android:name="com.crashlytics.ApiKey" android:value="ee190060a4bec180ce3b51336def3c2e5d95c746">
+</meta-data>
+<activity android:label="@7F0B007B" android:name="fm.shtyle.activity.ProfileActivity" android:parentActivityName="fm.shtyle.activity.ConversationActivity" android:screenOrientation="1">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value="fm.shtyle.activity.ConversationActivity">
+</meta-data>
+</activity>
+<activity android:label="@7F0B007E" android:name="fm.shtyle.activity.SettingsActivity">
+</activity>
+<activity android:label="@7F0B0060" android:name="fm.shtyle.activity.FriendSuggestionsActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F0B0056" android:name="fm.shtyle.activity.FriendRequestsActivity" android:screenOrientation="1">
+</activity>
+</application>
+</manifest>

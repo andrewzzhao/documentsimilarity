@@ -1,0 +1,150 @@
+<?xml version="1.0" ?><manifest android:versionCode="29" android:versionName="2.0.2 (24)" package="com.dlink.nas" platformBuildVersionCode="21" platformBuildVersionName="5.0.1-1624448" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="15" android:targetSdkVersion="21">
+</uses-sdk>
+<uses-permission android:name="android.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.BROADCAST_STICKY">
+</uses-permission>
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-feature android:glEsVersion="0x00020000" android:required="true">
+</uses-feature>
+<android:uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</android:uses-permission>
+<application android:allowBackup="true" android:icon="@7F0200C1" android:label="@7F0700A1" android:name="co.funtek.mydlinkaccess.MyApplication" android:theme="@7F0B0066">
+<meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="AIzaSyCIxAvC8Z0g_NfVPzsOiN0YALn3EKZeBt4">
+</meta-data>
+<meta-data android:name="com.google.android.gms.version" android:value="@7F0A0004">
+</meta-data>
+<activity android:configChanges="0x000004A0" android:name="co.funtek.mydlinkaccess.video.VideoDetailActivity" android:theme="@android:0103006C">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="co.funtek.mydlinkaccess.video.VideoPlayActivity" android:theme="@android:0103006C">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="info.androidhive.imageslider.FullScreenViewActivity" android:theme="@android:010300F0">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="co.funtek.mydlinkaccess.MainActivity2">
+<intent-filter>
+<action android:name="com.dlink.nas.action.ACTION_BACKCALL">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:label="@7F0700A6" android:name="com.sixnology.mydlinkaccess.open.MyDlinkAuthActivity" android:windowSoftInputMode="0x00000003">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F070090" android:name="com.sixnology.mydlinkaccess.open.MyDlinkRegisterActivity" android:windowSoftInputMode="0x00000003">
+</activity>
+<receiver android:name="co.funtek.mydlinkaccess.music.MediaButtonIntentReceiver">
+<intent-filter>
+<action android:name="android.intent.action.MEDIA_BUTTON">
+</action>
+<action android:name="android.media.AUDIO_BECOMING_NOISY">
+</action>
+</intent-filter>
+</receiver>
+<activity android:clearTaskOnLaunch="true" android:configChanges="0x000004A0" android:excludeFromRecents="true" android:exported="false" android:launchMode="2" android:name="co.funtek.mydlinkaccess.music.MediaPlaybackActivity" android:taskAffinity="" android:theme="@android:01030006">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:scheme="content">
+</data>
+<data android:host="media">
+</data>
+<data android:mimeType="audio/*">
+</data>
+<data android:mimeType="application/ogg">
+</data>
+<data android:mimeType="application/x-ogg">
+</data>
+<data android:mimeType="application/itunes">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="co.funtek.mydlinkaccess.music.PLAYBACK_VIEWER">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:name="co.funtek.mydlinkaccess.music.TrackBrowserActivity">
+<intent-filter>
+<action android:name="android.intent.action.EDIT">
+</action>
+<action android:name="android.intent.action.PICK">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:mimeType="mydlinkaccess.cursor.dir/track">
+</data>
+</intent-filter>
+</activity>
+<service android:exported="false" android:name="co.funtek.mydlinkaccess.music.MediaPlaybackService">
+</service>
+<receiver android:name="co.funtek.mydlinkaccess.music.MediaAppWidgetProvider">
+<intent-filter>
+<action android:name="android.appwidget.action.APPWIDGET_UPDATE">
+</action>
+</intent-filter>
+<meta-data android:name="android.appwidget.provider" android:resource="@7F060000">
+</meta-data>
+</receiver>
+<activity android:name="co.funtek.mydlinkaccess.photo.FullImageViewActivity" android:theme="@android:010300F0">
+</activity>
+<activity android:name="co.funtek.mydlinkaccess.photo.PhotoMapGridViewActivity" android:theme="@android:0103006C">
+</activity>
+<activity android:name="com.sixnology.mydlinkaccess.nas.setupwizard.SetupWizardActivity">
+</activity>
+<service android:enabled="true" android:exported="true" android:name="com.sixnology.mydlinkaccess.TransmissionService">
+</service>
+<activity android:name="co.funtek.mydlinkaccess.SettingActivity">
+</activity>
+<activity android:name="co.funtek.mydlinkaccess.SettingWebViewActivity">
+</activity>
+<activity android:name="com.sixnology.mydlinkaccess.nas.sync.SelectStorageActivity">
+</activity>
+<service android:exported="false" android:name="com.sixnology.mydlinkaccess.nas.sync.SyncService">
+</service>
+<receiver android:enabled="true" android:exported="true" android:name="com.sixnology.mydlinkaccess.nas.sync.SyncSignalReceiver">
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+</receiver>
+<service android:enabled="true" android:exported="true" android:name="com.sixnology.mydlinkaccess.DCP.DCPService">
+</service>
+</application>
+</manifest>

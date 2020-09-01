@@ -1,0 +1,114 @@
+<?xml version="1.0" ?><manifest android:versionCode="11" android:versionName="11" package="xt.com.tongyong.id14212" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="8" android:targetSdkVersion="16">
+</uses-sdk>
+<uses-permission android:name="android.permission.CALL_PHONE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_DOWNLOAD_MANAGER">
+</uses-permission>
+<uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION">
+</uses-permission>
+<uses-permission android:name="android.permission.DISABLE_KEYGUARD">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<application android:allowBackup="true" android:icon="@7F02001D" android:label="@7F080009" android:name="cn.knet.sjapp.activity.MyApplication" android:theme="@7F0A0005">
+<activity android:label="@7F080009" android:name="cn.knet.sjapp.activity.SplashActivity" android:theme="@7F0A0001">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000B0" android:launchMode="3" android:name="cn.knet.seal.sdk.ui.VerifyBrowser" android:theme="@android:01030006">
+</activity>
+<activity android:name="cn.knet.sjapp.activity.MainActivity" android:theme="@7F0A000A">
+</activity>
+<activity android:name="cn.knet.sjapp.activity.LoginAndRegisterActivity" android:theme="@7F0A000A">
+</activity>
+<activity android:name="cn.knet.sjapp.activity.SetupActivity" android:theme="@7F0A000A">
+</activity>
+<activity android:name="cn.knet.sjapp.activity.AboutActivity" android:theme="@7F0A000A">
+</activity>
+<activity android:name="cn.knet.sjapp.activity.MyFavoriteActivity" android:theme="@7F0A000A">
+</activity>
+<activity android:name="cn.knet.sjapp.activity.PushHistoryActivity" android:theme="@7F0A000A">
+</activity>
+<activity android:launchMode="3" android:name="cn.knet.sjapp.activity.PushDetailActivity" android:theme="@7F0A000A">
+</activity>
+<activity android:name="cn.knet.sjapp.activity.RegisterWebViewActivity" android:theme="@7F0A000A">
+</activity>
+<activity android:name="cn.knet.sjapp.activity.ShopCartActivity" android:theme="@7F0A000A">
+</activity>
+<activity android:name="cn.knet.sjapp.activity.AddressManageWebViewActivity" android:theme="@7F0A000A">
+</activity>
+<activity android:name="cn.knet.sjapp.activity.MyOrderWebViewActivity" android:theme="@7F0A000A">
+</activity>
+<activity android:name="cn.knet.sjapp.activity.SecondWindowActivity" android:theme="@7F0A000A">
+</activity>
+<meta-data android:name="cn.knet.seal.sdk.apikey" android:value="E05014026AF08C2DD5961158C47BAA053BBBCF1E3CC64DF582D74A04704949F6">
+</meta-data>
+<meta-data android:name="api_key" android:value="2Sj1hqxeL95gmxzKKpEuNaXv">
+</meta-data>
+<receiver android:name="cn.knet.sjapp.listener.PushMessageReceiver">
+<intent-filter>
+<action android:name="com.baidu.android.pushservice.action.MESSAGE">
+</action>
+<action android:name="com.baidu.android.pushservice.action.RECEIVE">
+</action>
+<action android:name="com.baidu.android.pushservice.action.notification.CLICK">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name="com.baidu.android.pushservice.PushServiceReceiver" android:process=":bdservice_v1">
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+<action android:name="com.baidu.android.pushservice.action.notification.SHOW">
+</action>
+<action android:name="com.baidu.android.pushservice.action.media.CLICK">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name="com.baidu.android.pushservice.RegistrationReceiver" android:process=":bdservice_v1">
+<intent-filter>
+<action android:name="com.baidu.android.pushservice.action.METHOD">
+</action>
+<action android:name="com.baidu.android.pushservice.action.BIND_SYNC">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_REMOVED">
+</action>
+<data android:scheme="package">
+</data>
+</intent-filter>
+</receiver>
+<service android:exported="true" android:name="com.baidu.android.pushservice.PushService" android:process=":bdservice_v1">
+<intent-filter>
+<action android:name="com.baidu.android.pushservice.action.PUSH_SERVICE">
+</action>
+</intent-filter>
+</service>
+</application>
+</manifest>

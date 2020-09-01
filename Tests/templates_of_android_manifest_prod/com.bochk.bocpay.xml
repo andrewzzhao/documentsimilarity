@@ -1,0 +1,492 @@
+<?xml version="1.0" ?><manifest android:compileSdkVersion="28" android:compileSdkVersionCodename="9" android:versionCode="97" android:versionName="1.0.17" package="com.bochk.bocpay" platformBuildVersionCode="28" platformBuildVersionName="9" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="23" android:targetSdkVersion="28">
+</uses-sdk>
+<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEM">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-feature android:name="android.hardware.camera" android:required="true">
+</uses-feature>
+<uses-feature android:name="android.hardware.camera.autofocus" android:required="true">
+</uses-feature>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CALL_PHONE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_CONTACTS">
+</uses-permission>
+<uses-permission android:name="org.fidoalliance.uaf.permissions.FIDO_CLIENT">
+</uses-permission>
+<uses-permission android:name="android.permission.USE_FINGERPRINT">
+</uses-permission>
+<supports-screens android:anyDensity="true" android:largeScreens="true" android:normalScreens="true" android:resizeable="true" android:smallScreens="true" android:xlargeScreens="true">
+</supports-screens>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="com.samsung.android.providers.context.permission.WRITE_USE_APP_FEATURE_SURVEY">
+</uses-permission>
+<uses-feature android:name="android.hardware.camera.flash">
+</uses-feature>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE">
+</uses-permission>
+<permission android:name="com.bochk.bocpay.permission.C2D_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="com.bochk.bocpay.permission.C2D_MESSAGE">
+</uses-permission>
+<application android:allowBackup="false" android:appComponentFactory="android.support.v4.app.CoreComponentFactory" android:hardwareAccelerated="true" android:icon="@7F030025" android:label="@7F0A05AD" android:name="cn.swiftpass.wallet.intl.app.ProjectApp" android:networkSecurityConfig="@7F080005" android:persistent="true" android:resizeableActivity="false" android:supportsRtl="true" android:theme="@7F0D00A0">
+<activity android:name="cn.swiftpass.wallet.intl.module.transfer.CrossBorderPaymentActivity">
+</activity>
+<meta-data android:name="asset_statements" android:resource="@7F0A05AF">
+</meta-data>
+<provider android:authorities="com.bochk.bocpay.fileprovider" android:exported="false" android:grantUriPermissions="true" android:name="android.support.v4.content.FileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F080000">
+</meta-data>
+</provider>
+<activity android:name="cn.swiftpass.wallet.intl.module.cardmanagement.smartaccount.update.UpgradeAccountActivity">
+</activity>
+<activity android:name="cn.swiftpass.wallet.intl.entity.SelCountyActivity">
+</activity>
+<activity android:launchMode="2" android:name="cn.swiftpass.wallet.intl.module.MainHomeActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000020">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="bocpay.app" android:pathPrefix="/openwith" android:scheme="bocpay">
+</data>
+</intent-filter>
+<intent-filter android:autoVerify="true">
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="ewa.bochk.com" android:scheme="https">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="cn.swiftpass.wallet.intl.module.activitys.NewMessageActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.swiftpass.wallet.intl.module.setting.paymentsetting.SettingPaymentDefaultAcitivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.swiftpass.wallet.intl.module.setting.paymentsetting.ChangeDefaultAccountActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.swiftpass.wallet.intl.module.register.RegisterSelActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="cn.swiftpass.wallet.intl.module.cardmanagement.CreditCardGradeActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.swiftpass.wallet.intl.module.login.SelectLoginCodeActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:name="cn.swiftpass.wallet.intl.module.scan.backscan.ScaleBarCodeActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="cn.swiftpass.wallet.intl.module.setting.paymentsetting.SettingCardDefaultAcitivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.swiftpass.wallet.intl.module.register.STwoRegisterSuccessActiviy" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.swiftpass.wallet.intl.module.setting.paymentsetting.STwoSelForgetPasswordTypeActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.swiftpass.wallet.intl.module.setting.shareInvite.InviteListActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.swiftpass.wallet.intl.module.ecoupon.view.EcouponsConvertStatusActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.swiftpass.wallet.intl.module.cardmanagement.view.TotalGradeActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.swiftpass.wallet.intl.module.cardmanagement.smartaccount.DeleteSmartActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="cn.swiftpass.wallet.intl.sdk.idv.IdvTransitionActivity" android:screenOrientation="5" android:theme="@7F0D0191">
+</activity>
+<activity android:name="cn.swiftpass.wallet.intl.module.register.TaxResidentListActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name="cn.swiftpass.wallet.intl.module.register.RegisterAgreementInfoActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.swiftpass.wallet.intl.module.topup.SelectBankCodeActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.swiftpass.wallet.intl.module.topup.TopUpBindCardSuccessActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.swiftpass.wallet.intl.sdk.frp.FrpTransitionActivity" android:theme="@7F0D0191">
+</activity>
+<activity android:name="cn.swiftpass.wallet.intl.module.transfer.InviteServiceActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.swiftpass.wallet.intl.module.transfer.SelCountyCodeActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.swiftpass.wallet.intl.module.login.guide.SplashActivity" android:screenOrientation="1" android:theme="@7F0D00A2">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:launchMode="2" android:name="cn.swiftpass.wallet.intl.module.login.LoginActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.swiftpass.wallet.intl.module.register.RegisterInputBankCardNumberActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.swiftpass.wallet.intl.module.cardmanagement.smartaccount.SmartAccountDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.swiftpass.wallet.intl.module.setting.paymentsetting.OldPaymentPswActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="2" android:name="cn.swiftpass.wallet.intl.module.topup.VerifyPwdDialogActivity" android:theme="@7F0D00FD">
+</activity>
+<activity android:name="cn.swiftpass.wallet.intl.module.login.guide.GuideNewActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name="cn.swiftpass.wallet.intl.module.cardmanagement.fps.FpsManageActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.swiftpass.wallet.intl.module.cardmanagement.fps.FpsRecordDeleteActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.swiftpass.wallet.intl.module.register.RegisterInviteStatusActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.swiftpass.wallet.intl.module.cardmanagement.fps.FpsBindSelTypeActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.swiftpass.wallet.intl.module.cardmanagement.fps.FpsBankRecordsActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.swiftpass.wallet.intl.module.cardmanagement.fps.FpsBankRecordsConfirmActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.swiftpass.wallet.intl.module.cardmanagement.fps.FpsBankRecordsConfirmDelActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.swiftpass.wallet.intl.module.cardmanagement.fps.FpsBankRecordsDelSucActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.swiftpass.wallet.intl.module.cardmanagement.BindCardSuccessActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.swiftpass.wallet.intl.module.transfer.SelectCountryCodeActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="cn.swiftpass.wallet.intl.module.register.STwoRegisterByEmailAndPhoneActiviy" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.swiftpass.wallet.intl.module.setting.about.ServerAgreementActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.swiftpass.wallet.intl.module.transfer.TransferFailedActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.swiftpass.wallet.intl.module.cardmanagement.smartaccount.CardDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.swiftpass.wallet.intl.module.setting.language.LanguageSettingActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.swiftpass.wallet.intl.module.setting.paymentsetting.PaymentSettingActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.swiftpass.wallet.intl.module.setting.paymentsetting.ResetPwdSuccessActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.swiftpass.wallet.intl.module.register.IdAuthInfoFillActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.swiftpass.wallet.intl.module.setting.about.AboutAcitivty" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.swiftpass.wallet.intl.module.setting.help.HelpActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.swiftpass.wallet.intl.module.scan.ScanActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.swiftpass.wallet.intl.module.cardmanagement.smartaccount.CardListDetailAcitivty" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.swiftpass.wallet.intl.module.scan.majorscan.InputMoneyActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.swiftpass.wallet.intl.module.scan.PaySuccussActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="2" android:name="cn.swiftpass.wallet.intl.module.transactionRecords.OrderDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.swiftpass.wallet.intl.module.scan.backscan.ScaleQrCodeActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.swiftpass.wallet.intl.module.setting.WebViewActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:name="cn.swiftpass.wallet.intl.module.register.RegisterSuccessActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="2" android:name="cn.swiftpass.wallet.intl.module.topup.OrderDetailDialogActivity" android:theme="@7F0D00FD">
+</activity>
+<activity android:name="cn.swiftpass.wallet.intl.module.cardmanagement.smartaccount.SmartAccountWithdrawActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.swiftpass.wallet.intl.module.cardmanagement.smartaccount.SmartAccountWithDrawDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="2" android:name="cn.swiftpass.wallet.intl.module.cardmanagement.smartaccount.CardInfoActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.swiftpass.wallet.intl.module.topup.TopUpSuccussActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.swiftpass.wallet.intl.module.cardmanagement.smartaccount.SmartAccountListActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.swiftpass.wallet.intl.module.cardmanagement.smartaccount.update.UpdateSmartAccountInputOTPActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.swiftpass.wallet.intl.module.register.RegisterInputOTPActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="2" android:name="cn.swiftpass.wallet.intl.module.register.RegisterSetPaymentPswActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="2" android:name="cn.swiftpass.wallet.intl.module.scan.backscan.ShowQrcodeActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="2" android:name="cn.swiftpass.wallet.intl.module.setting.about.ContactServiceActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.swiftpass.wallet.intl.module.cardmanagement.smartaccount.SmartAccountTopUpSettingDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="2" android:name="cn.swiftpass.wallet.intl.module.register.RegisterConfirmPaymentPswActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.swiftpass.wallet.intl.module.register.RegisterInputBankCardInfoActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.swiftpass.wallet.intl.module.login.SelRegisterTypeActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.swiftpass.wallet.intl.module.transfer.TransferDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.swiftpass.wallet.intl.module.register.RegisterBankActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="cn.swiftpass.wallet.intl.module.register.RegisterSmartAccountDescActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.swiftpass.wallet.intl.module.cardmanagement.smartaccount.SmartAccountInfoRegisterActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.swiftpass.wallet.intl.module.cardmanagement.smartaccount.SmartAccountInfoConfirmActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.swiftpass.wallet.intl.module.register.RegisterSmartAccuntSuccessActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.swiftpass.wallet.intl.module.cardmanagement.smartaccount.PrimaryAccountSelActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.swiftpass.wallet.intl.module.transfer.TransferActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.swiftpass.wallet.intl.module.transfer.TransferByPhoneNumActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:name="cn.swiftpass.wallet.intl.module.transfer.TransferByEmailActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:name="cn.swiftpass.wallet.intl.module.transfer.TransferByStaticCodeActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.swiftpass.wallet.intl.module.transfer.TransferConfirmMoneyActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.swiftpass.wallet.intl.module.transfer.TransferSuccessActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.swiftpass.wallet.intl.module.login.guide.TCWebActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.swiftpass.wallet.intl.module.cardmanagement.smartaccount.SmartAccountManageActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.swiftpass.wallet.intl.module.transfer.TransferScanActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.swiftpass.wallet.intl.module.transfer.TransferInputMoneyActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.swiftpass.wallet.intl.module.transactionRecords.TransactionActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.swiftpass.wallet.intl.module.cardmanagement.smartaccount.CardDetailSmartActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.swiftpass.wallet.intl.module.cardmanagement.smartaccount.SmartAccountInfoSetActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.swiftpass.wallet.intl.module.cardmanagement.smartaccount.SmartAccountAdjustDailyLimitActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.swiftpass.wallet.intl.module.cardmanagement.smartaccount.SmartAccountTopUpSettingActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.swiftpass.wallet.intl.module.cardmanagement.smartaccount.SmartAccountTopUpActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.swiftpass.wallet.intl.module.setting.paymentsetting.TouchIdActivity" android:screenOrientation="1" android:windowAnimationStyle="@7F0D0210">
+</activity>
+<activity android:name="cn.swiftpass.wallet.intl.module.setting.paymentsetting.FIOActivity" android:theme="@7F0D0100">
+</activity>
+<activity android:name="cn.swiftpass.wallet.intl.module.cardmanagement.fps.FpsBindSucActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.swiftpass.wallet.intl.module.cardmanagement.fps.FpsInfoConfirmActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.swiftpass.wallet.intl.module.register.STwoRegisterIdAuthInfoActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.swiftpass.wallet.intl.module.transfer.TransferByBankAccountActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.swiftpass.wallet.intl.module.transfer.TransferGroupActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name="cn.swiftpass.wallet.intl.module.transfer.TransferByFpsIDActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.tradelink.boc.authapp.ui.RegistrationActivity" android:theme="@7F0D0191">
+</activity>
+<activity android:name="com.tradelink.boc.authapp.ui.AuthenticationActivity" android:theme="@7F0D0191">
+</activity>
+<activity android:name="com.tradelink.boc.authapp.ui.AuthenticationV2Activity" android:theme="@7F0D0191">
+</activity>
+<activity android:name="com.tradelink.boc.authapp.ui.DeregistrationActivity" android:theme="@7F0D0191">
+</activity>
+<activity android:name="com.tradelink.boc.authapp.ui.CheckPolicyActivity" android:theme="@7F0D0191">
+</activity>
+<activity android:name="com.tradelink.boc.authapp.ui.GetFioKeyActivity" android:theme="@7F0D0191">
+</activity>
+<activity android:name="com.daon.sdk.authenticator.capture.CaptureActivity" android:theme="@7F0D0191">
+</activity>
+<activity android:name="com.tradelink.boc.sotp.ui.RegistrationActivity" android:theme="@7F0D0191">
+</activity>
+<activity android:name="com.tradelink.boc.sotp.ui.PreRegistrationActivity" android:theme="@7F0D0191">
+</activity>
+<activity android:name="com.tradelink.boc.sotp.ui.AuthenticationActivity" android:theme="@7F0D0191">
+</activity>
+<activity android:name="com.tradelink.boc.sotp.ui.CheckPolicyActivity" android:theme="@7F0D0191">
+</activity>
+<activity android:name="com.tradelink.boc.sotp.ui.OfflineAuthenticationActivity" android:theme="@7F0D0191">
+</activity>
+<activity android:name="com.tradelink.boc.sotp.ui.DeregistrationActivity" android:theme="@7F0D0191">
+</activity>
+<activity android:name="cn.swiftpass.wallet.intl.module.transfer.TransferAccountListActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.swiftpass.wallet.intl.module.transfer.TransferListActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.swiftpass.wallet.intl.module.register.WaitProgressActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.swiftpass.wallet.intl.module.setting.paymentsetting.ForgetPaymentPasswordActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.swiftpass.wallet.intl.module.register.SetTransactionLimitActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.swiftpass.wallet.intl.module.topup.TopUpActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.swiftpass.wallet.intl.module.cardmanagement.smartaccount.update.UpdateAccountSuccessActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.tradelink.boc.sotp.ui.OfflineAuthActivity" android:theme="@7F0D0191">
+</activity>
+<activity android:name="com.tradelink.boc.sotp.ui.AuthActivity" android:theme="@7F0D0191">
+</activity>
+<activity android:name="com.tradelink.boc.sotp.ui.PreAuthentication" android:theme="@7F0D0191">
+</activity>
+<meta-data android:name="cn.swiftpass.wallet.intl.utils.UnsafeOkHttpGlideModule" android:value="GlideModule">
+</meta-data>
+<uses-library android:name="com.isprint.e2eea.client.AxMxE2EEClient" android:required="false">
+</uses-library>
+<service android:exported="false" android:name="cn.swiftpass.wallet.intl.sdk.fcm.MyFirebaseInstanceIDService">
+<intent-filter>
+<action android:name="com.google.firebase.INSTANCE_ID_EVENT">
+</action>
+</intent-filter>
+</service>
+<service android:exported="false" android:name="cn.swiftpass.wallet.intl.sdk.fcm.MyFirebaseMessagingService">
+<intent-filter>
+<action android:name="com.google.firebase.MESSAGING_EVENT">
+</action>
+</intent-filter>
+</service>
+<meta-data android:name="com.google.firebase.messaging.default_notification_icon" android:resource="@7F030025">
+</meta-data>
+<meta-data android:name="com.google.firebase.messaging.default_notification_color" android:resource="@7F100031">
+</meta-data>
+<activity android:name="cn.swiftpass.wallet.intl.module.register.RegisterDetailsActivity">
+</activity>
+<activity android:name="cn.swiftpass.wallet.intl.module.register.AreaSelectionActivity">
+</activity>
+<activity android:name="cn.swiftpass.wallet.intl.module.register.AreaSelectionIDAuthActivity">
+</activity>
+<activity android:name="cn.swiftpass.wallet.intl.module.register.RegisterInviteShareActivity">
+</activity>
+<activity android:name="cn.swiftpass.wallet.intl.module.register.RegisterInviteActivity">
+</activity>
+<activity android:name="cn.swiftpass.wallet.intl.module.ecoupon.view.EcouponsUseActivity">
+</activity>
+<activity android:name="cn.swiftpass.wallet.intl.module.ecoupon.view.EcoupRecordsActivity">
+</activity>
+<activity android:name="cn.swiftpass.wallet.intl.module.ecoupon.view.EcouponsConvertDetailActivity">
+</activity>
+<activity android:name="cn.swiftpass.wallet.intl.module.ecoupon.view.EcoupConvertSuccessActivity">
+</activity>
+<activity android:name="cn.swiftpass.wallet.intl.module.ecoupon.view.EcouponsConvertDescripActivity">
+</activity>
+<activity android:name="cn.swiftpass.wallet.intl.module.ecoupon.view.EcouponsDetailActivity">
+</activity>
+<activity android:name="cn.swiftpass.wallet.intl.module.ecoupon.view.EcoupUseSuccessActivity">
+</activity>
+<activity android:name="cn.swiftpass.wallet.intl.module.setting.SettingActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.idv.sdklibrary.activity.CaptureImageActivity" android:theme="@7F0D0217">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.idv.sdklibrary.activity.IntroductionActivity" android:screenOrientation="1" android:theme="@7F0D0214">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.idv.sdklibrary.activity.VoiceActivity" android:screenOrientation="1" android:theme="@7F0D0214">
+</activity>
+<activity android:configChanges="0x000004A0" android:hardwareAccelerated="true" android:name="com.idv.sdklibrary.activity.IdvWebActivity" android:screenOrientation="1" android:theme="@7F0D0214">
+</activity>
+<receiver android:exported="false" android:name="com.idv.sdklibrary.receiver.GAEventReceiver">
+<intent-filter>
+<action android:name="TLKEVENT">
+</action>
+</intent-filter>
+</receiver>
+<service android:name="com.idv.sdklibrary.server.GAEventServer">
+</service>
+<activity android:configChanges="0x000004A0" android:name="com.tradelink.card.CardIOActivity" android:screenOrientation="1" android:theme="@7F0D0160">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.tradelink.card.IntegrateCardIOActivity" android:screenOrientation="1" android:theme="@7F0D0160">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="io.card.payment.CardIOActivity">
+</activity>
+<activity android:name="io.card.payment.DataEntryActivity">
+</activity>
+<provider android:authorities="com.bochk.bocpay.com.squareup.picasso" android:exported="false" android:name="com.squareup.picasso.PicassoProvider">
+</provider>
+<activity android:name="com.daon.fido.client.sdk.init.InitialiseSdkActivity" android:theme="@7F0D0191">
+</activity>
+<activity android:name="com.daon.fido.client.sdk.reg.UafClientRegisterActivity" android:theme="@7F0D0191">
+</activity>
+<activity android:name="com.daon.fido.client.sdk.reg.UafAsmRegisterActivity" android:theme="@7F0D0191">
+</activity>
+<activity android:name="com.daon.fido.client.sdk.dereg.UafClientDeregisterActivity" android:theme="@7F0D0191">
+</activity>
+<activity android:name="com.daon.fido.client.sdk.dereg.UafAsmDeregisterActivity" android:theme="@7F0D0191">
+</activity>
+<activity android:name="com.daon.fido.client.sdk.auth.UafClientAuthenticateActivity" android:theme="@7F0D0191">
+</activity>
+<activity android:name="com.daon.fido.client.sdk.auth.UafAsmAuthenticateActivity" android:theme="@7F0D0191">
+</activity>
+<activity android:name="com.daon.fido.client.sdk.auth.UafAsmGetRegistrationsActivity" android:theme="@7F0D0191">
+</activity>
+<activity android:name="com.daon.fido.client.sdk.ui.ChooseAuthenticatorActivity" android:screenOrientation="1" android:theme="@7F0D00FE">
+</activity>
+<activity android:name="com.daon.fido.client.sdk.ui.ChooseAccountActivity" android:screenOrientation="1" android:theme="@7F0D00FE">
+</activity>
+<activity android:name="com.daon.fido.client.sdk.ui.DisplayTransactionActivity" android:screenOrientation="1" android:theme="@7F0D00FE">
+</activity>
+<activity android:name="com.daon.sdk.authenticator.capture.AdosCaptureActivity" android:theme="@7F0D010A">
+</activity>
+<activity android:name="com.tradelink.boc.rootdetection.ui.RootDetectionActivity">
+</activity>
+<service android:exported="true" android:name="com.google.firebase.messaging.FirebaseMessagingService">
+<intent-filter android:priority="-500">
+<action android:name="com.google.firebase.MESSAGING_EVENT">
+</action>
+</intent-filter>
+</service>
+<activity android:configChanges="0x000004A0" android:name="cn.cloudwalk.libproject.activity.LiveResultActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="cn.cloudwalk.libproject.activity.LiveServerActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:hardwareAccelerated="true" android:label="@7F0A05AD" android:name="cn.cloudwalk.libproject.activity.LiveActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F0A05AD" android:name="cn.cloudwalk.libproject.activity.LiveStartActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="cn.cloudwalk.libproject.activity.FrpWebActivity">
+</activity>
+<provider android:authorities="com.bochk.bocpay.autosize-init-provider" android:exported="false" android:multiprocess="true" android:name="me.jessyan.autosize.InitProvider">
+</provider>
+<activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:01030010">
+</activity>
+<receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementReceiver">
+</receiver>
+<receiver android:enabled="true" android:name="com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver" android:permission="android.permission.INSTALL_PACKAGES">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementService">
+</service>
+<receiver android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+<category android:name="com.bochk.bocpay">
+</category>
+</intent-filter>
+</receiver>
+<receiver android:exported="false" android:name="com.google.firebase.iid.FirebaseInstanceIdInternalReceiver">
+</receiver>
+<service android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdService">
+<intent-filter android:priority="-500">
+<action android:name="com.google.firebase.INSTANCE_ID_EVENT">
+</action>
+</intent-filter>
+</service>
+<provider android:authorities="com.bochk.bocpay.firebaseinitprovider" android:exported="false" android:initOrder="100" android:name="com.google.firebase.provider.FirebaseInitProvider">
+</provider>
+<meta-data android:name="com.google.android.gms.version" android:value="@7F0F0009">
+</meta-data>
+</application>
+</manifest>

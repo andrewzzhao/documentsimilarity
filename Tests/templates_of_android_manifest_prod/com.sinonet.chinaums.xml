@@ -1,0 +1,862 @@
+<?xml version="1.0" ?><manifest android:versionCode="94" android:versionName="5.2.8" package="com.sinonet.chinaums" platformBuildVersionCode="26" platformBuildVersionName="8.0.0" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="16" android:targetSdkVersion="22">
+</uses-sdk>
+<permission android:name="com.sinonet.chinaums.permission.JPUSH_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="com.sinonet.chinaums.permission.JPUSH_MESSAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_USER_PRESENT">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.REORDER_TASKS">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.BLUETOOTH">
+</uses-permission>
+<uses-permission android:name="android.permission.BLUETOOTH_ADMIN">
+</uses-permission>
+<uses-permission android:name="android.permission.CALL_PHONE">
+</uses-permission>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-permission android:name="android.permission.FLASHLIGHT">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_CONTACTS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_SMS">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_CONTACTS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.BODY_SENSORS">
+</uses-permission>
+<uses-feature android:name="android.hardware.camera">
+</uses-feature>
+<uses-feature android:name="android.hardware.camera.autofocus">
+</uses-feature>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-permission android:name="android.permission.RECORD_AUDIO">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_CONFIGURATION">
+</uses-permission>
+<uses-permission android:name="android.permission.BAIDU_LOCATION_SERVICE">
+</uses-permission>
+<uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_OWNER_DATA">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PROFILE">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_LOGS">
+</uses-permission>
+<uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION">
+</uses-permission>
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW">
+</uses-permission>
+<uses-permission android:name="com.chinaums.yesrunner.permission.MIPUSH_RECEIVE">
+</uses-permission>
+<uses-permission android:name="android.permission.NFC">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_NETWORK_STATE">
+</uses-permission>
+<uses-feature android:name="android.hardware.nfc.hce" android:required="true">
+</uses-feature>
+<application android:allowBackup="false" android:hardwareAccelerated="true" android:icon="@7F020063" android:label="@7F090077" android:largeHeap="true" android:name="s.h.e.l.l.S" android:roundIcon="@7F020063" android:supportsRtl="true" android:theme="@android:0103000D">
+<meta-data android:name="UMENG_APPKEY" android:value="582128c2677baa5239002e6b">
+</meta-data>
+<meta-data android:name="UMENG_CHANNEL" android:value="chinaums">
+</meta-data>
+<meta-data android:name="CurrentEnvironment" android:value="PROD">
+</meta-data>
+<meta-data android:name="PPPaySDK" android:value="true">
+</meta-data>
+<meta-data android:name="com.baidu.lbsapi.API_KEY" android:value="KYaexPZhVU8oDVG8XtuceIvCvEdSR5QP">
+</meta-data>
+<meta-data android:name="design_width" android:value="1080">
+</meta-data>
+<meta-data android:name="design_height" android:value="1920">
+</meta-data>
+<meta-data android:name="android.max_aspect" android:value="2.100000">
+</meta-data>
+<service android:enabled="true" android:name="com.chinaums.opensdk.download.service.ResourceMonitorService">
+</service>
+<activity android:configChanges="0x000000E0" android:label="@7F090077" android:name="com.chinaums.qmf3g.activity.WelcomeActivity" android:screenOrientation="1" android:theme="@7F0B00AC">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:name="com.chinaums.crashinforeport.SendBugReportUiActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.chinaums.qmf3g.activity.login.ActivityLogin" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.chinaums.qmf3g.activity.login.ActivityLoginByMobile" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.chinaums.qmf3g.activity.login.ActivityInfoVerifying" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.chinaums.qmf3g.activity.login.ActivityMobileVerifying" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.chinaums.qmf3g.activity.login.ActivityUserVerifying" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.chinaums.qmf3g.activity.login.ActivitySMSVerifying" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.chinaums.qmf3g.activity.login.ActivityEmailBindMobile" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.chinaums.qmf3g.activity.login.ActivityIDVerifying" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.chinaums.qmf3g.activity.login.ActivityResetPassword" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.chinaums.qmf3g.activity.login.ActivityRegister" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.chinaums.qmf3g.activity.login.ActivityRegisterSMSVerifying" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.chinaums.qmf3g.activity.login.ActivityLoginByMobileSmscodeCheck" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.chinaums.qmf3g.activity.login.ActivityRegisterSetPassword" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004E0" android:launchMode="2" android:name="com.chinaums.qmf3g.activity.homepage.ActivityMain" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.chinaums.qmf3g.activity.ActivityCityChooser" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.chinaums.qmf3g.activity.vip.ActivityVIPStores" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.chinaums.qmf3g.activity.vip.ActivityVIPCardInfo" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.chinaums.qmf3g.activity.vip.ActivityVIPPrivilegePay" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.chinaums.qmf3g.activity.vip.ActivityVIPLevelDetails" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.chinaums.qmf3g.activity.stores.ActivityStoreMain" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.chinaums.qmf3g.activity.stores.ActivityPrivilegeDetail" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.chinaums.qmf3g.activity.guide.ActivityGuidance" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.chinaums.qmf3g.activity.search.SearchActivitty" android:screenOrientation="1" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.chinaums.qmf3g.activity.my.ActivityAccountBill" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.chinaums.qmf3g.activity.my.ActivityAccountBillPreferentialDetail" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.chinaums.qmf3g.activity.my.ActivityBankCard" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.chinaums.qmf3g.activity.my.ActivityBankCardDetail" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.chinaums.qmf3g.activity.vip.ActivityEntityVipCardDetail" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.chinaums.qmf3g.activity.vip.ActivityElectronVipCardDetail" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.chinaums.qmf3g.activity.shake.ActivityShake" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.chinaums.qmf3g.activity.my.ActivityCardInfoOfUserNameAndUserId" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.chinaums.qmf3g.activity.my.ActivityCardInfoOfExpiryDate" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.chinaums.qmf3g.activity.my.ActivityVerificationCode" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.chinaums.qmf3g.activity.my.ActivityBankCardBindSuccess" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.chinaums.qmf3g.activity.my.ActivitySupportBankCards" android:screenOrientation="1">
+</activity>
+<service android:enabled="true" android:name="com.baidu.location.f" android:process=":remote">
+<intent-filter>
+<action android:name="com.baidu.location.service_v2.2">
+</action>
+</intent-filter>
+</service>
+<activity android:configChanges="0x000004A0" android:exported="true" android:name="com.sinonet.chinaums.wxapi.WXEntryActivity" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.chinaums.qmf3g.activity.my.ActivityUserInfo" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.chinaums.qmf3g.activity.my.ActivityModifyNickName" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.chinaums.qmf3g.activity.my.ActivityModifyGender" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.chinaums.qmf3g.activity.setting.ActivityAccountSetting" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.chinaums.qmf3g.activity.setting.ActivityChangePayPW" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.chinaums.qmf3g.activity.setting.ActivityRetrievePayPW" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.chinaums.qmf3g.activity.setting.ActivitySecurityQuestion" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.chinaums.qmf3g.activity.setting.ActivitySetSecurityQuestion" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.chinaums.qmf3g.activity.setting.ActivitySetPayPW" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.chinaums.qmf3g.activity.map.ActivityBDMap" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.chinaums.qmf3g.activity.coupon.ActivityCouponDetail" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.chinaums.qmf3g.activity.coupon.ActivityCoupons" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.chinaums.qmf3g.activity.coupon.ActivityCouponBankCard" android:screenOrientation="1">
+</activity>
+<activity android:name="com.chinaums.qmf3g.activity.functions.mpos.BoxSwipeActivity" android:screenOrientation="1" android:theme="@android:01030009">
+</activity>
+<activity android:name="com.chinaums.qmf3g.activity.functions.mpos.DeviceManagerActivity" android:screenOrientation="1" android:theme="@android:01030009">
+</activity>
+<activity android:name="com.chinaums.qmf3g.activity.functions.mpos.BuySwipeCardReaderActivity" android:screenOrientation="1" android:theme="@android:01030009">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.chinaums.qmf3g.activity.functions.dailymoney.ActivityDailyMoney" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.chinaums.qmf3g.activity.functions.dailymoney.ActivityDailyMoneyProfitsList" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.chinaums.qmf3g.activity.functions.dailymoney.ActivityDaliyMoneyCashOut" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.chinaums.qmf3g.activity.functions.dailymoney.ActivityDaliyMoneyCashIn" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.chinaums.qmf3g.activity.functions.dailymoney.ActivityDailyMoneyCashOutType" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.chinaums.qmf3g.activity.functions.dailymoney.ActivityDailyMoneyCashConfirm" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.chinaums.qmf3g.activity.functions.dailymoney.ActivityDaliyMoneyCashResult" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.chinaums.qmf3g.activity.functions.dailymoney.ActivityDailyMoneySetting" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.chinaums.qmf3g.activity.functions.dailymoney.ActivityDailyMoneySetBindCard" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.chinaums.qmf3g.activity.functions.dailymoney.ActivityDailyMoneyCancellation" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.chinaums.qmf3g.activity.functions.dailymoney.ActivityDailyMoneyChangeBindCard" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.chinaums.qmf3g.activity.functions.parkcard.ActivityParkCardFacePay" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.chinaums.qmf3g.activity.functions.parkcard.ActivityParkCard" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.chinaums.qmf3g.activity.functions.parkcard.ActivityParkCardListManage" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.chinaums.qmf3g.activity.functions.parkcard.ActivityParkCardOnline" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.chinaums.qmf3g.activity.functions.parkcard.ActivityParkCardOnlineShopping" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.chinaums.qmf3g.activity.functions.parkcard.ActivityParkCardItemManage" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.chinaums.qmf3g.activity.functions.parkcard.ActivityParkCardTradeDetails" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.chinaums.qmf3g.activity.functions.parkcard.ActivityParkcardAdd" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.chinaums.qmf3g.activity.functions.parkcard.ActivityParkcardCitySelect" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.chinaums.qmf3g.activity.functions.parkcard.ActivityParkcardInputInfo" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.chinaums.qmf3g.activity.functions.parkcard.ActivityParkcardSmsCode" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.chinaums.qmf3g.activity.functions.parkcard.ActivityParkcardChangePassword" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.chinaums.qmf3g.activity.functions.parkcard.ActivityParkcardChangePhoneConfirm" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.chinaums.qmf3g.activity.functions.parkcard.ActivityParkcardResetPassword" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.chinaums.qmf3g.activity.functions.parkcard.ActivityParkcardRestCardPhoneGuide" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.chinaums.qmf3g.activity.functions.ActivitySecondPaySelect" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.chinaums.qmf3g.activity.functions.ActivitySecondPay" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.chinaums.qmf3g.activity.functions.ActivitySecondPaySelectCopy" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.chinaums.qmf3g.activity.functions.ActivitySecondPayCopy" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000080" android:launchMode="2" android:name="com.csii.powerenter.PEKbdActivity" android:theme="@android:0103000F">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.chinaums.qmf3g.activity.functions.ActivityRepayWaring" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.chinaums.qmf3g.activity.functions.ActivityAddBankCard" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.chinaums.qmf3g.activity.functions.ActivitySupportCard" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.chinaums.qmf3g.activity.functions.ActivityInputCardInfo" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.chinaums.qmf3g.activity.functions.ActivityVerifySmsCode" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.chinaums.qmf3g.activity.functions.ActivityHelp" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.chinaums.qmf3g.activity.functions.ActivitySetPassword" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.chinaums.qmf3g.activity.functions.biz.MoreBizActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:launchMode="2" android:name="com.chinaums.qmf3g.activity.balance.ActivityMyBalance" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.chinaums.qmf3g.activity.balance.ActivityTransfer" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.chinaums.qmf3g.activity.balance.ActivityTransferConfirm" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.chinaums.qmf3g.net.open.ui.DynamicBizActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.chinaums.qmf3g.activity.setting.ActivityResetPayPwd" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.chinaums.qmf3g.activity.setting.ActivityBankCardInfo" android:screenOrientation="1">
+</activity>
+<activity android:clearTaskOnLaunch="true" android:configChanges="0x000000A0" android:name="com.chinaums.qmf3g.activity.functions.scan.google.zxing.client.android.CaptureActivity" android:screenOrientation="1" android:stateNotNeeded="true" android:windowSoftInputMode="0x00000003">
+<intent-filter>
+<action android:name="com.google.zxing.client.android.SCAN">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="zxing.appspot.com" android:path="/scan" android:scheme="http">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="www.google.com" android:path="/m/products/scan" android:scheme="http">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="www.google.co.uk" android:path="/m/products/scan" android:scheme="http">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="scan" android:path="/" android:scheme="zxing">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.chinaums.qmf3g.activity.functions.scan.google.zxing.client.android.CaptureHistoryList" android:screenOrientation="1">
+</activity>
+<activity android:name="com.chinaums.qmf3g.activity.functions.scan.google.zxing.client.android.CaptureHistoryDetail" android:screenOrientation="1">
+</activity>
+<activity android:name="com.chinaums.qmf3g.activity.scantransfer.ActivitySupportQuickVATransfer" android:screenOrientation="1">
+</activity>
+<activity android:name="com.chinaums.qmf3g.activity.scantransfer.ActivityScanTransfer" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.chinaums.qmf3g.activity.setting.ActivitySecurityVerify" android:screenOrientation="1">
+</activity>
+<activity android:name="com.chinaums.qmf3g.activity.balance.ActivityChooseBindCard" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:launchMode="2" android:name="com.chinaums.qmf3g.activity.newpaycenter.ActivityNewPaycenter" android:screenOrientation="1" android:theme="@android:01030011">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.chinaums.qmf3g.activity.newpaycenter.ActivityPaySuccess" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.chinaums.qmf3g.activity.newpaycenter.ActivityCardNumberPayment" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.chinaums.qmf3g.activity.newpaycenter.ActivityCardNumberPaymentConfirm" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.chinaums.qmf3g.activity.newpaycenter.ActivityCardHistory" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.chinaums.idcardrecognition.ActivityRecognition" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.chinaums.idcardrecognition.ActivityCaptureIDCard" android:screenOrientation="0">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.chinaums.qmf3g.activity.setting.ActivitySetting" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.chinaums.qmf3g.activity.setting.ActivityAbout" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.chinaums.qmf3g.activity.setting.ActivityImBusiness" android:screenOrientation="1">
+</activity>
+<activity android:name="com.chinaums.qmf3g.activity.functions.biz.ActivityLocalBusinesses" android:screenOrientation="1">
+</activity>
+<activity android:name="com.chinaums.qmf3g.activity.balance.ActivityVAdealDetail" android:screenOrientation="1">
+</activity>
+<activity android:name="com.chinaums.qmf3g.activity.bill.ActivityOrderManage" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.chinaums.qmf3g.activity.bill.ActivityOrderDetail" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.chinaums.qmf3g.activity.coupon.ActivityExchangeCoupons" android:screenOrientation="1">
+</activity>
+<activity android:name="com.chinaums.qmf3g.activity.vip.ActivityVipCardRule" android:screenOrientation="1">
+</activity>
+<service android:name="com.chinaums.thirdbiz.quickpay.service.PayCenterService">
+<intent-filter>
+<action android:name="com.chinaums.thirdbiz.quickpay.service.IUmsQuickPayService">
+</action>
+</intent-filter>
+</service>
+<activity android:name="com.chinaums.thirdbiz.quickpay.service.PayCenterServiceActivity" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<activity android:name="com.chinaums.qmf3g.activity.bill.ActivityQRCode" android:screenOrientation="1">
+</activity>
+<activity android:name="com.chinaums.qmf3g.activity.functions.biz.ActivityGroupBuy" android:screenOrientation="1">
+</activity>
+<activity android:name="com.chinaums.qmf3g.activity.coupon.ActivityCouponsNew" android:screenOrientation="1">
+</activity>
+<activity android:name="com.chinaums.qmf3g.activity.coupon.ActivityCouponDetailNew" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.chinaums.qmf3g.activity.coupon.ActivityDonationCoupon" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.chinaums.qmf3g.activity.login.ActivityBindPhone" android:screenOrientation="1">
+</activity>
+<activity android:name="com.chinaums.qmf3g.activity.balance.ActivityPayLimit" android:screenOrientation="1">
+</activity>
+<activity android:name="com.chinaums.qmf3g.activity.coupon.ActivityCouponUseRules" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.chinaums.qmf3g.activity.my.ActivityVipCard" android:screenOrientation="1">
+</activity>
+<activity android:name="com.chinaums.qmf3g.activity.functions.biz.PaymentBizActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.chinaums.qmf3g.activity.functions.biz.ActivityEducationalPayment" android:screenOrientation="1">
+</activity>
+<activity android:name="com.chinaums.qmf3g.activity.functions.biz.ActivityPropertyPayment" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.wintone.passportreader.sdk.CameraActivity" android:screenOrientation="0">
+</activity>
+<activity android:configChanges="0x00000020" android:name="com.chinaums.qmf3g.activity.functions.credit.ActivityCreditCardList" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000020" android:name="com.chinaums.qmf3g.activity.functions.credit.ActivityCreditCardRepayments" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000020" android:name="com.chinaums.qmf3g.activity.functions.credit.ActivityCreditCardAdd" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000020" android:name="com.chinaums.qmf3g.activity.functions.credit.ActivityCreditInfo" android:screenOrientation="1">
+</activity>
+<service android:enabled="true" android:name="wintone.idcard.android.AuthService">
+<intent-filter>
+<action android:name="wintone.idcard.authService">
+</action>
+</intent-filter>
+</service>
+<service android:enabled="true" android:name="wintone.idcard.android.RecogService">
+<intent-filter>
+<action android:name="wintone.idcard.recogService">
+</action>
+</intent-filter>
+</service>
+<service android:enabled="true" android:name="wintone.idcard.android.TimeService">
+<intent-filter>
+<action android:name="wintone.idcard.TimeService">
+</action>
+</intent-filter>
+</service>
+<receiver android:name="wintone.idcard.android.DataChangeReceiver">
+</receiver>
+<activity android:exported="false" android:name="cn.jpush.android.ui.PopWinActivity" android:theme="@7F0B00EE">
+</activity>
+<activity android:configChanges="0x000000A0" android:exported="false" android:name="cn.jpush.android.ui.PushActivity" android:theme="@android:01030006">
+<intent-filter>
+<action android:name="cn.jpush.android.ui.PushActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="com.sinonet.chinaums">
+</category>
+</intent-filter>
+</activity>
+<service android:enabled="true" android:exported="false" android:name="cn.jpush.android.service.DownloadService">
+</service>
+<service android:enabled="true" android:exported="false" android:name="cn.jpush.android.service.PushService">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.REGISTER">
+</action>
+<action android:name="cn.jpush.android.intent.REPORT">
+</action>
+<action android:name="cn.jpush.android.intent.PushService">
+</action>
+<action android:name="cn.jpush.android.intent.PUSH_TIME">
+</action>
+</intent-filter>
+</service>
+<service android:enabled="true" android:exported="true" android:name="cn.jpush.android.service.DaemonService">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.DaemonService">
+</action>
+<category android:name="com.sinonet.chinaums">
+</category>
+</intent-filter>
+</service>
+<receiver android:enabled="true" android:name="cn.jpush.android.service.PushReceiver">
+<intent-filter android:priority="1000">
+<category android:name="com.sinonet.chinaums">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.USER_PRESENT">
+</action>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_ADDED">
+</action>
+<action android:name="android.intent.action.PACKAGE_REMOVED">
+</action>
+<data android:scheme="package">
+</data>
+</intent-filter>
+</receiver>
+<receiver android:exported="false" android:name="cn.jpush.android.service.AlarmReceiver">
+</receiver>
+<receiver android:enabled="true" android:name="com.chinaums.qmf3g.push.PushReceiver">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.REGISTRATION">
+</action>
+<action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED">
+</action>
+<action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED">
+</action>
+<action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED">
+</action>
+<action android:name="cn.jpush.android.intent.CONNECTION">
+</action>
+<action android:name="com.chinaums.qmf3g.NOTIFICATION_OPENED">
+</action>
+<category android:name="com.sinonet.chinaums">
+</category>
+</intent-filter>
+</receiver>
+<meta-data android:name="JPUSH_CHANNEL" android:value="developer-default">
+</meta-data>
+<meta-data android:name="JPUSH_APPKEY" android:value="e3d5732d3dc341ca3f5b5c39">
+</meta-data>
+<activity android:name="com.chinaums.qmf3g.activity.functions.mpos.BoxBindCardActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.chinaums.qmf3g.activity.functions.mpos.BoxCardListActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.chinaums.qmf3g.activity.functions.NotificationManageActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.chinaums.qmf3g.activity.functions.biz.TrafficFineActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.chinaums.qmf3g.activity.homepage.ActivityWallet" android:screenOrientation="1">
+</activity>
+<activity android:name="com.chinaums.qmf3g.activity.my.ActivityWealth" android:screenOrientation="1">
+</activity>
+<activity android:name="com.chinaums.qmf3g.activity.setting.ActivityIntro" android:screenOrientation="1">
+</activity>
+<activity android:name="com.chinaums.qmf3g.activity.setting.ActivityImprint" android:screenOrientation="1">
+</activity>
+<activity android:name="com.chinaums.qmf3g.activity.coupon.ActivityAugmentedReality" android:screenOrientation="1">
+</activity>
+<activity android:name="com.chinaums.qmf3g.activity.coupon.ActivityLookRaiders" android:screenOrientation="1">
+</activity>
+<activity android:name="com.chinaums.qmf3g.activity.coupon.ActivityCouponDisplayForAR" android:screenOrientation="1">
+</activity>
+<activity android:name="com.chinaums.qmf3g.activity.coupon.ActivityCouponRedeem" android:screenOrientation="1">
+</activity>
+<activity android:name="com.chinaums.qmf3g.activity.my.ActivityFuturePay" android:screenOrientation="1">
+</activity>
+<activity android:name="com.chinaums.qmf3g.activity.setting.ActivityShowBindpone" android:screenOrientation="1">
+</activity>
+<activity android:name="com.chinaums.qmf3g.activity.setting.ActivityCheckIDCard" android:screenOrientation="1">
+</activity>
+<activity android:name="com.chinaums.qmf3g.activity.setting.ActivityChangeBindPhone" android:screenOrientation="1">
+</activity>
+<activity android:name="com.chinaums.qmf3g.activity.setting.ActivityBindEmail" android:screenOrientation="1">
+</activity>
+<activity android:name="com.chinaums.qmf3g.activity.setting.ActivityChangeLoginPWD" android:screenOrientation="1">
+</activity>
+<activity android:name="com.chinaums.yesrunnerPlugin.activity.MainPluginActivity" android:screenOrientation="1" android:theme="@7F0B0062">
+</activity>
+<activity android:name="com.baidu.idl.face.platform.ui.FaceDetectActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.baidu.idl.face.platform.ui.FaceLivenessActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.chinaums.qmf3g.activity.functions.parkcard.ActivityFaceCollect" android:screenOrientation="1">
+</activity>
+<activity android:name="com.chinaums.facedetect.FaceBindActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.chinaums.facedetect.FaceLoginActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.chinaums.scancode.qrcode.com.google.zxing.activity.CaptureActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:launchMode="2" android:name="com.chinaums.qmf3g.activity.balance.ActivityRecharge" android:screenOrientation="1" android:theme="@android:01030011">
+</activity>
+<activity android:name="com.chinaums.pppay.WelcomeActivity" android:screenOrientation="1" android:theme="@android:01030010">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.chinaums.qmf3g.activity.login.ActivityLoginByRiskSMS" android:screenOrientation="1">
+</activity>
+<activity android:hardwareAccelerated="false" android:name="com.chinaums.qmf3g.activity.functions.biz.ActivityConvenienceStore" android:screenOrientation="1">
+</activity>
+<activity android:name="com.chinaums.qmf3g.activity.setting.ActivityBrushTheFaceSet" android:screenOrientation="1">
+</activity>
+<activity android:name="com.chinaums.qmf3g.activity.functions.biz.ActivitySafetyVerification" android:screenOrientation="1">
+</activity>
+<activity android:name="com.chinaums.qmf3g.activity.functions.biz.ActivityNoPWDPay" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:launchMode="2" android:name="com.chinaums.qmf3g.activity.functions.oldpaycenter.ActivityPayCenter" android:screenOrientation="1" android:theme="@android:01030011">
+</activity>
+<activity android:name="com.chinaums.qmf3g.activity.my.GinkgoBeanActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.chinaums.qmf3g.activity.my.GinkgoBeanDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.chinaums.qmf3g.activity.functions.biz.ActivityPrepaidCard" android:screenOrientation="1">
+</activity>
+<activity android:name="com.chinaums.qmf3g.activity.functions.biz.ActivityAddPrePaidCard" android:screenOrientation="1">
+</activity>
+<activity android:name="com.chinaums.qmf3g.activity.homepage.ActivityParkCardPayResult" android:screenOrientation="1">
+</activity>
+<activity android:name="com.chinaums.qmf3g.activity.functions.ActivityForWebView" android:screenOrientation="1">
+</activity>
+<provider android:authorities="@7F0901DF" android:exported="false" android:grantUriPermissions="true" android:name="android.support.v4.content.FileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F070001">
+</meta-data>
+</provider>
+<activity android:name="com.chinaums.qmf3g.activity.balance.ActivityAuthentication" android:screenOrientation="1">
+</activity>
+<activity android:name="com.chinaums.qmf3g.activity.balance.ActivityTransferConfirmNew" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000010" android:exported="false" android:name="com.chinaums.qmf3g.activity.balance.ActivityTransferResult" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:name="com.chinaums.umsswipe.demo.HomeActivity" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:name="com.chinaums.umsswipe.demo.ApiFunctionActivity" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:name="com.chinaums.umsswipe.demo.McrConsumeActivity" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:name="com.chinaums.umsswipe.demo.McrCancelActivity" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:name="com.chinaums.umsswipe.demo.McrBalanceQueryActivity" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:name="com.chinaums.umsswipe.demo.McrReversalActivity" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:name="com.chinaums.umsswipe.demo.ICConsumeActivity" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:name="com.chinaums.umsswipe.demo.ICCancelActivity" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:name="com.chinaums.umsswipe.demo.ICBalanceQueryActivity" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:name="com.chinaums.umsswipe.demo.ICReversalActivity" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:name="com.chinaums.umsswipe.demo.APDUActivity" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:configChanges="0x000000A0" android:label="@7F09058B" android:name="com.chinaums.umsswipe.demo.bluetooth.DeviceListActivity" android:screenOrientation="1" android:theme="@7F0B00E3">
+</activity>
+<activity android:label="@7F090627" android:name="com.chinaums.umsswipe.demo.BalanceQueryActivity">
+</activity>
+<activity android:label="@7F090629" android:name="com.chinaums.umsswipe.demo.GetPANActivity">
+</activity>
+<activity android:label="@7F090620" android:name="com.chinaums.umsswipe.demo.ICConsumeOfflineActivity">
+</activity>
+<activity android:label="@7F090621" android:name="com.chinaums.umsswipe.demo.ICElectricBalanceInqueryActivity">
+</activity>
+<activity android:label="@7F090623" android:name="com.chinaums.umsswipe.demo.ICTransactionOfflineActivity">
+</activity>
+<activity android:label="@7F090622" android:name="com.chinaums.umsswipe.demo.ICTransactionDetailActivity">
+</activity>
+<service android:enabled="true" android:name="com.chinaums.dynamic.download.service.ResourceMonitorService">
+</service>
+<service android:enabled="true" android:name="com.chinaums.dynamic.download.service.ResourceRefreshService">
+</service>
+<activity android:configChanges="0x000000A0" android:label="@7F090077" android:name="com.chinaums.opensdk.activity.LoginActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.chinaums.opensdk.activity.MyApplicationActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.chinaums.opensdk.activity.GuideActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.chinaums.yesrunnerPlugin.activity.WelcomeActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.chinaums.yesrunnerPlugin.activity.OrderDetailsActivity" android:screenOrientation="1" android:theme="@7F0B0062">
+</activity>
+<activity android:name="com.chinaums.yesrunnerPlugin.activity.QueryActivity" android:screenOrientation="1" android:theme="@7F0B0062" android:windowSoftInputMode="0x00000014">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.chinaums.yesrunnerPlugin.activity.MipcaActivityCapture" android:screenOrientation="1" android:theme="@7F0B0062" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.chinaums.yesrunnerPlugin.activity.QueryExpressCompanyActivity" android:screenOrientation="1" android:theme="@7F0B0062" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.chinaums.yesrunnerPlugin.activity.WaybillActivity" android:screenOrientation="1" android:theme="@7F0B0062" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.chinaums.yesrunnerPlugin.activity.WaybillDateilsActivity" android:screenOrientation="1" android:theme="@7F0B0062" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.chinaums.yesrunnerPlugin.activity.AddressActivity" android:screenOrientation="1" android:theme="@7F0B0062">
+</activity>
+<activity android:name="com.chinaums.yesrunnerPlugin.activity.AddToAddressActivity" android:screenOrientation="1" android:theme="@7F0B0062">
+</activity>
+<activity android:name="com.chinaums.yesrunnerPlugin.activity.RemakeActivity" android:screenOrientation="1" android:theme="@7F0B0062">
+</activity>
+<activity android:name="com.chinaums.yesrunnerPlugin.activity.SendActivity" android:screenOrientation="1" android:theme="@7F0B0062">
+</activity>
+<activity android:name="com.chinaums.yesrunnerPlugin.activity.PurchaseOrderPluginActivity" android:screenOrientation="1" android:theme="@7F0B0062">
+</activity>
+<activity android:name="com.chinaums.yesrunnerPlugin.activity.CommentActivity" android:screenOrientation="1" android:theme="@7F0B0062">
+</activity>
+<activity android:name="com.chinaums.yesrunnerPlugin.activity.ExpressToolsActivity" android:screenOrientation="1" android:theme="@7F0B0062">
+</activity>
+<activity android:name="com.chinaums.yesrunnerPlugin.activity.ExpressCompanyDetailsActivity" android:screenOrientation="1" android:theme="@7F0B0062">
+</activity>
+<activity android:name="com.chinaums.yesrunnerPlugin.activity.LogisticsNoticeActivity" android:screenOrientation="1" android:theme="@7F0B0062">
+</activity>
+<activity android:name="com.chinaums.yesrunnerPlugin.activity.OfficialWebsiteActivity" android:screenOrientation="1" android:theme="@7F0B0062">
+</activity>
+<activity android:name="com.chinaums.yesrunnerPlugin.activity.ServiceCommentActivity" android:screenOrientation="1" android:theme="@7F0B0062">
+</activity>
+<activity android:name="com.chinaums.yesrunnerPlugin.activity.ClauseActivity" android:screenOrientation="1" android:theme="@7F0B0062">
+</activity>
+<activity android:name="com.chinaums.yesrunnerPlugin.activity.ConfirmOrderActivity" android:screenOrientation="1" android:theme="@7F0B0062">
+</activity>
+<activity android:name="com.chinaums.yesrunnerPlugin.activity.GoodsTypeActivity" android:screenOrientation="1" android:theme="@7F0B0062">
+</activity>
+<activity android:name="com.chinaums.yesrunnerPlugin.activity.LeavingMessageActivity" android:screenOrientation="1" android:theme="@7F0B0062">
+</activity>
+<activity android:name="com.chinaums.yesrunnerPlugin.activity.LogisticsActivity" android:screenOrientation="1" android:theme="@7F0B0062">
+</activity>
+<activity android:name="com.chinaums.yesrunnerPlugin.activity.NotAvailableActivity" android:screenOrientation="1" android:theme="@7F0B0062">
+</activity>
+<activity android:exported="true" android:launchMode="1" android:name="com.chinaums.yesrunnerPlugin.wxapi.WXEntryActivity" android:screenOrientation="1">
+</activity>
+<receiver android:name="com.chinaums.yesrunnerPlugin.receiver.WXShareReceiver" android:permission="com.tencent.mm.plugin.permission.SEND">
+<intent-filter>
+<action android:name="com.tencent.mm.plugin.openapi.Intent.ACTION_REFRESH_WXAPP">
+</action>
+</intent-filter>
+</receiver>
+<activity android:name="com.chinaums.yesrunnerPlugin.activity.ConditionQueryActivity">
+</activity>
+<activity android:name="com.chinaums.yesrunnerPlugin.activity.ComplaintProgressActivity">
+</activity>
+<activity android:name="com.chinaums.yesrunnerPlugin.activity.ComplaintActivity">
+</activity>
+<activity android:name="com.chinaums.yesrunnerPlugin.activity.ClauseNewActivity">
+</activity>
+<activity android:name="com.chinaums.pppay.HomeActivity" android:screenOrientation="1" android:theme="@android:01030009">
+</activity>
+<activity android:name="com.chinaums.pppay.DevicesActivity" android:screenOrientation="1" android:theme="@android:01030009">
+</activity>
+<activity android:name="com.chinaums.pppay.DisplayViewPayActivity" android:screenOrientation="1" android:theme="@android:01030009">
+</activity>
+<activity android:name="com.chinaums.pppay.IdentityVerifyActivity" android:screenOrientation="1" android:theme="@android:01030009">
+</activity>
+<activity android:name="com.chinaums.pppay.SelectBankCardActivity" android:screenOrientation="1" android:theme="@android:01030009">
+</activity>
+<activity android:name="com.chinaums.pppay.AddCardActivity" android:screenOrientation="1" android:theme="@android:01030009">
+</activity>
+<activity android:name="com.chinaums.pppay.SupportCardActivity" android:screenOrientation="1" android:theme="@android:01030009">
+</activity>
+<activity android:name="com.chinaums.pppay.InputCardInfoActivity" android:screenOrientation="1" android:theme="@android:01030009">
+</activity>
+<activity android:name="com.chinaums.pppay.VerifySmsCodeActivity" android:screenOrientation="1" android:theme="@android:01030009">
+</activity>
+<activity android:name="com.chinaums.pppay.SetPasswordActivity" android:screenOrientation="1" android:theme="@android:01030009">
+</activity>
+<activity android:name="com.chinaums.pppay.HelpActivity" android:screenOrientation="1" android:theme="@android:01030009">
+</activity>
+<activity android:name="com.chinaums.pppay.WebViewActivity" android:screenOrientation="1" android:theme="@android:01030009">
+</activity>
+<activity android:name="com.chinaums.pppay.ModifyPayPwdActivity" android:screenOrientation="1" android:theme="@android:01030009">
+</activity>
+<activity android:name="com.chinaums.pppay.PaySettingActivity" android:screenOrientation="1" android:theme="@android:01030009">
+</activity>
+<activity android:name="com.chinaums.pppay.PayHelpActivity" android:screenOrientation="1" android:theme="@android:01030009">
+</activity>
+<activity android:name="com.chinaums.pppay.MicroFreePwdAvtivity" android:screenOrientation="1" android:theme="@android:01030009">
+</activity>
+<activity android:name="com.chinaums.pppay.DialogInputPwdActivity" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<activity android:name="com.chinaums.pppay.SelectCouponActivity" android:screenOrientation="1" android:theme="@android:01030009">
+</activity>
+<activity android:configChanges="0x00000080" android:launchMode="1" android:name="com.sa.isecurity.plugin.SAKbdActivity" android:theme="@android:0103000F">
+</activity>
+<activity android:name="com.chinaums.pppay.PagePayActivity" android:screenOrientation="1" android:theme="@android:01030009">
+</activity>
+<activity android:name="com.chinaums.pppay.DialogPayActivity" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<activity android:name="com.chinaums.pppay.SeedDueIdentifyActivity" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<activity android:name="com.chinaums.pppay.ActivityNFCPay" android:screenOrientation="1" android:theme="@android:01030009">
+</activity>
+<activity android:exported="false" android:name="com.chinaums.pppay.PagePayNfcReceiveActivity" android:screenOrientation="1" android:theme="@android:01030009">
+<intent-filter>
+<action android:name="android.nfc.action.NDEF_DISCOVERED">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:mimeType="application/vnd.com.quanminfu.chinaums.beam">
+</data>
+</intent-filter>
+</activity>
+<service android:exported="true" android:name="com.chinaums.pppay.service.CardService" android:permission="android.permission.BIND_NFC_SERVICE">
+<intent-filter>
+<action android:name="android.nfc.cardemulation.action.HOST_APDU_SERVICE">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+<meta-data android:name="android.nfc.cardemulation.host_apdu_service" android:resource="@7F070000">
+</meta-data>
+</service>
+<activity android:name="com.chinaums.pppay.quickpay.DialogQuickPayActivity" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<activity android:name="com.chinaums.pppay.quickpay.ScanCodePayWebViewActivity" android:screenOrientation="1" android:theme="@android:01030009">
+</activity>
+<activity android:name="com.chinaums.pppay.quickpay.ScanCodePayActivity" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<service android:exported="true" android:name="com.chinaums.pppay.quickpay.service.QuickPayService">
+<intent-filter>
+<action android:name="com.chinaums.pppay.quickpay.service.IUmsQuickPayService">
+</action>
+</intent-filter>
+</service>
+<service android:exported="false" android:name="com.chinaums.pppay.service.DownloadService">
+<intent-filter>
+<action android:name="com.chinaums.pppay.service.DownloadServiceAction">
+</action>
+</intent-filter>
+</service>
+<activity android:label="@7F090625" android:name="com.chinaums.pppay.ActivityPayResult">
+</activity>
+<activity android:name="com.chinaums.pppay.ActivityInputPayPassword" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<activity android:name="com.chinaums.pppay.ActivitySelectMicroFreeAmount">
+</activity>
+<activity android:name="com.chinaums.pppay.ActivitySelectCoupon">
+</activity>
+<activity android:name="com.chinaums.pppay.quickpay.QuickPayInputPasswordActivity" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x00000080" android:label="@7F090077" android:launchMode="1" android:name="com.chinaums.securitykeypad.SecurityKeypadActivity" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x00000080" android:name="com.chinaums.pppay.ActivityCouponDisplay" android:theme="@android:01030009">
+</activity>
+<activity android:configChanges="0x00000080" android:name="com.chinaums.pppay.ActivityCouponDisable" android:theme="@android:01030009">
+</activity>
+<activity android:name="com.chinaums.pppay.ActivitySelectInstall" android:screenOrientation="1" android:theme="@android:01030009">
+</activity>
+<activity android:name="com.chinaums.pppay.ActivityPayCodeRiskVerifySmsCode">
+</activity>
+</application>
+</manifest>

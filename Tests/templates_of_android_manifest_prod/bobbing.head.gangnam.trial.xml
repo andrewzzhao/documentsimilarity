@@ -1,0 +1,68 @@
+<?xml version="1.0" ?><manifest android:installLocation="0" android:versionCode="14" android:versionName="1.4" package="bobbing.head.gangnam.trial" xmlns:android="http://schemas.android.com/apk/res/android">
+<application android:icon="@7F020008" android:label="@7F070007" android:theme="@android:0103000D">
+<activity android:configChanges="0x000000A0" android:label="@7F070007" android:name=".MainActivity" android:screenOrientation="1" android:theme="@android:01030006">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x00000FB0" android:name="com.google.ads.AdActivity">
+</activity>
+<activity android:label="@7F070007" android:name=".avtoanswer.AutoAnswerPreferenceActivity" android:theme="@android:01030006">
+</activity>
+<receiver android:enabled="true" android:name=".avtoanswer.AutoAnswerReceiver">
+<intent-filter>
+<action android:name="android.intent.action.PHONE_STATE">
+</action>
+</intent-filter>
+</receiver>
+<service android:enabled="true" android:name=".avtoanswer.AutoAnswerIntentService">
+</service>
+<service android:name=".avtoanswer.ContactTalk">
+</service>
+<service android:name=".BillingService">
+</service>
+<receiver android:name=".BillingReceiver">
+<intent-filter>
+<action android:name="com.android.vending.billing.IN_APP_NOTIFY">
+</action>
+<action android:name="com.android.vending.billing.RESPONSE_CODE">
+</action>
+<action android:name="com.android.vending.billing.PURCHASE_STATE_CHANGED">
+</action>
+</intent-filter>
+</receiver>
+</application>
+<uses-permission android:name="android.permission.SEND_SMS">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT">
+</uses-permission>
+<uses-permission android:name="com.android.launcher.permission.UNINSTALL_SHORTCUT">
+</uses-permission>
+<uses-permission android:name="android.permission.BLUETOOTH">
+</uses-permission>
+<uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_CONTACTS">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-permission android:name="com.android.vending.BILLING">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-sdk android:minSdkVersion="7" android:targetSdkVersion="17">
+</uses-sdk>
+</manifest>

@@ -1,0 +1,1034 @@
+<?xml version="1.0" ?><manifest android:versionCode="1" android:versionName="1.0" package="cn.funtalk.fykang" platformBuildVersionCode="23" platformBuildVersionName="6.0-2704002" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="15" android:targetSdkVersion="19">
+</uses-sdk>
+<supports-screens android:anyDensity="true" android:largeScreens="true" android:normalScreens="true" android:resizeable="true" android:smallScreens="true">
+</supports-screens>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-feature android:name="android.hardware.sensor.accelerometer">
+</uses-feature>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.BLUETOOTH">
+</uses-permission>
+<uses-permission android:name="android.permission.BLUETOOTH_ADMIN">
+</uses-permission>
+<uses-permission android:name="android.permission.USE_CREDENTIALS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-permission android:name="android.permission.FLASHLIGHT">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERACT_ACROSS_USERS_FULL">
+</uses-permission>
+<permission android:name="cn.funtalk.fykang.permission.JPUSH_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<permission android:name="cn.funtalk.fykang.permission.MIPUSH_RECEIVE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="cn.funtalk.fykang.permission.MIPUSH_RECEIVE">
+</uses-permission>
+<uses-permission android:name="cn.funtalk.fykang.permission.JPUSH_MESSAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_USER_PRESENT">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_UPDATES">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.BAIDU_LOCATION_SERVICE">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-permission android:name="android.permission.RECORD_AUDIO">
+</uses-permission>
+<uses-feature android:name="android.hardware.camera">
+</uses-feature>
+<uses-feature android:name="android.hardware.camera.autofocus">
+</uses-feature>
+<uses-feature android:name="android.hardware.bluetooth_le" android:required="true">
+</uses-feature>
+<uses-permission android:name="android.permission.WRITE_CALENDAR">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION">
+</uses-permission>
+<application android:allowBackup="true" android:debuggable="true" android:icon="@7F02023F" android:label="@7F080044" android:name="cn.funtalk.fykang.AppContext" android:persistent="true">
+<meta-data android:name="com.huawei.hms.client.appid" android:value="10183691">
+</meta-data>
+<provider android:authorities="cn.funtalk.fykang.hms.update.provider" android:exported="false" android:grantUriPermissions="true" android:name="com.huawei.hms.update.provider.UpdateProvider">
+</provider>
+<receiver android:name="cn.funtalk.fykang.receiver.HuaWeiPushReceiver">
+<intent-filter>
+<action android:name="com.huawei.android.push.intent.REGISTRATION">
+</action>
+<action android:name="com.huawei.android.push.intent.RECEIVE">
+</action>
+<action android:name="com.huawei.android.push.intent.CLICK">
+</action>
+<action android:name="com.huawei.intent.action.PUSH_STATE">
+</action>
+</intent-filter>
+<meta-data android:name="CS_cloud_ablitity" android:value="@7F080092">
+</meta-data>
+</receiver>
+<receiver android:name="com.huawei.hms.support.api.push.PushEventReceiver">
+<intent-filter>
+<action android:name="com.huawei.intent.action.PUSH">
+</action>
+</intent-filter>
+</receiver>
+<meta-data android:name="UMENG_APPKEY" android:value="58fef73a7666130fe4001e45">
+</meta-data>
+<meta-data android:name="UMENG_CHANNEL" android:value="fyk-001">
+</meta-data>
+<meta-data android:name="APK_BUILD" android:value="9">
+</meta-data>
+<meta-data android:name="37mhealth_app_key" android:value="59f07e0593e3b44d3eaa361d314249a7">
+</meta-data>
+<meta-data android:name="37mhealth_app_secret" android:value="6d8102c6dcc3dba8fe325dcefdf9d5e0">
+</meta-data>
+<service android:enabled="true" android:exported="false" android:name="cn.jpush.android.service.PushService" android:process=":remotemiao">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.REGISTER">
+</action>
+<action android:name="cn.jpush.android.intent.REPORT">
+</action>
+<action android:name="cn.jpush.android.intent.PushService">
+</action>
+<action android:name="cn.jpush.android.intent.PUSH_TIME">
+</action>
+</intent-filter>
+</service>
+<receiver android:enabled="true" android:name="cn.jpush.android.service.PushReceiver">
+<intent-filter android:priority="1000">
+<action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY">
+</action>
+<category android:name="cn.funtalk.fykang">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.USER_PRESENT">
+</action>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_ADDED">
+</action>
+<action android:name="android.intent.action.PACKAGE_REMOVED">
+</action>
+<data android:scheme="package">
+</data>
+</intent-filter>
+</receiver>
+<activity android:configChanges="0x000004A0" android:name="cn.jpush.android.ui.PushActivity" android:screenOrientation="1" android:theme="@android:01030010">
+<intent-filter>
+<action android:name="cn.jpush.android.ui.PushActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="cn.funtalk.fykang">
+</category>
+</intent-filter>
+</activity>
+<service android:enabled="true" android:exported="false" android:name="cn.funtalk.fykang.ui.sports.AgioBLESrevice">
+</service>
+<service android:enabled="true" android:exported="false" android:name="cn.jpush.android.service.DownloadService">
+</service>
+<receiver android:name="cn.jpush.android.service.AlarmReceiver">
+</receiver>
+<meta-data android:name="JPUSH_CHANNEL" android:value="developer-default">
+</meta-data>
+<meta-data android:name="JPUSH_APPKEY" android:value="ab47d25afedace29205d9a09">
+</meta-data>
+<activity android:configChanges="0x000004A0" android:name="cn.funtalk.fykang.ui.AppStartActivity" android:screenOrientation="1" android:theme="@7F0B0094">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="miaofyk">
+</data>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="cn.funtalk.fykang.ui.HomePage" android:screenOrientation="1" android:theme="@7F0B0124">
+<intent-filter>
+<action android:name="jpush.testAction">
+</action>
+<category android:name="jpush.testCategory">
+</category>
+<action android:name="android.intent.action.SEND">
+</action>
+<data android:mimeType="image/*">
+</data>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="cn.funtalk.fykang.ui.AppMain" android:screenOrientation="1" android:theme="@7F0B0124">
+<intent-filter>
+<action android:name="jpush.testAction">
+</action>
+<category android:name="jpush.testCategory">
+</category>
+<action android:name="android.intent.action.SEND">
+</action>
+<data android:mimeType="image/*">
+</data>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004E0" android:exported="false" android:name="com.alipay.sdk.app.H5PayActivity" android:screenOrientation="3" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="cn.funtalk.fykang.ui.devicebind.WebViewBindDeviceActivity" android:screenOrientation="1" android:theme="@7F0B0124">
+</activity>
+<activity android:configChanges="0x000004A0" android:exported="true" android:label="@7F080044" android:name="cn.funtalk.fykang.ui.SettingsMsg" android:screenOrientation="1" android:theme="@7F0B0124">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="cn.funtalk.fykang.ui.AboutMiaoActivity" android:screenOrientation="1" android:theme="@7F0B0124">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="cn.funtalk.fykang.ui.feedback.HelpFeedbackActivity" android:screenOrientation="1" android:theme="@7F0B0124">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="cn.funtalk.fykang.ui.feedback.FeedBackActivity" android:screenOrientation="1" android:theme="@7F0B0124">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="cn.funtalk.fykang.ui.feedback.CommonProblemActivity" android:screenOrientation="1" android:theme="@7F0B0124">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="cn.funtalk.fykang.ui.mission_new.MissionCommonActivity" android:screenOrientation="1" android:theme="@7F0B0124">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="cn.funtalk.fykang.ui.mission_new.MissionRecordActivity" android:screenOrientation="1" android:theme="@7F0B0124">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="cn.funtalk.fykang.ui.sleeping.SleepingMoreActivity" android:screenOrientation="1" android:theme="@7F0B0124">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="cn.funtalk.fykang.ui.sleeping.SleepStatisticsActivity" android:screenOrientation="1" android:theme="@7F0B0124">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="cn.funtalk.fykang.ui.sleeping.SleepingMainActivity" android:screenOrientation="1" android:theme="@7F0B0124">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="cn.funtalk.fykang.ui.sleeping.SleepingInputActivity" android:screenOrientation="1" android:theme="@7F0B0124">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="cn.funtalk.fykang.ui.sleeping.ActSleepReport" android:screenOrientation="1" android:theme="@7F0B0124">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="cn.funtalk.fykang.ui.sleeping.ActSleepDataList" android:screenOrientation="1" android:theme="@7F0B0124">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="cn.funtalk.fykang.ui.healthmanage.DataSourceAct" android:screenOrientation="1" android:theme="@7F0B0124">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="cn.funtalk.fykang.ui.sports.ActSportMore" android:screenOrientation="1" android:theme="@7F0B0124">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="cn.funtalk.fykang.ui.sports.SportStatisticsActivity" android:screenOrientation="1" android:theme="@7F0B0124">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="cn.funtalk.fykang.ui.sports.ActSportRank" android:screenOrientation="1" android:theme="@7F0B0124">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="cn.funtalk.fykang.ui.sports.ActRanking" android:screenOrientation="1" android:theme="@7F0B0124">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="cn.funtalk.fykang.ui.sports.ActSportReport" android:screenOrientation="1" android:theme="@7F0B0124">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="cn.funtalk.fykang.ui.sports.ActSportNew" android:screenOrientation="1" android:theme="@7F0B0124">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="cn.funtalk.fykang.ui.sports.ActSportDataList" android:screenOrientation="1" android:theme="@7F0B0124">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="cn.funtalk.fykang.ui.sports.ActSportInput" android:screenOrientation="1" android:theme="@7F0B0124">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="cn.funtalk.fykang.ui.sports.ActSportHistory" android:screenOrientation="1" android:theme="@7F0B0124">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="cn.funtalk.fykang.ui.sports.ActSleepHistory" android:screenOrientation="1" android:theme="@7F0B0124">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="cn.funtalk.fykang.ui.mission.ActMissionRank" android:screenOrientation="1" android:theme="@7F0B0124">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="cn.funtalk.fykang.ui.mission.MissionFinishActivity" android:screenOrientation="1" android:theme="@7F0B00CD">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="cn.funtalk.fykang.ui.mission_new.ActMissionPictureEdit" android:screenOrientation="1" android:theme="@7F0B0124">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="cn.funtalk.fykang.ui.mission.GetRewardActivity" android:screenOrientation="1" android:theme="@7F0B00CD">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="cn.funtalk.fykang.ui.devicebind.ActDeviceType" android:screenOrientation="1" android:theme="@7F0B0124">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="cn.funtalk.fykang.ui.mission.MTrendChartAct" android:screenOrientation="1" android:theme="@7F0B0124">
+</activity>
+<uses-permission android:name="android.permission.BLUETOOTH">
+</uses-permission>
+<uses-permission android:name="android.permission.BLUETOOTH_ADMIN">
+</uses-permission>
+<uses-permission android:name="android.permission.BLUETOOTH_PRIVILEGED">
+</uses-permission>
+<activity android:configChanges="0x000004A0" android:name="cn.funtalk.fykang.ui.bloodpressure.ActBPMain" android:screenOrientation="1" android:theme="@7F0B0124">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="cn.funtalk.fykang.ui.bloodpressure.ActBPGuideList" android:screenOrientation="1" android:theme="@7F0B0124">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="cn.funtalk.fykang.ui.bloodpressure.ActBPHistry" android:screenOrientation="1" android:theme="@7F0B0124">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="cn.funtalk.fykang.ui.bloodpressure.ActBPHealthReport" android:screenOrientation="1" android:theme="@7F0B0124">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="cn.funtalk.fykang.ui.bloodpressure.ActBPReport" android:screenOrientation="1" android:theme="@7F0B0124">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="cn.funtalk.fykang.ui.bloodpressure.ActBPReportList" android:screenOrientation="1" android:theme="@7F0B0124">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="cn.funtalk.fykang.ui.bloodpressure.ActInput" android:screenOrientation="1" android:theme="@7F0B0124">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="cn.funtalk.fykang.ui.bloodpressure.ActSimBinding" android:screenOrientation="1" android:theme="@7F0B0124">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="cn.funtalk.fykang.ui.bloodpressure.ActBPGuideDetail" android:screenOrientation="1" android:theme="@7F0B0124">
+</activity>
+<meta-data android:name="BaiduMobAd_STAT_ID" android:value="080b6520bd">
+</meta-data>
+<meta-data android:name="BaiduMobAd_CHANNEL" android:value="fyk-001">
+</meta-data>
+<meta-data android:name="com.baidu.lbsapi.API_KEY" android:value="yrrcTe32ZYLQhfXpkvl3DbYs">
+</meta-data>
+<meta-data android:name="BaiduMobAd_ONLY_WIFI" android:value="false">
+</meta-data>
+<meta-data android:name="BaiduMobAd_CELL_LOCATION" android:value="true">
+</meta-data>
+<meta-data android:name="BaiduMobAd_GPS_LOCATION" android:value="true">
+</meta-data>
+<meta-data android:name="BaiduMobAd_WIFI_LOCATION" android:value="true">
+</meta-data>
+<service android:enabled="true" android:name="com.baidu.location.f" android:process=":remotemiao">
+</service>
+<activity android:configChanges="0x000004A0" android:name="cn.funtalk.fykang.ui.careold.OldMainActivity" android:screenOrientation="1" android:theme="@7F0B0124">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="cn.funtalk.fykang.ui.careold.FamilyItemActivity" android:screenOrientation="1" android:theme="@7F0B0124">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="cn.funtalk.fykang.ui.careold.FamilyHealthReportActivity" android:screenOrientation="1" android:theme="@7F0B0124">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="cn.funtalk.fykang.ui.careold.FamilyAddpersonActivity" android:screenOrientation="1" android:theme="@7F0B0124">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="cn.funtalk.fykang.ui.careold.InviteFriendActivity" android:screenOrientation="1" android:theme="@7F0B0124">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="cn.funtalk.fykang.ui.careold.FamilyAlarmListActivity" android:screenOrientation="1" android:theme="@7F0B0124">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="cn.funtalk.fykang.ui.careold.FamilyAffectionRemindActivity" android:screenOrientation="1" android:theme="@7F0B0124">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="cn.funtalk.fykang.ui.careold.FamilyAddAffectionActivity" android:screenOrientation="1" android:theme="@7F0B0124">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="cn.funtalk.fykang.ui.careold.FamilyEditAffectionActivity" android:screenOrientation="1" android:theme="@7F0B0124">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="cn.funtalk.fykang.ui.careold.FamilyHealthReportDateDetailActivity" android:screenOrientation="1" android:theme="@7F0B0124">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="cn.funtalk.fykang.ui.careold.FamilyHealthReportMounthDetailActivity" android:screenOrientation="1" android:theme="@7F0B0124">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="cn.funtalk.fykang.ui.careold.FamilyBehaviorDataActivity" android:screenOrientation="1" android:theme="@7F0B0124">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="cn.funtalk.fykang.ui.careold.GuanaibaoBonusAcitivity" android:screenOrientation="1" android:theme="@7F0B0124">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="cn.funtalk.fykang.ui.careold.BonusDetailActivity" android:screenOrientation="1" android:theme="@7F0B0124">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="cn.funtalk.fykang.ui.careold.ChangeBankCardAcitivity" android:screenOrientation="1" android:theme="@7F0B0124">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="cn.funtalk.fykang.ui.careold.BonusNoticeActivity" android:screenOrientation="1" android:theme="@7F0B0124">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="cn.funtalk.fykang.ui.careold.BindBankCardAcitivity" android:screenOrientation="1" android:theme="@7F0B0124">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="cn.funtalk.fykang.ui.careold.DeviceScanResultActivity" android:screenOrientation="1" android:theme="@7F0B0124">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="cn.funtalk.fykang.ui.careold.FamilyLocationInfoActivity" android:screenOrientation="1" android:theme="@7F0B0124">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="cn.funtalk.fykang.ui.doctorconsultation.TelConsultationActivity" android:screenOrientation="1" android:theme="@7F0B0124">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="cn.funtalk.fykang.ui.doctorconsultation.ChunyuDoctorActivity" android:screenOrientation="1" android:theme="@7F0B0124">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="cn.funtalk.fykang.ui.doctorconsultation.DoctorQuestionDetailActivity" android:screenOrientation="1" android:theme="@7F0B0124">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="cn.funtalk.fykang.ui.doctorconsultation.DoctorAppraiseActivity" android:screenOrientation="1" android:theme="@7F0B0124">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="cn.funtalk.fykang.ui.doctorconsultation.DoctorReportDetailActivity" android:screenOrientation="1" android:theme="@7F0B0124">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="cn.funtalk.fykang.ui.doctorconsultation.ImageShower" android:screenOrientation="1" android:theme="@7F0B0124">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="cn.funtalk.fykang.ui.doctorconsultation.ChunyuDoctorRenzheng" android:screenOrientation="1" android:theme="@7F0B0124">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="cn.funtalk.fykang.ui.AppAdPicActivity" android:screenOrientation="1" android:theme="@7F0B0124">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="cn.funtalk.fykang.ui.devicebind.DeviceClassifyActivity" android:screenOrientation="1" android:theme="@7F0B0124">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="cn.funtalk.fykang.ui.devicebind.DeviceClassifyNoBLEActivity" android:screenOrientation="1" android:theme="@7F0B0124">
+</activity>
+<receiver android:enabled="true" android:name="cn.funtalk.fykang.receiver.MessageReceiver">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.REGISTRATION">
+</action>
+<action android:name="cn.jpush.android.intent.UNREGISTRATION">
+</action>
+<action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED">
+</action>
+<action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED">
+</action>
+<action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED">
+</action>
+<action android:name="cn.jpush.android.intent.ACTION_RICHPUSH_CALLBACK">
+</action>
+<category android:name="cn.funtalk.fykang">
+</category>
+</intent-filter>
+</receiver>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="cn.funtalk.fykang.ui.child.ChildMainActivity" android:screenOrientation="1" android:theme="@7F0B0124">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="cn.funtalk.fykang.ui.child.ThermometerActivity" android:screenOrientation="1" android:theme="@7F0B0124">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="cn.funtalk.fykang.ui.child.TemperatureHistoryActivity" android:screenOrientation="1" android:theme="@7F0B0124">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="cn.funtalk.fykang.ui.registeringservice.RegisteringServiceActivity" android:screenOrientation="1" android:theme="@7F0B0124">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="cn.funtalk.fykang.ui.registeringservice.SelectCity" android:screenOrientation="1" android:theme="@7F0B0124">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="cn.funtalk.fykang.ui.registeringservice.RecommendHospital" android:theme="@7F0B0124">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="cn.funtalk.fykang.ui.registeringservice.Registering_Search" android:screenOrientation="1" android:theme="@7F0B0124">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="cn.funtalk.fykang.ui.registeringservice.SelectHospital" android:screenOrientation="1" android:theme="@7F0B0124">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="cn.funtalk.fykang.ui.registeringservice.SelectKeShi" android:screenOrientation="1" android:theme="@7F0B0124">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="cn.funtalk.fykang.ui.registeringservice.SelectSecondKeShi" android:screenOrientation="1" android:theme="@7F0B0124">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="cn.funtalk.fykang.ui.registeringservice.SelectDoctor" android:theme="@7F0B0124">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="cn.funtalk.fykang.ui.registeringservice.DoctorInformation" android:screenOrientation="1" android:theme="@7F0B0124">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="cn.funtalk.fykang.ui.registeringservice.HospitalDetails" android:screenOrientation="1" android:theme="@7F0B0124">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="cn.funtalk.fykang.ui.registeringservice.Search_More" android:screenOrientation="1" android:theme="@7F0B0124">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="cn.funtalk.fykang.ui.registeringservice.SelectTime" android:screenOrientation="1" android:theme="@7F0B0124">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="cn.funtalk.fykang.ui.registeringservice.ConfirmReservation" android:screenOrientation="1" android:theme="@7F0B0124">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="cn.funtalk.fykang.ui.registeringservice.ReservationSuccess" android:screenOrientation="1" android:theme="@7F0B0124">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="cn.funtalk.fykang.ui.registeringservice.AddIllPerson" android:screenOrientation="1" android:theme="@7F0B0124">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="cn.funtalk.fykang.ui.registeringservice.Certification" android:screenOrientation="1" android:theme="@7F0B0124">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="cn.funtalk.fykang.ui.slimming.ActSlimmingReport" android:screenOrientation="1" android:theme="@7F0B0124">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="cn.funtalk.fykang.ui.slimming.SlimmingAbout" android:screenOrientation="1" android:theme="@7F0B0124">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="cn.funtalk.fykang.ui.slimming.ActSlimmingMain" android:screenOrientation="1" android:theme="@7F0B0124">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="cn.funtalk.fykang.ui.slimming.ActSlimmingTarget" android:screenOrientation="1" android:theme="@7F0B0124">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="cn.funtalk.fykang.ui.slimming.ActSlimmingWeightAnalyse" android:screenOrientation="1" android:theme="@7F0B0128">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="cn.funtalk.fykang.ui.slimming.ActSlimmingMore" android:screenOrientation="1" android:theme="@7F0B0124">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="cn.funtalk.fykang.ui.slimming.ActSlimmingStatistics" android:screenOrientation="1" android:theme="@7F0B0124">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="cn.funtalk.fykang.ui.slimming.ActSlimmingModifyWeight" android:screenOrientation="1" android:theme="@7F0B0124">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="cn.funtalk.fykang.ui.slimming.ActSlimmingInputWeight" android:screenOrientation="1" android:theme="@7F0B0124">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="cn.funtalk.fykang.ui.slimming.SlimmingFood" android:screenOrientation="1" android:theme="@7F0B0124">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="cn.funtalk.fykang.ui.slimming.SlimmingFoodClass" android:screenOrientation="1" android:theme="@7F0B0124">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="cn.funtalk.fykang.ui.slimming.SlimmingFoodDetail" android:screenOrientation="1" android:theme="@7F0B0124">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="cn.funtalk.fykang.ui.slimming.SlimmingHistory" android:screenOrientation="1" android:theme="@7F0B0124">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="cn.funtalk.fykang.ui.slimming.SlimmingInputDataActivity" android:screenOrientation="1" android:theme="@7F0B0124">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="cn.funtalk.fykang.ui.slimming.SlimmingPlan" android:screenOrientation="1" android:theme="@7F0B0124">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="cn.funtalk.fykang.ui.slimming.SlimmingRanking" android:screenOrientation="1" android:theme="@7F0B0124">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="cn.funtalk.fykang.ui.slimming.ActSlimmingDataList" android:screenOrientation="1" android:theme="@7F0B0124">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="cn.funtalk.fykang.ui.bloodglucose.BloodGlucoseMainFgActivity" android:screenOrientation="1" android:theme="@7F0B0124">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="cn.funtalk.fykang.ui.bloodglucose.BloodGlucoseHistoryActivity" android:screenOrientation="1" android:theme="@7F0B0124">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="cn.funtalk.fykang.ui.devicebind.DeviceScanCodeActivity" android:screenOrientation="1" android:theme="@7F0B0124">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="cn.funtalk.fykang.ui.bloodglucose.BloodGlucoseRecordAddActivity" android:screenOrientation="1" android:theme="@7F0B0124" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="cn.funtalk.fykang.ui.bloodglucose.BloodGlucoseReportActivity" android:screenOrientation="1" android:theme="@7F0B0124">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="cn.funtalk.fykang.ui.devicebind.DeviceInputSNActivity" android:screenOrientation="1" android:theme="@7F0B0124">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="cn.funtalk.fykang.ui.healthmanage.HealthManageActivity" android:screenOrientation="1" android:theme="@7F0B0124">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="cn.funtalk.fykang.ui.healthmanage.DataGuidActivity" android:screenOrientation="1" android:theme="@android:0103000F">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="cn.funtalk.fykang.ui.ipartment.Ipartment" android:screenOrientation="1" android:theme="@7F0B0124">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="cn.funtalk.fykang.ui.ipartment.InviteFriend" android:screenOrientation="1" android:theme="@7F0B0124">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="cn.funtalk.fykang.ui.message.MessageActivity" android:screenOrientation="1" android:theme="@7F0B0124">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="cn.funtalk.fykang.ui.message.SysmsgDetailsActivity" android:screenOrientation="1" android:theme="@7F0B0124">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="cn.funtalk.fykang.ui.mission.TestActivity" android:screenOrientation="1" android:theme="@7F0B0124">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="cn.funtalk.fykang.ui.mission_new.MissionMainActivity" android:screenOrientation="1" android:theme="@7F0B0124">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="cn.funtalk.fykang.ui.mission_new.MissionSingleSelection" android:screenOrientation="1" android:theme="@7F0B0124">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="cn.funtalk.fykang.ui.mission_new.MissionListenMusic" android:screenOrientation="1" android:theme="@7F0B0124">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="cn.funtalk.fykang.ui.mission_new.MissionMProgress" android:screenOrientation="1" android:theme="@7F0B0124">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="cn.funtalk.fykang.ui.mission_new.MissionMLife" android:screenOrientation="1" android:theme="@7F0B0124">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="cn.funtalk.fykang.ui.mission_new.MissionMultiSelectionActivity" android:screenOrientation="1" android:theme="@7F0B0124">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="cn.funtalk.fykang.ui.miaomoment.MMActSearch" android:screenOrientation="1" android:theme="@7F0B0124">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="cn.funtalk.fykang.ui.miaomoment.MMActResult" android:screenOrientation="1" android:theme="@7F0B0124">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="cn.funtalk.fykang.ui.DebugActivity" android:screenOrientation="1" android:theme="@7F0B0124">
+</activity>
+<activity android:configChanges="0x000004A0" android:hardwareAccelerated="true" android:name="cn.funtalk.fykang.ui.DebugWebViewActivity" android:screenOrientation="1" android:theme="@7F0B0124">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="cn.funtalk.fykang.ui.DebugScanActivity" android:screenOrientation="1" android:theme="@7F0B0124">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="cn.funtalk.fykang.ui.h5.ScanReportActivity" android:screenOrientation="1" android:theme="@7F0B0124">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="cn.funtalk.fykang.ui.MGalleryFullActivity" android:screenOrientation="1">
+</activity>
+<service android:enabled="true" android:exported="true" android:name="cn.funtalk.fykang.ui.child.BluetoothLeService">
+</service>
+<activity android:configChanges="0x000004A0" android:name="cn.funtalk.fykang.ui.child.TemperatureHistoryActivity2" android:screenOrientation="1" android:theme="@7F0B0124">
+</activity>
+<service android:enabled="true" android:exported="true" android:name="cn.funtalk.fykang.ui.child.BleService">
+</service>
+<activity android:configChanges="0x000004A0" android:name="cn.funtalk.fykang.ui.child.HighTempActivity" android:screenOrientation="1" android:theme="@7F0B0124">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="cn.funtalk.fykang.ui.child.HighTempDialogActivity" android:screenOrientation="1" android:theme="@7F0B0122">
+</activity>
+<service android:exported="false" android:name="cmb.pb.cmbsafe.CmbService">
+</service>
+<activity android:name="cmb.pb.ui.PBKeyboardActivity" android:theme="@7F0B00C7">
+</activity>
+<activity android:configChanges="0x000004A0" android:exported="true" android:hardwareAccelerated="false" android:name="cn.funtalk.fykang.ui.h5.ZhaoHangPayActivity" android:theme="@android:01030007">
+</activity>
+<service android:name="cn.funtalk.fykang.service.CommonService">
+</service>
+<receiver android:name="cn.funtalk.fykang.receiver.HighTemperatureBroadcast">
+<intent-filter>
+<action android:name="cn.funtlk.miao.action.ble.TEMPERATURE">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name="cn.funtalk.fykang.receiver.CommonReceiver">
+<intent-filter>
+<action android:name="cn.funtalk.fykang.share.action">
+</action>
+</intent-filter>
+</receiver>
+<service android:name="cn.funtalk.fykang.util.guard.guardService" android:priority="1000" android:process=":guardCore">
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+<action android:name="android.intent.action.DATE_CHANGED">
+</action>
+<action android:name="android.intent.action.MEDIA_MOUNTED">
+</action>
+<action android:name="android.intent.action.USER_PRESENT">
+</action>
+<action android:name="android.intent.action.ACTION_TIME_TICK">
+</action>
+<action android:name="android.intent.action.ACTION_POWER_CONNECTED">
+</action>
+<action android:name="android.intent.action.ACTION_POWER_DISCONNECTED">
+</action>
+</intent-filter>
+</service>
+<receiver android:name="cn.funtalk.fykang.util.guard.guardReceiver" android:process=":guardCore">
+</receiver>
+<service android:name="cn.funtalk.fykang.util.guard.guardService2" android:process=":guardAssist">
+</service>
+<receiver android:name="cn.funtalk.fykang.util.guard.guardReceiver2" android:process=":guardAssist">
+</receiver>
+<service android:enabled="true" android:exported="true" android:name="cn.funtalk.fykang.service.MusicService">
+</service>
+<activity android:name="cn.funtalk.fykang.ui.mission_new.CustomCameraActivity" android:screenOrientation="1" android:theme="@7F0B0125">
+</activity>
+<activity android:name="cn.funtalk.fykang.ui.mission_new.MissionCustomCameraActivity" android:screenOrientation="1" android:theme="@7F0B0125">
+</activity>
+<activity android:name="cn.funtalk.fykang.ui.mission_new.ShareFellingCameraActivity" android:screenOrientation="1" android:theme="@7F0B0125">
+</activity>
+<activity android:name="cn.funtalk.fykang.ui.mission_new.MissionImageTextActivity" android:screenOrientation="1" android:theme="@7F0B0124">
+</activity>
+<activity android:name="cn.funtalk.fykang.ui.mission_new.MissionDetailPhoto">
+</activity>
+<service android:enabled="true" android:name="com.xiaomi.push.service.XMPushService" android:process=":pushservice">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.xiaomi.push.service.XMJobService" android:permission="android.permission.BIND_JOB_SERVICE" android:process=":pushservice">
+</service>
+<service android:enabled="true" android:exported="true" android:name="com.xiaomi.mipush.sdk.PushMessageHandler">
+</service>
+<service android:enabled="true" android:name="com.xiaomi.mipush.sdk.MessageHandleService">
+</service>
+<receiver android:exported="true" android:name="com.xiaomi.push.service.receivers.NetworkStatusReceiver">
+<intent-filter>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</receiver>
+<receiver android:exported="false" android:name="com.xiaomi.push.service.receivers.PingReceiver" android:process=":pushservice">
+<intent-filter>
+<action android:name="com.xiaomi.push.PING_TIMER">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:exported="true" android:name="cn.funtalk.fykang.receiver.XiaoMiPushReceiver">
+<intent-filter>
+<action android:name="com.xiaomi.mipush.RECEIVE_MESSAGE">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="com.xiaomi.mipush.MESSAGE_ARRIVED">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="com.xiaomi.mipush.ERROR">
+</action>
+</intent-filter>
+</receiver>
+<activity android:name="cn.funtalk.fykang.ui.miaomoment.NewsSearchActivity" android:screenOrientation="1" android:theme="@7F0B0124">
+</activity>
+<activity android:name="cn.funtalk.fykang.ui.mission_new.CountDownTaskActivity" android:screenOrientation="1" android:theme="@7F0B0119">
+</activity>
+<activity android:launchMode="2" android:name="com.umeng.qq.tencent.AuthActivity" android:noHistory="true">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="tencent1102366688">
+</data>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.umeng.qq.tencent.AssistActivity" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<receiver android:name="cn.funtalk.fykang.wxapi.AppRegister" android:permission="com.tencent.mm.plugin.permission.SEND">
+<intent-filter>
+<action android:name="com.tencent.mm.plugin.openapi.Intent.ACTION_REFRESH_WXAPP">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name="cn.funtalk.fykang.receiver.WXPayReceiver">
+<intent-filter>
+<action android:name="cn.funtalk.fykang.wxpay.action">
+</action>
+</intent-filter>
+</receiver>
+<activity android:configChanges="0x000004A0" android:exported="true" android:name="cn.funtalk.fykang.wxapi.WXEntryActivity" android:screenOrientation="1" android:theme="@android:01030011">
+</activity>
+<activity android:configChanges="0x000004A0" android:exported="true" android:launchMode="1" android:name="cn.funtalk.fykang.wxapi.WXPayEntryActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.funtalk.fykang.miaoplus.ui.DeviceExplainActivity" android:screenOrientation="1" android:theme="@7F0B010D">
+</activity>
+<activity android:name="cn.funtalk.fykang.miaoplus.ui.DeviceBindActivity" android:screenOrientation="1" android:theme="@7F0B010D">
+</activity>
+<activity android:name="cn.funtalk.fykang.miaoplus.ui.MiaoPlusMainActivity" android:screenOrientation="1" android:theme="@7F0B010D">
+</activity>
+<activity android:name="cn.funtalk.fykang.miaoplus.ui.MiaoPlusSearchActivity" android:screenOrientation="1" android:theme="@7F0B0124">
+</activity>
+<activity android:name="cn.funtalk.fykang.love.ui.LoveCenterMy">
+</activity>
+<provider android:authorities="cn.funtalk.fykang.manager.pluginmanager" android:exported="false" android:name="com.plugin.core.manager.PluginManagerProvider">
+</provider>
+<provider android:authorities="cn.funtalk.fykang.localservice" android:exported="false" android:name="com.plugin.core.localservice.LocalServiceBinder">
+</provider>
+<receiver android:exported="true" android:name="cn.funtalk.fykang.stub.PluginStubReceiver">
+<intent-filter>
+<action android:name="cn.funtalk.fykang.STUB_DEFAULT">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</receiver>
+<service android:name="cn.funtalk.fykang.stub.PluginStubService1">
+<intent-filter>
+<action android:name="cn.funtalk.fykang.STUB_DEFAULT">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</service>
+<service android:name="cn.funtalk.fykang.stub.PluginStubService2">
+<intent-filter>
+<action android:name="cn.funtalk.fykang.STUB_DEFAULT">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</service>
+<service android:name="cn.funtalk.fykang.stub.PluginStubService3">
+<intent-filter>
+<action android:name="cn.funtalk.fykang.STUB_DEFAULT">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</service>
+<service android:name="cn.funtalk.fykang.stub.PluginStubService4">
+<intent-filter>
+<action android:name="cn.funtalk.fykang.STUB_DEFAULT">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</service>
+<service android:name="cn.funtalk.fykang.stub.PluginStubService5">
+<intent-filter>
+<action android:name="cn.funtalk.fykang.STUB_DEFAULT">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</service>
+<service android:name="cn.funtalk.fykang.stub.PluginStubService6">
+<intent-filter>
+<action android:name="cn.funtalk.fykang.STUB_DEFAULT">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</service>
+<service android:name="cn.funtalk.fykang.stub.PluginStubService7">
+<intent-filter>
+<action android:name="cn.funtalk.fykang.STUB_DEFAULT">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</service>
+<service android:name="cn.funtalk.fykang.stub.PluginStubService8">
+<intent-filter>
+<action android:name="cn.funtalk.fykang.STUB_DEFAULT">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</service>
+<service android:name="cn.funtalk.fykang.stub.PluginStubService9">
+<intent-filter>
+<action android:name="cn.funtalk.fykang.STUB_DEFAULT">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</service>
+<service android:name="cn.funtalk.fykang.stub.PluginStubService10">
+<intent-filter>
+<action android:name="cn.funtalk.fykang.STUB_DEFAULT">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</service>
+<service android:name="cn.funtalk.fykang.stub.PluginStubService11">
+<intent-filter>
+<action android:name="cn.funtalk.fykang.STUB_DEFAULT">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</service>
+<service android:name="cn.funtalk.fykang.stub.PluginStubService12">
+<intent-filter>
+<action android:name="cn.funtalk.fykang.STUB_DEFAULT">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</service>
+<service android:name="cn.funtalk.fykang.stub.PluginStubService13">
+<intent-filter>
+<action android:name="cn.funtalk.fykang.STUB_DEFAULT">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</service>
+<service android:name="cn.funtalk.fykang.stub.PluginStubService14">
+<intent-filter>
+<action android:name="cn.funtalk.fykang.STUB_DEFAULT">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</service>
+<service android:name="cn.funtalk.fykang.stub.PluginStubService15">
+<intent-filter>
+<action android:name="cn.funtalk.fykang.STUB_DEFAULT">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</service>
+<activity android:exported="true" android:name="cn.funtalk.fykang.stub.PluginStubActivity0" android:theme="@android:01030010">
+<intent-filter>
+<action android:name="cn.funtalk.fykang.STUB_DEFAULT">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="true" android:launchMode="2" android:name="cn.funtalk.fykang.stub.PluginStubActivity1">
+<intent-filter>
+<action android:name="cn.funtalk.fykang.STUB_DEFAULT">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="true" android:launchMode="2" android:name="cn.funtalk.fykang.stub.PluginStubActivity2">
+<intent-filter>
+<action android:name="cn.funtalk.fykang.STUB_DEFAULT">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="true" android:launchMode="2" android:name="cn.funtalk.fykang.stub.PluginStubActivity3">
+<intent-filter>
+<action android:name="cn.funtalk.fykang.STUB_DEFAULT">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="true" android:launchMode="2" android:name="cn.funtalk.fykang.stub.PluginStubActivity4">
+<intent-filter>
+<action android:name="cn.funtalk.fykang.STUB_DEFAULT">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="true" android:launchMode="1" android:name="cn.funtalk.fykang.stub.PluginStubActivity5">
+<intent-filter>
+<action android:name="cn.funtalk.fykang.STUB_DEFAULT">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="true" android:launchMode="1" android:name="cn.funtalk.fykang.stub.PluginStubActivity6">
+<intent-filter>
+<action android:name="cn.funtalk.fykang.STUB_DEFAULT">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="true" android:launchMode="1" android:name="cn.funtalk.fykang.stub.PluginStubActivity7">
+<intent-filter>
+<action android:name="cn.funtalk.fykang.STUB_DEFAULT">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="true" android:launchMode="3" android:name="cn.funtalk.fykang.stub.PluginStubActivity8">
+<intent-filter>
+<action android:name="cn.funtalk.fykang.STUB_DEFAULT">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="true" android:launchMode="3" android:name="cn.funtalk.fykang.stub.PluginStubActivity9">
+<intent-filter>
+<action android:name="cn.funtalk.fykang.STUB_DEFAULT">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="true" android:launchMode="3" android:name="cn.funtalk.fykang.stub.PluginStubActivity10">
+<intent-filter>
+<action android:name="cn.funtalk.fykang.STUB_DEFAULT">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="true" android:name="cn.funtalk.fykang.stub.PluginStubActivity11" android:theme="@android:01030010">
+<intent-filter>
+<action android:name="cn.funtalk.fykang.STUB_DEFAULT">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="true" android:name="cn.funtalk.fykang.stub.PluginStubActivity12" android:theme="@android:01030010">
+<intent-filter>
+<action android:name="cn.funtalk.fykang.STUB_DEFAULT">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="true" android:name="cn.funtalk.fykang.stub.PluginStubActivity13" android:theme="@android:01030010">
+<intent-filter>
+<action android:name="cn.funtalk.fykang.STUB_DEFAULT">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="true" android:name="cn.funtalk.fykang.stub.PluginStubActivity14" android:theme="@android:01030010">
+<intent-filter>
+<action android:name="cn.funtalk.fykang.STUB_DEFAULT">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="true" android:name="cn.funtalk.fykang.stub.PluginStubActivity15" android:theme="@android:01030010">
+<intent-filter>
+<action android:name="cn.funtalk.fykang.STUB_DEFAULT">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="true" android:name="cn.funtalk.fykang.stub.PluginStubActivity16" android:theme="@android:01030010">
+<intent-filter>
+<action android:name="cn.funtalk.fykang.STUB_DEFAULT">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="true" android:name="cn.funtalk.fykang.stub.PluginStubActivity17" android:theme="@android:01030010">
+<intent-filter>
+<action android:name="cn.funtalk.fykang.STUB_DEFAULT">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="true" android:name="cn.funtalk.fykang.stub.PluginStubActivity18" android:theme="@android:01030010">
+<intent-filter>
+<action android:name="cn.funtalk.fykang.STUB_DEFAULT">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="true" android:name="cn.funtalk.fykang.stub.PluginStubActivity19" android:theme="@android:01030010">
+<intent-filter>
+<action android:name="cn.funtalk.fykang.STUB_DEFAULT">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:name="com.zcyy.ui.SelfDrugDirActivity" android:theme="@7F0B0092">
+</activity>
+<activity android:name="com.zcyy.ui.PersonalInfoActivity" android:screenOrientation="1" android:theme="@7F0B0092">
+</activity>
+<activity android:name="com.zcyy.ui.SelfDrugDetailActivity" android:screenOrientation="1" android:theme="@7F0B0092">
+</activity>
+<activity android:name="com.zcyy.ui.SelfDrugNewResultActivity" android:screenOrientation="1" android:theme="@7F0B0092">
+</activity>
+<activity android:name="com.zcyy.ui.ResultActivity" android:screenOrientation="1" android:theme="@7F0B0092">
+</activity>
+<activity android:name="com.zcyy.ui.SelfGuideActivity" android:screenOrientation="1" android:theme="@7F0B0092">
+</activity>
+<activity android:name="com.zcyy.ui.DrugDetailActivity" android:screenOrientation="1" android:theme="@7F0B0092">
+</activity>
+<activity android:name="com.zcyy.ui.AddessesAddActivity" android:screenOrientation="1" android:theme="@7F0B0092">
+</activity>
+<activity android:name="com.zcyy.ui.AddessesListActivity" android:screenOrientation="1" android:theme="@7F0B0092">
+</activity>
+<activity android:name="com.zcyy.ui.AddHaoYaoCommercialvoucher" android:screenOrientation="1" android:theme="@7F0B0092">
+</activity>
+<activity android:name="com.zcyy.ui.AddUpdataAddresses" android:screenOrientation="1" android:theme="@7F0B0092">
+</activity>
+<activity android:name="com.zcyy.ui.CheckTheLogisticsActivity" android:screenOrientation="1" android:theme="@7F0B0092">
+</activity>
+<activity android:name="com.zcyy.ui.HaoYaoCommercialvoucher" android:screenOrientation="1" android:theme="@7F0B0092">
+</activity>
+<activity android:name="com.zcyy.ui.HaoYaoShiPayWebViewActiviy" android:screenOrientation="1" android:theme="@7F0B0092">
+</activity>
+<activity android:name="com.zcyy.ui.HaoYaoShiWebViewActiviy" android:screenOrientation="1" android:theme="@7F0B0092">
+</activity>
+<activity android:name="com.zcyy.ui.HysPayActivity" android:screenOrientation="1" android:theme="@7F0B0092">
+</activity>
+<activity android:name="com.zcyy.ui.NewMyOrderActivity" android:screenOrientation="1" android:theme="@7F0B0092">
+</activity>
+<activity android:name="com.zcyy.ui.NewMyOrderListActivity" android:screenOrientation="1" android:theme="@7F0B0092">
+</activity>
+<activity android:name="com.zcyy.ui.NewMyOrderPingjiaActivity" android:screenOrientation="1" android:theme="@7F0B0092">
+</activity>
+<activity android:name="com.zcyy.ui.NewOneProductPingjiaActivity" android:screenOrientation="1" android:theme="@7F0B0092">
+</activity>
+<activity android:name="com.zcyy.ui.NoPaidOrderActivity" android:screenOrientation="1" android:theme="@7F0B0092" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:name="com.zcyy.ui.OneOrderActivity" android:screenOrientation="1" android:theme="@7F0B0092">
+</activity>
+<activity android:name="com.zcyy.ui.ShoppingCartActivity" android:screenOrientation="1" android:theme="@7F0B0092">
+</activity>
+<activity android:name="com.zcyy.ui.ShoppingWebViewOrFindActivity" android:screenOrientation="1" android:theme="@7F0B0092">
+</activity>
+<activity android:name="com.zcyy.ui.SearchViewActivity" android:screenOrientation="1" android:theme="@7F0B0092">
+</activity>
+<activity android:name="com.zcyy.ui.NewTestProductPingjiaActivity" android:screenOrientation="1" android:theme="@7F0B0092" android:windowSoftInputMode="0x00000012">
+</activity>
+</application>
+</manifest>

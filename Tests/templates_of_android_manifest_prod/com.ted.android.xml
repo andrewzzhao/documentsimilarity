@@ -1,0 +1,522 @@
+<?xml version="1.0" ?><manifest android:compileSdkVersion="28" android:compileSdkVersionCodename="9" android:versionCode="130" android:versionName="4.5.6" package="com.ted.android" platformBuildVersionCode="130" platformBuildVersionName="4.5.6" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="21" android:targetSdkVersion="28">
+</uses-sdk>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.FOREGROUND_SERVICE">
+</uses-permission>
+<uses-permission android:maxSdkVersion="22" android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:maxSdkVersion="22" android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE">
+</uses-permission>
+<uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS">
+</uses-permission>
+<permission android:name="com.ted.android.permission.C2D_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="com.ted.android.permission.C2D_MESSAGE">
+</uses-permission>
+<application android:allowBackup="false" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:icon="@7F0F0000" android:label="@7F120053" android:largeHeap="true" android:name="com.ted.android.ReferenceApplication" android:supportsRtl="true" android:theme="@7F130007" android:usesCleartextTraffic="true">
+<meta-data android:name="com.google.android.gms.cast.framework.OPTIONS_PROVIDER_CLASS_NAME" android:value="com.ted.android.cast.CastOptionsProvider">
+</meta-data>
+<meta-data android:name="com.google.android.gms.ads.AD_MANAGER_APP" android:value="true">
+</meta-data>
+<activity android:name="com.ted.android.view.splash.SplashActivity">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+<intent-filter android:label="TED">
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="main" android:scheme="ted">
+</data>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+</intent-filter>
+<intent-filter android:label="TED">
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="talk_video" android:scheme="ted">
+</data>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+</intent-filter>
+<intent-filter android:label="TED">
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="featured" android:scheme="ted">
+</data>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+</intent-filter>
+<intent-filter android:label="TED">
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="surpriseme" android:scheme="ted">
+</data>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+</intent-filter>
+<intent-filter android:label="TED">
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="talks" android:scheme="ted">
+</data>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+</intent-filter>
+<intent-filter android:label="TED">
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="www.ted.com" android:pathPrefix="/talks/" android:scheme="http">
+</data>
+<data android:host="www.ted.com" android:pathPrefix="/talks/" android:scheme="https">
+</data>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+</intent-filter>
+<intent-filter android:label="TED">
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="playlists" android:scheme="ted">
+</data>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+</intent-filter>
+<intent-filter android:label="TED">
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="www.ted.com" android:pathPrefix="/playlists/" android:scheme="http">
+</data>
+<data android:host="www.ted.com" android:pathPrefix="/playlists/" android:scheme="https">
+</data>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+</intent-filter>
+<intent-filter android:label="TED">
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="playlist" android:scheme="ted">
+</data>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+</intent-filter>
+<intent-filter android:label="TED">
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="www.ted.com" android:pathPrefix="/playlist/" android:scheme="http">
+</data>
+<data android:host="www.ted.com" android:pathPrefix="/playlist/" android:scheme="https">
+</data>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+</intent-filter>
+<intent-filter android:label="TED">
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="radiohour" android:scheme="ted">
+</data>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+</intent-filter>
+<intent-filter android:label="TED">
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="sincerelyx" android:scheme="ted">
+</data>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+</intent-filter>
+<intent-filter android:label="TED">
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="worklife" android:scheme="ted">
+</data>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+</intent-filter>
+<intent-filter android:label="TED">
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="tedenespanol" android:scheme="ted">
+</data>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+</intent-filter>
+<intent-filter android:label="TED">
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="tedinterview" android:scheme="ted">
+</data>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+</intent-filter>
+<intent-filter android:label="TED">
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="podcasts" android:scheme="ted">
+</data>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+</intent-filter>
+<intent-filter android:label="TED">
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="india" android:scheme="ted">
+</data>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+</intent-filter>
+<intent-filter android:label="TED">
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="topics" android:scheme="ted">
+</data>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+</intent-filter>
+<intent-filter android:label="TED">
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="www.ted.com" android:pathPrefix="/topics/" android:scheme="http">
+</data>
+<data android:host="www.ted.com" android:pathPrefix="/topics/" android:scheme="https">
+</data>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+</intent-filter>
+<intent-filter android:label="TED">
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="languages" android:scheme="ted">
+</data>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+</intent-filter>
+<intent-filter android:label="TED">
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="www.ted.com" android:path="/languages" android:scheme="http">
+</data>
+<data android:host="www.ted.com" android:path="/languages" android:scheme="https">
+</data>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+</intent-filter>
+<intent-filter android:label="TED">
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="mytalks" android:scheme="ted">
+</data>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+</intent-filter>
+<intent-filter android:label="TED">
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="www.ted.com" android:path="/mytalks" android:scheme="http">
+</data>
+<data android:host="www.ted.com" android:path="/mytalks" android:scheme="https">
+</data>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+</intent-filter>
+<intent-filter android:label="TED">
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="alltalks" android:scheme="ted">
+</data>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+</intent-filter>
+<intent-filter android:label="TED">
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="www.ted.com" android:path="/alltalks" android:scheme="http">
+</data>
+<data android:host="www.ted.com" android:path="/alltalks" android:scheme="https">
+</data>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+</intent-filter>
+<intent-filter android:label="TED">
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="discover" android:scheme="ted">
+</data>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+</intent-filter>
+<intent-filter android:label="TED">
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="www.ted.com" android:path="/discover" android:scheme="http">
+</data>
+<data android:host="www.ted.com" android:path="/discover" android:scheme="https">
+</data>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+</intent-filter>
+<intent-filter android:label="TED">
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="settings" android:scheme="ted">
+</data>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+</intent-filter>
+<intent-filter android:label="TED">
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="subtitles" android:scheme="ted">
+</data>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+</intent-filter>
+</activity>
+<activity android:name="com.ted.android.view.home.HomeActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.ted.android.view.home.myted.TalkListActivity" android:theme="@7F1300CD">
+</activity>
+<activity android:name="com.ted.android.view.detail.DetailActivity" android:theme="@7F1300CD">
+</activity>
+<activity android:name="com.ted.android.view.settings.SettingsActivity" android:theme="@7F1300CD">
+</activity>
+<activity android:configChanges="0x00000480" android:launchMode="1" android:name="com.ted.android.view.video.VideoActivity" android:theme="@7F1301A0">
+</activity>
+<activity android:name="com.ted.android.view.settings.translation.TranslationCreditsActivity" android:theme="@7F1300CD">
+</activity>
+<activity android:name="com.ted.android.view.settings.licenses.LicensesActivity" android:theme="@7F1300CD">
+</activity>
+<activity android:name="com.ted.android.view.settings.licenses.LicenseDetailActivity" android:theme="@7F1300CD">
+</activity>
+<activity android:name="com.ted.android.view.feedback.FeedbackActivity" android:theme="@7F1300CD" android:windowSoftInputMode="0x00000004">
+</activity>
+<activity android:name="com.ted.android.view.search.speakers.SpeakersActivity" android:theme="@7F1300CD">
+</activity>
+<activity android:name="com.ted.android.view.search.languages.LanguagesActivity" android:theme="@7F1300CD">
+</activity>
+<activity android:name="com.ted.android.view.search.tags.TagsActivity" android:theme="@7F1300CD">
+</activity>
+<activity android:name="com.ted.android.view.SurpriseMeTimeActivity" android:theme="@7F1300CD">
+</activity>
+<activity android:name="com.ted.android.view.rating.RateBottomSheetActivity" android:theme="@7F1300C5">
+</activity>
+<activity android:name="com.ted.android.view.search.SimpleTalkListActivity" android:theme="@7F1300CD">
+</activity>
+<activity android:name="com.ted.android.view.account.AuthorizationActivity" android:theme="@7F1300CD" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:hardwareAccelerated="true" android:name="com.ted.android.view.BrowserActivity" android:theme="@7F1300CD" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.ted.android.view.account.SignInActivity" android:theme="@7F1300CD">
+</activity>
+<activity android:name="com.ted.android.view.detail.ParentDetailActivity" android:theme="@7F1300CD">
+</activity>
+<activity android:name="com.ted.android.view.home.podcasts.PodcastActivity" android:theme="@7F1300CD">
+</activity>
+<activity android:name="com.ted.android.view.settings.subtitles.SubtitleSettingsActivity" android:theme="@7F1300CD">
+</activity>
+<activity android:name="com.ted.android.view.playlists.PlaylistActivity">
+</activity>
+<service android:name="com.ted.android.view.video.PlayerService" android:stopWithTask="true">
+<intent-filter>
+<action android:name="android.intent.action.MEDIA_BUTTON">
+</action>
+</intent-filter>
+</service>
+<service android:name="com.ted.android.view.splash.UpdaterService">
+</service>
+<service android:name="com.ted.android.view.ActionService">
+</service>
+<service android:name="com.ted.android.offline.TedDownloadService">
+</service>
+<service android:exported="true" android:name="com.google.android.exoplayer2.scheduler.PlatformScheduler$PlatformSchedulerService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.analytics.AnalyticsReceiver">
+<intent-filter>
+<action android:name="com.google.android.gms.analytics.ANALYTICS_DISPATCH">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:enabled="true" android:exported="true" android:name="com.ted.android.peripheral.MediaMountedReceiver">
+<intent-filter>
+<action android:name="android.intent.action.MEDIA_REMOVED">
+</action>
+<action android:name="android.intent.action.MEDIA_MOUNTED">
+</action>
+<action android:name="android.intent.action.MEDIA_EJECT">
+</action>
+<action android:name="android.intent.action.MEDIA_BAD_REMOVAL">
+</action>
+<data android:scheme="file">
+</data>
+</intent-filter>
+</receiver>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.analytics.AnalyticsService">
+</service>
+<receiver android:enabled="true" android:exported="true" android:name="com.google.android.gms.analytics.CampaignTrackingReceiver">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.analytics.CampaignTrackingService">
+</service>
+<receiver android:enabled="true" android:exported="true" android:name="com.google.android.gms.gcm.GcmReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+<action android:name="com.google.android.c2dm.intent.REGISTRATION">
+</action>
+<category android:name="com.ted.android">
+</category>
+</intent-filter>
+</receiver>
+<receiver android:enabled="true" android:exported="false" android:name="com.leanplum.LeanplumPushReceiver">
+<intent-filter>
+<action android:name="com.leanplum.LeanplumPushListenerService">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name="com.ted.android.cast.CastMediaIntentReceiver">
+</receiver>
+<service android:enabled="true" android:exported="false" android:name="com.leanplum.LeanplumPushListenerService">
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+</intent-filter>
+</service>
+<service android:name="com.leanplum.LeanplumLocalPushListenerService">
+</service>
+<service android:name="com.leanplum.LeanplumPushRegistrationService">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.leanplum.LeanplumPushInstanceIDService">
+<intent-filter>
+<action android:name="com.google.android.gms.iid.InstanceID">
+</action>
+</intent-filter>
+</service>
+<uses-library android:name="org.apache.http.legacy" android:required="false">
+</uses-library>
+<meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@7F12012F">
+</meta-data>
+<activity android:configChanges="0x000005B0" android:label="@7F120053" android:name="com.facebook.FacebookActivity" android:theme="@7F130237">
+</activity>
+<activity android:exported="true" android:name="com.facebook.CustomTabActivity">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="@7F120139">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.ted.android.view.settings.AboutTextActivity">
+</activity>
+<service android:name="com.leanplum.LeanplumGcmRegistrationJobService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<activity android:name="com.facebook.CustomTabMainActivity">
+</activity>
+<receiver android:exported="false" android:name="com.google.android.gms.cast.framework.media.MediaIntentReceiver">
+</receiver>
+<service android:exported="false" android:name="com.google.android.gms.cast.framework.media.MediaNotificationService">
+</service>
+<service android:exported="false" android:name="com.google.android.gms.cast.framework.ReconnectionService">
+</service>
+<activity android:excludeFromRecents="true" android:exported="false" android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity" android:theme="@android:01030010">
+</activity>
+<service android:exported="true" android:name="com.google.android.gms.auth.api.signin.RevocationBoundService" android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.analytics.AnalyticsJobService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<activity android:configChanges="0x00000FB0" android:exported="false" android:name="com.google.android.gms.ads.AdActivity" android:theme="@android:0103000F">
+</activity>
+<provider android:authorities="com.ted.android.mobileadsinitprovider" android:exported="false" android:initOrder="100" android:name="com.google.android.gms.ads.MobileAdsInitProvider">
+</provider>
+<activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:01030010">
+</activity>
+<meta-data android:name="com.google.android.gms.version" android:value="@7F0B000D">
+</meta-data>
+<provider android:authorities="com.ted.android.FacebookInitProvider" android:exported="false" android:name="com.facebook.internal.FacebookInitProvider">
+</provider>
+<receiver android:exported="false" android:name="com.facebook.CurrentAccessTokenExpirationBroadcastReceiver">
+<intent-filter>
+<action android:name="com.facebook.sdk.ACTION_CURRENT_ACCESS_TOKEN_CHANGED">
+</action>
+</intent-filter>
+</receiver>
+</application>
+</manifest>

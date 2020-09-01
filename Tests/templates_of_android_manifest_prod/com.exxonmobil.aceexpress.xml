@@ -1,0 +1,76 @@
+<?xml version="1.0" ?><manifest android:versionCode="5" android:versionName="2.1" package="com.exxonmobil.aceexpress" platformBuildVersionCode="26" platformBuildVersionName="8.0.0" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="23" android:targetSdkVersion="26">
+</uses-sdk>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-permission android:name="android.permission.BLUETOOTH">
+</uses-permission>
+<uses-permission android:name="android.permission.BLUETOOTH_ADMIN">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.RECORD_AUDIO">
+</uses-permission>
+<uses-feature android:name="android.hardware.camera">
+</uses-feature>
+<uses-feature android:name="android.hardware.camera.autofocus" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.camera.front" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.microphone" android:required="false">
+</uses-feature>
+<application android:allowBackup="false" android:icon="@7F030000" android:label="@7F080044" android:name="com.exxonmobil.aceexpress.MDTAApplication" android:supportsRtl="true" android:theme="@7F0A00B2">
+<activity android:name="com.exxonmobil.aceexpress.ui.splash.SplashActivity" android:theme="@7F0A013B">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x00000480" android:exported="false" android:name="com.exxonmobil.aceexpress.ui.MainActivity" android:theme="@7F0A013A" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:configChanges="0x00000480" android:launchMode="2" android:name="com.exxonmobil.aceexpress.ui.login.LoginActivity">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="@7F08004B" android:pathPrefix="@7F08004C" android:scheme="@7F08004D">
+</data>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x00000480" android:exported="false" android:label="@7F0800E2" android:name="com.exxonmobil.aceexpress.ui.deliverydetail.DeliveryDetailActivity">
+</activity>
+<activity android:configChanges="0x00000480" android:exported="false" android:label="@7F0800E1" android:name="com.exxonmobil.aceexpress.ui.deliverydetail.deliverer.DelivererConfirmationActivity" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:configChanges="0x00000480" android:exported="false" android:label="@7F0800DF" android:name="com.exxonmobil.aceexpress.ui.deliverydetail.customer.CustomerConfirmationActivity" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:configChanges="0x00000480" android:exported="false" android:label="@7F0800E0" android:name="com.exxonmobil.aceexpress.ui.deliverydetail.summary.CustomerSummaryActivity">
+</activity>
+<activity android:configChanges="0x00000480" android:exported="false" android:label="@7F0800E5" android:name="com.exxonmobil.aceexpress.ui.tnc.TermsAndConditionsActivity">
+</activity>
+<activity android:exported="false" android:name="com.exxonmobil.aceexpress.ui.camera.CaptureImageActivity" android:theme="@7F0A0132">
+</activity>
+<activity android:configChanges="0x00000480" android:exported="false" android:label="@7F0800E3" android:name="com.exxonmobil.aceexpress.ui.eula.AceAgreementActivity">
+</activity>
+<meta-data android:name="io.fabric.ApiKey" android:value="b2640eda19cb6483de315a3dd2f2afc33ff274c6">
+</meta-data>
+<service android:exported="false" android:name="com.exxonmobil.aceexpress.repository.sync.SyncService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<service android:exported="true" android:name="com.exxonmobil.aceexpress.repository.sync.SyncJobScheduler" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<meta-data android:name="android.support.VERSION" android:value="26.1.0">
+</meta-data>
+<meta-data android:name="android.arch.lifecycle.VERSION" android:value="27.0.0-SNAPSHOT">
+</meta-data>
+</application>
+</manifest>

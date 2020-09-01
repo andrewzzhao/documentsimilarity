@@ -1,0 +1,56 @@
+<?xml version="1.0" ?><manifest android:installLocation="0" android:versionCode="22" android:versionName="2.2" package="cec.com" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_CONTACTS">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_CONTACTS">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<supports-screens android:largeScreens="true" android:normalScreens="true" android:smallScreens="true">
+</supports-screens>
+<uses-sdk android:maxSdkVersion="10" android:minSdkVersion="8">
+</uses-sdk>
+<application android:debuggable="true" android:icon="@7F020000" android:label="@7F040000">
+<activity android:label="@7F040000" android:name="cec.com.AndroidFlashDriveActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<service android:name="cec.com.ServiceSDcard">
+<intent-filter>
+<action android:name="android.intent.action.MEDIA_UNMOUNTED">
+</action>
+<action android:name="android.intent.action.MEDIA_MOUNTED">
+</action>
+<action android:name="android.intent.action.MEDIA_SCANNER_STARTED">
+</action>
+<action android:name="android.intent.action.MEDIA_SCANNER_SCAN_FILE">
+</action>
+<action android:name="android.intent.action.MEDIA_SCANNER_FINISHED">
+</action>
+<action android:name="android.intent.action.MEDIA_CHECKING">
+</action>
+</intent-filter>
+</service>
+<receiver android:name="cec.com.ReceiverUSB">
+<intent-filter>
+<action android:name="android.intent.action.UMS_CONNECTED">
+</action>
+<action android:name="android.intent.action.UMS_DISCONNECTED">
+</action>
+<action android:name="android.intent.action.MEDIA_UNMOUNTED">
+</action>
+<action android:name="android.intent.action.MEDIA_MOUNTED">
+</action>
+</intent-filter>
+</receiver>
+</application>
+</manifest>

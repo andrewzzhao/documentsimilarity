@@ -1,0 +1,704 @@
+<?xml version="1.0" ?><manifest android:compileSdkVersion="28" android:compileSdkVersionCodename="9" android:installLocation="0" android:largeHeap="true" android:versionCode="6192106" android:versionName="6.1.14.99" package="deezer.android.app.nobilling" platformBuildVersionCode="28" platformBuildVersionName="9" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="19" android:targetSdkVersion="28">
+</uses-sdk>
+<permission android:name="com.deezer.permission.account" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="com.deezer.permission.account">
+</uses-permission>
+<supports-screens android:anyDensity="true" android:largeScreens="true" android:normalScreens="true" android:smallScreens="true" android:xlargeScreens="true">
+</supports-screens>
+<uses-feature android:name="android.hardware.bluetooth" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.screen.portrait" android:required="false">
+</uses-feature>
+<uses-permission-sdk-23 android:name="android.permission.RECORD_AUDIO">
+</uses-permission-sdk-23>
+<uses-permission-sdk-23 android:name="android.permission.FOREGROUND_SERVICE">
+</uses-permission-sdk-23>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.DISABLE_KEYGUARD">
+</uses-permission>
+<uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-permission android:name="com.nokia.pushnotifications.permission.RECEIVE">
+</uses-permission>
+<uses-permission android:name="android.permission.USE_CREDENTIALS">
+</uses-permission>
+<uses-permission android:name="android.permission.BLUETOOTH">
+</uses-permission>
+<uses-permission android:name="com.sonymobile.media.permission.TILES_ACCESS">
+</uses-permission>
+<uses-permission android:name="android.permission.FOREGROUND_SERVICE">
+</uses-permission>
+<uses-permission android:name="com.android.vending.BILLING">
+</uses-permission>
+<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE">
+</uses-permission>
+<uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE">
+</uses-permission>
+<application android:allowBackup="false" android:allowTaskReparenting="true" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:icon="@7F0F0000" android:label="@7F12002A" android:largeHeap="true" android:name="deezer.android.app.DZMidlet" android:networkSecurityConfig="@7F160006" android:resizeableActivity="false" android:supportsRtl="true" android:theme="@7F1301C6">
+<provider android:authorities="deezer.android.app.nobilling.audioqueue.provider" android:enabled="true" android:exported="false" android:name="com.deezer.core.jukebox.provider.AudioQueueProvider">
+</provider>
+<provider android:authorities="deezer.android.app.nobilling.coach.provider" android:enabled="true" android:exported="false" android:name="com.deezer.core.coach.provider.CoachProvider">
+</provider>
+<provider android:authorities="deezer.android.app.nobilling" android:exported="false" android:grantUriPermissions="true" android:name="com.deezer.asclepios.provider.AsclepiosFileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F160007">
+</meta-data>
+</provider>
+<provider android:authorities="deezer.android.app.nobilling.provider.diagnostic" android:exported="false" android:grantUriPermissions="true" android:name="com.deezer.feature.diagnostic.utils.DiagnosticFileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F160005">
+</meta-data>
+</provider>
+<meta-data android:name="com.deezer.app.storeId" android:resource="@7F0A05BA">
+</meta-data>
+<provider android:authorities="@7F12079D" android:exported="false" android:name="deezer.android.utils.SearchSuggestionProvider">
+</provider>
+<meta-data android:name="com.google.android.gms.version" android:value="@7F0B0019">
+</meta-data>
+<meta-data android:name="com.google.android.gms.car.application" android:resource="@7F160002">
+</meta-data>
+<meta-data android:name="com.google.android.gms.car.notification.SmallIcon" android:resource="@7F08046D">
+</meta-data>
+<meta-data android:name="com.crashlytics.ApiKey" android:value="ac499d0e77a785750227dec57386b35e96449fa2">
+</meta-data>
+<meta-data android:name="io.fabric.ApiKey" android:value="ac499d0e77a785750227dec57386b35e96449fa2">
+</meta-data>
+<meta-data android:name="android.app.default_searchable" android:value="com.deezer.android.ui.activity.LauncherActivity">
+</meta-data>
+<meta-data android:name="com.google.android.awareness.API_KEY" android:value="AIzaSyAtQ_NNrW_RioqH7RIf0l4bAUE-B5aAahI">
+</meta-data>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.analytics.AnalyticsService">
+</service>
+<receiver android:exported="true" android:name="com.google.android.gms.analytics.CampaignTrackingReceiver">
+</receiver>
+<service android:name="com.google.android.gms.analytics.CampaignTrackingService">
+</service>
+<activity android:label="@7F12002A" android:launchMode="2" android:name="com.deezer.android.ui.activity.LauncherActivity" android:noHistory="true" android:theme="@7F1301B5" android:windowSoftInputMode="0x00000020">
+<intent-filter>
+<action android:name="deezer.android.app.nobilling.GO_TO_PLAYER">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.SEARCH">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+<meta-data android:name="android.app.searchable" android:resource="@7F160008">
+</meta-data>
+<meta-data android:name="android.app.shortcuts" android:resource="@7F16000B">
+</meta-data>
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.media.action.MEDIA_PLAY_FROM_SEARCH">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.MEDIA_SEARCH">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.media.action.MEDIA_PLAY_FROM_SEARCH">
+</action>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="deezer">
+</data>
+<data android:scheme="deezer-query">
+</data>
+<data android:host="www.deezer.com">
+</data>
+<data android:host="preprod.deezer.com">
+</data>
+<data android:host="orange.deezer.com">
+</data>
+</intent-filter>
+<intent-filter android:autoVerify="true">
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="http">
+</data>
+<data android:scheme="https">
+</data>
+<data android:host="www.deezer.com">
+</data>
+<data android:host="preprod.deezer.com">
+</data>
+<data android:host="orange.deezer.com">
+</data>
+<data android:pathPattern="/.*/album/.*">
+</data>
+<data android:pathPattern="/.*/playlist/.*">
+</data>
+<data android:pathPattern="/.*/artist/.*">
+</data>
+<data android:pathPattern="/.*/track/.*">
+</data>
+<data android:pathPattern="/.*/radio/.*">
+</data>
+<data android:pathPattern="/.*/profile/.*">
+</data>
+<data android:pathPattern="/.*/app/.*">
+</data>
+<data android:pathPattern=".*/album/.*">
+</data>
+<data android:pathPattern=".*/playlist/.*">
+</data>
+<data android:pathPattern=".*/artist/.*">
+</data>
+<data android:pathPattern=".*/track/.*">
+</data>
+<data android:pathPattern=".*/radio.*">
+</data>
+<data android:pathPattern=".*/mix.*">
+</data>
+<data android:pathPattern=".*/mixes.*">
+</data>
+<data android:pathPattern=".*/profile/.*">
+</data>
+<data android:pathPattern=".*/user/.*">
+</data>
+<data android:pathPattern=".*/show.*">
+</data>
+<data android:pathPattern=".*/shows.*">
+</data>
+<data android:pathPattern=".*/episode/.*">
+</data>
+<data android:pathPattern=".*/app/.*">
+</data>
+<data android:pathPattern=".*/home.*">
+</data>
+<data android:pathPattern=".*/flow.*">
+</data>
+<data android:pathPattern=".*/login">
+</data>
+<data android:pathPattern=".*/register">
+</data>
+<data android:pathPattern=".*/charts.*">
+</data>
+<data android:pathPattern=".*/tops.*">
+</data>
+<data android:pathPattern=".*/explore.*">
+</data>
+<data android:pathPattern=".*/new_releases.*">
+</data>
+<data android:pathPattern=".*/page/.*">
+</data>
+<data android:pathPattern=".*/channels/.*">
+</data>
+<data android:pathPattern=".*/channels/genres/.*">
+</data>
+<data android:pathPattern="/.*/channels/.*">
+</data>
+<data android:pathPattern=".*/moods">
+</data>
+<data android:pathPattern=".*/moods/.*">
+</data>
+<data android:pathPattern=".*/audiobook/.*">
+</data>
+<data android:pathPattern=".*/link/.*">
+</data>
+<data android:pathPattern=".*/smarttracklist/.*">
+</data>
+<data android:pathPattern=".*/podcasts.*">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="com.sonymobile.media.dashboard.ACTION_VIEW_MUSIC_TILE">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<action android:name="android.intent.action.MUSIC_PLAYER">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.APP_MUSIC">
+</category>
+</intent-filter>
+<meta-data android:name="com.sonymobile.media.dashboard.BACKGROUND_ICON" android:resource="@7F0803BD">
+</meta-data>
+<meta-data android:name="com.sonymobile.media.dashboard.TITLE" android:resource="@7F12002A">
+</meta-data>
+<meta-data android:name="com.sonymobile.media.dashboard.SMALL_ICON" android:resource="@7F08058D">
+</meta-data>
+</activity>
+<activity android:exported="true" android:name="dz.ApplicationScreens" android:noHistory="true" android:theme="@android:0103000E">
+</activity>
+<activity android:launchMode="2" android:name="com.deezer.feature.home.TabBarActivity" android:theme="@7F13026F" android:windowSoftInputMode="0x00000031">
+</activity>
+<activity android:launchMode="1" android:name="com.deezer.android.ui.activity.OfferPageActivity">
+</activity>
+<activity android:launchMode="2" android:name="com.deezer.android.ui.activity.ShareViaDeezerActivity">
+</activity>
+<activity android:name="com.deezer.android.ui.activity.LatestEpisodePlaylistActivity" android:theme="@7F130186">
+</activity>
+<activity android:name="com.deezer.android.ui.activity.OfflineEpisodesActivity" android:theme="@7F130187">
+</activity>
+<activity android:name="com.deezer.android.ui.activity.LegacyTalkDescriptionActivity" android:theme="@7F1301B6">
+</activity>
+<activity android:name="com.deezer.android.ui.activity.LegacyPlaylistActivity" android:theme="@7F130188" android:windowSoftInputMode="0x00000032">
+</activity>
+<activity android:name="com.deezer.feature.playlist.PlaylistActivity" android:windowSoftInputMode="0x00000032">
+</activity>
+<activity android:configChanges="0x00000480" android:name="com.deezer.android.ui.activity.PlaylistCreationActivity">
+</activity>
+<activity android:name="com.deezer.android.ui.activity.PlaylistEditingActivity">
+</activity>
+<activity android:name="com.deezer.android.ui.playlist.edit.PlaylistEditTracksActivity">
+</activity>
+<activity android:name="com.deezer.feature.album.AlbumActivity">
+</activity>
+<activity android:name="com.deezer.feature.artist.ArtistActivity">
+</activity>
+<activity android:name="com.deezer.android.ui.activity.ArtistBiographyActivity" android:theme="@7F1301B6">
+</activity>
+<activity android:name="com.deezer.android.ui.activity.LegacyTalkShowActivity" android:theme="@7F130189">
+</activity>
+<activity android:name="com.deezer.feature.podcast.PodcastActivity">
+</activity>
+<activity android:name="com.deezer.android.ui.activity.UserProfileActivity" android:theme="@7F13018A">
+</activity>
+<activity android:name="com.deezer.feature.audiobook.AudioBookActivity">
+</activity>
+<activity android:name="com.deezer.feature.audiobook.AudioBookFavoriteListActivity" android:windowSoftInputMode="0x00000032">
+</activity>
+<activity android:name="com.deezer.feature.sampledcollection.SampledCollectionActivity" android:windowSoftInputMode="0x00000032">
+</activity>
+<activity android:name="com.deezer.feature.sampledcollection.SampledCollectionDownloadsPageActivity" android:theme="@7F1301B6" android:windowSoftInputMode="0x00000032">
+</activity>
+<activity android:name="com.deezer.android.ui.activity.SimpleListActivity" android:theme="@7F130251" android:windowSoftInputMode="0x00000032">
+</activity>
+<activity android:name="com.deezer.android.ui.activity.CustomTextPageActivity">
+</activity>
+<activity android:configChanges="0x000005B0" android:name="com.facebook.FacebookActivity" android:theme="@7F1303B5">
+</activity>
+<activity android:launchMode="1" android:name="com.deezer.android.ui.activity.LoginPageActivity" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:name="com.deezer.android.ui.activity.telco.TelcoActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:configChanges="0x00000480" android:launchMode="2" android:name="com.deezer.android.inapp.InAppInvitationWebViewDialogActivity" android:screenOrientation="1" android:theme="@7F1301CF">
+</activity>
+<activity android:configChanges="0x00000480" android:launchMode="2" android:name="com.deezer.android.ui.activity.DialogActivity" android:theme="@7F1301B2">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.deezer.android.ui.activity.WebViewDialogActivity" android:theme="@7F1301B2">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.deezer.android.ui.activity.LicencesWebViewDialogActivity" android:theme="@7F1301B2">
+</activity>
+<activity android:launchMode="1" android:name="com.deezer.feature.audioads.AudioAdsActivity">
+</activity>
+<activity android:launchMode="1" android:name="com.deezer.feature.onboarding.OnboardingActivity" android:theme="@7F1301B8">
+</activity>
+<activity android:launchMode="1" android:name="com.deezer.feature.flowtabonboarding.FlowTabOnBoardingActivity" android:theme="@7F1301B8">
+</activity>
+<activity android:launchMode="1" android:name="com.deezer.feature.flowwelcome.FlowWelcomeActivity" android:theme="@7F1301CC">
+</activity>
+<activity android:launchMode="1" android:name="com.deezer.android.ui.activity.OnlineSupportActivity">
+</activity>
+<activity android:name="com.deezer.android.ui.activity.ProfilesManagementActivity">
+</activity>
+<activity android:name="com.deezer.android.ui.activity.ProfileCreationActivity">
+</activity>
+<activity android:name="com.deezer.android.ui.activity.SwitchProfileTransitionActivity">
+</activity>
+<activity android:name="com.deezer.android.ui.activity.InAppActivity" android:theme="@7F130184">
+</activity>
+<activity android:name="com.deezer.android.ui.activity.AppStudioActivity" android:theme="@7F130184">
+</activity>
+<activity android:name="com.deezer.android.ui.activity.DynamicPageActivity" android:theme="@7F130185">
+</activity>
+<activity android:launchMode="1" android:name="com.deezer.android.ui.activity.VideoLinkActivity" android:screenOrientation="1" android:theme="@7F130185">
+</activity>
+<activity android:name="com.deezer.feature.smarttracklist.page.SmartTrackListPageActivity" android:theme="@7F1301BA">
+</activity>
+<activity android:name="com.deezer.feature.smarttracklist.standalone.PageSmartTrackListActivity">
+</activity>
+<activity android:name="com.deezer.android.ui.prototypes.protolist.PrototypeListActivity" android:theme="@7F1301B6">
+</activity>
+<activity android:name="com.deezer.android.ui.prototypes.albumorplaylistitem.PrototypeAlbumListActivity" android:theme="@7F1301B6">
+</activity>
+<activity android:name="com.deezer.android.ui.prototypes.userorartistitem.PrototypeArtistListActivity" android:theme="@7F1301B6">
+</activity>
+<activity android:name="com.deezer.android.ui.prototypes.doublelinetrackitem.PrototypeDoubleLineTrackListActivity" android:theme="@7F1301B6">
+</activity>
+<activity android:name="com.deezer.android.ui.prototypes.home.PrototypeHomeActivity" android:theme="@7F130185">
+</activity>
+<activity android:name="com.deezer.android.ui.prototypes.channels.PrototypeChannelsActivity" android:theme="@7F130185">
+</activity>
+<activity android:name="com.deezer.android.ui.prototypes.channels.PrototypeDynamicComposableAdapterActivity">
+</activity>
+<activity android:name="com.deezer.android.ui.prototypes.cards.PrototypeCardsActivity" android:theme="@7F130185">
+</activity>
+<activity android:name="com.deezer.android.ui.prototypes.userprofile.PrototypeUserProfileActivity" android:theme="@7F13018A">
+</activity>
+<activity android:name="com.deezer.android.ui.prototypes.lego.LegoPrototypeActivity" android:theme="@7F1301B6">
+</activity>
+<activity android:name="com.deezer.android.ui.prototypes.ui_kit.PrototypeCellsActivity" android:theme="@7F1301B6">
+</activity>
+<activity android:name="com.deezer.android.ui.prototypes.androidstrings.PrototypeAndroidStringsActivity" android:theme="@7F1301B6">
+</activity>
+<activity android:name="com.deezer.android.ui.activity.SettingsListActivity" android:theme="@7F1301B6">
+</activity>
+<activity android:name="com.deezer.feature.labs.LabsActivity" android:theme="@7F1301B7">
+</activity>
+<activity android:launchMode="1" android:name="com.deezer.feature.supportedbyads.SupportedByAdsActivity">
+</activity>
+<activity android:name="com.deezer.android.appwidget.ShortcutPlaylistAppWidgetConfigureActivity">
+<intent-filter>
+<action android:name="android.appwidget.action.APPWIDGET_CONFIGURE">
+</action>
+</intent-filter>
+</activity>
+<activity android:name="com.deezer.android.ui.lyrics.LyricsActivity" android:theme="@7F13022C">
+</activity>
+<activity android:name="com.deezer.android.ui.activity.PlayingQueueActivity" android:theme="@7F13022C">
+</activity>
+<activity android:configChanges="0x00000480" android:launchMode="2" android:name="com.deezer.android.ui.activity.UserOffersDialogActivity" android:theme="@7F1301D5">
+</activity>
+<activity android:configChanges="0x00000480" android:launchMode="2" android:name="com.deezer.feature.playbilling.InAppPurchaseActivity">
+</activity>
+<activity android:name="com.deezer.android.ui.features.msisdn.MsisdnActivity" android:theme="@7F1301B6">
+</activity>
+<activity android:launchMode="1" android:name="com.deezer.feature.whyads.WhyAdsActivity">
+</activity>
+<activity android:launchMode="2" android:name="com.deezer.feature.trialend.TrialEndActivity" android:theme="@7F1301D5">
+</activity>
+<activity android:launchMode="2" android:name="com.deezer.feature.trialstart.TrialStartActivity" android:theme="@7F1301D5">
+</activity>
+<activity android:launchMode="2" android:name="com.deezer.feature.trialwelcome.TrialWelcomeActivity" android:theme="@7F1301B6">
+</activity>
+<activity android:name="com.deezer.android.ui.activity.NotificationsCenterActivity" android:theme="@7F1301B6">
+</activity>
+<activity android:name="com.deezer.feature.appcusto.ui.AppCustoActivity" android:theme="@7F1301B6">
+</activity>
+<activity android:name="com.deezer.feature.appcusto.ui.AppCustoDialogActivity" android:theme="@7F130014">
+</activity>
+<service android:enabled="true" android:exported="false" android:name="com.deezer.core.synchro.SynchroService" android:permission="android.permission.FOREGROUND_SERVICE">
+</service>
+<service android:exported="false" android:name="com.deezer.core.api.sponge.UpdateUserDataService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<service android:exported="false" android:name="com.deezer.core.api.sponge.IndexOfflineSearchService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<service android:exported="false" android:name="com.deezer.android.appwidget.WidgetUpdateService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<service android:exported="true" android:name="com.deezer.android.ui.chromecustomtabs.customtabsclient.KeepAliveService">
+</service>
+<receiver android:label="@7F1207C5" android:name="com.deezer.android.appwidget.ShortcutPlaylistAppWidgetProvider">
+<intent-filter>
+<action android:name="android.appwidget.action.APPWIDGET_UPDATE">
+</action>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+</intent-filter>
+<meta-data android:name="android.appwidget.provider" android:resource="@7F16000A">
+</meta-data>
+</receiver>
+<receiver android:label="@7F12074D" android:name="com.deezer.android.appwidget.ShortcutFlowAppWidgetProvider">
+<intent-filter>
+<action android:name="android.appwidget.action.APPWIDGET_UPDATE">
+</action>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+</intent-filter>
+<meta-data android:name="android.appwidget.provider" android:resource="@7F160009">
+</meta-data>
+</receiver>
+<receiver android:name="com.deezer.feature.shortcut.ShortcutReceiver">
+</receiver>
+<receiver android:name="com.deezer.notifications.push.DeezerAppboyGcmReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name="com.appboy.AppboyGcmReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.REGISTRATION">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:exported="false" android:name="com.deezer.notifications.push.AppboyReceiver">
+<intent-filter>
+<action android:name="deezer.android.app.nobilling.intent.APPBOY_PUSH_RECEIVED">
+</action>
+<action android:name="deezer.android.app.nobilling.intent.APPBOY_NOTIFICATION_OPENED">
+</action>
+</intent-filter>
+</receiver>
+<activity android:name="com.appboy.ui.AppboyWebViewActivity" android:theme="@android:01030005">
+</activity>
+<activity android:name="com.appboy.ui.activities.AppboyFeedActivity" android:theme="@android:01030005">
+</activity>
+<receiver android:exported="true" android:name="com.deezer.analytics.adjust.AdjustInstallReceiver">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:exported="true" android:name="com.deezer.analytics.CampaignTrackingBroadcastReceiver">
+<intent-filter>
+<action android:name="com.deezer.analytics.LAUNCH_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:enabled="true" android:name="com.deezer.analytics.AlarmReceiver">
+</receiver>
+<receiver android:name="com.deezer.analytics.AlarmBootBroadcastReceiver">
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+</intent-filter>
+</receiver>
+<service android:name="com.deezer.indexing.AppIndexerService">
+</service>
+<service android:enabled="false" android:name="com.deezer.core.cast.player.notification.KillCastNotificationService">
+</service>
+<receiver android:exported="false" android:name="com.deezer.awareness.AwarenessReceiver">
+</receiver>
+<activity android:configChanges="0x000000A0" android:name="com.facebook.ads.InterstitialAdActivity">
+</activity>
+<service android:exported="true" android:name="com.deezer.mediabrowser.DeezerMediaBrowserService">
+<intent-filter>
+<action android:name="android.media.browse.MediaBrowserService">
+</action>
+</intent-filter>
+</service>
+<service android:name="com.deezer.core.upload.CoverUploaderService" android:stopWithTask="true">
+</service>
+<activity android:name="com.deezer.android.ui.activity.BlockingRelogActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name="com.deezer.feature.appupdate.AppUpdateActivity" android:theme="@7F1301B6">
+</activity>
+<activity android:name="com.deezer.acr.AudioRecognitionActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.deezer.feature.song_catcher.SongCatcherActivity">
+</activity>
+<activity android:launchMode="1" android:name="com.deezer.feature.carmode.CarModeActivity" android:screenOrientation="1" android:theme="@7F1302E6">
+</activity>
+<activity android:name="com.deezer.android.ui.activity.DiagnosticActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="2" android:name="com.deezer.feature.offerwall.OfferWallActivity">
+</activity>
+<activity android:name="com.deezer.feature.offlinepodcast.OfflineEpisodesActivity">
+</activity>
+<activity android:name="com.deezer.feature.unloggedpages.UnloggedHomeActivity" android:theme="@7F1301CE" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:launchMode="2" android:name="com.deezer.feature.smartlogin.ui.SmartLoginActivity" android:theme="@7F1301B6">
+</activity>
+<activity android:launchMode="1" android:name="com.deezer.feature.onboardingartist.OnBoardingArtistActivity" android:theme="@7F1301B8" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:name="com.deezer.feature.socialstories.lyrics.ShareLyricsActivity">
+</activity>
+<service android:name="com.deezer.wear.DeezerWearableListenerService">
+<intent-filter>
+<action android:name="com.google.android.gms.wearable.DATA_CHANGED">
+</action>
+<data android:host="*" android:path="/recently_played" android:scheme="wear">
+</data>
+<data android:host="*" android:pathPrefix="/image" android:scheme="wear">
+</data>
+<data android:host="*" android:pathPrefix="/launch_recently_played" android:scheme="wear">
+</data>
+</intent-filter>
+</service>
+<receiver android:name="com.deezer.feature.waze.WazeWakeUpReceiver">
+<intent-filter>
+<action android:name="com.waze.sdk.audio.ACTION_INIT">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="deezer.android.app.ACTION_WAZE_OPEN">
+</action>
+</intent-filter>
+</receiver>
+<service android:exported="false" android:name="com.deezer.core.auth.AuthService">
+</service>
+<provider android:authorities="deezer.android.app.nobilling.auth.provider" android:exported="false" android:name="com.deezer.core.auth.contentproviders.AuthContentProvider">
+</provider>
+<provider android:authorities="deezer.android.app.nobilling.deezer.sso.provider" android:exported="true" android:name="com.deezer.core.auth.contentproviders.SSOContentProvider" android:permission="com.deezer.permission.account">
+</provider>
+<provider android:authorities="deezer.android.app.nobilling.fileprovider.socialstory" android:exported="false" android:grantUriPermissions="true" android:name="com.deezer.feature.socialstories.SocialStoryFileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F16000C">
+</meta-data>
+</provider>
+<activity android:launchMode="2" android:name="com.deezer.gdpr.ConsentActivity" android:theme="@7F130017">
+</activity>
+<activity android:configChanges="0x00000480" android:excludeFromRecents="true" android:exported="false" android:name="com.twitter.sdk.android.core.identity.OAuthActivity">
+</activity>
+<service android:name="com.deezer.live.xmpp.XmppLiveService">
+</service>
+<meta-data android:name="com.bumptech.glide.integration.okhttp3.OkHttpGlideModule" android:value="GlideModule">
+</meta-data>
+<activity android:exported="false" android:name="com.deezer.asclepios.ui.FeedbackActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<meta-data android:name="com.google.android.gms.cast.framework.OPTIONS_PROVIDER_CLASS_NAME" android:value="com.deezer.cast.CastOptionsProvider">
+</meta-data>
+<receiver android:enabled="false" android:name="com.deezer.cast.CastMediaReceiver">
+<intent-filter android:priority="1000">
+<action android:name="android.intent.action.MEDIA_BUTTON">
+</action>
+<action android:name="com.google.android.gms.cast.framework.action.DISCONNECT">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:exported="false" android:name="com.google.android.gms.cast.framework.media.MediaIntentReceiver">
+</receiver>
+<service android:exported="false" android:name="com.google.android.gms.cast.framework.media.MediaNotificationService">
+</service>
+<service android:exported="false" android:name="com.google.android.gms.cast.framework.ReconnectionService">
+</service>
+<activity android:configChanges="0x000004A0" android:name="com.facebook.ads.AudienceNetworkActivity">
+</activity>
+<activity android:name="com.facebook.CustomTabMainActivity">
+</activity>
+<activity android:name="com.facebook.CustomTabActivity">
+</activity>
+<activity android:configChanges="0x000005B0" android:name="com.android.billingclient.api.ProxyBillingActivity" android:theme="@android:01030010">
+</activity>
+<provider android:authorities="deezer.android.app.nobilling.lifecycle-process" android:exported="false" android:multiprocess="true" android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer">
+</provider>
+<activity android:excludeFromRecents="true" android:exported="false" android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity" android:theme="@android:01030010">
+</activity>
+<service android:exported="true" android:name="com.google.android.gms.auth.api.signin.RevocationBoundService" android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION">
+</service>
+<service android:exported="false" android:name="com.google.firebase.components.ComponentDiscoveryService">
+<meta-data android:name="com.google.firebase.components:com.google.firebase.dynamiclinks.internal.FirebaseDynamicLinkRegistrar" android:value="com.google.firebase.components.ComponentRegistrar">
+</meta-data>
+<meta-data android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar" android:value="com.google.firebase.components.ComponentRegistrar">
+</meta-data>
+<meta-data android:name="com.google.firebase.components:com.google.firebase.iid.Registrar" android:value="com.google.firebase.components.ComponentRegistrar">
+</meta-data>
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.tagmanager.TagManagerService">
+</service>
+<activity android:exported="true" android:name="com.google.android.gms.tagmanager.TagManagerPreviewActivity" android:noHistory="true">
+<intent-filter>
+<data android:scheme="tagmanager.c.deezer.android.app.nobilling">
+</data>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+</intent-filter>
+</activity>
+<service android:exported="false" android:name="com.google.firebase.messaging.FirebaseMessagingService">
+<intent-filter android:priority="-500">
+<action android:name="com.google.firebase.MESSAGING_EVENT">
+</action>
+</intent-filter>
+</service>
+<receiver android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+</intent-filter>
+</receiver>
+<activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:01030010">
+</activity>
+<provider android:authorities="deezer.android.app.nobilling.firebaseinitprovider" android:exported="false" android:initOrder="100" android:name="com.google.firebase.provider.FirebaseInitProvider">
+</provider>
+<activity android:configChanges="0x00000FB0" android:exported="false" android:name="com.google.android.gms.ads.AdActivity" android:theme="@android:0103000F">
+</activity>
+<receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementReceiver">
+</receiver>
+<receiver android:enabled="true" android:exported="true" android:name="com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver" android:permission="android.permission.INSTALL_PACKAGES">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementService">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementJobService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<provider android:authorities="deezer.android.app.nobilling.FacebookInitProvider" android:exported="false" android:name="com.facebook.internal.FacebookInitProvider">
+</provider>
+<receiver android:exported="false" android:name="com.facebook.CurrentAccessTokenExpirationBroadcastReceiver">
+<intent-filter>
+<action android:name="com.facebook.sdk.ACTION_CURRENT_ACCESS_TOKEN_CHANGED">
+</action>
+</intent-filter>
+</receiver>
+<service android:exported="false" android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery">
+<meta-data android:name="backend:com.google.android.datatransport.cct.CctBackendFactory" android:value="cct">
+</meta-data>
+</service>
+<service android:exported="false" android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<receiver android:exported="false" android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver">
+</receiver>
+<provider android:authorities="deezer.android.app.nobilling.crashlyticsinitprovider" android:exported="false" android:initOrder="90" android:name="com.crashlytics.android.CrashlyticsInitProvider">
+</provider>
+<activity android:configChanges="0x00000D80" android:name="com.smartadserver.android.library.ui.SASInterstitialActivity" android:theme="@7F130250">
+</activity>
+<provider android:authorities="deezer.android.app.nobilling.smartadserver.transparencyreport" android:exported="false" android:grantUriPermissions="true" android:name="androidx.core.content.FileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F160004">
+</meta-data>
+</provider>
+<service android:name="com.deezer.core.jukebox.JukeboxService" android:permission="android.permission.FOREGROUND_SERVICE">
+</service>
+<receiver android:name="com.deezer.core.jukebox.widget.JukeboxWidgetProvider">
+<intent-filter>
+<action android:name="android.appwidget.action.APPWIDGET_UPDATE">
+</action>
+</intent-filter>
+<meta-data android:name="android.appwidget.provider" android:resource="@7F160003">
+</meta-data>
+</receiver>
+<receiver android:name="com.deezer.core.jukebox.receivers.JukeboxMediaButtonReceiver">
+<intent-filter android:priority="1000">
+<action android:name="android.intent.action.MEDIA_BUTTON">
+</action>
+<action android:name="android.media.AUDIO_BECOMING_NOISY">
+</action>
+</intent-filter>
+</receiver>
+<service android:enabled="true" android:name="com.deezer.core.legacy.synchro.CacheMigrationService" android:permission="android.permission.FOREGROUND_SERVICE">
+</service>
+<receiver android:enabled="true" android:exported="true" android:name="com.appboy.receivers.AppboyActionReceiver">
+</receiver>
+<meta-data android:name="com.google.android.wearable.beta.app" android:resource="@7F160001">
+</meta-data>
+</application>
+</manifest>

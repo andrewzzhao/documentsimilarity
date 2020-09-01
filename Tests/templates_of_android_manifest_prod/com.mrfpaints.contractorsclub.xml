@@ -1,0 +1,242 @@
+<?xml version="1.0" ?><manifest android:versionCode="30" android:versionName="2.2.8" package="com.mrfpaints.contractorsclub" platformBuildVersionCode="25" platformBuildVersionName="7.1.1" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="17" android:targetSdkVersion="25">
+</uses-sdk>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-feature android:name="android.hardware.location.gps" android:required="true">
+</uses-feature>
+<meta-data android:name="android.support.VERSION" android:value="25.3.1">
+</meta-data>
+<uses-feature android:glEsVersion="0x00020000" android:required="true">
+</uses-feature>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE">
+</uses-permission>
+<permission android:name="com.mrfpaints.contractorsclub.permission.C2D_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="com.mrfpaints.contractorsclub.permission.C2D_MESSAGE">
+</uses-permission>
+<application android:allowBackup="true" android:fullBackupContent="true" android:icon="@7F030000" android:label="@7F080051" android:name="com.mrfpaints.contractorsclub.common.MRFApplication" android:supportsRtl="true" android:theme="@7F0B00AC">
+<activity android:configChanges="0x000000A0" android:launchMode="2" android:name="com.mrfpaints.contractorsclub.activities.SplashScreen" android:screenOrientation="1">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.mrfpaints.contractorsclub.activities.LoginSignup" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.mrfpaints.contractorsclub.activities.SignupActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:launchMode="2" android:name="com.mrfpaints.contractorsclub.activities.ExecutiveHomeActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.mrfpaints.contractorsclub.activities.LoginActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.mrfpaints.contractorsclub.activities.AddDealer" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.mrfpaints.contractorsclub.activities.AddPainter" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.mrfpaints.contractorsclub.activities.DealerDetails" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.mrfpaints.contractorsclub.activities.PainterDetails" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.mrfpaints.contractorsclub.activities.ProjectDetails" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.mrfpaints.contractorsclub.activities.AddProject" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.mrfpaints.contractorsclub.activities.ClaimDetails" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:launchMode="2" android:name="com.mrfpaints.contractorsclub.activities.PainterHomeActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:launchMode="2" android:name="com.mrfpaints.contractorsclub.activities.DealerHome" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.mrfpaints.contractorsclub.activities.PainterProjectDetails" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.mrfpaints.contractorsclub.activities.PainterAddClaim" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.mrfpaints.contractorsclub.activities.PainterClaimDetails" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.mrfpaints.contractorsclub.activities.DealerClaimDetails" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.mrfpaints.contractorsclub.activities.DealerPainterDetails" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.mrfpaints.contractorsclub.activities.ForgotPassword" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.mrfpaints.contractorsclub.activities.ResetPassword" android:screenOrientation="1">
+</activity>
+<service android:name="com.mrfpaints.contractorsclub.utils.MyFirebaseInstanceIDService" android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE">
+<intent-filter>
+<action android:name="com.google.firebase.INSTANCE_ID_EVENT">
+</action>
+</intent-filter>
+</service>
+<service android:name="com.mrfpaints.contractorsclub.utils.MyFirebaseMessagingService" android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE">
+<intent-filter>
+<action android:name="com.google.firebase.MESSAGING_EVENT">
+</action>
+</intent-filter>
+</service>
+<provider android:authorities="com.mrfpaints.contractorsclub" android:exported="false" android:grantUriPermissions="true" android:name="com.mrfpaints.contractorsclub.crop.GenericFileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F070009">
+</meta-data>
+</provider>
+<meta-data android:name="com.google.android.gms.version" android:value="@7F0A0008">
+</meta-data>
+<meta-data android:name="com.google.android.geo.API_KEY" android:value="@7F0800D2">
+</meta-data>
+<activity android:configChanges="0x000000A0" android:launchMode="2" android:name="com.mrfpaints.contractorsclub.activities.ZonalManagerHomeActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:launchMode="2" android:name="com.mrfpaints.contractorsclub.activities.AreaManagerHomeActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.mrfpaints.contractorsclub.activities.ZonalAreaManager" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.mrfpaints.contractorsclub.activities.ZonalAreaSalesHome" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.mrfpaints.contractorsclub.activities.AdminHomeActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.mrfpaints.contractorsclub.activities.AreaByZonal" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.mrfpaints.contractorsclub.activities.PainterRewards" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.mrfpaints.contractorsclub.activities.RegisterNewLocationActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.mrfpaints.contractorsclub.activities.RegisterHomeLocationActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.mrfpaints.contractorsclub.activities.SettingsActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.mrfpaints.contractorsclub.activities.RegisterDealerLocationActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.mrfpaints.contractorsclub.activities.RegisterOtherLocationActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.mrfpaints.contractorsclub.activities.FieldVisitListActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.mrfpaints.contractorsclub.activities.FieldVisitStartActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.mrfpaints.contractorsclub.activities.FieldVisitDestinationActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.mrfpaints.contractorsclub.activities.FieldVisitSummaryActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.mrfpaints.contractorsclub.activities.UpCountryVisitActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.mrfpaints.contractorsclub.activities.NewTravelActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.mrfpaints.contractorsclub.activities.FoodExpenseActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.mrfpaints.contractorsclub.crop.CropImageActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.mrfpaints.contractorsclub.activities.LocalConveyanceActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.mrfpaints.contractorsclub.activities.LodgingActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.mrfpaints.contractorsclub.activities.ClaimSubmissionActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.mrfpaints.contractorsclub.activities.ClaimNewTravelActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.mrfpaints.contractorsclub.activities.NewClaimDetailsActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.mrfpaints.contractorsclub.activities.MapViewActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.mrfpaints.contractorsclub.activities.DirectionActivity" android:screenOrientation="1">
+</activity>
+<service android:name="com.mrfpaints.contractorsclub.service.HaversineCalculatorService">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.mrfpaints.contractorsclub.service.LocationService" android:stopWithTask="false">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.mrfpaints.contractorsclub.service.CurrentLocationService" android:stopWithTask="false">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.mrfpaints.contractorsclub.service.GeofenceTransitionsIntentService" android:stopWithTask="false">
+</service>
+<activity android:configChanges="0x000000A0" android:name="com.mrfpaints.contractorsclub.activities.FieldAddOthers" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.mrfpaints.contractorsclub.activities.ClaimNewTravelSelfApproveActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.mrfpaints.contractorsclub.activities.LocalClaimDetailsActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.mrfpaints.contractorsclub.activities.FoodClaimDetailsActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.mrfpaints.contractorsclub.activities.LodgingClaimDetailsActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.mrfpaints.contractorsclub.activities.FoodAndLodgingActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.mrfpaints.contractorsclub.activities.ApprovalActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.mrfpaints.contractorsclub.activities.ClaimLocalConveyanceActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.mrfpaints.contractorsclub.activities.ClaimLocalConveyanceSelfApproveActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.mrfpaints.contractorsclub.activities.ClaimFoodLodgingActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.mrfpaints.contractorsclub.activities.FoodLodgingClaimDetailsActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.mrfpaints.contractorsclub.activities.ClaimFoodLodgingSelfApproveActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:excludeFromRecents="true" android:name="com.mrfpaints.contractorsclub.activities.DayCloseAlertActivity" android:screenOrientation="1" android:theme="@7F0B012A">
+</activity>
+<meta-data android:name="io.fabric.ApiKey" android:value="d7888e477bd6c40bf83aa144f8e9d40f266853f8">
+</meta-data>
+<activity android:excludeFromRecents="true" android:name="com.mrfpaints.contractorsclub.activities.DestinationReachedAlertActivity" android:theme="@7F0B012A">
+</activity>
+<activity android:name="com.mrfpaints.contractorsclub.activities.BarcodeScanner" android:screenOrientation="1">
+</activity>
+<provider android:authorities="com.mrfpaints.contractorsclub.crashlyticsinitprovider" android:exported="false" android:initOrder="100" android:name="com.crashlytics.android.CrashlyticsInitProvider">
+</provider>
+<service android:exported="true" android:name="com.google.firebase.messaging.FirebaseMessagingService">
+<intent-filter android:priority="-500">
+<action android:name="com.google.firebase.MESSAGING_EVENT">
+</action>
+</intent-filter>
+</service>
+<activity android:excludeFromRecents="true" android:exported="false" android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity" android:theme="@android:01030010">
+</activity>
+<service android:exported="true" android:name="com.google.android.gms.auth.api.signin.RevocationBoundService" android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION">
+</service>
+<activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:01030010">
+</activity>
+<receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementReceiver">
+</receiver>
+<receiver android:enabled="true" android:exported="true" android:name="com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver" android:permission="android.permission.INSTALL_PACKAGES">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementService">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementJobService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<receiver android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+<category android:name="com.mrfpaints.contractorsclub">
+</category>
+</intent-filter>
+</receiver>
+<receiver android:exported="false" android:name="com.google.firebase.iid.FirebaseInstanceIdInternalReceiver">
+</receiver>
+<service android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdService">
+<intent-filter android:priority="-500">
+<action android:name="com.google.firebase.INSTANCE_ID_EVENT">
+</action>
+</intent-filter>
+</service>
+<provider android:authorities="com.mrfpaints.contractorsclub.firebaseinitprovider" android:exported="false" android:initOrder="100" android:name="com.google.firebase.provider.FirebaseInitProvider">
+</provider>
+</application>
+</manifest>

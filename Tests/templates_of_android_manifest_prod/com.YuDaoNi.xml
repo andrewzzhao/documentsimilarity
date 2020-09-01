@@ -1,0 +1,184 @@
+<?xml version="1.0" ?><manifest android:installLocation="0" android:versionCode="65" android:versionName="2.18" package="com.YuDaoNi" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="15" android:targetSdkVersion="23">
+</uses-sdk>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.RECORD_AUDIO">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<permission android:name="com.YuDaoNi.permission.JPUSH_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="com.YuDaoNi.permission.JPUSH_MESSAGE">
+</uses-permission>
+<uses-feature android:name="android.hardware.camera" android:required="true">
+</uses-feature>
+<application android:allowBackup="true" android:hardwareAccelerated="true" android:icon="@7F0C0063" android:label="@7F0D0124" android:largeHeap="true" android:name="com.stub.StubApp" android:qihoo="activity" android:supportsRtl="true" android:theme="@7F0E0005">
+<activity android:configChanges="0x00000004" android:name="com.YuDaoNi.activity.SplashActivity" android:screenOrientation="1" android:theme="@7F0E0133">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:name="com.YuDaoNi.activity.AuthActivity" android:screenOrientation="1" android:theme="@7F0E0133">
+</activity>
+<activity android:name="com.YuDaoNi.activity.AlertDialogActivity" android:screenOrientation="1" android:theme="@7F0E013C">
+</activity>
+<activity android:launchMode="2" android:name="com.YuDaoNi.activity.YudaoniActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.YuDaoNi.activity.GalleryActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.YuDaoNi.activity.ShowImageActivity" android:screenOrientation="1" android:theme="@7F0E0133">
+</activity>
+<activity android:name="com.YuDaoNi.activity.CropImageActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.YuDaoNi.activity.ChatFileZoomActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.tencent.connect.common.AssistActivity" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<activity android:launchMode="2" android:name="com.tencent.tauth.AuthActivity" android:noHistory="true">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="tencent1104909809">
+</data>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000E0" android:exported="false" android:name="com.alipay.sdk.app.H5PayActivity" android:screenOrientation="3" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:configChanges="0x000000E0" android:exported="false" android:name="com.alipay.sdk.auth.AuthActivity" android:screenOrientation="3">
+</activity>
+<activity android:exported="true" android:name="com.YuDaoNi.wxapi.WXEntryActivity" android:theme="@android:01030055">
+</activity>
+<activity android:exported="true" android:launchMode="1" android:name="com.YuDaoNi.wxapi.WXPayEntryActivity" android:theme="@android:01030055">
+</activity>
+<activity android:exported="false" android:name="cn.jpush.android.ui.PopWinActivity" android:theme="@7F0E00BA">
+</activity>
+<activity android:configChanges="0x000000A0" android:exported="false" android:name="cn.jpush.android.ui.PushActivity" android:theme="@android:01030006">
+<intent-filter>
+<action android:name="cn.jpush.android.ui.PushActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="com.YuDaoNi">
+</category>
+</intent-filter>
+</activity>
+<service android:enabled="true" android:exported="false" android:name="cn.jpush.android.service.DownloadService">
+</service>
+<service android:name="cn.jpush.android.service.PushService" android:process=":mult">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.REGISTER">
+</action>
+<action android:name="cn.jpush.android.intent.REPORT">
+</action>
+<action android:name="cn.jpush.android.intent.PushService">
+</action>
+<action android:name="cn.jpush.android.intent.PUSH_TIME">
+</action>
+</intent-filter>
+</service>
+<service android:enabled="true" android:exported="true" android:name="cn.jpush.android.service.DaemonService">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.DaemonService">
+</action>
+<category android:name="com.YuDaoNi">
+</category>
+</intent-filter>
+</service>
+<receiver android:enabled="true" android:name="cn.jpush.android.service.PushReceiver">
+<intent-filter android:priority="1000">
+<action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY">
+</action>
+<category android:name="com.YuDaoNi">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.USER_PRESENT">
+</action>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_ADDED">
+</action>
+<action android:name="android.intent.action.PACKAGE_REMOVED">
+</action>
+<data android:scheme="package">
+</data>
+</intent-filter>
+</receiver>
+<receiver android:exported="false" android:name="cn.jpush.android.service.AlarmReceiver">
+</receiver>
+<receiver android:enabled="true" android:exported="false" android:name="com.YuDaoNi.receiver.MyReceiver">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.REGISTRATION">
+</action>
+<action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED">
+</action>
+<action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED">
+</action>
+<action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED">
+</action>
+<action android:name="cn.jpush.android.intent.CONNECTION">
+</action>
+<category android:name="com.YuDaoNi">
+</category>
+</intent-filter>
+</receiver>
+<meta-data android:name="JPUSH_CHANNEL" android:value="developer-default">
+</meta-data>
+<meta-data android:name="JPUSH_APPKEY" android:value="b7e9e0e51fab980611488dad">
+</meta-data>
+<meta-data android:name="UMENG_APPKEY" android:value="58049f03e0f55ab9ee000533">
+</meta-data>
+<meta-data android:name="UMENG_CHANNEL" android:value="YuDaoNi">
+</meta-data>
+<meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@7F0D0053">
+</meta-data>
+<provider android:authorities="com.facebook.app.FacebookContentProvider549592231911308" android:exported="true" android:name="com.facebook.FacebookContentProvider">
+</provider>
+<meta-data android:name="io.fabric.ApiKey" android:value="313eabf17c724bb1de40a5c3e1a20b8e0fdc09e1">
+</meta-data>
+<activity android:configChanges="0x000005B0" android:name="com.facebook.FacebookActivity" android:theme="@7F0E019C">
+</activity>
+<activity android:exported="true" android:name="com.facebook.CustomTabActivity">
+</activity>
+<activity android:name="com.facebook.CustomTabMainActivity">
+</activity>
+<activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:01030010">
+</activity>
+<meta-data android:name="com.google.android.gms.version" android:value="@7F0A0008">
+</meta-data>
+</application>
+</manifest>

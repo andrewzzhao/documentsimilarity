@@ -1,0 +1,90 @@
+<?xml version="1.0" ?><manifest android:versionCode="6" android:versionName="1.0.6" package="lmnp.wirtualnaapteczka" platformBuildVersionCode="25" platformBuildVersionName="7.1.1" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="17" android:targetSdkVersion="25">
+</uses-sdk>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-feature android:name="android.hardware.camera" android:required="true">
+</uses-feature>
+<meta-data android:name="android.support.VERSION" android:value="25.3.1">
+</meta-data>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE">
+</uses-permission>
+<permission android:name="lmnp.wirtualnaapteczka.permission.C2D_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="lmnp.wirtualnaapteczka.permission.C2D_MESSAGE">
+</uses-permission>
+<application android:allowBackup="true" android:icon="@7F030000" android:label="@7F07002B" android:supportsRtl="true" android:theme="@7F0900A7">
+<activity android:name="lmnp.wirtualnaapteczka.activity.LauncherActivity">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:name="lmnp.wirtualnaapteczka.activity.FirstTimeWelcomeActivity">
+</activity>
+<activity android:label="@7F07005D" android:name="lmnp.wirtualnaapteczka.activity.LogInActivity">
+</activity>
+<activity android:label="@7F070082" android:name="lmnp.wirtualnaapteczka.activity.RegistrationActivity">
+</activity>
+<activity android:name="lmnp.wirtualnaapteczka.activity.MainActivity">
+</activity>
+<activity android:label="@7F070052" android:name="lmnp.wirtualnaapteczka.activity.AddMedicineActivity">
+</activity>
+<activity android:label="@7F07005A" android:name="lmnp.wirtualnaapteczka.activity.MedicineListActivity">
+</activity>
+<activity android:label="@7F070087" android:name="lmnp.wirtualnaapteczka.activity.PasswordReminderActivity">
+</activity>
+<activity android:label="@7F070062" android:name="lmnp.wirtualnaapteczka.activity.PreviewPhotoActivity">
+</activity>
+<activity android:name="lmnp.wirtualnaapteczka.activity.WebViewActivity">
+</activity>
+<activity android:label="@7F070049" android:name="lmnp.wirtualnaapteczka.activity.FamilyActivity">
+</activity>
+<receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementReceiver">
+</receiver>
+<receiver android:enabled="true" android:exported="true" android:name="com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver" android:permission="android.permission.INSTALL_PACKAGES">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementService">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementJobService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<receiver android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+<category android:name="lmnp.wirtualnaapteczka">
+</category>
+</intent-filter>
+</receiver>
+<service android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdService">
+<intent-filter android:priority="-500">
+<action android:name="com.google.firebase.INSTANCE_ID_EVENT">
+</action>
+</intent-filter>
+</service>
+<activity android:excludeFromRecents="true" android:exported="true" android:launchMode="3" android:name="com.google.firebase.auth.internal.FederatedSignInActivity" android:permission="com.google.firebase.auth.api.gms.permission.LAUNCH_FEDERATED_SIGN_IN" android:theme="@android:01030010">
+</activity>
+<provider android:authorities="lmnp.wirtualnaapteczka.firebaseinitprovider" android:exported="false" android:initOrder="100" android:name="com.google.firebase.provider.FirebaseInitProvider">
+</provider>
+<activity android:excludeFromRecents="true" android:exported="false" android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity" android:theme="@android:01030010">
+</activity>
+<service android:exported="true" android:name="com.google.android.gms.auth.api.signin.RevocationBoundService" android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION">
+</service>
+<activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:01030010">
+</activity>
+<meta-data android:name="com.google.android.gms.version" android:value="@7F0B0006">
+</meta-data>
+</application>
+</manifest>

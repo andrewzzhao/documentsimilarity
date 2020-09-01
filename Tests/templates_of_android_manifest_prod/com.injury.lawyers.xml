@@ -1,0 +1,122 @@
+<?xml version="1.0" ?><manifest android:versionCode="4" android:versionName="4.2" package="com.injury.lawyers" platformBuildVersionCode="27" platformBuildVersionName="8.1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="15" android:targetSdkVersion="26">
+</uses-sdk>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE">
+</uses-permission>
+<permission android:name="com.video.players.overhot.permission.C2D_MESSAGEukzd" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="com.video.players.overhot.permission.C2D_MESSAGEukzd">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-permission android:name="com.sec.android.provider.badge.permission.READ">
+</uses-permission>
+<uses-permission android:name="com.sec.android.provider.badge.permission.WRITE">
+</uses-permission>
+<uses-permission android:name="com.htc.launcher.permission.READ_SETTINGS">
+</uses-permission>
+<uses-permission android:name="com.htc.launcher.permission.UPDATE_SHORTCUT">
+</uses-permission>
+<uses-permission android:name="com.sonyericsson.home.permission.BROADCAST_BADGE">
+</uses-permission>
+<uses-permission android:name="com.sonymobile.home.permission.PROVIDER_INSERT_BADGE">
+</uses-permission>
+<uses-permission android:name="com.anddoes.launcher.permission.UPDATE_COUNT">
+</uses-permission>
+<uses-permission android:name="com.majeur.launcher.permission.UPDATE_BADGE">
+</uses-permission>
+<uses-permission android:name="com.huawei.android.launcher.permission.CHANGE_BADGE">
+</uses-permission>
+<uses-permission android:name="com.huawei.android.launcher.permission.READ_SETTINGS">
+</uses-permission>
+<uses-permission android:name="com.huawei.android.launcher.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_APP_BADGE">
+</uses-permission>
+<uses-permission android:name="com.oppo.launcher.permission.READ_SETTINGS">
+</uses-permission>
+<uses-permission android:name="com.oppo.launcher.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="me.everything.badger.permission.BADGE_COUNT_READ">
+</uses-permission>
+<uses-permission android:name="me.everything.badger.permission.BADGE_COUNT_WRITE">
+</uses-permission>
+<application android:allowBackup="true" android:hardwareAccelerated="true" android:icon="@7F0C0000" android:label="@7F0E0025" android:supportsRtl="true" android:theme="@7F0F0006">
+<activity android:configChanges="0x00000480" android:hardwareAccelerated="true" android:label="@7F0E0025" android:name="com.video.players.overhot.MainActivity" android:theme="@7F0F0008">
+</activity>
+<activity android:name="com.video.players.overhot.IntroActivity">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<meta-data android:name="android.support.VERSION" android:value="26.1.0">
+</meta-data>
+<meta-data android:name="onesignal_app_id" android:value="1f43a42e-9f95-4fe9-a724-0cb14eb35a88">
+</meta-data>
+<meta-data android:name="onesignal_google_project_number" android:value="str:REMOTE">
+</meta-data>
+<receiver android:name="com.onesignal.GcmBroadcastReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+<intent-filter android:priority="999">
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+<category android:name="com.injury.lawyers">
+</category>
+</intent-filter>
+</receiver>
+<receiver android:name="com.onesignal.NotificationOpenedReceiver">
+</receiver>
+<service android:name="com.onesignal.GcmIntentService">
+</service>
+<service android:name="com.onesignal.GcmIntentJobService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<service android:name="com.onesignal.RestoreJobService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<service android:name="com.onesignal.RestoreKickoffJobService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<service android:name="com.onesignal.SyncService" android:stopWithTask="true">
+</service>
+<service android:name="com.onesignal.SyncJobService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<activity android:name="com.onesignal.PermissionsActivity" android:theme="@android:01030010">
+</activity>
+<service android:name="com.onesignal.NotificationRestoreService">
+</service>
+<receiver android:name="com.onesignal.BootUpReceiver">
+<intent-filter>
+<action android:name="android.intent.action.ACTION_BOOT_COMPLETED">
+</action>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+<action android:name="android.intent.action.QUICKBOOT_POWERON">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name="com.onesignal.UpgradeReceiver">
+<intent-filter>
+<action android:name="android.intent.action.MY_PACKAGE_REPLACED">
+</action>
+</intent-filter>
+</receiver>
+<activity android:configChanges="0x00000FB0" android:exported="false" android:name="com.google.android.gms.ads.AdActivity" android:theme="@android:0103000F">
+</activity>
+<activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:01030010">
+</activity>
+<meta-data android:name="com.google.android.gms.version" android:value="@7F090007">
+</meta-data>
+<meta-data android:name="android.arch.lifecycle.VERSION" android:value="27.0.0-SNAPSHOT">
+</meta-data>
+</application>
+</manifest>

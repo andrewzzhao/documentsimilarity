@@ -1,0 +1,106 @@
+<?xml version="1.0" ?><manifest android:versionCode="2" android:versionName="1.0.1" package="de.socialsweethearts.oopsiminlove" platformBuildVersionCode="24" platformBuildVersionName="7.000000" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="16" android:targetSdkVersion="23">
+</uses-sdk>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="com.android.vending.BILLING">
+</uses-permission>
+<permission android:name="de.socialsweethearts.permission.C2D_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="de.socialsweethearts.permission.C2D_MESSAGE">
+</uses-permission>
+<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="com.sec.android.provider.badge.permission.READ">
+</uses-permission>
+<uses-permission android:name="com.sec.android.provider.badge.permission.WRITE">
+</uses-permission>
+<uses-permission android:name="com.htc.launcher.permission.READ_SETTINGS">
+</uses-permission>
+<uses-permission android:name="com.htc.launcher.permission.UPDATE_SHORTCUT">
+</uses-permission>
+<uses-permission android:name="com.sonyericsson.home.permission.BROADCAST_BADGE">
+</uses-permission>
+<uses-permission android:name="com.anddoes.launcher.permission.UPDATE_COUNT">
+</uses-permission>
+<uses-permission android:name="com.majeur.launcher.permission.UPDATE_BADGE">
+</uses-permission>
+<application android:allowBackup="true" android:icon="@7F030005" android:label="@7F0700C2" android:name="de.socialsweethearts.storyclient.application.App" android:supportsRtl="true" android:theme="@7F090039">
+<activity android:hardwareAccelerated="true" android:label="@7F0700C2" android:name="de.socialsweethearts.storyclient.activity.MainActivity">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="oopsiminlove">
+</data>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000005B0" android:label="@7F0700C2" android:name="com.facebook.FacebookActivity" android:theme="@android:01030010">
+</activity>
+<meta-data android:name="com.facebook.sdk.ApplicationId" android:value="1778404359072435">
+</meta-data>
+<provider android:authorities="com.facebook.app.FacebookContentProvider1778404359072435" android:exported="true" android:name="com.facebook.FacebookContentProvider">
+</provider>
+<meta-data android:name="io.fabric.ApiKey" android:value="7a2ebee44a8f94a4245f0cfbef9e36804c749195">
+</meta-data>
+<meta-data android:name="AA_DB_NAME" android:value="sqlite.db">
+</meta-data>
+<meta-data android:name="AA_DB_VERSION" android:value="1">
+</meta-data>
+<meta-data android:name="AA_MODELS" android:value="de.socialsweethearts.storyclient.model.StoryElementHistory">
+</meta-data>
+<service android:name="de.socialsweethearts.storyclient.services.IsWaitingNotificationService">
+</service>
+<service android:name="de.socialsweethearts.storyclient.services.IsAwaitingResponseNotificationService">
+</service>
+<activity android:configChanges="0x000004A0" android:name="com.jirbo.adcolony.AdColonyOverlay" android:theme="@android:01030011">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.jirbo.adcolony.AdColonyFullscreen" android:theme="@android:0103000A">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.jirbo.adcolony.AdColonyBrowser" android:theme="@android:0103000A">
+</activity>
+<meta-data android:name="onesignal_app_id" android:value="893fe04d-a7f7-44c5-891b-e24666dbc1c8">
+</meta-data>
+<meta-data android:name="onesignal_google_project_number" android:value="str:218230817619">
+</meta-data>
+<receiver android:name="com.onesignal.GcmBroadcastReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+<category android:name="de.socialsweethearts">
+</category>
+</intent-filter>
+</receiver>
+<receiver android:name="com.onesignal.NotificationOpenedReceiver">
+</receiver>
+<service android:name="com.onesignal.GcmIntentService">
+</service>
+<service android:name="com.onesignal.SyncService" android:stopWithTask="false">
+</service>
+<activity android:name="com.onesignal.PermissionsActivity" android:theme="@android:01030010">
+</activity>
+<activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:01030010">
+</activity>
+<meta-data android:name="com.google.android.gms.version" android:value="@7F0C0005">
+</meta-data>
+<activity android:configChanges="0x00000FB0" android:name="com.google.android.gms.ads.AdActivity" android:theme="@android:0103000F">
+</activity>
+<activity android:name="com.google.android.gms.ads.purchase.InAppPurchaseActivity" android:theme="@7F09012D">
+</activity>
+</application>
+</manifest>

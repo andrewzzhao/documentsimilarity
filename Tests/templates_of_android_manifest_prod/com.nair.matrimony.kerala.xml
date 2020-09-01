@@ -1,0 +1,108 @@
+<?xml version="1.0" ?><manifest android:versionCode="5" android:versionName="1.0.0.5" package="com.nair.matrimony.kerala" platformBuildVersionCode="23" platformBuildVersionName="6.0-2704002" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="9" android:targetSdkVersion="23">
+</uses-sdk>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-permission android:name="com.android.alarm.permission.SET_ALARM">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_SMS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_SMS">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<permission android:name="com.nair.matrimony.kerala.permission.C2D_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="com.nair.matrimony.kerala.permission.C2D_MESSAGE">
+</uses-permission>
+<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<application android:allowBackup="true" android:icon="@7F02001F" android:label="@7F07002C" android:name="com.nair.matrimony.kerala.MlApplication" android:theme="@7F060007">
+<activity android:label="@7F07002C" android:name="com.nair.matrimony.kerala.MainActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:label="@7F07002C" android:name="com.nair.matrimony.kerala.MlWebView" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F07002C" android:name="com.nair.matrimony.kerala.OpenActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="www.malayogamonline.com" android:scheme="https">
+</data>
+</intent-filter>
+</activity>
+<activity android:label="@7F07002C" android:name="com.nair.matrimony.kerala.NoInternetConnection" android:screenOrientation="1">
+</activity>
+<meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@7F070038">
+</meta-data>
+<meta-data android:name="com.google.android.gms.version" android:value="@7F0A0000">
+</meta-data>
+<receiver android:enabled="true" android:name="com.google.android.gms.analytics.AnalyticsReceiver">
+<intent-filter>
+<action android:name="com.google.android.gms.analytics.ANALYTICS_DISPATCH">
+</action>
+</intent-filter>
+</receiver>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.analytics.AnalyticsService">
+</service>
+<service android:name="com.google.android.gms.analytics.CampaignTrackingService">
+</service>
+<receiver android:enabled="false" android:name="com.nair.matrimony.kerala.DeviceBootReceiver">
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+<category android:name="android.intent.category.HOME">
+</category>
+</intent-filter>
+</receiver>
+<receiver android:exported="true" android:name="com.nair.matrimony.kerala.ReferrerReceiver">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name="com.google.android.gcm.GCMBroadcastReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+<action android:name="com.google.android.c2dm.intent.REGISTRATION">
+</action>
+<category android:name="com.nair.matrimony.kerala">
+</category>
+</intent-filter>
+</receiver>
+<receiver android:name="com.nair.matrimony.kerala.SmsReceiver">
+<intent-filter>
+<action android:name="android.provider.Telephony.SMS_RECEIVED">
+</action>
+</intent-filter>
+</receiver>
+<service android:name="com.nair.matrimony.kerala.MlServices">
+</service>
+<service android:name="com.nair.matrimony.kerala.GCMIntentService">
+</service>
+<meta-data android:name="search-engine" android:resource="@7F040001">
+</meta-data>
+</application>
+</manifest>

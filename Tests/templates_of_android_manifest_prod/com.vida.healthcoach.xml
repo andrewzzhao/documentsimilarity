@@ -1,0 +1,432 @@
+<?xml version="1.0" ?><manifest android:compileSdkVersion="29" android:compileSdkVersionCodename="10" android:versionCode="22446" android:versionName="2.2.446" package="com.vida.healthcoach" platformBuildVersionCode="29" platformBuildVersionName="10" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="21" android:targetSdkVersion="28">
+</uses-sdk>
+<uses-feature android:glEsVersion="0x00020000" android:required="true">
+</uses-feature>
+<uses-feature android:name="android.hardware.camera" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.camera.any" android:required="true">
+</uses-feature>
+<uses-feature android:name="android.hardware.camera.autofocus" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.camera.front" android:required="false">
+</uses-feature>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.RECORD_AUDIO">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.BLUETOOTH">
+</uses-permission>
+<uses-permission android:name="android.permission.BROADCAST_STICKY">
+</uses-permission>
+<uses-permission android:name="android.permission.BLUETOOTH_ADMIN">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.FOREGROUND_SERVICE">
+</uses-permission>
+<uses-permission android:name="android.permission.USE_FULL_SCREEN_INTENT">
+</uses-permission>
+<uses-permission-sdk-23 android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission-sdk-23>
+<uses-permission-sdk-23 android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission-sdk-23>
+<uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE">
+</uses-permission>
+<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-feature android:name="android.hardware.wifi" android:required="false">
+</uses-feature>
+<uses-permission android:name="android.permission.BLUETOOTH_PRIVILEGED">
+</uses-permission>
+<uses-feature android:name="android.hardware.bluetooth" android:required="false">
+</uses-feature>
+<application android:allowBackup="false" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:icon="@7F100002" android:label="@7F140051" android:name="com.vida.healthcoach.VidaApplication" android:supportsRtl="true" android:theme="@7F15032E" android:usesCleartextTraffic="true">
+<activity android:label="@7F140051" android:launchMode="2" android:name="com.vida.healthcoach.StartupActivity" android:screenOrientation="1" android:showWhenLocked="true" android:theme="@7F150226" android:turnScreenOn="true">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="vidahealthcoach">
+</data>
+</intent-filter>
+<intent-filter android:autoVerify="true">
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="dl4n-alternate.app.link" android:scheme="https">
+</data>
+<data android:host="get.vida.co" android:scheme="https">
+</data>
+</intent-filter>
+</activity>
+<activity android:label="@7F140051" android:name="com.vida.client.view.GenericWebViewActivity" android:screenOrientation="1" android:theme="@7F150335">
+</activity>
+<activity android:label="@7F1404A7" android:name="com.vida.healthcoach.survey.SurveyActivity" android:screenOrientation="1" android:theme="@7F150335" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:name="com.vida.client.today.MetricScreenRouterActivity" android:screenOrientation="1" android:theme="@7F1501E2" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:label="@7F1402FC" android:name="com.vida.healthcoach.login.LoginActivity" android:screenOrientation="1" android:theme="@7F1501C8">
+</activity>
+<activity android:label="@7F1404A7" android:name="com.vida.healthcoach.messaging.MessagingActivity" android:screenOrientation="1" android:theme="@7F150334" android:windowSoftInputMode="0x00000020">
+<intent-filter>
+<action android:name="android.intent.action.SEND">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:mimeType="image/*">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.SEND">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:mimeType="text/plain">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.SEND_MULTIPLE">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:mimeType="image/*">
+</data>
+</intent-filter>
+</activity>
+<activity android:label="Vida Debug" android:name="com.vida.client.schedule_consultation.ScheduleConsultationContainerActivity" android:screenOrientation="1" android:theme="@7F150335" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:label="@7F140051" android:name="com.vida.client.registration.view.RegistrationActivity" android:screenOrientation="1" android:theme="@7F150335" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:label="@7F1404A7" android:launchMode="1" android:name="com.vida.client.twilio.TwilioActivity" android:screenOrientation="1" android:showWhenLocked="true" android:theme="@7F150335">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F1404A7" android:name="com.vida.client.view.view.FullscreenVideoPlayerActivity" android:theme="@7F150333">
+</activity>
+<activity android:label="@7F1404A7" android:name="com.vida.client.view.view.VideoPlayerActivity" android:theme="@7F150376">
+</activity>
+<activity android:name="com.vida.client.programs.view.ProgramUnitInstanceActivity" android:parentActivityName="com.vida.healthcoach.messaging.MessagingActivity" android:screenOrientation="1" android:theme="@7F150335">
+</activity>
+<activity android:label="@7F1404A7" android:name="com.vida.client.coachmatching.view.CoachMatchingActivity" android:screenOrientation="1" android:theme="@7F150335" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:label="@7F1404A7" android:name="com.vida.client.tagging.view.TagsSearchActivity" android:screenOrientation="1" android:theme="@7F150335" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.vida.client.paywall.PaywallActivity" android:screenOrientation="1" android:theme="@7F150335">
+</activity>
+<activity android:name="com.vida.client.validic.vitalsnap.view.VitalSnapOcrActivity" android:screenOrientation="1" android:theme="@7F1501E2">
+</activity>
+<activity android:name="com.vida.client.view.view.CroppedPhotoViewerActivity" android:screenOrientation="1" android:theme="@7F1501C0">
+</activity>
+<activity android:name="com.vida.client.goals.view.GoalsActivity" android:screenOrientation="1" android:theme="@7F150335" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.vida.client.validic.ValidicScreenRouterActivity" android:screenOrientation="1" android:theme="@7F1501E1">
+</activity>
+<activity android:name="com.vida.client.validic.ble.view.BleActivity" android:screenOrientation="1" android:theme="@7F150186">
+</activity>
+<activity android:name="com.vida.client.connectDevicesApps.view.ConnectDevicesAppsContainerActivity" android:screenOrientation="1" android:theme="@7F150335" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.vida.client.tracking.view.UpdateTrackedMetricActivity" android:screenOrientation="1" android:theme="@7F1501C7">
+</activity>
+<activity android:label="@7F140131" android:name="com.vida.client.debug.DebugConsoleActivity" android:screenOrientation="1" android:theme="@7F150335">
+</activity>
+<activity android:name="com.vida.client.habit.view.HabitDetailsContainerActivity" android:screenOrientation="1" android:theme="@7F1501C1" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.vida.client.habit.view.EditHabitContainerActivity" android:screenOrientation="1" android:theme="@7F150335">
+</activity>
+<activity android:name="com.vida.client.habit.view.AddHabitContainerActivity" android:screenOrientation="1" android:theme="@7F150335">
+</activity>
+<activity android:name="com.vida.client.habit.view.SearchHabitChoiceActivity" android:screenOrientation="1" android:theme="@7F150335">
+</activity>
+<activity android:name="com.vida.client.programs.view.ProgramsContainerActivity" android:screenOrientation="1" android:theme="@7F150335">
+</activity>
+<activity android:name="com.vida.client.view.view.ContentCardActivity" android:screenOrientation="1" android:theme="@7F150334">
+</activity>
+<activity android:name="com.vida.client.view.ShareVidaActivity" android:screenOrientation="1" android:theme="@7F150335">
+</activity>
+<activity android:configChanges="0x000005B0" android:label="@7F140051" android:name="com.facebook.FacebookActivity" android:theme="@7F1504BB">
+</activity>
+<activity android:exported="true" android:name="com.facebook.CustomTabActivity">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="@7F1401BD">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="cct.com.vida.healthcoach" android:scheme="fbconnect">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.vida.client.verification.view.UserVerificationContainerActivity" android:screenOrientation="1" android:theme="@7F150335">
+</activity>
+<activity android:name="com.vida.client.now.view.ActionHeroScreenRouterActivity" android:screenOrientation="1" android:theme="@7F150334">
+</activity>
+<activity android:name="com.vida.client.questionnaire.view.QuestionnaireActivity" android:screenOrientation="1" android:theme="@7F150335">
+</activity>
+<activity android:name="com.vida.client.onboarding.EligibilityActivity" android:screenOrientation="1" android:theme="@7F1501E1" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:name="com.vida.client.nutrition.NutritionActivity" android:screenOrientation="1" android:theme="@7F150374" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:name="com.vida.client.behavior_home.view.BehaviorHomeContainerActivity" android:screenOrientation="1" android:theme="@7F150335" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="zendesk.answerbot.AnswerBotActivity" android:screenOrientation="1" android:theme="@7F1504AA">
+</activity>
+<activity android:label="@7F14047C" android:name="zendesk.support.guide.HelpCenterActivity" android:screenOrientation="1" android:theme="@7F1504AA" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:configChanges="0x00000480" android:label="@7F14054F" android:name="zendesk.support.guide.ViewArticleActivity" android:screenOrientation="1" android:theme="@7F1504AA">
+</activity>
+<activity android:name="zendesk.support.request.RequestActivity" android:screenOrientation="1" android:theme="@7F1504AA" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:label="@7F1403F9" android:name="zendesk.support.requestlist.RequestListActivity" android:screenOrientation="1" android:theme="@7F1504AA">
+</activity>
+<activity android:launchMode="1" android:name="com.vida.client.nutrition.barcode.BarcodeScanningActivity" android:screenOrientation="1" android:theme="@7F1501E2">
+</activity>
+<activity android:name="com.vida.client.habit.view.MyHabitsContainerActivity" android:screenOrientation="1" android:theme="@7F150335">
+</activity>
+<activity android:label="@7F140051" android:name="com.vida.client.documents.view.PDFViewerActivity" android:screenOrientation="1" android:theme="@7F150335">
+</activity>
+<meta-data android:name="io.branch.sdk.BranchKey" android:value="key_live_bmklZKpU1nqKyz6qFEWsPncpngfMQGBv">
+</meta-data>
+<meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@7F1401B7">
+</meta-data>
+<meta-data android:name="io.fabric.ApiKey" android:value="1cd86f54bdf9bfbe871e6e7d16d684db4417a723">
+</meta-data>
+<provider android:authorities="com.vida.healthcoach.fileprovider" android:exported="false" android:grantUriPermissions="true" android:name="androidx.core.content.FileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F180001">
+</meta-data>
+</provider>
+<receiver android:exported="false" android:name="com.vida.client.navigation.BrazeBroadcastReceiver">
+<intent-filter>
+<action android:name="com.vida.healthcoach.intent.APPBOY_PUSH_RECEIVED">
+</action>
+<action android:name="com.vida.healthcoach.intent.APPBOY_NOTIFICATION_OPENED">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:exported="false" android:name="com.vida.client.view.ReferralsFragment$ReferralsBroadcastReceiver">
+</receiver>
+<service android:name="com.vida.healthcoach.fcm.FcmListenerService">
+<intent-filter>
+<action android:name="com.google.firebase.MESSAGING_EVENT">
+</action>
+</intent-filter>
+</service>
+<service android:name="com.vida.healthcoach.notification.NotificationIntentService">
+</service>
+<service android:exported="false" android:name="com.vida.client.twilio.TwilioService" android:stopWithTask="true">
+</service>
+<uses-library android:name="org.apache.http.legacy" android:required="false">
+</uses-library>
+<receiver android:exported="false" android:name="zendesk.support.DeepLinkingBroadcastReceiver">
+<intent-filter>
+<action android:name="zendesk.support">
+</action>
+</intent-filter>
+</receiver>
+<provider android:authorities="com.vida.healthcoach.zendesk.support.SupportSdkStartupProvider" android:enabled="true" android:exported="false" android:name="zendesk.support.SupportSdkStartupProvider">
+</provider>
+<activity android:name="zendesk.answerbot.AnswerBotArticleActivity">
+</activity>
+<provider android:authorities="com.vida.healthcoach.zendesk.answerbot.AnswerBotSdkStartupProvider" android:enabled="true" android:exported="false" android:name="zendesk.answerbot.AnswerBotSdkStartupProvider">
+</provider>
+<activity android:name="com.facebook.CustomTabMainActivity">
+</activity>
+<activity android:name="com.appboy.ui.AppboyWebViewActivity">
+</activity>
+<activity android:name="com.appboy.ui.activities.AppboyFeedActivity">
+</activity>
+<activity android:name="com.appboy.ui.activities.AppboyContentCardsActivity">
+</activity>
+<activity android:name="com.appboy.push.AppboyNotificationRoutingActivity" android:theme="@android:01030010">
+</activity>
+<receiver android:exported="false" android:name="com.appboy.AppboyFcmReceiver">
+</receiver>
+<activity android:name="com.linkedin.android.shaky.FeedbackActivity">
+</activity>
+<provider android:authorities="com.vida.healthcoach.materialcalendarviewinitprovider" android:enabled="true" android:exported="false" android:name="com.prolificinteractive.materialcalendarview.MaterialCalendarViewInitProvider">
+</provider>
+<activity android:exported="false" android:label="" android:name="pub.devrel.easypermissions.AppSettingsDialogHolderActivity" android:theme="@7F15019D">
+</activity>
+<receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementReceiver">
+</receiver>
+<receiver android:enabled="true" android:exported="true" android:name="com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver" android:permission="android.permission.INSTALL_PACKAGES">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementService">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementJobService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<service android:exported="false" android:name="com.google.firebase.messaging.FirebaseMessagingService">
+<intent-filter android:priority="-500">
+<action android:name="com.google.firebase.MESSAGING_EVENT">
+</action>
+</intent-filter>
+</service>
+<service android:directBootAware="true" android:exported="false" android:name="com.google.firebase.components.ComponentDiscoveryService">
+<meta-data android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar" android:value="com.google.firebase.components.ComponentRegistrar">
+</meta-data>
+<meta-data android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar" android:value="com.google.firebase.components.ComponentRegistrar">
+</meta-data>
+<meta-data android:name="com.google.firebase.components:com.google.firebase.ml.vision.VisionRegistrar" android:value="com.google.firebase.components.ComponentRegistrar">
+</meta-data>
+<meta-data android:name="com.google.firebase.components:com.google.firebase.ml.common.CommonComponentRegistrar" android:value="com.google.firebase.components.ComponentRegistrar">
+</meta-data>
+<meta-data android:name="com.google.firebase.components:com.google.firebase.iid.Registrar" android:value="com.google.firebase.components.ComponentRegistrar">
+</meta-data>
+<meta-data android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar" android:value="com.google.firebase.components.ComponentRegistrar">
+</meta-data>
+<meta-data android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar" android:value="com.google.firebase.components.ComponentRegistrar">
+</meta-data>
+</service>
+<receiver android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+</intent-filter>
+</receiver>
+<provider android:authorities="com.vida.healthcoach.FacebookInitProvider" android:exported="false" android:name="com.facebook.internal.FacebookInitProvider">
+</provider>
+<receiver android:exported="false" android:name="com.facebook.CurrentAccessTokenExpirationBroadcastReceiver">
+<intent-filter>
+<action android:name="com.facebook.sdk.ACTION_CURRENT_ACCESS_TOKEN_CHANGED">
+</action>
+</intent-filter>
+</receiver>
+<provider android:authorities="com.vida.healthcoach.belvedere2.attachments" android:exported="false" android:grantUriPermissions="true" android:name="zendesk.belvedere.BelvedereFileProvider" android:readPermission="true">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F180000">
+</meta-data>
+</provider>
+<provider android:authorities="com.vida.healthcoach.firebaseinitprovider" android:exported="false" android:initOrder="100" android:name="com.google.firebase.provider.FirebaseInitProvider">
+</provider>
+<activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:01030010">
+</activity>
+<meta-data android:name="com.google.android.gms.version" android:value="@7F0C0017">
+</meta-data>
+<provider android:authorities="com.vida.healthcoach.workmanager-init" android:directBootAware="false" android:enabled="true" android:exported="false" android:initOrder="99" android:multiprocess="true" android:name="androidx.work.impl.WorkManagerInitializer">
+</provider>
+<service android:directBootAware="false" android:enabled="@7F050006" android:exported="false" android:name="androidx.work.impl.background.systemalarm.SystemAlarmService">
+</service>
+<service android:directBootAware="false" android:enabled="@7F050008" android:exported="true" android:name="androidx.work.impl.background.systemjob.SystemJobService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<service android:directBootAware="false" android:enabled="@7F050007" android:exported="false" android:name="androidx.work.impl.foreground.SystemForegroundService">
+</service>
+<receiver android:directBootAware="false" android:enabled="true" android:exported="false" android:name="androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver">
+</receiver>
+<receiver android:directBootAware="false" android:enabled="false" android:exported="false" android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryChargingProxy">
+<intent-filter>
+<action android:name="android.intent.action.ACTION_POWER_CONNECTED">
+</action>
+<action android:name="android.intent.action.ACTION_POWER_DISCONNECTED">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:directBootAware="false" android:enabled="false" android:exported="false" android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryNotLowProxy">
+<intent-filter>
+<action android:name="android.intent.action.BATTERY_OKAY">
+</action>
+<action android:name="android.intent.action.BATTERY_LOW">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:directBootAware="false" android:enabled="false" android:exported="false" android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$StorageNotLowProxy">
+<intent-filter>
+<action android:name="android.intent.action.DEVICE_STORAGE_LOW">
+</action>
+<action android:name="android.intent.action.DEVICE_STORAGE_OK">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:directBootAware="false" android:enabled="false" android:exported="false" android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$NetworkStateProxy">
+<intent-filter>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:directBootAware="false" android:enabled="false" android:exported="false" android:name="androidx.work.impl.background.systemalarm.RescheduleReceiver">
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+<action android:name="android.intent.action.TIME_SET">
+</action>
+<action android:name="android.intent.action.TIMEZONE_CHANGED">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:directBootAware="false" android:enabled="@7F050006" android:exported="false" android:name="androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver">
+<intent-filter>
+<action android:name="androidx.work.impl.background.systemalarm.UpdateProxies">
+</action>
+</intent-filter>
+</receiver>
+<service android:exported="false" android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery">
+<meta-data android:name="backend:com.google.android.datatransport.cct.CctBackendFactory" android:value="cct">
+</meta-data>
+</service>
+<service android:exported="false" android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<receiver android:exported="false" android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver">
+</receiver>
+<service android:exported="false" android:name="androidx.room.MultiInstanceInvalidationService">
+</service>
+<provider android:authorities="com.vida.healthcoach.lifecycle-process" android:exported="false" android:multiprocess="true" android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer">
+</provider>
+<activity android:name="com.validic.mobile.ocr.ValidicOCRActivity" android:screenOrientation="1">
+</activity>
+<service android:exported="false" android:name="com.validic.mobile.ble.BluetoothScanningService">
+</service>
+<receiver android:name="com.validic.mobile.ble.BackgroundBluetoothScanReceiver">
+</receiver>
+<receiver android:exported="true" android:name="com.kochava.base.ReferralReceiver" android:priority="999">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+<provider android:authorities="com.vida.healthcoach.crashlyticsinitprovider" android:exported="false" android:initOrder="90" android:name="com.crashlytics.android.CrashlyticsInitProvider">
+</provider>
+<receiver android:enabled="true" android:exported="true" android:name="com.appboy.receivers.AppboyActionReceiver">
+</receiver>
+</application>
+</manifest>

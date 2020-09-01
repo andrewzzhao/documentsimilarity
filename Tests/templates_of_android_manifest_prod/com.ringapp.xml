@@ -1,0 +1,1344 @@
+<?xml version="1.0" ?><manifest android:compileSdkVersion="28" android:compileSdkVersionCodename="9" android:versionCode="26037728" android:versionName="3.15.1" package="com.ringapp" platformBuildVersionCode="28" platformBuildVersionName="9" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="21" android:targetSdkVersion="28">
+</uses-sdk>
+<permission android:name="com.ringapp.permission.CONNECT_TO_DOORBOT_NETWORK" android:protectionLevel="0x00000002">
+</permission>
+<permission android:name="com.ringapp.permission.DOORBOT_APP" android:protectionLevel="0x00000002">
+</permission>
+<permission android:name="com.ringapp.permission.C2D_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="com.ringapp.permission.CONNECT_TO_DOORBOT_NETWORK">
+</uses-permission>
+<uses-permission android:name="com.ringapp.permission.DOORBOT_APP">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_CONTACTS">
+</uses-permission>
+<uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.RECORD_AUDIO">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.BLUETOOTH">
+</uses-permission>
+<uses-permission android:name="android.permission.BLUETOOTH_ADMIN">
+</uses-permission>
+<uses-permission android:name="android.permission.BLUETOOTH_PRIVILEGED">
+</uses-permission>
+<uses-permission android:name="android.permission.BROADCAST_STICKY">
+</uses-permission>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE">
+</uses-permission>
+<uses-permission android:name="com.ringapp.permission.C2D_MESSAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_LOGS">
+</uses-permission>
+<uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION">
+</uses-permission>
+<uses-permission android:name="android.permission.FOREGROUND_SERVICE">
+</uses-permission>
+<uses-feature android:glEsVersion="0x00020000" android:required="true">
+</uses-feature>
+<uses-feature android:name="android.hardware.bluetooth" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.camera" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.location.gps" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.camera.front" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.camera.autofocus" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.camera.flash" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.screen.landscape" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.wifi" android:required="false">
+</uses-feature>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_CONTACTS">
+</uses-permission>
+<uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE">
+</uses-permission>
+<application android:allowBackup="false" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:hardwareAccelerated="true" android:icon="@7F0F0001" android:label="@7F13183A" android:largeHeap="true" android:name="com.ringapp.RingApplication" android:networkSecurityConfig="@7F170001" android:resizeableActivity="false" android:supportsRtl="true" android:theme="@7F14019A">
+<activity android:launchMode="2" android:name="com.ring.launch.LaunchActivity" android:screenOrientation="1" android:theme="@7F1401A7" android:windowSoftInputMode="0x00000020">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<data android:scheme="ring://">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="com.ring.LAUNCH_RING">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:launchMode="2" android:name="com.ringapp.ui.activities.LoginActivity" android:screenOrientation="1" android:theme="@7F1401A7" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:name="com.ringapp.ui.activities.SplashActivity" android:noHistory="true" android:screenOrientation="1" android:theme="@7F1401A7" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:name="com.ring.secure.feature.location.LocationFeatureIntroductionActivity" android:screenOrientation="1" android:theme="@7F140163" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:name="com.ring.launch.LaunchErrorActivity" android:screenOrientation="1" android:theme="@7F140163" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:name="com.ringapp.ui.activities.AccountSettingsActivity" android:screenOrientation="1" android:theme="@7F1401AC">
+</activity>
+<activity android:name="com.ringapp.ui.activities.ChangeNameActivity" android:screenOrientation="1" android:theme="@7F1401AC">
+</activity>
+<activity android:name="com.ringapp.ui.activities.ChangePasswordActivity" android:screenOrientation="1" android:theme="@7F1401AC">
+</activity>
+<activity android:name="com.ringapp.ui.activities.ChangePhoneActivity" android:screenOrientation="1" android:theme="@7F1401AC">
+</activity>
+<activity android:name="com.ringapp.ui.activities.DeviceMoreSettingsActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ringapp.ui.activities.DevicesLinkedToChimeActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ringapp.ui.activities.ChimesLinkedToDeviceActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ringapp.ui.activities.MyPlanActivity" android:screenOrientation="1" android:theme="@7F1401AC">
+</activity>
+<activity android:name="com.ringapp.ui.activities.MotionZonesActivity" android:screenOrientation="0">
+</activity>
+<activity android:name="com.ringapp.ui.activities.MotionsSettingsActivity" android:screenOrientation="1" android:theme="@7F1401AC">
+</activity>
+<activity android:name="com.ringapp.ui.activities.DpdMotionsSettingsActivity" android:screenOrientation="1" android:theme="@7F1401AC">
+</activity>
+<activity android:name="com.ringapp.ui.activities.AppAlertTonesActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ringapp.ui.activities.AlertNotificationChannelsActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ringapp.ui.activities.MotionSnoozeProfileActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ringapp.ui.activities.MotionSnoozeProfileActivityV2" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ringapp.ui.activities.MotionFrequencySetupActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ringapp.ui.activities.SharedUsersActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ringapp.ui.activities.AddSharedUserActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ringapp.ui.activities.SharedUserProfileActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ringapp.sharedusertutorial.ui.SharedUserSetupActivityV2" android:screenOrientation="1" android:theme="@7F1401AC">
+</activity>
+<activity android:name="com.ringapp.sharedusertutorial.ui.SharedUserSetupSuccessActivity" android:screenOrientation="1" android:theme="@7F1401AC">
+</activity>
+<activity android:name="com.ringapp.sharedusertutorial.ui.AddNewSharedUserActivity" android:screenOrientation="1" android:theme="@7F1401AC" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.ringapp.ui.activities.DeviceRecentActivityActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ringapp.ui.activities.WebViewActivity">
+</activity>
+<activity android:name="com.ringapp.ui.activities.GetDingActivity" android:theme="@7F14027F">
+</activity>
+<activity android:launchMode="1" android:name="com.ringapp.onboarding.email_verification.ui.VerifyEmailActivity" android:screenOrientation="1" android:theme="@7F1401AC">
+</activity>
+<activity android:name="com.ringapp.onboarding.email_verification.ui.EmailNotArrivedActivity" android:noHistory="true" android:parentActivityName="com.ringapp.onboarding.email_verification.ui.VerifyEmailActivity" android:screenOrientation="1" android:theme="@7F1401AC">
+</activity>
+<activity android:name="com.ringapp.onboarding.email_verification.ui.VerifyEmailActionActivity" android:screenOrientation="1" android:theme="@7F1401AC">
+</activity>
+<activity android:name="com.ringapp.ui.activities.EnterManualNameSetupActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ringapp.ui.activities.EnterManualAddressActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ringapp.ui.activities.DoorbotFirstTimeSetupActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ringapp.ui.activities.RingResetButtonSetupActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ringapp.ui.activities.ChimeProPlacementSetupActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ringapp.ui.activities.ChimePlugInSetupActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ringapp.ui.activities.ChimeBlinkLogoSetupActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ringapp.ui.activities.ConnectToRingSetupActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ringapp.ui.activities.CheckRingLastStatusSetupActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ringapp.ui.activities.GenericErrorSetupActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ringapp.ui.activities.FailedSetupLightPatternActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ringapp.ui.activities.SelectRingWifiSetupActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ringapp.ui.activities.StopBlinkingWarningSetupActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ringapp.ui.activities.ManualConnectToRingSetupActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ringapp.ui.activities.EnterWifiPasswordSetupActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ringapp.ui.activities.WEPWifiPasswordSetupActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ringapp.ui.activities.PostNetworkToRingSetupActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ringapp.ui.activities.RestoreInternetConnectionSetupActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ringapp.ui.activities.ValidateSetupActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ringapp.ui.activities.SuccessSetupActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ringapp.ui.activities.SharedUserSetup" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ringapp.ui.activities.SetNameSetupActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ringapp.ui.activities.CheckRingIsInAPModeSetupActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ringapp.ui.activities.AdvancedPasswordOptionsSetupActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ringapp.ui.activities.RingPlusIntroductionActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ringapp.ui.activities.RingPlusModalCarouselActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ringapp.ui.activities.RingPlusOauthActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ringapp.ui.activities.RingPlusSuccess" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ringapp.ui.activities.DeviceRegisteredFailSetupActivity" android:screenOrientation="1" android:theme="@7F140163">
+</activity>
+<service android:name="com.ringapp.push.FCMListenerService">
+<intent-filter>
+<action android:name="com.google.firebase.MESSAGING_EVENT">
+</action>
+</intent-filter>
+</service>
+<service android:name="com.ringapp.push.RingInstanceIDListenerService">
+<intent-filter>
+<action android:name="com.google.firebase.INSTANCE_ID_EVENT">
+</action>
+</intent-filter>
+</service>
+<receiver android:name="com.ringapp.ringlogging.TimeSetReceiver">
+<intent-filter>
+<action android:name="android.intent.action.TIME_SET">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:enabled="false" android:name="com.ringapp.sip.BluetoothManager">
+</receiver>
+<service android:name="com.ringapp.ui.notification.HangUpButtonService">
+</service>
+<service android:name="com.ringapp.service.LogMarkerService">
+</service>
+<service android:name="com.ringapp.service.LogShareService">
+</service>
+<service android:name="com.ringapp.dashboard.service.ButterbarScheduleService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<meta-data android:name="com.google.android.gms.version" android:value="@7F0B000D">
+</meta-data>
+<meta-data android:name="io.branch.sdk.BranchKey" android:value="key_live_odB9hN2fZmlFmAlH9ID5GdiixxaQLgIK">
+</meta-data>
+<meta-data android:name="io.branch.sdk.BranchKey.test" android:value="key_test_cbFWmJ9g7hgEkDaR0GzZOjliyulPKaUw">
+</meta-data>
+<meta-data android:name="io.branch.sdk.TestMode" android:value="false">
+</meta-data>
+<receiver android:exported="true" android:name="io.branch.referral.InstallListener">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+<activity android:name="com.ringapp.ui.activities.MyDevicesDashboardActivity" android:screenOrientation="1" android:theme="@7F140163">
+<intent-filter>
+<action android:name="com.ring.LAUNCH_DASHBOARD">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.ringapp.ui.activities.VideoPlayerActivity" android:screenOrientation="6" android:theme="@7F1401A7">
+</activity>
+<activity android:name="com.ringapp.ui.activities.PlusSelectPartnerActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ringapp.ui.activities.PlusLandingActivity" android:screenOrientation="1" android:theme="@7F1401A7">
+</activity>
+<activity android:name="com.ringapp.ui.activities.AddPartnerActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ringapp.ui.activities.PartnerSettingsActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ringapp.ui.activities.PlusLinkedDoorbellsActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ringapp.ui.activities.MotionAreasActivity" android:screenOrientation="0" android:theme="@7F1401A7">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="Ring Debug Setup" android:name="com.ringapp.debug.DebugActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.ringapp.ui.activities.SetupInstallActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.ringapp.ui.activities.AutoProvisionFailSetupActivity">
+</activity>
+<activity android:name="com.ringapp.ui.activities.SelectChimeTypeActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ringapp.ui.activities.Lpdv1SelectProPowerKitTypeSetupActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ringapp.ui.activities.Lpdv1SelectProPowerKitPowerWarningActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.ringapp.ui.activities.InlineVideoActivity" android:theme="@7F1401A7">
+</activity>
+<activity android:name="com.ringapp.ui.activities.Lpdv1SetupSuccessActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ringapp.ui.activities.KitSettingsActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ringapp.ui.activities.MotionSchedulingActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ringapp.ui.activities.AddNewRuleActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.ringapp.ui.activities.UpdateSoftwareSetupActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000480" android:name="com.ringapp.ui.activities.MultiSessionLpActivity" android:screenOrientation="6" android:theme="@7F1401A7">
+</activity>
+<activity android:name="com.ringapp.ui.activities.ChimeAudioSettingsActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ringapp.ui.activities.ChooseDeviceCategoryActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ringapp.ui.activities.ChooseDeviceActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ringapp.ui.activities.ChooseDeviceSpotlightActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ringapp.ui.activities.ChooseDeviceLocationActivity" android:screenOrientation="-1">
+</activity>
+<activity android:name="com.ringapp.ui.activities.AddHiddenNetworkActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ringapp.ui.activities.AdvancedMotionSensitivityActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ringapp.magicsetup.ui.DeviceCodeScannerActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ringapp.ui.activities.AutoProvisioningCheckerActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ringapp.ui.activities.AutoProvisionSetupActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ringapp.ui.activities.NeighborhoodSettingsActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ringapp.ui.activities.NeighborhoodFacebookSettingsActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ringapp.ui.activities.NeighborhoodNameActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ringapp.ui.activities.NeighborhoodRadiusActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ringapp.ui.activities.NeighborhoodDashboardActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.ringapp.ui.activities.NeighborhoodViewEventActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ringapp.ui.activities.NeighborhoodMyEventsActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ringapp.ui.activities.NeighborhoodOnBoardingActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ringapp.ui.activities.NeighborhoodSetupAreasActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:name="com.ringapp.ui.activities.NeighborhoodShareEventActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.ringapp.ui.activities.NeighborhoodEventPagerActivity" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:label="@7F1312AB" android:launchMode="2" android:name="com.ringapp.ui.activities.NeighborhoodTonesActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ringapp.ui.activities.DeviceHealthActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ringapp.ui.activities.DeviceFeaturesActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ringapp.ui.activities.DeviceSettingsActivity" android:screenOrientation="1" android:theme="@7F1401AC">
+</activity>
+<activity android:name="com.ringapp.ui.activities.AlertSettingsActivity" android:screenOrientation="1" android:theme="@7F1401AC">
+</activity>
+<activity android:name="com.ringapp.ui.activities.SmartAlertsActivity" android:screenOrientation="1" android:theme="@7F1401AC">
+</activity>
+<activity android:name="com.ringapp.ui.activities.NotificationSettingsActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ringapp.ui.activities.LightScheduleActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ringapp.ui.activities.MotionZonesForLightsActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ringapp.ui.activities.FloodlightCamFailedLightPatternsSetupActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ringapp.ui.activities.FloodlightCamSetupSuccessActivity" android:screenOrientation="1">
+</activity>
+<activity android:excludeFromRecents="true" android:launchMode="2" android:name="com.ringapp.ui.activities.MotionSnoozeFloatingActivity" android:taskAffinity="" android:theme="@7F140146">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.ringapp.ui.activities.SetupMultistepInstallActivity">
+</activity>
+<activity android:name="com.ringapp.ui.activities.ChooseConnectionSetupActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ringapp.ui.activities.InsertBatterySetupActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ringapp.ui.activities.CheckEliteIsInstalledSetupActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ringapp.ui.activities.RingInstallationSetupActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ringapp.ui.activities.LightSettingsActivity" android:screenOrientation="1" android:theme="@7F1401AC">
+</activity>
+<activity android:name="com.ringapp.feature.sensor.presentation.SensorSensitivityActivity" android:screenOrientation="1" android:theme="@7F1401AC">
+</activity>
+<activity android:name="com.ringapp.ui.activities.VideoSettingsActivity" android:screenOrientation="1" android:theme="@7F140352">
+</activity>
+<activity android:name="com.ringapp.ui.fragment.dialog.WarningDialog" android:screenOrientation="1" android:theme="@7F140352">
+</activity>
+<activity android:name="com.ringapp.ui.activities.RecordingLengthActivity" android:screenOrientation="1" android:theme="@7F1401AC">
+</activity>
+<activity android:name="com.ringapp.ui.activities.RecordingLengthSimpleActivity" android:screenOrientation="1" android:theme="@7F1401AC">
+</activity>
+<activity android:name="com.ringapp.ui.activities.LightBrightnessActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ringapp.ui.activities.DoorbellSetupSuccessActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ringapp.ui.activities.EthernetConnectionFailSetupActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ringapp.ui.activities.PluginSpotlightSetupActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ringapp.ui.activities.MotionZonesCamBatteryActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ringapp.ui.activities.ConfirmAPModeSetupActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ringapp.ui.activities.LostConnectionSetupActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ringapp.ui.activities.NeighborhoodsStatusCheckerActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.mixpanel.android.takeoverinapp.TakeoverInAppActivity" android:theme="@7F140315">
+</activity>
+<activity android:name="com.ringapp.ui.activities.LogDumpActivity" android:screenOrientation="1" android:theme="@7F1401AE">
+</activity>
+<activity android:configChanges="0x00000480" android:name="com.ringapp.player.ui.PlayerActivity" android:screenOrientation="4" android:theme="@7F1401AF">
+</activity>
+<activity android:name="com.ringapp.player.ui.MotionMarkersPromoActivity" android:screenOrientation="1" android:theme="@7F1401AC">
+</activity>
+<activity android:name="com.ringapp.debug.FeatureAmendActivity" android:screenOrientation="1">
+</activity>
+<meta-data android:name="com.google.android.geo.API_KEY" android:value="@7F130A86">
+</meta-data>
+<meta-data android:name="io.fabric.ApiKey" android:value="d0c0dc73c1fd06a79958e2948d8e152d60e5d805">
+</meta-data>
+<meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@7F130955">
+</meta-data>
+<provider android:authorities="com.ringapp.provider" android:exported="false" android:grantUriPermissions="true" android:name="com.ringapp.util.RingFileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F170002">
+</meta-data>
+</provider>
+<activity android:name="com.ring.secure.feature.hubreg.HubRegIntroActivity" android:screenOrientation="1" android:theme="@7F140163">
+</activity>
+<activity android:name="com.ring.secure.feature.hubreg.HubRegActivity" android:screenOrientation="1" android:theme="@7F140163">
+</activity>
+<activity android:name="com.ring.secure.feature.hubreg.HubUpdatingActivity" android:screenOrientation="1" android:theme="@7F140163">
+</activity>
+<activity android:name="com.ring.secure.feature.location.ChooseLocationActivity" android:screenOrientation="1" android:theme="@7F140163">
+</activity>
+<activity android:name="com.ring.secure.feature.rules.RuleListActivity" android:screenOrientation="1" android:theme="@7F140163">
+</activity>
+<activity android:name="com.ringapp.ui.activities.DevicesActivity" android:screenOrientation="1" android:theme="@7F140163">
+</activity>
+<activity android:name="com.ring.secure.feature.history.HistoryActivity" android:screenOrientation="1" android:theme="@7F140163">
+</activity>
+<activity android:name="com.ring.secure.feature.history.DateHistoryActivity" android:screenOrientation="1" android:theme="@7F140163">
+</activity>
+<activity android:name="com.ring.secure.feature.devices.DeviceDetailActivity" android:screenOrientation="1" android:theme="@7F140163">
+</activity>
+<activity android:name="com.ring.secure.feature.devices.FirmwareUpdateActivity" android:screenOrientation="1" android:theme="@7F140163">
+</activity>
+<activity android:name="com.ring.secure.feature.devices.FirmwareUpdateWhyTamperedActivity" android:screenOrientation="1" android:theme="@7F140163">
+</activity>
+<activity android:name="com.ring.secure.feature.devices.FirmwareUpdateListActivity" android:screenOrientation="1" android:theme="@7F140163">
+</activity>
+<activity android:name="com.ring.secure.feature.devices.FirmwareUpdateNowWhatActivity" android:screenOrientation="1" android:theme="@7F140163">
+</activity>
+<activity android:name="com.ring.secure.feature.deviceremoval.RemoveFailedDeviceActivity" android:screenOrientation="1" android:theme="@7F140163">
+</activity>
+<activity android:name="com.ring.secure.feature.deviceaddition.ManualDeviceAddActivity" android:screenOrientation="1" android:theme="@7F140163">
+</activity>
+<activity android:name="com.ring.secure.feature.deviceaddition.DeviceAddActivity" android:screenOrientation="1" android:theme="@7F140163">
+</activity>
+<activity android:name="com.ring.secure.feature.deviceaddition.ChooseDeviceActivity" android:screenOrientation="1" android:theme="@7F140163">
+</activity>
+<activity android:name="com.ring.secure.feature.deviceaddition.DeviceInstructionsActivity" android:screenOrientation="1" android:theme="@7F140163">
+</activity>
+<activity android:name="com.ring.secure.feature.hubsettings.UnregisterHubActivity" android:screenOrientation="1" android:theme="@7F140163">
+</activity>
+<activity android:name="com.ring.secure.feature.hubsettings.AdvancedProtocolListActivity" android:screenOrientation="1" android:theme="@7F140163">
+</activity>
+<activity android:name="com.ring.secure.feature.hubsettings.RemoveZWaveDeviceActivity" android:screenOrientation="1" android:theme="@7F140163">
+</activity>
+<activity android:name="com.ring.secure.feature.hubsettings.SystemRebootActivity" android:screenOrientation="1" android:theme="@7F140163">
+</activity>
+<activity android:name="com.ring.secure.feature.hubsettings.SystemResetActivity" android:screenOrientation="1" android:theme="@7F140163">
+</activity>
+<activity android:name="com.ring.secure.commondevices.hub.HubNetworkSettingsActivity" android:screenOrientation="1" android:theme="@7F140163">
+</activity>
+<activity android:name="com.ring.secure.feature.rules.RuleDetailActivity" android:screenOrientation="1" android:theme="@7F140163">
+</activity>
+<activity android:name="com.ring.secure.feature.settings.LocationSettingsActivity" android:screenOrientation="1" android:theme="@7F140163">
+</activity>
+<activity android:name="com.ring.monitoring.eligibility.MonitoringEligibilityActivity" android:screenOrientation="1" android:theme="@7F140163">
+</activity>
+<activity android:name="com.ring.monitoring.setup.MonitoringSetupActivity" android:screenOrientation="1" android:theme="@7F140163" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.ring.monitoring.settings.MonitoringSettingsActivity" android:screenOrientation="1" android:theme="@7F140163" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.ring.monitoring.delete.MonitoringDeleteActivity" android:screenOrientation="1" android:theme="@7F140163" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.ring.secure.feature.monitoring.registration.MonitoringIntroActivity" android:screenOrientation="1" android:theme="@7F140163">
+</activity>
+<activity android:name="com.ring.secure.feature.monitoring.MonitoringContinueProfessionalActivity" android:screenOrientation="1" android:theme="@7F140163">
+</activity>
+<activity android:name="com.ring.secure.feature.monitoring.MonitoringUnverifiedAddressActivity" android:screenOrientation="1" android:theme="@7F140163">
+</activity>
+<activity android:name="com.ring.secure.feature.monitoring.registration.MonitoringRegistrationActivity" android:screenOrientation="1" android:theme="@7F140163" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:name="com.ring.secure.feature.monitoring.settings.MonitoringSettingsActivity" android:screenOrientation="1" android:theme="@7F140163">
+</activity>
+<activity android:name="com.ring.secure.commondevices.security_panel.ArmBypassActivity" android:screenOrientation="1" android:theme="@7F140163">
+</activity>
+<activity android:name="com.ring.secure.commondevices.security_panel.ArmBypassHelpActivity" android:screenOrientation="1" android:theme="@7F140163">
+</activity>
+<activity android:name="com.ring.secure.commondevices.security_panel.TroubledDevicesActivity" android:screenOrientation="1" android:theme="@7F140163">
+</activity>
+<activity android:name="com.ring.secure.feature.settings.modes.ModesSettingsActivity" android:screenOrientation="1" android:theme="@7F140163">
+</activity>
+<activity android:name="com.ring.secure.feature.settings.modes.ModeSettingsActivity" android:screenOrientation="1" android:theme="@7F140163">
+</activity>
+<activity android:name="com.ring.secure.feature.settings.modes.ModeEntryExitSettingActivity" android:screenOrientation="1" android:theme="@7F140163">
+</activity>
+<activity android:name="com.ring.secure.commondevices.DeviceModeSettingsActivity" android:screenOrientation="1" android:theme="@7F140163">
+</activity>
+<activity android:name="com.ring.secure.feature.location.verify.VerifyLocationActivity" android:screenOrientation="1" android:theme="@7F140163" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.ring.secure.feature.location.verify.LocationMigrationVerifyLocationActivity" android:screenOrientation="1" android:theme="@7F140163">
+</activity>
+<activity android:name="com.ring.secure.feature.location.verify.MigrateLocationIntroActivity" android:screenOrientation="1" android:theme="@7F140163">
+</activity>
+<activity android:name="com.ring.secure.feature.settings.modes.ModeSensorSelectionActivity" android:screenOrientation="1" android:theme="@7F140163">
+</activity>
+<activity android:name="com.ring.secure.feature.devices.DeviceChirpSettingsActivity" android:screenOrientation="1" android:theme="@7F140163">
+</activity>
+<activity android:name="com.ring.secure.feature.deviceaddition.s2.ScanS2QRActivity" android:screenOrientation="1" android:theme="@7F140163">
+</activity>
+<activity android:name="com.ring.secure.feature.deviceaddition.s2.EnterS2PINActivity" android:screenOrientation="1" android:theme="@7F140163">
+</activity>
+<activity android:name="com.ring.secure.feature.deviceaddition.s2.AddS2DeviceActivity" android:screenOrientation="1" android:theme="@7F140163">
+</activity>
+<activity android:name="com.ring.secure.feature.rules.RuleTriggerHelpActivity" android:screenOrientation="1" android:theme="@7F140163">
+</activity>
+<activity android:name="com.ring.secure.feature.rules.RuleDeviceSettingsHelpActivity" android:screenOrientation="1" android:theme="@7F140163">
+</activity>
+<activity android:name="com.ring.secure.feature.location.EditLocationActivity" android:screenOrientation="1" android:theme="@7F140163">
+</activity>
+<activity android:name="com.ring.secure.feature.location.LocationChangeDisableMonitoringActivity" android:screenOrientation="1" android:theme="@7F140163">
+</activity>
+<activity android:name="com.ring.secure.feature.settings.users.UsersSettingsActivity" android:screenOrientation="1" android:theme="@7F140163">
+</activity>
+<activity android:name="com.ring.secure.feature.settings.users.UserProfileActivity" android:screenOrientation="1" android:theme="@7F140163">
+</activity>
+<activity android:name="com.ring.secure.feature.settings.users.UserAddActivity" android:screenOrientation="1" android:theme="@7F140163">
+</activity>
+<activity android:name="com.ring.secure.feature.settings.users.DeviceAccessActivity" android:screenOrientation="1" android:theme="@7F140163">
+</activity>
+<activity android:name="com.ring.secure.feature.settings.users.pinonly.ChooseUserTypeActivity" android:screenOrientation="1" android:theme="@7F140163">
+</activity>
+<activity android:name="com.ring.secure.feature.settings.users.pinonly.AddAccessOnlyUserActivity" android:screenOrientation="1" android:theme="@7F140163">
+</activity>
+<activity android:name="com.ring.secure.feature.settings.users.pinonly.EditAccessOnlyUserActivity" android:screenOrientation="1" android:theme="@7F140163">
+</activity>
+<activity android:name="com.ring.secure.feature.settings.users.pinonly.EditUserNameActivity" android:screenOrientation="1" android:theme="@7F140163">
+</activity>
+<activity android:name="com.ring.secure.feature.hubreg.kitted.KittedDeviceListActivity" android:screenOrientation="1" android:theme="@7F140163">
+</activity>
+<activity android:name="com.ring.secure.feature.hubreg.kitted.KittedInstallActivity" android:screenOrientation="1" android:theme="@7F140163">
+</activity>
+<activity android:name="com.ring.secure.feature.hubreg.kitted.KittedInstallHelpActivity" android:screenOrientation="1" android:theme="@7F140163">
+</activity>
+<activity android:name="com.ring.secure.feature.hubreg.kitted.CreateAccessCodeIntroActivity" android:screenOrientation="1" android:theme="@7F140163">
+</activity>
+<activity android:name="com.ring.secure.feature.hubreg.kitted.CreateAccessCodeActivity" android:screenOrientation="1" android:theme="@7F140163" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.ring.secure.feature.hubreg.kitted.KittedDeviceSetupSuccessActivity" android:screenOrientation="1" android:theme="@7F140163" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.ring.secure.feature.settings.users.UserAccessCodeEntryActivity" android:screenOrientation="1" android:theme="@7F140163">
+</activity>
+<activity android:name="com.ring.secure.feature.dashboard.SecurityDropdownActivity" android:screenOrientation="1" android:theme="@7F140163">
+</activity>
+<activity android:name="com.ring.secure.feature.settings.alerts.AlertsSettingsActivity" android:screenOrientation="1" android:theme="@7F140163">
+</activity>
+<activity android:name="com.ring.secure.feature.hubreg.kitted.ChooseContactSensorPlacementActivity" android:screenOrientation="1" android:theme="@7F140163">
+</activity>
+<activity android:name="com.ring.secure.feature.hubreg.kitted.ChooseMotionSensorPlacementActivity" android:screenOrientation="1" android:theme="@7F140163">
+</activity>
+<activity android:name="com.ring.secure.feature.hubreg.kitted.sensorinfo.DeviceInfoActivity" android:screenOrientation="1" android:theme="@7F140163" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.ring.secure.feature.hubreg.kitted.KittedTestDeviceActivity" android:screenOrientation="1" android:theme="@7F140163">
+</activity>
+<activity android:name="com.ring.secure.feature.hubreg.kitted.mounting.MountingIntroActivity" android:screenOrientation="1" android:theme="@7F140163">
+</activity>
+<activity android:name="com.ring.secure.feature.hubreg.kitted.mounting.MountingPlacementActivity" android:screenOrientation="1" android:theme="@7F140163">
+</activity>
+<activity android:name="com.ring.secure.feature.hubreg.kitted.mounting.MountingCleanActivity" android:screenOrientation="1" android:theme="@7F140163">
+</activity>
+<activity android:name="com.ring.secure.feature.hubreg.kitted.mounting.MountingAlignmentActivity" android:screenOrientation="1" android:theme="@7F140163">
+</activity>
+<activity android:name="com.ring.secure.feature.hubreg.kitted.mounting.MountingChooseActivity" android:screenOrientation="1" android:theme="@7F140163">
+</activity>
+<activity android:name="com.ring.secure.feature.hubreg.kitted.mounting.MountingAdhesive1Activity" android:screenOrientation="1" android:theme="@7F140163">
+</activity>
+<activity android:name="com.ring.secure.feature.hubreg.kitted.mounting.MountingAdhesive2Activity" android:screenOrientation="1" android:theme="@7F140163">
+</activity>
+<activity android:name="com.ring.secure.feature.hubreg.kitted.mounting.MountingAdhesive3Activity" android:screenOrientation="1" android:theme="@7F140163">
+</activity>
+<activity android:name="com.ring.secure.feature.hubreg.kitted.mounting.MountingAdhesive4Activity" android:screenOrientation="1" android:theme="@7F140163">
+</activity>
+<activity android:name="com.ring.secure.feature.hubreg.kitted.mounting.MountingScrew1Activity" android:screenOrientation="1" android:theme="@7F140163">
+</activity>
+<activity android:name="com.ring.secure.feature.hubreg.kitted.mounting.MountingScrew2Activity" android:screenOrientation="1" android:theme="@7F140163">
+</activity>
+<activity android:name="com.ring.secure.feature.hubreg.kitted.mounting.MountingScrew3Activity" android:screenOrientation="1" android:theme="@7F140163">
+</activity>
+<activity android:name="com.ring.secure.feature.hubreg.kitted.floodfreezesetup.FFPlacementActivity" android:screenOrientation="1" android:theme="@7F140163">
+</activity>
+<activity android:name="com.ring.secure.feature.hubreg.kitted.floodfreezesetup.FFTestActivity" android:screenOrientation="1" android:theme="@7F140163">
+</activity>
+<activity android:name="com.ring.secure.feature.hubreg.kitted.floodfreezesetup.FFTestAgainActivity" android:screenOrientation="1" android:theme="@7F140163">
+</activity>
+<activity android:name="com.ring.secure.commondevices.sensor.floodfreeze.FFTestAdvancedOptionsActivity" android:screenOrientation="1" android:theme="@7F140163">
+</activity>
+<activity android:name="com.ring.secure.feature.dashboard.ModeDropdownActivity" android:screenOrientation="1" android:theme="@7F140163">
+</activity>
+<activity android:name="com.ring.secure.feature.devices.RingAlarmDevicesActivity" android:screenOrientation="1" android:theme="@7F140163">
+</activity>
+<activity android:name="com.ring.secure.feature.devices.devicehelp.DeviceHelpActivity" android:screenOrientation="1" android:theme="@7F140163">
+</activity>
+<activity android:name="com.ring.secure.feature.devices.devicehelp.DeviceVideosActivity" android:screenOrientation="1" android:theme="@7F140163">
+</activity>
+<activity android:name="com.ring.secure.feature.location.confirmation.LocationConfirmationOverviewActivity" android:screenOrientation="1" android:theme="@7F140163">
+</activity>
+<activity android:name="com.ring.secure.feature.location.confirmation.DevicesConfirmationActivity" android:screenOrientation="1" android:theme="@7F140164">
+</activity>
+<activity android:name="com.ring.secure.feature.location.confirmation.ConfirmationActivity" android:screenOrientation="1" android:theme="@7F140164">
+</activity>
+<activity android:name="com.ring.secure.feature.location.verify.suggestor.VerifyLocationAddressSuggestorActivity" android:screenOrientation="1" android:theme="@7F140163" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.ring.secure.feature.location.verify.suggestor.VerifyLocationAddressLine2PickerActivity" android:screenOrientation="1" android:theme="@7F140163" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.ring.secure.feature.location.verify.VerifyLocationRequestDeviceGeoActivity" android:screenOrientation="1" android:theme="@7F140163" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.ring.view.DebugInfoActivity" android:theme="@7F140163">
+</activity>
+<activity android:name="com.ring.secure.feature.history.SingleDeviceHistoryActivity" android:screenOrientation="1" android:theme="@7F140163">
+</activity>
+<activity android:name="com.ring.secure.commondevices.AudioVolumeSettingsActivity" android:screenOrientation="1" android:theme="@7F140163">
+</activity>
+<activity android:name="com.ring.secure.commondevices.sensor.motion.MotionSensorSensitivityActivity" android:screenOrientation="1" android:theme="@7F140163">
+</activity>
+<activity android:name="com.ring.secure.feature.devices.ReconfigureDeviceActivity" android:screenOrientation="1" android:theme="@7F140163">
+</activity>
+<activity android:name="com.ring.secure.feature.hubreg.kitted.KittedMotionExplanationActivity" android:screenOrientation="1" android:theme="@7F140163">
+</activity>
+<activity android:name="com.ring.secure.feature.hubreg.kitted.KittedMotionStartTestModeActivity" android:screenOrientation="1" android:theme="@7F140163">
+</activity>
+<activity android:name="com.ring.secure.commondevices.sensor.motion.test.StartMotionTestActivity" android:screenOrientation="1" android:theme="@7F140163">
+</activity>
+<activity android:name="com.ring.secure.commondevices.sensor.motion.test.PerformMotionTestActivity" android:screenOrientation="1" android:theme="@7F140163">
+</activity>
+<activity android:name="com.ring.secure.feature.location.LocationChangeCancelPendingActivity" android:screenOrientation="1" android:theme="@7F140163">
+</activity>
+<activity android:name="com.ring.secure.commondevices.TestDeviceSirenActivity" android:screenOrientation="1" android:theme="@7F140163">
+</activity>
+<activity android:name="com.ring.secure.feature.dashboard.MaintenanceModeLearnMoreActivity" android:screenOrientation="1" android:theme="@7F140163">
+</activity>
+<activity android:name="com.ring.secure.commondevices.lock.LockUserListActivity" android:screenOrientation="1" android:theme="@7F140163">
+</activity>
+<activity android:name="com.ring.secure.commondevices.lock.LockAddFlowUserListActivity" android:screenOrientation="1" android:theme="@7F140163">
+</activity>
+<activity android:name="com.ring.secure.commondevices.lock.LockAddFlowUserAccessCodesActivity" android:screenOrientation="1" android:theme="@7F140163">
+</activity>
+<activity android:name="com.ring.secure.commondevices.listener.smokeco.SmokeCoTestAdvancedOptionsActivity" android:screenOrientation="1" android:theme="@7F140163">
+</activity>
+<activity android:name="com.ring.secure.commondevices.listener.InstallListenerActivity" android:screenOrientation="1" android:theme="@7F140163">
+</activity>
+<activity android:name="com.ring.secure.commondevices.listener.BeginListenerTestActivity" android:screenOrientation="1" android:theme="@7F140163">
+</activity>
+<activity android:name="com.ring.secure.commondevices.listener.TestListenerActivity" android:screenOrientation="1" android:theme="@7F140163">
+</activity>
+<activity android:name="com.ring.secure.commondevices.listener.ListenerNoSignalsDetectedActivity" android:screenOrientation="1" android:theme="@7F140163">
+</activity>
+<activity android:name="com.ring.secure.commondevices.listener.ListenerTestingFinalWarningActivity" android:screenOrientation="1" android:theme="@7F140163">
+</activity>
+<activity android:name="com.ring.secure.commondevices.listener.ListenerEndTestModeActivity" android:screenOrientation="1" android:theme="@7F140163">
+</activity>
+<activity android:name="com.ring.secure.commondevices.lock.mode.LockModeSettingsActivity" android:screenOrientation="1" android:theme="@7F140163">
+</activity>
+<activity android:name="com.ring.secure.commondevices.lock.mode.LockModeSettingsIntroActivity" android:screenOrientation="1" android:theme="@7F140163">
+</activity>
+<activity android:configChanges="0x00000480" android:name="com.ring.secure.feature.sos.AcceleratedAlarmActivity" android:theme="@7F1401A5">
+</activity>
+<activity android:name="com.ring.secure.feature.dashboard.RingAlarmConnectionIssueActivity" android:screenOrientation="1" android:theme="@7F140163">
+</activity>
+<activity android:name="com.ring.secure.commondevices.MonitoredDeviceAlertsActivity" android:screenOrientation="1" android:theme="@7F140163">
+</activity>
+<activity android:name="com.ring.secure.commondevices.MonitoredDeviceAlertsActivityOld" android:screenOrientation="1" android:theme="@7F140163">
+</activity>
+<activity android:name="com.ring.secure.feature.deviceremoval.GuidedDeviceRemovalActivity" android:screenOrientation="1" android:theme="@7F140163">
+</activity>
+<activity android:name="com.ring.secure.feature.deviceremoval.GuidedDeviceRemovalSuccessActivity" android:screenOrientation="1" android:theme="@7F140163">
+</activity>
+<activity android:name="com.ring.secure.feature.devices.FatalErrorResetActivity" android:screenOrientation="1" android:theme="@7F140163">
+</activity>
+<activity android:name="com.ring.secure.feature.devices.FatalErrorResetSuccessActivity" android:screenOrientation="1" android:theme="@7F140163">
+</activity>
+<activity android:name="com.ring.secure.commondevices.security_panel.AlarmFeedbackButterbarWrapperActivity" android:theme="@7F140166">
+</activity>
+<activity android:name="com.ring.secure.feature.sos.SOSIntroActivity" android:screenOrientation="1" android:theme="@7F140163">
+</activity>
+<activity android:name="com.ring.secure.feature.devices.RetryConnectionActivity" android:screenOrientation="1" android:theme="@7F140163">
+</activity>
+<activity android:name="com.ring.secure.feature.hubreg.HubCompatibilityErrorActivity" android:screenOrientation="1" android:theme="@7F140163">
+</activity>
+<activity android:name="com.ring.secure.feature.devices.advanced.DeviceAdvancedOptionsActivity" android:screenOrientation="1" android:theme="@7F140163">
+</activity>
+<activity android:name="com.ring.secure.feature.deviceaddition.ChooseAlarmDeviceCategoryActivity" android:screenOrientation="1" android:theme="@7F140163">
+</activity>
+<activity android:name="com.ring.secure.commondevices.hub.HubLedSettingsActivity" android:screenOrientation="1" android:theme="@7F140163">
+</activity>
+<activity android:name="com.ring.secure.commondevices.security_keypad.SecurityKeypadLedSettingsActivity" android:screenOrientation="1" android:theme="@7F140163">
+</activity>
+<activity android:name="com.ring.secure.feature.reminderstate.TakeActionActivity" android:screenOrientation="1" android:theme="@7F140163">
+</activity>
+<activity android:allowTaskReparenting="true" android:launchMode="2" android:name="com.amazon.identity.auth.device.workflow.WorkflowActivity" android:theme="@android:01030055">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="com.ringapp" android:scheme="amzn">
+</data>
+</intent-filter>
+</activity>
+<meta-data android:name="AmazonAPIKey" android:value="eyJhbGciOiJSU0EtU0hBMjU2IiwidmVyIjoiMSJ9.eyJ2ZXIiOiIzIiwiZW5kcG9pbnRzIjp7ImF1dGh6IjoiaHR0cHM6Ly93d3cuYW1hem9uLmNvbS9hcC9vYSIsInRva2VuRXhjaGFuZ2UiOiJodHRwczovL2FwaS5hbWF6b24uY29tL2F1dGgvbzIvdG9rZW4ifSwiY2xpZW50SWQiOiJhbXpuMS5hcHBsaWNhdGlvbi1vYTItY2xpZW50LjI4N2UxMDEzMmIzYTRlNDc4OTJjM2JmMTJhODg3Y2I4IiwiYXBwRmFtaWx5SWQiOiJhbXpuMS5hcHBsaWNhdGlvbi5iZTE2YjE3OWZkZDI0OTExYTQxYmRiNzRiMGViMjc1YyIsImlzcyI6IkFtYXpvbiIsInR5cGUiOiJBUElLZXkiLCJwa2ciOiJjb20ucmluZ2FwcCIsImFwcFZhcmlhbnRJZCI6ImFtem4xLmFwcGxpY2F0aW9uLWNsaWVudC4zYmNjYjkwNjYwYjg0YmE5YTQwZTcwMzY0YzBjMTIzYSIsInRydXN0UG9vbCI6bnVsbCwiYXBwc2lnU2hhMjU2IjoiQzY6Mzc6MDc6Qzk6MDA6MTQ6MUI6ODA6Nzc6NDk6QzY6MDM6OEU6MjE6NUM6OUI6MjE6NzE6MjY6MkI6MEQ6QTk6QUY6QzU6NzU6RkE6NjA6QUI6QzQ6RDY6OEQ6RUIiLCJhcHBzaWciOiI3OTo5MzpDQjozQzo2RjpCOTpFNDpEMzpBNTowMDpDMzpGQzoyNDpDNzoxNDpFNyIsImFwcElkIjoiYW16bjEuYXBwbGljYXRpb24tY2xpZW50LjNiY2NiOTA2NjBiODRiYTlhNDBlNzAzNjRjMGMxMjNhIiwiaWQiOiIzZTY3ZDJmOS01NGExLTExZTktYTNhMC1kYmMzZmQ2MzJhMmYiLCJpYXQiOiIxNTU0MTM4NzEyNTAzIn0=.Dkk3RAcKSm6m7EyqUYsGYqLY84gq7X16GEFRhAzY7tj2ZxkOB7mppE/9EHT6f5CfEL25qt8vvb7kaFqJZ3gG6sp62xC910a0wnutCo+KOrS082tQ2DmWGFdlYTkNouTTu1EFVpxp+Dnkr8dWvEyegvtj3Sb5B+/zGNZywrbJYEdaksaT3tY+ciZgniOFwYBFApmhXhCgzN3nPuoWI8wDmk3ZqmC9m0NQ4x52Cmm1NKMM1YdF6nBXkg3bsUZ1tgLhPpH9Li7+qajF985ljvIwDCG2afp3UFoc8VDhUP5gDYyaJ6Zl2rkbpP2JZOiwVKoAhoNqUDGZx1tdIfFXDJNsJw==">
+</meta-data>
+<activity android:name="com.ringapp.ui.activities.ChooseLockConnectionMethodActivity" android:screenOrientation="1" android:theme="@7F140163">
+</activity>
+<activity android:name="com.ringapp.amazonkey.ConnectAmazonKeyActivity" android:screenOrientation="1" android:theme="@7F140163">
+</activity>
+<activity android:name="com.ringapp.amazonkey.CameraSelectionActivity" android:screenOrientation="1" android:theme="@7F140163">
+</activity>
+<activity android:name="com.ringapp.amazonkey.NoLocksFoundActivity" android:screenOrientation="1" android:theme="@7F140163">
+</activity>
+<activity android:name="com.ringapp.amazonkey.SetupSuccessActivity" android:screenOrientation="1" android:theme="@7F140163">
+</activity>
+<activity android:name="com.ringapp.amazonkey.NoCameraFoundActivity" android:screenOrientation="1" android:theme="@7F140163">
+</activity>
+<activity android:name="com.ringapp.amazonkey.AmazonKeySettingsActivity" android:screenOrientation="1" android:theme="@7F140163">
+</activity>
+<activity android:name="com.ringapp.amazonkey.loginWithAmazon.UnlinkLWAActivity" android:screenOrientation="1" android:theme="@7F140163">
+</activity>
+<activity android:name="com.ringapp.amazonkey.LockSelectionActivity" android:screenOrientation="1" android:theme="@7F140163">
+</activity>
+<activity android:name="com.ringapp.tutorial.launch.LaunchTutorialActivity" android:screenOrientation="1" android:theme="@7F1401AC">
+</activity>
+<activity android:name="com.ringapp.newfeatures.ui.NewFeaturesActivity" android:screenOrientation="1" android:theme="@7F1401AC">
+</activity>
+<activity android:launchMode="2" android:name="com.ringapp.ui.activities.DeepLinkActivity" android:theme="@android:01030055">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="app" android:pathPrefix="/" android:scheme="@7F130591">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="@7F130590" android:scheme="@7F130591">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="alexa" android:pathPrefix="/" android:scheme="@7F130591">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="content" android:scheme="@7F130591">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="ring.com" android:pathPrefix="/s" android:scheme="https">
+</data>
+</intent-filter>
+</activity>
+<activity android:launchMode="1" android:name="com.ringapp.ui.activities.NeighborsDeepLinkActivity" android:noHistory="true" android:theme="@7F1401A7">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="neighbors.ring.com" android:scheme="https">
+</data>
+<data android:host="neighbors.qa.ring.com">
+</data>
+<data android:host="neighbors.dev.ring.com">
+</data>
+<data android:pathPrefix="/n">
+</data>
+<data android:pathPrefix="/a">
+</data>
+<data android:pathPrefix="/d">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="open" android:scheme="neighborhoods">
+</data>
+</intent-filter>
+<meta-data android:name="io.branch.sdk.auto_link_keys" android:value="@7F131374">
+</meta-data>
+</activity>
+<activity android:name="com.ringapp.ui.activities.EventPickerActivity" android:theme="@7F1401AC">
+<intent-filter>
+<action android:name="com.ring.PICK_EVENT">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:mimeType="text/plain">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.ringapp.ui.activities.CheckIndoorsOutdoorsSetupActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ringapp.ui.activities.ChoosePowerSetupActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ringapp.ui.activities.PluginStickUpCamEliteSetupActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ringapp.ui.activities.ChooseCamInstallationPlaceSetupActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ringapp.ui.activities.StickUpCamEliteInstallationSetupActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ringapp.ui.activities.PortalInstallationWelcomeActivity" android:screenOrientation="1" android:theme="@7F1401AC">
+</activity>
+<activity android:name="com.ringapp.ui.activities.PortalDoorStepActivity" android:screenOrientation="1" android:theme="@7F1401AC">
+</activity>
+<activity android:name="com.ringapp.ui.activities.PortalRemoveOldDoorViewerStepActivity" android:screenOrientation="1" android:theme="@7F1401AC">
+</activity>
+<activity android:name="com.ringapp.ui.activities.PortalOutdoorUnitStepActivity" android:screenOrientation="1" android:theme="@7F1401AC">
+</activity>
+<activity android:name="com.ringapp.ui.activities.PortalOutdoorAdapterStepActivity" android:screenOrientation="1" android:theme="@7F1401AC">
+</activity>
+<activity android:name="com.ringapp.ui.activities.PortalIndoorUnitStepActivity" android:screenOrientation="1" android:theme="@7F1401AC">
+</activity>
+<activity android:name="com.ringapp.ui.activities.PortalPullOutConnectorCableStepActivity" android:screenOrientation="1" android:theme="@7F1401AC">
+</activity>
+<activity android:name="com.ringapp.ui.activities.PortalTighteningNutStepActivity" android:screenOrientation="1" android:theme="@7F1401AC">
+</activity>
+<activity android:name="com.ringapp.ui.activities.PortalPlugInConnectorCableStepActivity" android:screenOrientation="1" android:theme="@7F1401AC">
+</activity>
+<activity android:name="com.ringapp.ui.activities.PortalInsertBatteryStepActivity" android:screenOrientation="1" android:theme="@7F1401AC">
+</activity>
+<activity android:name="com.ringapp.ui.activities.PortalChargeBatteryStepActivity" android:screenOrientation="1" android:theme="@7F1401AC">
+</activity>
+<activity android:name="com.ring.device.profile.DeviceProfileActivity" android:screenOrientation="1" android:theme="@7F140163">
+</activity>
+<activity android:name="com.ringapp.ui.activities.CheckCamNearGlassActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ringapp.ui.activities.OutOfBoxSetupActivity" android:screenOrientation="1" android:theme="@7F1401AC">
+</activity>
+<receiver android:exported="true" android:name="com.ringapp.pendingsetup.PendingSetupReceiver">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+<activity android:name="com.ringapp.feature.btsetup.presentation.BluetoothSetupActivity" android:screenOrientation="1" android:theme="@7F1401AC">
+</activity>
+<activity android:name="com.ringapp.feature.wifisetup.WifiSetupActivity" android:screenOrientation="1" android:theme="@7F1401AC" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.ringapp.feature.wifisetup.advanced.AdvancedOptionsActivity" android:screenOrientation="1" android:theme="@7F1401AC" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:label="@7F131F65" android:name="com.ringapp.feature.wifisetup.hidden.HiddenNetworkActivity" android:screenOrientation="1" android:theme="@7F1401AC">
+</activity>
+<activity android:name="com.ringapp.ui.activities.SolarScrewWarningSetupActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ringapp.tutorial.motion.ui.MotionTutorialActivity" android:screenOrientation="1" android:theme="@7F1401AC">
+</activity>
+<activity android:name="com.ringapp.ui.activities.MotionTutorialSetupActivity" android:screenOrientation="1" android:theme="@7F1401AC">
+</activity>
+<activity android:name="com.ringapp.tutorial.sharedUser.ui.SharedUserTutorialActivity" android:screenOrientation="1" android:theme="@7F1401AC">
+</activity>
+<activity android:name="com.ringapp.motionsettingsv2.ui.MotionZonesActivityV2" android:screenOrientation="1" android:theme="@7F1401AC">
+</activity>
+<activity android:name="com.ringapp.motionsettingsv2.ui.SingleMotionZoneActivityV2" android:screenOrientation="1" android:theme="@7F1401AC">
+</activity>
+<activity android:name="com.ringapp.motionsettingsv2.ui.MotionZonesFacingActivity" android:screenOrientation="1" android:theme="@7F1401AC">
+</activity>
+<activity android:name="com.ringapp.motionsettingsv2.ui.MotionZonesLiveDisabledActivity" android:screenOrientation="1" android:theme="@7F1401AC">
+</activity>
+<activity android:name="com.ringapp.motionsettingsv2.ui.MotionZonesCamBatteryActivityV2" android:screenOrientation="1" android:theme="@7F1401AC">
+</activity>
+<activity android:name="com.ringapp.motionsettingsv2.ui.MotionZonesCamBatteryV2SetupActivity" android:screenOrientation="1" android:theme="@7F1401AC">
+</activity>
+<activity android:name="com.ringapp.motionsettingsv2.ui.MotionZonesV2SetupActivity" android:screenOrientation="1" android:theme="@7F1401AC">
+</activity>
+<activity android:name="com.ring.device.link.LinkedDevicesActivity" android:screenOrientation="1" android:theme="@7F140163">
+</activity>
+<activity android:name="com.ring.device.link.TimeFrameActivity" android:screenOrientation="1" android:theme="@7F140163">
+</activity>
+<activity android:name="com.ring.device.link.LinkedDevicesSetupActivity" android:screenOrientation="1" android:theme="@7F140163">
+</activity>
+<activity android:name="com.ringapp.connectivitytest.ui.bandwidth.BandwidthTestActivity" android:screenOrientation="1" android:theme="@7F1401AC">
+</activity>
+<activity android:name="com.ringapp.connectivitytest.ui.welcome.ConnectivityTestWelcomeActivity" android:screenOrientation="1" android:theme="@7F1401AC">
+</activity>
+<activity android:name="com.ringapp.connectivitytest.ui.results.ConnectionResultsActivity" android:screenOrientation="1" android:theme="@7F1401AC">
+</activity>
+<activity android:name="com.ringapp.connectivitytest.ui.wizard.ConnectivityTestWizardActivity" android:screenOrientation="1" android:theme="@7F1401AC">
+</activity>
+<activity android:name="com.ringapp.connectivitytest.ui.wizard.ConnectivityTestWizardWelcomeActivity" android:screenOrientation="1" android:theme="@7F1401AC">
+</activity>
+<activity android:name="com.ringapp.connectivitytest.ui.suggestions.ConnectivityTestSuggestionDetailsActivity" android:screenOrientation="1" android:theme="@7F1401AC">
+</activity>
+<activity android:name="com.ringapp.connectivitytest.ui.suggestions.ConnectivityTestSuggestionsActivity" android:screenOrientation="1" android:theme="@7F1401AC">
+</activity>
+<activity android:name="com.ringapp.connectivitytest.ui.troubleshooting.TroubleshootingFailedActivity" android:screenOrientation="1" android:theme="@7F1401AC">
+</activity>
+<activity android:name="com.ringapp.beamssettings.ui.group.BeamGroupActivity" android:screenOrientation="1" android:theme="@7F1401AC">
+</activity>
+<activity android:name="com.ringapp.beamssettings.ui.device.profile.BeamProfileActivity" android:screenOrientation="1" android:theme="@7F1401AC">
+</activity>
+<activity android:name="com.ringapp.beamssettings.ui.device.BeamDeviceHealthActivity" android:screenOrientation="1" android:theme="@7F1401AC">
+</activity>
+<activity android:name="com.ringapp.beamssettings.ui.group.settings.GroupGeneralSettingsActivity" android:screenOrientation="1" android:theme="@7F1401AC">
+</activity>
+<activity android:name="com.ringapp.beamssettings.ui.group.settings.autoshutoff.AutoShutoffSettingsActivity" android:screenOrientation="1" android:theme="@7F1401AC">
+</activity>
+<activity android:name="com.ringapp.beamssettings.ui.device.BeamDeviceSettingsActivity" android:screenOrientation="1" android:theme="@7F1401AC">
+</activity>
+<activity android:name="com.ringapp.beamssettings.ui.groups.BeamGroupListActivity" android:screenOrientation="1" android:theme="@7F1401AC">
+</activity>
+<activity android:name="com.ringapp.beamssettings.ui.group.edit.GroupDevicesListActivity" android:screenOrientation="1" android:theme="@7F1401AC">
+</activity>
+<activity android:name="com.ringapp.beamssettings.ui.group.edit.GroupDevicesEditActivity" android:screenOrientation="1" android:theme="@7F1401AC">
+</activity>
+<activity android:name="com.ringapp.beamssettings.ui.device.profile.MotionSensitivityActivity" android:screenOrientation="1" android:theme="@7F1401AC">
+</activity>
+<activity android:name="com.ringapp.feature.beams.setup.bridge.BeamsBridgeSetupActivity" android:screenOrientation="1" android:theme="@7F1401AC">
+</activity>
+<activity android:name="com.ringapp.feature.beams.setup.lights.BeamLightsSetupActivity" android:screenOrientation="1" android:theme="@7F1401AC">
+</activity>
+<activity android:name="com.ringapp.feature.beams.update.BeamsUpdateNotificationActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ringapp.beamssettings.ui.device.BeamBridgeSettingsActivity" android:screenOrientation="1" android:theme="@7F1401AC">
+</activity>
+<activity android:name="com.ringapp.beamssettings.ui.device.profile.BridgeProfileActivity" android:screenOrientation="1" android:theme="@7F1401AC">
+</activity>
+<activity android:name="com.ringapp.beamssettings.ui.device.profile.changegroup.ChangeGroupForDeviceActivity" android:screenOrientation="1" android:theme="@7F1401AC">
+</activity>
+<activity android:name="com.ringapp.beamssettings.ui.device.profile.lightsettings.LightSettingsActivity" android:screenOrientation="1" android:theme="@7F1401AC">
+</activity>
+<activity android:name="com.ringapp.beamssettings.ui.device.profile.BeamProfileChangeNameActivity" android:screenOrientation="1" android:theme="@7F1401AC">
+</activity>
+<activity android:name="com.ringapp.feedback.FeedbackActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:name="com.ringapp.beamssettings.ui.group.settings.GroupChangeNameActivity" android:screenOrientation="1" android:theme="@7F1401AC">
+</activity>
+<activity android:name="com.ringapp.beamssettings.ui.device.bridge.BeamBridgeHealthActivity" android:screenOrientation="1" android:theme="@7F1401AC">
+</activity>
+<activity android:name="com.ringapp.ui.activities.GeneralSettingsActivity" android:screenOrientation="1" android:theme="@7F1401AC">
+</activity>
+<activity android:name="com.ringapp.ui.activities.ControlExternalLightActivity" android:screenOrientation="1" android:theme="@7F1401AC">
+</activity>
+<activity android:name="com.ringapp.ui.activities.AudioSettingsActivity" android:screenOrientation="1" android:theme="@7F1401AC">
+</activity>
+<activity android:name="com.ringapp.ui.activities.DeviceNameActivity" android:screenOrientation="1" android:theme="@7F1401AC">
+</activity>
+<activity android:name="com.ringapp.ui.activities.VideosInstallationActivity" android:screenOrientation="1" android:theme="@7F1401AC">
+</activity>
+<activity android:name="com.ringapp.ui.activities.HelpContentActivity" android:screenOrientation="1" android:theme="@7F1401AC">
+</activity>
+<activity android:name="com.ringapp.beamssettings.ui.device.LightOtaUpdatingInfoActivity" android:screenOrientation="1" android:theme="@7F1401AC">
+</activity>
+<activity android:name="com.ring.device.lock.MultiLockControlActivity" android:screenOrientation="1" android:theme="@7F140163">
+</activity>
+<activity android:name="com.ring.secure.feature.hubreg.kitted.PanicButtonTestActivity" android:screenOrientation="1" android:theme="@7F140163">
+</activity>
+<activity android:name="com.ring.secure.feature.hubreg.kitted.PanicButtonTestRetryActivity" android:screenOrientation="1" android:theme="@7F140163">
+</activity>
+<activity android:name="com.ring.secure.feature.hubreg.kitted.PanicButtonTestSuccessActivity" android:screenOrientation="1" android:theme="@7F140163">
+</activity>
+<activity android:name="com.ringapp.beamssettings.ui.schedulers.alerts.MotionAlertsScheduleActivity" android:screenOrientation="1" android:theme="@7F1401AC">
+</activity>
+<activity android:name="com.ringapp.beamssettings.ui.schedulers.alerts.addrule.AddAlertRuleActivity" android:screenOrientation="1" android:theme="@7F1401AC">
+</activity>
+<activity android:name="com.ringapp.beamssettings.ui.schedulers.alerts.addrule.changename.ChangeRuleNameActivity" android:screenOrientation="1" android:theme="@7F1401AC" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.ringapp.beamssettings.ui.schedulers.lights.LightScheduleActivity" android:screenOrientation="1" android:theme="@7F1401AC">
+</activity>
+<activity android:name="com.ringapp.beamssettings.ui.schedulers.lights.addrule.AddLightRuleActivity" android:screenOrientation="1" android:theme="@7F1401AC">
+</activity>
+<activity android:name="com.ringapp.feature.twofactorauth.ui.TwoFactorAuthenticationActivity" android:screenOrientation="1" android:theme="@7F1401AC" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.ringapp.beamssettings.ui.groups.create.CreateNewGroupActivity" android:screenOrientation="1" android:theme="@7F1401AC">
+</activity>
+<activity android:name="com.ringapp.postsetupflow.ui.PostSetupFlowActivity" android:screenOrientation="1" android:theme="@7F140163">
+</activity>
+<activity android:name="com.ringapp.beamssettings.ui.group.settings.motion.GroupMotionSettingsActivity" android:screenOrientation="1" android:theme="@7F1401AC">
+</activity>
+<activity android:name="com.ringapp.beamssettings.ui.group.settings.postsetupmotion.GroupMotionDetectionSetupActivity" android:screenOrientation="1" android:theme="@7F1401AC">
+</activity>
+<activity android:name="com.ringapp.beamssettings.ui.group.settings.postsetupmotion.GroupMotionDetectionFinishActivity" android:screenOrientation="1" android:theme="@7F1401AC">
+</activity>
+<activity android:name="com.ringapp.beamssettings.ui.group.settings.light.GroupLightSettingsActivity" android:screenOrientation="1" android:theme="@7F1401AC">
+</activity>
+<activity android:name="com.ringapp.privacyzones.ui.PrivacyZonesSettingsActivity" android:screenOrientation="1" android:theme="@7F140163">
+</activity>
+<activity android:name="com.ringapp.privacyzones.ui.PrivacyZonesSettingsDescriptionActivity" android:screenOrientation="1" android:theme="@7F140163">
+</activity>
+<activity android:name="com.ringapp.privacyzones.ui.main.PrivacyZonesMainActivity" android:screenOrientation="0" android:theme="@7F1401A7">
+</activity>
+<activity android:name="com.ringapp.newfeatures.ui.settings.KnockDetectionSettingsActivity" android:screenOrientation="1" android:theme="@7F140163">
+</activity>
+<activity android:name="com.ringapp.newfeatures.ui.settings.KnockDetectionIntroActivity" android:screenOrientation="1" android:theme="@7F140163">
+</activity>
+<activity android:name="com.ringapp.feature.portal.wizard.privacyfeatures.PrivacyFeaturesActivity" android:screenOrientation="1" android:theme="@7F140163">
+</activity>
+<activity android:name="com.ringapp.feature.portal.wizard.privacyfeatures.PrivacyFeaturesAudioSettingsActivity" android:screenOrientation="1" android:theme="@7F140163">
+</activity>
+<activity android:name="com.ringapp.feature.portal.wizard.privacyfeatures.PrivacyFeaturesFinishActivity" android:screenOrientation="1" android:theme="@7F140163">
+</activity>
+<activity android:name="com.ringapp.feature.portal.wizard.privacyfeatures.PrivacyFeaturesEnableLiveActivity" android:screenOrientation="1" android:theme="@7F140163">
+</activity>
+<activity android:name="com.ringapp.feature.portal.wizard.privacyfeatures.PrivacyFeaturesLoadingLiveActivity" android:screenOrientation="1" android:theme="@7F140163">
+</activity>
+<activity android:name="com.ringapp.feature.portal.wizard.privacyfeatures.PrivacyFeaturesAddZonesActivity" android:screenOrientation="0" android:theme="@7F1401A7">
+</activity>
+<activity android:name="com.ringapp.feature.postsetup.wizard.motionsettings.settings.MotionDetectionSettingsActivity" android:screenOrientation="1" android:theme="@7F140163">
+</activity>
+<service android:exported="true" android:label="Dfu service" android:name="com.ringapp.feature.beams.update.data.DfuService">
+<intent-filter>
+<action android:name="com.ring.beams.dfu.action.DFU_UPLOAD">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</service>
+<activity android:name="com.ringapp.tutorial.faceNotification.FaceNotificationTutorialActivity" android:screenOrientation="1" android:theme="@7F1401AC">
+</activity>
+<activity android:name="com.ringapp.tutorial.advanceddetection.AdvancedDetectionTutorialActivity" android:screenOrientation="1" android:theme="@7F1401AC">
+</activity>
+<activity android:name="com.ringapp.advanceddetection.ui.AdvancedDetectionSettingsActivity" android:screenOrientation="1" android:theme="@7F1401AC">
+</activity>
+<activity android:name="com.ringapp.advanceddetection.ui.PeopleOnlyModeActivity" android:screenOrientation="1" android:theme="@7F1401AC">
+</activity>
+<activity android:name="com.ringapp.advanceddetection.ui.AdvancedDetectionAreasActivity" android:screenOrientation="0" android:theme="@7F1401A7">
+</activity>
+<activity android:name="com.ringapp.advanceddetection.ui.AdvancedDetectionEnablingSuccessActivity" android:screenOrientation="1" android:theme="@7F1401AC">
+</activity>
+<activity android:name="com.ringapp.advanceddetection.ui.postsetup.AdvancedDetectionPostSetupActivity" android:screenOrientation="1" android:theme="@7F1401AC">
+</activity>
+<activity android:name="com.ringapp.advanceddetection.ui.postsetup.AdvancedDetectionPostSetupComparisonActivity" android:screenOrientation="1" android:theme="@7F1401AC">
+</activity>
+<activity android:name="com.ringapp.advanceddetection.ui.postsetup.AdvancedDetectionPostSetupEnablingSuccessActivity" android:screenOrientation="1" android:theme="@7F1401AC">
+</activity>
+<activity android:name="com.ringapp.advanceddetection.ui.postsetup.AdvancedDetectionPostSetupZonesSavedActivity" android:screenOrientation="1" android:theme="@7F1401AC">
+</activity>
+<activity android:name="com.ringapp.advanceddetection.ui.AdvancedDetectionSensitivityActivity" android:screenOrientation="1" android:theme="@7F1401AC">
+</activity>
+<activity android:name="com.ringapp.advanceddetection.ui.MotionVerificationActivity" android:screenOrientation="1" android:theme="@7F1401AC">
+</activity>
+<activity android:name="com.ringapp.ui.activities.ChimeProNetworkActivity" android:screenOrientation="1" android:theme="@7F1401AC">
+</activity>
+<activity android:name="com.ringapp.ui.activities.ChimeProConnectionActivity" android:screenOrientation="1" android:theme="@7F1401AC">
+</activity>
+<activity android:name="com.ringapp.magicsetup.ui.DeviceCodeScannerV2Activity" android:screenOrientation="1" android:theme="@7F1401AC">
+</activity>
+<activity android:name="com.ringapp.detailedofflinestates.ui.ReconnectWiFiTroubleshootActivity" android:screenOrientation="1" android:theme="@7F1401AC">
+</activity>
+<activity android:name="com.ringapp.detailedofflinestates.ui.ReconnectWiFiTroubleshootDetailsActivity" android:screenOrientation="1" android:theme="@7F1401AC">
+</activity>
+<activity android:name="com.ringapp.manualexposure.ui.settings.ExposureSettingsActivity" android:screenOrientation="1" android:theme="@7F1401AA">
+</activity>
+<activity android:name="com.ringapp.manualexposure.ui.grid.ExposureAreaActivity" android:screenOrientation="0" android:theme="@7F1401AD">
+</activity>
+<activity android:name="com.ringapp.manualexposure.ui.settings.SetCustomExposureActivity" android:screenOrientation="1" android:theme="@7F1401AC">
+</activity>
+<activity android:name="com.ringapp.feature.sensor.presentation.SensitivityTutorialActivity" android:screenOrientation="1" android:theme="@7F1401AC">
+</activity>
+<activity android:name="com.ringapp.onboarding.sign_up.ui.SignUpFlowActivity" android:screenOrientation="1" android:theme="@7F1401AC" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.ringapp.onboarding.location.ui.LocationSetupFlowActivity" android:screenOrientation="1" android:theme="@7F1401AC" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.ringapp.ui.activities.PreRollLeanMoreActivity" android:screenOrientation="1" android:theme="@7F1401AC">
+</activity>
+<activity android:name="com.ringapp.feature.postsetup.wizard.motionsettings.presentation.MotionSettingsWizardActivity" android:screenOrientation="1" android:theme="@7F1401AC">
+</activity>
+<activity android:name="com.ringapp.ui.activities.GlobalSnoozeSettingsActivity" android:screenOrientation="1" android:theme="@7F1401AC">
+</activity>
+<receiver android:exported="false" android:name="com.ringapp.ui.notification.NotificationTapBroadcastReceiver">
+<intent-filter>
+<action android:name="com.ringapp.NOTIFICATION_TAP">
+</action>
+</intent-filter>
+</receiver>
+<activity android:clearTaskOnLaunch="true" android:name="com.journeyapps.barcodescanner.CaptureActivity" android:screenOrientation="6" android:stateNotNeeded="true" android:theme="@7F140381" android:windowSoftInputMode="0x00000003">
+</activity>
+<meta-data android:name="com.mixpanel.android.MPConfig.EnableDebugLogging" android:value="true">
+</meta-data>
+<service android:enabled="true" android:exported="false" android:name="com.mixpanel.android.mpmetrics.MixpanelFCMMessagingService">
+<intent-filter>
+<action android:name="com.google.firebase.MESSAGING_EVENT">
+</action>
+</intent-filter>
+</service>
+<meta-data android:name="com.mixpanel.android.MPConfig.AutoShowMixpanelUpdates" android:value="false">
+</meta-data>
+<activity android:label="@7F131DF9" android:name="com.ring.nh.mvp.image.FullScreenImageActivity" android:screenOrientation="4" android:theme="@7F14001A">
+</activity>
+<activity android:label="@7F131389" android:launchMode="1" android:name="com.ring.nh.mvp.main.MainActivity" android:screenOrientation="1" android:theme="@7F14000D" android:windowSoftInputMode="0x00000020">
+<intent-filter>
+<action android:name="feed">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="map">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:label="@7F131318" android:name="com.ring.nh.mvp.post.PostActivity" android:screenOrientation="1" android:theme="@7F14000D">
+<intent-filter>
+<action android:name="com.ring.SHARE_EVENT">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:label="@7F1313AF" android:name="com.ring.nh.mvp.post.PostInstructionsActivity" android:screenOrientation="1" android:theme="@7F14001D">
+</activity>
+<activity android:label="@7F131433" android:launchMode="1" android:name="com.ring.nh.mvp.onboarding.flow.location.EditAddressActivity" android:screenOrientation="1" android:theme="@7F14001D" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:label="@7F13132C" android:launchMode="1" android:name="com.ring.nh.mvp.onboarding.flow.notverified.NotVerifiedActivity" android:screenOrientation="1" android:theme="@7F14000D" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:label="@7F13132C" android:launchMode="1" android:name="com.ring.nh.mvp.onboarding.flow.location.EditAddressPendingActivity" android:screenOrientation="1" android:theme="@7F14001D">
+</activity>
+<activity android:configChanges="0x00000080" android:label="@7F13132C" android:launchMode="2" android:name="com.ring.nh.mvp.video.FullScreenVideoActivity" android:screenOrientation="6" android:theme="@7F14000D">
+</activity>
+<activity android:label="@7F1313DC" android:name="com.ring.nh.contactpicker.core.ContactPickerActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="contact">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+</intent-filter>
+</activity>
+<activity android:label="@7F1313DC" android:name="com.ring.nh.mvp.invite.InviteActivity" android:parentActivityName="com.ring.nh.mvp.main.MainActivity" android:screenOrientation="1" android:theme="@7F14000D">
+<intent-filter>
+<action android:name="invite">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".mvp.main.MainActivity">
+</meta-data>
+</activity>
+<activity android:label="@7F1313DC" android:name="com.ring.nh.mvp.invite.InviteOnBoardingActivity" android:screenOrientation="1" android:theme="@7F14000D">
+</activity>
+<activity android:launchMode="1" android:name="com.ring.nh.mvp.location.PostLocationActivity" android:screenOrientation="1" android:theme="@7F14001D">
+</activity>
+<activity android:label="@7F13142F" android:launchMode="2" android:name="com.ring.nh.mvp.settings.SettingsActivity" android:screenOrientation="1" android:theme="@7F14000D">
+</activity>
+<activity android:label="@7F131411" android:launchMode="2" android:name="com.ring.nh.mvp.settings.radius.RadiusSettingsActivity" android:screenOrientation="1" android:theme="@7F14000D">
+</activity>
+<activity android:launchMode="2" android:name="com.ring.nh.mvp.watchlistmap.WatchlistMapActivity" android:screenOrientation="1" android:theme="@7F14001D">
+</activity>
+<activity android:label="@7F1314EC" android:launchMode="2" android:name="com.ring.nh.mvp.watchlist.WatchlistDetailActivity" android:screenOrientation="1" android:theme="@7F14000D" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:label="@7F1314EC" android:launchMode="2" android:name="com.ring.nh.mvp.watchlistposts.WatchlistPostsActivity" android:screenOrientation="1" android:theme="@7F14000D" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:label="@7F131354" android:name="com.ring.nh.mvp.crimes.map.CrimesMapActivity" android:screenOrientation="1" android:theme="@7F14000D">
+</activity>
+<activity android:name="com.ring.nh.mvp.settings.GetRingActivity" android:screenOrientation="1" android:theme="@7F14000D">
+</activity>
+<provider android:authorities="@7F1313AE" android:exported="false" android:grantUriPermissions="true" android:name="androidx.core.content.FileProvider" android:screenOrientation="4">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F170000">
+</meta-data>
+</provider>
+<provider android:authorities="@7F131398" android:exported="true" android:name="com.facebook.FacebookContentProvider">
+</provider>
+<service android:name="com.ring.nh.utils.NotificationsIntentService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<service android:name="com.ring.nh.services.AddressVerificationService">
+</service>
+<service android:name="com.ring.nh.services.PostAlertService">
+</service>
+<service android:enabled="true" android:name="com.ring.nh.services.PostVideoService">
+</service>
+<receiver android:exported="true" android:name="com.appsflyer.SingleInstallBroadcastReceiver">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name="com.ring.nh.receivers.CrimeReportReceiver">
+</receiver>
+<activity android:label="@7F1314D7" android:name="com.ring.nh.mvp.feeddetail.FeedDetailActivity" android:parentActivityName="com.ring.nh.mvp.main.MainActivity" android:screenOrientation="1" android:theme="@7F14000D" android:windowSoftInputMode="0x00000010">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".mvp.main.MainActivity">
+</meta-data>
+</activity>
+<activity android:name="com.ring.nh.mvp.crimes.categories.CrimeCategoriesActivity" android:screenOrientation="1" android:theme="@7F14000D">
+</activity>
+<activity android:name="com.ring.nh.mvp.crimereport.CrimeReportActivity" android:screenOrientation="1" android:theme="@7F14000D">
+</activity>
+<activity android:name="com.ring.nh.mvp.crimereport.details.CrimeReportDetailsActivity" android:screenOrientation="1" android:theme="@7F14000D">
+</activity>
+<activity android:name="com.ring.nh.mvp.crimes.resolve.ResolveCrimeActivity" android:screenOrientation="1" android:theme="@7F14000D" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.ring.nh.mvp.crimes.caseinformation.AddCaseInformationActivity" android:screenOrientation="1" android:theme="@7F14000D" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.ring.nh.mvp.onboarding.flow.OnboardingFlowActivity" android:screenOrientation="1" android:theme="@7F14000D" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.ring.android.tfa.ui.TwoFactorAuthenticationActivity" android:screenOrientation="1" android:theme="@7F14000D" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:exported="false" android:hardwareAccelerated="true" android:label="@7F131669" android:name="com.google.android.libraries.places.widget.AutocompleteActivity" android:theme="@7F14014C" android:windowSoftInputMode="0x00000025">
+</activity>
+<activity android:name="com.zhihu.matisse.ui.MatisseActivity">
+</activity>
+<activity android:name="com.zhihu.matisse.internal.ui.AlbumPreviewActivity">
+</activity>
+<activity android:name="com.zhihu.matisse.internal.ui.SelectedPreviewActivity">
+</activity>
+<activity android:configChanges="0x000005B0" android:name="com.facebook.FacebookActivity" android:theme="@7F14030D">
+</activity>
+<activity android:name="com.facebook.CustomTabMainActivity">
+</activity>
+<uses-library android:name="org.apache.http.legacy" android:required="false">
+</uses-library>
+<service android:exported="false" android:name="com.google.firebase.messaging.FirebaseMessagingService">
+<intent-filter android:priority="-500">
+<action android:name="com.google.firebase.MESSAGING_EVENT">
+</action>
+</intent-filter>
+</service>
+<activity android:launchMode="2" android:name="xyz.fcampbell.rxplayservices.base.util.ResultActivity" android:theme="@android:01030010">
+</activity>
+<service android:exported="false" android:name="com.google.firebase.components.ComponentDiscoveryService">
+<meta-data android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar" android:value="com.google.firebase.components.ComponentRegistrar">
+</meta-data>
+<meta-data android:name="com.google.firebase.components:com.google.firebase.iid.Registrar" android:value="com.google.firebase.components.ComponentRegistrar">
+</meta-data>
+</service>
+<receiver android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+</intent-filter>
+</receiver>
+<service android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdService">
+<intent-filter android:priority="-500">
+<action android:name="com.google.firebase.INSTANCE_ID_EVENT">
+</action>
+</intent-filter>
+</service>
+<activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:01030010">
+</activity>
+<provider android:authorities="com.ringapp.firebaseinitprovider" android:exported="false" android:initOrder="100" android:name="com.google.firebase.provider.FirebaseInitProvider">
+</provider>
+<receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementReceiver">
+</receiver>
+<receiver android:enabled="true" android:exported="true" android:name="com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver" android:permission="android.permission.INSTALL_PACKAGES">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementService">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementJobService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<service android:exported="true" android:name="com.firebase.jobdispatcher.GooglePlayReceiver" android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE">
+<intent-filter>
+<action android:name="com.google.android.gms.gcm.ACTION_TASK_READY">
+</action>
+</intent-filter>
+</service>
+<provider android:authorities="com.ringapp.FacebookInitProvider" android:exported="false" android:name="com.facebook.internal.FacebookInitProvider">
+</provider>
+<receiver android:exported="false" android:name="com.facebook.CurrentAccessTokenExpirationBroadcastReceiver">
+<intent-filter>
+<action android:name="com.facebook.sdk.ACTION_CURRENT_ACCESS_TOKEN_CHANGED">
+</action>
+</intent-filter>
+</receiver>
+<provider android:authorities="com.ringapp.mapboxtelemetryinitprovider" android:exported="false" android:initOrder="100" android:name="com.mapbox.android.telemetry.provider.MapboxTelemetryInitProvider">
+</provider>
+<service android:name="com.mapbox.android.telemetry.crash.CrashReporterJobIntentService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<provider android:authorities="com.ringapp.lifecycle-process" android:exported="false" android:multiprocess="true" android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer">
+</provider>
+<provider android:authorities="com.ringapp.crashlyticsinitprovider" android:exported="false" android:initOrder="90" android:name="com.crashlytics.android.CrashlyticsInitProvider">
+</provider>
+<activity android:name="com.jakewharton.processphoenix.ProcessPhoenix" android:process=":phoenix" android:theme="@android:01030010">
+</activity>
+<activity android:label="@7F131DFB" android:name="com.ring.neighborswebview.ui.activity.NeighborsWebActivity" android:theme="@7F14001A">
+</activity>
+</application>
+</manifest>

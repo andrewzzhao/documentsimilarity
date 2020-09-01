@@ -1,0 +1,492 @@
+<?xml version="1.0" ?><manifest android:versionCode="46" android:versionName="4.0.1" package="net.duohuo.magapp.shangqiuyishang" platformBuildVersionCode="25" platformBuildVersionName="7.1.1" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="17" android:targetSdkVersion="25">
+</uses-sdk>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.RESTART_PACKAGES">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_LOGS">
+</uses-permission>
+<uses-permission android:name="android.permission.RECORD_AUDIO">
+</uses-permission>
+<uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.Manifest.permission.STATUS_BAR">
+</uses-permission>
+<uses-permission android:name="android.Manifest.permission.EXPAND_STATUS_BAR">
+</uses-permission>
+<uses-permission android:name="android.Manifest.permission.STATUS_BAR_SERVICE">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_USER_PRESENT">
+</uses-permission>
+<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS">
+</uses-permission>
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW">
+</uses-permission>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-feature android:name="android.hardware.camera">
+</uses-feature>
+<uses-feature android:name="android.hardware.camera.autofocus">
+</uses-feature>
+<uses-permission android:name="android.permission.FLASHLIGHT">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="android.permission.USE_CREDENTIALS">
+</uses-permission>
+<uses-permission android:name="android.permission.MANAGE_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="com.android.launcher.permission.READ_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.BROADCAST_STICKY">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.BROADCAST_PACKAGE_ADDED">
+</uses-permission>
+<uses-permission android:name="android.permission.BROADCAST_PACKAGE_CHANGED">
+</uses-permission>
+<uses-permission android:name="android.permission.BROADCAST_PACKAGE_INSTALL">
+</uses-permission>
+<uses-permission android:name="android.permission.BROADCAST_PACKAGE_REPLACED">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_NETWORK_STATE">
+</uses-permission>
+<application android:allowBackup="true" android:icon="@7F02015C" android:label="@7F060023" android:name="com.tencent.StubShell.TxAppEntry" android:supportsRtl="true" android:theme="@android:01030010">
+<meta-data android:name="TxAppEntry" android:value="net.duohuo.magappx.MajiaApplication">
+</meta-data>
+<meta-data android:name="com.baidu.lbsapi.API_KEY" android:value="@7F060032">
+</meta-data>
+<service android:enabled="true" android:name="com.baidu.location.f" android:process=":remote">
+<intent-filter>
+<action android:name="com.baidu.location.service_v2.4">
+</action>
+</intent-filter>
+</service>
+<meta-data android:name="EASEMOB_APPKEY" android:value="@7F06002A">
+</meta-data>
+<service android:exported="true" android:name="com.hyphenate.chat.EMChatService">
+</service>
+<service android:exported="true" android:name="com.hyphenate.chat.EMJobService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<receiver android:name="com.hyphenate.chat.EMMonitorReceiver">
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_REMOVED">
+</action>
+<data android:scheme="package">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+<action android:name="android.intent.action.USER_PRESENT">
+</action>
+</intent-filter>
+</receiver>
+<activity android:name="net.duohuo.magappx.main.WelcomeActivity" android:theme="@7F0800A3">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:name="net.duohuo.magappx.main.GuideActivity" android:theme="@android:0103000D">
+</activity>
+<activity android:name="net.duohuo.magappx.MainActivity">
+</activity>
+<activity android:launchMode="2" android:name="net.duohuo.magappx.main.IndexTabActivity" android:windowSoftInputMode="0x00000010">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="pagejump" android:scheme="@7F060022">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="net.duohuo.magappx.circle.forum.ThreadMemberActivity">
+</activity>
+<activity android:name="net.duohuo.magappx.common.activity.CommentPopWindow" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="net.duohuo.magappx.circle.show.ShowHotListActivity">
+</activity>
+<activity android:name="net.duohuo.magappx.circle.show.ShowTopicContentListActivity">
+</activity>
+<activity android:name="net.duohuo.magappx.circle.show.ShowDetailActivity">
+</activity>
+<activity android:name="net.duohuo.magappx.circle.forum.ThreadListActivity">
+</activity>
+<activity android:launchMode="2" android:name="net.duohuo.magappx.main.login.LoginActivity">
+</activity>
+<activity android:name="net.duohuo.magappx.main.login.LoginAndBindActivity">
+</activity>
+<activity android:name="net.duohuo.magappx.main.login.PhoneLoginActivity">
+</activity>
+<activity android:name="net.duohuo.magappx.main.login.RegisterPhoneActivity">
+</activity>
+<activity android:name="net.duohuo.magappx.main.login.RegisterActivity">
+</activity>
+<activity android:name="net.duohuo.magappx.main.login.ChangePasswordActivity">
+</activity>
+<activity android:name="net.duohuo.magappx.circle.forum.FilterActivity">
+</activity>
+<activity android:name="net.duohuo.magappx.circle.circle.ClassifyAdditionActivity">
+</activity>
+<activity android:name="net.duohuo.magappx.circle.circle.CircleSortActivity">
+</activity>
+<activity android:label="chatActivity" android:launchMode="1" android:name="net.duohuo.magappx.chat.activity.ChatActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="net.duohuo.magappx.chat.activity.ChatMapActivity">
+</activity>
+<activity android:name="net.duohuo.magappx.chat.activity.PhotoViewActivity" android:theme="@android:01030007">
+</activity>
+<activity android:name="net.duohuo.magappx.circle.forum.ThreadInfoActivity">
+</activity>
+<activity android:name="net.duohuo.magappx.circle.forum.CommentPostWindow" android:screenOrientation="1" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="net.duohuo.magappx.circle.show.ShowInfoActivity">
+</activity>
+<activity android:name="net.duohuo.magappx.circle.show.ShowMemberActivity">
+</activity>
+<activity android:name="net.duohuo.magappx.circle.show.ShowAllTopicActivity">
+</activity>
+<activity android:name="net.duohuo.magappx.common.activity.CommentActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="net.duohuo.magappx.circle.circle.SearchActivity">
+</activity>
+<activity android:name="net.duohuo.magappx.common.comp.picpick.PicPickAlbumActivity">
+</activity>
+<activity android:name="net.duohuo.magappx.main.user.UserInfoActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:exported="true" android:name="net.duohuo.magapp.wxapi.WXEntryActivity" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x000004A0" android:exported="true" android:name="net.duohuo.magapp.wxapi.WXPayEntryActivity" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<activity android:launchMode="2" android:name="com.umeng.qq.tencent.AuthActivity" android:noHistory="true">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="@7F06003C">
+</data>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.umeng.qq.tencent.AssistActivity" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<activity android:excludeFromRecents="true" android:name="com.umeng.socialize.editorpage.ShareActivity" android:theme="@7F080125">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="net.duohuo.magapp.WBShareActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:name="net.duohuo.magappx.main.user.UserDetailActivity">
+</activity>
+<activity android:name="net.duohuo.magappx.main.user.UserHomeActivity">
+</activity>
+<activity android:name="net.duohuo.magappx.main.user.SettingActivity">
+</activity>
+<activity android:name="net.duohuo.magappx.main.user.PrivacySettingActivity">
+</activity>
+<activity android:name="net.duohuo.magappx.main.user.AccountSecurityActivity">
+</activity>
+<activity android:name="net.duohuo.magappx.main.user.InfoNotificationActivity">
+</activity>
+<activity android:name="net.duohuo.magappx.main.user.CardPackageActivity">
+</activity>
+<activity android:name="net.duohuo.magappx.main.user.CardlistActivity">
+</activity>
+<activity android:name="net.duohuo.magappx.main.user.TicketlistAcitivity">
+</activity>
+<activity android:launchMode="3" android:name="net.duohuo.magappx.common.activity.PhotoPagerActivity">
+</activity>
+<activity android:name="net.duohuo.magappx.find.UserToolActivity">
+</activity>
+<activity android:name="net.duohuo.magappx.find.ToolsActivity">
+</activity>
+<activity android:name="net.duohuo.magappx.main.user.SimpleEditActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.zxing.activity.CaptureActivity">
+</activity>
+<activity android:name="net.duohuo.magappx.common.comp.picpick.ImageZoomActivity">
+</activity>
+<activity android:configChanges="0x000004E0" android:hardwareAccelerated="true" android:name="net.duohuo.magappx.common.web.CommonWebActivity">
+</activity>
+<activity android:name="net.duohuo.magappx.circle.circle.ShowAllCircleActivity">
+</activity>
+<activity android:configChanges="0x00000480" android:name="net.duohuo.magappx.video.videorecord.VideoRecordActivity" android:theme="@android:01030007">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="net.duohuo.magappx.video.videoplay.VideoPlayActivty" android:theme="@7F080111">
+</activity>
+<activity android:name="net.duohuo.magappx.circle.show.ShowPostActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="net.duohuo.magappx.circle.show.SearchTopicActivity">
+</activity>
+<activity android:name="net.duohuo.magappx.circle.show.ShowPositionActivity">
+</activity>
+<activity android:name="net.duohuo.magappx.video.videoplay.videolist.ListViewVideoActivity" android:theme="@7F08011D">
+</activity>
+<activity android:name="net.duohuo.magappx.chat.activity.SystemNotifyActivity">
+</activity>
+<activity android:name="net.duohuo.magappx.chat.activity.PushRecordActivity">
+</activity>
+<activity android:name="net.duohuo.magappx.chat.activity.OnSiteLetterActivity">
+</activity>
+<activity android:name="net.duohuo.magappx.chat.activity.ChatApplyActivity">
+</activity>
+<activity android:name="net.duohuo.magappx.chat.activity.SearchPeopleIndexActivity">
+</activity>
+<activity android:name="net.duohuo.magappx.chat.activity.FansActivity">
+</activity>
+<activity android:name="net.duohuo.magappx.chat.activity.SearchPeopleActivity">
+</activity>
+<activity android:name="net.duohuo.magappx.circle.forum.ThreadPostActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="net.duohuo.magappx.circle.forum.ThreadSortActivity">
+</activity>
+<activity android:name="net.duohuo.magappx.chat.activity.LetterChatActivity">
+</activity>
+<activity android:name="net.duohuo.magappx.chat.activity.SystemRemindActivity">
+</activity>
+<activity android:name="net.duohuo.magappx.circle.forum.FormCheckBoxActivity">
+</activity>
+<activity android:name="net.duohuo.magappx.circle.forum.ThreadSelectActivity">
+</activity>
+<meta-data android:name="UMENG_APPKEY" android:value="@7F06004E">
+</meta-data>
+<meta-data android:name="UMENG_MESSAGE_SECRET" android:value="@7F06004F">
+</meta-data>
+<meta-data android:name="UMENG_CHANNEL" android:value="Channel ID">
+</meta-data>
+<service android:name="net.duohuo.magappx.MyPushIntentService">
+</service>
+<activity android:name="net.duohuo.magappx.chat.activity.NearByActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="net.duohuo.magappx.chat.activity.ResentVisitActivity">
+</activity>
+<activity android:name="net.duohuo.magappx.circle.clockin.ClockinActivity">
+</activity>
+<activity android:name="net.duohuo.magappx.circle.clockin.RecordActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="net.duohuo.magappx.circle.clockin.RankListActivtiy">
+</activity>
+<activity android:name="net.duohuo.magappx.circle.clockin.ClockInTaskActivity">
+</activity>
+<activity android:name="net.duohuo.magappx.circle.clockin.TaskDetailsActivity">
+</activity>
+<activity android:name="net.duohuo.magappx.chat.activity.group.GroupDetailActivity">
+</activity>
+<activity android:name="net.duohuo.magappx.chat.activity.group.GroupBlackListActivity">
+</activity>
+<activity android:name="net.duohuo.magappx.chat.activity.group.GroupMemberActivity">
+</activity>
+<activity android:launchMode="1" android:name="net.duohuo.magappx.main.user.tool.RedPackSendActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:launchMode="1" android:name="net.duohuo.magappx.main.user.tool.RedPackOpenActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="net.duohuo.magappx.main.user.tool.SelectTicketActivity">
+</activity>
+<activity android:name="net.duohuo.magappx.main.user.tool.SelectCardActivity">
+</activity>
+<activity android:name="net.duohuo.magappx.main.user.tool.SendTicketActivity">
+</activity>
+<activity android:name="net.duohuo.magappx.main.user.tool.TicketOpenActivity">
+</activity>
+<activity android:name="net.duohuo.magappx.chat.activity.group.GroupAnnouncementEditActivity">
+</activity>
+<activity android:name="net.duohuo.magappx.chat.activity.group.GroupAnnouncementActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="net.duohuo.magappx.circle.show.LookPictureActivity" android:theme="@7F080111">
+</activity>
+<activity android:name="net.duohuo.magappx.circle.clockin.ClockInContentDetailActivity">
+</activity>
+<activity android:name="net.duohuo.magappx.circle.clockin.FinishListActivity">
+</activity>
+<activity android:name="net.duohuo.magappx.chat.activity.group.GroupListActivity">
+</activity>
+<activity android:name="net.duohuo.magappx.circle.clockin.ClockInRemindActivity">
+</activity>
+<activity android:name="net.duohuo.magappx.more.ShortSearchActivity">
+</activity>
+<activity android:name="net.duohuo.magappx.main.FragmentDisplayActivity">
+</activity>
+<activity android:name="net.duohuo.magappx.main.user.FriendDynamicActivity">
+</activity>
+<activity android:name="net.duohuo.magappx.main.user.UserCollectActivity">
+</activity>
+<activity android:name="net.duohuo.magappx.main.user.BlackListActivity">
+</activity>
+<activity android:name="net.duohuo.magappx.main.user.ChangePhoneActivity">
+</activity>
+<receiver android:name="net.duohuo.magappx.circle.clockin.receiver.ClockReceiver">
+</receiver>
+<activity android:launchMode="1" android:name="net.duohuo.magappx.chat.activity.ServiceChatActivity">
+</activity>
+<activity android:name="net.duohuo.magappx.video.videoplay.VideoPicActivity" android:theme="@7F080111">
+</activity>
+<activity android:name="net.duohuo.magappx.circle.show.ShowAllTopicsActivity">
+</activity>
+<activity android:name="net.duohuo.magappx.circle.circle.PraiseMemberActivity">
+</activity>
+<activity android:name="net.duohuo.magappx.common.activity.RollingNoticeActivity">
+</activity>
+<activity android:name="net.duohuo.magappx.find.AllFindActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:exported="true" android:name="net.duohuo.magapp.shangqiuyishang.wxapi.WXEntryActivity" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x000004A0" android:exported="true" android:name="net.duohuo.magapp.shangqiuyishang.wxapi.WXPayEntryActivity" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<provider android:authorities="net.duohuo.magapp.shangqiuyishang.fileprovider" android:exported="false" android:grantUriPermissions="true" android:name="android.support.v4.content.FileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F050000">
+</meta-data>
+</provider>
+<service android:exported="true" android:name="com.taobao.accs.ChannelService" android:process=":channel">
+<intent-filter>
+<action android:name="com.taobao.accs.intent.action.SERVICE">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="com.taobao.accs.intent.action.ELECTION">
+</action>
+</intent-filter>
+</service>
+<service android:exported="true" android:name="com.taobao.accs.data.MsgDistributeService">
+<intent-filter>
+<action android:name="com.taobao.accs.intent.action.RECEIVE">
+</action>
+</intent-filter>
+</service>
+<receiver android:name="com.taobao.accs.EventReceiver" android:process=":channel">
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_REMOVED">
+</action>
+<data android:scheme="package">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.USER_PRESENT">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name="com.taobao.accs.ServiceReceiver" android:process=":channel">
+<intent-filter>
+<action android:name="com.taobao.accs.intent.action.COMMAND">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="com.taobao.accs.intent.action.START_FROM_AGOO">
+</action>
+</intent-filter>
+</receiver>
+<service android:name="com.taobao.accs.ChannelService$KernelService" android:process=":channel">
+</service>
+<service android:exported="true" android:name="org.android.agoo.accs.AgooService">
+<intent-filter>
+<action android:name="com.taobao.accs.intent.action.RECEIVE">
+</action>
+</intent-filter>
+</service>
+<service android:exported="true" android:name="com.umeng.message.UmengIntentService" android:process=":channel">
+<intent-filter>
+<action android:name="org.agoo.android.intent.action.RECEIVE">
+</action>
+</intent-filter>
+</service>
+<service android:exported="true" android:name="com.umeng.message.XiaomiIntentService" android:process=":channel">
+<intent-filter>
+<action android:name="org.agoo.android.intent.action.RECEIVE">
+</action>
+</intent-filter>
+</service>
+<receiver android:exported="true" android:name="com.taobao.agoo.AgooCommondReceiver" android:process=":channel">
+<intent-filter>
+<action android:name="net.duohuo.magapp.shangqiuyishang.intent.action.COMMAND">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_REMOVED">
+</action>
+<data android:scheme="package">
+</data>
+</intent-filter>
+</receiver>
+<service android:exported="true" android:name="com.umeng.message.UmengMessageIntentReceiverService" android:process=":channel">
+<intent-filter>
+<action android:name="org.android.agoo.client.MessageReceiverService">
+</action>
+</intent-filter>
+</service>
+<receiver android:exported="false" android:name="com.umeng.message.NotificationProxyBroadcastReceiver">
+</receiver>
+<service android:exported="false" android:name="com.umeng.message.UmengMessageCallbackHandlerService">
+<intent-filter>
+<action android:name="com.umeng.messge.registercallback.action">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="com.umeng.message.enablecallback.action">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="com.umeng.message.disablecallback.action">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="com.umeng.message.message.handler.action">
+</action>
+</intent-filter>
+</service>
+<service android:exported="false" android:name="com.umeng.message.UmengDownloadResourceService">
+</service>
+<provider android:authorities="net.duohuo.magapp.shangqiuyishang.umeng.message" android:exported="false" android:name="com.umeng.message.provider.MessageProvider">
+<grant-uri-permission android:pathPattern=".*">
+</grant-uri-permission>
+</provider>
+</application>
+</manifest>

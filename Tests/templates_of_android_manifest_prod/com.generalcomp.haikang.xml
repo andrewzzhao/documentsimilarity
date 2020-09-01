@@ -1,0 +1,142 @@
+<?xml version="1.0" ?><manifest android:versionCode="55" android:versionName="2.0.2" package="com.generalcomp.haikang" platformBuildVersionCode="23" platformBuildVersionName="6.0-2704002" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="14" android:targetSdkVersion="23">
+</uses-sdk>
+<application android:debuggable="false" android:icon="@7F020045" android:label="海灞坥�" android:name="Application" android:theme="@7F09013A">
+<activity android:configChanges="0x000004A0" android:label="@7F0D0014" android:name=".Activity" android:theme="@7F090145">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004A0" android:name="org.appcelerator.titanium.TiActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="org.appcelerator.titanium.TiTranslucentActivity" android:theme="@7F090146">
+</activity>
+<activity android:configChanges="0x00000400" android:name="ti.modules.titanium.ui.android.TiPreferencesActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="ti.modules.titanium.media.TiVideoActivity" android:theme="@7F090144">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.juan.eseenet.activity.EseeNetActivity" android:theme="@7F0900FB">
+</activity>
+<activity android:configChanges="0x00000400" android:name="com.juanvision.qr.BarCodeActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000400" android:launchMode="2" android:name="com.juan.eseenet.crash.CrashActivity" android:noHistory="true" android:theme="@android:01030055">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.imagevideo.media.ImageVideoActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="com.imagevideo.media.ImageShowActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000400" android:name="com.juan.eseenet.activity.MapActivity" android:screenOrientation="1" android:theme="@7F0900FB">
+</activity>
+<activity android:configChanges="0x00000400" android:name="com.juan.eseenet.activity.BusinessInfoActivity" android:screenOrientation="1" android:theme="@7F0900FB">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.juan.eseenet.activity.EseeCloudActivity" android:screenOrientation="5" android:theme="@android:0103000D">
+</activity>
+<activity android:configChanges="0x00000400" android:name="com.juan.eseenet.activity.MediaActivity" android:screenOrientation="1" android:theme="@android:0103000D">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.juan.eseenet.activity.DemoCentreActivity" android:screenOrientation="5" android:theme="@android:0103000D">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.juan.eseenet.activity.PlaybackActivity" android:theme="@android:0103000D">
+</activity>
+<activity android:configChanges="0x00000400" android:name="com.juan.vr.VRActivity" android:screenOrientation="0">
+</activity>
+<service android:name="com.generalcomp.haikang.Ui_common_alarmpushserviceService">
+</service>
+<service android:exported="true" android:name="com.baidu.android.pushservice.PushService" android:process=":bdservice_v1">
+<intent-filter>
+<action android:name="com.baidu.android.pushservice.action.PUSH_SERVICE">
+</action>
+</intent-filter>
+</service>
+<service android:exported="true" android:name="com.baidu.android.pushservice.CommandService">
+</service>
+<meta-data android:name="TencentMapSDK" android:value="GGCBZ-76M34-UWRUL-XWTUR-RGJ7O-H4F4T">
+</meta-data>
+<receiver android:name="com.juanvision.alarmpush.MyPushMessageReceiver">
+<intent-filter>
+<action android:name="com.baidu.android.pushservice.action.MESSAGE">
+</action>
+<action android:name="com.baidu.android.pushservice.action.RECEIVE">
+</action>
+<action android:name="com.baidu.android.pushservice.action.notification.CLICK">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name="com.baidu.android.pushservice.PushServiceReceiver" android:process=":bdservice_v1">
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+<action android:name="com.baidu.android.pushservice.action.notification.SHOW">
+</action>
+<action android:name="com.baidu.android.pushservice.action.media.CLICK">
+</action>
+<action android:name="android.intent.action.MEDIA_MOUNTED">
+</action>
+<action android:name="android.intent.action.USER_PRESENT">
+</action>
+<action android:name="android.intent.action.ACTION_POWER_CONNECTED">
+</action>
+<action android:name="android.intent.action.ACTION_POWER_DISCONNECTED">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name="com.baidu.android.pushservice.RegistrationReceiver" android:process=":bdservice_v1">
+<intent-filter>
+<action android:name="com.baidu.android.pushservice.action.METHOD">
+</action>
+<action android:name="com.baidu.android.pushservice.action.BIND_SYNC">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_REMOVED">
+</action>
+<data android:scheme="package">
+</data>
+</intent-filter>
+</receiver>
+</application>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.RECORD_AUDIO">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.DISABLE_KEYGUARD">
+</uses-permission>
+<uses-feature android:name="android.hardware.camera">
+</uses-feature>
+<uses-feature android:name="android.hardware.camera.autofocus">
+</uses-feature>
+</manifest>

@@ -1,0 +1,302 @@
+<?xml version="1.0" ?><manifest android:versionCode="10" android:versionName="10.05" package="mobi.androapp.gkksamaj.c2378" platformBuildVersionCode="23" platformBuildVersionName="6.0-2166767" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="14" android:targetSdkVersion="20">
+</uses-sdk>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERACT_ACROSS_USERS_FULL">
+</uses-permission>
+<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<permission android:name="mobi.androapp.gkksamaj.c2378.permission.C2D_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="mobi.androapp.gkksamaj.c2378.permission.C2D_MESSAGE">
+</uses-permission>
+<application android:allowBackup="true" android:hardwareAccelerated="true" android:icon="@7F020085" android:label="@7F070049" android:name="com.puzzlersworld.android.FriopinApplication" android:supportsRtl="true" android:theme="@7F090039">
+<activity android:configChanges="0x000004A0" android:label="@7F070049" android:launchMode="1" android:name="com.puzzlersworld.android.FullscreenActivity" android:windowSoftInputMode="0x00000010">
+<intent-filter>
+<action android:name="android.intent.action.SEARCH">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="www.gkksamaj.com" android:pathPrefix="/" android:scheme="http">
+</data>
+</intent-filter>
+<meta-data android:name="android.app.searchable" android:resource="@7F050003">
+</meta-data>
+</activity>
+<activity android:configChanges="0x000004A0" android:label="Login" android:name="com.puzzlersworld.android.ui.activity.LoginActivity" android:theme="@7F09009B" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:label="Comments Settings" android:name="com.puzzlersworld.android.ui.activity.CommentSettingsActivity" android:theme="@7F09009B" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:configChanges="0x00000FB0" android:name="com.google.android.gms.ads.AdActivity" android:theme="@android:0103000F">
+</activity>
+<meta-data android:name="com.google.android.gms.version" android:value="@7F0B0006">
+</meta-data>
+<service android:name="com.puzzlersworld.android.gcm.AndroAppGcmListenerService">
+<intent-filter>
+<action android:name="com.google.firebase.MESSAGING_EVENT">
+</action>
+</intent-filter>
+</service>
+<service android:name="com.puzzlersworld.android.gcm.AndroAppIDListenerService">
+<intent-filter>
+<action android:name="com.google.firebase.INSTANCE_ID_EVENT">
+</action>
+</intent-filter>
+</service>
+<receiver android:enabled="true" android:name="com.google.android.gms.analytics.AnalyticsReceiver">
+<intent-filter>
+<action android:name="com.google.android.gms.analytics.ANALYTICS_DISPATCH">
+</action>
+</intent-filter>
+</receiver>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.analytics.AnalyticsService">
+</service>
+<receiver android:exported="true" android:name="com.google.android.gms.analytics.CampaignTrackingReceiver">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+<service android:name="com.google.android.gms.analytics.CampaignTrackingService">
+</service>
+<activity android:configChanges="0x000004A0" android:hardwareAccelerated="true" android:name="com.appnext.appnextinterstitial.FullscreenActivity" android:theme="@android:01030007">
+</activity>
+<activity android:hardwareAccelerated="true" android:name="com.appnext.appnextinterstitial.InterstitialActivity" android:theme="@android:01030007">
+</activity>
+<service android:name="com.appnext.core.DownloadService">
+</service>
+<activity android:name="com.puzzlersworld.android.SplashActivity" android:theme="@7F090103">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.mopub.mobileads.MoPubActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.mopub.mobileads.MraidActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.mopub.common.MoPubBrowser">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.mopub.mobileads.MraidVideoPlayerActivity">
+</activity>
+<activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:01030010">
+</activity>
+<activity android:name="com.google.android.gms.ads.purchase.InAppPurchaseActivity" android:theme="@7F090150">
+</activity>
+<service android:exported="true" android:name="com.google.firebase.messaging.FirebaseMessagingService">
+<intent-filter android:priority="-500">
+<action android:name="com.google.firebase.MESSAGING_EVENT">
+</action>
+</intent-filter>
+</service>
+<receiver android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+<action android:name="com.google.android.c2dm.intent.REGISTRATION">
+</action>
+<category android:name="mobi.androapp.gkksamaj.c2378">
+</category>
+</intent-filter>
+</receiver>
+<receiver android:exported="false" android:name="com.google.firebase.iid.FirebaseInstanceIdInternalReceiver">
+</receiver>
+<service android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdService">
+<intent-filter android:priority="-500">
+<action android:name="com.google.firebase.INSTANCE_ID_EVENT">
+</action>
+</intent-filter>
+</service>
+<provider android:authorities="mobi.androapp.gkksamaj.c2378.firebaseinitprovider" android:exported="false" android:initOrder="100" android:name="com.google.firebase.provider.FirebaseInitProvider">
+</provider>
+<receiver android:enabled="true" android:name="com.google.android.gms.measurement.AppMeasurementReceiver">
+<intent-filter>
+<action android:name="com.google.android.gms.measurement.UPLOAD">
+</action>
+</intent-filter>
+</receiver>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementService">
+</service>
+<service android:name="com.appnext.core.AdsService">
+</service>
+<activity android:configChanges="0x000004A0" android:hardwareAccelerated="true" android:name="com.appnext.ads.interstitial.InterstitialActivity" android:theme="@android:01030007">
+</activity>
+<activity android:configChanges="0x000004A0" android:hardwareAccelerated="true" android:name="com.appnext.ads.fullscreen.FullscreenActivity" android:theme="@android:01030007">
+</activity>
+<service android:exported="false" android:name="com.appnext.sdk.service.services.FetchAddressIntentService">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.appnext.sdk.service.services.SaveAppsListService">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.appnext.sdk.service.services.CheckObsoleteDataService">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.appnext.sdk.service.services.alarms.Mlas">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.appnext.sdk.service.services.alarms.Alas">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.appnext.sdk.service.services.alarms.Nlas">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.appnext.sdk.service.services.alarms.Resactap">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.appnext.sdk.service.services.alarms.Foreapp">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.appnext.sdk.service.services.alarms.Resactapcat">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.appnext.sdk.service.services.alarms.Deflun">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.appnext.sdk.service.services.alarms.Inslun">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.appnext.sdk.service.services.alarms.Dos">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.appnext.sdk.service.services.alarms.Slang">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.appnext.sdk.service.services.alarms.Mop">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.appnext.sdk.service.services.alarms.Dname">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.appnext.sdk.service.services.alarms.Dmod">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.appnext.sdk.service.services.alarms.Blas">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.appnext.sdk.service.services.alarms.Geoci">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.appnext.sdk.service.services.alarms.Geoco">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.appnext.sdk.service.services.alarms.Bfsas">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.appnext.sdk.service.services.alarms.Esfs">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.appnext.sdk.service.services.alarms.Ess">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.appnext.sdk.service.services.alarms.Isfs">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.appnext.sdk.service.services.alarms.Iss">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.appnext.sdk.service.services.alarms.Isfp">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.appnext.sdk.service.services.alarms.Esfp">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.appnext.sdk.service.services.alarms.Bdvolas">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.appnext.sdk.service.services.alarms.Dvola">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.appnext.sdk.service.services.alarms.Dvolr">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.appnext.sdk.service.services.alarms.Dvolm">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.appnext.sdk.service.services.alarms.Dvoln">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.appnext.sdk.service.services.alarms.Dvolc">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.appnext.sdk.service.services.alarms.Duse">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.appnext.sdk.service.services.alarms.Instapcat">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.appnext.sdk.service.services.alarms.Dmstat">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.appnext.sdk.service.services.alarms.Savloc">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.appnext.sdk.service.services.alarms.Usloc">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.appnext.sdk.service.services.alarms.Photad">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.appnext.sdk.service.services.alarms.Tzone">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.appnext.sdk.service.services.alarms.Wifiho">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.appnext.sdk.service.services.alarms.Wifiwo">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.appnext.sdk.service.services.alarms.Wifipr">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.appnext.sdk.service.services.alarms.Default">
+</service>
+<service android:exported="true" android:name="com.appnext.sdk.service.services.CameraNotificationJobService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<receiver android:enabled="true" android:name="com.appnext.sdk.service.receivers.BootReceiver">
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:label="NetworkConnection" android:name="com.appnext.sdk.service.receivers.Ctype">
+<intent-filter>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name="com.appnext.sdk.service.receivers.Dchar">
+<intent-filter>
+<action android:name="android.intent.action.ACTION_POWER_CONNECTED">
+</action>
+<action android:name="android.intent.action.ACTION_POWER_DISCONNECTED">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:enabled="true" android:exported="true" android:name="com.appnext.sdk.service.receivers.Camact">
+<intent-filter>
+<action android:name="android.intent.action.CAMERA_BUTTON">
+</action>
+<action android:name="com.android.camera.NEW_PICTURE">
+</action>
+<action android:name="android.hardware.action.NEW_PICTURE">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:mimeType="image/*">
+</data>
+</intent-filter>
+</receiver>
+<receiver android:name="com.appnext.sdk.service.receivers.Wifiact">
+<intent-filter>
+<action android:name="android.net.wifi.WIFI_STATE_CHANGED">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name="com.appnext.sdk.service.receivers.Wificon">
+<intent-filter>
+<action android:name="android.net.wifi.STATE_CHANGE">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name="com.appnext.sdk.service.receivers.Blueact">
+<intent-filter>
+<action android:name="android.bluetooth.adapter.action.STATE_CHANGED">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name="com.appnext.sdk.service.receivers.Btconn">
+<intent-filter>
+<action android:name="android.bluetooth.adapter.action.CONNECTION_STATE_CHANGED">
+</action>
+<action android:name="android.bluetooth.device.action.ACL_CONNECTED">
+</action>
+<action android:name="android.bluetooth.device.action.ACL_DISCONNECTED">
+</action>
+<action android:name="android.bluetooth.device.action.ACL_DISCONNECT_REQUESTED">
+</action>
+</intent-filter>
+</receiver>
+<meta-data android:name="com.android.vending.derived.apk.id" android:value="1">
+</meta-data>
+</application>
+</manifest>

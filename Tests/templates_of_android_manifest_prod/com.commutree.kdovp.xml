@@ -1,0 +1,264 @@
+<?xml version="1.0" ?><manifest android:installLocation="1" android:versionCode="29" android:versionName="5.08" package="com.commutree.kdovp" platformBuildVersionCode="25" platformBuildVersionName="7.1.1" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="14" android:targetSdkVersion="22">
+</uses-sdk>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<meta-data android:name="android.support.VERSION" android:value="25.3.1">
+</meta-data>
+<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE">
+</uses-permission>
+<permission android:name="com.commutree.kdovp.permission.C2D_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="com.commutree.kdovp.permission.C2D_MESSAGE">
+</uses-permission>
+<application android:allowBackup="false" android:icon="@7F0200D4" android:label="@7F080055" android:manageSpaceActivity=".preference.ManageSpaceActivity" android:name="com.commutree.kdovp.VVPollApp" android:theme="@7F0A00AD">
+<meta-data android:name="com.google.android.gms.version" android:value="@7F0C0006">
+</meta-data>
+<meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@7F08006A">
+</meta-data>
+<activity android:label="@7F080055" android:launchMode="3" android:name="com.commutree.kdovp.SplashScreen" android:screenOrientation="1">
+<intent-filter android:label="@7F080055">
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="dl" android:scheme="commutree">
+</data>
+</intent-filter>
+</activity>
+<activity android:label="@7F080055" android:name="com.commutree.kdovp.inbox.InboxActivity" android:screenOrientation="1">
+</activity>
+<receiver android:name="com.commutree.kdovp.receiver.USBDetectReceiver">
+<intent-filter>
+<action android:name="android.intent.action.ACTION_POWER_CONNECTED">
+</action>
+<action android:name="android.intent.action.ACTION_POWER_DISCONNECTED">
+</action>
+<action android:name="android.intent.action.SCREEN_ON">
+</action>
+<action android:name="android.intent.action.SCREEN_OFF">
+</action>
+<action android:name="com.commutree.android.action.broadcastmsgdownload">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name="com.commutree.kdovp.receiver.MsgBootReceiver">
+<intent-filter>
+<action android:name="android.intent.action.QUICKBOOT_POWERON">
+</action>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name="com.commutree.kdovp.receiver.MsgAlarmReceiver">
+</receiver>
+<service android:name="com.commutree.kdovp.service.CTSyncDataService">
+</service>
+<service android:name="com.commutree.kdovp.service.MsgService">
+</service>
+<service android:name="com.commutree.kdovp.service.MsgUpdateService">
+</service>
+<service android:name="com.commutree.kdovp.service.MsgUploadService">
+</service>
+<service android:name="com.commutree.kdovp.service.CTFirebaseMessagingService">
+<intent-filter>
+<action android:name="com.google.firebase.MESSAGING_EVENT">
+</action>
+</intent-filter>
+</service>
+<service android:name="com.commutree.kdovp.service.CTFirebaseInstanceIDService">
+<intent-filter>
+<action android:name="com.google.firebase.INSTANCE_ID_EVENT">
+</action>
+</intent-filter>
+</service>
+<activity android:label="@7F080055" android:name="com.commutree.kdovp.inbox.MessageActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F080055" android:name="com.commutree.kdovp.profile.ListMembersActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F080055" android:name="com.commutree.kdovp.profile.TagsActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F080055" android:name="com.commutree.kdovp.VPActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F080055" android:name="com.commutree.kdovp.SendMessageActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:label="@7F080055" android:name="com.commutree.kdovp.preference.ManageSpaceActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F080055" android:name="com.commutree.kdovp.CommClassificationActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:label="@7F080055" android:name="com.commutree.kdovp.SettingsActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F080055" android:name="com.commutree.kdovp.CommSuggestionActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:label="@7F080055" android:name="com.commutree.kdovp.ForceCloseExceptionHandlingActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F080055" android:name="com.commutree.kdovp.LoginActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:label="@7F080055" android:name="com.commutree.kdovp.ChangePasswordActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:label="@7F080055" android:name="com.commutree.kdovp.profile.ViewProfileActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="goto.commutree.com" android:pathPrefix="/Profile/" android:scheme="http">
+</data>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x00000FB0" android:label="@7F080055" android:name="com.commutree.kdovp.profile.EditProfileActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:label="@7F080055" android:name="com.commutree.kdovp.profile.ViewImageActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F080055" android:name="com.commutree.kdovp.profile.ImageOperationActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F080055" android:name="com.commutree.kdovp.profile.ViewRelationActivity">
+</activity>
+<activity android:configChanges="0x00000FB0" android:label="@7F080055" android:name="com.commutree.kdovp.album.ViewAlbumActivity">
+</activity>
+<activity android:label="@7F080055" android:name="com.commutree.kdovp.AllCommunitiesActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F080055" android:name="com.commutree.kdovp.SelectLangActivity" android:screenOrientation="1">
+</activity>
+<activity android:excludeFromRecents="true" android:label="@7F080055" android:name="com.commutree.kdovp.tree.AddFamilyActivity" android:screenOrientation="1" android:theme="@android:0103000B" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:configChanges="0x00000FB0" android:label="@7F080055" android:name="com.commutree.kdovp.tree.ViewTreeActivity">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="goto.commutree.com" android:pathPrefix="/Tree/" android:scheme="http">
+</data>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000A0" android:label="@7F080055" android:name="com.commutree.kdovp.registration.NewRegActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:label="@7F080055" android:name="com.commutree.kdovp.imgpicker.WebVIewActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:label="@7F080055" android:name="com.commutree.kdovp.imgpicker.UploadImageInfoProgress" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:label="@7F080055" android:name="com.commutree.kdovp.imgpicker.ModifiedMessageActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F080055" android:name="com.commutree.kdovp.registration.RegRequestActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x00000FB0" android:name="com.google.android.gms.ads.AdActivity" android:theme="@android:0103000F">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.facebook.ads.InterstitialAdActivity">
+</activity>
+<receiver android:exported="true" android:name="com.commutree.kdovp.receiver.ReferrerReceiver">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</receiver>
+<activity android:label="@7F080095" android:name="com.commutree.kdovp.CommunitySelectionActivity">
+</activity>
+<activity android:label="@7F080097" android:name="com.commutree.kdovp.ShareAppActivity">
+</activity>
+<activity android:label="@7F080096" android:name="com.commutree.kdovp.Business.MainActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.commutree.kdovp.Business.CategoryActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.commutree.kdovp.Business.VendorsActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.commutree.kdovp.Business.VendorDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.commutree.kdovp.imgpicker.MainActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name="com.commutree.kdovp.imgpicker.EditImageActivity" android:screenOrientation="1" android:theme="@7F0A00F9">
+</activity>
+<activity android:label="@7F080055" android:name="com.commutree.kdovp.NewMessageActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.commutree.kdovp.CTDrawerActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.commutree.kdovp.registration.NewRegInfoActivity">
+</activity>
+<activity android:name="com.commutree.kdovp.wish.WishersActivity" android:theme="@7F0A00AC">
+</activity>
+<activity android:name="com.commutree.kdovp.wish.RespondersActivity" android:theme="@7F0A00AC">
+</activity>
+<activity android:name="com.commutree.kdovp.profile.ChangeRequestActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.commutree.kdovp.profile.NewChangeRequestActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.commutree.kdovp.registration.KCTNewRegActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.commutree.kdovp.registration.RegSuccessActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.commutree.kdovp.ForgotPasswordActivity" android:screenOrientation="1">
+</activity>
+<activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:01030010">
+</activity>
+<activity android:label="@7F08003E" android:name="com.sangcomz.fishbun.ui.album.AlbumActivity" android:theme="@7F0A0156">
+</activity>
+<activity android:name="com.sangcomz.fishbun.ui.picker.PickerActivity" android:theme="@7F0A0156">
+</activity>
+<service android:exported="true" android:name="com.google.firebase.messaging.FirebaseMessagingService">
+<intent-filter android:priority="-500">
+<action android:name="com.google.firebase.MESSAGING_EVENT">
+</action>
+</intent-filter>
+</service>
+<receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementReceiver">
+</receiver>
+<receiver android:enabled="true" android:exported="true" android:name="com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver" android:permission="android.permission.INSTALL_PACKAGES">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementService">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementJobService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<receiver android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+<category android:name="com.commutree.kdovp">
+</category>
+</intent-filter>
+</receiver>
+<receiver android:exported="false" android:name="com.google.firebase.iid.FirebaseInstanceIdInternalReceiver">
+</receiver>
+<service android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdService">
+<intent-filter android:priority="-500">
+<action android:name="com.google.firebase.INSTANCE_ID_EVENT">
+</action>
+</intent-filter>
+</service>
+<provider android:authorities="com.commutree.kdovp.firebaseinitprovider" android:exported="false" android:initOrder="100" android:name="com.google.firebase.provider.FirebaseInitProvider">
+</provider>
+</application>
+</manifest>

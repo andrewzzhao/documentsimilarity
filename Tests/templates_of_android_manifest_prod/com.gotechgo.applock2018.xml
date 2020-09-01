@@ -1,0 +1,164 @@
+<?xml version="1.0" ?><manifest android:versionCode="3" android:versionName="1.0.3" package="com.gotechgo.applock2018" platformBuildVersionCode="24" platformBuildVersionName="7.000000" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="14" android:targetSdkVersion="24">
+</uses-sdk>
+<uses-permission android:name="android.permission.READ_LOGS">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-permission android:name="android.permission.PACKAGE_USAGE_STATS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGED">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE">
+</uses-permission>
+<permission android:name="com.gotechgo.applock2018.permission.C2D_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="com.gotechgo.applock2018.permission.C2D_MESSAGE">
+</uses-permission>
+<application android:allowBackup="true" android:icon="@7F030000" android:label="@7F07003A" android:supportsRtl="true" android:theme="@7F090093">
+<meta-data android:name="com.google.android.gms.version" android:value="@7F0B0006">
+</meta-data>
+<activity android:label="@7F07003A" android:name="com.gotechgo.applock2018.EnterActivity" android:theme="@7F090039">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:label="@7F07003A" android:name="com.gotechgo.applock2018.UnlockActivity" android:theme="@7F090039">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:label="@7F07003A" android:name="com.gotechgo.applock2018.MainActivity" android:theme="@7F090039">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:label="@7F07003A" android:name="com.gotechgo.applock2018.Splash" android:theme="@7F090039">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:label="@7F07003A" android:name="com.gotechgo.applock2018.SetPatternLockActivity" android:theme="@7F090039">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:label="@7F07003A" android:name="com.gotechgo.applock2018.SetLockTypeActivity" android:theme="@7F090039">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:excludeFromRecents="true" android:label="@7F07003A" android:name="com.gotechgo.applock2018.EnterNormalPIN" android:theme="@7F090039">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:label="@7F07003A" android:name="com.gotechgo.applock2018.SetNormalPIN" android:theme="@7F090039">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:excludeFromRecents="true" android:label="@7F07003A" android:name="com.gotechgo.applock2018.EnterPatternLock" android:theme="@7F090039">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:excludeFromRecents="true" android:label="@7F07003A" android:name="com.gotechgo.applock2018.EnterFingerprintActivity" android:theme="@7F090039">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:label="@7F070050" android:name="com.gotechgo.applock2018.SettingsActivity" android:theme="@7F090093">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:label="@7F070044" android:name="com.gotechgo.applock2018.LogsActivity" android:theme="@7F090093">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:label="@7F07004E" android:name="com.gotechgo.applock2018.RequestPermission" android:theme="@7F090096">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<receiver android:name="com.gotechgo.applock2018.ScreenReciever">
+<intent-filter>
+<action android:name="android.intent.action.SCREEN_OFF">
+</action>
+<action android:name="android.intent.action.SCREEN_ON">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name="com.gotechgo.applock2018.BootReciever">
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+</intent-filter>
+</receiver>
+<activity android:configChanges="0x00000FB0" android:name="com.google.android.gms.ads.AdActivity" android:theme="@android:0103000F">
+</activity>
+<service android:enabled="true" android:name="com.gotechgo.applock2018.LockService">
+</service>
+<receiver android:enabled="true" android:name="com.google.android.gms.measurement.AppMeasurementReceiver">
+<intent-filter>
+<action android:name="com.google.android.gms.measurement.UPLOAD">
+</action>
+</intent-filter>
+</receiver>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementService">
+</service>
+<receiver android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+<action android:name="com.google.android.c2dm.intent.REGISTRATION">
+</action>
+<category android:name="com.gotechgo.applock2018">
+</category>
+</intent-filter>
+</receiver>
+<receiver android:exported="false" android:name="com.google.firebase.iid.FirebaseInstanceIdInternalReceiver">
+</receiver>
+<service android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdService">
+<intent-filter android:priority="-500">
+<action android:name="com.google.firebase.INSTANCE_ID_EVENT">
+</action>
+</intent-filter>
+</service>
+<provider android:authorities="com.gotechgo.applock2018.firebaseinitprovider" android:exported="false" android:initOrder="100" android:name="com.google.firebase.provider.FirebaseInitProvider">
+</provider>
+<activity android:name="com.google.android.gms.ads.purchase.InAppPurchaseActivity" android:theme="@7F090118">
+</activity>
+<activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:01030010">
+</activity>
+<meta-data android:name="com.android.vending.derived.apk.id" android:value="1">
+</meta-data>
+</application>
+</manifest>

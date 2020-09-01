@@ -1,0 +1,254 @@
+<?xml version="1.0" ?><manifest android:compileSdkVersion="28" android:compileSdkVersionCodename="9" android:versionCode="770" android:versionName="1.14.8211" package="com.hbo.broadband" platformBuildVersionCode="28" platformBuildVersionName="9" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="21" android:targetSdkVersion="27">
+</uses-sdk>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.FOREGROUND_SERVICE">
+</uses-permission>
+<uses-permission android:name="android.permission.RECORD_AUDIO">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_LOGS">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-permission android:name="com.android.vending.BILLING">
+</uses-permission>
+<uses-permission android:name="com.android.providers.tv.permission.READ_EPG_DATA">
+</uses-permission>
+<uses-permission android:name="com.android.providers.tv.permission.WRITE_EPG_DATA">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-feature android:name="android.hardware.touchscreen" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.software.leanback" android:required="true">
+</uses-feature>
+<uses-feature android:name="android.hardware.microphone" android:required="false">
+</uses-feature>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE">
+</uses-permission>
+<uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE">
+</uses-permission>
+<uses-permission android:maxSdkVersion="18" android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES">
+</uses-permission>
+<application android:allowBackup="true" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:hardwareAccelerated="true" android:icon="@7F0F0000" android:label="@7F120030" android:largeHeap="true" android:name="com.hbo.broadband.core.HboApp" android:networkSecurityConfig="@7F160000" android:persistent="true" android:supportsRtl="true" android:theme="@7F1300BC">
+<uses-library android:name="org.apache.http.legacy" android:required="false">
+</uses-library>
+<meta-data android:name="com.google.android.gms.cast.framework.OPTIONS_PROVIDER_CLASS_NAME" android:value="com.hbo.golibrary.providers.cast.CastOptionsProvider">
+</meta-data>
+<meta-data android:name="android.app.default_searchable" android:value="com.hbo.broadband.view.activity.splash.SplashActivity">
+</meta-data>
+<activity android:banner="@7F080054" android:clearTaskOnLaunch="true" android:configChanges="0x000005A0" android:exported="true" android:icon="@7F0F0000" android:label="@7F120030" android:launchMode="3" android:logo="@7F080054" android:name="com.hbo.broadband.view.activity.splash.SplashActivity" android:screenOrientation="0">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LEANBACK_LAUNCHER">
+</category>
+<action android:name="android.intent.action.SEARCH">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:scheme="@7F120169">
+</data>
+</intent-filter>
+<meta-data android:name="android.app.searchable" android:resource="@7F160001">
+</meta-data>
+</activity>
+<activity android:name="com.hbo.broadband.view.activity.main.MainActivity">
+</activity>
+<activity android:name="com.hbo.broadband.view.activity.detail.ContentDetailActivity">
+</activity>
+<activity android:name="com.hbo.broadband.view.activity.collection.CollectionActivity">
+</activity>
+<activity android:name="com.hbo.broadband.view.activity.login.LoginActivity">
+</activity>
+<activity android:name="com.hbo.broadband.view.activity.login.chooser.LoginChooserActivity">
+</activity>
+<activity android:name="com.hbo.broadband.view.activity.login.terms_of_conditions.TermsOfConditionsActivity">
+</activity>
+<activity android:name="com.hbo.broadband.view.activity.parental.ParentalPinSetupActivity">
+</activity>
+<activity android:name="com.hbo.broadband.view.activity.parental.check.ParentalPinCheckActivity">
+</activity>
+<activity android:launchMode="3" android:name="com.hbo.broadband.view.activity.player.PlayerActivity">
+</activity>
+<activity android:name="com.hbo.broadband.view.activity.error.BrowseErrorActivity">
+</activity>
+<activity android:name="com.hbo.broadband.view.activity.activation.ActivationActivity">
+</activity>
+<activity android:name="com.hbo.broadband.view.activity.login.subscribes.purchase.PurchaseSubscribeActivity">
+</activity>
+<activity android:name="com.hbo.broadband.view.dialog.guided.GuidedStepActivity" android:theme="@7F1300B6">
+</activity>
+<activity android:name="com.hbo.broadband.view.activity.season_selector.SeasonSelectorActivity">
+</activity>
+<activity android:name="com.hbo.broadband.view.activity.login.subscribes.multi.MultipleSubsActivity">
+</activity>
+<activity android:name="com.hbo.broadband.view.activity.login.subscribes.cancel.CancelSubscriptionActivity">
+</activity>
+<service android:label="VoiceAssistMediaBrowserServiceCompat" android:name="com.hbo.broadband.view.fragment.player.voice_assist.VoiceAssistMediaBrowserServiceCompat">
+<intent-filter>
+<action android:name="android.media.browse.MediaBrowserService">
+</action>
+<action android:name="android.intent.action.MEDIA_BUTTON">
+</action>
+</intent-filter>
+</service>
+<receiver android:exported="true" android:name="com.hbo.broadband.core.RunOnInstallReceiver">
+<intent-filter>
+<action android:name="android.media.tv.action.INITIALIZE_PROGRAMS">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</receiver>
+<receiver android:exported="true" android:name="com.hbo.broadband.model.tv_provider.LauncherNotificationReceiver">
+<intent-filter>
+<action android:name="android.media.tv.action.PREVIEW_PROGRAM_BROWSABLE_DISABLED">
+</action>
+<action android:name="android.media.tv.action.WATCH_NEXT_PROGRAM_BROWSABLE_DISABLED">
+</action>
+<action android:name="android.media.tv.action.PREVIEW_PROGRAM_ADDED_TO_WATCH_NEXT">
+</action>
+<action android:name="android.media.tv.action.INITIALIZE_PROGRAMS">
+</action>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</receiver>
+<service android:exported="false" android:name="com.hbo.golibrary.services.homeFeedService.HomeFeedService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<receiver android:name="com.hbo.golibrary.receivers.HomeFeedBootReceiver">
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+<action android:name="android.intent.action.QUICKBOOT_POWERON">
+</action>
+</intent-filter>
+</receiver>
+<provider android:authorities="com.hbo.go.androidtv.search" android:exported="true" android:name="com.hbo.golibrary.services.homeFeedService.HomeFeedProvider">
+<path-permission android:readPermission="android.permission.GLOBAL_SEARCH">
+</path-permission>
+</provider>
+<meta-data android:name="com.facebook.sdk.AutoLogAppEventsEnabled" android:value="false">
+</meta-data>
+<meta-data android:name="net.hockeyapp.android.appIdentifier" android:value="79295a29aab14c828568358c6c75f571">
+</meta-data>
+<activity android:name="com.adobe.mobile.MessageFullScreenActivity" android:theme="@android:01030011" android:windowSoftInputMode="0x00000002">
+</activity>
+<receiver android:name="com.adobe.mobile.MessageNotificationHandler">
+</receiver>
+<meta-data android:name="com.google.android.gms.version" android:value="@7F0B0005">
+</meta-data>
+<meta-data android:name="BITMOVIN_PLAYER_LICENSE_KEY" android:value="a2d97a8c-039e-4710-a9bb-9db85d24b725">
+</meta-data>
+<meta-data android:name="com.google.firebase.messaging.default_notification_icon" android:resource="@7F08020D">
+</meta-data>
+<service android:name="com.bitmovin.player.offline.service.BitmovinDownloadService">
+</service>
+<service android:exported="true" android:name="com.google.android.exoplayer2.scheduler.PlatformScheduler$PlatformSchedulerService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<activity android:configChanges="0x000005B0" android:name="com.facebook.FacebookActivity" android:theme="@7F13020E">
+</activity>
+<activity android:name="com.facebook.CustomTabMainActivity">
+</activity>
+<activity android:name="com.facebook.CustomTabActivity">
+</activity>
+<service android:exported="true" android:name="com.google.firebase.messaging.FirebaseMessagingService">
+<intent-filter android:priority="-500">
+<action android:name="com.google.firebase.MESSAGING_EVENT">
+</action>
+</intent-filter>
+</service>
+<service android:exported="false" android:name="com.google.firebase.components.ComponentDiscoveryService">
+<meta-data android:name="com.google.firebase.components:com.google.firebase.dynamiclinks.internal.FirebaseDynamicLinkRegistrar" android:value="com.google.firebase.components.ComponentRegistrar">
+</meta-data>
+<meta-data android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar" android:value="com.google.firebase.components.ComponentRegistrar">
+</meta-data>
+<meta-data android:name="com.google.firebase.components:com.google.firebase.iid.Registrar" android:value="com.google.firebase.components.ComponentRegistrar">
+</meta-data>
+</service>
+<receiver android:exported="false" android:name="com.google.android.gms.cast.framework.media.MediaIntentReceiver">
+</receiver>
+<service android:exported="false" android:name="com.google.android.gms.cast.framework.media.MediaNotificationService">
+</service>
+<service android:exported="false" android:name="com.google.android.gms.cast.framework.ReconnectionService">
+</service>
+<receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementReceiver">
+</receiver>
+<receiver android:enabled="true" android:exported="true" android:name="com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver" android:permission="android.permission.INSTALL_PACKAGES">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementService">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementJobService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<receiver android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+</intent-filter>
+</receiver>
+<service android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdService">
+<intent-filter android:priority="-500">
+<action android:name="com.google.firebase.INSTANCE_ID_EVENT">
+</action>
+</intent-filter>
+</service>
+<provider android:authorities="com.hbo.broadband.firebaseinitprovider" android:exported="false" android:initOrder="100" android:name="com.google.firebase.provider.FirebaseInitProvider">
+</provider>
+<activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:01030010">
+</activity>
+<activity android:name="net.hockeyapp.android.UpdateActivity">
+</activity>
+<activity android:name="net.hockeyapp.android.FeedbackActivity">
+</activity>
+<activity android:name="net.hockeyapp.android.PaintActivity">
+</activity>
+<activity android:name="net.hockeyapp.android.LoginActivity">
+</activity>
+<activity android:name="net.hockeyapp.android.ExpiryInfoActivity">
+</activity>
+<receiver android:exported="true" android:name="com.kochava.base.ReferralReceiver" android:priority="999">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+<provider android:authorities="com.hbo.broadband.FacebookInitProvider" android:exported="false" android:name="com.facebook.internal.FacebookInitProvider">
+</provider>
+<receiver android:exported="false" android:name="com.facebook.CurrentAccessTokenExpirationBroadcastReceiver">
+<intent-filter>
+<action android:name="com.facebook.sdk.ACTION_CURRENT_ACCESS_TOKEN_CHANGED">
+</action>
+</intent-filter>
+</receiver>
+<provider android:authorities="com.hbo.broadband.com.squareup.picasso" android:exported="false" android:name="com.squareup.picasso.PicassoProvider">
+</provider>
+<provider android:authorities="com.hbo.broadband.lifecycle-process" android:exported="false" android:multiprocess="true" android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer">
+</provider>
+<activity android:configChanges="0x000005B0" android:name="com.android.billingclient.api.ProxyBillingActivity" android:theme="@android:01030010">
+</activity>
+</application>
+</manifest>

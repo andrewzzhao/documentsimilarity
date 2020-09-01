@@ -1,0 +1,1036 @@
+<?xml version="1.0" ?><manifest android:versionCode="145" android:versionName="4.8.6.1" package="com.snda.youni" platformBuildVersionCode="19" platformBuildVersionName="4.4.2-1456859" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_SMS">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SMS">
+</uses-permission>
+<uses-permission android:name="android.permission.SEND_SMS">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_SMS">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_MMS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_CONTACTS">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_CONTACTS">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.RECORD_AUDIO">
+</uses-permission>
+<uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT">
+</uses-permission>
+<uses-permission android:name="com.android.launcher.permission.UNINSTALL_SHORTCUT">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS">
+</uses-permission>
+<uses-permission android:name="com.android.launcher.permission.READ_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS">
+</uses-permission>
+<uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.RESTART_PACKAGES">
+</uses-permission>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-feature android:name="android.hardware.camera">
+</uses-feature>
+<uses-feature android:name="android.hardware.camera.autofocus">
+</uses-feature>
+<uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.CALL_PHONE">
+</uses-permission>
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-permission android:name="android.permission.RAISED_THREAD_PRIORITY">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_LOGS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.EXPAND_STATUS_BAR">
+</uses-permission>
+<uses-permission android:name="android.permission.BROADCAST_STICKY">
+</uses-permission>
+<uses-permission android:name="android.permission.RECORD_AUDIO">
+</uses-permission>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.RECORD_AUDIO">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.UPDATE_APP_OPS_STAT">
+</uses-permission>
+<permission android:name="com.snda.youni.permission.READ_YOUNI" android:protectionLevel="0x00000002">
+</permission>
+<permission android:name="com.snda.youni.permission.WRITE_YOUNI" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="com.snda.youni.permission.READ_YOUNI">
+</uses-permission>
+<uses-permission android:name="com.snda.youni.permission.WRITE_YOUNI">
+</uses-permission>
+<uses-sdk android:minSdkVersion="8" android:targetSdkVersion="11">
+</uses-sdk>
+<application android:icon="@7F0204F4" android:label="@7F090000" android:name="com.snda.youni.AppContext">
+<meta-data android:name="woa_key_appid" android:value="200927800">
+</meta-data>
+<meta-data android:name="woa_key_showlog" android:value="0">
+</meta-data>
+<meta-data android:name="wifilocating_sdk_app_id" android:value="s0002">
+</meta-data>
+<meta-data android:name="wifilocating_sdk_chanid" android:value="sdkyouni">
+</meta-data>
+<service android:exported="false" android:name=".services.ContactsService" android:process="com.snda.youni.mms">
+<intent-filter>
+<action android:name="com.snda.youni.START_CONTACTS_SERVICE">
+</action>
+</intent-filter>
+</service>
+<service android:exported="false" android:name=".services.YouniService" android:process="com.snda.youni.mms">
+</service>
+<service android:exported="true" android:name="com.sd.android.mms.transaction.MyTransactionService">
+</service>
+<service android:enabled="true" android:name="com.baidu.location.f" android:process=":remote">
+</service>
+<provider android:authorities="com.snda.youni.providers.YouniStructs" android:name=".providers.YouNiProvider" android:process="com.snda.youni.mms" android:readPermission="com.snda.youni.permission.READ_YOUNI" android:writePermission="com.snda.youni.permission.WRITE_YOUNI">
+</provider>
+<provider android:authorities="com.snda.youni.providers.DataStructs" android:name=".providers.ContactsProvider" android:process="com.snda.youni.mms">
+</provider>
+<provider android:authorities="com.snda.youni.providers.ArchiveDataStructs" android:exported="false" android:name=".providers.ArchiveProvider" android:process="com.snda.youni.mms">
+</provider>
+<provider android:authorities="com.snda.youni.providers.UnreadcountProvider" android:name="com.snda.youni.providers.UnreadcountProvider" android:process="com.snda.youni.mms">
+</provider>
+<activity android:configChanges="0x000000A0" android:label="@7F090000" android:launchMode="1" android:name=".OldYouNi2" android:screenOrientation="1" android:theme="@7F0A00E2" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:configChanges="0x000000A0" android:hardwareAccelerated="true" android:label="@7F090000" android:launchMode="1" android:name=".YouNi" android:screenOrientation="1" android:theme="@7F0A00E2" android:windowSoftInputMode="0x00000020">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:mimeType="vnd.android.cursor.dir/mms">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:mimeType="vnd.android-dir/mms-sms">
+</data>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000E0" android:exported="true" android:label="@7F090000" android:name=".activities.ContactsActivity" android:theme="@7F0A0073" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:configChanges="0x000000E0" android:exported="true" android:label="@7F090000" android:name=".activities.NewContactsActivity" android:theme="@7F0A0073" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:configChanges="0x000000E0" android:label="@7F090000" android:name=".modules.favcontact.FavoriteContactsActivity" android:theme="@7F0A0073" android:windowSoftInputMode="0x00000010">
+</activity>
+<uses-library android:name="android.test.runner">
+</uses-library>
+<activity android:configChanges="0x000000E0" android:label="@7F090000" android:name=".activities.ChatActivity" android:theme="@7F0A0073" android:windowSoftInputMode="0x00000002">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:mimeType="vnd.android-dir/mms-sms">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<action android:name="android.intent.action.SENDTO">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="sms">
+</data>
+<data android:scheme="smsto">
+</data>
+<data android:scheme="mms">
+</data>
+<data android:scheme="mmsto">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="com.snda.youni.chat.send">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:mimeType="chat/*">
+</data>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000E0" android:label="@7F090000" android:name=".activities.MutualFriendsActivity" android:theme="@7F0A0073" android:windowSoftInputMode="0x00000002">
+<intent-filter>
+<action android:name="com.snda.youni.mutualFriends">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000E0" android:label="@7F090000" android:name=".activities.SettingsUiActivity" android:theme="@7F0A0073">
+</activity>
+<activity android:configChanges="0x000000E0" android:label="@7F090000" android:name=".activities.SettingsMessageActivity" android:theme="@7F0A0073">
+</activity>
+<activity android:configChanges="0x000000E0" android:label="@7F090000" android:name=".activities.SettingsPopupActivity" android:theme="@7F0A0073">
+</activity>
+<activity android:configChanges="0x000000E0" android:label="@7F090000" android:name=".activities.SettingsRecordActivity" android:theme="@7F0A0073">
+</activity>
+<activity android:configChanges="0x000000E0" android:label="@7F090000" android:name=".activities.SettingsRemindActivity" android:theme="@7F0A0073">
+</activity>
+<activity android:configChanges="0x000000E0" android:label="@7F090000" android:name=".activities.SettingsBlackListActivity" android:theme="@7F0A0073">
+</activity>
+<activity android:configChanges="0x000000E0" android:label="@7F090000" android:name=".activities.SettingsWineActivity" android:theme="@7F0A0073">
+</activity>
+<activity android:configChanges="0x000000E0" android:label="@7F090000" android:name=".activities.EmotionPackageManagerActivity" android:theme="@7F0A0073">
+</activity>
+<activity android:configChanges="0x000000E0" android:label="@7F090000" android:name=".activities.EmotionPackageDetailActivity" android:theme="@7F0A0073">
+</activity>
+<activity android:configChanges="0x000000E0" android:label="@7F090000" android:name=".activities.SettingsBlackListImportActivity" android:theme="@7F0A0073">
+</activity>
+<activity android:configChanges="0x000000E0" android:label="@7F090000" android:name=".activities.SettingsBlackListSettingsActivity" android:theme="@7F0A0073">
+</activity>
+<activity android:configChanges="0x000000E0" android:label="@7F090000" android:name=".activities.SettingsBlackListMessageActivity" android:theme="@7F0A0073">
+</activity>
+<activity android:configChanges="0x000000E0" android:label="@7F090000" android:name=".activities.SettingsStrangerMergerActivity" android:theme="@7F0A0073">
+</activity>
+<activity android:configChanges="0x000000E0" android:label="@7F090000" android:name=".inbox.StrangerMessageBoxActivity" android:screenOrientation="1" android:theme="@7F0A0073">
+</activity>
+<activity android:configChanges="0x000000E0" android:label="@7F090000" android:name=".activities.SettingsSkinActivity" android:theme="@7F0A0073">
+</activity>
+<activity android:configChanges="0x000000E0" android:label="@7F090000" android:name=".activities.SettingsAboutUsActivity" android:theme="@7F0A0073">
+</activity>
+<activity android:configChanges="0x000000E0" android:label="@7F090000" android:name=".activities.SettingsVersionHistoryActivity" android:theme="@7F0A0073">
+</activity>
+<activity android:configChanges="0x000000E0" android:label="@7F090000" android:name=".activities.SettingsSoundActivity" android:theme="@7F0A0073">
+</activity>
+<activity android:configChanges="0x000000E0" android:label="@7F090000" android:name=".activities.SettingsHelpActivity" android:theme="@7F0A0073">
+</activity>
+<activity android:configChanges="0x000000E0" android:label="@7F090000" android:name=".activities.SettingsArchiveActivity" android:screenOrientation="1" android:theme="@7F0A0073">
+</activity>
+<activity android:configChanges="0x000000E0" android:label="@7F090000" android:name=".activities.SettingsAdvancedActivity" android:theme="@7F0A0073">
+</activity>
+<activity android:configChanges="0x000000E0" android:label="@7F090000" android:name=".activities.SettingsSmsSafeActivity" android:theme="@7F0A0073">
+</activity>
+<activity android:configChanges="0x000000E0" android:label="@7F090000" android:name=".activities.SettingsSmsSafePasswordActivity" android:theme="@7F0A0073" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000000E0" android:label="@7F090000" android:name=".activities.SettingsSmsSafeRangeActivity" android:theme="@7F0A0073">
+</activity>
+<activity android:configChanges="0x000000E0" android:label="@7F090000" android:name=".activities.SettingsSmsSafeAddPhoneActivity" android:theme="@7F0A0073" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000000E0" android:label="@7F090000" android:name=".activities.SettingsUserAgreementActivity" android:theme="@7F0A0073">
+</activity>
+<activity android:configChanges="0x000000E0" android:label="@7F090000" android:launchMode="1" android:name=".activities.SettingsContactSyncActivity" android:theme="@7F0A0073">
+</activity>
+<activity android:configChanges="0x000000E0" android:label="@7F090000" android:name=".activities.ResetMaikuPasswordActivity" android:screenOrientation="1" android:theme="@7F0A0073">
+</activity>
+<activity android:configChanges="0x000000E0" android:label="@7F090000" android:name=".activities.SMSBackupSelectorActivity" android:theme="@7F0A0073">
+</activity>
+<activity android:configChanges="0x000000E0" android:label="@7F090000" android:launchMode="1" android:name=".activities.BackupActivity" android:screenOrientation="1" android:theme="@7F0A0073">
+</activity>
+<activity android:configChanges="0x000000E0" android:label="@7F090000" android:launchMode="1" android:name=".activities.SettingsContactSyncHelpActivity" android:theme="@7F0A0073">
+</activity>
+<activity android:configChanges="0x000000E0" android:excludeFromRecents="true" android:launchMode="3" android:name="com.snda.youni.activities.DesktopYouniDialogActivity" android:theme="@7F0A00F5">
+</activity>
+<activity android:configChanges="0x000000E0" android:excludeFromRecents="true" android:launchMode="2" android:name=".activities.SmsRemindPopupActivity" android:theme="@android:0103000F">
+</activity>
+<activity android:configChanges="0x000000E0" android:label="@7F090000" android:name=".activities.SetMessageAlarmActivity" android:theme="@7F0A0073">
+</activity>
+<activity android:configChanges="0x000000E0" android:label="@7F090000" android:name=".mms.ui.SlideshowActivity" android:theme="@7F0A0074">
+</activity>
+<activity android:configChanges="0x000000E0" android:label="@7F090000" android:name=".mms.ui.ShowMMS" android:theme="@7F0A0074">
+</activity>
+<activity android:configChanges="0x000000E0" android:label="@7F090000" android:name=".attachment.ShowAttachment">
+</activity>
+<activity android:configChanges="0x000000E0" android:label="@7F090000" android:name="com.snda.youni.modules.playimage.PlayImageActivity">
+</activity>
+<activity android:configChanges="0x000000E0" android:label="@7F090000" android:name="com.snda.youni.modules.playimage.NewPlayImageActivity" android:theme="@7F0A00CC">
+</activity>
+<activity android:exported="true" android:label="@7F090000" android:launchMode="1" android:name=".activities.SettingsActivity" android:theme="@7F0A0072">
+</activity>
+<activity android:configChanges="0x000000E0" android:label="@7F090000" android:name=".activities.SelectContactActivity" android:theme="@7F0A0074">
+<intent-filter>
+<action android:name="com.snda.youni.action.SELECT_CONTACT">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000E0" android:label="@7F090000" android:launchMode="2" android:name=".activities.FavoriteActivity" android:theme="@7F0A0073">
+</activity>
+<activity android:configChanges="0x00000020" android:label="@7F090000" android:launchMode="1" android:name=".activities.RecordAudioActivity" android:screenOrientation="5" android:theme="@7F0A00CB">
+</activity>
+<activity android:configChanges="0x00000020" android:label="@7F090000" android:launchMode="1" android:name=".activities.SelectPhotoSourceActivity" android:theme="@7F0A00CB">
+</activity>
+<activity android:configChanges="0x00000020" android:label="@7F090000" android:launchMode="1" android:name=".activities.PickDateAndTimeActivity" android:screenOrientation="1" android:theme="@7F0A00CB">
+</activity>
+<activity android:configChanges="0x000000E0" android:label="@7F090000" android:name=".activities.RecipientsActivity" android:theme="@7F0A0073">
+</activity>
+<activity android:configChanges="0x000000E0" android:name=".activities.SearchActivity" android:theme="@7F0A00CB">
+</activity>
+<activity android:configChanges="0x000000A0" android:name=".modules.selectfile.FileSelectActivity" android:theme="@7F0A0074">
+<intent-filter>
+<action android:name="android.intent.action.GET_CONTENT">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000A0" android:name=".modules.selectfile.FileBrowserActivity" android:theme="@7F0A0074">
+</activity>
+<activity android:configChanges="0x000000A0" android:name=".modules.selectfile.FileGrouperActivity" android:theme="@7F0A0074">
+</activity>
+<activity android:configChanges="0x000000A0" android:name=".activities.UserInfoWallActivity" android:screenOrientation="1" android:theme="@7F0A0073">
+</activity>
+<activity android:configChanges="0x000000A0" android:name=".activities.SendSelectActivity" android:theme="@7F0A0074">
+</activity>
+<activity android:name=".activities.PluginDetailActivity" android:screenOrientation="1" android:theme="@7F0A0074">
+</activity>
+<activity android:configChanges="0x000000A0" android:name=".activities.SettingsOverRemindActivity" android:theme="@7F0A0074">
+</activity>
+<activity android:configChanges="0x000000A0" android:name=".activities.T9InfoActivity" android:theme="@7F0A0074">
+</activity>
+<activity android:configChanges="0x000000A0" android:name=".activities.BackPictureGridActivity" android:theme="@7F0A0074">
+</activity>
+<activity android:configChanges="0x000000A0" android:name=".activities.TopBackgroundListActivity" android:screenOrientation="1" android:theme="@7F0A0074">
+</activity>
+<activity android:configChanges="0x00000020" android:launchMode="1" android:name=".activities.SelectOperatorVcardActivity" android:theme="@7F0A00CB">
+</activity>
+<activity android:configChanges="0x00000020" android:launchMode="1" android:name=".activities.SelectOperatorMultiImageActivity" android:theme="@7F0A00CB">
+</activity>
+<activity android:configChanges="0x000000A0" android:hardwareAccelerated="true" android:name=".activities.ShowGuideActivity" android:theme="@7F0A0074">
+</activity>
+<activity android:configChanges="0x000000A0" android:name=".activities.BackPictureDetailActivity" android:theme="@7F0A0074">
+</activity>
+<activity android:configChanges="0x000000E0" android:label="@7F090000" android:name=".activities.CountryCodeListActivity" android:theme="@7F0A0073">
+</activity>
+<activity android:configChanges="0x000000E0" android:label="@7F090000" android:name=".activities.PictureCropActivity" android:theme="@7F0A0073">
+</activity>
+<activity android:configChanges="0x000000A0" android:exported="true" android:hardwareAccelerated="true" android:label="@7F090000" android:name=".activities.NewMucChatActivity" android:theme="@7F0A0073">
+</activity>
+<activity android:configChanges="0x000000A0" android:exported="true" android:hardwareAccelerated="true" android:label="@7F090000" android:name=".activities.ChatHistoryActivity" android:theme="@7F0A0073">
+</activity>
+<activity android:configChanges="0x000000A0" android:label="@7F090000" android:name=".activities.GroupChatActivity" android:theme="@7F0A0073" android:windowSoftInputMode="0x00000002">
+<intent-filter>
+<action android:name="com.snda.youni.chat.group.send">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:mimeType="chat/*">
+</data>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000A0" android:label="@7F090000" android:name=".activities.GroupChatDetailActivity" android:theme="@7F0A0073">
+</activity>
+<activity android:configChanges="0x000000A0" android:name=".activities.SelectMucContactsActivity" android:theme="@7F0A0073">
+</activity>
+<activity android:configChanges="0x000000E0" android:name="com.snda.youni.modules.muc.MucRoomCreateActivity" android:theme="@7F0A0073" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.snda.youni.modules.muc.MucRoomCardActivity" android:theme="@7F0A0073">
+</activity>
+<activity android:configChanges="0x000000A0" android:name=".activities.MucSettingActivity" android:theme="@7F0A0073">
+</activity>
+<activity android:configChanges="0x000000A0" android:name=".activities.MucMembersListActivity" android:theme="@7F0A0073">
+</activity>
+<activity android:configChanges="0x000000A0" android:name=".activities.MucGalleryActivity" android:theme="@7F0A00CB">
+</activity>
+<activity android:name=".activities.MucRoomsActivity" android:theme="@7F0A0073">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.weibo.net.ShareActivity" android:theme="@7F0A011B" android:windowSoftInputMode="0x00000025">
+</activity>
+<activity android:configChanges="0x000000A0" android:launchMode="1" android:name=".modules.archive.ArchiveActivity" android:theme="@7F0A0073">
+</activity>
+<activity android:configChanges="0x000000A0" android:launchMode="1" android:name=".modules.archive.ArchiveDescActivity" android:screenOrientation="1" android:theme="@7F0A0073">
+</activity>
+<activity android:configChanges="0x000000A0" android:name=".modules.archive.ArchiveChatActivity" android:theme="@7F0A0073">
+</activity>
+<activity android:configChanges="0x000000A0" android:name=".modules.koufei.KFMsgListActivity" android:theme="@7F0A0073">
+</activity>
+<activity android:configChanges="0x000000A0" android:name=".modules.koufei.KFMsgDetailActivity" android:theme="@7F0A0073">
+</activity>
+<activity android:configChanges="0x000000A0" android:name=".modules.koufei.KFAppListActivity" android:theme="@7F0A0073">
+</activity>
+<activity android:configChanges="0x000000A0" android:exported="true" android:name=".activities.MyProfileActivity" android:theme="@7F0A0073">
+<action android:name="com.snda.youni.minipage.myprofile">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</activity>
+<activity android:configChanges="0x000000A0" android:name=".modules.minipage.MenuActivity" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x000000A0" android:name=".modules.minipage.EditTextActivity" android:theme="@7F0A0073" android:windowSoftInputMode="0x00000004">
+</activity>
+<activity android:configChanges="0x000000A0" android:name=".modules.minipage.LocationActivity" android:theme="@7F0A0073">
+</activity>
+<activity android:configChanges="0x000000A0" android:name=".modules.minipage.MinipageContactGroupSettingActivity" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x000000A0" android:name=".modules.minipage.MinipageGroupSettingsActivity" android:theme="@7F0A0073">
+</activity>
+<activity android:configChanges="0x000000A0" android:name=".modules.minipage.MinipageTagSettingsActivity" android:theme="@7F0A0073">
+</activity>
+<activity android:configChanges="0x000000A0" android:name=".modules.minipage.MinipageCustomStringActivity" android:theme="@android:01030010" android:windowSoftInputMode="0x00000004">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.snda.youni.modules.minipage.MinipageProfileViewContainer" android:theme="@7F0A0073">
+</activity>
+<activity android:configChanges="0x000000A0" android:name=".modules.minipage.MinipageEditPage" android:screenOrientation="1" android:theme="@7F0A0073">
+</activity>
+<activity android:configChanges="0x000000A0" android:name=".modules.minipage.MinipageAddMoreActivity" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.snda.youni.modules.minipage.MinipageMutualFriendsActivity" android:screenOrientation="1" android:theme="@7F0A0073">
+</activity>
+<activity android:name=".activities.PluginListActivity" android:screenOrientation="1" android:theme="@7F0A0072">
+</activity>
+<activity android:name=".activities.BigPhotoActivity" android:screenOrientation="1" android:theme="@7F0A0072">
+</activity>
+<activity android:name=".activities.AvatarActivity" android:theme="@7F0A0072">
+</activity>
+<activity android:name=".findfriend.SettingsFRActivity" android:theme="@7F0A0072">
+</activity>
+<activity android:configChanges="0x000000A0" android:name=".modules.wizard.WizardActivity" android:screenOrientation="1" android:theme="@7F0A0071">
+</activity>
+<activity android:configChanges="0x000000A0" android:name=".modules.wizard.WizardSlidesActivity" android:screenOrientation="1" android:theme="@7F0A0071">
+</activity>
+<activity android:configChanges="0x000000A0" android:launchMode="1" android:name=".modules.wizard.InvitePageActivity" android:screenOrientation="1" android:theme="@7F0A0071">
+</activity>
+<activity android:configChanges="0x000000A0" android:name=".activities.EmotionPlayerActivity" android:theme="@7F0A0072">
+</activity>
+<activity android:configChanges="0x000000A0" android:launchMode="1" android:name=".activities.VerifyActivity" android:screenOrientation="1" android:theme="@7F0A0072">
+</activity>
+<activity android:configChanges="0x000000A0" android:launchMode="1" android:name=".activities.InterceptTipActivity" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x000000A0" android:name=".activities.ShowCallLogActivity" android:theme="@7F0A0072">
+</activity>
+<activity android:configChanges="0x000000E0" android:name=".activities.ZiyanziyuActivity" android:theme="@7F0A0073" android:windowSoftInputMode="0x00000002">
+<intent-filter>
+<action android:name="com.snda.youni.action.VIEW_ZIYANZIYU">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000A0" android:icon="@7F0204A1" android:label="@7F0905E1" android:name=".activities.ZyzyEditActivity" android:screenOrientation="1" android:theme="@7F0A0072" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:hardwareAccelerated="true" android:name=".wine.activity.WineRecordingActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:icon="@7F0209EB" android:label="@7F0908CC" android:name=".wine.activity.WineEditActivity" android:theme="@7F0A0072" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:configChanges="0x000000A0" android:name=".wine.activity.WineNotificationActivity" android:theme="@7F0A0072" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:configChanges="0x000000A0" android:hardwareAccelerated="true" android:name=".wine.activity.WineNotificationDetailActivity" android:screenOrientation="1" android:theme="@7F0A0072" android:windowSoftInputMode="0x00000010">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="detail" android:scheme="wine">
+</data>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000A0" android:name=".wine.activity.WineExchangeCard" android:theme="@7F0A0072" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:configChanges="0x000000A0" android:name=".wine.activity.WineLongTextDetailActivity" android:theme="@7F0A0072" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:configChanges="0x000000A0" android:hardwareAccelerated="true" android:name=".wine.activity.WineWebDetailActivity" android:theme="@7F0A0074">
+</activity>
+<activity android:name=".activities.WebYouniLoginActivity" android:screenOrientation="1" android:theme="@7F0A0072">
+</activity>
+<activity android:name=".activities.WebYouniSettingActivity" android:theme="@7F0A0072">
+</activity>
+<activity android:launchMode="2" android:name="com.tencent.tauth.AuthActivity" android:noHistory="true">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="tencent100361243">
+</data>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000A0" android:label="@7F090000" android:name=".activities.FriendProfileActivity" android:theme="@android:01030009">
+</activity>
+<activity android:configChanges="0x000000A0" android:label="@7F090000" android:launchMode="1" android:name=".modules.backup.BackUpContactSelectActivity" android:screenOrientation="1" android:theme="@7F0A0073">
+</activity>
+<activity android:configChanges="0x00000020" android:launchMode="1" android:name=".activities.SelectFailedMsgDetailActivity" android:theme="@7F0A00CB">
+</activity>
+<activity android:configChanges="0x000000A0" android:name=".activities.RecipientsListActivity" android:theme="@7F0A00CB">
+</activity>
+<activity android:configChanges="0x000000E0" android:label="@7F090000" android:launchMode="1" android:name=".modules.multiimage.MultiImageSelectActivity" android:screenOrientation="1" android:theme="@7F0A0073">
+</activity>
+<activity android:name=".modules.contacts.SelectPayeeForMucActivity" android:screenOrientation="1" android:theme="@7F0A0073">
+</activity>
+<receiver android:name=".kitkat.DefaultSmsReceiver" android:permission="android.permission.BROADCAST_SMS">
+<intent-filter>
+<action android:name="android.provider.Telephony.SMS_DELIVER">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name=".kitkat.DefaultMmsReceiver" android:permission="android.permission.BROADCAST_WAP_PUSH">
+<intent-filter>
+<action android:name="android.provider.Telephony.WAP_PUSH_DELIVER">
+</action>
+<data android:mimeType="application/vnd.wap.mms-message">
+</data>
+</intent-filter>
+</receiver>
+<service android:exported="true" android:name=".kitkat.HeadlessSmsSendService" android:permission="android.permission.SEND_RESPOND_VIA_MESSAGE">
+<intent-filter>
+<action android:name="android.intent.action.RESPOND_VIA_MESSAGE">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:scheme="sms">
+</data>
+<data android:scheme="smsto">
+</data>
+<data android:scheme="mms">
+</data>
+<data android:scheme="mmsto">
+</data>
+</intent-filter>
+</service>
+<receiver android:name=".news.paper.NewsReceiver" android:process="com.snda.youni">
+<intent-filter android:priority="2147483647">
+<action android:name="com.snda.youni.newspaper.RECEIVER">
+</action>
+<action android:name="com.snda.youni.newspaper.SENDIQ">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name=".receiver.YouniMessageReceiver" android:permission="android.permission.BROADCAST_SMS" android:process="com.snda.youni.mms">
+<intent-filter android:priority="2147483647">
+<action android:name="android.provider.Telephony.SMS_DELIVER">
+</action>
+<action android:name="android.provider.Telephony.SMS_RECEIVED">
+</action>
+<action android:name="com.snda.youni.receiver.SMS.RECEIPT">
+</action>
+<action android:name="com.snda.youni.receiver.SMS.DELIVERED">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</receiver>
+<receiver android:label="@7F090000" android:name=".receiver.BootReceiver" android:process="com.snda.youni.mms">
+<intent-filter android:priority="2147483647">
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+<intent-filter android:priority="2147483647">
+<action android:name="android.intent.action.MEDIA_SCANNER_STARTED">
+</action>
+<action android:name="android.intent.action.MEDIA_SCANNER_FINISHED">
+</action>
+<data android:scheme="file">
+</data>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+<intent-filter android:priority="2147483647">
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+<action android:name="android.intent.action.SIM_STATE_CHANGED">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name=".receiver.PhoneStateReceiver">
+<intent-filter>
+<action android:name="android.intent.action.PHONE_STATE">
+</action>
+<action android:name="android.intent.action.NEW_OUTGOING_CALL">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name="com.sd.android.mms.transaction.MessageStatusReceiver">
+<intent-filter android:priority="2147483647">
+<action android:name="com.sd.android.mms.transaction.MessageStatusReceiver.MESSAGE_STATUS_RECEIVED">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name="com.sd.android.mms.transaction.PushReceiver" android:permission="android.permission.BROADCAST_WAP_PUSH">
+<intent-filter>
+<action android:name="android.provider.Telephony.WAP_PUSH_DELIVER">
+</action>
+<data android:mimeType="application/vnd.wap.mms-message">
+</data>
+</intent-filter>
+<intent-filter android:priority="2147483647">
+<action android:name="android.provider.Telephony.WAP_PUSH_RECEIVED">
+</action>
+<data android:mimeType="application/vnd.wap.mms-message">
+</data>
+</intent-filter>
+</receiver>
+<receiver android:name=".receiver.SDCardReceiver">
+<intent-filter>
+<action android:name="android.intent.action.MEDIA_MOUNTED">
+</action>
+<action android:name="android.intent.action.MEDIA_EJECT">
+</action>
+<data android:scheme="file">
+</data>
+</intent-filter>
+</receiver>
+<receiver android:name=".receiver.PreferenceReceiver" android:process="com.snda.youni.mms">
+<intent-filter>
+<action android:name="com.snda.youni.receiver.PrefSet">
+</action>
+<action android:name="com.snda.youni.receiver.PrefRemove">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name="com.snda.youni.findfriend.FRSyncSettingReceiver">
+<intent-filter>
+<action android:name="android.intent.action.PLUGIN_FR_SYNC_SETTING">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name=".modules.minipage.BirthdayAlarmReceiver">
+</receiver>
+<receiver android:exported="true" android:name=".receiver.SendReceiver" android:process="com.snda.youni.mms">
+<intent-filter>
+<action android:name="com.snda.youni.send_message">
+</action>
+</intent-filter>
+</receiver>
+<activity android:launchMode="1" android:name=".modules.splash.SplashActivity" android:screenOrientation="1" android:theme="@7F0A00E2">
+</activity>
+<activity android:hardwareAccelerated="true" android:launchMode="1" android:name="com.snda.qp.modules.transaction.TransPurchaseListActivity" android:screenOrientation="1" android:theme="@android:01030009">
+</activity>
+<service android:name=".modules.splash.UpdateSplashService">
+</service>
+<activity android:launchMode="1" android:name=".modules.sprite.setting.DesktopYouniSettingActivity" android:screenOrientation="1" android:theme="@7F0A0072">
+</activity>
+<activity android:launchMode="1" android:name=".modules.sprite.setting.ChoosePortraitActivity" android:screenOrientation="1" android:theme="@7F0A0072">
+</activity>
+<activity android:launchMode="1" android:name=".modules.sprite.setting.DesktopYouniGuideActivity" android:screenOrientation="1" android:theme="@7F0A0072">
+</activity>
+<activity android:launchMode="1" android:name=".modules.sprite.setting.DesktopYouniGuideEndActivity" android:screenOrientation="1" android:theme="@7F0A0072">
+</activity>
+<activity android:configChanges="0x000000E0" android:label="@7F090000" android:name=".wine.modules.trialaward.TrialIntroductionActivity" android:screenOrientation="1" android:theme="@7F0A0073">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="youni">
+</data>
+</intent-filter>
+</activity>
+<service android:name=".modules.sprite.desktop.SpriteService" android:process="com.snda.youni.mms">
+</service>
+<service android:exported="false" android:name="com.snda.youni.wine.service.AppMonitorAndReceivRewardService">
+</service>
+<service android:exported="false" android:name="com.snda.youni.wine.modules.trialaward.TrialAwardService">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="my" android:scheme="youni">
+</data>
+</intent-filter>
+</service>
+<receiver android:label="@7F090000" android:name=".modules.sprite.desktop.SpriteAutoStartupBroadcastReceiver" android:process="com.snda.youni.mms">
+<intent-filter>
+<action android:name="android.intent.action.MEDIA_SCANNER_FINISHED">
+</action>
+<data android:scheme="file">
+</data>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</receiver>
+<activity android:hardwareAccelerated="true" android:label="@7F090000" android:name="com.snda.youni.news.paper.NewsPagerDetailsActivity" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.snda.youni.news.paper.NewsPaperMsgsActivity" android:screenOrientation="1" android:theme="@7F0A0072" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:label="@7F090000" android:name="com.snda.youni.news.paper.NewsPaperImagesActivity" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:launchMode="3" android:name="com.snda.youni.activities.WebYouniAuthActivity" android:screenOrientation="1" android:theme="@7F0A00F6">
+</activity>
+<activity android:configChanges="0x00000020" android:label="@7F090000" android:launchMode="1" android:name=".activities.MenuDialogActivity" android:theme="@7F0A00CB">
+</activity>
+<activity android:name="com.snda.youni.activities.TextEditActivity" android:screenOrientation="1" android:theme="@7F0A0072" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.snda.youni.modules.plugin.BaiBaoActivity" android:screenOrientation="1" android:theme="@7F0A0072">
+</activity>
+<activity android:configChanges="0x000000A0" android:hardwareAccelerated="true" android:name="com.snda.youni.modules.contacts.ContactsListActivity" android:screenOrientation="1" android:theme="@7F0A0072">
+</activity>
+<activity android:configChanges="0x000000A0" android:icon="@7F0204F4" android:label="@7F090000" android:name="com.snda.youni.modules.contacts.ContactSelectActivity" android:screenOrientation="1" android:theme="@7F0A0072">
+<intent-filter>
+<action android:name="com.snda.youni.send_select">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:mimeType="*/*">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="com.snda.youni.newchat.send">
+</action>
+<action android:name="android.intent.action.SEND">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:mimeType="text/plain">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="com.snda.youni.newchat.send">
+</action>
+<action android:name="android.intent.action.SEND">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:mimeType="image/*">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="com.snda.youni.newchat.send">
+</action>
+<action android:name="android.intent.action.SEND">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:mimeType="video/*">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="com.snda.youni.newchat.send">
+</action>
+<action android:name="android.intent.action.SEND_MULTIPLE">
+</action>
+<action android:name="com.snda.youni.newchat.send_multiple">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:mimeType="*/*">
+</data>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000A0" android:icon="@7F0204F4" android:label="@7F090000" android:name="com.snda.youni.modules.wifi.WkAccessDialog" android:screenOrientation="1" android:theme="@android:0103000F">
+</activity>
+<activity android:name="com.snda.youni.update.UpdateDescriptionActivity" android:screenOrientation="1" android:theme="@7F0A0072">
+</activity>
+<activity android:configChanges="0x000000E0" android:hardwareAccelerated="true" android:label="@7F090000" android:name="com.snda.youni.wine.modules.userinfo.WineUserInfoPageActivity" android:screenOrientation="1" android:theme="@7F0A0073">
+</activity>
+<activity android:configChanges="0x000000E0" android:hardwareAccelerated="true" android:label="@7F090000" android:name="com.snda.youni.wine.modules.userinfo.WineUserInfoGroupsActivity" android:screenOrientation="1" android:theme="@7F0A0073">
+</activity>
+<activity android:configChanges="0x000000E0" android:label="@7F090000" android:name=".wine.activity.WineUserListActivity" android:screenOrientation="1" android:theme="@7F0A0073">
+</activity>
+<activity android:configChanges="0x000000E0" android:label="@7F090000" android:name=".wine.activity.WineResourceLoverListActivity" android:screenOrientation="1" android:theme="@7F0A0073">
+</activity>
+<activity android:configChanges="0x000000E0" android:label="@7F090000" android:name=".wine.activity.WineRecommendedFriendListActivity" android:screenOrientation="1" android:theme="@7F0A0073">
+</activity>
+<activity android:configChanges="0x000000E0" android:label="@7F090000" android:name=".wine.activity.WineFriendManagerActivity" android:screenOrientation="1" android:theme="@7F0A0073">
+</activity>
+<activity android:configChanges="0x000000E0" android:label="@7F090000" android:name=".wine.activity.WineSomebodysFriendListActivity" android:screenOrientation="1" android:theme="@7F0A0073">
+</activity>
+<activity android:configChanges="0x000000E0" android:label="@7F090000" android:name=".wine.activity.WineTagManagerActivity" android:screenOrientation="1" android:theme="@7F0A0073">
+</activity>
+<activity android:configChanges="0x000000E0" android:label="@7F090000" android:name=".wine.activity.WineTagSearchActivity" android:screenOrientation="1" android:theme="@7F0A0073">
+</activity>
+<activity android:configChanges="0x000000E0" android:label="@7F090000" android:name=".wine.activity.WineNotificationSettingsActivity" android:screenOrientation="1" android:theme="@7F0A0073">
+</activity>
+<activity android:configChanges="0x000000E0" android:label="@7F090000" android:name=".wine.activity.WineTagDetailActivity" android:screenOrientation="1" android:theme="@7F0A0073">
+</activity>
+<activity android:launchMode="1" android:name=".wine.modules.timeline.WinePreviewImageActivity" android:screenOrientation="1" android:theme="@7F0A0072">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.snda.youni.modules.share.WeiboEntryActivity" android:screenOrientation="1" android:theme="@android:01030010">
+<intent-filter>
+<action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="true" android:launchMode="1" android:name="com.snda.youni.wxapi.WXEntryActivity" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<activity android:name="com.snda.youni.modules.share.ShareEntryActivity" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<activity android:name="com.snda.youni.activities.GroupApplyActivity" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<activity android:name="com.snda.youni.activities.GroupApplyDetailActivity" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<activity android:name="com.snda.youni.activities.GroupVerifySettingActivity" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<activity android:name="com.snda.aamobile.activity.AAAppManagerActivity">
+</activity>
+<activity android:name="com.snda.aamobile.activity.AAWebViewActivity">
+</activity>
+<meta-data android:name="ADSNYU_KEY" android:value="201644">
+</meta-data>
+<receiver android:exported="false" android:name=".utils.RecordTowerBroadcastReceiver">
+<intent-filter>
+<action android:name="com.snda.youni.record_tower">
+</action>
+</intent-filter>
+</receiver>
+<activity android:exported="true" android:hardwareAccelerated="true" android:launchMode="1" android:name=".wine.modules.timeline.WineMainActivity" android:screenOrientation="1" android:theme="@android:01030009">
+</activity>
+<activity android:hardwareAccelerated="true" android:launchMode="1" android:name=".wine.modules.timeline.FeedDetailActivity" android:screenOrientation="1" android:theme="@android:01030009">
+</activity>
+<activity android:launchMode="1" android:name=".wine.modules.guide.WineGuideActivity" android:screenOrientation="1" android:theme="@android:01030009">
+</activity>
+<activity android:hardwareAccelerated="true" android:launchMode="1" android:name=".wine.modules.trade.TradeTimelineActivity" android:screenOrientation="1" android:theme="@android:01030009">
+</activity>
+<activity android:launchMode="1" android:name="com.snda.qp.modules.sendmoney.QpSendMoneyActivity" android:screenOrientation="1" android:theme="@7F0A0072">
+</activity>
+<activity android:name="com.snda.qp.modules.sendmoney.QpTradeListActivity" android:screenOrientation="1" android:theme="@7F0A0072">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.snda.qp.modules.sendmoney.QpTradeDetailActivity" android:screenOrientation="1" android:theme="@7F0A0025">
+</activity>
+<activity android:name="com.snda.qp.modules.home.QpSettingActivity" android:screenOrientation="1" android:theme="@7F0A0072">
+<intent-filter>
+<action android:name="com.snda.qp.modules.home.QpSettingActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:hardwareAccelerated="true" android:launchMode="1" android:name="com.snda.qp.facepay.ui.FacePayActivity" android:screenOrientation="1" android:theme="@7F0A0072">
+</activity>
+<activity android:configChanges="0x000000A0" android:launchMode="2" android:name="com.snda.qp.modules.pwd.QpFindPwdActivity" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.snda.qp.modules.pwd.QpVerifyCardActivity" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.snda.qp.modules.pwd.QpVerifyCodeActivity" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.snda.qp.modules.pwd.QpPwdResetActivity" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.snda.qp.modules.deposit.PrivacyActivity" android:screenOrientation="1" android:theme="@7F0A0025">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.snda.qp.modules.deposit.DepositIcbcSettingActivity" android:screenOrientation="1" android:theme="@7F0A0025">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.snda.qp.modules.deposit.DepositCMBActivity" android:screenOrientation="1" android:theme="@7F0A0025">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.snda.qp.modules.deposit.QpTestActivity" android:screenOrientation="1" android:theme="@7F0A0025">
+</activity>
+<activity android:configChanges="0x000000A0" android:launchMode="1" android:name="com.snda.qp.modules.deposit.DepositActivity" android:screenOrientation="1" android:theme="@7F0A0025">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.snda.qp.modules.deposit.DepositKsShAmountActivity" android:screenOrientation="1" android:theme="@7F0A0025">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.snda.qp.modules.deposit.DepositKsCiAmountActivity" android:screenOrientation="1" android:theme="@7F0A0025">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.snda.qp.modules.deposit.DepositValidSmsCodeActivity" android:screenOrientation="1" android:theme="@7F0A0025">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.snda.qp.modules.deposit.DepositBankListActivity" android:screenOrientation="1" android:theme="@7F0A0025">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.snda.qp.modules.deposit.DepositAllSupportedBankListActivity" android:screenOrientation="1" android:theme="@7F0A0025">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.snda.qp.modules.deposit.DepositCardNoInputActivity" android:screenOrientation="1" android:theme="@7F0A0025">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.snda.qp.modules.deposit.DepositKsBind1Activity" android:screenOrientation="1" android:theme="@7F0A0025">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.snda.qp.modules.deposit.DepositKsBind2Activity" android:screenOrientation="1" android:theme="@7F0A0025">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.snda.qp.modules.deposit.DepositKsBind3Activity" android:screenOrientation="1" android:theme="@7F0A0025">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.snda.qp.modules.deposit.DepositKsValidInfoActivity" android:screenOrientation="1" android:theme="@7F0A0025">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.snda.qp.modules.withdraw.WithdrawActivity" android:screenOrientation="1" android:theme="@7F0A0025">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.snda.qp.modules.withdraw.WithdrawAddNewActivity" android:screenOrientation="1" android:theme="@7F0A0025">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.snda.qp.modules.withdraw.CardTypeActivity" android:screenOrientation="1" android:theme="@7F0A0025">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.snda.qp.modules.withdraw.WithdrawBindListActivity" android:screenOrientation="1" android:theme="@7F0A0025">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.snda.qp.modules.withdraw.WithdrawBankListActivity" android:screenOrientation="1" android:theme="@7F0A0025">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.snda.qp.v2.activities.QpOrderAuthPasswordActivity" android:screenOrientation="1" android:theme="@7F0A0025">
+<intent-filter>
+<action android:name="com.snda.qp.modules.c2c.ReceivingOrderActivity">
+</action>
+<category android:name="android.Intent.Category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.snda.qp.v2.activities.QpSendMoneyAuthPasswordActivity" android:screenOrientation="1" android:theme="@7F0A0025">
+<intent-filter>
+<action android:name="com.snda.qp.modules.c2c.ReceivingOrderActivity">
+</action>
+<category android:name="android.Intent.Category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:launchMode="1" android:name=".wine.modules.trade.TradeConfirmActivity" android:screenOrientation="1" android:theme="@android:01030009">
+</activity>
+<activity android:name="com.snda.qp.v2.activities.QpSetPasswordActivity" android:screenOrientation="1" android:theme="@7F0A0073">
+</activity>
+<activity android:name="com.snda.qp.v2.activities.QpWithdrawAuthPasswordActivity" android:screenOrientation="1" android:theme="@7F0A0025">
+</activity>
+<activity android:name="com.snda.qp.v2.activities.QpBindCardAuthPasswordActivity" android:screenOrientation="1" android:theme="@7F0A0025">
+</activity>
+<activity android:name="com.snda.qp.v2.activities.QpGeneralAuthPasswordActivity" android:screenOrientation="1" android:theme="@7F0A0025">
+</activity>
+<activity android:name="com.snda.qp.v2.activities.QpReliveLockedPwdAuthPasswordActivity" android:screenOrientation="1" android:theme="@7F0A0025">
+</activity>
+<activity android:name="com.snda.qp.modules.home.QpNopwdSettingActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.snda.qp.modules.home.QpLevelInfoActivity" android:screenOrientation="1" android:theme="@7F0A0025">
+</activity>
+<activity android:name="com.snda.qp.modules.commons.QpWebActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name="com.snda.qp.modules.reward.v2.RewardsActivity" android:screenOrientation="1" android:theme="@7F0A010B" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:name="com.snda.youni.wine.modules.trade.publish.PublishRewardActivity" android:screenOrientation="1" android:theme="@7F0A0073" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:name="com.snda.youni.wine.modules.trade.publish.WinePublishSellAcitivity" android:screenOrientation="1" android:theme="@7F0A0073" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:name="com.snda.youni.wine.modules.trade.publish.EditRewardActivity" android:screenOrientation="1" android:theme="@7F0A0073" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:launchMode="1" android:name="com.snda.qp.modules.reward.v2.RewardsResultDetail" android:screenOrientation="1" android:theme="@7F0A0073" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:hardwareAccelerated="true" android:icon="@7F0209EB" android:label="@7F0908CC" android:launchMode="1" android:name=".wine.modules.publish.PublishActivity" android:screenOrientation="1" android:theme="@7F0A0073">
+<intent-filter>
+<action android:name="android.intent.action.SEND">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:mimeType="image/*">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.SEND">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:mimeType="text/plain">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.snda.qp.v2.activities.QpSpreadAuthPasswordActivity" android:screenOrientation="1" android:theme="@7F0A0025">
+</activity>
+<activity android:name="com.snda.youni.wine.modules.awards.HelpRewardActivity" android:screenOrientation="1" android:theme="@7F0A0073" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:hardwareAccelerated="true" android:launchMode="1" android:name=".wine.modules.timeline.WinePreviewVideoActivity" android:screenOrientation="1" android:theme="@7F0A0073">
+</activity>
+<service android:exported="true" android:name=".services.IncomingCallRespondService" android:permission="android.permission.SEND_RESPOND_VIA_MESSAGE" android:process="com.snda.youni.mms">
+<intent-filter>
+<action android:name="android.intent.action.RESPOND_VIA_MESSAGE">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:scheme="sms">
+</data>
+<data android:scheme="smsto">
+</data>
+<data android:scheme="mms">
+</data>
+<data android:scheme="mmsto">
+</data>
+</intent-filter>
+</service>
+<activity android:exported="true" android:launchMode="2" android:name="com.snda.youni.sdk.PayActivity" android:theme="@7F0A0073">
+<intent-filter>
+<action android:name="com.snda.youni.sdk.ACTION_PAY">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:excludeFromRecents="true" android:exported="true" android:launchMode="2" android:name="com.snda.youni.sdk.GuideActivity" android:theme="@7F0A0073">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="com.snda.youni.sdk.GuideActivity">
+</action>
+</intent-filter>
+</activity>
+<activity android:name="com.snda.youni.modules.settings.RegistActivity" android:screenOrientation="1" android:theme="@7F0A0072">
+</activity>
+<service android:exported="true" android:name=".sdk.PayService" android:stopWithTask="true">
+</service>
+<activity android:name=".login.LoginActivity" android:screenOrientation="1" android:theme="@7F0A0072">
+</activity>
+<activity android:name="com.snda.qp.modules.home.QpHomeActivity" android:theme="@7F0A0073">
+</activity>
+<service android:name="com.lantern.wifilocating.sdk.service.WifiService">
+</service>
+<activity android:excludeFromRecents="true" android:name="com.lantern.wifilocating.sdk.ui.DialogActivity" android:theme="@7F0A0002">
+</activity>
+<activity android:name="com.snda.youni.modules.ad.AdActivity" android:screenOrientation="1">
+</activity>
+<service android:exported="false" android:name="com.snda.youni.modules.ad.DownloadService">
+</service>
+<receiver android:name="com.snda.youni.modules.ad.FileDownloadReceiver">
+<intent-filter>
+<action android:name="android.intent.action.DOWNLOAD_COMPLETE">
+</action>
+</intent-filter>
+</receiver>
+<meta-data android:name="UMENG_APPKEY" android:value="5492884cfd98c5411d000d3a">
+</meta-data>
+<meta-data android:name="UMENG_CHANNEL" android:value="10000001">
+</meta-data>
+</application>
+<instrumentation android:label="Test Unit Tests" android:name="android.test.InstrumentationTestRunner" android:targetPackage="com.snda.youni">
+</instrumentation>
+</manifest>

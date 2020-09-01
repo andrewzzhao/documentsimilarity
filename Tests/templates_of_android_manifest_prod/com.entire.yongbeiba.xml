@@ -1,0 +1,386 @@
+<?xml version="1.0" ?><manifest android:versionCode="45" android:versionName="3.9.8" package="com.entire.yongbeiba" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="16" android:targetSdkVersion="25">
+</uses-sdk>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.RECORD_AUDIO">
+</uses-permission>
+<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS">
+</uses-permission>
+<uses-permission android:name="android.permission.CALL_PHONE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.MANAGE_DOCUMENTS">
+</uses-permission>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="android.permission.USE_FINGERPRINT">
+</uses-permission>
+<uses-permission android:name="com.fingerprints.service.ACCESS_FINGERPRINT_MANAGER">
+</uses-permission>
+<uses-permission android:name="com.samsung.android.providers.context.permission.WRITE_USE_APP_FEATURE_SURVEY">
+</uses-permission>
+<permission android:name="com.entire.yongbeiba.permission.JPUSH_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="com.entire.yongbeiba.permission.JPUSH_MESSAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_USER_PRESENT">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_NETWORK_STATE">
+</uses-permission>
+<application android:allowBackup="true" android:icon="@7F0D001B" android:label="@7F0F0028" android:name="com.entire.payment.app.PaymentApp" android:theme="@7F100009">
+<provider android:authorities="com.entire.yongbeiba.provider" android:exported="false" android:grantUriPermissions="true" android:name="android.support.v4.content.FileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F120001">
+</meta-data>
+</provider>
+<receiver android:enabled="true" android:name="com.entire.payment.broadcast.ReceiverJpush">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.REGISTRATION">
+</action>
+<action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED">
+</action>
+<action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED">
+</action>
+<action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED">
+</action>
+<action android:name="cn.jpush.android.intent.ACTION_RICHPUSH_CALLBACK">
+</action>
+<action android:name="cn.jpush.android.intent.CONNECTION">
+</action>
+<category android:name="com.entire.yongbeiba">
+</category>
+</intent-filter>
+</receiver>
+<meta-data android:name="PGYER_APPID" android:value="de99e68927c6de8e63f6c9b244bddb25">
+</meta-data>
+<activity android:name="com.entire.payment.activity.SplashActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:name="com.entire.payment.activity.GuideActivity" android:screenOrientation="1" android:theme="@7F100012">
+</activity>
+<activity android:launchMode="2" android:name="com.entire.payment.activity.MainActivity" android:screenOrientation="1" android:theme="@7F1000D2">
+</activity>
+<activity android:name="com.entire.payment.activity.LoginActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.entire.payment.activity.ChangePasswordActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.entire.payment.activity.RegisterActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="2" android:name="com.entire.payment.activity.AuthActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:host="auth.qht.com" android:scheme="@7F0F002A">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.entire.payment.activity.AuthFinishActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.entire.payment.activity.ChannelUnionPayActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.entire.payment.activity.ChannelWeChatActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.entire.payment.activity.ChannelAlipayActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.entire.payment.activity.RechargeWeChatActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.entire.payment.activity.RechargeAlipayActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.entire.payment.activity.CreditCardListActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.entire.payment.activity.CreditCardAddActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.entire.payment.activity.BankSubsidiaryActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.entire.payment.activity.BankActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.entire.payment.activity.BankCardListActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.entire.payment.activity.BankCardAddActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.entire.payment.activity.ChannelHuaBeiActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.entire.payment.activity.RechargeHuabeiActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.entire.payment.activity.RechargeUnionPayActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.entire.payment.activity.RechargeUnionPayOthersActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.entire.payment.activity.ChannelWithdrawActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.entire.payment.activity.WebActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.entire.payment.activity.WebMongHooActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.entire.payment.activity.CashActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.entire.payment.activity.MyProfitRecordActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.entire.payment.activity.MyLevelActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.entire.payment.activity.RechargeCreditCardListActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.entire.payment.activity.MessageActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.entire.payment.activity.IncomeAnalysisActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.entire.payment.activity.ShopQRCodeBindActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.entire.payment.activity.MerchantAuthActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.entire.payment.activity.MerchantAuthSubmitActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.entire.payment.activity.CaptureActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.entire.payment.activity.ShareProfitActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.entire.payment.activity.ShareRegisterActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.entire.payment.activity.CreditUpActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.entire.payment.activity.OverseasPayAcitivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.entire.payment.activity.RepaymentEmailActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.entire.payment.activity.RepaymentEmailGetActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.entire.payment.activity.WebAliActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.entire.payment.activity.LoginMoreActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.entire.payment.activity.SafeActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.entire.payment.activity.ForgetPswActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.entire.payment.activity.GestureSettingActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.entire.payment.activity.CreditCardApplyAllBankActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.entire.payment.activity.CreditCardApplyListActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.entire.payment.activity.CreditCardApplyScheduleActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.entire.payment.activity.RepaymentCreditCardListActivity" android:screenOrientation="1" android:theme="@7F1000D2">
+</activity>
+<activity android:name="com.entire.payment.activity.CreditCardApplyActivity" android:screenOrientation="1" android:theme="@7F1000D2">
+</activity>
+<activity android:name="com.entire.payment.view.activity.merchant.MerchantAct" android:screenOrientation="1">
+</activity>
+<activity android:name="com.entire.payment.view.activity.merchant.ShopAct" android:screenOrientation="1">
+</activity>
+<activity android:name="com.entire.payment.view.activity.merchant.ShopUpdateAct" android:screenOrientation="1">
+</activity>
+<activity android:name="com.entire.payment.view.activity.merchant.RotaListAct" android:screenOrientation="1">
+</activity>
+<activity android:name="com.entire.payment.view.activity.merchant.ShopWorkByDateListAct" android:screenOrientation="1">
+</activity>
+<activity android:name="com.entire.payment.view.activity.merchant.ShopSettingAct" android:screenOrientation="1">
+</activity>
+<activity android:name="com.entire.payment.view.activity.merchant.IncomeAct" android:screenOrientation="1">
+</activity>
+<activity android:name="com.entire.payment.view.activity.merchant.ShopCountAct" android:screenOrientation="1">
+</activity>
+<activity android:name="com.entire.payment.view.activity.merchant.ShopCountByMonthByQrCodeListAct" android:screenOrientation="1">
+</activity>
+<activity android:name="com.entire.payment.view.activity.merchant.CashierListAct" android:screenOrientation="1">
+</activity>
+<activity android:name="com.entire.payment.view.activity.merchant.QrCodeAct" android:screenOrientation="1">
+</activity>
+<activity android:name="com.entire.payment.view.activity.channel.ChannelListAct" android:screenOrientation="1">
+</activity>
+<activity android:name="com.entire.payment.view.activity.cash.CashPayAct" android:screenOrientation="1">
+</activity>
+<activity android:name="com.entire.payment.view.activity.record.DealListAct" android:screenOrientation="1">
+</activity>
+<activity android:name="com.entire.payment.view.activity.record.DealProfitCreditCardListAct" android:screenOrientation="1">
+</activity>
+<activity android:name="com.entire.payment.view.activity.record.DealShopListAct" android:screenOrientation="1">
+</activity>
+<activity android:name="com.entire.payment.view.activity.record.DealProfitListAct" android:screenOrientation="1">
+</activity>
+<activity android:name="com.entire.payment.view.activity.record.DealDetialsAct" android:screenOrientation="1">
+</activity>
+<activity android:name="com.entire.payment.view.activity.record.DealDetialsShopAct" android:screenOrientation="1">
+</activity>
+<activity android:name="com.entire.payment.view.activity.record.DealDetialsProfitAct" android:screenOrientation="1">
+</activity>
+<activity android:name="com.entire.payment.view.activity.record.IncomeProfitListAct" android:screenOrientation="1">
+</activity>
+<activity android:name="com.entire.payment.view.activity.record.IncomeProfitCreditCardListAct" android:screenOrientation="1">
+</activity>
+<activity android:name="com.entire.payment.view.activity.web.WebPayJsAct" android:screenOrientation="1">
+</activity>
+<activity android:name="com.entire.payment.view.activity.web.WebAct" android:screenOrientation="1">
+</activity>
+<activity android:name="com.entire.payment.view.activity.web.WebPayYiBaoAct" android:screenOrientation="1">
+</activity>
+<activity android:name="com.entire.payment.view.activity.web.WebPayYijianYuqianAct" android:screenOrientation="1">
+</activity>
+<activity android:name="com.entire.payment.view.activity.web.WebPayGuojinAct" android:screenOrientation="1">
+</activity>
+<activity android:name="com.entire.payment.view.activity.SubordinateByTypeListAct" android:screenOrientation="1">
+</activity>
+<activity android:name="com.entire.payment.view.activity.AuthRepairAct" android:screenOrientation="1">
+</activity>
+<activity android:name="com.entire.payment.view.activity.SubordinateAct" android:screenOrientation="1">
+</activity>
+<activity android:name="com.entire.payment.view.activity.ServiceAct" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.mob.tools.MobUIShell" android:screenOrientation="1" android:theme="@android:01030010" android:windowSoftInputMode="0x00000012">
+<intent-filter>
+<data android:scheme="tencent101389422">
+</data>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004A0" android:exported="true" android:name="com.entire.payment.wxapi.WXEntryActivity" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<activity android:name="com.entire.payment.tim.view.act.ChatActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.entire.payment.tim.view.act.ImagePreviewActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.entire.payment.tim.view.act.ImageViewActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.entire.payment.tim.view.act.TCVideoPreviewActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.entire.payment.tim.view.act.TCVideoRecordActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.entire.payment.tim.view.act.VideoActivity" android:screenOrientation="1">
+</activity>
+<service android:exported="true" android:name="com.tencent.qalsdk.service.QalService" android:process=":QALSERVICE">
+</service>
+<service android:exported="false" android:name="com.tencent.qalsdk.service.QalAssistService" android:process=":QALSERVICE">
+</service>
+<receiver android:exported="false" android:name="com.tencent.qalsdk.QALBroadcastReceiver">
+<intent-filter>
+<action android:name="com.tencent.qalsdk.broadcast.qal">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name="com.tencent.qalsdk.core.NetConnInfoCenter" android:process=":QALSERVICE">
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.TIME_SET">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.TIMEZONE_CHANGED">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="com.tencent.qalsdk.service.TASK_REMOVED">
+</action>
+</intent-filter>
+</receiver>
+<activity android:configChanges="0x000000A0" android:name="com.uuzuche.lib_zxing.activity.CaptureActivity" android:screenOrientation="1" android:theme="@7F100141" android:windowSoftInputMode="0x00000003">
+</activity>
+<meta-data android:name="android.support.VERSION" android:value="25.4.0">
+</meta-data>
+<activity android:exported="false" android:name="cn.jpush.android.ui.PopWinActivity" android:theme="@7F1000C2">
+</activity>
+<activity android:configChanges="0x000000A0" android:exported="false" android:name="cn.jpush.android.ui.PushActivity" android:theme="@android:01030006">
+<intent-filter>
+<action android:name="cn.jpush.android.ui.PushActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="com.entire.yongbeiba">
+</category>
+</intent-filter>
+</activity>
+<service android:enabled="true" android:exported="false" android:name="cn.jpush.android.service.PushService" android:process=":pushcore">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.REGISTER">
+</action>
+<action android:name="cn.jpush.android.intent.REPORT">
+</action>
+<action android:name="cn.jpush.android.intent.PushService">
+</action>
+<action android:name="cn.jpush.android.intent.PUSH_TIME">
+</action>
+</intent-filter>
+</service>
+<service android:enabled="true" android:exported="true" android:name="cn.jpush.android.service.DaemonService">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.DaemonService">
+</action>
+<category android:name="com.entire.yongbeiba">
+</category>
+</intent-filter>
+</service>
+<receiver android:enabled="true" android:exported="false" android:name="cn.jpush.android.service.PushReceiver">
+<intent-filter android:priority="1000">
+<action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY">
+</action>
+<category android:name="com.entire.yongbeiba">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.USER_PRESENT">
+</action>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_ADDED">
+</action>
+<action android:name="android.intent.action.PACKAGE_REMOVED">
+</action>
+<data android:scheme="package">
+</data>
+</intent-filter>
+</receiver>
+<receiver android:exported="false" android:name="cn.jpush.android.service.AlarmReceiver">
+</receiver>
+<meta-data android:name="JPUSH_CHANNEL" android:value="yongbeiba">
+</meta-data>
+<meta-data android:name="JPUSH_APPKEY" android:value="8ee1a92e325042d7750af065">
+</meta-data>
+</application>
+</manifest>

@@ -1,0 +1,288 @@
+<?xml version="1.0" ?><manifest android:versionCode="72" android:versionName="3.7.2" package="com.vizorg.widget.pix" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="14" android:targetSdkVersion="26">
+</uses-sdk>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="com.android.vending.BILLING">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="com.google.android.gms.permission.ACTIVITY_RECOGNITION">
+</uses-permission>
+//-----------------------
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-feature android:name="android.hardware.location" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.location.network" android:required="false">
+</uses-feature>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-feature android:glEsVersion="0x00020000" android:required="true">
+</uses-feature>
+<uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE">
+</uses-permission>
+<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE">
+</uses-permission>
+<permission android:name="com.vizorg.widget.pix.permission.C2D_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="com.vizorg.widget.pix.permission.C2D_MESSAGE">
+</uses-permission>
+<application android:allowBackup="true" android:icon="@7F0C0000" android:label="@7F0D0022" android:name="com.vizorg.widget.pix.AnalyticsApplication" android:supportsRtl="true" android:theme="@7F0E0006">
+<activity android:name="com.vizorg.widget.pix.Setting" android:theme="@7F0E0008">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:label="@7F0D009D" android:name="com.vizorg.widget.pix.TextView1_Format_Dialog" android:theme="@7F0E00B2">
+</activity>
+<activity android:label="@7F0D009F" android:name="com.vizorg.widget.pix.TextView2_Format_Dialog" android:theme="@7F0E00B2">
+</activity>
+<activity android:label="@7F0D0069" android:name="com.vizorg.widget.pix.Logo_Format_Dialog" android:theme="@7F0E00B3">
+</activity>
+<activity android:label="@7F0D0022" android:name="com.vizorg.widget.pix.ListInstalledApps" android:theme="@7F0E00B2">
+</activity>
+<activity android:label="@7F0D0022" android:name="com.vizorg.widget.pix.ListInstalledAppsLogo" android:theme="@7F0E00B2">
+</activity>
+<activity android:label="@7F0D0022" android:name="com.vizorg.widget.pix.ListInstalledAppsNone" android:theme="@7F0E00B2">
+</activity>
+<activity android:name="com.vizorg.widget.pix.ColorLogo" android:theme="@7F0E00B1">
+</activity>
+<activity android:name="com.vizorg.widget.pix.ColorOne" android:theme="@7F0E00B1">
+</activity>
+<activity android:name="com.vizorg.widget.pix.ColorTwo" android:theme="@7F0E00B1">
+</activity>
+<activity android:name="com.vizorg.widget.pix.ColorBg" android:theme="@7F0E00B1">
+</activity>
+<activity android:name="com.vizorg.widget.pix.DialogSizeLogo" android:theme="@7F0E00B2">
+</activity>
+<activity android:label="@7F0D009D" android:name="com.vizorg.widget.pix.DialogSizeTV1" android:theme="@7F0E00B2">
+</activity>
+<activity android:label="@7F0D009F" android:name="com.vizorg.widget.pix.DialogSizeTV2" android:theme="@7F0E00B2">
+</activity>
+<activity android:label="@7F0D00A1" android:name="com.vizorg.widget.pix.DialogUpdateWeather" android:theme="@7F0E00B2">
+</activity>
+<receiver android:label="@7F0D0022" android:name="com.vizorg.widget.pix.Widget4_1">
+<intent-filter>
+<action android:name="android.appwidget.action.APPWIDGET_UPDATE">
+</action>
+<action android:name="android.appwidget.action.APPWIDGET_ENABLED">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="com.vizorg.widget.pix.FORCE_WIDGET_UPDATE">
+</action>
+</intent-filter>
+<meta-data android:name="android.appwidget.provider" android:resource="@7F100002">
+</meta-data>
+</receiver>
+<service android:label="UpdateService" android:name="com.vizorg.widget.pix.Widget4_1$UpdateTimeService">
+<intent-filter>
+<action android:name="com.vizorg.widget.pix.action.UPDATE">
+</action>
+<action android:name="android.appwidget.action.APPWIDGET_ENABLED">
+</action>
+</intent-filter>
+</service>
+<meta-data android:name="com.google.android.awareness.API_KEY" android:value="@7F0D0059">
+</meta-data>
+<meta-data android:name="com.google.android.geo.API_KEY" android:value="@7F0D0059">
+</meta-data>
+<meta-data android:name="com.google.android.nearby.messages.API_KEY" android:value="@7F0D0059">
+</meta-data>
+<activity android:label="@7F0D008C" android:name="com.vizorg.widget.pix.widget2.Setting_Search">
+</activity>
+<receiver android:label="@7F0D008C" android:name="com.vizorg.widget.pix.widget2.Widget_SearchBar">
+<intent-filter>
+<action android:name="android.appwidget.action.APPWIDGET_UPDATE">
+</action>
+</intent-filter>
+<meta-data android:name="android.appwidget.provider" android:resource="@7F100001">
+</meta-data>
+</receiver>
+<activity android:label="@7F0D005F" android:name="com.vizorg.widget.pix.widget2.Dialog_SearchBar_Select_Left" android:theme="@7F0E00B2">
+</activity>
+<activity android:label="@7F0D0035" android:name="com.vizorg.widget.pix.widget2.Dialog_SearchBar_Select_Centr" android:theme="@7F0E00B2">
+</activity>
+<activity android:label="@7F0D0082" android:name="com.vizorg.widget.pix.widget2.Dialog_SearchBar_Select_Right" android:theme="@7F0E00B2">
+</activity>
+<activity android:label="@7F0D0022" android:name="com.vizorg.widget.pix.widget2.ListInstalledApps_Left" android:theme="@7F0E00B2">
+</activity>
+<activity android:label="@7F0D0022" android:name="com.vizorg.widget.pix.widget2.ListInstalledApps_Centr" android:theme="@7F0E00B2">
+</activity>
+<activity android:label="@7F0D0022" android:name="com.vizorg.widget.pix.widget2.ListInstalledApps_Right" android:theme="@7F0E00B2">
+</activity>
+<activity android:label="@7F0D0035" android:name="com.vizorg.widget.pix.widget2.Fon_Format_Dialog" android:theme="@7F0E00B3">
+</activity>
+<activity android:label="@7F0D005F" android:name="com.vizorg.widget.pix.widget2.Fon_Left_Dialog" android:theme="@7F0E00B3">
+</activity>
+<activity android:label="@7F0D0082" android:name="com.vizorg.widget.pix.widget2.Fon_Right_Dialog" android:theme="@7F0E00B3">
+</activity>
+//------------------------------------------------------------------------------------
+<meta-data android:name="com.appodeal.framework" android:value="android">
+</meta-data>
+<receiver android:enabled="true" android:exported="true" android:name="com.appodeal.ads.AppodealPackageAddedReceiver">
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_ADDED">
+</action>
+<data android:scheme="package">
+</data>
+</intent-filter>
+</receiver>
+<activity android:configChanges="0x00000480" android:name="com.appodeal.ads.InterstitialActivity" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x00000480" android:name="com.appodeal.ads.VideoActivity" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x00000480" android:name="com.appodeal.ads.LoaderActivity" android:theme="@android:01030010">
+</activity>
+<meta-data android:name="com.google.android.gms.version" android:value="@7F090007">
+</meta-data>
+<activity android:configChanges="0x00000FB0" android:exported="false" android:name="com.google.android.gms.ads.AdActivity" android:theme="@android:0103000F">
+</activity>
+<activity android:configChanges="0x000004A0" android:excludeFromRecents="true" android:hardwareAccelerated="true" android:name="com.chartboost.sdk.CBImpressionActivity" android:theme="@android:01030011">
+</activity>
+<activity android:name="com.applovin.adview.AppLovinInterstitialActivity" android:theme="@android:0103000F">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.mopub.mobileads.MoPubActivity" android:theme="@android:0103000F">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.mopub.common.MoPubBrowser">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.mopub.mobileads.MraidActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.mopub.mobileads.MraidVideoPlayerActivity">
+</activity>
+<activity android:configChanges="0x000004B0" android:name="org.nexage.sourcekit.mraid.MRAIDBrowser" android:theme="@android:0103000F">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.amazon.device.ads.AdActivity">
+</activity>
+<activity android:configChanges="0x00000FB0" android:hardwareAccelerated="true" android:name="com.my.target.ads.MyTargetActivity">
+</activity>
+<activity android:name="org.nexage.sourcekit.vast.activity.VASTActivity" android:theme="@android:01030007">
+</activity>
+<activity android:name="org.nexage.sourcekit.vast.activity.VPAIDActivity" android:theme="@android:01030007">
+</activity>
+<activity android:name="com.appodeal.ads.networks.vpaid.VPAIDActivity" android:theme="@android:01030007">
+</activity>
+<activity android:name="com.appodeal.ads.networks.SpotXActivity" android:theme="@android:01030007">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.facebook.ads.InterstitialAdActivity">
+</activity>
+<activity android:configChanges="0x40000FFF" android:hardwareAccelerated="true" android:name="com.unity3d.ads.adunit.AdUnitActivity" android:theme="@android:01030007">
+</activity>
+<activity android:configChanges="0x40000FFF" android:hardwareAccelerated="false" android:name="com.unity3d.ads.adunit.AdUnitSoftwareActivity" android:theme="@android:01030007">
+</activity>
+<activity android:configChanges="0x40000FFF" android:hardwareAccelerated="true" android:name="com.unity3d.ads2.adunit.AdUnitActivity" android:theme="@android:01030007">
+</activity>
+<activity android:configChanges="0x40000FFF" android:hardwareAccelerated="false" android:name="com.unity3d.ads2.adunit.AdUnitSoftwareActivity" android:theme="@android:01030007">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.jirbo.adcolony.AdColonyOverlay" android:theme="@android:01030011">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.jirbo.adcolony.AdColonyFullscreen" android:theme="@android:0103000A">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.jirbo.adcolony.AdColonyBrowser" android:theme="@android:0103000A">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.vungle.publisher.FullScreenAdActivity" android:theme="@android:01030007">
+</activity>
+<activity android:name="com.startapp.android.publish.list3d.List3DActivity" android:theme="@android:01030005">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.startapp.android.publish.OverlayActivity" android:theme="@android:0103000F">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.startapp.android.publish.FullScreenActivity" android:theme="@android:01030005">
+</activity>
+<service android:enabled="true" android:exported="true" android:name="com.yandex.metrica.MetricaService" android:process=":Metrica">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="com.yandex.metrica.IMetricaService">
+</action>
+<data android:scheme="metrica">
+</data>
+</intent-filter>
+<meta-data android:name="metrica:api:level" android:value="52">
+</meta-data>
+</service>
+<receiver android:enabled="true" android:exported="true" android:name="com.yandex.metrica.MetricaEventHandler">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+<activity android:configChanges="0x00000FB0" android:name="com.yandex.mobile.ads.AdActivity">
+</activity>
+<activity android:configChanges="0x00000FB0" android:name="com.flurry.android.FlurryFullscreenTakeoverActivity">
+</activity>
+<activity android:name="com.appodeal.ads.VideoPlayerActivity" android:theme="@android:0103000A">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.revmob.FullscreenActivity" android:theme="@android:0103000F">
+</activity>
+<activity android:configChanges="0x000004A0" android:hardwareAccelerated="true" android:name="com.tapjoy.TJAdUnitActivity" android:theme="@android:01030011">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.tapjoy.mraid.view.ActionHandler">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.tapjoy.mraid.view.Browser">
+</activity>
+<activity android:configChanges="0x000004A0" android:hardwareAccelerated="true" android:name="com.tapjoy.TJContentActivity" android:theme="@android:01030010">
+</activity>
+<meta-data android:name="android.support.VERSION" android:value="26.1.0">
+</meta-data>
+<receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.analytics.AnalyticsReceiver">
+</receiver>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.analytics.AnalyticsService">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.analytics.AnalyticsJobService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementReceiver">
+</receiver>
+<receiver android:enabled="true" android:exported="true" android:name="com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver" android:permission="android.permission.INSTALL_PACKAGES">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementService">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementJobService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<service android:name="com.google.firebase.components.ComponentDiscoveryService">
+<meta-data android:name="com.google.firebase.components:com.google.firebase.iid.Registrar" android:value="com.google.firebase.components.ComponentRegistrar">
+</meta-data>
+</service>
+<receiver android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+<category android:name="com.vizorg.widget.pix">
+</category>
+</intent-filter>
+</receiver>
+<service android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdService">
+<intent-filter android:priority="-500">
+<action android:name="com.google.firebase.INSTANCE_ID_EVENT">
+</action>
+</intent-filter>
+</service>
+<activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:01030010">
+</activity>
+<provider android:authorities="com.vizorg.widget.pix.firebaseinitprovider" android:exported="false" android:initOrder="100" android:name="com.google.firebase.provider.FirebaseInitProvider">
+</provider>
+<activity android:launchMode="2" android:name="com.cmcm.picks.PicksLoadingActivity" android:taskAffinity="com.cmcm.adsdk.nativead" android:theme="@android:0103000A">
+</activity>
+<activity android:launchMode="2" android:name="com.cmcm.adsdk.interstitial.PicksInterstitialActivity" android:theme="@7F0E019A">
+</activity>
+<activity android:launchMode="2" android:name="com.cmcm.picks.webview.PicksBrowser" android:theme="@android:0103000A">
+</activity>
+<service android:exported="false" android:name="com.cmcm.picks.init.DownloadService" android:process=":PickService">
+</service>
+<activity android:excludeFromRecents="true" android:launchMode="3" android:name="com.cmcm.picks.vastvideo.FullScreenVideoActivity" android:screenOrientation="0">
+</activity>
+<meta-data android:name="android.arch.lifecycle.VERSION" android:value="27.0.0-SNAPSHOT">
+</meta-data>
+</application>
+</manifest>

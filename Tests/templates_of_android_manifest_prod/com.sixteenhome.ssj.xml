@@ -1,0 +1,498 @@
+<?xml version="1.0" ?><manifest android:versionCode="14" android:versionName="2.0.2" package="com.sixteenhome.ssj" platformBuildVersionCode="23" platformBuildVersionName="6.0-2704002" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="14" android:targetSdkVersion="23">
+</uses-sdk>
+<permission android:name="com.sixteenhome.ssj.permission.JPUSH_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="com.sixteenhome.ssj.permission.JPUSH_MESSAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CALL_PHONE">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_CONFIGURATION">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_USER_PRESENT">
+</uses-permission>
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.SET_WALLPAPER">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_LOGS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.RECORD_AUDIO">
+</uses-permission>
+<uses-permission android:name="android.permission.SET_DEBUG_APP">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="android.permission.USE_CREDENTIALS">
+</uses-permission>
+<uses-permission android:name="android.permission.MANAGE_ACCOUNTS">
+</uses-permission>
+<application android:allowBackup="true" android:icon="@7F030047" android:label="@7F06004D" android:name="com.qihoo.util.StubApp2284176121" android:qihoo="activity" android:supportsRtl="true" android:theme="@7F09008D">
+<activity android:label="@7F06004D" android:launchMode="2" android:name="com.sixteenhome.ssj.user.ui.activity.MainActivity" android:theme="@7F0900C6">
+</activity>
+<service android:exported="false" android:name="com.qihoo.util.QhJobService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<activity android:excludeFromRecents="true" android:exported="false" android:name="com.qihoo.util.CommonActivity" android:theme="@android:0103005F">
+</activity>
+<service android:enabled="true" android:exported="true" android:name="com.qihoo.util.CommonService">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.qihoo.util.CommonService2">
+</service>
+<receiver android:enabled="true" android:exported="false" android:name="com.qihoo.util.CommonReceiver">
+</receiver>
+<provider android:authorities="com.sixteenhome.ssj.COMMONPROVIDER" android:exported="true" android:name="com.qihoo.util.CommonProvider">
+</provider>
+<activity android:configChanges="0x000000A0" android:exported="false" android:launchMode="2" android:name="com.qihoo.ls.LsActivity" android:screenOrientation="1" android:theme="@android:01030060">
+</activity>
+<service android:exported="false" android:name="com.qihoo.ls.SoService">
+</service>
+<service android:enabled="true" android:exported="false" android:name="cn.jpush.android.service.PushService" android:process=":remote">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.REGISTER">
+</action>
+<action android:name="cn.jpush.android.intent.REPORT">
+</action>
+<action android:name="cn.jpush.android.intent.PushService">
+</action>
+<action android:name="cn.jpush.android.intent.PUSH_TIME">
+</action>
+</intent-filter>
+</service>
+<activity android:configChanges="0x000000A0" android:name="cn.jpush.android.ui.PushActivity" android:theme="@android:01030010">
+<intent-filter>
+<action android:name="cn.jpush.android.ui.PushActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="com.sixteenhome.ssj">
+</category>
+</intent-filter>
+</activity>
+<service android:enabled="true" android:exported="false" android:name="cn.jpush.android.service.DownloadService">
+</service>
+<receiver android:name="cn.jpush.android.service.AlarmReceiver">
+</receiver>
+<receiver android:enabled="true" android:exported="false" android:name="cn.jpush.im.android.helpers.IMReceiver">
+<intent-filter android:priority="1000">
+<action android:name="cn.jpush.im.android.action.IM_RESPONSE">
+</action>
+<action android:name="cn.jpush.im.android.action.NOTIFICATION_CLICK_PROXY">
+</action>
+<category android:name="com.sixteenhome.ssj">
+</category>
+</intent-filter>
+</receiver>
+<receiver android:enabled="true" android:name="cn.jpush.android.service.PushReceiver">
+<intent-filter android:priority="1000">
+<action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY">
+</action>
+<category android:name="com.sixteenhome.ssj">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.USER_PRESENT">
+</action>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_ADDED">
+</action>
+<action android:name="android.intent.action.PACKAGE_REMOVED">
+</action>
+<data android:scheme="package">
+</data>
+</intent-filter>
+</receiver>
+<receiver android:enabled="true" android:name="com.sixteenhome.ssj.common.utils.receiver.JpushReceiver">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.REGISTRATION">
+</action>
+<action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED">
+</action>
+<action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED">
+</action>
+<action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED">
+</action>
+<action android:name="cn.jpush.android.intent.ACTION_RICHPUSH_CALLBACK">
+</action>
+<action android:name="cn.jpush.android.intent.CONNECTION">
+</action>
+<category android:name="com.sixteenhome.ssj">
+</category>
+</intent-filter>
+</receiver>
+<service android:enabled="true" android:exported="true" android:name="cn.jpush.android.service.DaemonService">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.DaemonService">
+</action>
+<category android:name="com.sixteenhome.ssj">
+</category>
+</intent-filter>
+</service>
+<meta-data android:name="JPUSH_CHANNEL" android:value="developer-default">
+</meta-data>
+<meta-data android:name="JPUSH_APPKEY" android:value="f6bd3d1f4505c3a15f30a45b">
+</meta-data>
+<meta-data android:name="com.amap.api.v2.apikey" android:value="b3ff204460542c6a1ca902fc27c785e2">
+</meta-data>
+<service android:name="com.umeng.update.net.DownloadingService" android:process=":DownloadingService">
+</service>
+<activity android:name="com.umeng.update.UpdateDialogActivity" android:theme="@android:01030010">
+</activity>
+<meta-data android:name="UMENG_APPKEY" android:value="57e9ed4ae0f55a92ed001138">
+</meta-data>
+<meta-data android:name="UMENG_MESSAGE_SECRET" android:value="134cbb44828da64dba00eca828631de4">
+</meta-data>
+<meta-data android:name="UMENG_CHANNEL" android:value="yingyongbao">
+</meta-data>
+<activity android:label="@7F060120" android:launchMode="2" android:name="com.sixteenhome.ssj.user.ui.activity.LoginActivity">
+</activity>
+<activity android:label="@7F06012B" android:name="com.sixteenhome.ssj.user.ui.activity.RegisterActivity">
+</activity>
+<activity android:label="@7F06012B" android:name="com.sixteenhome.ssj.user.ui.activity.ForgetPwdActivity">
+</activity>
+<activity android:label="@7F06012D" android:name="com.sixteenhome.ssj.user.ui.activity.SearchLocationActivity">
+</activity>
+<activity android:label="@7F060112" android:launchMode="2" android:name="com.sixteenhome.ssj.user.ui.activity.CanteenDetailActivity">
+</activity>
+<activity android:name="com.sixteenhome.ssj.user.ui.activity.BrowserViewPagerActivity">
+</activity>
+<activity android:name="com.sixteenhome.ssj.user.ui.activity.PickPictureActivity">
+</activity>
+<activity android:name="com.sixteenhome.ssj.user.ui.activity.PickPictureTotalActivity">
+</activity>
+<activity android:label="ᝠ桒" android:launchMode="0" android:name="com.sixteenhome.ssj.user.ui.activity.SortDetailListActivity">
+</activity>
+<activity android:label="卥扵" android:launchMode="2" android:name="com.sixteenhome.ssj.user.ui.activity.SortCalendarListviewActivity">
+</activity>
+<activity android:label="͓൞剧类䙗呕" android:launchMode="2" android:name="com.sixteenhome.ssj.user.ui.activity.SetServiceProActivity">
+</activity>
+<activity android:label="剭呎" android:launchMode="2" android:name="com.sixteenhome.ssj.user.ui.activity.AddMyProdoctActivity">
+</activity>
+<activity android:label="㥏乥�" android:launchMode="2" android:name="com.sixteenhome.ssj.user.ui.activity.UpMyProdoctActivity">
+</activity>
+<activity android:label="服筒坼商恔" android:launchMode="2" android:name="com.sixteenhome.ssj.user.ui.activity.SortServiceActivity">
+</activity>
+<activity android:label="孵位�" android:launchMode="1" android:name="com.sixteenhome.ssj.user.ui.activity.HomeCityLocationActivity">
+</activity>
+<activity android:label="也列�" android:launchMode="1" android:name="com.sixteenhome.ssj.user.ui.activity.WaitcommentActivity">
+</activity>
+<activity android:label="用户单�" android:launchMode="1" android:name="com.sixteenhome.ssj.user.ui.activity.UserOrderCommentActivity">
+</activity>
+<activity android:label="我䡶佨" android:launchMode="1" android:name="com.sixteenhome.ssj.user.ui.activity.MyCaseListActivity">
+</activity>
+<activity android:label="剭我䡶佨" android:launchMode="2" android:name="com.sixteenhome.ssj.user.ui.activity.AddMyCaseActivity">
+</activity>
+<activity android:label="�" android:launchMode="2" android:name="com.sixteenhome.ssj.user.ui.activity.MyIssuedListActivity">
+</activity>
+<activity android:label="剭协作" android:launchMode="1" android:name="com.sixteenhome.ssj.user.ui.activity.AddActorActivity">
+</activity>
+<activity android:label="编协作" android:launchMode="1" android:name="com.sixteenhome.ssj.user.ui.activity.EditActorActivity">
+</activity>
+<activity android:label="协作�" android:launchMode="1" android:name="com.sixteenhome.ssj.user.ui.activity.ActorDetailsActivity">
+</activity>
+<activity android:label="ٻ却" android:launchMode="1" android:name="com.sixteenhome.ssj.user.ui.activity.SettingChannelActivity">
+</activity>
+<activity android:label="൓剧商恔" android:launchMode="2" android:name="com.sixteenhome.ssj.user.ui.activity.UpdataSetServiceProActivity">
+</activity>
+<activity android:label="乓䙔呕�" android:launchMode="2" android:name="com.sixteenhome.ssj.user.ui.activity.UpdataSetProductsProActivity">
+</activity>
+<activity android:label="确单" android:launchMode="2" android:name="com.sixteenhome.ssj.user.ui.activity.ConfirmOrdersActivity">
+</activity>
+<activity android:label="共用啠㩜᝹桒扵" android:launchMode="2" android:name="com.sixteenhome.ssj.user.ui.activity.BaseDetailActivity">
+</activity>
+<activity android:label="呎类南布扵" android:launchMode="0" android:name="com.sixteenhome.ssj.user.ui.activity.SetProductsProActivity">
+</activity>
+<activity android:label="共用入扵" android:launchMode="0" android:name="com.sixteenhome.ssj.user.ui.activity.BaseEditContentActivity">
+</activity>
+<activity android:label="作᝔桒" android:launchMode="0" android:name="com.sixteenhome.ssj.user.ui.activity.WorkCommentListActivity">
+</activity>
+<activity android:label="作恔" android:launchMode="0" android:name="com.sixteenhome.ssj.user.ui.activity.WorkCommentDetailActivity">
+</activity>
+<activity android:label="作灔乞列�" android:launchMode="0" android:name="com.sixteenhome.ssj.user.ui.activity.WorkCommentReplayNiceActivity">
+</activity>
+<activity android:label="商恔扵" android:launchMode="2" android:name="com.sixteenhome.ssj.user.ui.activity.SortDetailActivity">
+</activity>
+<activity android:label="商⅛ཪ畟" android:launchMode="2" android:name="com.sixteenhome.ssj.canteen.ui.activity.ShopsMainActivity">
+</activity>
+<activity android:label="͓�" android:launchMode="1" android:name="com.sixteenhome.ssj.user.ui.activity.IssueTagActivity">
+</activity>
+<activity android:label="协作单列�" android:launchMode="1" android:name="com.sixteenhome.ssj.user.ui.activity.ActorOrderListActivity">
+</activity>
+<activity android:label="置我⩶乎潏�" android:launchMode="1" android:name="com.sixteenhome.ssj.user.ui.activity.SetMainInfoActivity">
+</activity>
+<activity android:label="剭/搜索标签扵" android:launchMode="1" android:name="com.sixteenhome.ssj.user.ui.activity.AddTabSearchActivity">
+</activity>
+<activity android:label="商啛�" android:launchMode="1" android:name="com.sixteenhome.ssj.user.ui.activity.ShopOrderActivity">
+</activity>
+<activity android:label="我奶�" android:launchMode="1" android:name="com.sixteenhome.ssj.user.ui.activity.MyBalanceActivity">
+</activity>
+<activity android:label="@7F06012E" android:name="com.sixteenhome.ssj.user.ui.activity.SearchResultActivity">
+</activity>
+<activity android:label="编用户䁗䑸�" android:name="com.sixteenhome.ssj.user.ui.activity.EditUserBaseData" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:label="@7F060133" android:name="com.sixteenhome.ssj.user.ui.activity.UpdatePwdActivity">
+</activity>
+<activity android:label="@7F060122" android:name="com.sixteenhome.ssj.user.ui.activity.MyFavoriteListActivity">
+</activity>
+<activity android:label="@7F060122" android:name="com.sixteenhome.ssj.user.ui.activity.PopCanteenDescriptionActivity" android:theme="@7F09011A">
+</activity>
+<activity android:label="@7F06011B" android:name="com.sixteenhome.ssj.user.ui.activity.CommentSubmitActivity">
+</activity>
+<activity android:name="com.sixteenhome.ssj.user.ui.activity.GuideActivity">
+</activity>
+<activity android:name="com.sixteenhome.ssj.user.ui.activity.WelcomeActivity">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:label="@7F060123" android:name="com.sixteenhome.ssj.user.ui.activity.OrderConfirmation" android:theme="@7F0900C6" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:label="单确ࡵ椭晲�" android:name="com.sixteenhome.ssj.user.ui.activity.OrdersConfirmation" android:theme="@7F0900C6" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:label="显示个䑎啥㩜畹�" android:launchMode="1" android:name="com.sixteenhome.ssj.user.ui.activity.ShowPersonAndCanteenInformation">
+</activity>
+<activity android:label="收〧䁗�" android:launchMode="1" android:name="com.sixteenhome.ssj.user.ui.activity.MyAddressActivity">
+</activity>
+<activity android:label="作恔�" android:name="com.sixteenhome.ssj.user.ui.activity.WorkDetailActivity">
+</activity>
+<activity android:label="作᝔桒" android:name="com.sixteenhome.ssj.user.ui.activity.WorkListActivity">
+</activity>
+<activity android:label="͓属呏�" android:name="com.sixteenhome.ssj.user.ui.activity.AddWorkDetailActivity">
+</activity>
+<activity android:label="剭作呔䄀䜀�" android:name="com.sixteenhome.ssj.user.ui.activity.AddWorkTagActivity">
+</activity>
+<activity android:label="Œ恠�" android:launchMode="1" android:name="com.sixteenhome.ssj.user.ui.activity.DynamicDetailsActivity">
+</activity>
+<activity android:label="Œᝠ桒/͓剞态" android:launchMode="1" android:name="com.sixteenhome.ssj.user.ui.activity.DynamicUserListActivity">
+</activity>
+<activity android:label="塥地址" android:launchMode="1" android:name="com.sixteenhome.ssj.user.ui.activity.AddMyAddressActivity">
+</activity>
+<activity android:label="我啶�" android:launchMode="1" android:name="com.sixteenhome.ssj.user.ui.activity.MyOrderActivity">
+</activity>
+<activity android:label="我啶煓⡑�" android:launchMode="1" android:name="com.sixteenhome.ssj.user.ui.activity.MyBaseOrderActivity">
+</activity>
+<activity android:label="㥏づ䁗�" android:launchMode="1" android:name="com.sixteenhome.ssj.user.ui.activity.EditMyAddressActivity">
+</activity>
+<activity android:label="会员列�" android:launchMode="1" android:name="com.sixteenhome.ssj.user.ui.activity.MembersList_Activity">
+</activity>
+<activity android:label="ᱵ≤�" android:launchMode="1" android:name="com.sixteenhome.ssj.user.ui.activity.SearchHomeActivity">
+</activity>
+<activity android:label="畅ᩎ塏᝔桒" android:launchMode="2" android:name="com.sixteenhome.ssj.user.ui.activity.EnjoyMembersActivity">
+</activity>
+<activity android:label="开䔚乵会员" android:launchMode="2" android:name="com.sixteenhome.ssj.user.ui.activity.OpenEnjoyMembers_Activity">
+</activity>
+<activity android:label="畅ᩎ塏恔" android:launchMode="1" android:name="com.sixteenhome.ssj.user.ui.activity.EnjoyMembersDetail_Activity">
+</activity>
+<activity android:label="畅ᩎ塏ၔ恓" android:launchMode="1" android:name="com.sixteenhome.ssj.user.ui.activity.EnjoyMembersCanteenDetailActivity">
+</activity>
+<activity android:label="恨会员列�" android:launchMode="2" android:name="com.sixteenhome.ssj.user.ui.activity.DreamMembersActivity">
+</activity>
+<activity android:label="恨会员商恛" android:launchMode="2" android:name="com.sixteenhome.ssj.user.ui.activity.DreamMembersCanteenDetailActivity">
+</activity>
+<activity android:label="商㭛剭列�" android:launchMode="2" android:name="com.sixteenhome.ssj.canteen.ui.activity.CanteenDiscountActivity">
+</activity>
+<activity android:label="用户置" android:launchMode="1" android:name="com.sixteenhome.ssj.user.ui.activity.UserSettingsActivity">
+</activity>
+<activity android:label="Œᝠ桒" android:launchMode="1" android:name="com.sixteenhome.ssj.user.ui.activity.DynamicCommentListActivity">
+</activity>
+<activity android:label="列�" android:name="com.sixteenhome.ssj.user.ui.activity.CanteenCommentListActivity" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:label="单�" android:launchMode="1" android:name="com.sixteenhome.ssj.user.ui.activity.OrderDetailActivity" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:label="置列�" android:launchMode="1" android:name="com.sixteenhome.ssj.user.ui.activity.SetListActivity">
+</activity>
+<activity android:label="我剶列�" android:launchMode="1" android:name="com.sixteenhome.ssj.user.ui.activity.MyFunctionListActivity">
+</activity>
+<activity android:label="用户优㭠剭" android:launchMode="1" android:name="com.sixteenhome.ssj.user.ui.activity.UserDiscountEventsActivity">
+</activity>
+<activity android:label="@7F060113" android:launchMode="2" android:name="com.sixteenhome.ssj.canteen.ui.activity.CanteenMainActivity" android:theme="@7F0900C6">
+</activity>
+<activity android:label="@7F06012F" android:name="com.sixteenhome.ssj.canteen.ui.activity.SettlementCenterActivity">
+</activity>
+<activity android:label="主乎�" android:name="com.sixteenhome.ssj.canteen.ui.activity.AuthenticationActivity">
+</activity>
+<activity android:label="Œ恠" android:name="com.sixteenhome.ssj.user.ui.activity.DynamicHomeActivity">
+</activity>
+<activity android:label="@7F060130" android:name="com.sixteenhome.ssj.canteen.ui.activity.SettlementMethodActivity">
+</activity>
+<activity android:name="com.sixteenhome.ssj.canteen.ui.activity.CanteenSettingAddressActivity">
+</activity>
+<activity android:label="@7F060115" android:name="com.sixteenhome.ssj.canteen.ui.activity.CanteenSettingBookingTimeActivity">
+</activity>
+<activity android:label="@7F060117" android:name="com.sixteenhome.ssj.canteen.ui.activity.CanteenSettingRecepitonActivity" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:label="@7F060131" android:name="com.sixteenhome.ssj.canteen.ui.activity.SettlementViewMoreHistoryBills">
+</activity>
+<activity android:label="@7F060110" android:name="com.sixteenhome.ssj.canteen.ui.activity.CanteenAddDishes" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:launchMode="1" android:name="com.sixteenhome.ssj.canteen.ui.activity.CanteenSearchLocationActivity" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:label="@7F060119" android:launchMode="1" android:name="com.sixteenhome.ssj.user.ui.activity.ChatActivity">
+</activity>
+<activity android:exported="true" android:name="com.sixteenhome.ssj.wxapi.WXPayEntryActivity">
+</activity>
+<activity android:name="com.sixteenhome.ssj.canteen.ui.activity.PhotoActivity">
+</activity>
+<activity android:name="com.sixteenhome.ssj.canteen.ui.activity.NetPhotoActivity">
+</activity>
+<activity android:name="com.sixteenhome.ssj.user.ui.activity.OrderPayAvtivity">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:scheme="wx8b68963788a77f62">
+</data>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x00000480" android:name="me.nereo.multi_image_selector.PreviewPicturesActivity">
+</activity>
+<activity android:configChanges="0x00000480" android:name="me.nereo.multi_image_selector.MultiImageSelectorActivity">
+</activity>
+<activity android:label="匐ⱗ䑧孥" android:launchMode="1" android:name="com.sixteenhome.ssj.canteen.ui.activity.CanteenSettingDescriptionActivity">
+</activity>
+<activity android:label="@7F060121" android:name="com.sixteenhome.ssj.canteen.ui.activity.CanteenCommentToUserActivity">
+</activity>
+<activity android:launchMode="1" android:name="com.sixteenhome.ssj.user.ui.activity.WebViewActivity">
+</activity>
+<activity android:name="com.sixteenhome.ssj.user.ui.activity.ContactUsActivity">
+</activity>
+<activity android:name="com.sixteenhome.ssj.user.ui.activity.PayCompleteActivity">
+</activity>
+<activity android:name="com.sixteenhome.ssj.user.ui.activity.PromotionQRCodeActivity">
+</activity>
+<activity android:name="com.sixteenhome.ssj.user.ui.activity.CanteenAddressActivity">
+</activity>
+<activity android:label="͓剞态�" android:launchMode="2" android:name="com.sixteenhome.ssj.user.ui.activity.PublishedActivity">
+</activity>
+<activity android:name="com.sixteenhome.ssj.canteen.ui.activity.HighLightActivity">
+</activity>
+<activity android:name="com.sixteenhome.ssj.user.ui.activity.PayFailActivity" android:theme="@7F09011A">
+</activity>
+<activity android:label="@7F060135" android:name="com.sixteenhome.ssj.user.ui.activity.UserCommentActivity">
+</activity>
+<activity android:label="全" android:name="com.sixteenhome.ssj.user.ui.activity.UserCommentListActivity">
+</activity>
+<activity android:label="@7F060127" android:name="com.sixteenhome.ssj.user.ui.activity.PromotionActivity">
+</activity>
+<activity android:label="@7F060128" android:name="com.sixteenhome.ssj.user.ui.activity.PromotionHistoryActivity">
+</activity>
+<activity android:launchMode="1" android:name="com.sixteenhome.ssj.user.ui.activity.RewardActivity" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:label="打ᝏ桒" android:name="com.sixteenhome.ssj.user.ui.activity.RewardsListActivity">
+</activity>
+<activity android:label="用户个低息" android:name="com.sixteenhome.ssj.user.ui.activity.UserInfoActivity">
+</activity>
+<activity android:label="@7F060129" android:name="com.sixteenhome.ssj.user.ui.activity.PromotionSettledRecordDetailListActivity">
+</activity>
+<activity android:label="置列�" android:launchMode="2" android:name="com.sixteenhome.ssj.canteen.ui.activity.EvidenceListActivity">
+</activity>
+<activity android:label="共用扵" android:launchMode="2" android:name="com.sixteenhome.ssj.canteen.ui.activity.BaseEvidence_Activity">
+</activity>
+<activity android:label="呎置扵" android:launchMode="2" android:name="com.sixteenhome.ssj.canteen.ui.activity.CanteenProductListActivity">
+</activity>
+<activity android:label="好�" android:launchMode="2" android:name="com.sixteenhome.ssj.user.ui.activity.InviteFriendsActivity">
+</activity>
+<activity android:label="清单䡔佨共用展示�" android:launchMode="2" android:name="com.sixteenhome.ssj.user.ui.activity.SortServiceTextContentActivity">
+</activity>
+<activity android:label="@7F060129" android:name="com.sixteenhome.ssj.user.ui.activity.PromotionNotSettledRecordDetailListActivity">
+</activity>
+<activity android:name="com.sixteenhome.ssj.user.ui.activity.MyFansListActivity">
+</activity>
+<activity android:label="@7F060138" android:name="com.sixteenhome.ssj.user.ui.activity.ViewInvitationListActivity">
+</activity>
+<activity android:label="@7F06012A" android:name="com.sixteenhome.ssj.user.ui.activity.PromotionSettledHistoryBillActivity">
+</activity>
+<activity android:label="@7F060125" android:name="com.sixteenhome.ssj.canteen.ui.activity.OtherEvidenceActivity">
+</activity>
+<activity android:label="@7F060136" android:name="com.sixteenhome.ssj.user.ui.activity.UserConsumptionHistoryActivity">
+</activity>
+<activity android:label="@7F060111" android:name="com.sixteenhome.ssj.canteen.ui.activity.CanteenBillBatchDetailList">
+</activity>
+<activity android:label="@7F060114" android:name="com.sixteenhome.ssj.canteen.ui.activity.CanteenNoSettledBillsActivity">
+</activity>
+<activity android:label="@7F060118" android:name="com.sixteenhome.ssj.canteen.ui.activity.CanteenSettledBillsActivity">
+</activity>
+<activity android:configChanges="0x00000090" android:launchMode="2" android:name="com.umeng.socialize.view.ShareActivity" android:noHistory="true" android:theme="@7F090114" android:windowSoftInputMode="0x00000014">
+</activity>
+<activity android:launchMode="2" android:name="com.tencent.tauth.AuthActivity" android:noHistory="true">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="tencent100424468">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.tencent.connect.common.AssistActivity" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x000004A0" android:exported="true" android:name="com.sixteenhome.ssj.wxapi.WXEntryActivity" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<activity android:label="@7F060134" android:name="com.sixteenhome.ssj.user.ui.activity.UserAgreementActivity">
+</activity>
+<activity android:label="@7F060137" android:name="com.sixteenhome.ssj.user.ui.activity.UserRewardOrderList">
+</activity>
+<activity android:label="Œ⩠乎中�" android:launchMode="2" android:name="com.sixteenhome.ssj.user.ui.activity.DynamicPersonCenterActivity">
+</activity>
+<activity android:name="com.sixteenhome.ssj.user.ui.activity.ConcernedActivity">
+</activity>
+<activity android:launchMode="2" android:name="com.sixteenhome.ssj.user.ui.activity.MomentShareActivity" android:theme="@7F09011A">
+</activity>
+<activity android:launchMode="1" android:name="com.sixteenhome.ssj.user.ui.activity.ShareCommonActivity" android:theme="@7F09011A">
+</activity>
+<activity android:launchMode="2" android:name="com.sixteenhome.ssj.user.ui.activity.ReportActivity" android:theme="@7F09011A">
+</activity>
+<activity android:label="@7F06011C" android:launchMode="1" android:name="com.sixteenhome.ssj.user.ui.activity.DynamicDetailActivity">
+</activity>
+<activity android:launchMode="1" android:name="com.sixteenhome.ssj.user.ui.activity.ImagePagerActivity">
+</activity>
+<activity android:launchMode="1" android:name="com.sixteenhome.ssj.user.ui.activity.DynamicChangeCityLocationActivity">
+</activity>
+<receiver android:name="com.sixteenhome.ssj.common.utils.receiver.ApkInstallReceiver">
+<intent-filter>
+<action android:name="android.intent.action.DOWNLOAD_COMPLETE">
+</action>
+</intent-filter>
+</receiver>
+</application>
+</manifest>

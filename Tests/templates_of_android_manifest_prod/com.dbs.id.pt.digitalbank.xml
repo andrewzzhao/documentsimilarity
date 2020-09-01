@@ -1,0 +1,218 @@
+<?xml version="1.0" ?><manifest android:versionCode="226825" android:versionName="1.2.21" package="com.dbs.id.pt.digitalbank" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="16" android:targetSdkVersion="26">
+</uses-sdk>
+<permission android:name="com.dbs.id.pt.digitalbank.permission.MAPS_RECEIVE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="com.dbs.id.pt.digitalbank.permission.MAPS_RECEIVE">
+</uses-permission>
+<uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES">
+</uses-permission>
+<uses-feature android:glEsVersion="0x00020000" android:required="true">
+</uses-feature>
+<supports-screens android:anyDensity="true" android:largeScreens="true" android:normalScreens="true" android:smallScreens="true" android:xlargeScreens="true">
+</supports-screens>
+<uses-permission android:name="android.permission.READ_SMS">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-permission android:name="android.permission.RECORD_AUDIO">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_CONTACTS">
+</uses-permission>
+<uses-permission android:name="android.permission.NFC">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_SMS">
+</uses-permission>
+<uses-permission android:name="android.permission.USE_FINGERPRINT">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_CONTACTS">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<permission android:name="com.dbs.id.pt.digitalbank.permission.C2D_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="com.dbs.id.pt.digitalbank.permission.C2D_MESSAGE">
+</uses-permission>
+<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-feature android:name="android.hardware.camera">
+</uses-feature>
+<uses-feature android:name="android.hardware.camera.autofocus" android:required="false">
+</uses-feature>
+<uses-permission android:name="android.permission.PACKAGE_USAGE_STATS">
+</uses-permission>
+<application android:allowBackup="false" android:hardwareAccelerated="true" android:icon="@7F070105" android:label="@7F0E0042" android:name="com.konylabs.android.KonyApplication" android:theme="@7F0F017E">
+<activity android:configChanges="0x000004A4" android:label="@7F0E0042" android:launchMode="2" android:name="com.dbs.id.pt.digitalbank.DBID" android:screenOrientation="4" android:windowSoftInputMode="0x00000010">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="com.dbs.id.pt.digitalbank.GCM_MSG_VIEW">
+</action>
+<action android:name="com.dbs.id.pt.digitalbank.GCM_REGID_VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:scheme="dbid">
+</data>
+<data android:host="com.dbs.id.digitalbank">
+</data>
+<data android:port="8080">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.SEARCH">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+<meta-data android:name="android.app.searchable" android:resource="@7F110001">
+</meta-data>
+</activity>
+<receiver android:name="com.konylabs.gcm.KonyGCMBroadcastReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+<category android:name="com.dbs.id.pt.digitalbank">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.REGISTRATION">
+</action>
+<category android:name="com.dbs.id.pt.digitalbank">
+</category>
+</intent-filter>
+</receiver>
+<meta-data android:name="com.google.android.gms.version" android:value="@7F090005">
+</meta-data>
+<activity android:launchMode="3" android:name="com.kasisto.KaiMobileKony.KaiKonyActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<service android:name="com.vkey.android.internal.vguard.cache.ProcessHttpRequestIntentService">
+</service>
+<service android:name="com.vkey.android.vtap.net.VTapProcessHttpRequestIntentService">
+</service>
+<service android:name="com.vkey.android.vtap.error.VTapProcessErrorIntentService">
+</service>
+<receiver android:exported="true" android:name="com.appsflyer.MultipleInstallBroadcastReceiver">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name="com.dbs.id.smsreader.SmsReceiver">
+<intent-filter>
+<action android:name="android.provider.Telephony.SMS_RECEIVED">
+</action>
+</intent-filter>
+</receiver>
+<service android:exported="false" android:name="com.qavar.dbscreditscoringsdk.CollectionJobService">
+<intent-filter>
+<action android:name="com.firebase.jobdispatcher.ACTION_EXECUTE">
+</action>
+</intent-filter>
+</service>
+<service android:exported="false" android:name="com.qavar.dbscreditscoringsdk.UploadJobService">
+<intent-filter>
+<action android:name="com.firebase.jobdispatcher.ACTION_EXECUTE">
+</action>
+</intent-filter>
+</service>
+<activity android:name="com.vkey.android.support.permission.VGuardPermissionActivity" android:theme="@android:01030010">
+</activity>
+<meta-data android:name="android.app.default_searchable" android:value=".KonyMain">
+</meta-data>
+<provider android:authorities="com.dbs.id.pt.digitalbank.DBIDSuggestionProvider" android:name="com.dbs.id.pt.digitalbank.DBIDSearchSuggestionProvider">
+</provider>
+<meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="AIzaSyBK54BhYk6Cc5i-y1YczSzm2sNSBzJmMtk">
+</meta-data>
+<meta-data android:name="com.google.android.gms.version" android:value="@7F090005">
+</meta-data>
+<service android:enabled="true" android:exported="false" android:name="com.konylabs.api.service.KonyLocalService">
+</service>
+<meta-data android:name="android.support.VERSION" android:value="26.0.0">
+</meta-data>
+<service android:exported="false" android:name="com.dbs.dbsa.common.DbsaIntentService">
+<intent-filter>
+<action android:name="com.dbs.dbsa.START_SERVICE">
+</action>
+</intent-filter>
+</service>
+<service android:exported="false" android:name="com.dbs.dbsa.common.device.DbsaDeviceIntentService">
+<intent-filter>
+<action android:name="com.dbs.dbsa.REGISTER_DEVICE">
+</action>
+</intent-filter>
+</service>
+<service android:exported="false" android:name="com.dbs.dbsa.analytics.DbsaAnalyticsIntentService">
+<intent-filter>
+<action android:name="com.dbs.dbsa.INITIATE_ANALYTICS">
+</action>
+</intent-filter>
+</service>
+<activity android:label="@7F0E0042" android:name="com.dbs.mbanking.fingerprint.TestActivity">
+</activity>
+<activity android:exported="false" android:launchMode="2" android:name="net.openid.appauth.AuthorizationManagementActivity" android:theme="@android:01030010">
+</activity>
+<activity android:exported="true" android:name="net.openid.appauth.RedirectUriReceiverActivity">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:01030010">
+</activity>
+</application>
+</manifest>

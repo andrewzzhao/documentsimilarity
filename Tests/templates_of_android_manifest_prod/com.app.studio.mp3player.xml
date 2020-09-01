@@ -1,0 +1,127 @@
+<?xml version="1.0" ?><manifest android:versionCode="28" android:versionName="2.28.215" package="com.app.studio.mp3player" platformBuildVersionCode="28" platformBuildVersionName="2.28.215" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="16" android:targetSdkVersion="27">
+</uses-sdk>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.MEDIA_CONTENT_CONTROL">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_CONFIGURATION">
+</uses-permission>
+<compatible-screens>
+<screen android:screenDensity="120" android:screenSize="200">
+</screen>
+<screen android:screenDensity="160" android:screenSize="200">
+</screen>
+<screen android:screenDensity="240" android:screenSize="200">
+</screen>
+<screen android:screenDensity="320" android:screenSize="200">
+</screen>
+<screen android:screenDensity="480" android:screenSize="200">
+</screen>
+<screen android:screenDensity="640" android:screenSize="200">
+</screen>
+<screen android:screenDensity="120" android:screenSize="300">
+</screen>
+<screen android:screenDensity="160" android:screenSize="300">
+</screen>
+<screen android:screenDensity="240" android:screenSize="300">
+</screen>
+<screen android:screenDensity="320" android:screenSize="300">
+</screen>
+<screen android:screenDensity="480" android:screenSize="300">
+</screen>
+<screen android:screenDensity="640" android:screenSize="300">
+</screen>
+<screen android:screenDensity="420" android:screenSize="300">
+</screen>
+<screen android:screenDensity="480" android:screenSize="300">
+</screen>
+<screen android:screenDensity="560" android:screenSize="300">
+</screen>
+<screen android:screenDensity="640" android:screenSize="300">
+</screen>
+</compatible-screens>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<application android:allowBackup="true" android:hardwareAccelerated="true" android:icon="@7F0C0000" android:label="@7F0E0031" android:largeHeap="true" android:name="com.app.studio.mp3player.utils.MyApp" android:supportsRtl="true" android:theme="@7F0F000A">
+<activity android:label="@7F0E0031" android:launchMode="2" android:name="com.app.studio.mp3player.activity.MainActivity" android:screenOrientation="1" android:theme="@7F0F000A">
+</activity>
+<activity android:label="@7F0E0031" android:launchMode="2" android:name="com.app.studio.mp3player.activity.DonateFundsActivity" android:screenOrientation="1" android:theme="@7F0F000A">
+</activity>
+<activity android:label="@7F0E0031" android:launchMode="2" android:name="com.app.studio.mp3player.activity.RemoveAdsActivity" android:screenOrientation="1" android:theme="@7F0F000A">
+</activity>
+<activity android:label="@7F0E0031" android:launchMode="2" android:name="com.app.studio.mp3player.activity.NowPlayingActivity" android:screenOrientation="1" android:theme="@7F0F0012" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:label="@7F0E0031" android:launchMode="2" android:name="com.app.studio.mp3player.activity.PermissionSeekActivity" android:screenOrientation="1" android:theme="@7F0F01A7">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:label="@7F0E0031" android:launchMode="2" android:name="com.app.studio.mp3player.activity.OpenViaFileActivity" android:screenOrientation="1" android:theme="@7F0F01A7">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="file">
+</data>
+<data android:mimeType="audio/*">
+</data>
+ /&gt; 
+</intent-filter>
+</activity>
+<activity android:launchMode="2" android:name="com.app.studio.mp3player.activity.SecondaryLibraryActivity" android:screenOrientation="1" android:theme="@7F0F0013">
+</activity>
+<activity android:launchMode="2" android:name="com.app.studio.mp3player.activity.ActivityTagEditor" android:screenOrientation="1" android:theme="@7F0F000A">
+</activity>
+<activity android:launchMode="2" android:name="com.app.studio.mp3player.activity.SettingsActivity" android:screenOrientation="1" android:theme="@7F0F0011">
+</activity>
+<activity android:launchMode="2" android:name="com.app.studio.mp3player.activity.AboutUsActivity" android:screenOrientation="1" android:theme="@7F0F0124">
+</activity>
+<activity android:launchMode="2" android:name="com.app.studio.mp3player.activity.LicensesActivity" android:screenOrientation="1" android:theme="@7F0F0131">
+</activity>
+<service android:enabled="true" android:exported="true" android:name="com.app.studio.mp3player.service.PlayerService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<service android:name="com.app.studio.mp3player.service.BatchDownloaderService">
+</service>
+<receiver android:name="com.app.studio.mp3player.widget.WidgetReceiver">
+<intent-filter>
+<action android:name="android.appwidget.action.APPWIDGET_UPDATE">
+</action>
+</intent-filter>
+<meta-data android:name="android.appwidget.provider" android:resource="@7F110002">
+</meta-data>
+</receiver>
+<activity android:name="com.app.studio.mp3player.activity.EqualizerActivity">
+</activity>
+<activity android:name="com.banana.lib.RateDialogActivity" android:theme="@android:0103000B">
+</activity>
+<activity android:name="com.banana.lib.RateDialogActivity2" android:theme="@android:0103000B">
+</activity>
+<activity android:configChanges="0x00000FB0" android:exported="false" android:name="com.google.android.gms.ads.AdActivity" android:theme="@android:0103000F">
+</activity>
+<meta-data android:name="com.google.android.gms.version" android:value="@7F090007">
+</meta-data>
+<meta-data android:name="android.support.VERSION" android:value="26.1.0">
+</meta-data>
+</application>
+</manifest>

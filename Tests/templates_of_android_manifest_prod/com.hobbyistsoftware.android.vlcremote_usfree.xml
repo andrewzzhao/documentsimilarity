@@ -1,0 +1,124 @@
+<?xml version="1.0" ?><manifest android:versionCode="48085" android:versionName="5.24 (3085)" package="com.hobbyistsoftware.android.vlcremote_usfree" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="15" android:targetSdkVersion="26">
+</uses-sdk>
+<meta-data android:name="android.webkit.WebView.EnableSafeBrowsing" android:value="true">
+</meta-data>
+<meta-data android:name="android.security.net.config" android:resource="@7F100000">
+</meta-data>
+<uses-permission android:name="android.permission.MEDIA_CONTENT_CONTROL">
+</uses-permission>
+<uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT">
+</uses-permission>
+<uses-permission android:name="com.android.launcher.permission.UNINSTALL_SHORTCUT">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SETTINGS">
+</uses-permission>
+<supports-screens android:anyDensity="true" android:largeScreens="true" android:normalScreens="true" android:smallScreens="true" android:xlargeScreens="true">
+</supports-screens>
+<application android:allowBackup="true" android:hardwareAccelerated="true" android:icon="@7F0C0000" android:label="@7F0D0032" android:largeHeap="true" android:name="com.hobbyistsoftware.android.vlcremote_us.VLCRemoteApplication" android:roundIcon="@7F0C0003" android:theme="@android:01030006">
+<meta-data android:name="com.crashlytics.ApiKey" android:value="81f44ac89a2fa7993dcdad372cef3a5b6b12b5e6">
+</meta-data>
+<meta-data android:name="android.max_aspect" android:value="2.100000">
+</meta-data>
+<activity android:configChanges="0x000004A0" android:label="@7F0D0032" android:launchMode="1" android:name="com.hobbyistsoftware.android.vlcremote_us.Activities.ActivityMain">
+<intent-filter>
+<data android:scheme="vlcremote">
+</data>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F0D0032" android:name="com.hobbyistsoftware.android.vlcremote_us.Activities.ActivityRemote" android:windowSoftInputMode="0x00000001">
+</activity>
+<activity android:label="@7F0D0032" android:name="com.hobbyistsoftware.android.vlcremote_us.Activities.ActivityPairing">
+</activity>
+<activity android:label="@7F0D0032" android:name="com.hobbyistsoftware.android.vlcremote_us.Activities.ActivityNews">
+</activity>
+<activity android:label="@7F0D0032" android:name="com.hobbyistsoftware.android.vlcremote_us.Activities.ActivityNewsWeb">
+</activity>
+<activity android:label="@7F0D0032" android:name="com.hobbyistsoftware.android.vlcremote_us.Activities.ActivitySettings">
+</activity>
+<activity android:label="@7F0D0032" android:name="com.hobbyistsoftware.android.vlcremote_us.setup_instructions">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+</intent-filter>
+</activity>
+<activity android:label="@7F0D0032" android:name="com.hobbyistsoftware.android.vlcremote_us.setup_instructions1">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+</intent-filter>
+</activity>
+<activity android:label="@7F0D0032" android:name="com.hobbyistsoftware.android.vlcremote_us.EditSavedComputer">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+</intent-filter>
+</activity>
+<activity android:label="@7F0D0032" android:name="com.hobbyistsoftware.android.vlcremote_us.get_full_version">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+</intent-filter>
+</activity>
+<activity android:label="@7F0D0032" android:name="com.hobbyistsoftware.android.vlcremote_us.web_screen">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+</intent-filter>
+</activity>
+<activity android:label="@7F0D0032" android:name="com.hobbyistsoftware.android.vlcremote_us.SelectSkipDistanceList">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+</intent-filter>
+</activity>
+<receiver android:label="VLC Remote" android:name="com.hobbyistsoftware.android.vlcremote_us.NotificationProvider">
+<intent-filter>
+<action android:name="android.notification.action.NOTIF_UPDATE">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name="com.hobbyistsoftware.android.vlcremote_us.PhoneStateProvider">
+<intent-filter>
+<action android:name="android.intent.action.PHONE_STATE">
+</action>
+</intent-filter>
+</receiver>
+<meta-data android:name="android.support.VERSION" android:value="26.1.0">
+</meta-data>
+<provider android:authorities="com.hobbyistsoftware.android.vlcremote_usfree.crashlyticsinitprovider" android:exported="false" android:initOrder="100" android:name="com.crashlytics.android.CrashlyticsInitProvider">
+</provider>
+<meta-data android:name="android.arch.lifecycle.VERSION" android:value="27.0.0-SNAPSHOT">
+</meta-data>
+<meta-data android:name="com.android.vending.derived.apk.id" android:value="1">
+</meta-data>
+</application>
+</manifest>

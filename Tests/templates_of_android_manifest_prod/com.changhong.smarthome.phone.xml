@@ -1,0 +1,716 @@
+<?xml version="1.0" ?><manifest android:versionCode="118" android:versionName="3.6.3" package="com.changhong.smarthome.phone" platformBuildVersionCode="19" platformBuildVersionName="4.4.2-1456859" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="10" android:targetSdkVersion="19">
+</uses-sdk>
+<uses-feature android:name="android.hardware.bluetooth_le" android:required="true">
+</uses-feature>
+<uses-feature android:name="android.hardware.camera">
+</uses-feature>
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_CONTACTS">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-permission android:name="android.permission.BLUETOOTH">
+</uses-permission>
+<uses-permission android:name="android.permission.BLUETOOTH_ADMIN">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_LOGS">
+</uses-permission>
+<uses-permission android:name="android.permission.BROADCAST_STICKY">
+</uses-permission>
+<uses-permission android:name="android.permission.CALL_PHONE">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_SMS">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_SMS">
+</uses-permission>
+<uses-permission android:name="android.permission.SEND_SMS">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-permission android:name="android.permission.FLASHLIGHT">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_CONTACTS">
+</uses-permission>
+<uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_APN_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="android.permission.RESTART_PACKAGES">
+</uses-permission>
+<permission android:name="com.changhong.smarthome.phone.entrancewatchdog" android:protectionLevel="0x00000000">
+</permission>
+<application android:allowBackup="true" android:icon="@7F0200EA" android:label="@7F060074" android:name="com.qihoo.util.StubApp809282138" android:qihoo="activity" android:screenOrientation="1" android:theme="@7F09006B" android:windowSoftInputMode="0x00000002">
+<meta-data android:name="appid" android:value="20075">
+</meta-data>
+<meta-data android:name="appkey" android:value="a5443bd711200916e10bf5104163de2b">
+</meta-data>
+<meta-data android:name="com.baidu.lbsapi.API_KEY" android:value="3YbiSW09BgnTgrpXKIbp2tb8">
+</meta-data>
+<meta-data android:name="UMENG_APPKEY" android:value="561f164567e58e46ba0012c0">
+</meta-data>
+<meta-data android:name="UMENG_CHANNEL" android:value="360">
+</meta-data>
+<service android:enabled="true" android:name="com.baidu.location.f" android:process=":remote">
+</service>
+<receiver android:name="com.changhong.downloadtool.service.DownloadReceiver">
+<intent-filter android:priority="10">
+<action android:name="com.ch.downloadtool.progress">
+</action>
+<action android:name="com.ch.downloadtool.result">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name=".base.NotificationDeleteReceiver">
+<intent-filter>
+<action android:name="com.changhong.smarthome.phone.base.NotificationDeleteReceiver">
+</action>
+</intent-filter>
+</receiver>
+<service android:enabled="true" android:name="com.changhong.downloadtool.service.DownloadService">
+</service>
+<activity android:launchMode="1" android:name=".SplashActivity" android:screenOrientation="1" android:theme="@7F09006F">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<service android:enabled="false" android:exported="false" android:name="com.qihoo.util.QhJobService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<activity android:excludeFromRecents="true" android:exported="false" android:launchMode="2" android:name="com.qihoo.util.CommonActivity" android:taskAffinity="com.changhong.smarthome.phone.util" android:theme="@android:0103005F">
+</activity>
+<service android:enabled="true" android:exported="true" android:name="com.qihoo.util.CommonService">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.qihoo.util.CommonService2">
+</service>
+<receiver android:enabled="true" android:exported="false" android:name="com.qihoo.util.CommonReceiver">
+</receiver>
+<provider android:authorities="com.changhong.smarthome.phone.COMMONPROVIDER" android:exported="true" android:name="com.qihoo.util.CommonProvider">
+</provider>
+<activity android:configChanges="0x000000A0" android:exported="false" android:launchMode="2" android:name="com.qihoo.ls.LsActivity" android:screenOrientation="1" android:theme="@android:01030060">
+</activity>
+<service android:exported="false" android:name="com.qihoo.ls.SoService">
+</service>
+<activity android:launchMode="1" android:name=".GuideActivity" android:screenOrientation="1" android:theme="@7F09006F">
+</activity>
+<activity android:launchMode="2" android:name=".MainActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name=".ComingSoonActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name=".CommonWebViewActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name=".CommonWebViewNoTitleActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name=".CommonWebViewNoTitleActivity2" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name=".MainSelectCommunityActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name=".FunctionLotteryDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name=".WeatherInfoActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name=".EmptyActivity" android:screenOrientation="1">
+</activity>
+<activity android:name=".UpgradeActivity" android:screenOrientation="1" android:theme="@android:01030011">
+</activity>
+<activity android:launchMode="1" android:name=".community.NoticeDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name=".community.NoticeListActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="2" android:name=".mine.MyMessageActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name=".mine.MySettingActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name=".mine.MessageTipsSetActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name=".mine.MySettingBleConfig" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name=".mine.AboutUsActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name=".mine.UserInfoActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name=".mine.ModifyPasswordActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name=".mine.MobilePhoneExChangeActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="2" android:name=".mine.MyMessageInfoActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name=".UserLoginActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name=".FindPasswordActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name=".UserRegisterActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name=".mine.UserSexChoosedActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name=".mine.FeedBackSuggestionActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:launchMode="1" android:name=".mine.ShareCodeActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY">
+</action>
+</intent-filter>
+</activity>
+<activity android:launchMode="1" android:name=".mine.PostManagerActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name=".parking.ParkingLockMainActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name=".parking.ParkingLockManageActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name=".parking.ParkingLockRenameAcitivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name=".parking.ParkingLockShareManageActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name=".entrance.EntranceActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name=".entrance.EntranceHelpListActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name=".entrance.EntranceHelpDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name=".entrance.AuthListActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name=".entrance.ShareAuthActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name=".entrance.TempAuthActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:launchMode="1" android:name=".entrance.EntranceAuthCarActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name=".entrance.CarPauseStateListAvtivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name=".entrance.CarAuthStateCheckActivity" android:screenOrientation="1" android:theme="@7F090070">
+</activity>
+<activity android:launchMode="1" android:name=".entrance.CarAuthSecurityCheckListActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.qiker.smartdoor.view.OpendoorActivity" android:theme="@android:01030010">
+<intent-filter>
+<action android:name="ddb.intent.opendoor">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<receiver android:exported="false" android:name=".entrance.logic.EntranceGuardBroadcastReceiver">
+<intent-filter>
+<action android:name="com.qiker.bluetooth.ble.ACTION_SERVICE_BT_RUNNING_CALL_BACK">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name=".entrance.logic.EntranceGuardStartBroadcastReceiver">
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+<action android:name="android.intent.action.USER_PRESENT">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.TIME_SET">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.DATE_CHANGED">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.TIMEZONE_CHANGED">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_ADDED">
+</action>
+<action android:name="android.intent.action.PACKAGE_CHANGED">
+</action>
+<action android:name="android.intent.action.PACKAGE_REMOVED">
+</action>
+<action android:name="android.intent.action.PACKAGE_REPLACED">
+</action>
+<data android:scheme="package">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.MEDIA_BAD_REMOVAL">
+</action>
+<action android:name="android.intent.action.MEDIA_EJECT">
+</action>
+<action android:name="android.intent.action.MEDIA_MOUNTED">
+</action>
+<action android:name="android.intent.action.MEDIA_UNMOUNTED">
+</action>
+<action android:name="android.intent.action.MEDIA_REMOVED">
+</action>
+<action android:name="android.intent.action.MEDIA_SHARED">
+</action>
+<action android:name="android.intent.action.MEDIA_SCANNER_FINISHED">
+</action>
+<action android:name="android.intent.action.MEDIA_SCANNER_STARTED">
+</action>
+<data android:scheme="file">
+</data>
+</intent-filter>
+</receiver>
+<service android:enabled="true" android:exported="true" android:name=".entrance.logic.EntranceGuardWatchDogService" android:permission="com.changhong.smarthome.phone.entrancewatchdog" android:process=":entrance">
+<intent-filter>
+<action android:name="com.changhong.smarthome.phone.entrance.aidl.IEntranceGuardService">
+</action>
+</intent-filter>
+</service>
+<service android:enabled="true" android:exported="true" android:name=".entrance.logic.EntranceGuardDaemonService" android:permission="com.changhong.smarthome.phone.entrancedaemon" android:process=":daemon">
+</service>
+<receiver android:name="com.qiker.smartdoor.BLEBroadcastReceiver">
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+</intent-filter>
+</receiver>
+<service android:enabled="true" android:name="com.qiker.smartdoor.BluetoothLEService" android:process=":sdkremote">
+<intent-filter android:priority="1000">
+</intent-filter>
+</service>
+<activity android:launchMode="1" android:name=".repairs.RepairsActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name=".repairs.RepairsMyActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name=".repairs.RepairsDetailsActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name=".repairs.RepairsEvaluationActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name=".repairs.RepairsRecordsActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name=".repairs.RepairsHouseActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name=".repairs.RepairsPhoneActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name=".complaints.ComplaintsActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name=".complaints.ComplaintsMyActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name=".complaints.ComplaintsDetailsActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name=".complaints.ComplaintsEvaluationActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name=".complaints.ComplaintsRecordsActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name=".community.CommunityManagementActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name=".community.CommunitySelectActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name=".community.CitySelectActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name=".community.CommunitySwipeActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name=".community.MyCommunitySelectActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name=".member.MembersManageActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name=".member.MemberInformationActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name=".member.NewMembersMessageActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name=".member.NewFamilyMessageActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name=".member.NewFamilyJoinInfoActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name=".member.ApplyAgentOwnerActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name=".member.ApplyAgentOwnerVerificationActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name=".member.OwnerAddMemberActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name=".member.OwnerAddMemberCHooseRoleActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name=".member.OwnerAddMemberChooseFamilyActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name=".member.MessageMemberInfoActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.mobo.plus.activity.MBPSplash" android:screenOrientation="1" android:theme="@7F090033">
+</activity>
+<activity android:name="com.mobo.plus.activity.MBPPayResultActivity" android:screenOrientation="1" android:theme="@7F090033">
+</activity>
+<activity android:name="com.mobo.plus.activity.MBPOneKeyPayActivity" android:screenOrientation="1" android:theme="@7F090033" android:windowSoftInputMode="0x00000003">
+<intent-filter>
+<action android:name="mbp.plus.action.ONEKEYPAY">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:launchMode="1" android:name=".convenience.PoiCategoryActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name=".convenience.PoiSearchActivity" android:screenOrientation="1" android:theme="@7F09006E">
+</activity>
+<activity android:launchMode="1" android:name=".convenience.PoiNearInformationListActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name=".convenience.PoiNearInformationDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name=".convenience.PoiRoutePlanActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name=".convenience.PoiPointSelectActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name=".member.ChoseBuildingUnitActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name=".member.ChoseFloorHouseActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name=".member.PolicyActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name=".member.SubmitUnrecordUserInfoActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:launchMode="1" android:name=".member.SubmitUserInfoActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:launchMode="1" android:name=".member.CharactorExistActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name="com.google.zxing.client.android.camera.CaptureActivity" android:screenOrientation="1" android:theme="@7F09006F">
+</activity>
+<activity android:launchMode="1" android:name=".widgets.SelectPicturePopupWindow" android:screenOrientation="1" android:theme="@7F090070">
+</activity>
+<activity android:launchMode="1" android:name=".ec.HotSaleListActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name=".ec.WareInfoActivity" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:launchMode="1" android:name=".ec.WareShoppingCartActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name=".ec.ConfirmationOfOrderActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name=".ec.AddNewAddressActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name=".ec.AddressManageActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name=".ec.WareCollectActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name=".ec.CouponListActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name=".ec.MyOrderActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name=".ec.MyOrderDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name="com.changhong.smarthome.phone.payment.PayActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name=".ec.PaySuccessActivity" android:screenOrientation="1">
+</activity>
+<activity android:name=".ec.AdministrativeRegionActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name=".ec.CitySelectActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name=".ec.CouponReceiveActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name=".ec.OrderPreviewActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name=".ec.GroupPurchaseWareInfoActivity" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:launchMode="1" android:name=".ec.EvaluateActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:launchMode="1" android:name=".ec.WareClassificationListActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name=".ec.ChooseSendModeActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name=".ec.WareOfExclusiveActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name=".ec.WareOfShopExclusiveActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name=".ec.AddressEditActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name=".ec.PanicListActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name=".ec.GuessLikeListActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name=".sns.SnsActMainActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name=".sns.SnsActUserListActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name=".sns.SnsActDetailActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+<intent-filter>
+<action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY">
+</action>
+</intent-filter>
+</activity>
+<activity android:launchMode="1" android:name=".sns.SnsMyActActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name=".sns.SnsPostActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:launchMode="1" android:name=".sns.SnsPostGoodsActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:launchMode="1" android:name=".sns.SnsPostsDetailActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+<intent-filter>
+<action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY">
+</action>
+</intent-filter>
+</activity>
+<activity android:launchMode="1" android:name=".sns.SnsVoteCommentActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:launchMode="1" android:name=".sns.SnsCommunityCircleActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name=".sns.SnsActJoinActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name=".sns.SnsSelfSupportActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name=".sns.SnsSelfDetailActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+<intent-filter>
+<action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY">
+</action>
+</intent-filter>
+</activity>
+<activity android:launchMode="1" android:name=".sns.SnsPostsSelectTagActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name=".sns.SnsSecondHandAndSoOnActivity" android:screenOrientation="1">
+</activity>
+<activity android:name=".sns.SnsUserHomepageActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:exported="true" android:name=".wxapi.WXEntryActivity" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<activity android:launchMode="1" android:name=".sns.SnsMultiSelectImageActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000090" android:launchMode="2" android:name="com.umeng.socialize.view.ShareActivity" android:noHistory="true" android:theme="@7F090023" android:windowSoftInputMode="0x00000014">
+</activity>
+<activity android:name=".scoremall.SmMainActivity" android:screenOrientation="1">
+</activity>
+<activity android:name=".scoremall.SmWareInfoActivity" android:screenOrientation="1">
+</activity>
+<activity android:name=".scoremall.SmScoreDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:name=".scoremall.SmRewardHistoryActivity" android:screenOrientation="1">
+</activity>
+<activity android:name=".scoremall.SmUpdateAddressActivity" android:screenOrientation="1">
+</activity>
+<activity android:name=".scoremall.SmConfirmationOfOrderActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name=".FoundDetailActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+<intent-filter>
+<action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY">
+</action>
+</intent-filter>
+</activity>
+<activity android:launchMode="1" android:name=".SignActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name="com.changhong.smarthome.phone.carlife.CarServiceActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name="com.changhong.smarthome.phone.carlife.CarAddOilMainActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name="com.changhong.smarthome.phone.carlife.HandleOilCardActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name="com.changhong.smarthome.phone.carlife.HandleOilCardDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name="com.changhong.smarthome.phone.carlife.OilCardProgressActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name=".housekeeping.HouseKeepingActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+<intent-filter>
+<action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY">
+</action>
+</intent-filter>
+</activity>
+<activity android:launchMode="1" android:name="com.changhong.smarthome.phone.AroundTravelActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+<intent-filter>
+<action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY">
+</action>
+</intent-filter>
+</activity>
+<activity android:launchMode="1" android:name="com.changhong.smarthome.phone.carlife.CarInsuranceActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+<intent-filter>
+<action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY">
+</action>
+</intent-filter>
+</activity>
+<activity android:launchMode="1" android:name="com.changhong.smarthome.phone.ShowAllFunctionMenuActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name="com.changhong.smarthome.phone.CommunityHousekeeperActivity" android:screenOrientation="1" android:theme="@7F090070">
+</activity>
+<activity android:launchMode="1" android:name="com.changhong.smarthome.phone.SmartHardwareActivity" android:screenOrientation="1" android:theme="@7F090070">
+</activity>
+<activity android:launchMode="1" android:name="com.changhong.smarthome.phone.carlife.CarServiceDeatilActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+<intent-filter>
+<action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY">
+</action>
+</intent-filter>
+</activity>
+<activity android:launchMode="1" android:name="com.changhong.smarthome.phone.utils.TipBoardActivity" android:screenOrientation="1" android:theme="@7F090070">
+</activity>
+<activity android:launchMode="1" android:name="com.changhong.smarthome.phone.carlife.CarOilCardRechargeActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name="com.changhong.smarthome.phone.carlife.CarOilCardRechargeDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name="com.changhong.smarthome.phone.carlife.CarOilRechargeSuccessActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name="com.changhong.smarthome.phone.carlife.CarBindOilCardActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name="com.changhong.smarthome.phone.carlife.CarAddOilCardActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name="com.changhong.smarthome.phone.carlife.CarRechargeRecordActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name="com.changhong.smarthome.phone.carlife.RechargeDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name="com.changhong.smarthome.phone.carlife.CarOilRechargeConfirmationOfOrderActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name="com.changhong.smarthome.phone.carlife.CarLifeDialogActivity" android:screenOrientation="1" android:theme="@7F090070">
+</activity>
+<activity android:launchMode="1" android:name="com.changhong.smarthome.phone.SignSucessDialogActivity" android:screenOrientation="1" android:theme="@7F090070">
+</activity>
+<activity android:launchMode="1" android:name="com.changhong.smarthome.phone.sns.SnsMainBannerDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name="com.changhong.smarthome.phone.housekeeping.ExpressDeliveryActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name="com.changhong.smarthome.phone.entrance.SmsSharePasswordActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name="com.changhong.smarthome.phone.entrance.SharePasswordActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+<intent-filter>
+<action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY">
+</action>
+</intent-filter>
+</activity>
+<activity android:launchMode="1" android:name="com.changhong.smarthome.phone.entrance.ShareListActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name="com.changhong.smarthome.phone.entrance.OwnerPasswordListActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name="com.changhong.smarthome.phone.entrance.OwnerSetPasswordActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name="com.changhong.smarthome.phone.entrance.ActivateDeviceActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name="com.changhong.smarthome.phone.entrance.EntranceDeviceUpdateNameActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name="com.changhong.smarthome.phone.sns.SnsSelectTagActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name="com.changhong.smarthome.phone.PopupMessageActivity" android:screenOrientation="1" android:theme="@7F090070">
+</activity>
+<activity android:launchMode="1" android:name=".sns.SnsNormalPostActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name=".housekeeping.HouseKeepingMainActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name=".entrance.AddPasswordActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name=".entrance.ShareSelectActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name="com.changhong.smarthome.phone.CityServerActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name="com.changhong.smarthome.phone.IllegalQueryActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name="com.changhong.smarthome.phone.FoundListActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name="com.changhong.smarthome.phone.FoundThirdUrlActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+<intent-filter>
+<action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY">
+</action>
+</intent-filter>
+</activity>
+<activity android:launchMode="1" android:name="com.changhong.smarthome.phone.property.PaymentOrderDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name="com.changhong.smarthome.phone.property.PaymentBillDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name="com.changhong.smarthome.phone.property.PaymentBillActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name="com.changhong.smarthome.phone.property.PaymentOrderActivity" android:screenOrientation="1">
+</activity>
+<activity android:exported="true" android:launchMode="1" android:name="com.changhong.smarthome.phone.wxapi.WXPayEntryActivity" android:theme="@7F090070">
+</activity>
+<activity android:launchMode="1" android:name="com.changhong.smarthome.phone.property.MainBillActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name="com.changhong.smarthome.phone.property.ChooseHousePropertyActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name="com.changhong.smarthome.phone.property.ConfirmBillActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name="com.changhong.smarthome.phone.property.ChooseHouseListActivity" android:screenOrientation="1" android:theme="@7F090070">
+</activity>
+<activity android:launchMode="1" android:name="com.changhong.smarthome.phone.property.PrestroeActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name="com.changhong.smarthome.phone.property.PrestroeDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name="com.changhong.smarthome.phone.payment.UnionpayWebViewActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name="com.changhong.smarthome.phone.sns.SnsTopicDetailActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY">
+</action>
+</intent-filter>
+</activity>
+<activity android:launchMode="1" android:name="com.changhong.smarthome.phone.sns.SnsTopicPublishActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name="com.changhong.smarthome.phone.utils.SnsPostsSelectActivity" android:screenOrientation="1" android:theme="@7F090070">
+</activity>
+<activity android:launchMode="1" android:name="com.changhong.smarthome.phone.sns.SnsPublishHelpActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name="com.changhong.smarthome.phone.property.PaymentResultActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name="com.changhong.smarthome.phone.sns.SnsComHelpListActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name="com.changhong.smarthome.phone.coupon.CouponCenterActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name="com.changhong.smarthome.phone.coupon.MyCouponActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name="com.changhong.smarthome.phone.coupon.CouponEntranceActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.bestpay.app.H5PayActivity" android:theme="@android:01030006" android:windowSoftInputMode="0x00000032">
+</activity>
+<service android:exported="false" android:label="Nordic DFU" android:name="com.bst.bsbandlib.sdk.BSDfuService">
+<intent-filter>
+<action android:name="no.nordicsemi.android.action.DFU_UPLOAD">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</service>
+<activity android:launchMode="1" android:name=".bracelet.BraceletBindProgressBarActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name=".bracelet.BraceletChooseSexActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name=".bracelet.BraceletChooseBirthdayActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name=".bracelet.BraceletChooseHeightAndWeightActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name=".bracelet.BraceletSettingActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name=".bracelet.BraceletSetAlarmClockActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name=".bracelet.ChooseClockTimeActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name=".bracelet.BraceletBindActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name=".bracelet.BraceletBindSuccessActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name=".bracelet.BraceletFoundActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name=".bracelet.BraceletSearchActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name=".bracelet.BraceletListsActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name=".bracelet.BraceletNotFoundActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name=".bracelet.BraceletChooseAlarmClockActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name=".bracelet.HealthDataActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name=".bracelet.BraceletToBeContinueActivity" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+</application>
+</manifest>

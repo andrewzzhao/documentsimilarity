@@ -1,0 +1,242 @@
+<?xml version="1.0" ?><manifest android:installLocation="0" android:versionCode="4010108" android:versionName="1.1.8_ww" package="com.ushareit.playit" platformBuildVersionCode="23" platformBuildVersionName="6.0-2438415" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="9" android:targetSdkVersion="26">
+</uses-sdk>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.BLUETOOTH">
+</uses-permission>
+<uses-permission android:name="android.permission.BLUETOOTH_ADMIN">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_LOGS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW">
+</uses-permission>
+<uses-feature android:name="android.hardware.bluetooth" android:required="false">
+</uses-feature>
+<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE">
+</uses-permission>
+<permission android:name="com.ushareit.playit.permission.C2D_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="com.ushareit.playit.permission.C2D_MESSAGE">
+</uses-permission>
+<application android:allowBackup="true" android:icon="@7F0200BA" android:label="@7F060028" android:name="com.ushareit.playit.MainApplication">
+<activity android:configChanges="0x000000A0" android:launchMode="1" android:name="com.ushareit.playit.main.MainActivity" android:screenOrientation="1" android:theme="@7F08000B">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x00000DA0" android:launchMode="1" android:name="com.ushareit.playit.play.PlayActivity" android:theme="@7F08001C">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:mimeType="video/*">
+</data>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000A0" android:launchMode="1" android:name="com.ushareit.playit.content.activity.FavoriteActivity" android:screenOrientation="1" android:theme="@7F08000B">
+</activity>
+<activity android:configChanges="0x000000A0" android:launchMode="1" android:name="com.ushareit.playit.content.activity.HistoryActivity" android:screenOrientation="1" android:theme="@7F08000B">
+</activity>
+<activity android:configChanges="0x000000A0" android:launchMode="1" android:name="com.ushareit.playit.content.activity.SearchActivity" android:screenOrientation="1" android:theme="@7F08000B">
+</activity>
+<activity android:configChanges="0x000000A0" android:launchMode="1" android:name="com.ushareit.playit.invite.InviteActivity" android:screenOrientation="1" android:theme="@7F08000B">
+</activity>
+<activity android:configChanges="0x000000A0" android:launchMode="1" android:name="com.ushareit.playit.settings.regular.RegularSetActivity" android:screenOrientation="1" android:theme="@7F08000B">
+</activity>
+<activity android:configChanges="0x000000A0" android:launchMode="1" android:name="com.ushareit.playit.settings.playset.PlaysetActivity" android:screenOrientation="1" android:theme="@7F08000B">
+</activity>
+<activity android:configChanges="0x000000A0" android:launchMode="1" android:name="com.ushareit.playit.settings.subtitle.SubsetActivitity" android:screenOrientation="1" android:theme="@7F08000B">
+</activity>
+<activity android:configChanges="0x000000A0" android:launchMode="1" android:name="com.ushareit.playit.about.AboutActivity" android:screenOrientation="1" android:theme="@7F08000B">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.ushareit.browser.BrowserActivity" android:screenOrientation="1" android:theme="@7F08000B">
+<intent-filter>
+<action android:name="com.ushareit.action.BROWSER">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.ushareit.browser.WebClientActivity" android:screenOrientation="1" android:theme="@7F08000B">
+<intent-filter>
+<action android:name="com.ushareit.action.WEB_CLIENT">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004A0" android:excludeFromRecents="true" android:launchMode="1" android:name="com.ushareit.browser.WebMarketActivity" android:theme="@android:01030010">
+<intent-filter>
+<action android:name="com.ushareit.action.WEB_MARKET">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000A0" android:launchMode="1" android:name="com.ushareit.playit.test.TestActivity" android:screenOrientation="1" android:theme="@7F08000B">
+</activity>
+<service android:enabled="true" android:label="@7F060028" android:name="com.ushareit.playit.play.window.FloatingWindowService">
+<intent-filter>
+<action android:name="com.ushareit.playit.play.MYGETPUSH_ORDER_ACTION">
+</action>
+</intent-filter>
+</service>
+<receiver android:name="com.ushareit.playit.service.MediaActionReceiver">
+<intent-filter>
+<action android:name="android.intent.action.MEDIA_BUTTON">
+</action>
+<action android:name="splay.action.media.NEW_VIDEO">
+</action>
+</intent-filter>
+</receiver>
+<service android:name="com.ushareit.playit.service.PermanentService" android:permission="android.permission.BIND_JOB_SERVICE">
+<intent-filter>
+<action android:name="com.ushareit.cleanit.action.SCREEN_PRESENT">
+</action>
+</intent-filter>
+</service>
+<receiver android:name="com.ushareit.playit.service.CommonReceiver">
+<intent-filter>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.SCREEN_ON">
+</action>
+<action android:name="android.intent.action.USER_PRESENT">
+</action>
+</intent-filter>
+</receiver>
+<service android:name="com.ushareit.playit.service.CommonService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<receiver android:name="com.ushareit.analytics.UtmSourceBroadcastReceiver">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+<service android:name="com.ushareit.cmd.CmdService">
+<intent-filter>
+<action android:name="com.ushareit.cmd.action.COMMAND_ALARM">
+</action>
+<action android:name="com.ushareit.cmd.action.COMMAND_SYSTEM_EVENT">
+</action>
+<action android:name="com.ushareit.cmd.action.COMMAND_WRAPPER_EVENT">
+</action>
+<action android:name="com.ushareit.cmd.action.COMMAND_OPERATE_APP">
+</action>
+</intent-filter>
+</service>
+<activity android:configChanges="0x000000A0" android:name="com.ushareit.cmd.CmdMsgBox" android:theme="@android:01030010">
+<intent-filter>
+<action android:name="com.ushareit.cmd.action.COMMAND_SHOW_MSGBOX">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<meta-data android:name="UMENG_APPKEY" android:value="589d33b482b6354a2000248c">
+</meta-data>
+<meta-data android:name="UMENG_CHANNEL" android:value="GOOGLEPLAY">
+</meta-data>
+<meta-data android:name="BEYLA_APPTOKEN" android:value="PLAYIT_A">
+</meta-data>
+<meta-data android:name="BEYLA_CHANNEL" android:value="GOOGLEPLAY">
+</meta-data>
+<meta-data android:name="CLOUD_APPID" android:value="com.ushareit.playit">
+</meta-data>
+<activity android:configChanges="0x000005B0" android:label="@7F060028" android:name="com.facebook.FacebookActivity" android:theme="@android:01030010">
+</activity>
+<service android:name="com.ushareit.playit.service.FirebaseMessageService">
+<intent-filter>
+<action android:name="com.google.firebase.MESSAGING_EVENT">
+</action>
+</intent-filter>
+</service>
+<service android:name="com.ushareit.playit.service.FirebaseIDService">
+<intent-filter>
+<action android:name="com.google.firebase.INSTANCE_ID_EVENT">
+</action>
+</intent-filter>
+</service>
+<provider android:authorities="com.ushareit.playit.fileProvider" android:exported="false" android:grantUriPermissions="true" android:name="android.support.v4.content.FileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F050000">
+</meta-data>
+</provider>
+<activity android:exported="true" android:name="com.google.android.gms.appinvite.PreviewActivity" android:theme="@7F080036">
+<intent-filter>
+<action android:name="com.google.android.gms.appinvite.ACTION_PREVIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:01030010">
+</activity>
+<receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementReceiver">
+</receiver>
+<receiver android:enabled="true" android:name="com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver" android:permission="android.permission.INSTALL_PACKAGES">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementService">
+</service>
+<service android:exported="true" android:name="com.google.firebase.messaging.FirebaseMessagingService">
+<intent-filter android:priority="-500">
+<action android:name="com.google.firebase.MESSAGING_EVENT">
+</action>
+</intent-filter>
+</service>
+<receiver android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+<category android:name="com.ushareit.playit">
+</category>
+</intent-filter>
+</receiver>
+<receiver android:exported="false" android:name="com.google.firebase.iid.FirebaseInstanceIdInternalReceiver">
+</receiver>
+<service android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdService">
+<intent-filter android:priority="-500">
+<action android:name="com.google.firebase.INSTANCE_ID_EVENT">
+</action>
+</intent-filter>
+</service>
+<provider android:authorities="com.ushareit.playit.firebaseinitprovider" android:exported="false" android:initOrder="100" android:name="com.google.firebase.provider.FirebaseInitProvider">
+</provider>
+<meta-data android:name="com.google.android.gms.version" android:value="@7F0C0001">
+</meta-data>
+<meta-data android:name="android.support.VERSION" android:value="26.1.0">
+</meta-data>
+<meta-data android:name="android.arch.lifecycle.VERSION" android:value="27.0.0-SNAPSHOT">
+</meta-data>
+</application>
+</manifest>

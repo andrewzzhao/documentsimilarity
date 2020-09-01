@@ -1,0 +1,174 @@
+<?xml version="1.0" ?><manifest android:versionCode="21" android:versionName="1.2.1" package="com.yinghai.loop" platformBuildVersionCode="25" platformBuildVersionName="7.1.1" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="15" android:targetSdkVersion="25">
+</uses-sdk>
+<uses-permission android:name="android.permission.RECEIVE_SMS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_SMS">
+</uses-permission>
+<uses-permission android:name="android.permission.CALL_PHONE">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_LOCATION">
+</uses-permission>
+<uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_LOGS">
+</uses-permission>
+<uses-permission android:name="android.permission.RECORD_AUDIO">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-permission android:name="android.permission.BLUETOOTH">
+</uses-permission>
+<uses-permission android:name="android.permission.BLUETOOTH_ADMIN">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW">
+</uses-permission>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<permission android:name="com.yinghai.loop.permission.MIPUSH_RECEIVE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="com.yinghai.loop.permission.MIPUSH_RECEIVE">
+</uses-permission>
+<meta-data android:name="android.support.VERSION" android:value="25.3.1">
+</meta-data>
+<application android:allowBackup="true" android:icon="@7F030009" android:label="@7F080052" android:name="com.tencent.StubShell.TxAppEntry" android:screenOrientation="1" android:supportsRtl="true" android:theme="@7F0A0043">
+<meta-data android:name="TxAppEntry" android:value="com.yinghai.loop.SampleApplication">
+</meta-data>
+<activity android:name="com.yinghai.loop.module.login.LoginActivity">
+</activity>
+<activity android:label="" android:launchMode="1" android:name="com.yinghai.loop.module.order_ing.maps.MapsActivity" android:screenOrientation="1" android:theme="@7F0A008C">
+</activity>
+<activity android:exported="true" android:label="" android:launchMode="2" android:name="com.yinghai.loop.module.home.MainActivity" android:screenOrientation="1" android:theme="@7F0A0043">
+</activity>
+<activity android:name="com.yinghai.loop.module.order_ing.maps.RouteNaviActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="" android:name="com.yinghai.loop.module.assign.AssignActivity" android:screenOrientation="1" android:theme="@7F0A008C">
+</activity>
+<activity android:name="com.yinghai.loop.module.rating.RatingActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F080052" android:name="com.yinghai.loop.module.splash.SplashActivity" android:screenOrientation="1" android:theme="@7F0A0092" android:windowSoftInputMode="0x00000020">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="true" android:launchMode="1" android:name="com.yinghai.loop.wxapi.WXEntryActivity">
+</activity>
+<service android:name="com.amap.api.location.APSService">
+</service>
+<service android:exported="true" android:name="com.yinghai.loop.service.LocationUpdateService">
+</service>
+<activity android:name="com.yinghai.loop.module.ads.AdsActivity" android:screenOrientation="1">
+</activity>
+<service android:exported="false" android:name="com.tencent.qalsdk.service.QalService" android:process=":QALSERVICE">
+</service>
+<service android:exported="false" android:name="com.tencent.qalsdk.service.QalAssistService" android:process=":QALSERVICE">
+</service>
+<receiver android:exported="false" android:name="com.tencent.qalsdk.QALBroadcastReceiver">
+<intent-filter>
+<action android:name="com.tencent.qalsdk.broadcast.qal">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name="com.tencent.qalsdk.core.NetConnInfoCenter" android:process=":QALSERVICE">
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.TIME_SET">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.TIMEZONE_CHANGED">
+</action>
+</intent-filter>
+</receiver>
+<service android:enabled="true" android:exported="true" android:name="com.yinghai.loop.service.TencentIMService">
+</service>
+<meta-data android:name="com.amap.api.v2.apikey" android:value="f01424351dc77113472d65f27a25a556">
+</meta-data>
+<meta-data android:name="BUGLY_APPID" android:value="fa0dd41d8a">
+</meta-data>
+<meta-data android:name="BUGLY_APP_VERSION" android:value="21">
+</meta-data>
+<meta-data android:name="BUGLY_ENABLE_DEBUG" android:value="false">
+</meta-data>
+<meta-data android:name="channel" android:value="1">
+</meta-data>
+<meta-data android:name="com.bumptech.glide.integration.okhttp3.OkHttpGlideModule" android:value="GlideModule">
+</meta-data>
+<service android:enabled="true" android:name="com.xiaomi.push.service.XMPushService" android:process=":pushservice">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.xiaomi.push.service.XMJobService" android:permission="android.permission.BIND_JOB_SERVICE" android:process=":pushservice">
+</service>
+<service android:enabled="true" android:exported="true" android:name="com.xiaomi.mipush.sdk.PushMessageHandler">
+</service>
+<service android:enabled="true" android:name="com.xiaomi.mipush.sdk.MessageHandleService">
+</service>
+<receiver android:exported="true" android:name="com.xiaomi.push.service.receivers.NetworkStatusReceiver">
+<intent-filter>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</receiver>
+<receiver android:exported="false" android:name="com.xiaomi.push.service.receivers.PingReceiver" android:process=":pushservice">
+<intent-filter>
+<action android:name="com.xiaomi.push.PING_TIMER">
+</action>
+</intent-filter>
+</receiver>
+<activity android:configChanges="0x000004A4" android:name="com.tencent.bugly.beta.ui.BetaActivity" android:theme="@android:0103000F">
+</activity>
+<provider android:authorities="com.yinghai.loop.fileProvider" android:exported="false" android:grantUriPermissions="true" android:name="com.tencent.bugly.beta.utils.BuglyFileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F070000">
+</meta-data>
+</provider>
+<service android:exported="false" android:name="com.tencent.bugly.beta.tinker.TinkerResultService">
+</service>
+<service android:exported="false" android:name="com.tencent.tinker.lib.service.TinkerPatchService" android:process=":patch">
+</service>
+<service android:exported="false" android:name="com.tencent.tinker.lib.service.TinkerPatchService$InnerService" android:process=":patch">
+</service>
+<service android:exported="false" android:name="com.tencent.tinker.lib.service.DefaultTinkerResultService">
+</service>
+<meta-data android:name="TINKER_ID" android:value="null">
+</meta-data>
+</application>
+</manifest>

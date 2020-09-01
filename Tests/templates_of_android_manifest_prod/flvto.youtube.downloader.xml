@@ -1,0 +1,114 @@
+<?xml version="1.0" ?><manifest android:versionCode="11" android:versionName="3.1.1.0" package="flvto.youtube.downloader" platformBuildVersionCode="25" platformBuildVersionName="7.1.1" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="16" android:targetSdkVersion="22">
+</uses-sdk>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW">
+</uses-permission>
+<meta-data android:name="android.support.VERSION" android:value="25.3.1">
+</meta-data>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<application android:allowBackup="true" android:hardwareAccelerated="true" android:icon="@7F030000" android:label="@7F080089" android:name="app.player.musictube.MusicTubeApplication" android:supportsRtl="true" android:theme="@7F0A00AA">
+<service android:enabled="true" android:name="app.player.musictube.utils.LoadService">
+<intent-filter>
+<action android:name="app.player.musictube.utils.LoadService">
+</action>
+</intent-filter>
+</service>
+<provider android:authorities="flvto.youtube.downloader.provider" android:exported="false" android:grantUriPermissions="true" android:name="android.support.v4.content.FileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F070000">
+</meta-data>
+</provider>
+<service android:enabled="true" android:name="app.player.musictube.utils.ForegroundMediaService.ForegroundMediaService" android:stopWithTask="false">
+<intent-filter>
+<action android:name="app.player.musictube.utils.YoutubePlayerService">
+</action>
+</intent-filter>
+</service>
+<activity android:name="app.player.musictube.view.SplashScreenActivity" android:screenOrientation="1" android:theme="@7F0A00E3">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.SEND">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:mimeType="text/plain">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="musictube" android:scheme="player">
+</data>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x00000FB0" android:launchMode="3" android:name="app.player.musictube.view.MainActivity" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:configChanges="0x00000FB0" android:excludeFromRecents="true" android:name="app.player.musictube.view.DecorActivity" android:noHistory="true" android:taskAffinity="hotger.decorActivity" android:theme="@7F0A012D">
+</activity>
+<meta-data android:name="io.fabric.ApiKey" android:value="21abe07232510b99088aff893de2691af8d98344">
+</meta-data>
+<activity android:configChanges="0x000004A0" android:hardwareAccelerated="true" android:name="com.adcolony.sdk.AdColonyInterstitialActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:hardwareAccelerated="true" android:name="com.adcolony.sdk.AdColonyAdViewActivity">
+</activity>
+<meta-data android:name="applovin.sdk.key" android:value="hf1SpF6CU4VvDm9kM91ItLuxMVwRIIU-zWQmnWzFbS9qDIXaRZtIvmEFG9gTS9WPgx9RS6g3Zqto6PMXzErt-3">
+</meta-data>
+<activity android:name="com.applovin.adview.AppLovinInterstitialActivity">
+</activity>
+<activity android:name="com.applovin.adview.AppLovinConfirmationActivity">
+</activity>
+<activity android:name="com.medeuz.mediation.mediation.bannerads.ExpandedBannerActivity">
+</activity>
+<activity android:name="com.startapp.android.publish.ads.list3d.List3DActivity" android:theme="@android:01030005">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.startapp.android.publish.adsCommon.activities.OverlayActivity" android:theme="@android:0103000F">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.startapp.android.publish.adsCommon.activities.FullScreenActivity" android:theme="@android:01030005">
+</activity>
+<service android:name="com.startapp.android.publish.common.metaData.PeriodicMetaDataService">
+</service>
+<service android:name="com.startapp.android.publish.common.metaData.InfoEventService">
+</service>
+<receiver android:name="com.startapp.android.publish.common.metaData.BootCompleteListener">
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:enabled="true" android:exported="true" android:name="app.player.musictube.utils.SharedAppBroadcast">
+<intent-filter>
+<action android:name="android.intent.extra.CHOSEN_COMPONENT">
+</action>
+</intent-filter>
+</receiver>
+<meta-data android:name="string" android:value="string">
+</meta-data>
+<activity android:configChanges="0x000000A0" android:name="com.mobfox.sdk.interstitialads.InterstitialActivity">
+</activity>
+<activity android:configChanges="0x00000FB0" android:name="com.google.android.gms.ads.AdActivity" android:theme="@android:0103000F">
+</activity>
+<activity android:name="com.google.android.gms.ads.purchase.InAppPurchaseActivity" android:theme="@7F0A0134">
+</activity>
+<activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:01030010">
+</activity>
+<meta-data android:name="com.google.android.gms.version" android:value="@7F0C0006">
+</meta-data>
+</application>
+</manifest>

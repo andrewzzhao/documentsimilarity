@@ -1,0 +1,84 @@
+<?xml version="1.0" ?><manifest android:versionCode="1" android:versionName="1.0.0" package="com.zhongmin.union" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="14" android:targetSdkVersion="27">
+</uses-sdk>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-permission android:name="android.permission.CALL_PHONE">
+</uses-permission>
+<application android:allowBackup="true" android:icon="@7F0B0024" android:label="@7F0C001E" android:name="com.zhongmin.union.UnionApplication" android:roundIcon="@7F0B0024" android:supportsRtl="true" android:theme="@7F0D0007">
+<provider android:authorities="com.zhongmin.union.fileProvider" android:exported="false" android:grantUriPermissions="true" android:name="android.support.v4.content.FileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F0F0000">
+</meta-data>
+</provider>
+<activity android:label="@7F0C001E" android:launchMode="1" android:name="com.zhongmin.union.MainActivity" android:screenOrientation="1" android:theme="@7F0D00AC">
+</activity>
+<activity android:name="com.zhongmin.union.activity.LoginNewActivity" android:screenOrientation="1" android:theme="@7F0D00AC" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:name="com.zhongmin.union.activity.GuideActivity" android:screenOrientation="1" android:theme="@7F0D00A9">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:name="com.zhongmin.union.activity.PosterActivity" android:screenOrientation="1" android:theme="@7F0D00AC">
+</activity>
+<activity android:name="com.zhongmin.union.activity.ZmWebViewActivity" android:screenOrientation="1" android:theme="@7F0D00AC">
+</activity>
+<activity android:configChanges="0x000000A0" android:exported="false" android:name="com.umeng.socialize.media.WBShareCallBackActivity" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x000000A0" android:exported="false" android:name="com.sina.weibo.sdk.web.WeiboSdkWebActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:launchMode="2" android:name="com.sina.weibo.sdk.share.WbShareTransActivity" android:theme="@android:01030011">
+<intent-filter>
+<action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004A0" android:exported="true" android:name="com.zhongmin.union.wxapi.WXEntryActivity" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<activity android:launchMode="2" android:name="com.tencent.tauth.AuthActivity" android:noHistory="true">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="tencent1107713727">
+</data>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.tencent.connect.common.AssistActivity" android:theme="@android:01030010">
+</activity>
+<meta-data android:name="UMENG_APPKEY" android:value="5b7f7c6cf29d98357e00004f">
+</meta-data>
+<meta-data android:name="UMENG_CHANNEL" android:value="">
+</meta-data>
+<meta-data android:name="UMENG_MESSAGE_SECRET" android:value="24dbf6b5e058c2dfaaffaa45d726b896">
+</meta-data>
+<service android:name="com.zhongmin.tenma.AppUpdate.AppUpdateService">
+</service>
+</application>
+</manifest>

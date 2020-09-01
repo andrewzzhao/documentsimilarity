@@ -1,0 +1,502 @@
+<?xml version="1.0" ?><manifest android:versionCode="56" android:versionName="1.5" package="net.ffzb.wallet" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="14" android:targetSdkVersion="21">
+</uses-sdk>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_SMS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_CONTACTS">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS">
+</uses-permission>
+<uses-permission android:name="android.permission.BLUETOOTH">
+</uses-permission>
+<uses-permission android:name="android.permission.BLUETOOTH_ADMIN">
+</uses-permission>
+<uses-permission android:name="android.permission.NFC">
+</uses-permission>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.DISABLE_KEYGUARD">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_DOWNLOAD_MANAGER">
+</uses-permission>
+<uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION">
+</uses-permission>
+<uses-permission android:name="android.permission.EXPAND_STATUS_BAR">
+</uses-permission>
+<uses-permission android:name="baidu.push.permission.WRITE_PUSHINFOPROVIDER.net.ffrj.pinkwallet">
+</uses-permission>
+<permission android:name="baidu.push.permission.WRITE_PUSHINFOPROVIDER.net.ffzb.wallet" android:protectionLevel="0x00000002">
+</permission>
+<uses-feature android:name="android.hardware.camera">
+</uses-feature>
+<uses-feature android:name="android.hardware.camera.autofocus">
+</uses-feature>
+<meta-data android:name="android.support.VERSION" android:value="25.3.1">
+</meta-data>
+<uses-permission android:name="android.permission.RECORD_AUDIO">
+</uses-permission>
+<application android:allowBackup="false" android:icon="@7F0701F4" android:label="@7F0B0043" android:name="net.ffzb.wallet.app.FApplication" android:resizeableActivity="true" android:supportsRtl="true" android:theme="@7F0C00A1">
+<meta-data android:name="UMENG_APPKEY" android:value="5a574c088f4a9d041e000161">
+</meta-data>
+<meta-data android:name="UMENG_CHANNEL" android:value="vivo">
+</meta-data>
+<meta-data android:name="PINK_CHANNEL" android:value="101">
+</meta-data>
+<meta-data android:name="IS_FIRST_ISSUE" android:value="false">
+</meta-data>
+<meta-data android:name="com.amap.api.v2.apikey" android:value="542edc9401c555ad2792114d1cd09d12">
+</meta-data>
+<activity android:launchMode="1" android:name="net.ffzb.wallet.activity.LogoActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000A0" android:name="net.ffzb.wallet.activity.sign.LoginActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="net.ffzb.wallet.activity.sign.PinkLoginActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="net.ffzb.wallet.activity.account.AddAccountActivity" android:screenOrientation="1" android:theme="@7F0C017F" android:windowSoftInputMode="0x00000022">
+<intent-filter>
+<action android:name="android.intent.action.ADDACCOUNT">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:host="record" android:path="/keepRecord" android:scheme="pinkwalletsns">
+</data>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000A0" android:launchMode="2" android:name="net.ffzb.wallet.activity.MainActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="net.ffzb.wallet.activity.sign.RegisterActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="net.ffzb.wallet.activity.user.AboutActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+<intent-filter>
+<action android:name="android.intent.action.ABOUT">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:host="app" android:path="/comment" android:scheme="pinkwalletsns">
+</data>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000A0" android:name="net.ffzb.wallet.activity.sign.FetchPasswordActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="net.ffzb.wallet.activity.sign.ResetPasswordActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="net.ffzb.wallet.activity.account.BillDetailActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="net.ffzb.wallet.activity.account.SetBudgetActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="net.ffzb.wallet.activity.account.InputBudgetActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="net.ffzb.wallet.activity.user.UserInfoActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="net.ffzb.wallet.activity.user.ModifyNickActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="net.ffzb.wallet.activity.user.SetAccountActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+<intent-filter>
+<action android:name="android.intent.action.SETACCOUNT">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000A0" android:name="net.ffzb.wallet.activity.account.PieChartActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="net.ffzb.wallet.activity.account.QueryResultActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="net.ffzb.wallet.activity.account.QueryActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="net.ffzb.wallet.activity.account.TypeAccountActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="net.ffzb.wallet.activity.account.CalendarActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="net.ffzb.wallet.activity.web.BaseWebViewActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="net.ffzb.wallet.activity.web.ActivitiesWebViewActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="net.ffzb.wallet.activity.web.PinkWebJSActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="net.ffzb.wallet.activity.user.ALiFeedBackActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+<intent-filter>
+<action android:name="android.intent.action.ALIFEEDBACK">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000A0" android:name="net.ffzb.wallet.activity.account.MonthDetailActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="net.ffzb.wallet.activity.user.ModifyPswActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000024">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="net.ffzb.wallet.activity.account.AccountBookActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="net.ffzb.wallet.activity.account.AccountSceneActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="net.ffzb.wallet.activity.account.PhotoActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="net.ffzb.wallet.activity.user.SetLockActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:configChanges="0x000000A0" android:launchMode="1" android:name="net.ffzb.wallet.activity.user.InputLockActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="net.ffzb.wallet.activity.account.QueryIEActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="net.ffzb.wallet.activity.account.QueryTimeActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="net.ffzb.wallet.activity.account.LbsActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="net.ffzb.wallet.activity.account.AddBookActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="net.ffzb.wallet.activity.account.AddAccountTypeActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="net.ffzb.wallet.activity.account.TypeManagerActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="net.ffzb.wallet.activity.PreNotificationActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="net.ffzb.wallet.activity.account.DownDataActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="net.ffzb.wallet.activity.user.SkinListActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="android.intent.action.SKINLIST">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:host="theme" android:path="/buy" android:scheme="pinkwalletsns">
+</data>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000A0" android:name="net.ffzb.wallet.activity.user.SkinMineActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="net.ffzb.wallet.activity.user.SkinDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="net.ffzb.wallet.activity.user.CityListActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="android.intent.action.CITYLIST">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:host="user" android:path="/selectRegion" android:scheme="pinkwalletsns">
+</data>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000A0" android:name="net.ffzb.wallet.activity.user.SexSelectorActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="android.intent.action.SEXSELECTOR">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:host="user" android:path="/selectSex" android:scheme="pinkwalletsns">
+</data>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000A0" android:name="net.ffzb.wallet.activity.user.BindPhoneActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="android.intent.action.BINDPHONE">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:host="user" android:path="/bindMobile" android:scheme="pinkwalletsns">
+</data>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000A0" android:name="net.ffzb.wallet.activity.user.RemindStepActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="net.ffzb.wallet.activity.user.CharacterActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="net.ffzb.wallet.activity.user.UserCharacterActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="android.intent.action.USERROLE">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:host="user" android:path="/chooseRole" android:scheme="pinkwalletsns">
+</data>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000A0" android:name="net.ffzb.wallet.activity.account.WalletAccountDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="net.ffzb.wallet.activity.account.WalletAccountActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="net.ffzb.wallet.activity.account.WalletIncludeTotalActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="net.ffzb.wallet.activity.account.CreateWalletAccountActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="net.ffzb.wallet.activity.account.WalletAccountSelectActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="net.ffzb.wallet.activity.account.WalletAccountTransferActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="net.ffzb.wallet.activity.user.WantPurchaseListActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+<intent-filter>
+<action android:name="android.intent.action.WANTPURCHASELIST">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000A0" android:name="net.ffzb.wallet.activity.user.AddWantPurchaseActivity" android:screenOrientation="1" android:theme="@7F0C0180" android:windowSoftInputMode="0x00000024">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="net.ffzb.wallet.activity.user.UserBirthdayActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="android.intent.action.USERBIRTHDAY">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:host="user" android:path="/fillBirthday" android:scheme="pinkwalletsns">
+</data>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000A0" android:name="net.ffzb.wallet.activity.user.BeansCenterActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="net.ffzb.wallet.activity.user.SkinBuyActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="net.ffzb.wallet.activity.user.InvitationActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+<intent-filter>
+<action android:name="android.intent.action.INVITATION">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:host="user" android:path="/invitation" android:scheme="pinkwalletsns">
+</data>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000A0" android:name="net.ffzb.wallet.activity.user.InvitationCodeActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000024">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="net.ffzb.wallet.activity.user.RateActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+<intent-filter>
+<action android:name="android.intent.action.RATE">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:host="user" android:path="/rate" android:scheme="pinkwalletsns">
+</data>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000A0" android:name="net.ffzb.wallet.activity.user.RateSelectorActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="net.ffzb.wallet.activity.user.MessageActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="net.ffzb.wallet.activity.account.AccountIntimateActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="net.ffzb.wallet.activity.account.GroupUserActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="net.ffzb.wallet.activity.user.eventday.EventDayActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="android.intent.action.EVENTDAY">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000A0" android:name="net.ffzb.wallet.activity.user.eventday.AddEventDayActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000024">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="net.ffzb.wallet.activity.user.eventday.EventDayTimeActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="net.ffzb.wallet.activity.user.eventday.EventDayEditActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="net.ffzb.wallet.activity.user.CollectActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000020">
+<intent-filter>
+<action android:name="android.intent.action.collect">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000A0" android:name="net.ffzb.wallet.activity.web.MessageWebActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="net.ffzb.wallet.activity.account.AccountTimeLineActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="net.ffzb.wallet.activity.user.BillHistoryActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="net.ffzb.wallet.activity.user.PhoneChargeActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="net.ffzb.wallet.activity.user.PhoneChargeBuyActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="net.ffzb.wallet.activity.user.PhoneChargeSuccessActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="net.ffzb.wallet.activity.user.ChargeListActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="net.ffzb.wallet.activity.account.WeekBillActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="android.intent.action.WEEKBILL">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:host="user" android:path="/weekBill" android:scheme="pinkwalletsns">
+</data>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000A0" android:name="net.ffzb.wallet.activity.user.BillMapActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="android.intent.action.BILLMAP">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000A0" android:name="net.ffzb.wallet.activity.account.wonderful.WonderfulActivity" android:screenOrientation="1" android:theme="@7F0C017F">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="net.ffzb.wallet.activity.account.wonderful.PhotoFilterActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="net.ffzb.wallet.activity.account.wonderful.WonderfulNoteActivity" android:screenOrientation="1" android:theme="@7F0C0180" android:windowSoftInputMode="0x00000014">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="net.ffzb.wallet.activity.account.BillShareActivity" android:screenOrientation="1" android:theme="@7F0C017F">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="net.ffzb.wallet.activity.TestUseActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="android.intent.action.testuse">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<receiver android:name="net.ffzb.wallet.receiver.MAlarmReceiver" android:process=":remote">
+<intent-filter>
+<action android:name="net.ffrj.pinkwallet.remind">
+</action>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name="net.ffzb.wallet.receiver.UpdateVersionReceiver">
+<intent-filter>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+<action android:name="net.ffrj.pinkwallet.BOOT_COMPLETED">
+</action>
+<action android:name="android.intent.action.DATE_CHANGED">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name="net.ffzb.wallet.receiver.NetChangeReceiver">
+<intent-filter>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+<action android:name="android.intent.action.DATE_CHANGED">
+</action>
+</intent-filter>
+</receiver>
+<service android:name="net.ffzb.wallet.net.sync.SyncService">
+</service>
+<service android:name="net.ffzb.wallet.service.DownLaunchService">
+</service>
+<service android:name="net.ffzb.wallet.service.DownAdApkService">
+</service>
+<service android:name="com.amap.api.location.APSService">
+</service>
+<activity android:configChanges="0x000000A0" android:name="net.ffzb.wallet.multiimageselector.GestureImageActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="net.ffzb.wallet.multiimageselector.MultiImageSelectorActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="net.ffzb.wallet.multiimageselector.CropImageWidget" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name="net.ffzb.wallet.third.QQAuthWebActivity">
+</activity>
+<activity android:launchMode="2" android:name="com.umeng.qq.tencent.AuthActivity" android:noHistory="true">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="tencent1105564739">
+</data>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.umeng.qq.tencent.AssistActivity" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<activity android:name="net.ffzb.wallet.activity.sign.QQAuthWebActivity">
+</activity>
+<receiver android:name="com.baidu.android.pushservice.PushServiceReceiver" android:process=":bdservice_v1">
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+<action android:name="com.baidu.android.pushservice.action.notification.SHOW">
+</action>
+<action android:name="com.baidu.android.pushservice.action.media.CLICK">
+</action>
+<action android:name="android.intent.action.MEDIA_MOUNTED">
+</action>
+<action android:name="android.intent.action.USER_PRESENT">
+</action>
+<action android:name="android.intent.action.ACTION_POWER_CONNECTED">
+</action>
+<action android:name="android.intent.action.ACTION_POWER_DISCONNECTED">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name="com.baidu.android.pushservice.RegistrationReceiver" android:process=":bdservice_v1">
+<intent-filter>
+<action android:name="com.baidu.android.pushservice.action.METHOD">
+</action>
+<action android:name="com.baidu.android.pushservice.action.BIND_SYNC">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_REMOVED">
+</action>
+<data android:scheme="package">
+</data>
+</intent-filter>
+</receiver>
+<service android:exported="true" android:name="com.baidu.android.pushservice.PushService" android:process=":bdservice_v1">
+<intent-filter>
+<action android:name="com.baidu.android.pushservice.action.PUSH_SERVICE">
+</action>
+</intent-filter>
+</service>
+<service android:exported="true" android:name="com.baidu.android.pushservice.CommandService">
+</service>
+<provider android:authorities="net.ffzb.wallet.bdpush" android:exported="true" android:name="com.baidu.android.pushservice.PushInfoProvider" android:protectionLevel="0x00000002" android:writePermission="baidu.push.permission.WRITE_PUSHINFOPROVIDER.net.ffzb.wallet">
+</provider>
+<receiver android:name="net.ffzb.wallet.receiver.BaiduPushReceiver">
+<intent-filter>
+<action android:name="com.baidu.android.pushservice.action.MESSAGE">
+</action>
+<action android:name="com.baidu.android.pushservice.action.RECEIVE">
+</action>
+<action android:name="com.baidu.android.pushservice.action.notification.CLICK">
+</action>
+</intent-filter>
+</receiver>
+<activity android:configChanges="0x000000A0" android:launchMode="1" android:name="com.alibaba.sdk.android.feedback.windvane.CustomHybirdActivity" android:screenOrientation="1" android:theme="@7F0C0185" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:configChanges="0x000000A0" android:launchMode="1" android:name="com.alibaba.sdk.android.feedback.impl.ErrorPageActivity" android:screenOrientation="1" android:theme="@7F0C0185">
+</activity>
+<service android:name="com.alibaba.mtl.appmonitor.AppMonitorService">
+</service>
+<provider android:authorities="net.ffzb.wallet.alifb_fileprovider" android:exported="false" android:grantUriPermissions="true" android:name="com.alibaba.sdk.android.feedback.util.FBFileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F0E0000">
+</meta-data>
+</provider>
+</application>
+</manifest>

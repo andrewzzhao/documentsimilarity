@@ -1,0 +1,36 @@
+<?xml version="1.0" ?><manifest android:versionCode="38" android:versionName="1.3.1" package="jp.ceres_inc.watch.app3" platformBuildVersionCode="25" platformBuildVersionName="7.1.1" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="18" android:targetSdkVersion="23">
+</uses-sdk>
+<uses-permission android:name="com.google.android.permission.PROVIDE_BACKGROUND">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<application android:allowBackup="true" android:icon="@7F030000" android:label="@7F0A0035" android:theme="@android:01030128">
+<meta-data android:name="com.google.android.gms.version" android:value="@7F110007">
+</meta-data>
+<activity android:label="@7F0A0035" android:name="jp.ceres_inc.watch.app3.mobile.WatchFace3PreferenceActivity">
+<intent-filter>
+<action android:name="jp.ceres_inc.watch.app3.WF3_CONFIG_DATE_BY_MOBILE">
+</action>
+<category android:name="com.google.android.wearable.watchface.category.COMPANION_CONFIGURATION">
+</category>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<service android:exported="true" android:name="jp.ceres_inc.watch.app3.mobile.WatchFace3DataLayerService">
+<intent-filter>
+<action android:name="com.google.android.gms.wearable.DATA_CHANGED">
+</action>
+<data android:host="*" android:pathPrefix="/jp.ceres_inc.watch.app3/" android:scheme="wear">
+</data>
+</intent-filter>
+</service>
+<activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:01030010">
+</activity>
+<provider android:authorities="jp.ceres_inc.watch.app3.firebaseinitprovider" android:exported="false" android:initOrder="100" android:name="com.google.firebase.provider.FirebaseInitProvider">
+</provider>
+<meta-data android:name="com.google.android.wearable.beta.app" android:resource="@7F080000">
+</meta-data>
+</application>
+</manifest>

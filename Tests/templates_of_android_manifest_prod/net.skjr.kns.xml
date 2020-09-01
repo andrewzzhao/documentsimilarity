@@ -1,0 +1,416 @@
+<?xml version="1.0" ?><manifest android:versionCode="120" android:versionName="2.4.3" package="net.skjr.kns" platformBuildVersionCode="26" platformBuildVersionName="8.0.0" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-permission android:name="android.permission.READ_LOGS">
+</uses-permission>
+<uses-sdk android:minSdkVersion="16" android:targetSdkVersion="26">
+</uses-sdk>
+<uses-permission android:name="android.permission.CALL_PHONE">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.REORDER_TASKS">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-feature android:name="android.hardware.camera">
+</uses-feature>
+<uses-feature android:name="android.hardware.camera.autofocus">
+</uses-feature>
+<uses-permission android:name="android.permission.FLASHLIGHT">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<permission android:name="net.skjr.kns.permission.JPUSH_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="net.skjr.kns.permission.JPUSH_MESSAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_USER_PRESENT">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-permission android:name="android.permission.USE_FINGERPRINT">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PROFILE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_CONTACTS">
+</uses-permission>
+<uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS">
+</uses-permission>
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS">
+</uses-permission>
+<application android:allowBackup="true" android:icon="@7F03000A" android:label="@7F0800C9" android:name="com.tencent.StubShell.TxAppEntry" android:supportsRtl="true" android:theme="@7F0B00B4">
+<meta-data android:name="TxAppEntry" android:value="net.skjr.kns.application.AppController">
+</meta-data>
+<activity android:name="net.skjr.kns.views.activity.system.SplashActivity" android:screenOrientation="1" android:theme="@7F0B00B3">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="first" android:scheme="myapp">
+</data>
+<data android:host="second" android:scheme="myapp">
+</data>
+</intent-filter>
+</activity>
+<receiver android:name="net.skjr.kns.application.UpdateReceiver">
+<intent-filter>
+<action android:name="android.intent.action.DOWNLOAD_COMPLETE">
+</action>
+</intent-filter>
+</receiver>
+<meta-data android:name="com.baidu.lbsapi.API_KEY" android:value="3uiU7C8LRjUICObqj1zHlHvmuuAIvCtA">
+</meta-data>
+<service android:enabled="true" android:name="com.baidu.location.f" android:process=":remote">
+<intent-filter>
+<action android:name="com.baidu.location.service_v2.2">
+</action>
+</intent-filter>
+</service>
+<meta-data android:name="net.skjr.kns.core.net.forhttps.OkHttpGlideModule" android:value="GlideModule">
+</meta-data>
+<meta-data android:name="UMENG_APPKEY" android:value="59000b98717c1966c0002733">
+</meta-data>
+<activity android:configChanges="0x000004A0" android:exported="true" android:launchMode="2" android:name="net.skjr.kns.wxapi.WXEntryActivity" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<activity android:name="net.skjr.kns.views.activity.system.GuideActivity" android:screenOrientation="1" android:theme="@7F0B00B2">
+</activity>
+<activity android:launchMode="2" android:name="net.skjr.kns.views.activity.system.MainActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="net.skjr.kns.views.activity.system.LoginActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="net.skjr.kns.views.activity.system.Register1Activity" android:screenOrientation="1">
+</activity>
+<activity android:name="net.skjr.kns.views.activity.WebActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="net.skjr.kns.views.activity.system.FinishActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="net.skjr.kns.views.activity.system.Register2Activity" android:screenOrientation="1">
+</activity>
+<activity android:name="net.skjr.kns.views.activity.system.Register3Activity" android:screenOrientation="1">
+</activity>
+<activity android:name="net.skjr.kns.views.activity.more.InviteActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="net.skjr.kns.views.activity.account.AccountManageActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="net.skjr.kns.views.activity.account.AccountInfoActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="net.skjr.kns.views.activity.account.AccountCardsActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="net.skjr.kns.views.activity.account.AccountSecurityActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="net.skjr.kns.views.activity.account.AccountPwdActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="net.skjr.kns.views.activity.account.AccountPwdSuccessActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="net.skjr.kns.views.activity.account.AccountCardsAddActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="net.skjr.kns.views.activity.lock.TestLockActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="net.skjr.kns.views.activity.lock.CreateGesturePasswordActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="net.skjr.kns.views.activity.lock.UnlockGesturePasswordActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="net.skjr.kns.views.activity.home.PublicSearchActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="net.skjr.kns.views.activity.account.NotifyActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="net.skjr.kns.views.activity.foudlist.PublicFundActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="net.skjr.kns.views.activity.foudlist.PrivateFundListActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="net.skjr.kns.views.activity.home.PrivateFundActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="net.skjr.kns.views.activity.more.FeedBackActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="net.skjr.kns.views.activity.more.AboutActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="net.skjr.kns.views.activity.system.LoginSuccessActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="net.skjr.kns.views.activity.system.FindPwd1Activity" android:screenOrientation="1">
+</activity>
+<activity android:name="net.skjr.kns.views.activity.system.FindPwd2Activity" android:screenOrientation="1">
+</activity>
+<activity android:name="net.skjr.kns.views.activity.system.FindPwd3Activity" android:screenOrientation="1">
+</activity>
+<activity android:name="net.skjr.kns.views.activity.account.AccountTradePwdActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="net.skjr.kns.views.activity.account.AccountTradePwdSuccessActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="net.skjr.kns.views.activity.home.FundDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="net.skjr.kns.views.activity.more.InfoActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="net.skjr.kns.views.activity.account.AccountFundActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="net.skjr.kns.views.activity.more.Info2Activity" android:screenOrientation="1">
+</activity>
+<activity android:name="net.skjr.kns.views.activity.account.AccountFund2Activity" android:screenOrientation="1">
+</activity>
+<activity android:name="net.skjr.kns.views.activity.account.RiskTestActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="net.skjr.kns.views.activity.account.AccountTradeHistoryActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="net.skjr.kns.views.activity.home.PlannerActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="net.skjr.kns.views.activity.home.PlannerSearchActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="net.skjr.kns.views.activity.onnline_consulting.OnlineConsulting" android:screenOrientation="1">
+</activity>
+<activity android:name="net.skjr.kns.views.activity.home.PrivateSearchActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="net.skjr.kns.views.activity.home.PDFActivity">
+</activity>
+<activity android:name="net.skjr.kns.views.activity.home.MilionFinace_PrivateDetail" android:screenOrientation="1">
+</activity>
+<activity android:name="net.skjr.kns.views.activity.deamdtreasure.DemandTrease_DayProfit" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="2" android:name="net.skjr.kns.views.activity.deamdtreasure.DemandTreasure" android:screenOrientation="1">
+</activity>
+<activity android:name="net.skjr.kns.views.activity.deamdtreasure.DemandTreasur_DealResult" android:screenOrientation="1">
+</activity>
+<activity android:name="net.skjr.kns.views.activity.deamdtreasure.DemandTreasure_GetMoney" android:screenOrientation="1">
+</activity>
+<activity android:name="net.skjr.kns.views.activity.deamdtreasure.DemandTreasure_SaveMoney" android:screenOrientation="1">
+</activity>
+<activity android:name="net.skjr.kns.views.activity.deamdtreasure.DemandTreasureBankList" android:screenOrientation="1">
+</activity>
+<activity android:name="net.skjr.kns.views.activity.WebViewForStaticPage" android:screenOrientation="1">
+</activity>
+<activity android:name="net.skjr.kns.views.activity.zhuantou.ToRedeemList" android:screenOrientation="1">
+</activity>
+<activity android:name="net.skjr.kns.views.activity.zhuantou.ZhuanTou" android:screenOrientation="1">
+</activity>
+<activity android:name="net.skjr.kns.views.activity.zhuantou.ZhuantouSuccess" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="2" android:name="net.skjr.kns.views.activity.coupon.MyCoupon" android:screenOrientation="1">
+</activity>
+<activity android:name="net.skjr.kns.views.activity.coupon.InvitePeopleFromCounpon" android:screenOrientation="1">
+</activity>
+<activity android:name="net.skjr.kns.views.activity.system.ToastActivity" android:screenOrientation="1" android:theme="@7F0B0141">
+</activity>
+<activity android:name="net.skjr.kns.views.activity.coupon.TwoCodeActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="net.skjr.kns.views.activity.system.SpalishAD" android:screenOrientation="1" android:theme="@7F0B014A">
+</activity>
+<activity android:name="net.skjr.kns.views.activity.system.SpringFestivalActivity" android:screenOrientation="1" android:theme="@7F0B014A">
+</activity>
+<activity android:name="net.skjr.kns.views.activity.foudlist.FundListNew" android:screenOrientation="1" android:theme="@7F0B0139">
+</activity>
+<activity android:name="net.skjr.kns.views.activity.system.AdvertisingPromotion" android:screenOrientation="1">
+</activity>
+<activity android:name="net.skjr.kns.views.activity.account.StoreShop" android:screenOrientation="1" android:theme="@7F0B0139">
+</activity>
+<activity android:name="net.skjr.kns.views.activity.account.PersonalPrivateProduct" android:screenOrientation="1" android:theme="@7F0B0139">
+</activity>
+<activity android:name="net.skjr.kns.views.activity.account.InvestorInfoAdd" android:screenOrientation="1" android:theme="@7F0B0139">
+</activity>
+<activity android:name="net.skjr.kns.views.activity.account.AccessAgreementActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="net.skjr.kns.views.activity.account.HighRiskProduct" android:screenOrientation="1">
+</activity>
+<activity android:name="net.skjr.kns.views.activity.account.InvestorChange" android:screenOrientation="1">
+</activity>
+<activity android:name="net.skjr.kns.scancode.CaptureActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="net.skjr.kns.views.activity.home.fund_detail.FundDetailActivityCurrency" android:screenOrientation="1">
+</activity>
+<activity android:name="net.skjr.kns.views.activity.home.fund_detail.HistoryProfitFundCurrency" android:screenOrientation="1">
+</activity>
+<activity android:name="net.skjr.kns.views.activity.home.fund_detail.StockDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="net.skjr.kns.views.activity.home.fund_detail.FundDetailActivityNonCurrency" android:screenOrientation="1">
+</activity>
+<activity android:name="net.skjr.kns.views.activity.home.fund_detail.FundAnnounActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="net.skjr.kns.views.activity.home.fund_detail.FundInformationActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="net.skjr.kns.views.activity.home.fund_detail.FundHistoryProfit" android:screenOrientation="1">
+</activity>
+<activity android:name="net.skjr.kns.views.activity.home.fund_detail.FundDealActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="net.skjr.kns.views.activity.lock.CreatFingerprintActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="net.skjr.kns.views.activity.home.fund_detail.FundDetailActivityForPrivateFund" android:screenOrientation="1">
+</activity>
+<activity android:name="net.skjr.kns.views.activity.lock.UnLockFingerpintActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="net.skjr.kns.mvp.view.register.NewRegisterActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="net.skjr.kns.mvp.view.openaccount.NewOpenActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="net.skjr.kns.mvp.view.openaccount.OpenSuccessActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="net.skjr.kns.views.activity.more.DownTwoCode" android:screenOrientation="1">
+</activity>
+<provider android:authorities="net.skjr.kns.fileprovider" android:exported="false" android:grantUriPermissions="true" android:name="android.support.v4.content.FileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F070000">
+</meta-data>
+</provider>
+<service android:name="cn.jpush.android.service.PushService" android:process=":multiprocess">
+</service>
+<receiver android:enabled="true" android:exported="false" android:name="net.skjr.kns.views.activity.system.MyReceiver">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.REGISTRATION">
+</action>
+<action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED">
+</action>
+<action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED">
+</action>
+<action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED">
+</action>
+<action android:name="cn.jpush.android.intent.ACTION_RICHPUSH_CALLBACK">
+</action>
+<action android:name="cn.jpush.android.intent.CONNECTION">
+</action>
+<category android:name="net.skjr.kns">
+</category>
+</intent-filter>
+</receiver>
+<activity android:configChanges="0x000004A0" android:label="@7F08012C" android:name="net.skjr.kns.views.activity.deamdtreasure.BankLimitExplanActivity" android:theme="@7F0B00EA">
+</activity>
+<activity android:name="net.skjr.kns.views.activity.system.EditCollectionFund" android:screenOrientation="1">
+</activity>
+<activity android:name="net.skjr.kns.views.activity.home.YiTuiJianActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="net.skjr.kns.mvp.view.subscribe.FundSubscribeActivity" android:screenOrientation="1">
+</activity>
+<service android:exported="false" android:name="es.voghdev.pdfviewpager.library.service.CopyAssetService">
+</service>
+<meta-data android:name="android.support.VERSION" android:value="26.1.0">
+</meta-data>
+<activity android:exported="false" android:name="cn.jpush.android.ui.PopWinActivity" android:theme="@7F0B00EF">
+</activity>
+<activity android:configChanges="0x000000A0" android:exported="false" android:name="cn.jpush.android.ui.PushActivity" android:theme="@android:01030006">
+<intent-filter>
+<action android:name="cn.jpush.android.ui.PushActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="net.skjr.kns">
+</category>
+</intent-filter>
+</activity>
+<service android:enabled="true" android:exported="true" android:name="cn.jpush.android.service.DaemonService">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.DaemonService">
+</action>
+<category android:name="net.skjr.kns">
+</category>
+</intent-filter>
+</service>
+<receiver android:enabled="true" android:exported="false" android:name="cn.jpush.android.service.PushReceiver">
+<intent-filter android:priority="1000">
+<action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY">
+</action>
+<category android:name="net.skjr.kns">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.USER_PRESENT">
+</action>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_ADDED">
+</action>
+<action android:name="android.intent.action.PACKAGE_REMOVED">
+</action>
+<data android:scheme="package">
+</data>
+</intent-filter>
+</receiver>
+<receiver android:exported="false" android:name="cn.jpush.android.service.AlarmReceiver">
+</receiver>
+<provider android:authorities="net.skjr.kns.DataProvider" android:exported="false" android:name="cn.jpush.android.service.DataProvider">
+</provider>
+<provider android:authorities="net.skjr.kns.DownloadProvider" android:exported="true" android:name="cn.jpush.android.service.DownloadProvider">
+</provider>
+<meta-data android:name="JPUSH_CHANNEL" android:value="developer-default">
+</meta-data>
+<meta-data android:name="JPUSH_APPKEY" android:value="d788f53a3277452cefddb066">
+</meta-data>
+<meta-data android:name="android.arch.lifecycle.VERSION" android:value="27.0.0-SNAPSHOT">
+</meta-data>
+<provider android:authorities="net.skjr.kns.com.mob.MobProvider" android:exported="false" android:multiprocess="true" android:name="com.mob.MobProvider">
+</provider>
+<meta-data android:name="Mob-AppKey" android:value="10b05271ff1cf">
+</meta-data>
+<meta-data android:name="Mob-AppSeret" android:value="6894f8f8e223f25d535cdf9a27389ded">
+</meta-data>
+<activity android:configChanges="0x000004A0" android:name="com.mob.tools.MobUIShell" android:theme="@android:01030010" android:windowSoftInputMode="0x00000012">
+<intent-filter>
+<action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:launchMode="2" android:name="cn.sharesdk.tencent.qq.ReceiveActivity" android:noHistory="true">
+<intent-filter>
+<data android:scheme="tencent100371282">
+</data>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+</intent-filter>
+</activity>
+</application>
+<uses-permission android:name="android.permission.PACKAGE_USAGE_STATS">
+</uses-permission>
+<uses-permission android:name="android.permission.BLUETOOTH">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_SMS">
+</uses-permission>
+</manifest>

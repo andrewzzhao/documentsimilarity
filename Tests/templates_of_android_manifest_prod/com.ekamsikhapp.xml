@@ -1,0 +1,148 @@
+<?xml version="1.0" ?><manifest android:versionCode="31" android:versionName="2.9.10" package="com.ekamsikhapp" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="14" android:targetSdkVersion="25">
+</uses-sdk>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.RECORD_AUDIO">
+</uses-permission>
+<uses-permission android:name="android.permission.STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_SMS">
+</uses-permission>
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_SMS">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CAPTURE_AUDIO_OUTPUT">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PROFILE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_CONTACTS">
+</uses-permission>
+<supports-screens android:anyDensity="true">
+</supports-screens>
+<meta-data android:name="android.support.VERSION" android:value="25.3.1">
+</meta-data>
+<uses-feature android:glEsVersion="0x00020000" android:required="true">
+</uses-feature>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE">
+</uses-permission>
+<permission android:name="com.ekamsikhapp.permission.C2D_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="com.ekamsikhapp.permission.C2D_MESSAGE">
+</uses-permission>
+<application android:allowBackup="false" android:configChanges="0x00000004" android:icon="@7F0D0002" android:label="@7F0E002C" android:largeHeap="true" android:name="com.ekamsikhapp.utils.MyApplication" android:supportsRtl="true" android:theme="@7F0F0005">
+<activity android:hardwareAccelerated="false" android:name="com.ekamsikhapp.activity.SplashScreenAcivity" android:theme="@7F0F0126">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@7F0E0074">
+</meta-data>
+<activity android:configChanges="0x00000FB0" android:label="Video" android:launchMode="3" android:name="com.ekamsikhapp.activity.VideoViewActivity" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:configChanges="0x00000FB0" android:name="com.ekamsikhapp.activity.VideoPlayerActivity" android:theme="@android:01030007" android:windowSoftInputMode="0x00000022">
+</activity>
+<meta-data android:name="com.google.android.gms.version" android:value="@7F0A0006">
+</meta-data>
+<meta-data android:name="com.google.android.geo.API_KEY" android:value="@7F0E0088">
+</meta-data>
+<activity android:configChanges="0x00000FB0" android:label="@7F0E00FF" android:name="com.ekamsikhapp.activity.gurudwara.GDashBoardAcivity" android:theme="@7F0F0006" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:configChanges="0x00000FB0" android:label="Broadcast" android:name="com.ekamsikhapp.activity.gurudwara.GBaseActivity" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:configChanges="0x00000FB0" android:label="MyPage" android:name="com.ekamsikhapp.activity.devotee.DBaseActivity" android:theme="@7F0F00AC" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:configChanges="0x00000FB0" android:label="Report" android:name="com.ekamsikhapp.activity.gurudwara.GReportActivity" android:windowSoftInputMode="0x00000022">
+</activity>
+<provider android:authorities="com.ekamsikhapp" android:exported="false" android:grantUriPermissions="true" android:name="android.support.v4.content.FileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F110002">
+</meta-data>
+</provider>
+<activity android:label="WebView" android:name="com.ekamsikhapp.views.WebEteki">
+</activity>
+<activity android:configChanges="0x00000FB0" android:label="Profile" android:name="com.ekamsikhapp.activity.ProfileActivity" android:windowSoftInputMode="0x00000022">
+</activity>
+<service android:name="com.ekamsikhapp.receivers.MyFirebaseMessagingService">
+<intent-filter>
+<action android:name="com.google.firebase.MESSAGING_EVENT">
+</action>
+</intent-filter>
+</service>
+<service android:name="com.ekamsikhapp.receivers.MyFirebaseInstanceIDService">
+<intent-filter>
+<action android:name="com.google.firebase.INSTANCE_ID_EVENT">
+</action>
+</intent-filter>
+</service>
+<service android:name="com.ekamsikhapp.receivers.PostCountService">
+</service>
+<activity android:name="com.ekamsikhapp.activity.PlacesActivity" android:theme="@7F0F0006">
+</activity>
+<activity android:label="@7F0E0100" android:name="com.ekamsikhapp.activity.LocateGurudwaraActivity">
+</activity>
+<activity android:name="com.ekamsikhapp.activity.gurudwara.GNotifications">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.ekamsikhapp.activity.VideoPlaybackActivity" android:theme="@android:01030007">
+</activity>
+<activity android:name="com.theartofdev.edmodo.cropper.CropImageActivity">
+</activity>
+<service android:exported="true" android:name="com.google.firebase.messaging.FirebaseMessagingService">
+<intent-filter android:priority="-500">
+<action android:name="com.google.firebase.MESSAGING_EVENT">
+</action>
+</intent-filter>
+</service>
+<activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:01030010">
+</activity>
+<receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementReceiver">
+</receiver>
+<receiver android:enabled="true" android:name="com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver" android:permission="android.permission.INSTALL_PACKAGES">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementService">
+</service>
+<receiver android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+<category android:name="com.ekamsikhapp">
+</category>
+</intent-filter>
+</receiver>
+<receiver android:exported="false" android:name="com.google.firebase.iid.FirebaseInstanceIdInternalReceiver">
+</receiver>
+<service android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdService">
+<intent-filter android:priority="-500">
+<action android:name="com.google.firebase.INSTANCE_ID_EVENT">
+</action>
+</intent-filter>
+</service>
+<provider android:authorities="com.ekamsikhapp.firebaseinitprovider" android:exported="false" android:initOrder="100" android:name="com.google.firebase.provider.FirebaseInitProvider">
+</provider>
+</application>
+</manifest>

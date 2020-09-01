@@ -1,0 +1,242 @@
+<?xml version="1.0" ?><manifest android:versionCode="201612160" android:versionName="1.0.1" package="com.elccrm.agent" platformBuildVersionCode="23" platformBuildVersionName="6.0-2704002" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="14" android:targetSdkVersion="22">
+</uses-sdk>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-feature android:name="android.hardware.camera">
+</uses-feature>
+<uses-feature android:name="android.hardware.camera.autofocus">
+</uses-feature>
+<uses-permission android:name="android.permission.CALL_PHONE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_CONTACTS">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_CONTACTS">
+</uses-permission>
+<uses-permission android:name="android.permission.FLASHLIGHT">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_LOGS">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-permission android:name="android.permission.SET_DEBUG_APP">
+</uses-permission>
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="android.permission.USE_CREDENTIALS">
+</uses-permission>
+<uses-permission android:name="android.permission.MANAGE_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="android.permission.RECORD_AUDIO">
+</uses-permission>
+<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="com.android.launcher.permission.READ_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.BROADCAST_STICKY">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-feature android:name="android.hardware.location.gps" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.location.network" android:required="false">
+</uses-feature>
+<application android:allowBackup="true" android:icon="@7F030037" android:label="@7F06004C" android:name="com.qihoo.util.StubApp772016847" android:qihoo="activity" android:supportsRtl="true" android:theme="@7F09008C">
+<activity android:name="com.elccrm.agent.home.activity.SplashActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:launchMode="0" android:name="com.qihoo.util.StartActivity" android:noHistory="true" android:screenOrientation="1">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<service android:name="com.qihoo.util.UpdateService">
+</service>
+<activity android:exported="false" android:name="com.qihoo.util.appupdate.AppUpdateActivity" android:theme="@android:0103000F">
+</activity>
+<activity android:excludeFromRecents="true" android:exported="false" android:name="com.qihoo.util.CommonActivity" android:theme="@android:0103005F">
+</activity>
+<service android:enabled="true" android:exported="true" android:name="com.qihoo.util.CommonService">
+</service>
+<receiver android:enabled="true" android:exported="false" android:name="com.qihoo.util.CommonReceiver">
+</receiver>
+<provider android:authorities="com.elccrm.agent.COMMONPROVIDER" android:exported="true" android:name="com.qihoo.util.CommonProvider">
+</provider>
+<activity android:launchMode="2" android:name="com.elccrm.agent.home.activity.HomeActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.elccrm.agent.base.album.activity.ImageSelectActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.elccrm.agent.base.album.activity.ImagePagerActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.elccrm.agent.base.album.activity.ImageSelectAlbumActivity" android:screenOrientation="1">
+</activity>
+<receiver android:label="NetworkConnection" android:name="com.elccrm.agent.base.broadcast.NetStatusBroadCast">
+<intent-filter>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+</receiver>
+<activity android:name="com.elccrm.agent.customer.activity.CustomerEditActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.elccrm.agent.customer.activity.CustomerDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.elccrm.agent.customer.activity.CustomerLevelActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.elccrm.agent.customer.activity.CustomerSearchActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.elccrm.agent.customer.activity.CustomerImportActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.elccrm.agent.customer.activity.CustomerNewActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.elccrm.agent.stock.activity.StockSearchActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.elccrm.agent.stock.activity.SelectBrandActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.elccrm.agent.stock.activity.SelectModelActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.elccrm.agent.stock.activity.SelectStyleActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.elccrm.agent.stock.activity.SelectEditionActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.elccrm.agent.stock.activity.StockInfoActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.elccrm.agent.mycenter.activity.PersonalInfoActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.elccrm.agent.mycenter.activity.CompanyInfoActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.elccrm.agent.mycenter.activity.AboutActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.elccrm.agent.mycenter.activity.AdviceFeedBackActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.elccrm.agent.mycenter.activity.TeamManageAdminActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.elccrm.agent.mycenter.activity.TeamManageManagerActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.elccrm.agent.mycenter.activity.AchieveManageActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.elccrm.agent.mycenter.activity.SaleAmountActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.elccrm.agent.mycenter.activity.LateUnvisitActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.elccrm.agent.mycenter.activity.ModifyUserNameInfoActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.elccrm.agent.mycenter.activity.ChangePhoneActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.elccrm.agent.mycenter.activity.RegistActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.elccrm.agent.mycenter.activity.LoginActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.elccrm.agent.mycenter.activity.QuickLoginActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.elccrm.agent.mycenter.activity.ForgetPwdActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.elccrm.agent.mycenter.activity.ModifyPassWordActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.elccrm.agent.mycenter.activity.CutPicActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.elccrm.agent.mycenter.activity.ProtocolActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.elccrm.agent.mycenter.activity.AddManagerActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.elccrm.agent.mycenter.activity.AddConsultantActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.elccrm.agent.mycenter.activity.MoveListActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.elccrm.agent.home.activity.ApproveActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.elccrm.agent.home.activity.ApproveDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.elccrm.agent.home.activity.ApprovedDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.elccrm.agent.home.activity.ApproveVisitActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.elccrm.agent.home.activity.StayVisitActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.elccrm.agent.home.activity.AddStayVisitActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.elccrm.agent.home.activity.SubmitStayVisitActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.elccrm.agent.home.activity.CustomerRemindActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.elccrm.agent.home.activity.StockRemindActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.elccrm.agent.home.activity.MessageActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.elccrm.agent.home.activity.MessageListActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.elccrm.agent.home.activity.MessageDetailActivity" android:screenOrientation="1">
+</activity>
+<meta-data android:name="MBBDTEK_APPKEY" android:value="6e4b5db1a78ea82d8b15b47d32b29db1">
+</meta-data>
+<service android:enabled="true" android:exported="false" android:label="CKMSGService" android:name="com.okayapps.message.service.CKMSGService" android:process=":push">
+</service>
+<service android:enabled="true" android:exported="false" android:label="CKLoopService" android:name="com.okayapps.message.service.CKLoopService" android:process=":loop">
+</service>
+<receiver android:name="com.okayapps.message.receive.MSGServiceReceiver">
+<intent-filter>
+<action android:name="android.intent.action.USER_PRESENT">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name="com.okayapps.message.core.MessageReceiver">
+<intent-filter>
+<action android:name="com.elccrm.agent.NOTIFICATION">
+</action>
+</intent-filter>
+</receiver>
+<meta-data android:name="BBDTEK_CHANNEL" android:value="小米市场">
+</meta-data>
+<activity android:configChanges="0x000004A0" android:name="com.bugtags.library.BugtagsActivity" android:theme="@android:01030011">
+</activity>
+<service android:name="com.bugtags.library.BugtagsService">
+</service>
+<receiver android:name="com.bugtags.library.BugtagsReceiver">
+<intent-filter>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+</receiver>
+<meta-data android:name="BBDTEK_APPKEY" android:value="e0627c4bab5bf4ce88fccc36a2f3febc">
+</meta-data>
+</application>
+</manifest>

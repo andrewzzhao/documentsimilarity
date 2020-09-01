@@ -1,0 +1,588 @@
+<?xml version="1.0" ?><manifest android:versionCode="272" android:versionName="5.2.0" package="com.kasikorn.retail.mbanking.wap" platformBuildVersionCode="272" platformBuildVersionName="5.2.0" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="21" android:targetSdkVersion="26">
+</uses-sdk>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_CONTACTS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.USE_FINGERPRINT">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CALL_PHONE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS">
+</uses-permission>
+<uses-feature android:name="android.hardware.location.gps">
+</uses-feature>
+<uses-feature android:name="android.hardware.location.network">
+</uses-feature>
+<uses-feature android:name="android.hardware.screen.portrait">
+</uses-feature>
+<uses-feature android:name="android.hardware.fingerprint" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.camera" android:required="false">
+</uses-feature>
+<permission android:name="com.kasikorn.retail.mbanking.wap.provider.ACCESS_DATA" android:protectionLevel="0x00000002">
+</permission>
+<uses-feature android:name="android.hardware.camera.front" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.camera.autofocus" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.camera.flash" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.screen.landscape" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.wifi" android:required="false">
+</uses-feature>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE">
+</uses-permission>
+<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE">
+</uses-permission>
+<uses-permission android:name="com.sec.android.provider.badge.permission.READ">
+</uses-permission>
+<uses-permission android:name="com.sec.android.provider.badge.permission.WRITE">
+</uses-permission>
+<uses-permission android:name="com.htc.launcher.permission.READ_SETTINGS">
+</uses-permission>
+<uses-permission android:name="com.htc.launcher.permission.UPDATE_SHORTCUT">
+</uses-permission>
+<uses-permission android:name="com.sonyericsson.home.permission.BROADCAST_BADGE">
+</uses-permission>
+<uses-permission android:name="com.sonymobile.home.permission.PROVIDER_INSERT_BADGE">
+</uses-permission>
+<uses-permission android:name="com.anddoes.launcher.permission.UPDATE_COUNT">
+</uses-permission>
+<uses-permission android:name="com.majeur.launcher.permission.UPDATE_BADGE">
+</uses-permission>
+<uses-permission android:name="com.huawei.android.launcher.permission.CHANGE_BADGE">
+</uses-permission>
+<uses-permission android:name="com.huawei.android.launcher.permission.READ_SETTINGS">
+</uses-permission>
+<uses-permission android:name="com.huawei.android.launcher.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_APP_BADGE">
+</uses-permission>
+<uses-permission android:name="com.oppo.launcher.permission.READ_SETTINGS">
+</uses-permission>
+<uses-permission android:name="com.oppo.launcher.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="me.everything.badger.permission.BADGE_COUNT_READ">
+</uses-permission>
+<uses-permission android:name="me.everything.badger.permission.BADGE_COUNT_WRITE">
+</uses-permission>
+<application android:allowBackup="false" android:hardwareAccelerated="true" android:icon="@7F0E0000" android:label="K PLUS" android:largeHeap="true" android:name="com.kasikorn.retail.mbanking.kplus.ProtectedKPlusApplication" android:resizeableActivity="false" android:roundIcon="@7F0E0000" android:supportsRtl="true" android:theme="@7F110007">
+<provider android:authorities="com.kasikorn.retail.mbanking.wap.provider" android:exported="true" android:name="com.kasikorn.retail.mbanking.kplus.provider.KPlusContentProvider" android:permission="com.kasikorn.retail.mbanking.wap.provider.ACCESS_DATA">
+</provider>
+<meta-data android:name="com.google.android.gms.vision.DEPENDENCIES" android:value="barcode">
+</meta-data>
+<meta-data android:name="io.fabric.ApiKey" android:value="69c26c6fd4a2f3bbdbdd6414d827898b6dfd2501">
+</meta-data>
+<meta-data android:name="com.google.firebase.messaging.default_notification_channel_id" android:value="id_product">
+</meta-data>
+<meta-data android:name="com.google.firebase.messaging.id_product" android:value="id_product">
+</meta-data>
+<meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@7F1000A9">
+</meta-data>
+<meta-data android:name="com.facebook.sdk.AutoLogAppEventsEnabled" android:value="true">
+</meta-data>
+<meta-data android:name="com.facebook.sdk.CodelessDebugLogEnabled" android:value="false">
+</meta-data>
+<service android:exported="false" android:name="com.kasikorn.retail.mbanking.kplus.firebase.KPlusFirebaseMessagingService">
+<intent-filter>
+<action android:name="com.google.firebase.MESSAGING_EVENT">
+</action>
+</intent-filter>
+</service>
+<activity android:configChanges="0x000004A0" android:name="com.kasikorn.retail.mbanking.kplus.home.activity.SplashScreenActivity" android:screenOrientation="1" android:theme="@7F110007">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:launchMode="2" android:name="com.kasikorn.retail.mbanking.kplus.home.activity.DeepLinkActivity" android:screenOrientation="1" android:theme="@7F110007">
+<intent-filter android:autoVerify="true">
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="kbank.kplus">
+</data>
+</intent-filter>
+<intent-filter android:autoVerify="true">
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="kbank.kplus.kplusshop">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.home.activity.DynamicLinkActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.kasikorn.retail.mbanking.kplus.topup.activity.TopUpMainActivity" android:screenOrientation="1" android:theme="@7F110007" android:windowSoftInputMode="0x00000021">
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.bill.activity.BillPaymentMainActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000031">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.kasikorn.retail.mbanking.kplus.bill.activity.BillPaymentFavoriteActivity" android:screenOrientation="1" android:theme="@7F110007" android:windowSoftInputMode="0x00000021">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.kasikorn.retail.mbanking.kplus.topup.activity.TopUpFavoriteActivity" android:screenOrientation="1" android:theme="@7F110007" android:windowSoftInputMode="0x00000021">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.kasikorn.retail.mbanking.kplus.home.activity.HomeActivity" android:screenOrientation="1" android:theme="@7F110007">
+</activity>
+<provider android:authorities="com.kasikorn.retail.mbanking.wap.fileprovider" android:exported="false" android:grantUriPermissions="true" android:name="android.support.v4.content.FileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F140005">
+</meta-data>
+</provider>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.contactpicker.activity.ContactPickerActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.merchantpicker.activity.MerchantPickerActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.merchantpicker.activity.SelectMerchantActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.transfer.activity.SelectMyAccountActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.transfer.activity.TransferMyAccountActivity" android:screenOrientation="1" android:theme="@7F110007" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.statement.activity.StatementActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.statement.activity.RequestStatementResultActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.receipt.activity.ReceiptActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.transfer.activity.SelectBankListActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.transfer.activity.SelectBankListFirstPageActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.transfer.activity.TransferToOtherAccountActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000021">
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.transfer.activity.TransferToKBankAccountActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000021">
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.transfer.activity.TransferFavoriteToOtherAccountActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000021">
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.transfer.activity.TransferFavoriteToKBankAccountActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000021">
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.banner.BannerWebViewActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.transfer.activity.TransferPromptPayActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000021">
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.schedule.activity.MyScheduleActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.transfer.activity.TransferMobileActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000021">
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.accountsetting.activity.AccountSettingMainActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.accountsetting.activity.AccountSettingEditNameActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.accountsetting.activity.CreditCardSettingMainActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.accountsetting.activity.CreditCardSettingEditNameActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.accountsetting.activity.CreditCardSettingActivateActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.accountsetting.activity.CreditCardSettingActivateResultActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.util.cropimagelibrary.CropImageActivity">
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.initaildebitcard.activity.DebitCardInitialPinCodeActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.requesttopay.activity.RequestToPayActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.requesttopay.activity.RequestToPayConfirmActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000021">
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.requesttopay.activity.RequestToPayResultActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.settings.activity.ApplicationsSettingActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.settings.activity.NotificationSettingActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.settings.activity.ApplicationSettingToggleDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.settings.activity.TranSactionLimitSuccessActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.settings.activity.ReceiveMoneyPhoneActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.settings.activity.QuickPayActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.issuedebit.activity.IssueDebitCardActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.issuedebit.activity.IssueDebitTermAndConditionActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.accountsetting.activity.SuspendDebitCardActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.accountsetting.activity.SuspendDebitCardResultActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.accountsetting.activity.ChangeLimitActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.settings.activity.SettingActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.settings.activity.ProfileSettingActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.favorite.activity.FavoriteMainActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.favorite.activity.FavoriteTransactionActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.common.pin.activity.LoginActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.settings.activity.ChangePinActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.settings.activity.ChangePinCompleteActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.settings.activity.EmailSettingActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.otherservice.activity.OtherServiceActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.accountsetting.activity.IncreaseMoneyLimitActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.accountsetting.activity.IncreaseMoneyLimitRespondActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.kasikorn.retail.mbanking.kplus.quickpay.activity.QuickPayScannerMainActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.quickpay.activity.ImagePreviewActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.otherservice.activity.RegisterServiceActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.datapicker.activity.DataPickerActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.travelinsurance.activity.TravelInsuranceActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.registeraccount.activity.RegisterAccountActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.registerpromptpay.activity.RegisterPromptPayActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.registerpromptpay.activity.RegisterPromptPayManagerActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.smstransactionalert.activity.TransactionAlertActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.notification.activity.NotificationActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.notification.activity.NotificationViewActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.kasikorn.retail.mbanking.kplus.addressform.activity.AddressFormActivity" android:screenOrientation="1" android:theme="@7F110007" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.kasikorn.retail.mbanking.kplus.addressform.activity.AddressFormEngActivity" android:screenOrientation="1" android:theme="@7F110007" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.kasikorn.retail.mbanking.kplus.travelinsurance.activity.InsuredInfoFormActivity" android:screenOrientation="1" android:theme="@7F110007" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.transfer.activity.SelectCategoryActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.partner.activity.ErrorDeepLinkActivity" android:screenOrientation="1">
+</activity>
+<activity android:autoRemoveFromRecents="true" android:name="com.kasikorn.retail.mbanking.kplus.partner.activity.ExitDeepLinkActivity" android:screenOrientation="1" android:theme="@android:01030055">
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.partner.activity.InquireAppConsentActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.cunex.activity.CuNexIssueDebitCardActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.cunex.activity.PartnerCompletionFullPageActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.settings.activity.AuthorizedAppActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.travelinsurance.activity.InsuranceDetailWebViewActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.kasikorn.retail.mbanking.kplus.loan.activity.LoanActivity" android:screenOrientation="1" android:theme="@7F110007" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.favorite.activity.SelectFavoriteTypeActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.mutualfund.activity.MutualFundHomeActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.kasikorn.retail.mbanking.kplus.mutualfund.activity.MutualFundCurrentActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.mutualfund.activity.MutualFundSummaryActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.life.activity.MyMemberActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.kasikorn.retail.mbanking.kplus.mutualfund.activity.MutualFundSellActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.kasikorn.retail.mbanking.kplus.mutualfund.activity.MutualFundBuyActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.transfer.activity.TransferFavoriteMobileActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000021">
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.transfer.activity.TransferFavoritePromptPayActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000021">
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.transfer.activity.TransferFavoriteMyAccountActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000021">
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.mutualfund.activity.MutualFundHistoryActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.quickpay.activity.TransferKPlusShopActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.mutualfund.activity.MutualFundListSearchActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.mutualfund.activity.MutualFundBuySelectAccountActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.life.activity.RedeemStampActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.transactions.TransactionActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.quickpay.activity.TransferQuickPayActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.quickpay.activity.VerifySlipActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.webform.activity.WebFormMutualFundActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.webform.activity.BaseWebFormActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.facebook.activity.PartnerPaymentActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.errorfullpage.activity.ErrorFullPageActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.errorfullpage.activity.StopWorkingActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.errorfullpage.activity.SuccessFullPageActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.life.activity.ScanQRCodeActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.mutualfund.activity.MutualFundRegAccountActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000021">
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.common.touch.activity.VerifyTouchAndPinActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.mutualfund.activity.FundFactSheetActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.travelinsurance.activity.InsurancePlanDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.addaccountandcard.activity.AddAccountAndCardActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.addaccountandcard.activity.AddAccountResultActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.addaccountandcard.activity.AddCardResultActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.emailedit.activity.EmailEditActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.esavingclose.activity.ESavingCloseWithMoneyActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.esavingclose.activity.ESavingCloseWithoutMoneyActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.myport.activity.MyPortHomeActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.myport.activity.MyPortDepositActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.loan.activity.MyPersonalLoanActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.loan.activity.MyPromissoryNoteLoanActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.loan.activity.MyOverdraftLoanActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.loan.activity.MyLetterGuaranteeLoanActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.loan.activity.LoanProductsActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.cardless.activity.CardLessActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.cardless.activity.CardLessSummaryActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.cardless.activity.CardLessInfoActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.cardless.activity.CardLessQuickPayActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.myport.activity.MyPortFundActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.myport.activity.MyPortSetActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.onboard.activity.NewFeatureActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.onboard.activity.OnBoardBaseIframeActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.cardless.activity.CardLessScannerQrActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.banner.BannerImageActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.spendingtracker.activity.SpendingTrackerActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.spendingtracker.activity.SpendingTrackerDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.onboard.activity.RegistrationViaAtmHowToActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.mutualfund.activity.TermAndConditionActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.mutualfund.activity.MutualFundRiskEstimateActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.myport.activity.MyPortSettingActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.quickpay.activity.QuickPayBillPaymentActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.quickpay.activity.QuickPaySelectMerchantActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.errorfullpage.activity.WarningFullPageActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.beacon.BeaconRegistrationActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.loan.activity.MyPersonalLoanDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.more.activity.ContactUsActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.favorite.activity.FavoriteSuccessActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.errorfullpage.activity.ODDCompleteFullPageActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.settings.activity.ManageAccountActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.interfund.activity.InterFundActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000030">
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.life.activity.ThirdPartyWebviewActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.datapicker.activity.CountryMultiplePickerActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.datapicker.activity.NameInitPickerActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.datapicker.activity.NationalityPickerActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.settings.activity.ThemeActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.settings.activity.ThemeDownloadActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.plusrecycleview.showcase.activity.PlusRecycleViewActivity">
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.commonpayment.activity.CommonPaymentMainActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.slip.activity.SlipActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.webform.activity.CommonAuthenActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.webform.activity.WebFormIDingIModeActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.commonverifyemail.activity.CommonVerifyEmailActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.more.activity.MoreWebViewActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.insurance.presentation.main.InsuranceMainActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.insurance.presentation.personalaccident.PersonalAccidentActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.webform.activity.OpenWebViewFormURLActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.webform.activity.UniversalLinkAuthenActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.insurance.presentation.travel.TravelInsuranceMainActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000011">
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.insurance.presentation.travel.schedule.country.TravelSchedulePickerCountryActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.insurance.presentation.terms.InsuranceTermsConditionActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.insurance.presentation.category.InsuranceCategoryActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.insurance.presentation.travel.assuredinfo.assureddetail.TravelAssuredDetailActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.insurance.presentation.travel.assuredinfo.assureddetail.prefix.PrefixPickerActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.kasikorn.retail.mbanking.kplus.insurance.presentation.payment.InsurancePaymentActivity" android:screenOrientation="1">
+</activity>
+<receiver android:name="com.kasikorn.retail.mbanking.kplus.firebase.NotificationBroadcastReceiver">
+<intent-filter>
+<action android:name="ACTION_UPDATE_BADGE">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name="com.kasikorn.retail.mbanking.kplus.firebase.NotificationBroadcastReceiverAndroidO">
+</receiver>
+<receiver android:name="com.kasikorn.retail.mbanking.kplus.receipt.selectPlanFragment.analytics.ApplicationSelectorReceiver">
+</receiver>
+<receiver android:name="com.kasikorn.retail.mbanking.kplus.quickpay.analytics.QuickPayApplicationSelectorReceiver">
+</receiver>
+<meta-data android:name="com.sec.android.support.multiwindow" android:value="false">
+</meta-data>
+<meta-data android:name="com.samsung.android.sdk.multiwindow.multiinstance.enable" android:value="false">
+</meta-data>
+<meta-data android:name="com.samsung.android.sdk.multiwindow.penwindow.enable" android:value="false">
+</meta-data>
+<activity android:name="com.karumi.dexter.DexterActivity" android:theme="@7F1100AD">
+</activity>
+<activity android:configChanges="0x000005B0" android:name="com.facebook.FacebookActivity" android:theme="@7F1101B0">
+</activity>
+<activity android:name="com.facebook.CustomTabMainActivity">
+</activity>
+<activity android:name="com.facebook.CustomTabActivity">
+</activity>
+<activity android:clearTaskOnLaunch="true" android:name="com.journeyapps.barcodescanner.CaptureActivity" android:screenOrientation="6" android:stateNotNeeded="true" android:theme="@7F110253" android:windowSoftInputMode="0x00000003">
+</activity>
+<service android:exported="true" android:name="com.google.firebase.messaging.FirebaseMessagingService">
+<intent-filter android:priority="-500">
+<action android:name="com.google.firebase.MESSAGING_EVENT">
+</action>
+</intent-filter>
+</service>
+<service android:exported="false" android:name="com.google.firebase.components.ComponentDiscoveryService">
+<meta-data android:name="com.google.firebase.components:com.google.firebase.dynamiclinks.internal.FirebaseDynamicLinkRegistrar" android:value="com.google.firebase.components.ComponentRegistrar">
+</meta-data>
+<meta-data android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar" android:value="com.google.firebase.components.ComponentRegistrar">
+</meta-data>
+<meta-data android:name="com.google.firebase.components:com.google.firebase.iid.Registrar" android:value="com.google.firebase.components.ComponentRegistrar">
+</meta-data>
+</service>
+<receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.analytics.AnalyticsReceiver">
+</receiver>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.analytics.AnalyticsService">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.analytics.AnalyticsJobService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementReceiver">
+</receiver>
+<receiver android:enabled="true" android:exported="true" android:name="com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver" android:permission="android.permission.INSTALL_PACKAGES">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementService">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementJobService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<receiver android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+</intent-filter>
+</receiver>
+<service android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdService">
+<intent-filter android:priority="-500">
+<action android:name="com.google.firebase.INSTANCE_ID_EVENT">
+</action>
+</intent-filter>
+</service>
+<activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:01030010">
+</activity>
+<provider android:authorities="com.kasikorn.retail.mbanking.wap.firebaseinitprovider" android:exported="false" android:initOrder="100" android:name="com.google.firebase.provider.FirebaseInitProvider">
+</provider>
+<meta-data android:name="com.google.android.gms.version" android:value="@7F0B0032">
+</meta-data>
+<meta-data android:name="com.bumptech.glide.integration.okhttp3.OkHttpGlideModule" android:value="GlideModule">
+</meta-data>
+<provider android:authorities="com.kasikorn.retail.mbanking.wap.crashlyticsinitprovider" android:exported="false" android:initOrder="90" android:name="com.crashlytics.android.CrashlyticsInitProvider">
+</provider>
+<provider android:authorities="com.kasikorn.retail.mbanking.wap.lifecycle-trojan" android:exported="false" android:multiprocess="true" android:name="android.arch.lifecycle.ProcessLifecycleOwnerInitializer">
+</provider>
+<provider android:authorities="com.kasikorn.retail.mbanking.wap.MarketingInitProvider" android:exported="false" android:name="com.facebook.marketing.internal.MarketingInitProvider">
+</provider>
+<provider android:authorities="com.kasikorn.retail.mbanking.wap.FacebookInitProvider" android:exported="false" android:name="com.facebook.internal.FacebookInitProvider">
+</provider>
+<receiver android:exported="false" android:name="com.facebook.CurrentAccessTokenExpirationBroadcastReceiver">
+<intent-filter>
+<action android:name="com.facebook.sdk.ACTION_CURRENT_ACCESS_TOKEN_CHANGED">
+</action>
+</intent-filter>
+</receiver>
+</application>
+</manifest>

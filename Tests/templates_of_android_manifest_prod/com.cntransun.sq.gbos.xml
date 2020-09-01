@@ -1,0 +1,142 @@
+<?xml version="1.0" ?><manifest android:versionCode="2" android:versionName="1.0" package="com.cntransun.sq.gbos" platformBuildVersionCode="19" platformBuildVersionName="4.4.2-1456859" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="15" android:targetSdkVersion="15">
+</uses-sdk>
+<supports-screens android:anyDensity="true" android:largeScreens="true" android:normalScreens="true" android:smallScreens="true" android:xlargeScreens="true">
+</supports-screens>
+<permission android:name="com.cntransun.sq.gbos.permission.JPUSH_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="com.cntransun.sq.gbos.permission.JPUSH_MESSAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_USER_PRESENT">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_CONFIGURATION">
+</uses-permission>
+<application android:allowBackup="true" android:icon="@7F0200B1" android:label="@7F0B0012" android:largeHeap="true" android:name="com.stub.StubApp" android:qihoo="activity" android:theme="@7F080039">
+<meta-data android:name="com.amap.api.v2.apikey" android:value="a3463a9a52f32f5f4e1863b89068e06a">
+</meta-data>
+<service android:enabled="true" android:exported="false" android:name="cn.jpush.android.service.PushService">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.REGISTER">
+</action>
+<action android:name="cn.jpush.android.intent.REPORT">
+</action>
+<action android:name="cn.jpush.android.intent.PushService">
+</action>
+<action android:name="cn.jpush.android.intent.PUSH_TIME">
+</action>
+</intent-filter>
+</service>
+<receiver android:enabled="true" android:name="cn.jpush.android.service.PushReceiver">
+<intent-filter android:priority="1000">
+<action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY">
+</action>
+<category android:name="com.cntransun.sq.gbos">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.USER_PRESENT">
+</action>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_ADDED">
+</action>
+<action android:name="android.intent.action.PACKAGE_REMOVED">
+</action>
+<data android:scheme="package">
+</data>
+</intent-filter>
+</receiver>
+<activity android:configChanges="0x000000A0" android:name="cn.jpush.android.ui.PushActivity" android:theme="@android:01030010">
+<intent-filter>
+<action android:name="cn.jpush.android.ui.PushActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="cn.gbosdemo">
+</category>
+</intent-filter>
+</activity>
+<activity android:excludeFromRecents="true" android:launchMode="0" android:name="com.stub.plugin.Stub01" android:noHistory="true" android:taskAffinity="com.cntransun.sq.gbos.affinity">
+</activity>
+<service android:enabled="true" android:exported="true" android:name="com.stub.plugin.Stub02">
+</service>
+<receiver android:enabled="true" android:exported="false" android:name="com.stub.plugin.Stub03">
+</receiver>
+<provider android:authorities="com.cntransun.sq.gbos.COMMONPROVIDER" android:exported="true" android:name="com.stub.plugin.Stub04">
+</provider>
+<service android:enabled="true" android:exported="false" android:name="cn.jpush.android.service.DownloadService">
+</service>
+<receiver android:name="cn.jpush.android.service.AlarmReceiver">
+</receiver>
+<meta-data android:name="JPUSH_CHANNEL" android:value="developer-default">
+</meta-data>
+<meta-data android:name="JPUSH_APPKEY" android:value="4905aa39ec7ea12028c53aca">
+</meta-data>
+<activity android:label="@7F0B0012" android:name="com.cntransun.sq.gbos.LoginActivity" android:screenOrientation="1" android:theme="@android:010300F0" android:windowSoftInputMode="0x00000010">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:label="@7F0B0012" android:name="com.cntransun.sq.gbos.MainActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F0B0081" android:name="com.cntransun.sq.gbos.vehiclemonitoring.VehicleMonitoringMapActivity" android:screenOrientation="1" android:theme="@android:010300F0">
+</activity>
+<activity android:label="@7F0B0082" android:name="com.cntransun.sq.gbos.vehiclemonitoring.VehicleMonitoringTraceActivity" android:screenOrientation="1" android:theme="@android:010300F0">
+</activity>
+<activity android:label="@7F0B0080" android:name="com.cntransun.sq.gbos.systemsettings.FollowedVehiclesActivity" android:screenOrientation="1" android:theme="@android:010300F0">
+</activity>
+<activity android:label="@7F0B0083" android:name="com.cntransun.sq.gbos.systemsettings.VehicleStatusActivity" android:screenOrientation="1" android:theme="@android:010300F0">
+</activity>
+<activity android:label="@7F0B0084" android:name="com.cntransun.sq.gbos.systemsettings.VehiclesPhotoActivity" android:screenOrientation="1" android:theme="@android:010300F0">
+</activity>
+<activity android:label="@7F0B0085" android:name="com.cntransun.sq.gbos.systemsettings.VehiclesPhotoDetailsActivity" android:screenOrientation="1" android:theme="@android:010300F0">
+</activity>
+<receiver android:enabled="true" android:name="com.cntransun.sq.gbos.JPushReceiver">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED">
+</action>
+<category android:name="com.cntransun.sq.gbos">
+</category>
+</intent-filter>
+</receiver>
+<meta-data android:name="UMENG_APPKEY" android:value="53fd9c37fd98c53db90273ba">
+</meta-data>
+<activity android:configChanges="0x00000090" android:launchMode="2" android:name="com.umeng.socialize.view.ShareActivity" android:noHistory="true" android:theme="@7F080053" android:windowSoftInputMode="0x00000014">
+</activity>
+<activity android:configChanges="0x000004A0" android:exported="true" android:name="com.cntransun.sq.gbos.wxapi.WXEntryActivity" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+</application>
+</manifest>

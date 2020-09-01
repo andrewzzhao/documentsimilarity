@@ -1,0 +1,138 @@
+<?xml version="1.0" ?><manifest android:versionCode="7" android:versionName="1.7" package="com.bodekjan.uyweather" platformBuildVersionCode="23" platformBuildVersionName="6.0-2438415" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="16" android:targetSdkVersion="23">
+</uses-sdk>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_USER_PRESENT">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-permission android:name="android.permission.BROADCAST_STICKY">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_LOGS">
+</uses-permission>
+<uses-permission android:name="android.permission.CALL_PHONE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-permission android:name="android.permission.SET_DEBUG_APP">
+</uses-permission>
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="android.permission.USE_CREDENTIALS">
+</uses-permission>
+<uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT">
+</uses-permission>
+<application android:allowBackup="true" android:icon="@7F02006B" android:label="@7F07001D" android:name="com.qihoo.util.StubApp1436275778" android:qihoo="activity" android:supportsRtl="true" android:theme="@7F0A0022">
+<meta-data android:name="UMENG_APPKEY" android:value="580c9edac895764480000c1c">
+</meta-data>
+<meta-data android:name="UMENG_CHANNEL" android:value="BAIDU">
+</meta-data>
+<activity android:name="com.bodekjan.uyweather.activities.MainActivity">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:launchMode="0" android:name="com.qihoo.util.StartActivity" android:noHistory="true">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<service android:name="com.qihoo.util.UpdateService">
+</service>
+<activity android:exported="false" android:name="com.qihoo.util.appupdate.AppUpdateActivity" android:theme="@android:0103000F">
+</activity>
+<activity android:excludeFromRecents="true" android:exported="false" android:name="com.qihoo.util.CommonActivity" android:theme="@android:0103005F">
+</activity>
+<service android:enabled="true" android:exported="true" android:name="com.qihoo.util.CommonService">
+</service>
+<receiver android:enabled="true" android:exported="false" android:name="com.qihoo.util.CommonReceiver">
+</receiver>
+<provider android:authorities="com.bodekjan.uyweather.COMMONPROVIDER" android:exported="true" android:name="com.qihoo.util.CommonProvider">
+</provider>
+<activity android:name="com.bodekjan.uyweather.activities.AddCityActivity">
+</activity>
+<activity android:name="com.bodekjan.uyweather.activities.CityActivity">
+</activity>
+<activity android:name="com.bodekjan.uyweather.activities.WebActivity">
+</activity>
+<activity android:name="com.bodekjan.uyweather.activities.SettingActivity">
+</activity>
+<activity android:name="com.bodekjan.uyweather.activities.TranslateActivity">
+</activity>
+<activity android:name="com.bodekjan.uyweather.activities.CompassActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:exported="true" android:name="com.bodekjan.uyweather.wxapi.WXEntryActivity" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<service android:name="com.bodekjan.uyweather.service.WeatherService">
+</service>
+<activity android:configChanges="0x00000480" android:name="com.bodekjan.uyweather.widget.ImageSelectorActivity" android:theme="@7F0A0022">
+</activity>
+<receiver android:label="5x1 YURTUM" android:name="com.bodekjan.uyweather.widget.FullSizeWidget">
+<intent-filter>
+<action android:name="android.appwidget.action.APPWIDGET_UPDATE">
+</action>
+<action android:name="com.bodekjan.homechanged">
+</action>
+</intent-filter>
+<meta-data android:name="android.appwidget.provider" android:resource="@7F060001">
+</meta-data>
+</receiver>
+<receiver android:label="5x1 YURTUM" android:name="com.bodekjan.uyweather.widget.ExtraSizeWidget">
+<intent-filter>
+<action android:name="android.appwidget.action.APPWIDGET_UPDATE">
+</action>
+<action android:name="com.bodekjan.homechanged">
+</action>
+<action android:name="com.bodekjan.homechangedxxx">
+</action>
+<action android:name="com.bodekjan.timeupdate">
+</action>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+<action android:name="android.intent.action.USER_PRESENT">
+</action>
+</intent-filter>
+<meta-data android:name="android.appwidget.provider" android:resource="@7F060000">
+</meta-data>
+</receiver>
+<receiver android:name="com.bodekjan.uyweather.receiver.ServiceReceiver">
+</receiver>
+<service android:name="com.bodekjan.uyweather.service.LocalService">
+</service>
+<service android:name="com.bodekjan.uyweather.service.RemoteService" android:process=".remoteservice">
+</service>
+<activity android:name="com.wandoujia.ads.sdk.activities.AppDetailActivity" android:theme="@7F0A00B7">
+</activity>
+<activity android:name="com.wandoujia.ads.sdk.activities.AppWallActivity" android:theme="@7F0A00B7">
+</activity>
+<activity android:name="com.wandoujia.ads.sdk.activities.InterstitialActivity" android:theme="@7F0A00EB">
+</activity>
+<service android:name="com.wandoujia.ads.sdk.download.AppDownloadService" android:process=":app_download">
+</service>
+<activity android:configChanges="0x00000480" android:name="me.nereo.multi_image_selector.MultiImageSelectorActivity">
+</activity>
+</application>
+</manifest>

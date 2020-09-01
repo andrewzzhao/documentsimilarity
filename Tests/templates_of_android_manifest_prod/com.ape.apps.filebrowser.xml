@@ -1,0 +1,292 @@
+<?xml version="1.0" ?><manifest android:compileSdkVersion="28" android:compileSdkVersionCodename="9" android:versionCode="54" android:versionName="2.5.0" package="com.ape.apps.filebrowser" platformBuildVersionCode="28" platformBuildVersionName="9" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="21" android:targetSdkVersion="28">
+</uses-sdk>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT">
+</uses-permission>
+<uses-permission android:name="android.permission.MANAGE_DOCUMENTS">
+</uses-permission>
+<uses-feature android:name="android.hardware.gamepad" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.software.leanback" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.touchscreen" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.location" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.location.network" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.type.television" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.location.gps" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.telephony" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.camera" android:required="false">
+</uses-feature>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES">
+</uses-permission>
+<uses-permission android:name="com.android.vending.BILLING">
+</uses-permission>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-feature android:name="android.hardware.camera.autofocus" android:required="false">
+</uses-feature>
+<application android:allowBackup="true" android:appComponentFactory="android.support.v4.app.CoreComponentFactory" android:icon="@7F0B0002" android:label="@7F0D002F" android:name="com.ape.apps.filebrowser.FileBrowserApplication" android:resizeableActivity="true" android:theme="@7F0E0005">
+<meta-data android:name="com.samsung.android.sdk.multiwindow.enable" android:value="true">
+</meta-data>
+<meta-data android:name="com.samsung.android.sdk.multiwindow.multiinstance.enable" android:value="true">
+</meta-data>
+<meta-data android:name="com.sec.android.support.multiwindow" android:value="true">
+</meta-data>
+<meta-data android:name="com.samsung.android.sdk.multiwindow.penwindow.enable" android:value="true">
+</meta-data>
+<meta-data android:name="com.sec.android.multiwindow.STYLE" android:value="fixedRatio">
+</meta-data>
+<uses-library android:name="com.sec.android.app.multiwindow" android:required="false">
+</uses-library>
+<activity android:label="@7F0D002F" android:name="com.ape.apps.filebrowser.MainActivity">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+<category android:name="android.intent.category.MULTIWINDOW_LAUNCHER">
+</category>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="true" android:label="Save As" android:name="com.ape.apps.filebrowser.SaveAsDialog">
+</activity>
+<activity android:exported="true" android:label="Open" android:name="com.ape.apps.filebrowser.PickerDialog">
+<intent-filter>
+<action android:name="android.intent.action.GET_CONTENT">
+</action>
+<data android:mimeType="*/*">
+</data>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.OPENABLE">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="true" android:icon="@7F0600C7" android:label="Text Editor" android:name="com.ape.apps.filebrowser.TextEditor">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+<category android:name="android.intent.category.MULTIWINDOW_LAUNCHER">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<action android:name="android.intent.action.EDIT">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:scheme="content">
+</data>
+<data android:scheme="file">
+</data>
+<data android:mimeType="text/plain">
+</data>
+<data android:host="*">
+</data>
+<data android:pathPattern=".*\.txt">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<action android:name="android.intent.action.EDIT">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:scheme="content">
+</data>
+<data android:scheme="file">
+</data>
+<data android:mimeType="application/javascript">
+</data>
+<data android:host="*">
+</data>
+<data android:pathPattern=".*\.js">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<action android:name="android.intent.action.EDIT">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:scheme="content">
+</data>
+<data android:scheme="file">
+</data>
+<data android:mimeType="application/xml">
+</data>
+<data android:host="*">
+</data>
+<data android:pathPattern=".*\.xml">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<action android:name="android.intent.action.EDIT">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:scheme="content">
+</data>
+<data android:scheme="file">
+</data>
+<data android:mimeType="application/x-php">
+</data>
+<data android:host="*">
+</data>
+<data android:pathPattern=".*\.php">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<action android:name="android.intent.action.EDIT">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:scheme="content">
+</data>
+<data android:scheme="file">
+</data>
+<data android:mimeType="text/css">
+</data>
+<data android:host="*">
+</data>
+<data android:pathPattern=".*\.css">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<action android:name="android.intent.action.EDIT">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:scheme="content">
+</data>
+<data android:scheme="file">
+</data>
+<data android:mimeType="text/html">
+</data>
+<data android:host="*">
+</data>
+<data android:pathPattern=".*\.html">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<action android:name="android.intent.action.EDIT">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:scheme="content">
+</data>
+<data android:scheme="file">
+</data>
+<data android:mimeType="application/wvp">
+</data>
+<data android:host="*">
+</data>
+<data android:pathPattern=".*\.wvp">
+</data>
+</intent-filter>
+</activity>
+<provider android:authorities="com.ape.apps.filebrowser.fileProvider" android:exported="false" android:grantUriPermissions="true" android:name="android.support.v4.content.FileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F100000">
+</meta-data>
+</provider>
+<activity android:configChanges="0x000004A0" android:name="com.amazon.device.ads.AdActivity">
+</activity>
+<activity android:hardwareAccelerated="true" android:name="com.mobfox.sdk.interstitial.InterstitialActivity" android:theme="@android:01030007">
+</activity>
+<service android:launchMode="1" android:name="com.mobfox.sdk.services.MobFoxService">
+</service>
+<meta-data android:name="com.google.android.gms.ads.APPLICATION_ID" android:value="@7F0D002D">
+</meta-data>
+<activity android:excludeFromRecents="true" android:name="com.ape.apps.library.ImageScannerActivity" android:theme="@7F0E010D">
+</activity>
+<uses-library android:name="org.apache.http.legacy" android:required="false">
+</uses-library>
+<service android:launchMode="1" android:name="com.mobfox.sdk.services.MobFoxService">
+</service>
+<activity android:configChanges="0x000004A0" android:name="com.mopub.common.privacy.ConsentDialogActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.mopub.common.MoPubBrowser">
+</activity>
+<receiver android:name="com.amazon.device.iap.ResponseReceiver">
+<intent-filter>
+<action android:name="com.amazon.inapp.purchasing.NOTIFY" android:permission="com.amazon.inapp.purchasing.Permission.NOTIFY">
+</action>
+</intent-filter>
+</receiver>
+<activity android:configChanges="0x000004A0" android:exported="false" android:name="com.facebook.ads.AudienceNetworkActivity" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x000004A0" android:exported="false" android:name="com.facebook.ads.internal.ipc.RemoteANActivity" android:process=":adnw" android:theme="@android:01030010">
+</activity>
+<service android:exported="false" android:name="com.facebook.ads.internal.ipc.AdsProcessPriorityService">
+</service>
+<service android:exported="false" android:name="com.facebook.ads.internal.ipc.AdsMessengerService" android:process=":adnw">
+</service>
+<activity android:configChanges="0x00000FB0" android:exported="false" android:name="com.google.android.gms.ads.AdActivity" android:theme="@android:0103000F">
+</activity>
+<provider android:authorities="com.ape.apps.filebrowser.mobileadsinitprovider" android:exported="false" android:initOrder="100" android:name="com.google.android.gms.ads.MobileAdsInitProvider">
+</provider>
+<activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:01030010">
+</activity>
+<meta-data android:name="com.google.android.gms.version" android:value="@7F080004">
+</meta-data>
+<activity android:name="com.paypal.android.sdk.payments.PaymentActivity">
+</activity>
+<activity android:name="com.paypal.android.sdk.payments.PaymentMethodActivity">
+</activity>
+<activity android:name="com.paypal.android.sdk.payments.PaymentConfirmActivity">
+</activity>
+<activity android:name="com.paypal.android.sdk.payments.LoginActivity">
+</activity>
+<activity android:name="com.paypal.android.sdk.payments.PayPalFuturePaymentActivity">
+</activity>
+<activity android:name="com.paypal.android.sdk.payments.FuturePaymentConsentActivity">
+</activity>
+<activity android:name="com.paypal.android.sdk.payments.FuturePaymentInfoActivity">
+</activity>
+<activity android:name="com.paypal.android.sdk.payments.PayPalProfileSharingActivity">
+</activity>
+<activity android:name="com.paypal.android.sdk.payments.ProfileSharingConsentActivity">
+</activity>
+<service android:exported="false" android:name="com.paypal.android.sdk.payments.PayPalService">
+</service>
+<meta-data android:name="com.google.android.play.billingclient.version" android:value="2.0.0">
+</meta-data>
+<activity android:configChanges="0x000005B0" android:name="com.android.billingclient.api.ProxyBillingActivity" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="io.card.payment.CardIOActivity">
+</activity>
+<activity android:name="io.card.payment.DataEntryActivity">
+</activity>
+</application>
+</manifest>

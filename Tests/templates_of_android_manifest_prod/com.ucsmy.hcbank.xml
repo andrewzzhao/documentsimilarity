@@ -1,0 +1,314 @@
+<?xml version="1.0" ?><manifest android:versionCode="2" android:versionName="1.0.1" package="com.ucsmy.hcbank" platformBuildVersionCode="24" platformBuildVersionName="7.000000" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="17" android:targetSdkVersion="24">
+</uses-sdk>
+<permission android:name="com.ucsmy.hcbank.permission.JPUSH_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="com.ucsmy.hcbank.permission.JPUSH_MESSAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_USER_PRESENT">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW">
+</uses-permission>
+<uses-permission android:name="android.permission.SYSTEM_OVERLAY_WINDOW">
+</uses-permission>
+<uses-permission android:name="android.permission.CALL_PHONE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.REORDER_TASKS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_CONTACTS">
+</uses-permission>
+<application android:allowBackup="false" android:debuggable="true" android:icon="@7F0200BC" android:label="@7F070018" android:name="com.stub.StubApp" android:protect="activity" android:theme="@7F08003A">
+<meta-data android:name="Mob-AppKey" android:value="1fe4f62da2e74">
+</meta-data>
+<meta-data android:name="Mob-AppSecret" android:value="64cd9fc46ca48903eadb641e8495e9de">
+</meta-data>
+<provider android:authorities="com.ucsmy.hcbank.fileprovider" android:exported="false" android:grantUriPermissions="true" android:name="android.support.v4.content.FileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F050000">
+</meta-data>
+</provider>
+<activity android:icon="@7F0200BC" android:label="@7F070018" android:launchMode="1" android:multiprocess="false" android:name="com.ucsmy.hcbank.modules.login.LoadingActivity" android:screenOrientation="1" android:theme="@7F08009B">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="hcbank">
+</data>
+</intent-filter>
+</activity>
+<activity android:excludeFromRecents="true" android:exported="false" android:launchMode="2" android:name="com.stub.stub02.Stub01" android:noHistory="true" android:taskAffinity="com.ucsmy.hcbank.util" android:theme="@android:0103005F">
+</activity>
+<service android:enabled="true" android:exported="true" android:name="com.stub.stub02.Stub02">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.stub.stub02.Stub03">
+</service>
+<receiver android:enabled="true" android:exported="false" android:name="com.stub.stub02.Stub05">
+</receiver>
+<provider android:authorities="com.ucsmy.hcbank.COMMONPROVIDER" android:exported="true" android:name="com.stub.stub02.Stub04">
+</provider>
+<activity android:configChanges="0x000000A0" android:exported="false" android:launchMode="2" android:name="com.stub.stub05.Stub01" android:screenOrientation="1" android:theme="@android:01030060">
+</activity>
+<service android:exported="false" android:name="com.stub.stub05.Stub02">
+</service>
+<activity android:icon="@7F0200BC" android:label="@7F070018" android:launchMode="1" android:multiprocess="false" android:name="com.ucsmy.hcbank.modules.main.HCMainActivity" android:screenOrientation="1">
+</activity>
+<activity android:icon="@7F0200BC" android:label="@7F070018" android:launchMode="1" android:multiprocess="false" android:name="com.ucsmy.hcbank.modules.login.RegisterActivity" android:screenOrientation="1">
+</activity>
+<activity android:icon="@7F0200BC" android:label="@7F070018" android:launchMode="1" android:multiprocess="false" android:name="com.ucsmy.hcbank.modules.login.LoginActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F070018" android:launchMode="1" android:name="com.ucsmy.hcbank.modules.web.WebViewActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F070018" android:launchMode="1" android:name="com.ucsmy.hcbank.modules.my.invest.AccruedIncomeActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F070018" android:launchMode="1" android:name="com.ucsmy.hcbank.modules.my.invest.InvestmentActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F070018" android:launchMode="1" android:name="com.ucsmy.hcbank.modules.my.invest.TransactionRecordActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F070018" android:launchMode="1" android:name="com.ucsmy.hcbank.modules.message.MessageActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F070018" android:launchMode="1" android:name="com.ucsmy.hcbank.modules.message.MessageDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F070018" android:launchMode="1" android:name="com.ucsmy.hcbank.modules.login.ForgetLoginPwdActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F070018" android:launchMode="1" android:name="com.ucsmy.hcbank.modules.invest.HCInvestDetailActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000013">
+</activity>
+<activity android:label="@7F070018" android:launchMode="1" android:name="com.ucsmy.hcbank.modules.invest.OrderConfirmActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F070018" android:launchMode="1" android:name="com.ucsmy.hcbank.modules.invest.CreateOrderActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F070018" android:launchMode="1" android:name="com.ucsmy.hcbank.modules.invest.PayResultActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F070018" android:launchMode="1" android:name="com.ucsmy.hcbank.modules.my.invest.InvestOrderDetailsActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F070018" android:launchMode="1" android:name="com.ucsmy.hcbank.modules.bank.AddBankCardActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F070018" android:launchMode="1" android:name="com.ucsmy.hcbank.modules.bank.SupportBankListActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F070018" android:launchMode="1" android:name="com.ucsmy.hcbank.modules.sms.InputSmsCodeActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F070018" android:launchMode="1" android:name="com.ucsmy.hcbank.modules.bank.SetPayPwdActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:label="@7F070018" android:launchMode="1" android:name="com.ucsmy.hcbank.modules.bank.InputOldPayPwdActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000014">
+</activity>
+<activity android:label="@7F070018" android:launchMode="1" android:name="com.ucsmy.hcbank.modules.my.UserInfoActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F070018" android:launchMode="1" android:name="com.ucsmy.hcbank.modules.my.ModifyMobileActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000014">
+</activity>
+<activity android:label="@7F070018" android:launchMode="1" android:name="com.ucsmy.hcbank.modules.my.VerifyIdentityActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000014">
+</activity>
+<activity android:label="@7F070018" android:launchMode="1" android:name="com.ucsmy.hcbank.modules.my.AccountInfoSafeActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F070018" android:launchMode="1" android:name="com.ucsmy.hcbank.modules.gestures.GestureEditActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F070018" android:launchMode="1" android:name="com.ucsmy.hcbank.modules.gestures.GestureVerifyActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F070018" android:launchMode="1" android:name="com.ucsmy.hcbank.modules.bank.MyBankCardActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F070018" android:launchMode="1" android:name="com.ucsmy.hcbank.modules.my.ModifyLoginPwdActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000014">
+</activity>
+<activity android:label="@7F070018" android:launchMode="1" android:name="com.ucsmy.hcbank.modules.my.UserFeedbackActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F070018" android:launchMode="1" android:name="com.ucsmy.hcbank.modules.my.CommonProblemActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F070018" android:launchMode="1" android:name="com.ucsmy.hcbank.modules.login.WelcomeActivity" android:screenOrientation="1" android:theme="@7F08009B">
+</activity>
+<activity android:label="@7F070018" android:name="com.ucsmy.hcbank.modules.my.AboutSetActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F070018" android:name="com.ucsmy.hcbank.modules.bank.SelectBankCardActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F070018" android:name="com.ucsmy.hcbank.modules.bank.ModifyBankCardActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:exported="false" android:name="cn.jpush.android.ui.PushActivity" android:theme="@android:01030010">
+<intent-filter>
+<action android:name="cn.jpush.android.ui.PushActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="com.ucsmy.hcbank">
+</category>
+</intent-filter>
+</activity>
+<activity android:name="com.ucsmy.hcbank.modules.coupon.MyCouponActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ucsmy.hcbank.modules.coupon.UnUseCouponActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ucsmy.hcbank.modules.cash.MyCashActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ucsmy.hcbank.modules.cash.CashDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ucsmy.hcbank.modules.cash.ApplyCashActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000013">
+</activity>
+<activity android:name="com.ucsmy.hcbank.modules.cash.ApplyCashPayActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ucsmy.hcbank.modules.coupon.SelectCouponActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ucsmy.hcbank.modules.cash.CashPayResultActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ucsmy.hcbank.modules.test.TestActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ucsmy.hcbank.modules.base.activity.TipActivity" android:screenOrientation="1" android:theme="@7F080139">
+</activity>
+<activity android:name="com.ucsmy.hcbank.modules.main.HomeIncomeTipActivity" android:screenOrientation="1" android:theme="@7F080139">
+</activity>
+<service android:enabled="true" android:exported="false" android:name="cn.jpush.android.service.DownloadService">
+</service>
+<service android:enabled="true" android:exported="false" android:name="cn.jpush.android.service.PushService" android:process=":pushcore">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.REGISTER">
+</action>
+<action android:name="cn.jpush.android.intent.REPORT">
+</action>
+<action android:name="cn.jpush.android.intent.PushService">
+</action>
+<action android:name="cn.jpush.android.intent.PUSH_TIME">
+</action>
+</intent-filter>
+</service>
+<receiver android:enabled="true" android:exported="false" android:name="cn.jpush.android.service.PushReceiver" android:process=":pushcore">
+<intent-filter android:priority="1000">
+<action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY">
+</action>
+<category android:name="com.ucsmy.hcbank">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.USER_PRESENT">
+</action>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_ADDED">
+</action>
+<action android:name="android.intent.action.PACKAGE_REMOVED">
+</action>
+<data android:scheme="package">
+</data>
+</intent-filter>
+</receiver>
+<receiver android:exported="false" android:name="cn.jpush.android.service.AlarmReceiver">
+</receiver>
+<receiver android:enabled="true" android:exported="false" android:name="com.ucsmy.hcbank.modules.push.JPushReceiver">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.REGISTRATION">
+</action>
+<action android:name="cn.jpush.android.intent.UNREGISTRATION">
+</action>
+<action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED">
+</action>
+<action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED">
+</action>
+<action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED">
+</action>
+<action android:name="cn.jpush.android.intent.ACTION_RICHPUSH_CALLBACK">
+</action>
+<action android:name="cn.jpush.android.intent.CONNECTION">
+</action>
+<category android:name="com.ucsmy.hcbank">
+</category>
+</intent-filter>
+</receiver>
+<meta-data android:name="UMENG_APPKEY" android:value="57f9eb67e0f55a174900021b">
+</meta-data>
+<meta-data android:name="UMENG_CHANNEL" android:value="Umeng">
+</meta-data>
+<meta-data android:name="BaiduMobAd_STAT_ID" android:value="78e1eb1a49">
+</meta-data>
+<meta-data android:name="BaiduMobAd_CHANNEL" android:value="Tencent">
+</meta-data>
+<meta-data android:name="BaiduMobAd_EXCEPTION_LOG" android:value="true">
+</meta-data>
+<meta-data android:name="BaiduMobAd_SEND_STRATEGY" android:value="APP_START">
+</meta-data>
+<meta-data android:name="BaiduMobAd_ONLY_WIFI" android:value="false">
+</meta-data>
+<meta-data android:name="BaiduMobAd_CELL_LOCATION" android:value="true">
+</meta-data>
+<meta-data android:name="BaiduMobAd_GPS_LOCATION" android:value="true">
+</meta-data>
+<meta-data android:name="BaiduMobAd_WIFI_LOCATION" android:value="true">
+</meta-data>
+<activity android:configChanges="0x000004A0" android:name="com.mob.tools.MobUIShell" android:theme="@android:01030010" android:windowSoftInputMode="0x00000012">
+<intent-filter>
+<data android:scheme="db-7janx53ilz11gbs">
+</data>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+<intent-filter>
+<data android:scheme="tencent1105671285">
+</data>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004A0" android:exported="true" android:name="com.ucsmy.hcbank.wxapi.WXEntryActivity" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<activity android:exported="false" android:name="cn.jpush.android.ui.PopWinActivity" android:theme="@7F0800DB">
+</activity>
+<service android:enabled="true" android:exported="true" android:name="cn.jpush.android.service.DaemonService">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.DaemonService">
+</action>
+<category android:name="com.ucsmy.hcbank">
+</category>
+</intent-filter>
+</service>
+<meta-data android:name="JPUSH_CHANNEL" android:value="developer-default">
+</meta-data>
+<meta-data android:name="JPUSH_APPKEY" android:value="e95175796b7a16dad2893944">
+</meta-data>
+</application>
+</manifest>

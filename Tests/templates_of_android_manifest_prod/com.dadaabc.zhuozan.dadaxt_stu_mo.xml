@@ -1,0 +1,254 @@
+<?xml version="1.0" ?><manifest android:versionCode="6" android:versionName="1.1.0" package="com.dadaabc.zhuozan.dadaxt_stu_mo" platformBuildVersionCode="26" platformBuildVersionName="8.0.0" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="18" android:targetSdkVersion="26">
+</uses-sdk>
+<permission android:name="com.dadaabc.zhuozan.dadaxt_stu_mo.permission.JPUSH_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="com.dadaabc.zhuozan.dadaxt_stu_mo.permission.JPUSH_MESSAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_USER_PRESENT">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CALL_PHONE">
+</uses-permission>
+<uses-permission android:name="MediaStore.Images.Media.INTERNAL_CONTENT_URI">
+</uses-permission>
+<uses-permission android:name="MediaStore.Images.Media.EXTERNAL_CONTENT_URI">
+</uses-permission>
+<uses-permission android:name="android.permission.RECORD_AUDIO">
+</uses-permission>
+<uses-permission android:name="android.permission.CAPTURE_AUDIO_OUTPUT">
+</uses-permission>
+<uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_LOGS">
+</uses-permission>
+<uses-feature android:name="android.hardware.camera" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.camera.autofocus" android:required="false">
+</uses-feature>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS">
+</uses-permission>
+<application android:allowBackup="true" android:hardwareAccelerated="true" android:icon="@7F030006" android:label="@7F090032" android:name="com.stub.StubApp" android:qihoo="activity" android:supportsRtl="true" android:theme="@7F0B00B6">
+<service android:enabled="true" android:exported="false" android:name="cn.jpush.android.service.PushService" android:process=":pushcore">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.REGISTER">
+</action>
+<action android:name="cn.jpush.android.intent.REPORT">
+</action>
+<action android:name="cn.jpush.android.intent.PushService">
+</action>
+<action android:name="cn.jpush.android.intent.PUSH_TIME">
+</action>
+</intent-filter>
+</service>
+<service android:enabled="true" android:exported="true" android:name="cn.jpush.android.service.DaemonService">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.DaemonService">
+</action>
+<category android:name="com.dadaabc.zhuozan.dadaxt_stu_mo">
+</category>
+</intent-filter>
+</service>
+<receiver android:enabled="true" android:exported="false" android:name="cn.jpush.android.service.PushReceiver" android:process=":pushcore">
+<intent-filter android:priority="1000">
+<action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY">
+</action>
+<category android:name="com.dadaabc.zhuozan.dadaxt_stu_mo">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.USER_PRESENT">
+</action>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_ADDED">
+</action>
+<action android:name="android.intent.action.PACKAGE_REMOVED">
+</action>
+<data android:scheme="package">
+</data>
+</intent-filter>
+</receiver>
+<activity android:configChanges="0x000000A0" android:exported="false" android:name="cn.jpush.android.ui.PushActivity" android:theme="@android:01030006">
+<intent-filter>
+<action android:name="cn.jpush.android.ui.PushActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="com.dadaabc.zhuozan.dadaxt_stu_mo">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000A0" android:exported="false" android:name="cn.jpush.android.ui.PopWinActivity" android:theme="@7F0B00F2">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="com.dadaabc.zhuozan.dadaxt_stu_mo">
+</category>
+</intent-filter>
+</activity>
+<service android:enabled="true" android:exported="false" android:name="cn.jpush.android.service.DownloadService">
+</service>
+<receiver android:exported="false" android:name="cn.jpush.android.service.AlarmReceiver">
+</receiver>
+<receiver android:enabled="true" android:name="com.dadaabc.zhuozan.dadaxt_stu_mo.receiver.MyReceiver">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.REGISTRATION">
+</action>
+<action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED">
+</action>
+<action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED">
+</action>
+<action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED">
+</action>
+<action android:name="cn.jpush.android.intent.CONNECTION">
+</action>
+<category android:name="com.dadaabc.zhuozan.dadaxt_stu_mo">
+</category>
+</intent-filter>
+</receiver>
+<meta-data android:name="JPUSH_CHANNEL" android:value="developer-default">
+</meta-data>
+<meta-data android:name="JPUSH_APPKEY" android:value="8e0f41a7aeea0b3c3ee5e3ba">
+</meta-data>
+<activity android:configChanges="0x000000A0" android:name="com.dadaabc.zhuozan.dadaxt_stu_mo.mvvm.view.activitys.SplashActivity" android:screenOrientation="1" android:theme="@7F0B01B2">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:name="com.dadaabc.zhuozan.dadaxt_stu_mo.mvvm.view.activitys.VideoSignActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="com.dadaabc.zhuozan.dadaxt_stu_mo.ui.home.MainActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.dadaabc.zhuozan.dadaxt_stu_mo.mvvm.view.activitys.NoticeListActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.dadaabc.zhuozan.dadaxt_stu_mo.mvvm.view.activitys.SettingsActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.dadaabc.zhuozan.dadaxt_stu_mo.mvvm.view.activitys.MessageNoticeActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.dadaabc.zhuozan.dadaxt_stu_mo.mvvm.view.activitys.FeedbackActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.dadaabc.zhuozan.dadaxt_stu_mo.mvvm.view.activitys.PersonalDataActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.dadaabc.zhuozan.dadaxt_stu_mo.mvvm.view.activitys.ChangeNameActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.dadaabc.zhuozan.dadaxt_stu_mo.mvvm.view.activitys.ChangeEnglishNameActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.dadaabc.zhuozan.dadaxt_stu_mo.mvvm.view.activitys.ChangeGenderActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.dadaabc.zhuozan.dadaxt_stu_mo.mvvm.view.activitys.H5WebViewActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:name="me.iwf.photopicker.PhotoPickerActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="me.iwf.photopicker.PhotoPagerActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="2" android:name="com.dadaabc.zhuozan.dadaxt_stu_mo.ui.login.LoginActivityV2" android:screenOrientation="1">
+</activity>
+<activity android:name="com.dadaabc.zhuozan.dadaxt_stu_mo.ui.login.SmsCodeLoginActivityV2" android:screenOrientation="1">
+</activity>
+<activity android:name="com.dadaabc.zhuozan.dadaxt_stu_mo.ui.login.SettingPasswordActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.dadaabc.zhuozan.dadaxt_stu_mo.ui.login.active.InitPasswordActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.dadaabc.zhuozan.dadaxt_stu_mo.ui.login.active.ActiveActivityV2" android:screenOrientation="1">
+</activity>
+<activity android:name="com.dadaabc.zhuozan.dadaxt_stu_mo.ui.login.active.UpdateInfoActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.dadaabc.zhuozan.dadaxt_stu_mo.ui.login.active.SelectClassActivity" android:screenOrientation="1">
+</activity>
+<activity android:exported="true" android:name="cn.finalteam.rxgalleryfinal.ui.activity.MediaActivity">
+</activity>
+<activity android:name="com.yalantis.ucrop.UCropActivity" android:screenOrientation="1">
+</activity>
+<service android:enabled="true" android:exported="true" android:name="com.dadaabc.zhuozan.dadaxt_stu_mo.mvvm.view.ui.DemoService">
+</service>
+<meta-data android:name="design_width" android:value="750">
+</meta-data>
+<meta-data android:name="design_height" android:value="1334">
+</meta-data>
+<activity android:name="com.dadaabc.zhuozan.dadaxt_stu_mo.mvvm.view.activitys.NoticeDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.dadaabc.zhuozan.dadaxt_stu_mo.mvvm.view.activitys.ClassRoomActivity" android:screenOrientation="1" android:theme="@7F0B00EB">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.dadaabc.zhuozan.dadaxt_stu_mo.mvvm.view.activitys.FullscreenActivity" android:screenOrientation="0">
+</activity>
+<meta-data android:name="UMENG_APPKEY" android:value="58f4b2a0cae7e767c9001169">
+</meta-data>
+<activity android:configChanges="0x000000A0" android:name="com.dadaabc.zhuozan.dadaxt_stu_mo.mvvm.view.ui.WBShareActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004A0" android:exported="true" android:name="com.dadaabc.zhuozan.dadaxt_stu_mo.wxapi.WXEntryActivity" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<activity android:launchMode="2" android:name="com.umeng.qq.tencent.AuthActivity" android:noHistory="true">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="tencent1106033385">
+</data>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.umeng.qq.tencent.AssistActivity" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<provider android:authorities="com.dadaabc.zhuozan.dadaxt_stu_mo.Provider" android:exported="false" android:grantUriPermissions="true" android:name="android.support.v4.content.FileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F070001">
+</meta-data>
+</provider>
+<meta-data android:name="io.fabric.ApiKey" android:value="218c8772b585bd4c930134899be075888f81eaf7">
+</meta-data>
+<activity android:launchMode="2" android:name="com.allenliu.versionchecklib.VersionDialogActivity" android:screenOrientation="1" android:theme="@7F0B01C0">
+</activity>
+<provider android:authorities="com.dadaabc.zhuozan.dadaxt_stu_mo.versionProvider" android:exported="false" android:grantUriPermissions="true" android:name="com.allenliu.versionchecklib.VersionFileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F070002">
+</meta-data>
+</provider>
+<provider android:authorities="com.dadaabc.zhuozan.dadaxt_stu_mo.initcontentprovider" android:enabled="true" android:exported="false" android:name="com.dadaabc.zhuozan.framwork.InitContentProvider">
+</provider>
+<meta-data android:name="android.support.VERSION" android:value="26.0.1">
+</meta-data>
+</application>
+</manifest>

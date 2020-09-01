@@ -1,0 +1,298 @@
+<?xml version="1.0" ?><manifest android:versionCode="35" android:versionName="1.0" package="com.bigfishgames.deadreckonlinesgoog" platformBuildVersionCode="26" platformBuildVersionName="8.0.0" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="19" android:targetSdkVersion="26">
+</uses-sdk>
+<uses-feature android:glEsVersion="0x00020000" android:required="true">
+</uses-feature>
+<uses-permission android:name="com.android.vending.CHECK_LICENSE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCOUNT_MANAGER">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SETTINGS">
+</uses-permission>
+<meta-data android:name="io.fabric.ApiKey" android:value="a02d4f0cba139e1e742c11b1c95bdc7a7497696a">
+</meta-data>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-permission android:name="com.android.vending.BILLING">
+</uses-permission>
+<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<permission android:name="com.bigfishgames.deadreckonlinesgoog.permission.C2D_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="com.bigfishgames.deadreckonlinesgoog.permission.C2D_MESSAGE">
+</uses-permission>
+<application android:allowBackup="true" android:icon="@7F030001" android:label="@7F0A00C3" android:name="android.support.multidex.MultiDexApplication" android:roundIcon="@7F030002" android:supportsRtl="true" android:theme="@7F0C00AE">
+<activity android:configChanges="0x000004A0" android:label="@7F0A00C3" android:launchMode="1" android:name="com.eipix.engine.android.SplashActivity" android:screenOrientation="6" android:theme="@7F0C0044">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004A0" android:label="HoEngine" android:launchMode="1" android:name="com.eipix.engine.android.MainActivity" android:screenOrientation="6" android:windowSoftInputMode="0x00000012">
+</activity>
+<receiver android:name="com.eipix.engine.android.ShutDownReceiver">
+<intent-filter>
+<action android:name="android.intent.action.ACTION_SHUTDOWN">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name="com.eipix.engine.android.Alarm">
+</receiver>
+<service android:name="com.eipix.engine.android.ObbService">
+</service>
+<meta-data android:name="com.upsight.app_token" android:value="b81465fc2fc1428aaa8a0b95b29982d1">
+</meta-data>
+<meta-data android:name="com.upsight.public_key" android:value="MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAlIo87rIAvT7SvaqYTqW2UHgmXpJ/9YmP+0L5ULq6vAV/+ng0LroSMeeJDfK2mEOt3h6Uml+iHoyl64GK/hIG62pX0aY76I1+Fzr53okY4BtU+TumlzvYVWGqwDLu/1W2nLo1semt88HhVMCyooV3ZilA489O27IPmzFxn/g0QG8Zjhm+0a0tashNy3RWtUo/KlYe1N3HlX2muMAJAisA2AjrYiCSQ3NNf+BWFxR0HCaWb46u8YM2ikjDrDvw0RAZ8RA0XT5pHB60S1uH7gkoIx8iFpo14YKlsltxUMooAjhvFbfhox80G1Nu3igJE5kARrMi4EmTjXLlJy19/RxGMQIDAQAB">
+</meta-data>
+<provider android:authorities="com.bigfishgames.deadreckonlinesgoog.upsight" android:enabled="true" android:exported="false" android:name="com.upsight.android.internal.persistence.ContentProvider">
+</provider>
+<meta-data android:name="com.upsight.gcm" android:value="com.bigfishgames.deadreckonlinesgoog.upsight">
+</meta-data>
+<receiver android:name="com.upsight.android.googlepushservices.internal.PushBroadcastReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+<category android:name="com.bigfishgames.deadreckonlinesgoog">
+</category>
+</intent-filter>
+</receiver>
+<activity android:configChanges="0x000004A0" android:name="com.playhaven.android.view.FullScreen" android:theme="@android:01030010" android:windowSoftInputMode="0x00000010">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:host="localhost" android:pathPattern="/full" android:scheme="playhaven">
+</data>
+</intent-filter>
+</activity>
+<meta-data android:name="com.bigfishgames.BFGEnviron" android:value="prod">
+</meta-data>
+<meta-data android:name="android.max_aspect" android:value="@7F0A0133">
+</meta-data>
+<receiver android:enabled="true" android:name="com.eipix.engine.android.InternetStateReceiver">
+</receiver>
+<activity android:configChanges="0x00000480" android:name="com.bigfishgames.bfglib.bfgBrandingViewController">
+</activity>
+<activity android:configChanges="0x00000480" android:hardwareAccelerated="false" android:name="com.bigfishgames.bfglib.bfgwebview.bfgWebGDNViewController">
+</activity>
+<activity android:configChanges="0x00000480" android:name="com.bigfishgames.bfglib.bfgWebBrowser">
+</activity>
+<activity android:configChanges="0x00000480" android:name="com.bigfishgames.bfglib.bfgInterstitials.bfgInterstitialActivity" android:theme="@android:01030011">
+</activity>
+<service android:name="com.bigfishgames.bfglib.bfgInterstitials.bfgInterstitialManager$TransitionDispatchService">
+</service>
+<service android:exported="true" android:name="com.bigfishgames.bfglib.bfgreporting.bfgKTCustomEventManager">
+</service>
+<service android:exported="false" android:label="UA Reporting" android:name="com.bigfishgames.bfglib.bfgreporting.bfgUAReporting">
+</service>
+<receiver android:exported="true" android:name="com.bigfishgames.bfglib.bfgreporting.bfgInstallReceiver">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:enabled="true" android:exported="true" android:name="com.bigfishgames.bfglib.NotificationAlarmBroadcastReceiver">
+</receiver>
+<receiver android:name="com.bigfishgames.bfglib.AutoStartReceiver">
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+</intent-filter>
+</receiver>
+<activity android:configChanges="0x00000480" android:name="co.ravesocial.sdk.RaveUniversalActivity" android:screenOrientation="2" android:theme="@android:01030010">
+</activity>
+<service android:name="com.bigfishgames.bfglib.bfgPush.bfgFirebaseInstanceIDService">
+<intent-filter>
+<action android:name="com.google.firebase.INSTANCE_ID_EVENT">
+</action>
+</intent-filter>
+</service>
+<service android:name="com.bigfishgames.bfglib.bfgPush.bfgFirebaseMessagingService">
+<intent-filter>
+<action android:name="com.google.firebase.MESSAGING_EVENT">
+</action>
+</intent-filter>
+</service>
+<receiver android:name="com.amazon.device.iap.ResponseReceiver">
+<intent-filter>
+<action android:name="com.amazon.inapp.purchasing.NOTIFY" android:permission="com.amazon.inapp.purchasing.Permission.NOTIFY">
+</action>
+</intent-filter>
+</receiver>
+<meta-data android:name="io.fabric.ApiKey" android:value="a02d4f0cba139e1e742c11b1c95bdc7a7497696a">
+</meta-data>
+<meta-data android:name="com.upsight.notification_builder_factory" android:value="com.bigfishgames.bfglib.bfgPush.bfgCustomUpsightNotificationBuilderFactory">
+</meta-data>
+<meta-data android:name="com.upsight.session_callbacks" android:value="com.bigfishgames.bfglib.bfgreporting.bfgKontagent">
+</meta-data>
+<meta-data android:name="com.upsight.user_attribute.bfgUDID" android:value="">
+</meta-data>
+<meta-data android:name="com.upsight.user_attribute.RaveID" android:value="">
+</meta-data>
+<activity android:configChanges="0x000005B0" android:label="@7F0A00C3" android:name="com.facebook.FacebookActivity" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x00000480" android:name="com.bigfishgames.bfglib.bfgHelpCenter.bfgHelpCenterViews.bfgHelpCenterActivity" android:theme="@7F0C01C9">
+</activity>
+<activity android:label="@7F0A00B0" android:name="com.zendesk.sdk.support.SupportActivity" android:theme="@7F0C00EA" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:configChanges="0x00000480" android:name="com.zendesk.sdk.support.ViewArticleActivity" android:theme="@7F0C00EA">
+</activity>
+<activity android:label="@7F0A0091" android:name="com.zendesk.sdk.requests.ViewRequestActivity" android:theme="@7F0C01C9" android:windowSoftInputMode="0x00000012">
+</activity>
+<meta-data android:name="com.google.android.gms.version" android:value="@7F0E0007">
+</meta-data>
+<meta-data android:name="com.upsight.extension.googlepushservices" android:value="com.upsight.android.UpsightGooglePushServicesExtension">
+</meta-data>
+<service android:name="com.upsight.android.googlepushservices.internal.PushIntentService">
+</service>
+<service android:name="com.upsight.android.googlepushservices.internal.PushClickIntentService">
+</service>
+<receiver android:name="com.zendesk.sdk.power.BatteryStateBroadcastReceiver">
+<intent-filter>
+<action android:name="android.intent.action.BATTERY_LOW">
+</action>
+<action android:name="android.intent.action.BATTERY_OKAY">
+</action>
+</intent-filter>
+</receiver>
+<activity android:label="@7F0A0091" android:name="com.zendesk.sdk.feedback.ui.ContactZendeskActivity" android:windowSoftInputMode="0x00000014">
+</activity>
+<activity android:label="@7F0A00A8" android:name="com.zendesk.sdk.requests.RequestActivity">
+</activity>
+<receiver android:exported="false" android:name="com.zendesk.sdk.deeplinking.ZendeskDeepLinkingBroadcastReceiver">
+<intent-filter>
+<action android:name="com.zendesk.sdk.deeplinking">
+</action>
+</intent-filter>
+</receiver>
+<provider android:authorities="com.bigfishgames.deadreckonlinesgoog.belvedere.attachments" android:exported="false" android:grantUriPermissions="true" android:name="com.zendesk.belvedere.BelvedereFileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F080000">
+</meta-data>
+</provider>
+<activity android:exported="true" android:name="com.google.android.gms.appinvite.PreviewActivity" android:theme="@7F0C0148">
+<intent-filter>
+<action android:name="com.google.android.gms.appinvite.ACTION_PREVIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<receiver android:name="com.google.android.gms.cast.framework.media.MediaIntentReceiver">
+</receiver>
+<service android:name="com.google.android.gms.cast.framework.media.MediaNotificationService">
+</service>
+<service android:name="com.google.android.gms.cast.framework.ReconnectionService">
+</service>
+<service android:exported="true" android:name="com.google.firebase.messaging.FirebaseMessagingService">
+<intent-filter android:priority="-500">
+<action android:name="com.google.firebase.MESSAGING_EVENT">
+</action>
+</intent-filter>
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.tagmanager.TagManagerService">
+</service>
+<activity android:name="com.google.android.gms.tagmanager.TagManagerPreviewActivity" android:noHistory="true">
+<intent-filter>
+<data android:scheme="tagmanager.c.com.bigfishgames.deadreckonlinesgoog">
+</data>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x00000FB0" android:name="com.google.android.gms.ads.AdActivity" android:theme="@android:0103000F">
+</activity>
+<activity android:name="com.google.android.gms.ads.purchase.InAppPurchaseActivity" android:theme="@7F0C0150">
+</activity>
+<activity android:excludeFromRecents="true" android:exported="false" android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity" android:theme="@android:01030010">
+</activity>
+<service android:exported="true" android:name="com.google.android.gms.auth.api.signin.RevocationBoundService" android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION">
+</service>
+<activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:01030010">
+</activity>
+<meta-data android:name="com.upsight.extension.googleadvertisingid" android:value="com.upsight.android.UpsightGoogleAdvertisingIdExtension">
+</meta-data>
+<meta-data android:name="com.upsight.extension.marketing" android:value="com.upsight.android.UpsightMarketingExtension">
+</meta-data>
+<activity android:name="com.upsight.android.marketing.internal.billboard.BillboardManagementActivity" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x00000FB0" android:name="com.upsight.mediation.vast.activity.VASTActivity" android:screenOrientation="6" android:theme="@android:01030007">
+</activity>
+<activity android:configChanges="0x000005B0" android:hardwareAccelerated="true" android:name="com.upsight.mediation.ads.adapters.MRaidActivity" android:theme="@android:01030011" android:windowSoftInputMode="0x00000010">
+</activity>
+<meta-data android:name="com.upsight.extension.managedvariables" android:value="com.upsight.android.UpsightManagedVariablesExtension">
+</meta-data>
+<meta-data android:name="com.upsight.extension.analytics" android:value="com.upsight.android.UpsightAnalyticsExtension">
+</meta-data>
+<service android:name="com.upsight.android.analytics.internal.DispatcherService">
+</service>
+<receiver android:name="com.upsight.android.analytics.internal.dispatcher.schema.NetworkChangeBroadcastReceiver">
+<intent-filter>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:exported="true" android:name="com.upsight.android.analytics.internal.referrer.InstallReferrerReceiver">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+<meta-data android:name="com.upsight.core" android:value="com.upsight.android.internal.CoreComponentFactory">
+</meta-data>
+<receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementReceiver">
+</receiver>
+<receiver android:enabled="true" android:name="com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver" android:permission="android.permission.INSTALL_PACKAGES">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementService">
+</service>
+<receiver android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+<category android:name="com.bigfishgames.deadreckonlinesgoog">
+</category>
+</intent-filter>
+</receiver>
+<receiver android:exported="false" android:name="com.google.firebase.iid.FirebaseInstanceIdInternalReceiver">
+</receiver>
+<service android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdService">
+<intent-filter android:priority="-500">
+<action android:name="com.google.firebase.INSTANCE_ID_EVENT">
+</action>
+</intent-filter>
+</service>
+<provider android:authorities="com.bigfishgames.deadreckonlinesgoog.firebaseinitprovider" android:exported="false" android:initOrder="100" android:name="com.google.firebase.provider.FirebaseInitProvider">
+</provider>
+</application>
+</manifest>

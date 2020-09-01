@@ -1,0 +1,192 @@
+<?xml version="1.0" ?><manifest android:versionCode="15" android:versionName="v1.10.8" package="com.magicmirror.cameraplus" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="21" android:targetSdkVersion="26">
+</uses-sdk>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-permission android:name="android.permission.RECORD_AUDIO">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_MTK_MMHW">
+</uses-permission>
+<uses-permission android:name="mediatek.permission.ACCESS_MTK_MMHW">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_MEDIA_STORAGE">
+</uses-permission>
+<supports-screens android:anyDensity="true" android:largeScreens="true" android:normalScreens="true" android:smallScreens="false">
+</supports-screens>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="com.android.vending.BILLING">
+</uses-permission>
+<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS">
+</uses-permission>
+<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE">
+</uses-permission>
+<permission android:name="com.magicmirror.cameraplus.permission.C2D_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="com.magicmirror.cameraplus.permission.C2D_MESSAGE">
+</uses-permission>
+<uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE">
+</uses-permission>
+<application android:allowBackup="true" android:hardwareAccelerated="true" android:icon="@7F08005A" android:label="@7F0F002F" android:largeHeap="true" android:name="com.mediatek.camera.MyCameraApp" android:restoreAnyVersion="true" android:supportsRtl="true" android:testOnly="false" android:theme="@7F1000DF">
+<activity android:clearTaskOnLaunch="true" android:configChanges="0x00000FFB" android:label="@7F0F002F" android:launchMode="2" android:name="com.mediatek.camera.CameraActivity" android:screenOrientation="1" android:theme="@7F100142" android:windowSoftInputMode="0x00000023">
+<intent-filter>
+<action android:name="android.media.action.STILL_IMAGE_CAMERA">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:clearTaskOnLaunch="true" android:configChanges="0x000004A0" android:excludeFromRecents="true" android:icon="@7F08005A" android:label="@7F0F002F" android:name="com.mediatek.camera.SecureCameraActivity" android:screenOrientation="1" android:taskAffinity="com.mediatek.camera.SecureCameraActivity" android:windowSoftInputMode="0x00000023">
+<intent-filter>
+<action android:name="android.media.action.STILL_IMAGE_CAMERA_SECURE">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.media.action.IMAGE_CAPTURE_SECURE">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x00000FFB" android:label="@7F0F002F" android:name="com.mediatek.camera.CaptureActivity" android:screenOrientation="1" android:theme="@7F100142" android:windowSoftInputMode="0x00000023">
+<intent-filter>
+<action android:name="android.media.action.IMAGE_CAPTURE">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:icon="@7F08005A" android:label="@7F0F002F" android:name="com.mediatek.camera.SplashActivity" android:screenOrientation="1" android:theme="@7F100142">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<receiver android:name="com.mediatek.camera.DisableCameraReceiver">
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+</intent-filter>
+</receiver>
+<service android:name="com.mediatek.camera.CameraAppService">
+</service>
+<meta-data android:name="com.google.android.gms.version" android:value="@7F0A0007">
+</meta-data>
+<meta-data android:name="bingcoo_local_cute_ids" android:value="Lovely:gp_02_900001,gp_02_900002,gp_02_900003,gp_02_900004,gp_02_900005,gp_02_900006,gp_02_900007,gp_02_900008,gp_02_900009,gp_02_900010;">
+</meta-data>
+<meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@7F0F0071">
+</meta-data>
+<service android:name="com.mediatek.camera.messaging.MyFirebaseInstanceIDService">
+<intent-filter>
+<action android:name="com.google.firebase.INSTANCE_ID_EVENT">
+</action>
+</intent-filter>
+</service>
+<service android:name="com.mediatek.camera.messaging.MyFirebaseMessagingService">
+<intent-filter>
+<action android:name="com.google.firebase.MESSAGING_EVENT">
+</action>
+</intent-filter>
+</service>
+<activity android:name="com.mediatek.camera.EmptyActivity">
+</activity>
+<activity android:configChanges="0x000005B0" android:name="com.facebook.FacebookActivity" android:theme="@7F1001A3">
+</activity>
+<activity android:configChanges="0x000004A0" android:hardwareAccelerated="true" android:name="com.facebook.ads.AudienceNetworkActivity">
+</activity>
+<activity android:exported="true" android:launchMode="2" android:name="com.bingcoo.cameraplus.MainActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:exported="true" android:name="com.bingcoo.cameraplus.DetailsActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:name="com.bingcoo.cameraplus.PrivacyActivity">
+</activity>
+<activity android:name="com.bingcoo.cameraplus.UserActivity">
+</activity>
+<service android:exported="true" android:name="com.bingcoo.camera.store.BingcooStoreService">
+<intent-filter>
+<action android:name="action.bingcoocamera.BingcooStoreService">
+</action>
+</intent-filter>
+</service>
+<activity android:excludeFromRecents="true" android:launchMode="3" android:name="com.bingcoo.cameraplus.DialogActivity" android:theme="@7F100007">
+</activity>
+<service android:enabled="true" android:exported="false" android:name="com.bingcoo.cameraplus.listener.ObserverService">
+</service>
+<service android:exported="true" android:name="com.google.firebase.messaging.FirebaseMessagingService">
+<intent-filter android:priority="-500">
+<action android:name="com.google.firebase.MESSAGING_EVENT">
+</action>
+</intent-filter>
+</service>
+<receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementReceiver">
+</receiver>
+<receiver android:enabled="true" android:exported="true" android:name="com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver" android:permission="android.permission.INSTALL_PACKAGES">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementService">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementJobService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<receiver android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+<category android:name="com.magicmirror.cameraplus">
+</category>
+</intent-filter>
+</receiver>
+<service android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdService">
+<intent-filter android:priority="-500">
+<action android:name="com.google.firebase.INSTANCE_ID_EVENT">
+</action>
+</intent-filter>
+</service>
+<provider android:authorities="com.magicmirror.cameraplus.firebaseinitprovider" android:exported="false" android:initOrder="100" android:name="com.google.firebase.provider.FirebaseInitProvider">
+</provider>
+<activity android:configChanges="0x00000FB0" android:exported="false" android:name="com.google.android.gms.ads.AdActivity" android:theme="@android:0103000F">
+</activity>
+<activity android:name="com.facebook.CustomTabMainActivity">
+</activity>
+<activity android:name="com.facebook.CustomTabActivity">
+</activity>
+<provider android:authorities="com.magicmirror.cameraplus.MarketingInitProvider" android:exported="false" android:name="com.facebook.marketing.internal.MarketingInitProvider">
+</provider>
+<provider android:authorities="com.magicmirror.cameraplus.FacebookInitProvider" android:exported="false" android:name="com.facebook.internal.FacebookInitProvider">
+</provider>
+<receiver android:exported="false" android:name="com.facebook.CurrentAccessTokenExpirationBroadcastReceiver">
+<intent-filter>
+<action android:name="com.facebook.sdk.ACTION_CURRENT_ACCESS_TOKEN_CHANGED">
+</action>
+</intent-filter>
+</receiver>
+<provider android:authorities="com.magicmirror.cameraplus.crashlyticsinitprovider" android:exported="false" android:initOrder="100" android:name="com.crashlytics.android.CrashlyticsInitProvider">
+</provider>
+<meta-data android:name="com.android.vending.derived.apk.id" android:value="1">
+</meta-data>
+</application>
+</manifest>

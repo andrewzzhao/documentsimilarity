@@ -1,0 +1,84 @@
+<?xml version="1.0" ?><manifest android:versionCode="4" android:versionName="1.4" package="com.yuanyu.tinbeiparcel" platformBuildVersionCode="23" platformBuildVersionName="6.0-2704002" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="14" android:targetSdkVersion="21">
+</uses-sdk>
+<action android:name="android.intent.action.DOWNLOAD_COMPLETE">
+</action>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.RECORD_AUDIO">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_USER_PRESENT">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW">
+</uses-permission>
+<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS">
+</uses-permission>
+<application android:allowBackup="true" android:exported="true" android:icon="@7F02004F" android:label="@7F050017" android:largeHeap="true" android:name="com.yuanyu.tinbeiparcel.TinberApplication" android:theme="@7F08008D">
+<activity android:name="com.yuanyu.tinbeiparcel.ui.launch.LaunchActivity">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:name="com.yuanyu.tinbeiparcel.ui.home.HomeActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.yuanyu.tinbeiparcel.ui.setting.SettingActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.yuanyu.tinbeiparcel.ui.album.AlbumDetailsActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.yuanyu.tinbeiparcel.ui.setting.FeedbackActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.yuanyu.tinbeiparcel.ui.setting.about.MyAboutActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.yuanyu.tinbeiparcel.ui.setting.TimedShutdownActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.yuanyu.tinbeiparcel.ui.player.PlayerActivity" android:screenOrientation="1">
+</activity>
+<service android:exported="false" android:name="com.yuanyu.tinbeiparcel.play.PlayService">
+</service>
+<service android:name="com.yuanyu.tinbeiparcel.player.PlayerService" android:process=":player">
+</service>
+<service android:name="com.yuanyu.tinbeiparcel.base.download.DownloadService">
+<intent-filter>
+<action android:name="download.start">
+</action>
+</intent-filter>
+</service>
+<provider android:authorities="com.yuanyu.tinbeiparcel.provider" android:name="com.yuanyu.tinbeiparcel.base.download.DownloadContentProvider">
+</provider>
+<meta-data android:name="UMENG_APPKEY" android:value="57df9c77e0f55a7a2a0022a9">
+</meta-data>
+<meta-data android:name="UMENG_CHANNEL" android:value="tinbeiparcel">
+</meta-data>
+<activity android:name="com.yuanyu.tinbeiparcel.ui.setting.about.ProductActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.yuanyu.tinbeiparcel.ui.dialog.HomeDialogActivity" android:screenOrientation="1" android:theme="@7F080100">
+</activity>
+<activity android:name="com.yuanyu.tinbeiparcel.ui.album.RecommendActivity" android:screenOrientation="1" android:theme="@android:01030130">
+</activity>
+<activity android:name="com.yuanyu.tinbeiparcel.ui.player.ProgramListActivity" android:screenOrientation="1" android:theme="@android:01030130">
+</activity>
+<activity android:name="com.yuanyu.tinbeiparcel.ui.webview.WebviewHomeActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.yuanyu.tinbeiparcel.ui.webview.WebviewAdvertActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.yuanyu.tinbeiparcel.ui.launch.AdActivity" android:screenOrientation="1">
+</activity>
+</application>
+</manifest>

@@ -1,0 +1,546 @@
+<?xml version="1.0" ?><manifest android:versionCode="134" android:versionName="1.3.4" package="com.yunzhu.shopping" platformBuildVersionCode="24" platformBuildVersionName="7.000000" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="16" android:targetSdkVersion="24">
+</uses-sdk>
+<permission android:name="com.yunzhu.shopping.permission.JPUSH_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="com.yunzhu.shopping.permission.JPUSH_MESSAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_USER_PRESENT">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_LOGS">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-permission android:name="android.permission.MANAGE_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="android.permission.BLUETOOTH">
+</uses-permission>
+<uses-permission android:name="android.permission.BLUETOOTH_ADMIN">
+</uses-permission>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-permission android:name="android.permission.RECORD_AUDIO">
+</uses-permission>
+<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-permission android:name="android.permission.CALL_PHONE">
+</uses-permission>
+<uses-feature android:name="android.hardware.camera">
+</uses-feature>
+<uses-feature android:name="android.hardware.camera.autofocus">
+</uses-feature>
+<uses-permission android:name="android.permission.FLASHLIGHT">
+</uses-permission>
+<application android:allowBackup="true" android:debuggable="true" android:icon="@7F020113" android:label="@7F07008F" android:name="com.stub.StubApp" android:qihoo="activity" android:supportsRtl="true" android:theme="@7F09003B">
+<provider android:authorities="com.yunzhu.shopping.fileProvider" android:exported="false" android:grantUriPermissions="true" android:name="android.support.v4.content.FileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F050000">
+</meta-data>
+</provider>
+<service android:enabled="true" android:exported="false" android:name="cn.jpush.android.service.PushService">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.REGISTER">
+</action>
+<action android:name="cn.jpush.android.intent.REPORT">
+</action>
+<action android:name="cn.jpush.android.intent.PushService">
+</action>
+<action android:name="cn.jpush.android.intent.PUSH_TIME">
+</action>
+</intent-filter>
+</service>
+<service android:enabled="true" android:exported="true" android:name="cn.jpush.android.service.DaemonService">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.DaemonService">
+</action>
+<category android:name="com.yunzhu.shopping">
+</category>
+</intent-filter>
+</service>
+<receiver android:enabled="true" android:name="cn.jpush.android.service.PushReceiver">
+<intent-filter android:priority="1000">
+<action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY">
+</action>
+<category android:name="com.yunzhu.shopping">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.USER_PRESENT">
+</action>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_ADDED">
+</action>
+<action android:name="android.intent.action.PACKAGE_REMOVED">
+</action>
+<data android:scheme="package">
+</data>
+</intent-filter>
+</receiver>
+<activity android:configChanges="0x000000A0" android:exported="false" android:name="cn.jpush.android.ui.PushActivity" android:theme="@android:01030006">
+<intent-filter>
+<action android:name="cn.jpush.android.ui.PushActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="com.yunzhu.shopping">
+</category>
+</intent-filter>
+</activity>
+<activity android:excludeFromRecents="true" android:launchMode="0" android:name="com.stub.plugin.Stub01" android:noHistory="true" android:taskAffinity="com.yunzhu.shopping.affinity">
+</activity>
+<service android:enabled="true" android:exported="true" android:name="com.stub.plugin.Stub02">
+</service>
+<receiver android:enabled="true" android:exported="false" android:name="com.stub.plugin.Stub03">
+</receiver>
+<provider android:authorities="com.yunzhu.shopping.COMMONPROVIDER" android:exported="true" android:name="com.stub.plugin.Stub04">
+</provider>
+<activity android:configChanges="0x000000A0" android:exported="false" android:name="cn.jpush.android.ui.PopWinActivity" android:theme="@7F0900CD">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="com.yunzhu.shopping">
+</category>
+</intent-filter>
+</activity>
+<service android:enabled="true" android:exported="false" android:name="cn.jpush.android.service.DownloadService">
+</service>
+<receiver android:name="cn.jpush.android.service.AlarmReceiver">
+</receiver>
+<receiver android:enabled="true" android:name="com.yunzhu.shopping.receiver.PollReceiver">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.REGISTRATION">
+</action>
+<action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED">
+</action>
+<action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED">
+</action>
+<action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED">
+</action>
+<action android:name="cn.jpush.android.intent.CONNECTION">
+</action>
+<category android:name="com.yunzhu.shopping">
+</category>
+</intent-filter>
+</receiver>
+<meta-data android:name="JPUSH_CHANNEL" android:value="developer-default">
+</meta-data>
+<meta-data android:name="JPUSH_APPKEY" android:value="d0845ab47183a574575adda4">
+</meta-data>
+<meta-data android:name="com.amap.api.v2.apikey" android:value="b1deea2104cb2d4c032b0b71b03670f3">
+</meta-data>
+<service android:name="com.amap.api.location.APSService">
+</service>
+<activity android:configChanges="0x000004A0" android:label="@7F07008F" android:name="com.yunzhu.shopping.base.MainActivity" android:screenOrientation="1" android:theme="@7F090114" android:windowSoftInputMode="0x00000002">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="yunzhu.com" android:pathPrefix="/yunzhuapp" android:scheme="yunzhu">
+</data>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.mob.tools.MobUIShell" android:theme="@android:01030010" android:windowSoftInputMode="0x00000012">
+<intent-filter>
+<data android:scheme="tencent1106052336">
+</data>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+<intent-filter>
+<data android:scheme="line.1477692153">
+</data>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<meta-data android:name="Mob-AppKey" android:value="19ed0a3290650">
+</meta-data>
+<meta-data android:name="Mob-AppSecret" android:value="0f61fc11471836ad7bac015f0624a400">
+</meta-data>
+<activity android:configChanges="0x000004A0" android:exported="true" android:name="com.yunzhu.shopping.wxapi.WXEntryActivity" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x000004A0" android:exported="true" android:name="com.yunzhu.shopping.wxapi.WXPayEntryActivity" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<receiver android:name="com.yunzhu.shopping.receiver.NetReceiver">
+<intent-filter>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+</receiver>
+<activity android:name="cn.hongys.photoselectorlib.ImageSelectorActivity" android:screenOrientation="1" android:theme="@7F0900CA">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.yunzhu.shopping.widget.browseimage.ImagePagerActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:name="com.yunzhu.shopping.citypiker.CityPickerActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F0700C8" android:name="com.yunzhu.shopping.home.activity.CommonUseActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F0700D0" android:name="com.yunzhu.shopping.home.activity.DedicatedActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.yunzhu.shopping.home.activity.PrayForYouActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F070103" android:name="com.yunzhu.shopping.home.activity.OneYuanSnatchActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.yunzhu.shopping.home.activity.PreferentialListActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F070112" android:name="com.yunzhu.shopping.home.activity.RecommendBeneFitActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F0700E4" android:name="com.yunzhu.shopping.login.activity.GuidanceActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F07008F" android:name="com.yunzhu.shopping.login.activity.WelcomeActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F0700F5" android:name="com.yunzhu.shopping.merchant.activity.MerchantDetailsActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F070106" android:name="com.yunzhu.shopping.merchant.activity.OtherSubbranchActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F0700EE" android:name="com.yunzhu.shopping.me.activity.InviteMoneyActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F0700EC" android:name="com.yunzhu.shopping.me.activity.InfoActivity" android:screenOrientation="1" android:theme="@7F090114" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F070117" android:name="com.yunzhu.shopping.me.activity.SettingActivity" android:screenOrientation="1" android:theme="@7F090114" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F0700F9" android:name="com.yunzhu.shopping.me.activity.MessageActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F0700FB" android:name="com.yunzhu.shopping.me.activity.MyConsumeActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F0700FE" android:name="com.yunzhu.shopping.me.activity.MyPurseActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F0700FC" android:name="com.yunzhu.shopping.me.activity.MyHappyLotActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F07011F" android:name="com.yunzhu.shopping.me.activity.SnatchRecordActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F0700F2" android:name="com.yunzhu.shopping.me.activity.LuckRecordActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F0700F1" android:name="com.yunzhu.shopping.login.activity.LoginActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F0700C7" android:name="com.yunzhu.shopping.me.activity.CommissionDetailActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F0700C1" android:name="com.yunzhu.shopping.me.activity.BalanceWithdrawActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F0700B6" android:name="com.yunzhu.shopping.me.activity.AccountRechargeActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F0700CB" android:name="com.yunzhu.shopping.me.activity.ConsumeRecordActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F0700CA" android:name="com.yunzhu.shopping.home.activity.GoodsDetailsActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F070108" android:name="com.yunzhu.shopping.shoppingcart.activity.PayMentsActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F0700E1" android:name="com.yunzhu.shopping.login.activity.ForgetThePasswordActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F070113" android:name="com.yunzhu.shopping.login.activity.RegisterAccountActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F0700C2" android:name="com.yunzhu.shopping.home.activity.ReneFitDetailsActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F070120" android:name="com.yunzhu.shopping.home.activity.SponsorRaiseFundsActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F070114" android:name="com.yunzhu.shopping.me.activity.SafetySettingActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F070107" android:name="com.yunzhu.shopping.me.activity.PasswordSettingsActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F070119" android:name="com.yunzhu.shopping.me.activity.ShoppingAddressActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F0700BC" android:name="com.yunzhu.shopping.me.activity.AddShoppingAddressActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F07010C" android:name="com.yunzhu.shopping.home.activity.RaiseFundsVerifyActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F07010D" android:name="com.yunzhu.shopping.home.activity.RauseFybdsAidedPersonActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F07010F" android:name="com.yunzhu.shopping.home.activity.RauseFybdsKinsfolkActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.yunzhu.shopping.home.activity.ActivityActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F07010E" android:name="com.yunzhu.shopping.home.activity.RauseFybdsFqActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F070110" android:name="com.yunzhu.shopping.home.activity.RauseFybdsOrgActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F0700BB" android:name="com.yunzhu.shopping.home.activity.AddBankCardActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F070115" android:name="com.yunzhu.shopping.home.activity.SearchActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F070126" android:name="com.yunzhu.shopping.home.activity.UnderstandCommonUseActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F070101" android:name="com.yunzhu.shopping.home.activity.OldTimeyActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F070102" android:name="com.yunzhu.shopping.home.activity.OldTimeyDetailsActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F0700E8" android:name="com.yunzhu.shopping.me.activity.HaveWithdrawalActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F07012A" android:name="com.yunzhu.shopping.me.activity.WithdrawControlActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F0700C3" android:name="com.yunzhu.shopping.me.activity.BoundZhiFuBaoActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F0700D8" android:name="com.yunzhu.shopping.me.activity.EditWithDrawPasActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F0700E0" android:name="com.yunzhu.shopping.me.activity.ForGetWithdrawPasActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F0700E0" android:name="com.yunzhu.shopping.me.activity.ForGetWithdrawPasOrUserActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F0700C6" android:name="com.yunzhu.shopping.me.activity.ClaimMasterActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F0700DA" android:name="com.yunzhu.shopping.me.activity.ExaminePrenticeActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F0700FF" android:name="com.yunzhu.shopping.me.activity.MyQRCodeActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F070127" android:name="com.yunzhu.shopping.me.activity.UnderstandMoreActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F0700F6" android:name="com.yunzhu.shopping.me.merchantmanage.login.MerchantLoginActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F0700F7" android:name="com.yunzhu.shopping.me.merchantmanage.activity.MerchantMainActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F0700EB" android:name="com.yunzhu.shopping.me.merchantmanage.activity.HxpmActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F0700F0" android:name="com.yunzhu.shopping.me.activity.LinkedZfbActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F070125" android:name="com.yunzhu.shopping.me.merchantmanage.activity.TjActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F0700EF" android:name="com.yunzhu.shopping.me.merchantmanage.activity.KhActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F070136" android:name="com.yunzhu.shopping.me.merchantmanage.activity.ZhglActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.zxing.activity.CaptureActivity" android:screenOrientation="1" android:theme="@android:01030007" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F0700EA" android:name="com.yunzhu.shopping.me.merchantmanage.activity.HxjlActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F0700CE" android:name="com.yunzhu.shopping.me.merchantmanage.activity.DdActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F0700CF" android:name="com.yunzhu.shopping.me.merchantmanage.activity.DdxqActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F0700D6" android:name="com.yunzhu.shopping.me.activity.EditInfoActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F070109" android:name="com.yunzhu.shopping.me.activity.PayPasSettingActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F0700DF" android:name="com.yunzhu.shopping.me.activity.ForGetPayPasActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F0700FA" android:name="com.yunzhu.shopping.me.activity.MessageDetialsActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F0700B8" android:name="com.yunzhu.shopping.me.activity.AcquisitionGoodActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F0700F3" android:name="com.yunzhu.shopping.merchant.activity.MapActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F07011A" android:name="com.yunzhu.shopping.me.merchantmanage.activity.SjqbActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F07011B" android:name="com.yunzhu.shopping.me.merchantmanage.activity.SjtxActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F07011B" android:name="com.yunzhu.shopping.me.merchantmanage.activity.ZsrmxActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F070135" android:name="com.yunzhu.shopping.me.merchantmanage.activity.YtxmxActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F07011C" android:name="com.yunzhu.shopping.me.merchantmanage.activity.SjtxxqActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F070121" android:name="com.yunzhu.shopping.me.merchantmanage.activity.SrxqActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F0700E2" android:name="com.yunzhu.shopping.home.activity.FullPurchaseActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F0700D3" android:name="com.yunzhu.shopping.me.activity.DropShippingActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F0700E5" android:name="com.yunzhu.shopping.home.activity.PrayForYouDetailsActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F0700E7" android:name="com.yunzhu.shopping.home.activity.HappyLotTurntableActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F0700F8" android:name="com.yunzhu.shopping.me.merchantmanage.activity.MerchantSettingActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F0700B5" android:name="com.yunzhu.shopping.me.merchantmanage.activity.AccountNumberActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.yunzhu.shopping.me.merchantmanage.login.MerchantWelcomeActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.yunzhu.shopping.me.merchantmanage.activity.JbhglActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.yunzhu.shopping.me.merchantmanage.activity.YtxxqActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.yunzhu.shopping.me.merchantmanage.activity.AddChildZhActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<service android:name="com.yunzhu.shopping.me.merchantmanage.service.DownloadService">
+</service>
+<activity android:configChanges="0x000004A0" android:name="com.yunzhu.shopping.me.activity.ErWeiMaActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F0700D2" android:name="com.yunzhu.shopping.me.activity.DiYongJActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F0700D4" android:name="com.yunzhu.shopping.me.activity.DyjSyjlActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F0700F4" android:name="com.yunzhu.shopping.order.activity.PreferentialActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.yunzhu.shopping.order.activity.OrderStatusActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.yunzhu.shopping.order.activity.OrderDetailsActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F0700B7" android:name="com.yunzhu.shopping.me.activity.AccountResultActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F0700B7" android:name="com.yunzhu.shopping.me.merchantmanage.activity.ForGetWithdrawControlPasActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F0700CC" android:name="com.yunzhu.shopping.home.activity.CountDetailsActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F0700DB" android:name="com.yunzhu.shopping.me.activity.ExpressActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F0700CD" android:name="com.yunzhu.shopping.smallroom.activity.CreateSmallRoomActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.yunzhu.shopping.smallroom.SmallRoomActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F07011D" android:name="com.yunzhu.shopping.smallroom.activity.SmallRoomDetailsActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.yunzhu.shopping.me.activity.WithdrawControlOrUserActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F07011E" android:name="com.yunzhu.shopping.smallroom.activity.SmallRoomPayActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F070123" android:name="com.yunzhu.shopping.yzwm.activity.MapHomeActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.yunzhu.shopping.yzwm.activity.WMMainActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F070118" android:name="com.yunzhu.shopping.yzwm.activity.ShopActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F0700DD" android:name="com.yunzhu.shopping.yzwm.activity.FoodDetailsActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F070128" android:name="com.yunzhu.shopping.yzwm.activity.UpOrderActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F0700D7" android:name="com.yunzhu.shopping.yzwm.activity.EditShopAddressActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F0700BE" android:name="com.yunzhu.shopping.yzwm.activity.AddressListActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F0700FD" android:name="com.yunzhu.shopping.order.activity.MyOrderActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F0700C5" android:name="com.yunzhu.shopping.yzwm.activity.CheckedAddressMapActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F070134" android:name="com.yunzhu.shopping.yzwm.activity.WMPayActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F07012F" android:name="com.yunzhu.shopping.yzwm.activity.WMH5Activity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F07012D" android:name="com.yunzhu.shopping.yzwm.activity.WMActiveActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F0700DE" android:name="com.yunzhu.shopping.home.activity.FoodMapActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F07012E" android:name="com.yunzhu.shopping.yzwm.activity.WMCityActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F07012B" android:name="com.yunzhu.shopping.yzwm.activity.WMActivityActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F0700ED" android:name="com.yunzhu.shopping.yzwm.activity.InviteLstActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F070130" android:name="com.yunzhu.shopping.me.activity.WMLPActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F070131" android:name="com.yunzhu.shopping.yzwm.activity.WMLPSYActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F0700E3" android:name="com.yunzhu.shopping.yzwm.activity.GuaGuakaActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:label="@7F07012C" android:name="com.yunzhu.shopping.home.activity.WmActivity66Activity" android:screenOrientation="1" android:theme="@7F0900CC">
+</activity>
+<activity android:configChanges="0x000000E0" android:exported="false" android:name="com.alipay.sdk.app.H5PayActivity" android:screenOrientation="3">
+</activity>
+<activity android:configChanges="0x000000E0" android:exported="false" android:name="com.alipay.sdk.auth.AuthActivity" android:screenOrientation="3">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F0700E9" android:name="com.yunzhu.shopping.home.activity.HomeGoodDetailsActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F0700DC" android:name="com.yunzhu.shopping.me.activity.FeedBackActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F070133" android:name="com.yunzhu.shopping.order.activity.WMOrderHistorylstActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F0700BF" android:name="com.yunzhu.shopping.order.activity.ApplyForRefundActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F0700C0" android:name="com.yunzhu.shopping.order.activity.ApplyForRefundDetailsActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F07010A" android:name="com.yunzhu.shopping.yzwm.activity.PayResultActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F0700D5" android:name="com.yunzhu.shopping.home.activity.EathwlActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F07010B" android:name="com.yunzhu.shopping.login.activity.PhoneBindActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F070116" android:name="com.yunzhu.shopping.me.activity.ServiceCenterActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F0700C4" android:name="com.yunzhu.shopping.home.activity.BuyActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F070122" android:name="com.yunzhu.shopping.home.activity.SysH5Activity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:name="cn.hongys.photoselectorlib.DemoActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.hongys.photoselectorlib.GalleryActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.hongys.photoselectorlib.PreviewActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.maning.library.zxing.CaptureActivity" android:screenOrientation="1" android:theme="@android:01030007" android:windowSoftInputMode="0x00000003">
+</activity>
+</application>
+</manifest>

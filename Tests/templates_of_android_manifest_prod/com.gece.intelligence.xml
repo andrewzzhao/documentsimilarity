@@ -1,0 +1,478 @@
+<?xml version="1.0" ?><manifest android:versionCode="20305" android:versionName="2.3.5" package="com.gece.intelligence" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="14" android:targetSdkVersion="26">
+</uses-sdk>
+<permission android:name="com.gece.intelligence.permission.JPUSH_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.SYSTEM_OVERLAY_WINDOW">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-permission android:name="android.permission.BLUETOOTH">
+</uses-permission>
+<uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-permission android:name="com.gece.intelligence.permission.JPUSH_MESSAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_USER_PRESENT">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS">
+</uses-permission>
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-permission android:name="com.sec.android.provider.badge.permission.READ">
+</uses-permission>
+<uses-permission android:name="com.sec.android.provider.badge.permission.WRITE">
+</uses-permission>
+<uses-permission android:name="com.htc.launcher.permission.READ_SETTINGS">
+</uses-permission>
+<uses-permission android:name="com.htc.launcher.permission.UPDATE_SHORTCUT">
+</uses-permission>
+<uses-permission android:name="com.sonyericsson.home.permission.BROADCAST_BADGE">
+</uses-permission>
+<uses-permission android:name="com.sonymobile.home.permission.PROVIDER_INSERT_BADGE">
+</uses-permission>
+<uses-permission android:name="com.anddoes.launcher.permission.UPDATE_COUNT">
+</uses-permission>
+<uses-permission android:name="com.majeur.launcher.permission.UPDATE_BADGE">
+</uses-permission>
+<uses-permission android:name="com.huawei.android.launcher.permission.CHANGE_BADGE">
+</uses-permission>
+<uses-permission android:name="com.huawei.android.launcher.permission.READ_SETTINGS">
+</uses-permission>
+<uses-permission android:name="com.huawei.android.launcher.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_APP_BADGE">
+</uses-permission>
+<uses-permission android:name="com.oppo.launcher.permission.READ_SETTINGS">
+</uses-permission>
+<uses-permission android:name="com.oppo.launcher.permission.WRITE_SETTINGS">
+</uses-permission>
+<application android:allowBackup="true" android:icon="@7F0C00BE" android:label="孛猫" android:name="com.stub.StubApp" android:resizeableActivity="true" android:supportsRtl="true" android:theme="@7F0F000B">
+<activity android:name="com.hdme.hdjy.controller.StopProfitLossActivity">
+</activity>
+<activity android:name="com.hdme.hdjy.controller.ConditionOrderActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.hdme.hdjy.controller.SearchContractActivity" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.hdme.hdjy.controller.DisplayAccountInfoActivity" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name="com.hdme.hdjy.controller.AddConditionOrderActivity">
+</activity>
+<activity android:exported="true" android:name="cn.jpush.android.ui.PopWinActivity" android:theme="@7F0F00B4">
+<intent-filter>
+<action android:name="cn.jpush.android.ui.PopWinActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="com.gece.intelligence">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000A0" android:exported="true" android:name="cn.jpush.android.ui.PushActivity" android:theme="@android:01030006">
+<intent-filter>
+<action android:name="cn.jpush.android.ui.PushActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="com.gece.intelligence">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:name="cn.jpush.android.service.JNotifyActivity" android:taskAffinity="jpush.custom" android:theme="@android:01030010">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.JNotifyActivity">
+</action>
+<category android:name="com.gece.intelligence">
+</category>
+</intent-filter>
+</activity>
+<activity android:name="com.hdme.hdjy.controller.FundInOutActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.mob.tools.MobUIShell" android:screenOrientation="1" android:theme="@android:01030010" android:windowSoftInputMode="0x00000012">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:scheme="tencent101513768">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="true" android:launchMode="1" android:name="com.gece.intelligence.wxapi.WXEntryActivity" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="com.hdme.hdjy.controller.MainActivity" android:screenOrientation="1" android:theme="@7F0F01F9" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name="com.hdme.hdjy.controller.SplashActivity">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.CREATE_SHORTCUT">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="gece.com" android:scheme="quantcat">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="hx46o0">
+</data>
+</intent-filter>
+</activity>
+<activity android:launchMode="2" android:name="com.hdme.hdjy.controller.AppLoginActivity" android:theme="@7F0F01D1">
+</activity>
+<activity android:name="com.hdme.hdjy.controller.FindBackPasswordActivity" android:theme="@7F0F01D1">
+</activity>
+<activity android:configChanges="0x000004E0" android:exported="false" android:name="com.alipay.sdk.app.H5PayActivity" android:screenOrientation="3" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:configChanges="0x000000E0" android:exported="false" android:name="com.alipay.sdk.app.H5AuthActivity" android:screenOrientation="3" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:name="com.hdme.hdjy.controller.UpdateProfileActivity">
+</activity>
+<activity android:name="com.hdme.hdjy.controller.UserInfoActivity" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name="com.hdme.hdjy.controller.UpdateNicknameActivity">
+</activity>
+<activity android:name="com.hdme.hdjy.controller.AppSettingActivity">
+</activity>
+<activity android:name="com.hdme.hdjy.controller.IssueFeedbackActivity">
+</activity>
+<activity android:name="com.hdme.hdjy.controller.AboutUsActivity">
+</activity>
+<activity android:name="com.hdme.hdjy.controller.BindAccountActivity">
+</activity>
+<activity android:name="com.hdme.hdjy.controller.SetPasswordActivity">
+</activity>
+<activity android:name="com.hdme.hdjy.controller.ModifyPasswordActivity">
+</activity>
+<activity android:name="com.hdme.hdjy.controller.BindPhoneActivity">
+</activity>
+<activity android:name="com.hdme.hdjy.controller.LoginBindPhoneActivity">
+</activity>
+<activity android:name="com.hdme.hdjy.controller.UnBindPhoneActivity">
+</activity>
+<activity android:launchMode="2" android:name="com.hdme.hdjy.controller.SearchActivity">
+</activity>
+<activity android:name="com.hdme.hdjy.controller.MySubscribeStrategyActivity">
+</activity>
+<activity android:launchMode="2" android:name="com.hdme.hdjy.controller.MySubscribeIndexActivity">
+</activity>
+<activity android:launchMode="2" android:name="com.hdme.hdjy.controller.MySubscribeDisplayAccountActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.hdme.hdjy.controller.NewsInfoActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000030">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.hdme.hdjy.controller.SpecialColumnNewsInfoActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000030">
+</activity>
+<activity android:name="com.hdme.hdjy.controller.PayForStrategyOrderDetailActivity">
+</activity>
+<activity android:name="com.hdme.hdjy.controller.PayForIndexOrderDetailActivity">
+</activity>
+<activity android:name="com.hdme.hdjy.controller.PayForDisplayAccountOrderDetailActivity">
+</activity>
+<activity android:name="com.hdme.hdjy.controller.AgreementActivity" android:theme="@7F0F01D1">
+</activity>
+<activity android:name="com.hdme.hdjy.controller.SubscribeStrategySucceedActivity">
+</activity>
+<activity android:name="com.hdme.hdjy.controller.BuyIndicatorSucceedActivity">
+</activity>
+<activity android:name="com.hdme.hdjy.controller.BuyDisplayAccountSucceedActivity">
+</activity>
+<activity android:name="com.hdme.hdjy.controller.StrategyActivity">
+</activity>
+<activity android:name="com.hdme.hdjy.controller.MyOrderActivity">
+</activity>
+<activity android:name="com.hdme.hdjy.controller.TestRefreshActivity">
+</activity>
+<activity android:name="com.hdme.hdjy.controller.GuideViewPageActivity">
+</activity>
+<activity android:exported="true" android:launchMode="1" android:name="com.gece.intelligence.wxapi.WXPayEntryActivity" android:screenOrientation="1" android:theme="@7F0F0238">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:scheme="wx9e2f2438d1850f24">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.hdme.hdjy.controller.MyFavoriteActivity">
+</activity>
+<activity android:name="com.hdme.hdjy.controller.MessageRemindActivity">
+</activity>
+<activity android:launchMode="2" android:name="com.hdme.hdjy.controller.AllIndexActivity">
+</activity>
+<activity android:name="com.hdme.hdjy.controller.WeChatContactActivity" android:theme="@7F0F01D1">
+</activity>
+<activity android:name="com.hdme.hdjy.controller.IndicatorInfoActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="com.hdme.hdjy.controller.MarketInfoActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="com.hdme.hdjy.controller.MarketInfoLandScreenActivity" android:screenOrientation="0" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name="com.hdme.hdjy.controller.MarketStrategyActivity">
+</activity>
+<activity android:name="com.hdme.hdjy.controller.MarketMyIndicatorActivity">
+</activity>
+<activity android:name="com.hdme.hdjy.controller.MarketIndexIntroduceActivity">
+</activity>
+<activity android:name="com.hdme.hdjy.controller.ChangeIndicatorParamActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.hdme.hdjy.controller.NewsInfoLandActivity">
+</activity>
+<activity android:name="com.hdme.hdjy.controller.AddMarketIndicatorActivity">
+</activity>
+<activity android:name="com.hdme.hdjy.controller.MainStrategyActivity">
+</activity>
+<activity android:launchMode="2" android:name="com.hdme.hdjy.controller.QuantsMessageRemindActivity">
+</activity>
+<activity android:name="com.hdme.hdjy.controller.PublishViewpointActivity">
+</activity>
+<activity android:name="com.hdme.hdjy.controller.QuantsPublishCommentActivity">
+</activity>
+<activity android:name="com.hdme.hdjy.controller.TranspondViewpointActivity">
+</activity>
+<activity android:name="com.hdme.hdjy.controller.MyFansActivity">
+</activity>
+<activity android:launchMode="2" android:name="com.hdme.hdjy.controller.UserInfoIndexActivity">
+</activity>
+<activity android:launchMode="2" android:name="com.hdme.hdjy.controller.ViewpointInfoActivity">
+</activity>
+<activity android:name="com.hdme.hdjy.controller.ViewpointShowMoreCommentActivity">
+</activity>
+<activity android:name="com.hdme.hdjy.controller.PraiseMeMessageActivity">
+</activity>
+<activity android:name="com.hdme.hdjy.controller.CommentMeMessageActivity">
+</activity>
+<activity android:name="com.hdme.hdjy.controller.PlatformNotificationActivity">
+</activity>
+<activity android:name="com.hdme.hdjy.controller.SpecialColumnNotificationActivity">
+</activity>
+<activity android:name="com.hdme.hdjy.controller.TradeNotificationActivity">
+</activity>
+<activity android:name="com.hdme.hdjy.controller.NoPayOrderActivity">
+</activity>
+<activity android:name="com.hdme.hdjy.controller.HasPayOrderActivity">
+</activity>
+<activity android:name="com.hdme.hdjy.controller.ConsumeRecordActivity">
+</activity>
+<activity android:name="com.hdme.hdjy.controller.BlackListSettingActivity">
+</activity>
+<activity android:name="com.hdme.hdjy.controller.MarketingCampaignPayActivity" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name="com.hdme.hdjy.controller.SpecialColumnPayActivity">
+</activity>
+<activity android:name="com.hdme.hdjy.controller.SingleLessonPayActivity">
+</activity>
+<activity android:launchMode="2" android:name="com.hdme.hdjy.controller.SpecialColumnInfoActivity">
+</activity>
+<activity android:name="com.hdme.hdjy.controller.MySubscribeLessonActivity">
+</activity>
+<activity android:name="com.hdme.hdjy.controller.IndexNewsActivity">
+</activity>
+<activity android:name="com.hdme.hdjy.controller.MySpecialColumnInfoActivity">
+</activity>
+<activity android:name="com.hdme.hdjy.controller.MarketingCampaignPaySucceedActivity">
+</activity>
+<activity android:name="com.hdme.hdjy.controller.LessonPaySucceedActivity">
+</activity>
+<activity android:name="com.hdme.hdjy.controller.SpecialColumnFreeLookActivity">
+</activity>
+<activity android:name="com.hdme.hdjy.controller.test.NestedScrollWebViewTestActivity">
+</activity>
+<activity android:name="com.hdme.hdjy.controller.ConstraintLayoutActivity">
+</activity>
+<activity android:name="com.hdme.hdjy.test.CoverHeaderScrollActivity">
+</activity>
+<activity android:name="com.hdme.hdjy.test.refresh.RefreshViewPagerRecyclerViewActivity">
+</activity>
+<activity android:name="com.hdme.hdjy.test.slidemenu.SlideMenuTestActivity">
+</activity>
+<activity android:name="com.hdme.hdjy.test.webview.WebViewActivity">
+</activity>
+<activity android:name="com.hdme.hdjy.test.banner.BannerActivity">
+</activity>
+<activity android:name="com.hdme.hdjy.controller.EduBannerInfoActivity">
+</activity>
+<activity android:name="com.hdme.hdjy.controller.TradeAccountAboutActivity">
+</activity>
+<activity android:name="com.hdme.hdjy.controller.TradeAccountCapitalInfoActivity">
+</activity>
+<activity android:name="com.hdme.hdjy.controller.TradeAccountSafeActivity">
+</activity>
+<activity android:name="com.hdme.hdjy.controller.ModifyTradePasswordActivity">
+</activity>
+<activity android:name="com.hdme.hdjy.controller.ModifyCapitalPasswordActivity">
+</activity>
+<activity android:name="com.hdme.hdjy.test.RecyclerViewSlideLayoutTestActivity">
+</activity>
+<activity android:launchMode="2" android:name="com.hdme.hdjy.controller.TradeContractActivity" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name="com.hdme.hdjy.controller.QueryHistoryActivity">
+</activity>
+<meta-data android:name="com.openinstall.APP_KEY" android:value="hx46o0">
+</meta-data>
+<meta-data android:name="design_width_in_dp" android:value="375">
+</meta-data>
+<meta-data android:name="design_height_in_dp" android:value="667">
+</meta-data>
+<provider android:authorities="com.gece.intelligence.fileprovider" android:exported="false" android:grantUriPermissions="true" android:name="android.support.v4.content.FileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F110000">
+</meta-data>
+</provider>
+<provider android:authorities="com.gece.intelligence.DataProvider" android:exported="false" android:name="cn.jpush.android.service.DataProvider" android:process=":pushcore">
+</provider>
+<provider android:authorities="com.gece.intelligence.DownloadProvider" android:exported="true" android:name="cn.jpush.android.service.DownloadProvider">
+</provider>
+<receiver android:enabled="true" android:exported="false" android:name="cn.jpush.android.service.PushReceiver">
+<intent-filter android:priority="1000">
+<action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY">
+</action>
+<category android:name="com.gece.intelligence">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.USER_PRESENT">
+</action>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_ADDED">
+</action>
+<action android:name="android.intent.action.PACKAGE_REMOVED">
+</action>
+<data android:scheme="package">
+</data>
+</intent-filter>
+</receiver>
+<receiver android:exported="false" android:name="cn.jpush.android.service.AlarmReceiver">
+</receiver>
+<receiver android:enabled="true" android:exported="false" android:name="com.hdme.hdjy.receiver.PushReceiver">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.REGISTRATION">
+</action>
+<action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED">
+</action>
+<action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED">
+</action>
+<action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED">
+</action>
+<action android:name="cn.jpush.android.intent.CONNECTION">
+</action>
+<category android:name="com.gece.intelligence">
+</category>
+</intent-filter>
+</receiver>
+<receiver android:name="com.hdme.hdjy.receiver.NewPushReceiver">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.RECEIVE_MESSAGE">
+</action>
+<category android:name="com.gece.intelligence">
+</category>
+</intent-filter>
+</receiver>
+<receiver android:name="com.hdme.hdjy.receiver.SecretCodeReceiver">
+<intent-filter>
+<action android:name="android.provider.Telephony.SECRET_CODE">
+</action>
+<data android:host="1010" android:scheme="android_secret_code">
+</data>
+</intent-filter>
+</receiver>
+<receiver android:name="com.hdme.hdjy.receiver.NetBroadcastReceiver">
+<intent-filter>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+</receiver>
+<service android:enabled="true" android:exported="false" android:name="cn.jpush.android.service.PushService" android:process=":pushcore">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.REGISTER">
+</action>
+<action android:name="cn.jpush.android.intent.REPORT">
+</action>
+<action android:name="cn.jpush.android.intent.PushService">
+</action>
+<action android:name="cn.jpush.android.intent.PUSH_TIME">
+</action>
+</intent-filter>
+</service>
+<service android:enabled="true" android:exported="true" android:name="cn.jpush.android.service.DaemonService">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.DaemonService">
+</action>
+<category android:name="com.gece.intelligence">
+</category>
+</intent-filter>
+</service>
+<service android:name="cn.jpush.android.service.JCommonService" android:process=":pushcore">
+<intent-filter>
+<action android:name="cn.jiguang.user.service.action">
+</action>
+</intent-filter>
+</service>
+<activity android:name="com.hdme.thirdpartlibrary.common.common.image.ShowBigImageActivity">
+</activity>
+<activity android:name="com.hdme.thirdpartlibrary.common.common.webview.CommonWebViewActivity">
+</activity>
+<activity android:configChanges="0x00000480" android:name="me.nereo.multi_image_selector.MultiImageSelectorActivity">
+</activity>
+<meta-data android:name="JPUSH_CHANNEL" android:value="developer-default">
+</meta-data>
+<meta-data android:name="JPUSH_APPKEY" android:value="c971974a044ca48957f39903">
+</meta-data>
+<activity android:configChanges="0x000004A0" android:multiprocess="true" android:name="com.blankj.utilcode.util.PermissionUtils$PermissionActivity" android:theme="@7F0F0003" android:windowSoftInputMode="0x00000003">
+</activity>
+<provider android:authorities="com.gece.intelligence.utilcode.provider" android:exported="false" android:grantUriPermissions="true" android:multiprocess="true" android:name="com.blankj.utilcode.util.Utils$FileProvider4UtilCode">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F110001">
+</meta-data>
+</provider>
+</application>
+</manifest>

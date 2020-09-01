@@ -1,0 +1,294 @@
+<?xml version="1.0" ?><manifest android:versionCode="9" android:versionName="2.0.0" package="com.playtube.tubeplayer" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="16" android:targetSdkVersion="22">
+</uses-sdk>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_LOGS">
+</uses-permission>
+<uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT">
+</uses-permission>
+<uses-permission android:name="com.android.launcher.permission.UNINSTALL_SHORTCUT">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<application android:allowBackup="true" android:icon="@7F0D0000" android:label="@7F0F0027" android:logo="@7F0D0000" android:name="com.stub.StubApp" android:qihoo="activity" android:supportsRtl="true" android:theme="@7F1000BF">
+<activity android:configChanges="0x000004A0" android:label="@7F0F0027" android:launchMode="2" android:name="org.schabi.newpipe.MainActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F0F0027" android:name="org.schabi.newpipe.SplashActivity" android:screenOrientation="1" android:theme="@7F10010E">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004A0" android:name="org.schabi.newpipe.player.old.PlayVideoActivity" android:theme="@7F100178">
+</activity>
+<service android:exported="false" android:name="org.schabi.newpipe.player.BackgroundPlayer">
+</service>
+<activity android:label="@7F0F017F" android:launchMode="2" android:name="org.schabi.newpipe.player.BackgroundPlayerActivity">
+</activity>
+<activity android:label="@7F0F0181" android:launchMode="2" android:name="org.schabi.newpipe.player.PopupVideoPlayerActivity">
+</activity>
+<receiver android:exported="true" android:name="org.schabi.newpipe.util.InstallReferrerReceiver">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+<service android:exported="false" android:name="org.schabi.newpipe.player.PopupVideoPlayer">
+</service>
+<activity android:configChanges="0x000004B0" android:label="@7F0F0027" android:launchMode="2" android:name="org.schabi.newpipe.player.MainVideoPlayer" android:theme="@7F1000DE">
+</activity>
+<activity android:label="@7F0F0144" android:name="org.schabi.newpipe.settings.SettingsActivity">
+</activity>
+<activity android:label="@7F0F017E" android:name="org.schabi.newpipe.about.AboutActivity">
+</activity>
+<activity android:label="@7F0F0180" android:name="org.schabi.newpipe.history.HistoryActivity">
+</activity>
+<activity android:launchMode="3" android:name="org.schabi.newpipe.PanicResponderActivity" android:noHistory="true" android:theme="@android:01030055">
+<intent-filter>
+<action android:name="info.guardianproject.panic.action.TRIGGER">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:label="@7F0F00BB" android:name="org.schabi.newpipe.ExitActivity" android:theme="@android:01030055">
+</activity>
+<activity android:name="org.schabi.newpipe.report.ErrorActivity">
+</activity>
+<activity android:label="@7F0F0027" android:launchMode="2" android:name="org.schabi.newpipe.videoinfo.GetVideoInfoActivity">
+</activity>
+<service android:name="us.shandian.giga.service.DownloadManagerService">
+</service>
+<activity android:label="@7F0F0027" android:name="org.schabi.newpipe.util.FilePickerActivityHelper" android:theme="@7F1000BB">
+<intent-filter>
+<action android:name="android.intent.action.GET_CONTENT">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:label="@7F0F0129" android:name="org.schabi.newpipe.ReCaptchaActivity">
+</activity>
+<provider android:authorities="com.playtube.tubeplayer.provider" android:exported="false" android:grantUriPermissions="true" android:name="android.support.v4.content.FileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F120006">
+</meta-data>
+</provider>
+<activity android:name="org.schabi.newpipe.RouterActivity" android:taskAffinity="" android:theme="@android:01030055">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<action android:name="android.media.action.MEDIA_PLAY_FROM_SEARCH">
+</action>
+<action android:name="android.nfc.action.NDEF_DISCOVERED">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="http">
+</data>
+<data android:scheme="https">
+</data>
+<data android:host="youtube.com">
+</data>
+<data android:host="m.youtube.com">
+</data>
+<data android:host="www.youtube.com">
+</data>
+<data android:pathPrefix="/v/">
+</data>
+<data android:pathPrefix="/embed/">
+</data>
+<data android:pathPrefix="/watch">
+</data>
+<data android:pathPrefix="/attribution_link">
+</data>
+<data android:pathPrefix="/channel/">
+</data>
+<data android:pathPrefix="/user/">
+</data>
+<data android:pathPrefix="/playlist">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<action android:name="android.media.action.MEDIA_PLAY_FROM_SEARCH">
+</action>
+<action android:name="android.nfc.action.NDEF_DISCOVERED">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="http">
+</data>
+<data android:scheme="https">
+</data>
+<data android:host="youtu.be">
+</data>
+<data android:pathPrefix="/">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<action android:name="android.media.action.MEDIA_PLAY_FROM_SEARCH">
+</action>
+<action android:name="android.nfc.action.NDEF_DISCOVERED">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="vnd.youtube">
+</data>
+<data android:scheme="vnd.youtube.launch">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.SEND">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:mimeType="text/plain">
+</data>
+</intent-filter>
+</activity>
+<activity android:label="@7F0F011D" android:name="org.schabi.newpipe.RouterPopupActivity" android:taskAffinity="" android:theme="@7F1000DF">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<action android:name="android.media.action.MEDIA_PLAY_FROM_SEARCH">
+</action>
+<action android:name="android.nfc.action.NDEF_DISCOVERED">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="http">
+</data>
+<data android:scheme="https">
+</data>
+<data android:host="youtube.com">
+</data>
+<data android:host="m.youtube.com">
+</data>
+<data android:host="www.youtube.com">
+</data>
+<data android:pathPrefix="/v/">
+</data>
+<data android:pathPrefix="/embed/">
+</data>
+<data android:pathPrefix="/watch">
+</data>
+<data android:pathPrefix="/attribution_link">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<action android:name="android.media.action.MEDIA_PLAY_FROM_SEARCH">
+</action>
+<action android:name="android.nfc.action.NDEF_DISCOVERED">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="http">
+</data>
+<data android:scheme="https">
+</data>
+<data android:host="youtu.be">
+</data>
+<data android:pathPrefix="/">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<action android:name="android.media.action.MEDIA_PLAY_FROM_SEARCH">
+</action>
+<action android:name="android.nfc.action.NDEF_DISCOVERED">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="vnd.youtube">
+</data>
+<data android:scheme="vnd.youtube.launch">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.SEND">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:mimeType="text/plain">
+</data>
+</intent-filter>
+</activity>
+<meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@7F0F00B3">
+</meta-data>
+<activity android:configChanges="0x000005B0" android:label="@7F0F0027" android:name="com.facebook.FacebookActivity" android:theme="@7F1001D8">
+</activity>
+<activity android:exported="true" android:name="com.facebook.CustomTabActivity">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="@7F0F00B4">
+</data>
+</intent-filter>
+</activity>
+<meta-data android:name="BUGLY_APPID" android:value="5bf803957f">
+</meta-data>
+<meta-data android:name="BUGLY_APP_VERSION" android:value="2.0.0">
+</meta-data>
+<meta-data android:name="BUGLY_APP_CHANNEL" android:value="google_play">
+</meta-data>
+<meta-data android:name="BUGLY_ENABLE_DEBUG" android:value="false">
+</meta-data>
+<activity android:configChanges="0x000004A0" android:hardwareAccelerated="true" android:name="com.facebook.ads.AudienceNetworkActivity">
+</activity>
+<activity android:excludeFromRecents="true" android:launchMode="2" android:name="com.rating.RatingActivity" android:screenOrientation="1" android:theme="@7F1000AF">
+</activity>
+<activity android:name="com.facebook.CustomTabMainActivity">
+</activity>
+<activity android:configChanges="0x00000FB0" android:exported="false" android:name="com.google.android.gms.ads.AdActivity" android:theme="@android:0103000F">
+</activity>
+<meta-data android:name="com.google.android.gms.version" android:value="@7F0A0007">
+</meta-data>
+<provider android:authorities="com.playtube.tubeplayer.FacebookInitProvider" android:exported="false" android:name="com.facebook.internal.FacebookInitProvider">
+</provider>
+</application>
+</manifest>

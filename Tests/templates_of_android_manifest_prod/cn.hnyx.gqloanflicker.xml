@@ -1,0 +1,237 @@
+<?xml version="1.0" ?><manifest android:versionCode="206" android:versionName="2.0.6" package="cn.hnyx.gqloanflicker" platformBuildVersionCode="206" platformBuildVersionName="2.0.6" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="16" android:targetSdkVersion="27">
+</uses-sdk>
+<permission android:name="cn.hnyx.gqloanflicker.permission.JPUSH_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="cn.hnyx.gqloanflicker.permission.JPUSH_MESSAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_USER_PRESENT">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-permission android:name="android.permission.BLUETOOTH">
+</uses-permission>
+<uses-permission android:name="android.intent.action.MEDIA_MOUNTED">
+</uses-permission>
+<application android:allowBackup="true" android:icon="@7F0B0000" android:label="@7F0C001D" android:name="com.stub.StubApp" android:supportsRtl="true" android:theme="@7F0D0010">
+�
+<service android:enabled="true" android:exported="false" android:name="cn.jpush.android.service.PushService" android:process=":pushcore">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.REGISTER">
+</action>
+<action android:name="cn.jpush.android.intent.REPORT">
+</action>
+<action android:name="cn.jpush.android.intent.PushService">
+</action>
+<action android:name="cn.jpush.android.intent.PUSH_TIME">
+</action>
+</intent-filter>
+</service>
+<provider android:authorities="cn.hnyx.gqloanflicker.DataProvider" android:exported="true" android:name="cn.jpush.android.service.DataProvider">
+</provider>
+<service android:enabled="true" android:exported="true" android:name="cn.jpush.android.service.DaemonService">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.DaemonService">
+</action>
+<category android:name="cn.hnyx.gqloanflicker">
+</category>
+</intent-filter>
+</service>
+<receiver android:enabled="true" android:exported="false" android:name="cn.jpush.android.service.PushReceiver">
+<intent-filter android:priority="1000">
+<action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY">
+</action>
+<category android:name="cn.hnyx.gqloanflicker">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.USER_PRESENT">
+</action>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_ADDED">
+</action>
+<action android:name="android.intent.action.PACKAGE_REMOVED">
+</action>
+<data android:scheme="package">
+</data>
+</intent-filter>
+</receiver>
+<activity android:configChanges="0x000000A0" android:exported="false" android:name="cn.jpush.android.ui.PushActivity" android:theme="@android:01030006">
+<intent-filter>
+<action android:name="cn.jpush.android.ui.PushActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="cn.hnyx.gqloanflicker">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000A0" android:exported="false" android:name="cn.jpush.android.ui.PopWinActivity" android:theme="@7F0D00CF">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="cn.hnyx.gqloanflicker">
+</category>
+</intent-filter>
+</activity>
+<service android:enabled="true" android:exported="false" android:name="cn.jpush.android.service.DownloadService">
+</service>
+<receiver android:exported="false" android:name="cn.jpush.android.service.AlarmReceiver">
+</receiver>
+<meta-data android:name="JPUSH_CHANNEL" android:value="developer-default">
+</meta-data>
+<meta-data android:name="JPUSH_APPKEY" android:value="b7c8146575b36fb2b6106ac2">
+</meta-data>
+<activity android:name="cn.hnyx.gqloanflicker.ui.WelcomeActivity">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<meta-data android:name="BaiduMobAd_STAT_ID" android:value="ccaca7bcfd">
+</meta-data>
+<meta-data android:name="BaiduMobAd_SEND_STRATEGY" android:value="APP_START">
+</meta-data>
+<meta-data android:name="CHANNEL" android:value="好㝟借[vivo]">
+</meta-data>
+<activity android:name="cn.hnyx.gqloanflicker.ui.me.more.MoreActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.hnyx.gqloanflicker.ui.me.more.ChangePasswordActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.hnyx.gqloanflicker.ui.me.bill.BillActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.hnyx.gqloanflicker.ui.me.apply.MyApplyActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.hnyx.gqloanflicker.ui.login.LoginActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.hnyx.gqloanflicker.ui.me.edit.EditActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.hnyx.gqloanflicker.ui.LoanDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.hnyx.gqloanflicker.ui.login.RegActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.hnyx.gqloanflicker.ui.main.LoanByTypeActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.hnyx.gqloanflicker.ui.main.LoanStrategyActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.hnyx.gqloanflicker.ui.login.FindPasswordActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.hnyx.gqloanflicker.ui.login.FindPassword2Activity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.hnyx.gqloanflicker.ui.main.LoanStategyDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.hnyx.gqloanflicker.ui.me.faq.FaqActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.hnyx.gqloanflicker.ui.me.faq.FaqDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.hnyx.gqloanflicker.ui.me.bill.AddBillActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.hnyx.gqloanflicker.ui.me.bill.BillDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.hnyx.gqloanflicker.ui.MainActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.hnyx.gqloanflicker.ui.ADActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.hnyx.gqloanflicker.ui.me.more.FeedbackActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.hnyx.gqloanflicker.ui.me.log.LogActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.hnyx.gqloanflicker.ui.me.AboutActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.hnyx.gqloanflicker.ui.WebActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.hnyx.gqloanflicker.ui.NoLoginActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.hnyx.gqloanflicker.ui.main.CreditActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.hnyx.gqloanflicker.ui.main.LoanByTypeV2Activity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.hnyx.gqloanflicker.ui.main.EditInfoActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.hnyx.gqloanflicker.ui.main.EditInfo2Activity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.hnyx.gqloanflicker.ui.main.LoanListActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.hnyx.gqloanflicker.ui.me.WechatActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.hnyx.gqloanflicker.ui.main.CreditStateActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.hnyx.gqloanflicker.ui.main.PreciseRecommActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.hnyx.gqloanflicker.ui.me.form.FormActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.hnyx.gqloanflicker.ui.me.EditUserActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.hnyx.gqloanflicker.ui.me.EditUser2Activity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.hnyx.gqloanflicker.ui.login.LoginV2Activity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.hnyx.gqloanflicker.ui.StandardTermsActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.hnyx.gqloanflicker.ui.HotFAQActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.hnyx.gqloanflicker.ui.main.apply.Data2Activity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.hnyx.gqloanflicker.ui.main.apply.Data3Activity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.hnyx.gqloanflicker.ui.main.apply.Data4Activity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.hnyx.gqloanflicker.ui.MainAuditActivity" android:screenOrientation="1">
+</activity>
+<provider android:authorities="cn.hnyx.gqloanflicker.fileprovider" android:exported="false" android:grantUriPermissions="true" android:name="android.support.v4.content.FileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F0F0000">
+</meta-data>
+</provider>
+<meta-data android:name="5ae16288f29d98249d000170" android:value="YOUR_APP_KEY">
+</meta-data>
+<meta-data android:name="yyb" android:value="Channel ID">
+</meta-data>
+<service android:exported="false" android:name="com.tencent.tmdownloader.TMAssistantDownloadService" android:process=":TMAssistantDownloadSDKService">
+</service>
+<activity android:name="com.lljjcoder.style.citylist.CityListSelectActivity">
+</activity>
+<activity android:name="com.lljjcoder.style.citythreelist.ProvinceActivity">
+</activity>
+<activity android:name="com.lljjcoder.style.citythreelist.CityActivity">
+</activity>
+<activity android:name="com.lljjcoder.style.citythreelist.AreaActivity">
+</activity>
+</application>
+</manifest>

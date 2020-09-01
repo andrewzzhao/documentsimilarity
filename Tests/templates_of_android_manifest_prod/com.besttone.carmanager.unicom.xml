@@ -1,0 +1,330 @@
+<?xml version="1.0" ?><manifest android:versionCode="182" android:versionName="1.5.0" package="com.besttone.carmanager.unicom" platformBuildVersionCode="22" platformBuildVersionName="5.1.1-1819727" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="14" android:targetSdkVersion="22">
+</uses-sdk>
+<permission android:name="com.besttone.carmanager.unicom.permission.JPUSH_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="com.besttone.carmanager.unicom.permission.JPUSH_MESSAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CALL_PHONE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_GPS">
+</uses-permission>
+<uses-permission android:name="android.permission.BAIDU_LOCATION_SERVICE">
+</uses-permission>
+<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_LOGS">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_USER_PRESENT">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS">
+</uses-permission>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_CONTACTS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_SMS">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_SMS">
+</uses-permission>
+<uses-permission android:name="android.permission.RECORD_AUDIO">
+</uses-permission>
+<uses-permission android:name="android.permission.SEND_SMS">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_CONTACTS">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_OWNER_DATA">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SMS">
+</uses-permission>
+<uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT">
+</uses-permission>
+<uses-permission android:name="com.android.launcher.permission.READ_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<application android:allowBackup="true" android:allowTaskReparenting="true" android:icon="@7F0200C4" android:label="@7F07001C" android:name="com.qihoo.util.StubApp3149083432" android:qihoo="activity" android:taskAffinity="com.besttone.carmanager" android:theme="@7F060002">
+<activity android:name="com.umeng.fb.ConversationActivity">
+</activity>
+<service android:exported="false" android:name="com.qihoo.util.QhJobService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<activity android:excludeFromRecents="true" android:exported="false" android:name="com.qihoo.util.CommonActivity" android:theme="@android:0103005F">
+</activity>
+<service android:enabled="true" android:exported="true" android:name="com.qihoo.util.CommonService">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.qihoo.util.CommonService2">
+</service>
+<receiver android:enabled="true" android:exported="false" android:name="com.qihoo.util.CommonReceiver">
+</receiver>
+<provider android:authorities="com.besttone.carmanager.unicom.COMMONPROVIDER" android:exported="true" android:name="com.qihoo.util.CommonProvider">
+</provider>
+<activity android:configChanges="0x000000A0" android:exported="false" android:launchMode="2" android:name="com.qihoo.ls.LsActivity" android:screenOrientation="1" android:theme="@android:01030060">
+</activity>
+<service android:exported="false" android:name="com.qihoo.ls.SoService">
+</service>
+<activity android:name="com.umeng.fb.ContactActivity">
+</activity>
+<receiver android:enabled="true" android:name="com.besttone.carmanager.service.CarBroadcastReceiver">
+<intent-filter android:priority="2147483647">
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+<action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED">
+</action>
+<category android:name="com.besttone.carmanager.unicom">
+</category>
+</intent-filter>
+</receiver>
+<activity android:exported="false" android:name="cn.jpush.android.ui.PopWinActivity" android:theme="@7F060004">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="cn.jpush.android.ui.PushActivity" android:theme="@android:01030006">
+<intent-filter>
+<action android:name="cn.jpush.android.ui.PushActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="com.besttone.carmanager.unicom">
+</category>
+</intent-filter>
+</activity>
+<receiver android:enabled="true" android:name="cn.jpush.android.service.PushReceiver">
+<intent-filter android:priority="1000">
+<action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY">
+</action>
+<category android:name="com.besttone.carmanager.unicom">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.USER_PRESENT">
+</action>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_ADDED">
+</action>
+<action android:name="android.intent.action.PACKAGE_REMOVED">
+</action>
+<data android:scheme="package">
+</data>
+</intent-filter>
+</receiver>
+<receiver android:exported="false" android:name="cn.jpush.android.service.AlarmReceiver">
+</receiver>
+<service android:enabled="true" android:exported="false" android:name="cn.jpush.android.service.DownloadService">
+</service>
+<service android:enabled="true" android:exported="false" android:name="cn.jpush.android.service.PushService">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.REGISTER">
+</action>
+<action android:name="cn.jpush.android.intent.REPORT">
+</action>
+<action android:name="cn.jpush.android.intent.PushService">
+</action>
+<action android:name="cn.jpush.android.intent.PUSH_TIME">
+</action>
+</intent-filter>
+</service>
+<service android:enabled="true" android:exported="true" android:name="cn.jpush.android.service.DaemonService">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.DaemonService">
+</action>
+<category android:name="com.besttone.carmanager.unicom">
+</category>
+</intent-filter>
+</service>
+<meta-data android:name="com.besttone.car.unsigned" android:value="false">
+</meta-data>
+<meta-data android:name="SOFTWARE_TYPE" android:value="4">
+</meta-data>
+<meta-data android:name="JASON_URL" android:value="http://apicheyou.chediandian.com/jsonData/">
+</meta-data>
+<meta-data android:name="com.besttone.car.debug" android:value="false">
+</meta-data>
+<meta-data android:name="com.baidu.lbsapi.API_KEY" android:value="Q9rQgA2bCDtClSTXR0a0wCxB">
+</meta-data>
+<meta-data android:name="UMENG_APPKEY" android:value="53512a6e56240b09f901259b">
+</meta-data>
+<meta-data android:name="UMENG_CHANNEL" android:value="unicom">
+</meta-data>
+<activity android:configChanges="0x000000A0" android:name="com.besttone.carmanager.ui.welcome.SplashView" android:screenOrientation="1">
+<intent-filter>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+<action android:name="android.intent.action.MAIN">
+</action>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000A0" android:launchMode="2" android:name="com.besttone.carmanager.ui.welcome.WelcomeView" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.besttone.carmanager.newui.MyBrowser_" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.besttone.carmanager.newui.AutoServiceText_" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.besttone.carmanager.newui.JLAutoServiceText_" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.besttone.carmanager.newui.AutoServiceMap_" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.besttone.carmanager.newui.JLAutoServiceMap_" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.besttone.carmanager.newui.LifeService_" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.besttone.carmanager.newui.Illegal_" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.besttone.carmanager.newui.IllegalResult_" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.besttone.carmanager.newui.IllegalSupportCity_" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.besttone.carmanager.newui.IllegalSupportProvince_" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.besttone.carmanager.newui.CarProvinceChooseView_" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.besttone.carmanager.newui.NearByText_" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.besttone.carmanager.newui.NearByTextUC_" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.besttone.carmanager.newui.NearByMap_" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.besttone.carmanager.newui.NearByTextStore_" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.besttone.carmanager.newui.NearByTextPolice_" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.besttone.carmanager.newui.NearByTextInsurance_" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.besttone.carmanager.newui.CaragencyOperation_" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.besttone.carmanager.newui.CaragencyRoad_" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.besttone.carmanager.newui.DrivingOrder_" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.besttone.carmanager.newui.DrivingOrderList_" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.besttone.carmanager.newui.Ad_" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.besttone.carmanager.newui.OrderBook_" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.carmanager.ui.map.SearchNearBy" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.carmanager.ui.map.SearchService" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.carmanager.ui.map.ServiceTextList2" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:launchMode="2" android:name="com.besttone.carmanager.ui.main.MainActivity1" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.besttone.carmanager.ui.nearby.NearByMapView" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.besttone.carmanager.ui.store.StoreDetailView" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.besttone.carmanager.newui.JLStoreDetailView" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.besttone.carmanager.newui.Order_" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.besttone.carmanager.newui.User_View_" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.besttone.carmanager.newui.User_MyCarView_" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.besttone.carmanager.newui.User_MyInfoView_" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.besttone.carmanager.newui.User_FreeOrder_" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.besttone.carmanager.newui.User_FreeTicket_" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.besttone.carmanager.newui.User_FreeTicket_Detail_" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.besttone.carmanager.newui.User_FreeOrder_Store_" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.besttone.carmanager.newui.User_FreeOrder_Detail_" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.besttone.carmanager.newui.User_Collection_" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.besttone.carmanager.newui.User_MoveView_" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.besttone.carmanager.newui.User_TD_" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.besttone.carmanager.newui.SelectAutoBrand_" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.besttone.carmanager.newui.User_MovePrint_" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.besttone.carmanager.newui.User_MoveSend_" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.besttone.carmanager.newui.User_AboutView_" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.besttone.carmanager.newui.Login_" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.besttone.carmanager.newui.Reg_" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.besttone.carmanager.newui.ChangePwd_" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.besttone.carmanager.newui.RentalMain_" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.besttone.carmanager.newui.RentalShops_" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.besttone.carmanager.newui.RentalCarDetail_" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.besttone.carmanager.newui.RentalOrders_" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.besttone.carmanager.newui.RentalOrderDetail_" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.besttone.carmanager.newui.RentalSelectCity_" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.besttone.carmanager.newui.RentalSelectShop_" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.besttone.carmanager.newui.Illegal_JL_" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.besttone.carmanager.newui.IllegalResult2_JL_" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.besttone.carmanager.newui.Tip_" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.besttone.carmanager.newui.TipResult_" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.besttone.carmanager.zxing.CaptureActivity" android:screenOrientation="1" android:theme="@android:01030007" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.besttone.carmanager.zxing.WebViewActivity" android:screenOrientation="1" android:theme="@android:01030007">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.besttone.carmanager.ui.select.CarProvinceChooseView" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.besttone.carmanager.ui.select.ServiceSupportCity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.umeng.myfb.ConversationActivity">
+</activity>
+<activity android:name="com.umeng.myfb.ContactActivity">
+</activity>
+<service android:name="com.umeng.update.net.DownloadingService" android:process=":DownloadingService">
+</service>
+<activity android:name="com.umeng.update.UpdateDialogActivity" android:theme="@android:01030010">
+</activity>
+<activity android:excludeFromRecents="true" android:name="com.umeng.socialize.editorpage.ShareActivity" android:theme="@7F060007">
+</activity>
+<activity android:configChanges="0x000004A0" android:exported="true" android:name="com.besttone.carmanager.wxapi.WXEntryActivity" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<service android:enabled="true" android:name="com.baidu.location.f" android:process=":remote">
+</service>
+</application>
+</manifest>

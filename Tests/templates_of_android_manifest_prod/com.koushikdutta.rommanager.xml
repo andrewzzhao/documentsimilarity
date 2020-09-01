@@ -1,0 +1,168 @@
+<?xml version="1.0" ?><manifest android:installLocation="0" android:versionCode="5536" android:versionName="5.5.3.6" package="com.koushikdutta.rommanager" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="8" android:targetSdkVersion="17">
+</uses-sdk>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_SUPERUSER">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="android.permission.USE_CREDENTIALS">
+</uses-permission>
+<permission android:name="com.koushikdutta.rommanager.permission.C2D_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="com.koushikdutta.rommanager.permission.C2D_MESSAGE">
+</uses-permission>
+<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE">
+</uses-permission>
+<uses-permission android:name="com.android.vending.BILLING">
+</uses-permission>
+<application android:hardwareAccelerated="true" android:icon="@7F020011" android:label="@7F060020" android:name=".RomManagerApplication" android:theme="@7F070000">
+<activity android:configChanges="0x000000B0" android:label="@7F060020" android:name=".RomManager">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity-alias android:configChanges="0x000000B0" android:enabled="false" android:icon="@7F020000" android:label="@7F0600C7" android:name=".BurritoManager" android:targetActivity=".RomManager">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:mimeType="application/zip" android:scheme="file">
+</data>
+</intent-filter>
+</activity-alias>
+<activity android:configChanges="0x000000B0" android:label="@7F060102" android:name=".recovery.SetupActivity">
+</activity>
+<activity android:configChanges="0x000000B0" android:label="@7F060049" android:name=".recovery.ListDevicesActivity">
+</activity>
+<activity android:configChanges="0x000000B0" android:label="@7F060041" android:name=".recovery.FlashRecoveryActivity">
+</activity>
+<activity android:configChanges="0x000000B0" android:label="@7F06002A" android:name=".install.InstallActivity">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:mimeType="application/zip" android:scheme="file">
+</data>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000B0" android:label="@7F060005" android:name=".nandroid.ManageBackups">
+</activity>
+<activity android:configChanges="0x000000B0" android:exported="true" android:label="@7F060001" android:name=".InstallRom">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+</intent-filter>
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="com.koushikdutta.rommanager.PICK_ZIP">
+</action>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000B0" android:label="@7F060002" android:name=".download.RomList">
+</activity>
+<activity android:configChanges="0x000000B0" android:label="@7F060002" android:name=".download.DeveloperList">
+</activity>
+<activity android:configChanges="0x000000B0" android:label="@7F060002" android:name=".download.RomDownloadActivity">
+</activity>
+<activity android:configChanges="0x000000B0" android:label="@7F060002" android:name=".ScriptRunner">
+</activity>
+<activity android:configChanges="0x000000B0" android:label="@7F060064" android:name=".SettingsScreen">
+</activity>
+<activity android:configChanges="0x000000B0" android:label="@7F0600A4" android:name=".Downloading">
+</activity>
+<activity android:configChanges="0x000000B0" android:label="@7F0600F1" android:name=".nandroid.NandroidServerActivity">
+</activity>
+<service android:exported="true" android:name=".DownloadService">
+</service>
+<service android:name=".nandroid.NandroidWebServer">
+</service>
+<receiver android:name=".BackupReceiver">
+<intent-filter>
+<action android:name="com.koushikdutta.rommanager.backup">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name=".UpdateReceiver">
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+<action android:name="com.koushikdutta.rommanager.ALARM">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name=".CheckinReceiver">
+<intent-filter>
+<action android:name="com.koushikdutta.rommanager.ALARM">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name=".C2DMReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+<category android:name="com.koushikdutta.rommanager">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.REGISTRATION">
+</action>
+<category android:name="com.koushikdutta.rommanager">
+</category>
+</intent-filter>
+</receiver>
+<activity android:configChanges="0x000000B0" android:name="com.google.ads.AdActivity">
+</activity>
+<activity android:name=".EmptyActivity" android:theme="@android:01030010">
+</activity>
+<service android:exported="true" android:name=".ROMManagerAPIService">
+<intent-filter>
+<action android:name="com.koushikdutta.rommanager.api.BIND">
+</action>
+</intent-filter>
+</service>
+<activity android:configChanges="0x000000B0" android:label="@7F060096" android:name=".BuyActivity" android:screenOrientation="1" android:theme="@7F070001">
+</activity>
+<service android:name="com.clockworkmod.billing.BillingService">
+</service>
+<activity android:configChanges="0x000000A0" android:name="com.paypal.android.MEP.PayPalActivity" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.clockworkmod.billing.BillingActivity" android:theme="@android:01030010">
+</activity>
+<receiver android:name="com.clockworkmod.billing.BillingReceiver">
+<intent-filter>
+<action android:name="com.android.vending.billing.IN_APP_NOTIFY">
+</action>
+<action android:name="com.android.vending.billing.RESPONSE_CODE">
+</action>
+<action android:name="com.android.vending.billing.PURCHASE_STATE_CHANGED">
+</action>
+</intent-filter>
+</receiver>
+</application>
+</manifest>

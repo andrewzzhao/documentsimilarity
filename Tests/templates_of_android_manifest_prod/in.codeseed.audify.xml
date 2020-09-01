@@ -1,0 +1,204 @@
+<?xml version="1.0" ?><manifest android:installLocation="0" android:versionCode="143" android:versionName="2.9" package="in.codeseed.audify" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="19" android:targetSdkVersion="27">
+</uses-sdk>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.BLUETOOTH">
+</uses-permission>
+<uses-permission android:name="android.permission.BLUETOOTH_ADMIN">
+</uses-permission>
+<uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-permission android:name="com.android.vending.BILLING">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NOTIFICATION_POLICY">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_CONTACTS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-feature android:glEsVersion="0x00020000" android:required="true">
+</uses-feature>
+<uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE">
+</uses-permission>
+<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE">
+</uses-permission>
+<permission android:name="in.codeseed.audify.permission.C2D_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="in.codeseed.audify.permission.C2D_MESSAGE">
+</uses-permission>
+<application android:allowBackup="true" android:icon="@7F0E0000" android:label="@7F100046" android:name="in.codeseed.audify.base.AudifyApplication" android:supportsRtl="true" android:theme="@7F110011">
+<meta-data android:name="com.google.android.geo.API_KEY" android:value="@7F1001BA">
+</meta-data>
+<activity android:label="@7F100046" android:launchMode="2" android:name="in.codeseed.audify.home.HomeActivity" android:theme="@7F1100C3">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:label="Audify On-boarding Screen" android:launchMode="2" android:name="in.codeseed.audify.onboarding.IntroActivity" android:theme="@7F1100C3">
+</activity>
+<activity android:label="@7F10004A" android:name="in.codeseed.audify.appsetting.AppSettingsActivity" android:theme="@7F110011">
+</activity>
+<activity android:label="Audify App Filter" android:name="in.codeseed.audify.appfilter.AppFilterActivity" android:parentActivityName="in.codeseed.audify.home.HomeActivity">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value="in.codeseed.audify.home.HomeActivity">
+</meta-data>
+</activity>
+<activity android:label="Audify Settings" android:name="in.codeseed.audify.settings.SettingsActivity" android:parentActivityName="in.codeseed.audify.home.HomeActivity">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value="in.codeseed.audify.home.HomeActivity">
+</meta-data>
+</activity>
+<activity android:label="Audify Locate" android:name="in.codeseed.audify.locate.AudifyLocateActivity" android:parentActivityName="in.codeseed.audify.home.HomeActivity">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value="in.codeseed.audify.home.HomeActivity">
+</meta-data>
+</activity>
+<activity android:label="Audify Locate Settings" android:name="in.codeseed.audify.locate.AudifyLocateSettingsActivity" android:parentActivityName="in.codeseed.audify.locate.AudifyLocateActivity">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value="in.codeseed.audify.locate.AudifyLocateActivity">
+</meta-data>
+</activity>
+<activity android:label="Notification Settings" android:name="in.codeseed.audify.notificationsettings.NotificationSettingsActivity" android:parentActivityName="in.codeseed.audify.settings.SettingsActivity">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value="in.codeseed.audify.settings.SettingsActivity">
+</meta-data>
+</activity>
+<activity android:label="@7F1001D6" android:name="in.codeseed.audify.help.HelpActivity" android:parentActivityName="in.codeseed.audify.settings.SettingsActivity" android:theme="@7F110011">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value="in.codeseed.audify.settings.SettingsActivity">
+</meta-data>
+</activity>
+<activity android:label="@7F100A9C" android:name="in.codeseed.audify.devices.PairedDevicesActivity" android:parentActivityName="in.codeseed.audify.settings.SettingsActivity" android:theme="@7F110011">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value="in.codeseed.audify.settings.SettingsActivity">
+</meta-data>
+</activity>
+<activity android:label="Buy Premium Screen" android:name="in.codeseed.audify.purchase.BuyPremiumActivity" android:theme="@7F110011">
+</activity>
+<activity android:label="Auto Start Screen" android:name="in.codeseed.audify.autostart.AutoStartActivity" android:theme="@7F110011">
+</activity>
+<activity android:label="Time Picker Screen" android:name="in.codeseed.audify.autostart.TimePickerActivity" android:theme="@7F11015B">
+</activity>
+<service android:label="@7F100046" android:name="in.codeseed.audify.notificationlistener.NotificationService" android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE">
+<intent-filter>
+<action android:name="android.service.notification.NotificationListenerService">
+</action>
+</intent-filter>
+</service>
+<service android:exported="false" android:name="in.codeseed.audify.appfilter.LoadInstalledAppsIntentService" android:permission=".PRIVATE_ACTIVITY">
+</service>
+<service android:exported="false" android:name="in.codeseed.audify.settings.AutoStartIntentService">
+</service>
+<meta-data android:name="com.google.android.gms.version" android:value="@7F0A0008">
+</meta-data>
+<meta-data android:name="com.google.android.gms.analytics.globalConfigResource" android:resource="@7F130006">
+</meta-data>
+<meta-data android:name="io.fabric.ApiKey" android:value="6fb72364eac0e61a9297f72f27d20d3a782d5305">
+</meta-data>
+<receiver android:enabled="true" android:exported="true" android:name="in.codeseed.audify.broadcastreceivers.AudifyBroadcastReceiver">
+</receiver>
+<receiver android:enabled="true" android:exported="true" android:label="BootCompletedReceiver" android:name="in.codeseed.audify.broadcastreceivers.BootCompletedReceiver">
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name="in.codeseed.audify.settings.AutoStartBroadcastReceiver" android:process=":remote">
+</receiver>
+<receiver android:label="@7F100AF9" android:name="in.codeseed.audify.widget.AudifySpeakerWidgetProvider">
+<intent-filter>
+<action android:name="android.appwidget.action.APPWIDGET_UPDATE">
+</action>
+<action android:name="in.codeseed.audify.SPEAKER_BOT">
+</action>
+</intent-filter>
+<meta-data android:name="android.appwidget.provider" android:resource="@7F130005">
+</meta-data>
+</receiver>
+<receiver android:label="@7F100AF8" android:name="in.codeseed.audify.widget.AudifyHeadphonesWidgetProvider">
+<intent-filter>
+<action android:name="android.appwidget.action.APPWIDGET_UPDATE">
+</action>
+<action android:name="in.codeseed.audify.HEADPHONES_BOT">
+</action>
+</intent-filter>
+<meta-data android:name="android.appwidget.provider" android:resource="@7F130002">
+</meta-data>
+</receiver>
+<service android:name="in.codeseed.audify.wear.AudifyWearService">
+<intent-filter>
+<action android:name="com.google.android.gms.wearable.MESSAGE_RECEIVED">
+</action>
+<data android:host="*" android:pathPrefix="/status" android:scheme="wear">
+</data>
+<data android:host="*" android:pathPrefix="/headphones" android:scheme="wear">
+</data>
+<data android:host="*" android:pathPrefix="/speaker" android:scheme="wear">
+</data>
+</intent-filter>
+</service>
+<service android:icon="@7F0801FD" android:label="@7F100AEC" android:name="in.codeseed.audify.tile.AudifySpeakerTileService" android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+<intent-filter>
+<action android:name="android.service.quicksettings.action.QS_TILE">
+</action>
+</intent-filter>
+</service>
+<meta-data android:name="com.google.android.gms.cast.framework.OPTIONS_PROVIDER_CLASS_NAME" android:value="in.codeseed.audify.googlecast.CastOptionsProvider">
+</meta-data>
+<provider android:authorities="in.codeseed.audify.crashlyticsinitprovider" android:exported="false" android:initOrder="100" android:name="com.crashlytics.android.CrashlyticsInitProvider">
+</provider>
+<receiver android:exported="false" android:name="com.google.android.gms.cast.framework.media.MediaIntentReceiver">
+</receiver>
+<service android:name="com.google.android.gms.cast.framework.media.MediaNotificationService">
+</service>
+<service android:name="com.google.android.gms.cast.framework.ReconnectionService">
+</service>
+<receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementReceiver">
+</receiver>
+<receiver android:enabled="true" android:exported="true" android:name="com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver" android:permission="android.permission.INSTALL_PACKAGES">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementService">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementJobService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<receiver android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+<category android:name="in.codeseed.audify">
+</category>
+</intent-filter>
+</receiver>
+<service android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdService">
+<intent-filter android:priority="-500">
+<action android:name="com.google.firebase.INSTANCE_ID_EVENT">
+</action>
+</intent-filter>
+</service>
+<provider android:authorities="in.codeseed.audify.firebaseinitprovider" android:exported="false" android:initOrder="100" android:name="com.google.firebase.provider.FirebaseInitProvider">
+</provider>
+<activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:01030010">
+</activity>
+<meta-data android:name="android.support.VERSION" android:value="26.0.1">
+</meta-data>
+<activity android:name="com.mikepenz.aboutlibraries.ui.LibsActivity">
+</activity>
+<meta-data android:name="com.google.android.wearable.beta.app" android:resource="@7F130000">
+</meta-data>
+</application>
+</manifest>

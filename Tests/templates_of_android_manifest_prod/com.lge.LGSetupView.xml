@@ -1,0 +1,106 @@
+<?xml version="1.0" ?><manifest android:versionCode="71000100" android:versionName="7.10.1" package="com.lge.LGSetupView" platformBuildVersionCode="26" platformBuildVersionName="8.0.0" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="26" android:targetSdkVersion="26">
+</uses-sdk>
+<supports-screens android:anyDensity="true" android:largeScreens="true" android:normalScreens="true" android:smallScreens="true" android:xlargeScreens="true">
+</supports-screens>
+<uses-permission android:name="com.lge.permission.MANAGE_PERMISSIONS">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.MANAGE_DEVICE_ADMINS">
+</uses-permission>
+<uses-permission android:name="android.permission.STATUS_BAR">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PRIVILEGED_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW">
+</uses-permission>
+<uses-permission android:name="android.permission.REBOOT">
+</uses-permission>
+<uses-permission android:name="com.motricity.verizon.ssoengine.SSOContentProviderConstants.TOKEN">
+</uses-permission>
+<uses-permission android:name="com.motricity.verizon.ssoengine.SSOContentProviderConstants.CONTENT_URI_SILENT">
+</uses-permission>
+<uses-permission android:name="com.verizon.ACCESS_VZW_ACCOUNT">
+</uses-permission>
+<uses-permission android:name="com.vcast.mediamanager.CLOUD_PERMISSION">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.MODIFY_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERACT_ACROSS_USERS_FULL">
+</uses-permission>
+<uses-permission android:name="android.permission.MANAGE_DEVICE_ADMINS">
+</uses-permission>
+<application android:allowBackup="true" android:icon="@7F02004D" android:label="@7F070050" android:supportsRtl="true" android:theme="@7F0A00D0">
+<meta-data android:name="android.max_aspect" android:value="2.000000">
+</meta-data>
+<meta-data android:name="com.lge.special_display" android:value="true">
+</meta-data>
+<activity android:configChanges="0x000004A0" android:excludeFromRecents="true" android:exported="true" android:name="com.lge.LGSetupView.VZWBBPortalActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.lge.LGSetupView.START_VZW_BB_PORTAL">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004A0" android:excludeFromRecents="true" android:label="@7F070025" android:name="com.lge.LGSetupView.VZWCaptivePortalActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.lge.LGSetupView.START_VZW_CAPTIVE_PORTAL">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004A0" android:excludeFromRecents="true" android:label="@7F070051" android:name="com.lge.LGSetupView.VZWCloudActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.lge.LGSetupView.START_VZW_CLOUD">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004A0" android:excludeFromRecents="true" android:name="com.lge.LGSetupView.WebViewActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.lge.LGSetupView.SHOW_CLOUD_LINK_WEBVIEW">
+</action>
+<action android:name="com.lge.LGSetupView.TERMS_OF_SECURITY_AND_PRIVACY">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004A0" android:hardwareAccelerated="true" android:label="@7F070028" android:name="com.lge.LGSetupView.TphoneActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.lge.LGSetupView.START_TPHONE_EULA_AGREE">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000A0" android:exported="false" android:hardwareAccelerated="true" android:label="@7F070028" android:name="com.lge.LGSetupView.TphoneAgreementActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.lge.LGSetupView.SHOW_TPHONE_EULA_AGREE">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:excludeFromRecents="true" android:exported="false" android:label="@7F070051" android:name="com.lge.app.permission.RequestPermissionsActivity" android:theme="@7F0A012F">
+</activity>
+<receiver android:enabled="true" android:exported="true" android:name="com.lge.LGSetupView.eula.EulaCompareReceiver">
+<intent-filter>
+<action android:name="com.lge.lgsetupwizard.eula.action.SDCARD_EXPORT">
+</action>
+</intent-filter>
+</receiver>
+<service android:name="com.lge.LGSetupView.eula.EulaCompareService">
+</service>
+</application>
+</manifest>

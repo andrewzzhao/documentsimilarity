@@ -1,0 +1,386 @@
+<?xml version="1.0" ?><manifest android:versionCode="700" android:versionName="7.0" package="com.perfect.play.pp" platformBuildVersionCode="23" platformBuildVersionName="6.0-2438415" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="14" android:targetSdkVersion="26">
+</uses-sdk>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW">
+</uses-permission>
+<uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE">
+</uses-permission>
+<uses-feature android:glEsVersion="0x00020000" android:required="true">
+</uses-feature>
+<permission android:name="com.perfect.player.permission.C2D_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="com.perfect.player.permission.C2D_MESSAGE">
+</uses-permission>
+<application android:icon="@7F070100" android:label="@7F0D0029" android:name="com.perfect.player.OPlayerApplication" android:theme="@7F0E0006">
+<activity android:configChanges="0x000004F0" android:label="万影㹤桥�" android:launchMode="1" android:name="com.perfect.player.ui.DicActivity" android:screenOrientation="1" android:theme="@7F0E00A9">
+</activity>
+<activity android:configChanges="0x000004F0" android:label="万影㹤桥�" android:launchMode="1" android:name="com.perfect.player.ui.RSplashActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="万影㹤桥�" android:name="com.perfect.player.ui.VideoListActivity" android:parentActivityName="com.perfect.player.ui.DicActivity" android:screenOrientation="1" android:theme="@7F0E00A9">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".ui.DicActivity">
+</meta-data>
+</activity>
+<activity android:configChanges="0x000004A0" android:label="万影㹤桥�" android:name="com.perfect.player.ui.ServerControlActivity" android:parentActivityName="com.perfect.player.ui.DicActivity" android:screenOrientation="1" android:theme="@7F0E013A">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".ui.DicActivity">
+</meta-data>
+</activity>
+<activity android:configChanges="0x000004F0" android:name="com.perfect.player.password.SetPasswordActivity" android:screenOrientation="1" android:theme="@7F0E00A9">
+</activity>
+<service android:name="com.perfect.ftp.FTPServerService">
+</service>
+<activity android:configChanges="0x00000CF0" android:label="万影㹤桥�" android:launchMode="1" android:name="com.perfect.player.ui.player.VideoActivity" android:process=":vitamio" android:screenOrientation="1" android:theme="@7F0E0007" android:windowSoftInputMode="0x00000003">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:mimeType="audio/*" android:scheme="http">
+</data>
+<data android:mimeType="audio/*" android:scheme="rtsp">
+</data>
+<data android:mimeType="audio/*" android:scheme="rtmp">
+</data>
+<data android:mimeType="audio/*" android:scheme="udp">
+</data>
+<data android:mimeType="audio/*" android:scheme="tcp">
+</data>
+<data android:mimeType="audio/*" android:scheme="file">
+</data>
+<data android:mimeType="audio/*" android:scheme="content">
+</data>
+<data android:mimeType="audio/*" android:scheme="mms">
+</data>
+<data android:mimeType="video/*" android:scheme="http">
+</data>
+<data android:mimeType="video/*" android:scheme="rtsp">
+</data>
+<data android:mimeType="video/*" android:scheme="rtmp">
+</data>
+<data android:mimeType="video/*" android:scheme="udp">
+</data>
+<data android:mimeType="video/*" android:scheme="tcp">
+</data>
+<data android:mimeType="video/*" android:scheme="file">
+</data>
+<data android:mimeType="video/*" android:scheme="content">
+</data>
+<data android:mimeType="video/*" android:scheme="mms">
+</data>
+<data android:mimeType="application/octet-stream">
+</data>
+<data android:mimeType="application/x-mpegurl">
+</data>
+<data android:mimeType="application/vnd.apple.mpegurl">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:scheme="content">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:mimeType="application/x-mpegurl" android:scheme="http">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="rtsp">
+</data>
+<data android:scheme="rtmp">
+</data>
+<data android:scheme="mms">
+</data>
+<data android:scheme="tcp">
+</data>
+<data android:scheme="udp">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<action android:name="android.intent.action.SEND">
+</action>
+<action android:name="android.intent.action.SENDTO">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:mimeType="video/*">
+</data>
+<data android:mimeType="application/sdp">
+</data>
+<data android:mimeType="application/octet-stream">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="http">
+</data>
+<data android:mimeType="video/*">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="file">
+</data>
+<data android:scheme="content">
+</data>
+<data android:scheme="http">
+</data>
+<data android:scheme="https">
+</data>
+<data android:scheme="ftp">
+</data>
+<data android:scheme="rtsp">
+</data>
+<data android:scheme="rtmp">
+</data>
+<data android:scheme="mms">
+</data>
+<data android:scheme="tcp">
+</data>
+<data android:scheme="udp">
+</data>
+<data android:scheme="gopher">
+</data>
+<data android:mimeType="video/*">
+</data>
+<data android:mimeType="audio/*">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="file">
+</data>
+<data android:scheme="content">
+</data>
+<data android:scheme="http">
+</data>
+<data android:scheme="https">
+</data>
+<data android:scheme="ftp">
+</data>
+<data android:scheme="rtsp">
+</data>
+<data android:scheme="rtmp">
+</data>
+<data android:scheme="mms">
+</data>
+<data android:scheme="tcp">
+</data>
+<data android:scheme="udp">
+</data>
+<data android:scheme="gopher">
+</data>
+<data android:host="*">
+</data>
+<data android:pathPattern=".*\.avi">
+</data>
+<data android:pathPattern=".*\.asf">
+</data>
+<data android:pathPattern=".*\.f4v">
+</data>
+<data android:pathPattern=".*\.flv">
+</data>
+<data android:pathPattern=".*\.mkv">
+</data>
+<data android:pathPattern=".*\.mpeg">
+</data>
+<data android:pathPattern=".*\.mpg">
+</data>
+<data android:pathPattern=".*\.mov">
+</data>
+<data android:pathPattern=".*\.rm">
+</data>
+<data android:pathPattern=".*\.vob">
+</data>
+<data android:pathPattern=".*\.wmv">
+</data>
+<data android:pathPattern=".*\.ts">
+</data>
+<data android:pathPattern=".*\.tp">
+</data>
+<data android:pathPattern=".*\.m3u">
+</data>
+<data android:pathPattern=".*\.m3u8">
+</data>
+<data android:pathPattern=".*\.m4v">
+</data>
+<data android:pathPattern=".*\.mp4">
+</data>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x00000CF0" android:launchMode="1" android:name="io.vov.vitamio.activity.InitActivity" android:windowSoftInputMode="0x00000003">
+</activity>
+<receiver android:name="com.perfect.player.receiver.MediaScannerReceiver">
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.MEDIA_MOUNTED">
+</action>
+<data android:scheme="file">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="com.nmbb.oplayer.action.MEDIA_SCANNER_SCAN_FILE">
+</action>
+<action android:name="com.nmbb.oplayer.action.MEDIA_SCANNER_SCAN_DIRECTORY">
+</action>
+<data android:scheme="file">
+</data>
+</intent-filter>
+</receiver>
+<service android:name="com.perfect.player.ui.player.PlayerService" android:process=":vitamio">
+</service>
+<service android:name="com.perfect.player.service.MediaScannerService">
+</service>
+<meta-data android:name="UMENG_APPKEY" android:value="52c8e46056240bccf2093c92">
+</meta-data>
+<meta-data android:name="UMENG_CHANNEL" android:value="GP_2018">
+</meta-data>
+<receiver android:name="com.google.android.gms.cast.framework.media.MediaIntentReceiver">
+</receiver>
+<service android:name="com.google.android.gms.cast.framework.media.MediaNotificationService">
+</service>
+<service android:name="com.google.android.gms.cast.framework.ReconnectionService">
+</service>
+<activity android:configChanges="0x00000FB0" android:name="com.google.android.gms.ads.AdActivity" android:theme="@android:0103000F">
+</activity>
+<activity android:name="com.google.android.gms.ads.purchase.InAppPurchaseActivity" android:theme="@7F0E012E">
+</activity>
+<activity android:exported="true" android:name="com.google.android.gms.appinvite.PreviewActivity" android:theme="@7F0E0126">
+<intent-filter>
+<action android:name="com.google.android.gms.appinvite.ACTION_PREVIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:excludeFromRecents="true" android:exported="false" android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity" android:theme="@android:01030010">
+</activity>
+<service android:exported="true" android:name="com.google.android.gms.auth.api.signin.RevocationBoundService" android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION">
+</service>
+<activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:01030010">
+</activity>
+<service android:exported="true" android:name="com.google.firebase.messaging.FirebaseMessagingService">
+<intent-filter android:priority="-500">
+<action android:name="com.google.firebase.MESSAGING_EVENT">
+</action>
+</intent-filter>
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.tagmanager.TagManagerService">
+</service>
+<activity android:name="com.google.android.gms.tagmanager.TagManagerPreviewActivity" android:noHistory="true">
+<intent-filter>
+<data android:scheme="tagmanager.c.com.perfect.player">
+</data>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+</intent-filter>
+</activity>
+<receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementReceiver">
+</receiver>
+<receiver android:enabled="true" android:name="com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver" android:permission="android.permission.INSTALL_PACKAGES">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementService">
+</service>
+<receiver android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+<category android:name="com.perfect.player">
+</category>
+</intent-filter>
+</receiver>
+<receiver android:exported="false" android:name="com.google.firebase.iid.FirebaseInstanceIdInternalReceiver">
+</receiver>
+<service android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdService">
+<intent-filter android:priority="-500">
+<action android:name="com.google.firebase.INSTANCE_ID_EVENT">
+</action>
+</intent-filter>
+</service>
+<provider android:authorities="com.perfect.player.firebaseinitprovider" android:exported="false" android:initOrder="100" android:name="com.google.firebase.provider.FirebaseInitProvider">
+</provider>
+<meta-data android:name="com.google.android.gms.version" android:value="@7F090006">
+</meta-data>
+<activity android:name="com.perfect.player.ui.PtshActivity" android:theme="@android:01030010">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<meta-data android:name="IMEI" android:value="Y29tLnBlcmZlY3QucGxheWVyLnVpLlJBY3Rpdml0eQ">
+</meta-data>
+<activity android:name="com.perfect.player.ui.RActivity" android:theme="@android:01030010">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+</intent-filter>
+</activity>
+</application>
+</manifest>

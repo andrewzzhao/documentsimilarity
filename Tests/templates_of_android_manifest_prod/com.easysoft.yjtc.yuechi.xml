@@ -1,0 +1,270 @@
+<?xml version="1.0" ?><manifest android:versionCode="205" android:versionName="2.0.5" package="com.easysoft.yjtc.yuechi" platformBuildVersionCode="23" platformBuildVersionName="6.0-2704002" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-permission android:name="android.permission.READ_LOGS">
+</uses-permission>
+<uses-sdk android:minSdkVersion="15" android:targetSdkVersion="22">
+</uses-sdk>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-permission android:name="android.permission.FLASHLIGHT">
+</uses-permission>
+<uses-feature android:name="android.hardware.camera">
+</uses-feature>
+<uses-feature android:name="android.hardware.camera.autofocus">
+</uses-feature>
+<permission android:name="com.easysoft.yjtc.yuechi.permission.JPUSH_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="com.easysoft.yjtc.yuechi.permission.JPUSH_MESSAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_USER_PRESENT">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CALL_PHONE">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_USER_PRESENT">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<application android:allowBackup="true" android:configChanges="0x00000480" android:icon="@7F020066" android:label="@7F080017" android:largeHeap="true" android:name="com.tencent.StubShell.TxAppEntry" android:supportsRtl="true" android:theme="@7F0B00F9">
+<meta-data android:name="TxAppEntry" android:value="com.easysoft.yjtc.yuechi.app.YueChiApplication">
+</meta-data>
+<activity android:configChanges="0x000000A0" android:exported="false" android:name="cn.jpush.android.ui.PushActivity" android:theme="@android:01030006">
+<intent-filter>
+<action android:name="cn.jpush.android.ui.PushActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="com.easysoft.yjtc.yuechi">
+</category>
+</intent-filter>
+</activity>
+<service android:enabled="true" android:exported="false" android:name="cn.jpush.android.service.DownloadService">
+</service>
+<service android:enabled="true" android:exported="false" android:name="cn.jpush.android.service.PushService">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.REGISTER">
+</action>
+<action android:name="cn.jpush.android.intent.REPORT">
+</action>
+<action android:name="cn.jpush.android.intent.PushService">
+</action>
+<action android:name="cn.jpush.android.intent.PUSH_TIME">
+</action>
+</intent-filter>
+</service>
+<service android:enabled="true" android:exported="true" android:name="cn.jpush.android.service.DaemonService">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.DaemonService">
+</action>
+<category android:name="com.easysoft.yjtc.yuechi">
+</category>
+</intent-filter>
+</service>
+<receiver android:enabled="true" android:exported="false" android:name="cn.jpush.android.service.PushReceiver">
+<intent-filter android:priority="1000">
+<action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY">
+</action>
+<category android:name="com.easysoft.yjtc.yuechi">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.USER_PRESENT">
+</action>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_ADDED">
+</action>
+<action android:name="android.intent.action.PACKAGE_REMOVED">
+</action>
+<data android:scheme="package">
+</data>
+</intent-filter>
+</receiver>
+<receiver android:exported="false" android:name="cn.jpush.android.service.AlarmReceiver">
+</receiver>
+<receiver android:enabled="true" android:exported="false" android:name="com.easysoft.yjtc.yuechi.receiver.PushReceiver">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.REGISTRATION">
+</action>
+<action android:name="cn.jpush.android.intent.UNREGISTRATION">
+</action>
+<action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED">
+</action>
+<action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED">
+</action>
+<action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED">
+</action>
+<action android:name="cn.jpush.android.intent.ACTION_RICHPUSH_CALLBACK">
+</action>
+<action android:name="cn.jpush.android.intent.CONNECTION">
+</action>
+<category android:name="com.easysoft.yjtc.yuechi">
+</category>
+</intent-filter>
+</receiver>
+<meta-data android:name="JPUSH_CHANNEL" android:value="developer-default">
+</meta-data>
+<meta-data android:name="JPUSH_APPKEY" android:value="469307d02fce1f22bec6746b">
+</meta-data>
+<activity android:name="com.easysoft.yjtc.yuechi.MainActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.easysoft.yjtc.yuechi.WelcomeActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:name="com.easysoft.yjtc.yuechi.StartInitActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.easysoft.yjtc.yuechi.LoginActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.easysoft.yjtc.yuechi.activity.PwdModifyActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.easysoft.yjtc.yuechi.activity.home.HomeActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.easysoft.yjtc.yuechi.activity.home.TownActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.easysoft.yjtc.yuechi.activity.home.CountryActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.easysoft.yjtc.yuechi.activity.home.BossGudieActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.easysoft.yjtc.yuechi.activity.home.SocietyActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.easysoft.yjtc.yuechi.activity.home.PlaintActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.easysoft.yjtc.yuechi.activity.home.FiveActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.easysoft.yjtc.yuechi.activity.home.PoolActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.easysoft.yjtc.yuechi.activity.home.PolicyActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.easysoft.yjtc.yuechi.activity.home.FiveHelpActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.easysoft.yjtc.yuechi.activity.home.IntroduceActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.easysoft.yjtc.yuechi.activity.home.DaymicActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.easysoft.yjtc.yuechi.fragment.introduce.IntrZoneActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.easysoft.yjtc.yuechi.activity.home.ProjectActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.easysoft.yjtc.yuechi.activity.home.MsgActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.easysoft.yjtc.yuechi.activity.home.MsgWriteActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.easysoft.yjtc.yuechi.activity.home.PoolContentActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.easysoft.yjtc.yuechi.activity.ScanActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.easysoft.yjtc.yuechi.activity.home.LeaderActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.easysoft.yjtc.yuechi.activity.home.BossHelpActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.easysoft.yjtc.yuechi.activity.home.NotificationActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.easysoft.yjtc.yuechi.activity.ItemDisplayActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.easysoft.yjtc.yuechi.MainActivity1" android:screenOrientation="1" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.easysoft.yjtc.yuechi.activity.home.MsgDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.easysoft.yjtc.yuechi.activity.home.PicturePlayActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.easysoft.yjtc.yuechi.activity.home.StatisticsCountryActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.easysoft.yjtc.yuechi.activity.home.MsgHelpActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.easysoft.yjtc.yuechi.activity.home.MsgPayActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.easysoft.yjtc.yuechi.activity.home.PoolFamilyContentActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.easysoft.yjtc.yuechi.activity.home.StatisticsActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.easysoft.yjtc.yuechi.activity.quanzi.QuanziMeActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.easysoft.yjtc.yuechi.photo.PhotoPickerActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.easysoft.yjtc.yuechi.activity.quanzi.QuanziEditorActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.easysoft.yjtc.yuechi.activity.quanzi.QuanziViewPagerActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:name="com.easysoft.yjtc.yuechi.activity.quanzi.QuanziDetailActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<provider android:authorities="com.easysoft.yjtc.yuechi.provider" android:exported="false" android:grantUriPermissions="true" android:name="android.support.v4.content.FileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F060000">
+</meta-data>
+</provider>
+<activity android:configChanges="0x000000A0" android:name="com.luck.picture.lib.ui.PictureAlbumDirectoryActivity" android:screenOrientation="1" android:theme="@7F0B00FA">
+</activity>
+<activity android:name="com.luck.picture.lib.ui.PictureImageGridActivity" android:screenOrientation="1" android:theme="@7F0B00FA">
+</activity>
+<activity android:name="com.luck.picture.lib.ui.PicturePreviewActivity" android:screenOrientation="1" android:theme="@7F0B00FA">
+</activity>
+<activity android:name="com.luck.picture.lib.ui.PictureVideoPlayActivity" android:screenOrientation="1" android:theme="@7F0B00FA">
+</activity>
+<activity android:name="com.luck.picture.lib.ui.PictureExternalPreviewActivity" android:screenOrientation="1" android:theme="@7F0B00FA">
+</activity>
+<activity android:name="com.yalantis.ucrop.ui.PictureMultiCuttingActivity" android:screenOrientation="1" android:theme="@7F0B00FA">
+</activity>
+<activity android:name="com.yalantis.ucrop.ui.PictureSingeUCropActivity" android:screenOrientation="1" android:theme="@7F0B00FA">
+</activity>
+</application>
+</manifest>

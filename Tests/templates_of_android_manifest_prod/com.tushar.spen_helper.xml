@@ -1,0 +1,88 @@
+<?xml version="1.0" ?><manifest android:versionCode="56" android:versionName="2.8.7" package="com.tushar.spen_helper" platformBuildVersionCode="25" platformBuildVersionName="7.1.1" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="21" android:targetSdkVersion="25">
+</uses-sdk>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.BLUETOOTH">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.PACKAGE_USAGE_STATS">
+</uses-permission>
+<application android:allowBackup="true" android:icon="@7F020013" android:label="@7F050015">
+<activity android:label="@7F050015" android:launchMode="0" android:name="com.tushar.spen_helper.MainActivity">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<service android:enabled="true" android:exported="true" android:name="com.tushar.spen_helper.SPenService">
+</service>
+<activity android:icon="@7F020002" android:label="Select Application" android:name="com.tushar.spen_helper.launchalot">
+</activity>
+<activity android:name="com.tushar.spen_helper.Shortcuts">
+</activity>
+<activity android:label="Select Action" android:name="com.tushar.spen_helper.Actions" android:theme="@7F080002">
+</activity>
+<receiver android:enabled="true" android:exported="true" android:name="com.tushar.spen_helper.BootReceiver">
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+<action android:name="com.tushar.cm_spen.BUTTON_ACTIVATE">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_FULLY_REMOVED">
+</action>
+<data android:scheme="package">
+</data>
+</intent-filter>
+</receiver>
+<receiver android:enabled="true" android:exported="true" android:name="com.tushar.spen_helper.AlarmReceiver">
+<intent-filter>
+<action android:name="com.tushar.spen_helper.WAKE_SERVICES">
+</action>
+</intent-filter>
+</receiver>
+<activity android:exported="true" android:label="Note Buddy" android:name="com.tushar.spen_helper.EditActivity">
+<intent-filter>
+<action android:name="com.twofortyfouram.locale.intent.action.EDIT_CONDITION">
+</action>
+</intent-filter>
+</activity>
+<activity android:icon="@7F020010" android:label="@7F050076" android:name="com.ipaulpro.afilechooser.FileChooserActivity" android:theme="@android:0103006B" android:uiOptions="0x00000001">
+</activity>
+<receiver android:exported="true" android:name="com.tushar.spen_helper.QueryReceiver">
+<intent-filter>
+<action android:name="com.twofortyfouram.locale.intent.action.QUERY_CONDITION">
+</action>
+</intent-filter>
+</receiver>
+<service android:enabled="true" android:exported="true" android:name="com.tushar.spen_helper.HeadsetService">
+</service>
+<service android:enabled="true" android:exported="true" android:name="com.tushar.spen_helper.ExecuteAction">
+</service>
+<activity android:excludeFromRecents="true" android:name="com.tushar.spen_helper.Bhadva" android:noHistory="true" android:theme="@7F080003">
+</activity>
+<activity android:enabled="true" android:excludeFromRecents="true" android:exported="true" android:label="@7F050070" android:name="com.tushar.spen_helper.LauncherActivity" android:theme="@7F080002">
+</activity>
+<activity android:label="@7F05006D" android:name="com.tushar.spen_helper.Blacklist">
+</activity>
+<receiver android:enabled="true" android:exported="true" android:name="com.tushar.spen_helper.DeviceAdmin" android:permission="android.permission.BIND_DEVICE_ADMIN">
+<meta-data android:name="android.app.device_admin" android:resource="@7F040000">
+</meta-data>
+<intent-filter>
+<action android:name="android.app.action.DEVICE_ADMIN_ENABLED">
+</action>
+</intent-filter>
+</receiver>
+<activity android:label="@7F05006F" android:name="com.tushar.spen_helper.IconTheme">
+</activity>
+<activity android:label="@7F05006C" android:name="com.tushar.spen_helper.AutoLaunchActivity">
+</activity>
+</application>
+</manifest>

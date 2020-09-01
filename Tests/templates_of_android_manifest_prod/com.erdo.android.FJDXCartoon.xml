@@ -1,0 +1,524 @@
+<?xml version="1.0" ?><manifest android:compileSdkVersion="23" android:compileSdkVersionCodename="6.0-2438415" android:sharedUserId="com.TelcomCartoon" android:versionCode="4003008" android:versionName="4.3.08" package="com.erdo.android.FJDXCartoon" platformBuildVersionCode="29" platformBuildVersionName="10" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="19" android:targetSdkVersion="29">
+</uses-sdk>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION">
+</uses-permission>
+<uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES">
+</uses-permission>
+<supports-screens android:anyDensity="true" android:largeScreens="true" android:normalScreens="true" android:resizeable="true" android:smallScreens="true" android:xlargeScreens="true">
+</supports-screens>
+<uses-permission android:name="com.asus.msa.SupplementaryDID.ACCESS">
+</uses-permission>
+<uses-feature android:glEsVersion="0x00020000" android:required="true">
+</uses-feature>
+<supports-gl-texture android:name="GL_OES_compressed_ETC1_RGB8_texture">
+</supports-gl-texture>
+<supports-gl-texture android:name="GL_OES_compressed_paletted_texture">
+</supports-gl-texture>
+<application android:allowBackup="true" android:appComponentFactory="NULL" android:fullBackupContent="false" android:hardwareAccelerated="true" android:icon="@7F0E0002" android:label="@7F110021" android:largeHeap="true" android:name="cn.icartoon.application.MainApplication" android:supportsRtl="true" android:theme="@7F120009" android:usesCleartextTraffic="true">
+<activity android:configChanges="0x000004A0" android:name="com.mob.tools.MobUIShell" android:theme="@android:01030010" android:windowSoftInputMode="0x00000012">
+<intent-filter>
+<action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+<meta-data android:name="AuthorizeAdapter" android:value="cn.icartoon.utils.authorization.CustomUIAdapter">
+</meta-data>
+</activity>
+<activity android:configChanges="0x00000004" android:icon="@7F0E0002" android:label="@7F110021" android:name="cn.icartoon.application.activity.SplashActivity" android:orientation="1" android:screenOrientation="1" android:theme="@7F120129">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004E7" android:icon="@7F0E0002" android:label="@7F110021" android:launchMode="2" android:name="cn.icartoon.application.activity.MainActivity" android:orientation="1" android:screenOrientation="1">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="dmweblink">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="cn.icartoon.application.activity.AppLinkActivity" android:theme="@android:01030010">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="icartoon">
+</data>
+<data android:host="detail">
+</data>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x00000004" android:launchMode="2" android:name="cn.icartoon.application.activity.FactoryActivity" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x00000004" android:name="cn.icartoon.account.activity.LoginActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:configChanges="0x00000004" android:name="cn.icartoon.account.activity.RegisterActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:configChanges="0x000004F4" android:name="cn.icartoon.account.activity.BasicInfoEditActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000004" android:name="cn.icartoon.account.activity.FindPasswordActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name="cn.icartoon.duoyou.WebViewActivity">
+</activity>
+<activity android:configChanges="0x00000004" android:name="cn.icartoon.pay.activity.PurchaseActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000004" android:name="cn.icartoon.pay.activity.PurchaseRecordActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.icartoon.pay.activity.CoinChargeActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004E7" android:name="cn.icartoon.application.activity.AuthPayActivity" android:screenOrientation="3" android:theme="@7F120202">
+</activity>
+<activity android:configChanges="0x000004F4" android:name="cn.icartoon.account.activity.FollowActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.icartoon.account.activity.MessageActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.icartoon.account.activity.MineTemplateActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.icartoon.account.activity.UserCenterActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.icartoon.account.activity.MoreUgcActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.icartoon.search.activity.SearchActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000032">
+</activity>
+<activity android:configChanges="0x000004F4" android:name="cn.icartoon.circle.activity.CircleAllActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004F4" android:name="cn.icartoon.circle.activity.CirclePostActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:configChanges="0x000004F4" android:name="cn.icartoon.circle.activity.CircleListActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.icartoon.circle.activity.MineCircleActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004F4" android:name="cn.icartoon.circle.activity.CircleNoteActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:configChanges="0x00000004" android:name="cn.icartoon.social.activity.ArticleActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.icartoon.social.activity.LabelDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000004" android:name="cn.icartoon.social.activity.EditorActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.icartoon.content.activity.ContentTemplateActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.icartoon.content.activity.DiscoverAllEntranceActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.icartoon.content.activity.DiscoverNewsCommentActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:configChanges="0x000004E4" android:name="cn.icartoon.content.activity.DiscoverWebActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000004" android:name="cn.icartoon.application.activity.SettingActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000004" android:name="cn.icartoon.application.activity.AboutActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000004" android:name="cn.icartoon.pay.activity.AssetActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000004" android:name="cn.icartoon.pay.activity.AssetRecordActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000004" android:name="cn.icartoons.icartoon.activity.channel.SubChannelActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000004" android:name="cn.icartoons.icartoon.activity.homepage.OrderPageActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.icartoon.content.activity.VideoContentActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004E4" android:name="cn.icartoons.icartoon.activity.animation.AnimationActivity" android:orientation="1" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:configChanges="0x00000004" android:name="cn.icartoons.icartoon.activity.my.account.ResetPasswordActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000004" android:name="cn.icartoons.icartoon.activity.discover.original.HuaKeSearchActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x00000004" android:launchMode="2" android:name="cn.icartoons.icartoon.activity.my.download.DownloadDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004E4" android:name="cn.icartoon.wap.activity.WebBrowseActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000004" android:launchMode="2" android:name="cn.icartoons.icartoon.activity.discover.vrplayler.DownloadVrDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000004" android:launchMode="2" android:name="cn.icartoons.icartoon.activity.discover.vrplayler.VRPlayerDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000004" android:launchMode="2" android:name="cn.icartoons.icartoon.activity.my.download.AddChapterActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000004" android:launchMode="2" android:name="cn.icartoons.icartoon.activity.my.viewingrecord.ViewingRecordActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000004" android:launchMode="2" android:name="cn.icartoons.icartoon.activity.my.collection.CollectionActivityV1" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000004" android:name="cn.icartoons.icartoon.activity.discover.MagazineActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000004" android:name="cn.icartoons.icartoon.activity.discover.AppRecommendActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000004" android:name="cn.icartoons.icartoon.activity.discover.AppRecommendDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000004" android:name="cn.icartoons.icartoon.activity.discover.original.OriginalMainActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000004" android:name="cn.icartoons.icartoon.activity.discover.original.TagActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000004" android:name="cn.icartoons.icartoon.activity.discover.huake.SerialDetailActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:configChanges="0x00000004" android:name="cn.icartoons.icartoon.activity.discover.original.PicPlayerActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000023">
+</activity>
+<activity android:configChanges="0x00000004" android:name="cn.icartoons.icartoon.activity.discover.original.PicViewActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000004" android:name="cn.icartoons.icartoon.activity.discover.original.CommentActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:configChanges="0x00000004" android:name="cn.icartoons.icartoon.activity.discover.vrplayler.VRPlayerChannelActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000004" android:name="cn.icartoons.icartoon.activity.my.account.UserAccountFragmentActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004E4" android:name="cn.icartoons.icartoon.activity.comic.ComicDetailActivity" android:orientation="1" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:configChanges="0x00000004" android:name="cn.icartoons.icartoon.catpicture.Crop3Activity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000004" android:name="cn.icartoons.icartoon.catpicture.CropParentActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000004" android:name="cn.icartoons.icartoon.customcamera.CropFaceActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004F4" android:name="cn.icartoons.icartoon.activity.comic.ComicLandscapeReadActivity" android:screenOrientation="0">
+</activity>
+<activity android:configChanges="0x000004F4" android:name="cn.icartoons.icartoon.activity.comic.ComicPortraitReadActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004F4" android:name="cn.icartoons.icartoon.activity.discover.huake.SerialPortraitReadActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004F4" android:name="cn.icartoons.icartoon.activity.discover.huake.SerialLandscapeReadActivity" android:screenOrientation="0">
+</activity>
+<activity android:configChanges="0x000004F4" android:name="cn.icartoons.icartoon.activity.comic.NetworkTestActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000004" android:name="cn.icartoons.icartoon.activity.my.account.UpdatePasswordActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004F4" android:name="cn.icartoon.comment.view.CommentActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:configChanges="0x00000004" android:name="cn.icartoons.icartoon.activity.my.account.UpdateNickNameActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000004" android:name="cn.icartoons.icartoon.activity.my.account.UpdateSignatureActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000004" android:name="cn.icartoons.icartoon.activity.my.account.BindPhoneActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000004" android:name="cn.icartoons.icartoon.activity.my.account.ChangeIconFragmentActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004F4" android:name="cn.icartoons.icartoon.activity.circle.SelectPhotoActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004F4" android:name="cn.icartoons.icartoon.activity.circle.BucketActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004F4" android:name="cn.icartoons.icartoon.activity.circle.PreviewActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004F4" android:name="cn.icartoons.icartoon.activity.circle.ViewNotePicActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004E4" android:name="cn.icartoons.icartoon.activity.discover.vrplayler.VRPlayerActivity" android:screenOrientation="0">
+</activity>
+<activity android:configChanges="0x000000A0" android:label="@7F110021" android:name="cn.icartoons.icartoon.customcamera.TakePhoteActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:label="@7F110021" android:name="cn.icartoons.icartoon.customcamera.TakePhoteParentActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000004" android:name="cn.icartoons.icartoon.activity.my.account.FaceEditActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000004" android:name="cn.icartoons.icartoon.activity.my.account.IPFaceEditActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000004" android:name="cn.icartoons.icartoon.activity.my.account.MMXHomePageActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000004" android:name="cn.icartoons.icartoon.activity.my.account.MMXHomePage2Activity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000004" android:name="cn.icartoons.icartoon.activity.my.account.FaceShareActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000004" android:name="cn.icartoons.icartoon.activity.my.account.CosplayShareActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000004" android:name="cn.icartoons.icartoon.activity.my.account.FacePostToPredictActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000004" android:name="cn.icartoons.icartoon.activity.my.account.FacePredictedEditActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000004" android:name="cn.icartoons.icartoon.activity.my.account.PhotoListActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000004" android:name="cn.icartoons.icartoon.activity.my.account.GroupPhotoPostActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000004" android:name="cn.icartoons.icartoon.activity.my.account.GroupPhotoEditActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000004" android:name="cn.icartoons.icartoon.activity.my.account.GroupPhotoShareActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004F4" android:name="cn.icartoon.account.activity.FeedbackActivity" android:screenOrientation="1">
+</activity>
+<meta-data android:name="cn.icartoon.application.BuildInfo.TEST_API" android:value="false">
+</meta-data>
+<meta-data android:name="cn.icartoons.icartoon.application.BuildInfo.4G" android:value="false">
+</meta-data>
+<meta-data android:name="cn.icartoons.icartoon.application.BuildInfo.CoolPad" android:value="false">
+</meta-data>
+<meta-data android:name="CTChannel" android:value="39">
+</meta-data>
+<meta-data android:name="Help_Page_Version" android:value="3">
+</meta-data>
+<meta-data android:name="cn.icartoon.application.BuildInfo.BuildTime" android:value="200310_1737">
+</meta-data>
+<meta-data android:name="Tip_Version" android:value="2">
+</meta-data>
+<meta-data android:name="Channel" android:value="135">
+</meta-data>
+<meta-data android:name="HMT_APPKEY" android:value="UA-icartoons-260001">
+</meta-data>
+<meta-data android:name="HMT_CHANNEL" android:value="幾用�">
+</meta-data>
+<provider android:authorities="com.erdo.android.FJDXCartoon.fileProvider" android:exported="false" android:grantUriPermissions="true" android:name="androidx.core.content.FileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F140000">
+</meta-data>
+</provider>
+<provider android:authorities="com.erdo.android.FJDXCartoon.download" android:exported="false" android:name="cn.icartoon.download.services.DownloadProvider">
+</provider>
+<provider android:authorities="com.erdo.android.FJDXCartoon.vrdownload" android:exported="false" android:name="cn.icartoon.download.services.DownloadVrProvider">
+</provider>
+<provider android:authorities="com.erdo.android.FJDXCartoon.facedownload" android:exported="false" android:name="cn.icartoon.download.services.DownloadFaceProvider">
+</provider>
+<receiver android:exported="false" android:name="cn.icartoon.application.receiver.AlarmReceiver" android:process=":remote">
+<intent-filter android:priority="1000">
+<action android:name="cn.icartoon.action.three_days">
+</action>
+<action android:name="cn.icartoon.action.ten_days">
+</action>
+<action android:name="cn.icartoon.action.thirty_days">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:enabled="true" android:exported="false" android:name="cn.icartoon.application.receiver.AppBroadcastReceiver">
+<intent-filter>
+<action android:name="android.intent.action.PHONE_STATE">
+</action>
+<action android:name="cn.icartoons.icartoon.ACTION_MSG_NUM_CHANGE">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name="cn.icartoon.duoyou.AppInstallReceiver">
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_ADDED">
+</action>
+<action android:name="android.intent.action.PACKAGE_REPLACED">
+</action>
+<action android:name="android.intent.action.PACKAGE_REMOVED">
+</action>
+<action android:name="Intent.ACTION_CLOSE_SYSTEM_DIALOGS">
+</action>
+<data android:scheme="package">
+</data>
+</intent-filter>
+</receiver>
+<receiver android:name="cn.icartoon.duoyou.DyDownloadReceiver">
+<intent-filter>
+<action android:name="android.intent.action.DOWNLOAD_COMPLETE">
+</action>
+</intent-filter>
+</receiver>
+<service android:name="cn.icartoon.application.service.NetworkMonitorService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<service android:name="cn.icartoon.download.services.DownloadServiceV2">
+</service>
+<service android:name="cn.icartoon.download.services.DownloadVRService">
+</service>
+<service android:name="cn.icartoon.download.services.DownloadFaceService">
+</service>
+<meta-data android:name="UMENG_APPKEY" android:value="586de9b4a40fa35d4c00074a">
+</meta-data>
+<meta-data android:name="UMENG_CHANNEL" android:value="chan_ 135">
+</meta-data>
+<meta-data android:name="UMENG_MESSAGE_SECRET" android:value="bd672fde7cb9293088e2e808ad9a0595">
+</meta-data>
+<meta-data android:name="E189CN_APPKEY" android:value="dm189">
+</meta-data>
+<meta-data android:name="UED_APM_APP_CHANNEL" android:value="CHANNEL_DEFAULT">
+</meta-data>
+<activity android:name="cn.com.chinatelecom.account.lib.ui.AuthActivity" android:theme="@7F1200DD">
+<meta-data android:name="CTA_AUTH_LOGIN_WAY" android:value="zm|dm">
+</meta-data>
+<meta-data android:name="CTA_AUTH_HIDE_TOP" android:value="false">
+</meta-data>
+<meta-data android:name="CTA_AUTH_ACCOUNT_TYPE" android:value="mobile">
+</meta-data>
+<meta-data android:name="CTA_AUTH_SHOW_THIRD_LOGIN" android:value="">
+</meta-data>
+<meta-data android:name="CTA_AUTH_BASIC_APP" android:value="false">
+</meta-data>
+<meta-data android:name="CTA_AUTH_BASIC_LOGIN_TXT" android:value="其筎啶敟式">
+</meta-data>
+</activity>
+<activity android:configChanges="0x000004A0" android:exported="true" android:name="cn.icartoon.alipay.AliPayEntryActivity" android:screenOrientation="1">
+</activity>
+<uses-library android:name="org.apache.http.legacy" android:required="false">
+</uses-library>
+<activity android:configChanges="0x000004E0" android:exported="false" android:name="com.alipay.sdk.app.H5PayActivity">
+</activity>
+<activity android:configChanges="0x000004E0" android:exported="false" android:name="com.alipay.sdk.app.H5AuthActivity">
+</activity>
+<activity android:configChanges="0x000004E0" android:exported="true" android:launchMode="3" android:name="com.alipay.sdk.app.PayResultActivity" android:theme="@android:01030010">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="true" android:launchMode="2" android:name="com.alipay.sdk.app.AlipayResultActivity" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x000004E0" android:exported="false" android:name="com.alipay.sdk.app.H5OpenAuthActivity" android:screenOrientation="3" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:configChanges="0x000004A0" android:exported="true" android:name="com.erdo.android.FJDXCartoon.wxapi.WXPayEntryActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F110021" android:name="com.sample.MainActivity" android:screenOrientation="0">
+</activity>
+<activity android:name="cn.icartoon.open189iap.Open189EntryActivity" android:theme="@7F120202">
+</activity>
+<service android:exported="true" android:name="com.taobao.accs.ChannelService" android:process=":channel">
+<intent-filter>
+<action android:name="com.taobao.accs.intent.action.SERVICE">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="com.taobao.accs.intent.action.ELECTION">
+</action>
+</intent-filter>
+</service>
+<service android:exported="true" android:name="com.taobao.accs.data.MsgDistributeService">
+<intent-filter>
+<action android:name="com.taobao.accs.intent.action.RECEIVE">
+</action>
+</intent-filter>
+</service>
+<receiver android:name="com.taobao.accs.EventReceiver" android:process=":channel">
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_REMOVED">
+</action>
+<data android:scheme="package">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.USER_PRESENT">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name="com.taobao.accs.ServiceReceiver" android:process=":channel">
+<intent-filter>
+<action android:name="com.taobao.accs.intent.action.COMMAND">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="com.taobao.accs.intent.action.START_FROM_AGOO">
+</action>
+</intent-filter>
+</receiver>
+<service android:name="com.taobao.accs.internal.AccsJobService" android:permission="android.permission.BIND_JOB_SERVICE" android:process=":channel">
+</service>
+<service android:name="com.taobao.accs.ChannelService$KernelService" android:process=":channel">
+</service>
+<service android:exported="true" android:name="org.android.agoo.accs.AgooService">
+<intent-filter>
+<action android:name="com.taobao.accs.intent.action.RECEIVE">
+</action>
+</intent-filter>
+</service>
+<service android:exported="true" android:name="com.umeng.message.UmengIntentService" android:process=":channel">
+<intent-filter>
+<action android:name="org.agoo.android.intent.action.RECEIVE">
+</action>
+</intent-filter>
+</service>
+<service android:exported="true" android:name="com.umeng.message.XiaomiIntentService" android:process=":channel">
+<intent-filter>
+<action android:name="org.agoo.android.intent.action.RECEIVE">
+</action>
+</intent-filter>
+</service>
+<receiver android:exported="true" android:name="com.taobao.agoo.AgooCommondReceiver" android:process=":channel">
+<intent-filter>
+<action android:name="com.erdo.android.FJDXCartoon.intent.action.COMMAND">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_REMOVED">
+</action>
+<data android:scheme="package">
+</data>
+</intent-filter>
+</receiver>
+<service android:exported="true" android:name="com.umeng.message.UmengMessageIntentReceiverService" android:process=":channel">
+<intent-filter>
+<action android:name="org.android.agoo.client.MessageReceiverService">
+</action>
+</intent-filter>
+</service>
+<receiver android:exported="false" android:name="com.umeng.message.NotificationProxyBroadcastReceiver">
+</receiver>
+<service android:exported="false" android:name="com.umeng.message.UmengMessageCallbackHandlerService" android:permission="android.permission.BIND_JOB_SERVICE">
+<intent-filter>
+<action android:name="com.umeng.messge.registercallback.action">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="com.umeng.message.enablecallback.action">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="com.umeng.message.disablecallback.action">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="com.umeng.message.message.handler.action">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="com.umeng.message.message.sendmessage.action">
+</action>
+</intent-filter>
+</service>
+<service android:exported="false" android:name="com.umeng.message.UmengDownloadResourceService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<provider android:authorities="com.erdo.android.FJDXCartoon.umeng.message" android:exported="false" android:name="com.umeng.message.provider.MessageProvider">
+<grant-uri-permission android:pathPattern=".*">
+</grant-uri-permission>
+</provider>
+<provider android:authorities="com.erdo.android.FJDXCartoon.com.mob.MobProvider" android:exported="false" android:multiprocess="true" android:name="com.mob.MobProvider">
+</provider>
+<meta-data android:name="Mob-AppKey" android:value="3db89384c00e">
+</meta-data>
+<meta-data android:name="Mob-AppSecret" android:value="3b7dad0240c8e578f88176c6d1287daa">
+</meta-data>
+<activity android:launchMode="2" android:name="cn.sharesdk.tencent.qq.ReceiveActivity" android:noHistory="true">
+<intent-filter>
+<data android:scheme="tencent100735026">
+</data>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+</intent-filter>
+</activity>
+<activity android:launchMode="2" android:name="com.tencent.tauth.AuthActivity" android:noHistory="true">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.tencent.connect.common.AssistActivity" android:screenOrientation="3" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x000004A0" android:exported="false" android:name="cn.sharesdk.wechat.utils.WechatHandlerActivity" android:theme="@android:01030010">
+</activity>
+<activity-alias android:exported="true" android:name="com.erdo.android.FJDXCartoon.wxapi.WXEntryActivity" android:targetActivity="cn.sharesdk.wechat.utils.WechatHandlerActivity" android:theme="@android:01030010">
+</activity-alias>
+</application>
+</manifest>

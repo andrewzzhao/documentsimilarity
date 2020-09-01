@@ -1,0 +1,78 @@
+<?xml version="1.0" ?><manifest android:versionCode="17" android:versionName="1.0.16" package="com.myhealthplus.apps" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-feature android:name="android.hardware.camera">
+</uses-feature>
+<uses-sdk android:maxSdkVersion="27" android:minSdkVersion="14" android:targetSdkVersion="27">
+</uses-sdk>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-permission android:name="android.permission.CLEAR_APP_CACHE">
+</uses-permission>
+<permission android:name="com.myhealthplus.apps.permission.C2D_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="com.myhealthplus.apps.permission.C2D_MESSAGE">
+</uses-permission>
+<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="com.sonyericsson.home.permission.BROADCAST_BADGE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<application android:allowBackup="true" android:icon="@7F020124" android:label="@7F080000" android:largeHeap="true" android:supportsRtl="true" android:theme="@7F0C0133">
+<activity android:label="@7F080000" android:largeHeap="true" android:name="com.wellness360.myhealthplus.screen.activity.LoginPageActivity" android:screenOrientation="1" android:theme="@7F0C0136">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="true" android:label="@7F080000" android:largeHeap="true" android:name="com.wellness360.myhealthplus.screen.activity.NavigationDrawerActivity" android:screenOrientation="1" android:theme="@7F0C0136" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:label="@7F080000" android:largeHeap="true" android:name="com.wellness360.myhealthplus.screen.activity.ForgetPasswordActivity" android:screenOrientation="1" android:theme="@7F0C0136">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.wellness360.myhealthplus.screen.fragment.newsfee.newsfeed.FullScreenForYoutubeActivity" android:theme="@android:010300F1">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="true" android:label="@7F080000" android:largeHeap="true" android:name="com.wellness360.myhealthplus.image.croper.ImageCropActivity" android:screenOrientation="1" android:theme="@7F0C0136" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:name="com.myhealthplus.apps.GCMMessageView">
+</activity>
+<service android:name="com.myhealthplus.apps.GCMIntentService">
+</service>
+<receiver android:name="com.google.android.gcm.GCMBroadcastReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+<action android:name="com.google.android.c2dm.intent.REGISTRATION">
+</action>
+<category android:name="com.myhealthplus.apps">
+</category>
+</intent-filter>
+</receiver>
+<receiver android:name="com.wellness360.myhealthplus.wifielistener.WiFiListener">
+<intent-filter>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+</receiver>
+<meta-data android:name="io.fabric.ApiKey" android:value="5edc43c40e0c250e72964bc1c971fd97091565b9">
+</meta-data>
+<meta-data android:name="com.samsung.android.health.permission.read" android:value="com.samsung.health.step_count;com.samsung.health.exercise;com.samsung.health.food_info;com.samsung.health.food_intake">
+</meta-data>
+</application>
+</manifest>

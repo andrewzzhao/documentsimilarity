@@ -1,0 +1,218 @@
+<?xml version="1.0" ?><manifest android:versionCode="7" android:versionName="7.0" package="com.monotype.android.font.coolemoji" platformBuildVersionCode="25" platformBuildVersionName="7.1.1" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="14" android:targetSdkVersion="21">
+</uses-sdk>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES">
+</uses-permission>
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW">
+</uses-permission>
+<uses-permission android:name="android.permission.BATTERY_STATS">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<meta-data android:name="android.support.VERSION" android:value="25.3.1">
+</meta-data>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE">
+</uses-permission>
+<permission android:name="com.monotype.android.font.coolemoji.permission.C2D_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="com.monotype.android.font.coolemoji.permission.C2D_MESSAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<application android:allowBackup="true" android:icon="@7F0200AA" android:label="@7F080090" android:name="com.qisi.plugin.sms.App" android:supportsRtl="true" android:theme="@7F0A00AC">
+<activity android:name="com.qisi.plugin.sms.ui.SplashActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:excludeFromRecents="true" android:name="com.qisi.plugin.sms.MainActivity" android:screenOrientation="1">
+</activity>
+<activity android:excludeFromRecents="true" android:launchMode="1" android:name="com.qisi.plugin.sms.ui.FontDetailActivity" android:screenOrientation="1" android:theme="@7F0A0043">
+</activity>
+<provider android:authorities="com.monotype.android.font.coolemoji.fileProvider" android:exported="false" android:grantUriPermissions="true" android:name="android.support.v4.content.FileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F070000">
+</meta-data>
+</provider>
+<meta-data android:name="com.google.android.gms.version" android:value="@7F0C0006">
+</meta-data>
+<meta-data android:name="AGENT_CHANNEL" android:value="google">
+</meta-data>
+<meta-data android:name="AGENT_APPKEY" android:value="d200831643299bfcb645bafa57d102ed">
+</meta-data>
+<meta-data android:name="AGENT_SECRET" android:value="05e9cbb59c2485d5bfdc1582d2f5a7ee">
+</meta-data>
+<meta-data android:name="AD_AGENT_APPKEY" android:value="1d997a1695c8c1ac0df0926ee3934636">
+</meta-data>
+<meta-data android:name="AD_AGENT_SECRET" android:value="825bd6bc3417b3df85a0a7092c57bc1e">
+</meta-data>
+<service android:name="com.qisi.datacollect.service.AgentService">
+</service>
+<receiver android:name="com.qisi.datacollect.receiver.AgentReceiver">
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+<action android:name="android.intent.action.USER_PRESENT">
+</action>
+</intent-filter>
+</receiver>
+<activity android:excludeFromRecents="true" android:launchMode="1" android:name="com.qisi.plugin.sms.ad.ui.AdmobExitAppActivity" android:screenOrientation="1" android:theme="@7F0A0043">
+</activity>
+<activity android:launchMode="2" android:name="com.qisi.plugin.sms.ad.ui.AdmobBrandInterstitialAcitivity">
+</activity>
+<activity android:name="com.qisi.plugin.sms.ad.ui.FacebookBrandInterstitialAcitivity">
+</activity>
+<activity android:label="@7F08017F" android:name="com.qisi.plugin.sms.ui.Main2Activity" android:screenOrientation="1" android:theme="@7F0A00AC">
+</activity>
+<activity android:name="com.qisi.plugin.sms.ui.LockGuideActivity" android:screenOrientation="1">
+</activity>
+<activity android:excludeFromRecents="true" android:launchMode="1" android:name="com.monti.lib.activities.CWSettingsActivity" android:screenOrientation="1" android:theme="@7F0A0043">
+</activity>
+<activity android:name="com.monti.lib.activities.CWBatteryOptimizeActivity" android:screenOrientation="1" android:theme="@7F0A014B">
+</activity>
+<activity android:name="com.monti.lib.activities.CWAdmobInterstitialActivity" android:screenOrientation="1" android:theme="@7F0A00E8">
+</activity>
+<receiver android:enabled="true" android:name="com.monti.lib.receiver.CWPackageInstallReceiver">
+<intent-filter android:priority="999">
+<action android:name="android.intent.action.PACKAGE_ADDED">
+</action>
+<action android:name="android.intent.action.PACKAGE_REMOVED">
+</action>
+<data android:scheme="package">
+</data>
+</intent-filter>
+</receiver>
+<receiver android:name="com.monti.lib.receiver.CWUserPresentReceiver">
+<intent-filter>
+<action android:name="android.intent.action.USER_PRESENT">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name="com.monti.lib.receiver.CWBatteryStatusReceiver">
+</receiver>
+<receiver android:exported="true" android:name="com.monti.lib.receiver.CWPackageStatusReceiver">
+<intent-filter>
+<action android:name="intent.action.kika.theme.activate">
+</action>
+<action android:name="intent.action.kika.theme.deactivate">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</receiver>
+<service android:name="com.monti.lib.services.keeplive.CWGuardService">
+</service>
+<service android:enabled="true" android:exported="true" android:name="com.monti.lib.services.CWSyncTimeWithPeerService">
+</service>
+<receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementReceiver">
+</receiver>
+<receiver android:enabled="true" android:exported="true" android:name="com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver" android:permission="android.permission.INSTALL_PACKAGES">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementService">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementJobService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<receiver android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+<category android:name="com.monotype.android.font.coolemoji">
+</category>
+</intent-filter>
+</receiver>
+<service android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdService">
+<intent-filter android:priority="-500">
+<action android:name="com.google.firebase.INSTANCE_ID_EVENT">
+</action>
+</intent-filter>
+</service>
+<provider android:authorities="com.monotype.android.font.coolemoji.firebaseinitprovider" android:exported="false" android:initOrder="100" android:name="com.google.firebase.provider.FirebaseInitProvider">
+</provider>
+<provider android:authorities="com.monotype.android.font.coolemoji.crashlyticsinitprovider" android:exported="false" android:initOrder="100" android:name="com.crashlytics.android.CrashlyticsInitProvider">
+</provider>
+<activity android:configChanges="0x00000FB0" android:excludeFromRecents="true" android:name="com.xinmei.adsdk.nativeads.NativeInterstitialAdActivity" android:theme="@android:01030007">
+</activity>
+<activity android:configChanges="0x00000FB0" android:exported="false" android:name="com.google.android.gms.ads.AdActivity" android:theme="@android:0103000F">
+</activity>
+<activity android:configChanges="0x000004A0" android:excludeFromRecents="true" android:name="com.facebook.ads.InterstitialAdActivity">
+</activity>
+<receiver android:name="com.kika.pluto.filter.KoalaAppInstallReceiver">
+<intent-filter android:priority="1000">
+<action android:name="android.intent.action.PACKAGE_ADDED">
+</action>
+<action android:name="android.intent.action.PACKAGE_REMOVED">
+</action>
+<data android:scheme="package">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.USER_PRESENT">
+</action>
+</intent-filter>
+</receiver>
+<service android:exported="false" android:name="com.smartcross.app.RegistrationIntentService">
+</service>
+<service android:exported="false" android:name="com.smartcross.app.SCInstanceIDListenerService">
+<intent-filter>
+<action android:name="com.google.android.gms.iid.InstanceID">
+</action>
+</intent-filter>
+</service>
+<service android:exported="false" android:name="com.smartcross.app.SCGcmListenerService">
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+</intent-filter>
+</service>
+<service android:exported="false" android:name="com.smartcross.app.pushmsg.PushMsgService">
+<intent-filter>
+<action android:name="action_reg_msg">
+</action>
+<action android:name="action_check_saved_message">
+</action>
+</intent-filter>
+</service>
+<receiver android:name="com.smartcross.app.receiver.PresentReceiver">
+<intent-filter>
+<action android:name="android.intent.action.USER_PRESENT">
+</action>
+</intent-filter>
+</receiver>
+<meta-data android:name="DATABASE" android:value="xm_theme.db">
+</meta-data>
+<meta-data android:name="VERSION" android:value="2">
+</meta-data>
+<meta-data android:name="QUERY_LOG" android:value="false">
+</meta-data>
+<meta-data android:name="DOMAIN_PACKAGE_NAME" android:value="com.smartcross.app.model">
+</meta-data>
+<service android:enabled="true" android:exported="false" android:name="com.common.service.PreLoadWebviewService">
+</service>
+<activity android:configChanges="0x000004A0" android:name="com.facebook.ads.AudienceNetworkActivity">
+</activity>
+<activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:01030010">
+</activity>
+</application>
+</manifest>

@@ -1,0 +1,246 @@
+<?xml version="1.0" ?><manifest android:compileSdkVersion="29" android:compileSdkVersionCodename="10" android:versionCode="6" android:versionName="1.8.0" package="com.jx.quwen" platformBuildVersionCode="29" platformBuildVersionName="10" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:dist="http://schemas.android.com/apk/distribution">
+<uses-sdk android:minSdkVersion="19" android:targetSdkVersion="29">
+</uses-sdk>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.SET_WALLPAPER">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_MEDIA_IMAGES">
+</uses-permission>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_LOGS">
+</uses-permission>
+<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS">
+</uses-permission>
+<dist:module dist:instant="true">
+</dist:module>
+<uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES">
+</uses-permission>
+<permission android:name="com.jx.quwen.andpermission.bridge" android:permissionGroup="com.jx.quwen.andpermission" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="com.jx.quwen.andpermission.bridge">
+</uses-permission>
+<application android:allowBackup="false" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:configChanges="0x000004B0" android:hardwareAccelerated="false" android:icon="@7F0E0030" android:label="@7F11002F" android:largeHeap="true" android:maxAspectRatio="2.400000" android:name="com.stub.StubApp" android:networkSecurityConfig="@7F140003" android:resizeableActivity="true" android:supportsRtl="true" android:theme="@7F12000B" android:usesCleartextTraffic="true">
+<meta-data android:name="android.max_aspect" android:value="2.400000">
+</meta-data>
+<meta-data android:name="android.notch_support" android:value="true">
+</meta-data>
+<meta-data android:name="notch.config" android:value="portrait|landscape">
+</meta-data>
+<provider android:authorities="com.jx.quwen.fileprovider" android:exported="false" android:grantUriPermissions="true" android:name="androidx.core.content.FileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F140002">
+</meta-data>
+</provider>
+<provider android:authorities="com.jx.quwen.fileProvider" android:exported="false" android:grantUriPermissions="true" android:name="com.jx.quwen.utils.BuglyFileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F140000">
+</meta-data>
+</provider>
+<activity android:name="com.jx.quwen.ui.HelloActivity" android:theme="@7F120115">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x00000480" android:name="com.jx.quwen.ui.WebActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000480" android:name="com.jx.quwen.ui.SettingActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000480" android:name="com.jx.quwen.ui.SearchActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000480" android:name="com.jx.quwen.ui.ShareActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000480" android:name="com.jx.quwen.ui.PicGalleryActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000480" android:name="com.jx.quwen.ui.PuzzleActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000480" android:name="com.jx.quwen.ui.MakeHeadActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000480" android:name="com.jx.quwen.ui.EditPhotoActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000480" android:name="com.jx.quwen.ui.IncludeFrameActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000480" android:name="com.jx.quwen.ui.XFragmentActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000480" android:name="com.jx.quwen.old.TestActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000480" android:name="com.jx.quwen.ui.MainActivity" android:screenOrientation="1" android:theme="@7F12000B">
+</activity>
+<activity android:configChanges="0x00000480" android:name="com.jx.quwen.ui.SchemeActivity" android:screenOrientation="1" android:theme="@7F12000B">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:scheme="qwds">
+</data>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004B0" android:hardwareAccelerated="true" android:label="❱࡙佞桭�" android:name="com.jx.quwen.webview.AgentWebActivity" android:theme="@7F120342">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="http">
+</data>
+<data android:scheme="https">
+</data>
+<data android:scheme="about">
+</data>
+<data android:scheme="javascript">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:scheme="http">
+</data>
+<data android:scheme="https">
+</data>
+<data android:scheme="inline">
+</data>
+<data android:mimeType="text/html">
+</data>
+<data android:mimeType="text/plain">
+</data>
+<data android:mimeType="application/xhtml+xml">
+</data>
+<data android:mimeType="application/vnd.wap.xhtml+xml">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.tencent.connect.avatar.ImageActivity">
+</activity>
+<activity android:configChanges="0x000000A0" android:label="公" android:launchMode="1" android:name="com.jx.quwen.ui.MainActivity11" android:screenOrientation="10" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:configChanges="0x000000A0" android:label="公" android:launchMode="1" android:name="com.jx.quwen.ui.RegisterActivity" android:screenOrientation="10" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:configChanges="0x000000A0" android:label="ś繸噢" android:launchMode="1" android:name="com.jx.quwen.ui.ForgetPwdActivity" android:screenOrientation="10" android:windowSoftInputMode="0x00000012">
+</activity>
+<meta-data android:name="com.tencent.rdm.uuid" android:value="f932ad01-3914-48e9-844a-cb0ae42dc8a2">
+</meta-data>
+<uses-library android:name="org.apache.http.legacy" android:required="false">
+</uses-library>
+<service android:exported="false" android:name="com.qq.e.comm.DownloadService">
+</service>
+<activity android:configChanges="0x000004B0" android:name="com.qq.e.ads.ADActivity">
+</activity>
+<activity android:configChanges="0x000004B0" android:name="com.qq.e.ads.PortraitADActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004B0" android:name="com.qq.e.ads.LandscapeADActivity" android:screenOrientation="0">
+</activity>
+<activity android:name="com.xinlan.imageeditlibrary.editimage.EditImageActivity">
+</activity>
+<service android:exported="false" android:name="com.yanzhenjie.permission.bridge.BridgeService" android:permission="com.jx.quwen.andpermission.bridge" android:process=":permission">
+<intent-filter>
+<action android:name="com.jx.quwen.andpermission.bridge">
+</action>
+</intent-filter>
+</service>
+<activity android:configChanges="0x00000080" android:exported="false" android:name="com.yanzhenjie.permission.bridge.BridgeActivity" android:permission="com.jx.quwen.andpermission.bridge" android:process=":permission" android:theme="@7F120135">
+</activity>
+<provider android:authorities="com.jx.quwen.file.path.share" android:exported="false" android:grantUriPermissions="true" android:name="com.yanzhenjie.permission.FileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F140004">
+</meta-data>
+</provider>
+<provider android:authorities="com.jx.quwen.provider" android:exported="false" android:grantUriPermissions="true" android:name="com.luck.picture.lib.PictureFileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F140001">
+</meta-data>
+</provider>
+<activity android:name="com.luck.picture.lib.PictureSelectorActivity" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:name="com.luck.picture.lib.PicturePreviewActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.luck.picture.lib.PictureVideoPlayActivity" android:screenOrientation="4">
+</activity>
+<activity android:name="com.luck.picture.lib.PictureExternalPreviewActivity">
+</activity>
+<activity android:name="com.yalantis.ucrop.UCropActivity">
+</activity>
+<activity android:name="com.yalantis.ucrop.PictureMultiCuttingActivity">
+</activity>
+<activity android:name="com.luck.picture.lib.PicturePlayAudioActivity">
+</activity>
+<activity android:name="com.xuexiang.xui.widget.imageview.preview.ui.PreviewActivity" android:theme="@android:01030010">
+</activity>
+<activity android:name="com.xuexiang.xui.widget.imageview.preview.ui.VideoPlayerActivity" android:theme="@android:01030010">
+</activity>
+<receiver android:name="com.just.agentweb.download.NotificationCancelReceiver">
+</receiver>
+<provider android:authorities="com.jx.quwen.AgentWebFileProvider" android:exported="false" android:grantUriPermissions="true" android:name="com.just.agentweb.core.web.AgentWebFileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F14000C">
+</meta-data>
+</provider>
+<activity android:configChanges="0x000004A0" android:exported="false" android:launchMode="0" android:name="com.just.agentweb.action.ActionActivity" android:theme="@7F120348" android:windowSoftInputMode="0x00000003">
+</activity>
+<meta-data android:name="com.bumptech.glide.integration.okhttp3.OkHttpGlideModule" android:value="GlideModule">
+</meta-data>
+<activity android:configChanges="0x000004A4" android:name="com.tencent.bugly.beta.ui.BetaActivity" android:theme="@android:0103000F">
+</activity>
+<provider android:authorities="com.jx.quwen.fileProvider" android:exported="false" android:grantUriPermissions="true" android:name="com.tencent.bugly.beta.utils.BuglyFileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F140005">
+</meta-data>
+</provider>
+<service android:exported="false" android:name="com.tencent.bugly.beta.tinker.TinkerResultService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<provider android:authorities="com.jx.quwen.com.mob.MobProvider" android:exported="false" android:multiprocess="true" android:name="com.mob.MobProvider">
+</provider>
+<meta-data android:name="Mob-AppKey" android:value="1ca16cc289296">
+</meta-data>
+<meta-data android:name="Mob-AppSecret" android:value="0a723ec6d815493006380d4b727177e3">
+</meta-data>
+<activity android:configChanges="0x000004A0" android:name="com.mob.tools.MobUIShell" android:theme="@android:01030010" android:windowSoftInputMode="0x00000012">
+<intent-filter>
+<action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:launchMode="2" android:name="cn.sharesdk.tencent.qq.ReceiveActivity" android:noHistory="true">
+<intent-filter>
+<data android:scheme="tencent1106002869">
+</data>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+</intent-filter>
+</activity>
+<activity android:launchMode="2" android:name="com.tencent.tauth.AuthActivity" android:noHistory="true">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.tencent.connect.common.AssistActivity" android:screenOrientation="3" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x000004A0" android:exported="false" android:name="cn.sharesdk.wechat.utils.WechatHandlerActivity" android:theme="@android:01030010">
+</activity>
+<activity-alias android:exported="true" android:name="com.jx.quwen.wxapi.WXEntryActivity" android:targetActivity="cn.sharesdk.wechat.utils.WechatHandlerActivity" android:theme="@android:01030010">
+</activity-alias>
+</application>
+</manifest>

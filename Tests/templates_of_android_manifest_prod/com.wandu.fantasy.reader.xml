@@ -1,0 +1,474 @@
+<?xml version="1.0" ?><manifest android:versionCode="31000005" android:versionName="3.1.0" package="com.wandu.fantasy.reader" platformBuildVersionCode="26" platformBuildVersionName="8.0.0" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="15" android:targetSdkVersion="22">
+</uses-sdk>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="sven.android.intent.NOTIFICATION_RECEIVED">
+</uses-permission>
+<uses-permission android:name="sven.android.intent.NOTIFICATION_OPENED">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_USER_PRESENT">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS">
+</uses-permission>
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW">
+</uses-permission>
+<uses-permission android:name="android.permission.NOTIFICATION_RECEIVED_PROXY">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_LOGS">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_NETWORK_STATE">
+</uses-permission>
+<permission android:name="com.wandu.fantasy.reader.push.permission.MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="com.wandu.fantasy.reader.push.permission.MESSAGE">
+</uses-permission>
+<permission android:name="com.wandu.fantasy.reader.permission.C2D_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="com.wandu.fantasy.reader.permission.C2D_MESSAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.BLUETOOTH">
+</uses-permission>
+<uses-permission android:name="android.permission.BLUETOOTH_ADMIN">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE">
+</uses-permission>
+<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE">
+</uses-permission>
+<application android:allowBackup="true" android:icon="@7F030000" android:label="@7F080075" android:name="com.paiba.app000005.BuglyApplication" android:supportsRtl="true" android:theme="@7F0A00A9">
+<meta-data android:name="UMENG_APPKEY" android:value="5afd5670a40fa3056f000142">
+</meta-data>
+<meta-data android:name="com.google.firebase.messaging.default_notification_icon" android:resource="@7F020226">
+</meta-data>
+<meta-data android:name="com.google.firebase.messaging.default_notification_color" android:resource="@7F0C0023">
+</meta-data>
+<service android:name="com.paiba.app000005.firebase.WanduFirebaseMessagingService">
+<intent-filter>
+<action android:name="com.google.firebase.MESSAGING_EVENT">
+</action>
+</intent-filter>
+</service>
+<service android:name="com.paiba.app000005.firebase.WanduFirebaseInstanceIDService">
+<intent-filter>
+<action android:name="com.google.firebase.INSTANCE_ID_EVENT">
+</action>
+</intent-filter>
+</service>
+<activity android:name="com.paiba.app000005.common.push.FirebaseActivity">
+<intent-filter>
+<action android:name="click_jump_action">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:name="com.paiba.app000005.SplashActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="awake" android:scheme="wanduapp">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="ac.mhxzkhl.com" android:pathPrefix="/awakeapp" android:scheme="https">
+</data>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000006A0" android:name="com.paiba.app000005.common.guide.InnerGuideActivity" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x000006A0" android:name="com.paiba.app000005.common.guide.InnerGuideLandscapeActivity" android:screenOrientation="0" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x000006A0" android:name="com.paiba.app000005.common.guide.PageQueueMainActivity" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<activity android:name="com.paiba.app000005.GuideFirstActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.paiba.app000005.HomeActivity" android:screenOrientation="1" android:theme="@7F0A00AA">
+</activity>
+<activity android:name="com.paiba.app000005.noveldetail.NovelDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.paiba.app000005.reader.ReaderActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.paiba.app000005.novelcatalog.NovelCatalogActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.paiba.app000005.novelcomments.NovelCommentsActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.paiba.app000005.novelcomments.WriteCommentActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.paiba.app000005.search.SearchActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F080075" android:name="com.paiba.app000005.WebshellActivity" android:screenOrientation="1" android:theme="@7F0A00A9">
+</activity>
+<activity android:label="@7F080075" android:name="com.paiba.app000005.find.ReceiveRedPacketActivity" android:screenOrientation="1" android:theme="@7F0A013A">
+</activity>
+<activity android:label="@7F080075" android:name="com.paiba.app000005.noveldownload.NovelDownLoadDialogActivity" android:screenOrientation="1" android:theme="@7F0A013A">
+</activity>
+<activity android:label="@7F080075" android:name="com.paiba.app000005.personalcenter.PersonalActivity" android:screenOrientation="1" android:theme="@7F0A00A9">
+</activity>
+<activity android:label="@7F080075" android:name="com.paiba.app000005.personalcenter.ShareIncomeActivity" android:screenOrientation="1" android:theme="@7F0A00A9">
+</activity>
+<activity android:label="@7F080075" android:name="com.paiba.app000005.personalcenter.ShareInviteActivity" android:screenOrientation="1" android:theme="@7F0A00A9">
+</activity>
+<activity android:label="@7F080075" android:name="com.paiba.app000005.personalcenter.ShareRankActivity" android:screenOrientation="1" android:theme="@7F0A00A9">
+</activity>
+<activity android:label="@7F080075" android:name="com.paiba.app000005.personalcenter.AllCommentActivity" android:screenOrientation="1" android:theme="@7F0A00A9">
+</activity>
+<activity android:label="@7F080075" android:name="com.paiba.app000005.personalcenter.PersonalSettingActivity" android:screenOrientation="1" android:theme="@7F0A00A9">
+</activity>
+<activity android:label="@7F080075" android:name="com.paiba.app000005.personalcenter.LoginPhonePwdActivity" android:screenOrientation="1" android:theme="@7F0A00A9">
+</activity>
+<activity android:label="@7F080075" android:name="com.paiba.app000005.find.InOutComeActivity" android:screenOrientation="1" android:theme="@7F0A00A9">
+</activity>
+<activity android:label="@7F080075" android:name="com.paiba.app000005.personalcenter.LoginActivity" android:screenOrientation="1" android:theme="@7F0A00A9">
+</activity>
+<activity android:label="@7F080075" android:name="com.paiba.app000005.personalcenter.BindPhoneActivity" android:screenOrientation="1" android:theme="@7F0A00A9">
+</activity>
+<activity android:label="@7F080075" android:name="com.paiba.app000005.find.ReplyRemindActivity" android:screenOrientation="1" android:theme="@7F0A00A9">
+</activity>
+<activity android:label="@7F080075" android:name="com.paiba.app000005.personalcenter.MineForgetActivity" android:screenOrientation="1" android:theme="@7F0A00A9">
+</activity>
+<activity android:label="@7F080075" android:name="com.paiba.app000005.personalcenter.SettingActivity" android:screenOrientation="1" android:theme="@7F0A00A9">
+</activity>
+<activity android:label="@7F080075" android:name="com.paiba.app000005.personalcenter.MineAccountActivity" android:screenOrientation="1" android:theme="@7F0A00A9">
+</activity>
+<activity android:label="@7F080075" android:name="com.paiba.app000005.personalcenter.SelectModeOfPaymentActivity" android:screenOrientation="1" android:theme="@7F0A00EA">
+</activity>
+<activity android:label="@7F080075" android:name="com.paiba.app000005.personalcenter.MineAccountFinancialRecordActivity" android:screenOrientation="1" android:theme="@7F0A00A9">
+</activity>
+<activity android:label="@7F080075" android:name="com.paiba.app000005.personalcenter.FeedbackActivity" android:screenOrientation="1" android:theme="@7F0A00A9">
+</activity>
+<activity android:label="@7F080075" android:name="com.paiba.app000005.novelcomments.ParagraphTalkListActivity" android:screenOrientation="1" android:theme="@7F0A00A9" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:label="@7F080075" android:name="com.paiba.app000005.bookshelf.NearlyReadActivity" android:screenOrientation="1" android:theme="@7F0A00A9">
+</activity>
+<activity android:label="@7F080075" android:name="com.paiba.app000005.find.CommentSquareActivity" android:screenOrientation="1" android:theme="@7F0A00A9">
+</activity>
+<activity android:label="@7F080075" android:name="com.paiba.app000005.find.SellUpdateActivity" android:screenOrientation="1" android:theme="@7F0A00A9">
+</activity>
+<activity android:label="@7F080075" android:name="com.paiba.app000005.personalcenter.PersonalInOutComeActivity" android:screenOrientation="1" android:theme="@7F0A00A9">
+</activity>
+<activity android:label="@7F080075" android:name="com.paiba.app000005.personalcenter.SystemMesageActivity" android:screenOrientation="1" android:theme="@7F0A00A9">
+</activity>
+<activity android:label="@7F080075" android:name="com.paiba.app000005.personalcenter.PushSettingActivity" android:screenOrientation="1" android:theme="@7F0A00A9">
+</activity>
+<activity android:label="@7F080075" android:name="com.paiba.app000005.bookshelf.ShelfDeleteActivity" android:screenOrientation="1" android:theme="@7F0A00A9">
+</activity>
+<activity android:launchMode="2" android:name="com.umeng.qq.tencent.AuthActivity" android:noHistory="true">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="tencent100424468">
+</data>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.umeng.qq.tencent.AssistActivity" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<activity android:excludeFromRecents="true" android:name="com.umeng.socialize.editorpage.ShareActivity" android:theme="@7F0A0130">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.paiba.app000005.WBShareActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000A0" android:exported="false" android:name="com.sina.weibo.sdk.component.WeiboSdkBrowser" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:exported="true" android:name="com.paiba.app000005.wxapi.WXEntryActivity" android:screenOrientation="1" android:theme="@7F0A00A9">
+</activity>
+<activity android:exported="true" android:name="com.paiba.app000005.wxapi.WXPayEntryActivity" android:screenOrientation="1" android:theme="@7F0A00A9">
+</activity>
+<activity android:configChanges="0x000004A4" android:name="com.tencent.bugly.beta.ui.BetaActivity" android:theme="@android:0103000F">
+</activity>
+<service android:exported="false" android:name="platform.push.service.IMService">
+</service>
+<service android:exported="false" android:name="platform.push.service.IMService$InnerService">
+</service>
+<receiver android:name="platform.push.network.SPReceiver$AlermReceiver">
+</receiver>
+<receiver android:name="platform.push.network.SPReceiver$ConnectionReceiver">
+<intent-filter>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+<action android:name="android.net.wifi.STATE_CHANGE">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:enabled="true" android:name="com.paiba.app000005.common.push.SvenPushReceiver">
+<intent-filter>
+<action android:name="sven.android.intent.NOTIFICATION_RECEIVED">
+</action>
+<action android:name="sven.android.intent.NOTIFICATION_OPENED">
+</action>
+<category android:name="com.wandu.fantasy.reader">
+</category>
+</intent-filter>
+</receiver>
+<receiver android:name="com.paiba.app000005.reader.MediaButtonReceiver">
+<intent-filter android:priority="2147483647">
+<action android:name="android.intent.action.MEDIA_BUTTON">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name="com.paiba.app000005.common.NetworkConnectChangedReceiver">
+<intent-filter>
+<action android:name="android.NET.conn.CONNECTIVITY_CHANGE">
+</action>
+<action android:name="android.net.wifi.STATE_CHANGE">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:enabled="true" android:exported="true" android:name="com.paiba.app000005.reader.NotificationReceiver">
+<intent-filter>
+<action android:name="com.wandu.reader.AUDIO_PLAY">
+</action>
+<action android:name="com.wandu.reader.AUDIO_CLOSE">
+</action>
+<action android:name="com.wandu.reader.AUDIO_NOTIFICATION">
+</action>
+<action android:name="com.wandu.reader.AUDIO_PAUSE">
+</action>
+<action android:name="com.wandu.reader.AUDIO_PRE">
+</action>
+<action android:name="com.wandu.reader.AUDIO_NEXT">
+</action>
+</intent-filter>
+</receiver>
+ //幓⥊留੢�
+<activity android:label="@7F080075" android:name="com.paiba.app000005.personalcenter.TalkActivity" android:screenOrientation="1" android:theme="@7F0A00A9">
+</activity>
+ //戉打畏੢�
+<activity android:label="@7F080075" android:name="com.paiba.app000005.reward.ChooseRewardMoneyActivity" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+ //打繏畧
+
+<activity android:label="@7F080075" android:name="com.paiba.app000005.reward.RewardResultActivity" android:screenOrientation="1" android:theme="@7F0A00A9">
+</activity>
+ //充值成摒椀愀氀漀最਀�
+<activity android:label="@7F080075" android:launchMode="2" android:name="com.paiba.app000005.personalcenter.CommonDialogActivity" android:screenOrientation="1" android:theme="@7F0A0139">
+</activity>
+<activity android:label="@7F080075" android:launchMode="2" android:name="com.paiba.app000005.active.GetCashPacketDialogActivity" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<activity android:label="@7F080075" android:launchMode="2" android:name="com.paiba.app000005.active.LoginRedPacketDialogActivity" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+ //备潏䑠畒
+
+<activity android:label="@7F080075" android:name="com.paiba.app000005.common.AppWrapDataActivity" android:screenOrientation="1" android:theme="@7F0A00A9">
+</activity>
+ //敦礼包扵
+
+<activity android:label="@7F080075" android:name="com.paiba.app000005.active.UpdateGiftActivity" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+ //敦礼包扵
+
+<activity android:label="@7F080075" android:name="com.paiba.app000005.active.ReadScheduleActivity" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+ //睟筣啶੟�
+<activity android:label="@7F080075" android:name="com.paiba.app000005.personalcenter.LoginQuickActivity" android:screenOrientation="1" android:theme="@7F0A00A9">
+</activity>
+ //支孎支桎㔀甀੢�
+<activity android:configChanges="0x000000E0" android:exported="false" android:name="com.alipay.sdk.app.H5PayActivity" android:screenOrientation="3" android:windowSoftInputMode="0x00000012">
+</activity>
+ //书畞੢�
+<activity android:label="@7F080075" android:name="com.paiba.app000005.find.BookClassificationActivity" android:screenOrientation="1" android:theme="@7F0A00A9">
+</activity>
+ //䱣扵
+
+<activity android:label="@7F080075" android:name="com.paiba.app000005.find.RankingMainActivity" android:screenOrientation="1" android:theme="@7F0A00A9">
+</activity>
+ //⠁㝵ᕢ孟弹੺�
+<activity android:label="@7F080075" android:name="com.paiba.app000005.active.OldUserGuideActivity" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+ //citypicker
+
+<activity android:label="@7F080075" android:name="com.paiba.app000005.common.widget.citypicker.CityPickerDialogActivity" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+ //畠
+
+<activity android:label="@7F080075" android:name="com.paiba.app000005.personalcenter.CommentDetailActivity" android:screenOrientation="1" android:theme="@7F0A00A9" android:windowSoftInputMode="0x00000010">
+</activity>
+ //ህ畒
+
+<activity android:label="@7F080075" android:name="com.paiba.app000005.active.ReadPlanActivity" android:screenOrientation="1" android:theme="@7F0A00A9">
+</activity>
+ //屏广告ੵ�
+<activity android:label="@7F080075" android:name="com.paiba.app000005.AdActivity" android:screenOrientation="1" android:theme="@android:01030007">
+</activity>
+<activity android:label="@7F080075" android:name="com.paiba.app000005.personalcenter.ShareGetMoneyActivity" android:screenOrientation="1" android:theme="@7F0A00A9">
+</activity>
+<activity android:label="@7F080075" android:name="com.paiba.app000005.personalcenter.ShareGetMoneyHistoryActivity" android:screenOrientation="1" android:theme="@7F0A00A9">
+</activity>
+<activity android:label="@7F080075" android:name="com.paiba.app000005.ChooseSexActivity" android:screenOrientation="1" android:theme="@android:01030007">
+</activity>
+ //漫画甅
+
+<activity android:name="com.paiba.app000005.comic.ComicReaderActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F080075" android:name="com.paiba.app000005.comic.ComicMainActivity" android:screenOrientation="1" android:theme="@7F0A00A9">
+</activity>
+<meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@7F08007E">
+</meta-data>
+<activity android:configChanges="0x000005B0" android:label="@7F080075" android:name="com.facebook.FacebookActivity" android:theme="@7F0A0183">
+</activity>
+<provider android:authorities="com.facebook.app.FacebookContentProvider1406087712871012" android:exported="true" android:name="com.facebook.FacebookContentProvider">
+</provider>
+<activity android:label="@7F080075" android:launchMode="2" android:name="com.paiba.app000005.common.share.ShareActivity" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<activity android:label="@7F080075" android:name="com.wandu.duihuaedit.novel.NovelReadActivity" android:screenOrientation="1" android:theme="@7F0A00A9" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:label="@7F080075" android:name="com.wandu.duihuaedit.main.TagListActivity" android:screenOrientation="1" android:theme="@7F0A00A9">
+</activity>
+<activity android:label="@7F080075" android:name="com.wandu.duihuaedit.novel.CataLogActivity" android:screenOrientation="1" android:theme="@7F0A00A9">
+</activity>
+<activity android:label="@7F080075" android:name="com.wandu.duihuaedit.common.widget.photoviewpager.PhotoViewPagerActivity" android:screenOrientation="1" android:theme="@7F0A00A9">
+</activity>
+<provider android:authorities="com.wandu.fantasy.reader.fileProvider" android:exported="false" android:grantUriPermissions="true" android:name="com.tencent.bugly.beta.utils.BuglyFileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F070000">
+</meta-data>
+</provider>
+<service android:exported="false" android:name="com.tencent.bugly.beta.tinker.TinkerResultService">
+</service>
+<service android:exported="false" android:name="com.tencent.tinker.lib.service.TinkerPatchService" android:process=":patch">
+</service>
+<service android:exported="false" android:name="com.tencent.tinker.lib.service.TinkerPatchService$InnerService" android:process=":patch">
+</service>
+<service android:exported="false" android:name="com.tencent.tinker.lib.service.DefaultTinkerResultService">
+</service>
+<activity android:name="com.facebook.CustomTabMainActivity">
+</activity>
+<activity android:name="com.facebook.CustomTabActivity">
+</activity>
+<provider android:authorities="com.wandu.fantasy.reader.MarketingInitProvider" android:exported="false" android:name="com.facebook.marketing.internal.MarketingInitProvider">
+</provider>
+<provider android:authorities="com.wandu.fantasy.reader.FacebookInitProvider" android:exported="false" android:name="com.facebook.internal.FacebookInitProvider">
+</provider>
+<receiver android:exported="false" android:name="com.facebook.CurrentAccessTokenExpirationBroadcastReceiver">
+<intent-filter>
+<action android:name="com.facebook.sdk.ACTION_CURRENT_ACCESS_TOKEN_CHANGED">
+</action>
+</intent-filter>
+</receiver>
+<activity android:configChanges="0x000004A0" android:name="platform.photo.gallery3d.filtershow.crop.CropActivity" android:screenOrientation="1" android:theme="@android:01030128">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="platform.photo.AlbumActivity" android:screenOrientation="1" android:theme="@android:01030128">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="platform.photo.PhotoPreviewActivity" android:screenOrientation="1" android:theme="@android:0103000D">
+</activity>
+<service android:exported="true" android:name="com.meizu.cloud.pushsdk.NotificationService">
+</service>
+<receiver android:exported="false" android:name="com.meizu.cloud.pushsdk.SystemReceiver">
+<intent-filter>
+<action android:name="com.meizu.cloud.pushservice.action.PUSH_SERVICE_START">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</receiver>
+<activity android:configChanges="0x40002484" android:excludeFromRecents="true" android:exported="false" android:hardwareAccelerated="true" android:name="com.huawei.hms.activity.BridgeActivity" android:theme="@android:0103000F">
+<meta-data android:name="hwc-theme" android:value="androidhwext:style/Theme.Emui.Translucent">
+</meta-data>
+</activity>
+<activity android:excludeFromRecents="true" android:exported="false" android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity" android:theme="@android:01030010">
+</activity>
+<service android:exported="true" android:name="com.google.android.gms.auth.api.signin.RevocationBoundService" android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION">
+</service>
+<service android:name="com.google.firebase.components.ComponentDiscoveryService">
+<meta-data android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar" android:value="com.google.firebase.components.ComponentRegistrar">
+</meta-data>
+<meta-data android:name="com.google.firebase.components:com.google.firebase.iid.Registrar" android:value="com.google.firebase.components.ComponentRegistrar">
+</meta-data>
+</service>
+<receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementReceiver">
+</receiver>
+<receiver android:enabled="true" android:exported="true" android:name="com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver" android:permission="android.permission.INSTALL_PACKAGES">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementService">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementJobService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<service android:exported="true" android:name="com.google.firebase.messaging.FirebaseMessagingService">
+<intent-filter android:priority="-500">
+<action android:name="com.google.firebase.MESSAGING_EVENT">
+</action>
+</intent-filter>
+</service>
+<receiver android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+<category android:name="com.wandu.fantasy.reader">
+</category>
+</intent-filter>
+</receiver>
+<service android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdService">
+<intent-filter android:priority="-500">
+<action android:name="com.google.firebase.INSTANCE_ID_EVENT">
+</action>
+</intent-filter>
+</service>
+<provider android:authorities="com.wandu.fantasy.reader.firebaseinitprovider" android:exported="false" android:initOrder="100" android:name="com.google.firebase.provider.FirebaseInitProvider">
+</provider>
+<activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:01030010">
+</activity>
+<meta-data android:name="com.google.android.gms.version" android:value="@7F0E0004">
+</meta-data>
+<meta-data android:name="TINKER_ID" android:value="mianfeiRelease_3.1.0">
+</meta-data>
+<meta-data android:name="BUGLY_CHANNEL" android:value="mianfei">
+</meta-data>
+</application>
+</manifest>

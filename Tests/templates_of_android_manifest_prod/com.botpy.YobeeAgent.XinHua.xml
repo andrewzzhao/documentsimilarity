@@ -1,0 +1,344 @@
+<?xml version="1.0" ?><manifest android:installLocation="0" android:versionCode="20670" android:versionName="1.1.0" package="com.botpy.YobeeAgent.XinHua" platformBuildVersionCode="23" platformBuildVersionName="6.0-2704002" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="14" android:targetSdkVersion="22">
+</uses-sdk>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.CALL_PHONE">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_SMS">
+</uses-permission>
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW">
+</uses-permission>
+<uses-permission android:name="android.permission.SEND_SMS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.MANAGE_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERACT_ACROSS_USERS_FULL">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_CONFIGURATION">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_LOGS">
+</uses-permission>
+<application android:allowBackup="true" android:icon="@7F0201A2" android:label="@7F070186" android:largeHeap="true" android:name="com.stub.StubApp" android:persistent="true" android:qihoo="activity" android:supportsRtl="true" android:theme="@7F0900A7">
+<activity android:label="@7F070186" android:name="com.botpy.yobee.agent.ui.activity.SplashActivity" android:theme="@7F0900AF">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:launchMode="2" android:name="com.botpy.yobee.agent.ui.activity.HomeActivity" android:theme="@7F0900A8" android:windowSoftInputMode="0x00000013">
+<intent-filter>
+<action android:name="com.botpy.yobee.agent.HomeActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:launchMode="2" android:name="com.tencent.tauth.AuthActivity" android:noHistory="true">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="tencent1104940753">
+</data>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.tencent.connect.common.AssistActivity" android:theme="@android:01030010">
+</activity>
+<activity android:launchMode="2" android:name="com.botpy.yobee.agent.ui.activity.CarInsuranceSelectActivity" android:windowSoftInputMode="0x00000020">
+</activity>
+<meta-data android:name="com.amap.api.v2.apikey" android:value="5a3b92d0b27b0a7606000129">
+</meta-data>
+<meta-data android:name="UMENG_APPKEY" android:value="5a3b92d0b27b0a7606000129">
+</meta-data>
+<meta-data android:name="UMENG_CHANNEL" android:value="xinhua">
+</meta-data>
+<activity android:configChanges="0x000000E0" android:exported="false" android:name="com.alipay.sdk.app.H5PayActivity" android:screenOrientation="3" android:windowSoftInputMode="0x00000012">
+</activity>
+<receiver android:name="com.avos.avoscloud.AVBroadcastReceiver">
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+<action android:name="android.intent.action.USER_PRESENT">
+</action>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:exported="false" android:name="com.botpy.yobee.agent.receiver.MyMessageReceiver">
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+<action android:name="android.intent.action.USER_PRESENT">
+</action>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+<action android:name="com.botpy.YobeeAgent.XinHua">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name="com.botpy.yobee.agent.receiver.NetworkStateReceiver">
+<intent-filter>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+</receiver>
+<service android:name="com.botpy.yobee.agent.service.UpdateService">
+</service>
+<service android:name="com.amap.api.location.APSService">
+</service>
+<service android:exported="true" android:name="com.avos.avoscloud.PushService">
+</service>
+<activity android:name="com.botpy.yobee.agent.ui.activity.CarInsuranceQuotedPriceActivity">
+</activity>
+<activity android:name="com.botpy.yobee.agent.ui.activity.CarInsuranceOrderCircumstanceActivity">
+</activity>
+<activity android:name="com.botpy.yobee.agent.ui.activity.UserGuidActivity">
+</activity>
+<activity android:name="com.botpy.yobee.agent.ui.activity.NewUserGuidActivity">
+</activity>
+<activity android:launchMode="2" android:name="com.botpy.yobee.agent.ui.activity.MineOrderCircumstanceActivity" android:taskAffinity="com.botpy.YobeeAgent.XinHua" android:theme="@7F0900AA" android:windowSoftInputMode="0x00000013">
+</activity>
+<activity android:launchMode="2" android:name="com.botpy.yobee.agent.ui.activity.LoginActivity" android:taskAffinity="com.botpy.YobeeAgent.XinHua">
+</activity>
+<activity android:name="com.botpy.yobee.agent.ui.activity.UserProtocolActivity" android:theme="@7F0900AA">
+</activity>
+<activity android:name="com.botpy.yobee.agent.ui.activity.UserCircumstanceActivity" android:theme="@7F0900AA">
+</activity>
+<activity android:name="com.botpy.yobee.agent.ui.activity.MineVehicleActivity">
+</activity>
+<activity android:name="com.botpy.yobee.agent.ui.activity.ApplyAgentActivity">
+</activity>
+<activity android:name="com.botpy.yobee.agent.ui.activity.UploadAgentPhotoActivity" android:theme="@7F0900A9">
+</activity>
+<activity android:name="com.botpy.yobee.agent.ui.activity.YobeePackageActivity">
+</activity>
+<activity android:name="com.botpy.yobee.agent.ui.activity.VehicleSearchActivity">
+</activity>
+<activity android:name="com.botpy.yobee.agent.ui.activity.UserInfoActivity">
+</activity>
+<activity android:name="com.botpy.yobee.agent.ui.activity.AboutUsActivity">
+</activity>
+<activity android:name="com.botpy.yobee.agent.ui.activity.AboutUsCDBActivity">
+</activity>
+<activity android:name="com.botpy.yobee.agent.ui.activity.FeedBackActivity">
+</activity>
+<activity android:name="com.botpy.yobee.agent.ui.activity.TeamMemberActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.botpy.yobee.agent.ui.activity.InviteMemberActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.botpy.yobee.agent.ui.activity.InviteFriendActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:name="com.botpy.yobee.agent.ui.activity.InviteFriendRuleActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.botpy.yobee.agent.ui.activity.InviteFriendRankActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.botpy.yobee.agent.ui.activity.InviteFriendListActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.botpy.yobee.agent.ui.activity.RedPacketActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.botpy.yobee.agent.ui.activity.RedPacketGetActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.botpy.yobee.agent.ui.activity.RedPacketRuleActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.botpy.yobee.agent.ui.activity.SendMesToMemActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.botpy.yobee.agent.ui.activity.TeamHeadActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.botpy.yobee.agent.ui.activity.MsgTeamActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.botpy.yobee.agent.ui.activity.MsgTeamDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.botpy.yobee.agent.ui.activity.ShowImageActivity" android:theme="@7F0900AE">
+</activity>
+<activity android:configChanges="0x000004A0" android:exported="true" android:name="com.botpy.yobee.agent.wxapi.WXEntryActivity" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<activity android:name="com.botpy.yobee.agent.ui.activity.ValletApplyActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.botpy.yobee.agent.ui.activity.ValletConfirmActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.botpy.yobee.agent.ui.activity.ValletApplyOverActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.botpy.yobee.agent.ui.activity.PerfectInfoActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:name="com.botpy.yobee.agent.ui.activity.SelectCounterActivity" android:theme="@7F0900AA">
+</activity>
+<activity android:name="com.botpy.yobee.agent.ui.activity.PurchaseMessageActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.botpy.yobee.agent.ui.activity.CarSelectOldActivity" android:theme="@7F0900AA">
+</activity>
+<activity android:name="com.botpy.yobee.agent.ui.activity.MineMessageActivity" android:taskAffinity="com.botpy.YobeeAgent.XinHua" android:theme="@7F0900AA">
+</activity>
+<activity android:name="com.botpy.yobee.agent.ui.activity.UBeanActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.botpy.yobee.agent.ui.activity.BusinessDetailWebActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.botpy.yobee.agent.ui.activity.BeanDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.botpy.yobee.agent.ui.activity.RecommentActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.botpy.yobee.agent.ui.activity.MineWalletActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.botpy.yobee.agent.ui.activity.NewMineWalletActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.botpy.yobee.agent.ui.activity.MineWalletRuleActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.botpy.yobee.agent.ui.activity.CertificateActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.botpy.yobee.agent.ui.activity.MineWebActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.botpy.yobee.agent.ui.activity.CarInsurancePriceAdviseActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.botpy.yobee.agent.ui.activity.ContactNumActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.botpy.yobee.agent.ui.activity.CarInsuranceCompanySelectActivity" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name="com.botpy.yobee.agent.ui.activity.ModifyOrderActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:name="com.botpy.yobee.agent.ui.activity.MesCarInsuranceExpireActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:exported="true" android:launchMode="1" android:name="com.botpy.yobee.agent.wxapi.WXPayEntryActivity" android:theme="@android:01030055">
+</activity>
+<activity android:name="com.botpy.yobee.agent.ui.activity.PayoderFinishActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.botpy.yobee.agent.ui.activity.CompleteInfoActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.botpy.yobee.agent.ui.activity.CustomerInformationActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.botpy.yobee.agent.ui.activity.MesSettingActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.botpy.yobee.agent.ui.activity.PayOrderActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:scheme="wxea83c4ff31719017">
+</data>
+<data android:scheme="wxd4e35a263fa8c490">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.botpy.yobee.agent.ui.activity.RedPacketUseActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.botpy.yobee.agent.ui.activity.BankSubbranchActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:name="com.botpy.yobee.agent.ui.activity.BankListActivity" android:screenOrientation="1">
+</activity>
+<activity android:excludeFromRecents="true" android:launchMode="2" android:name="com.botpy.yobee.agent.dialog.AlertDialogActivity" android:taskAffinity=".alert" android:theme="@7F090093">
+</activity>
+<activity android:name="com.botpy.yobee.agent.ui.activity.InsuranceCustomerActivity" android:screenOrientation="1" android:taskAffinity="com.botpy.YobeeAgent.XinHua">
+</activity>
+<activity android:launchMode="2" android:name="com.botpy.yobee.agent.ui.activity.CustomerDetailsActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.botpy.yobee.agent.ui.activity.SearchActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:name="com.botpy.yobee.agent.ui.activity.SelectCarBrandActivity" android:screenOrientation="1" android:theme="@7F0900AB">
+</activity>
+<activity android:name="com.botpy.yobee.agent.ui.activity.NewPerfectVehicleInfoActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:name="com.botpy.yobee.agent.ui.activity.QuotedPriceHistoryActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.botpy.yobee.agent.ui.activity.CustomerInfoActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.botpy.yobee.agent.ui.activity.QuoteDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.botpy.yobee.agent.ui.activity.CertificatingActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.botpy.yobee.agent.ui.activity.PrivilegeInfoActivity" android:theme="@7F0900AA">
+</activity>
+<activity android:name="com.botpy.yobee.agent.ui.activity.VisitRecordActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.botpy.yobee.agent.ui.activity.AddVisitRecordActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.botpy.yobee.agent.ui.activity.ReturnVisitActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.botpy.yobee.agent.ui.activity.AddReturnVisitActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.botpy.yobee.agent.ui.activity.SelCalendarActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="me.iwf.photopicker.PhotoPickerActivity" android:theme="@7F0900B1">
+</activity>
+<activity android:name="me.iwf.photopicker.PhotoPagerActivity" android:theme="@7F0900B1">
+</activity>
+<activity android:name="com.botpy.yobee.agent.ui.activity.NewCarSelectOldActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.botpy.yobee.agent.ui.activity.EpolicyActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.botpy.yobee.agent.ui.activity.EpolicyDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.botpy.yobee.agent.opencv.ui.CameraActivity">
+</activity>
+<activity android:name="com.botpy.yobee.agent.ui.activity.OrderRenewalActivity" android:theme="@7F0900AA">
+</activity>
+<activity android:name="com.botpy.yobee.agent.ui.activity.QrcodePayOrderActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.botpy.yobee.agent.ui.activity.QrcodePayActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.botpy.yobee.agent.dialog.CarCommentDialog" android:theme="@7F0901BB">
+</activity>
+<activity android:name="com.botpy.yobee.agent.ui.activity.PosPayActivity">
+</activity>
+<activity android:launchMode="1" android:name="com.botpy.yobee.agent.ui.activity.QuoteDetailsActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="2" android:name="com.botpy.yobee.agent.ui.activity.CompleteOrderPhotoActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.botpy.yobee.agent.ui.activity.SpecialAgreementActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:name="com.botpy.yobee.agent.ui.activity.FuzzyVehicleActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.botpy.yobee.agent.ui.activity.RenewalInquireActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.botpy.yobee.agent.ui.activity.CreditMallActivity">
+</activity>
+<activity android:name="com.botpy.yobee.agent.ui.activity.MallBuyActivity">
+</activity>
+<activity android:name="com.botpy.yobee.agent.ui.activity.OrderEngagesActivity">
+</activity>
+<activity android:name="com.botpy.yobee.agent.ui.activity.NewPerfectInfoActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:name="com.botpy.yobee.agent.ui.activity.MobileActivity">
+</activity>
+<activity android:name="com.botpy.yobee.agent.ui.activity.RefuelCardActivity">
+</activity>
+<activity android:name="com.botpy.yobee.agent.ui.activity.MallBankCardActivity">
+</activity>
+<activity android:name="com.botpy.yobee.agent.ui.activity.MallBankUploadActivity">
+</activity>
+<activity android:name="com.botpy.yobee.agent.ui.activity.CustomerMessageActivity">
+</activity>
+</application>
+</manifest>

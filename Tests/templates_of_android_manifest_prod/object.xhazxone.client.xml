@@ -1,0 +1,194 @@
+<?xml version="1.0" ?><manifest android:installLocation="0" android:versionCode="45" android:versionName="9.3" package="object.xhazxone.client" platformBuildVersionCode="26" platformBuildVersionName="8.0.0" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="16" android:targetSdkVersion="26">
+</uses-sdk>
+<uses-permission android:name="android.permission.ACCESS_SURFACE_FLINGER">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS">
+</uses-permission>
+<uses-permission android:name="android.permission.RECORD_AUDIO">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-permission android:name="android.permission.RESTART_PACKAGES">
+</uses-permission>
+<uses-permission android:name="android.permission.BROADCAST_STICKY">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_USER_PRESENT">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_LOGS">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<application android:hardwareAccelerated="false" android:icon="@7F02002C" android:label="@7F0A0000" android:name="object.xhazxone.client.App">
+<meta-data android:name="android.max_aspect" android:value="2.100000">
+</meta-data>
+<provider android:authorities="object.xhazxone.client.provider" android:exported="false" android:grantUriPermissions="true" android:name="android.support.v4.content.FileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F050000">
+</meta-data>
+</provider>
+<receiver android:name="com.tencent.android.tpush.XGPushReceiver" android:process=":xg_service_v2">
+<intent-filter android:priority="0x7FFFFFFF">
+<action android:name="com.tencent.android.tpush.action.SDK">
+</action>
+<action android:name="com.tencent.android.tpush.action.INTERNAL_PUSH_MESSAGE">
+</action>
+<action android:name="android.intent.action.USER_PRESENT">
+</action>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+<action android:name="android.bluetooth.adapter.action.STATE_CHANGED">
+</action>
+<action android:name="android.intent.action.ACTION_POWER_CONNECTED">
+</action>
+<action android:name="android.intent.action.ACTION_POWER_DISCONNECTED">
+</action>
+</intent-filter>
+</receiver>
+<activity android:exported="true" android:name="com.tencent.android.tpush.XGPushActivity">
+<intent-filter>
+<action android:name="">
+</action>
+</intent-filter>
+</activity>
+<service android:exported="true" android:name="com.tencent.android.tpush.service.XGPushService" android:persistent="true" android:process=":xg_service_v2">
+</service>
+<service android:exported="true" android:name="com.tencent.android.tpush.rpc.XGRemoteService">
+<intent-filter>
+<action android:name="object.xhazxone.client.PUSH_ACTION">
+</action>
+</intent-filter>
+</service>
+<meta-data android:name="XG_V2_ACCESS_ID" android:value="2100152208">
+</meta-data>
+<meta-data android:name="XG_V2_ACCESS_KEY" android:value="AJU169PF23VB">
+</meta-data>
+<activity android:configChanges="0x000004A0" android:label="@7F0A0000" android:launchMode="2" android:name="object.xhazxone.client.IpcamClientActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="fileone" android:launchMode="2" android:name="object.xhazxone.client.FileOneActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="object.xhazxone.client.MainActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="Add Camera" android:launchMode="2" android:name="object.xhazxone.client.AddCameraActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="object.xhazxone.client.MenuMessageAudioActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="object.xhazxone.client.MenuInternetActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="object.xhazxone.client.MenuPushActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="object.xhazxone.client.MenuHelepActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="object.xhazxone.client.MenuColorActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:configChanges="0x000000A0" android:launchMode="2" android:name="object.xhazxone.client.BizSettingsoftActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:configChanges="0x000000A0" android:launchMode="2" android:name="object.xhazxone.client.BizSettingsoftPwdGuestActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:configChanges="0x000000A0" android:launchMode="2" android:name="object.xhazxone.client.CreateGesturePasswordActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:configChanges="0x000000A0" android:launchMode="2" android:name="object.xhazxone.client.UnlockGesturePasswordActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="play" android:name="object.xhazxone.client.PlayActivity" android:screenOrientation="0">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="playsport" android:name="object.xhazxone.client.PlayActivitySport" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="playfour" android:name="object.xhazxone.client.FourPlaySportActivty" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="about" android:launchMode="2" android:name="object.xhazxone.client.AboutActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="object.xhazxone.client.MenuWifiPhoneActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="setting" android:launchMode="2" android:name="object.xhazxone.client.SettingActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="localvideopicture" android:launchMode="2" android:name="object.xhazxone.client.ShowLocalVideoActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="LocalPicture" android:launchMode="2" android:name="object.xhazxone.client.LocalPictureListActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="ShowLocPicture" android:launchMode="2" android:name="object.xhazxone.client.ShowLocalPictureActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="WifiSetting" android:launchMode="2" android:name="object.xhazxone.client.SettingWifiActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="UserSetting" android:launchMode="2" android:name="object.xhazxone.client.SettingUserActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="FtpSetting" android:launchMode="2" android:name="object.xhazxone.client.SettingFtpActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="object.xhazxone.client.SettingAlarmActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="object.xhazxone.client.SettingMailActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="object.xhazxone.client.SettingDNSActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="object.xhazxone.client.SettingNetworkActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="object.xhazxone.client.SettingDateActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="object.xhazxone.client.AlarmLogActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="object.xhazxone.client.PlayBackTFActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="object.xhazxone.client.PlayBackActivity" android:screenOrientation="0">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="object.xhazxone.client.ShowLocalPicGridActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="object.xhazxone.client.AlarmActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="object.xhazxone.client.PictureActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="object.xhazxone.client.VideoActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="object.xhazxone.client.FileNextActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="object.p2pipcam.zxingtwodimensioncode.CaptureActivity" android:screenOrientation="1" android:theme="@android:01030007" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="object.xhazxone.client.SettingSDCardActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F0A0000" android:name="object.xhazxone.client.StartActivity" android:screenOrientation="1" android:theme="@7F0B0005" android:windowSoftInputMode="0x00000020">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<service android:name="object.xhazxone.client.BridgeService">
+</service>
+<activity android:launchMode="2" android:name="object.xhazxone.client.other.AllPicterCheckActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="2" android:name="object.xhazxone.client.other.AllVideoCheckActivity" android:screenOrientation="1">
+</activity>
+</application>
+</manifest>

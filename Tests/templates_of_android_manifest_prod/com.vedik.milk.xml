@@ -1,0 +1,116 @@
+<?xml version="1.0" ?><manifest android:versionCode="7" android:versionName="1.0.6" package="com.vedik.milk" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="15" android:targetSdkVersion="25">
+</uses-sdk>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.MANAGE_DOCUMENTS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_SMS">
+</uses-permission>
+<meta-data android:name="android.support.VERSION" android:value="25.3.1">
+</meta-data>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE">
+</uses-permission>
+<permission android:name="com.vedik.milk.permission.C2D_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="com.vedik.milk.permission.C2D_MESSAGE">
+</uses-permission>
+<application android:allowBackup="true" android:hardwareAccelerated="true" android:icon="@7F0C0000" android:label="@7F0D0021" android:largeHeap="true" android:supportsRtl="true" android:theme="@7F0E0006">
+<activity android:configChanges="0x00000480" android:label="@7F0D0021" android:name="com.vedik.milk.MainActivity" android:screenOrientation="1" android:theme="@7F0E0008" android:windowSoftInputMode="0x00000002">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x00000480" android:label="@7F0D0021" android:name="com.vedik.milk.Login_activity" android:screenOrientation="1" android:theme="@7F0E0008" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x00000480" android:label="@7F0D0021" android:name="com.vedik.milk.Home" android:screenOrientation="1" android:theme="@7F0E0008" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x00000480" android:label="@7F0D0021" android:name="com.vedik.milk.DeliveryCalender" android:screenOrientation="1" android:theme="@7F0E0008" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x00000480" android:label="@7F0D0021" android:name="com.vedik.milk.AccountStatement" android:screenOrientation="1" android:theme="@7F0E0008" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x00000480" android:label="@7F0D0021" android:name="com.vedik.milk.Panding_Bottle" android:screenOrientation="1" android:theme="@7F0E0008" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x00000480" android:label="@7F0D0021" android:name="com.vedik.milk.ContactUs" android:screenOrientation="1" android:theme="@7F0E0008" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x00000480" android:label="@7F0D0021" android:name="com.vedik.milk.FAQs" android:screenOrientation="1" android:theme="@7F0E0008" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x00000480" android:label="@7F0D0021" android:name="com.vedik.milk.UpdateProfile" android:screenOrientation="1" android:theme="@7F0E0008" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x00000480" android:label="@7F0D0021" android:name="com.vedik.milk.Subscribe" android:screenOrientation="1" android:theme="@7F0E0008" android:windowSoftInputMode="0x00000002">
+</activity>
+<service android:name="com.vedik.FCM.MyFirebaseMessagingService2">
+<intent-filter>
+<action android:name="com.google.firebase.MESSAGING_EVENT">
+</action>
+</intent-filter>
+</service>
+<service android:name="com.vedik.FCM.MyFirebaseInstanceIDService">
+<intent-filter>
+<action android:name="com.google.firebase.INSTANCE_ID_EVENT">
+</action>
+</intent-filter>
+</service>
+<meta-data android:name="com.google.firebase.messaging.default_notification_icon" android:resource="@7F070079">
+</meta-data>
+<meta-data android:name="com.google.firebase.messaging.default_notification_color" android:resource="@7F05003B">
+</meta-data>
+<activity android:configChanges="0x00000480" android:label="@7F0D0021" android:name="com.vedik.FCM.Notification_List" android:screenOrientation="1" android:theme="@7F0E0008" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x00000480" android:label="@7F0D0021" android:name="com.vedik.milk.UserList" android:theme="@7F0E0008" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x00000480" android:label="@7F0D0021" android:name="com.vedik.milk.YearList" android:theme="@7F0E0008" android:windowSoftInputMode="0x00000002">
+</activity>
+<service android:exported="true" android:name="com.google.firebase.messaging.FirebaseMessagingService">
+<intent-filter android:priority="-500">
+<action android:name="com.google.firebase.MESSAGING_EVENT">
+</action>
+</intent-filter>
+</service>
+<receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementReceiver">
+</receiver>
+<receiver android:enabled="true" android:name="com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver" android:permission="android.permission.INSTALL_PACKAGES">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementService">
+</service>
+<receiver android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+<action android:name="com.google.android.c2dm.intent.REGISTRATION">
+</action>
+<category android:name="com.vedik.milk">
+</category>
+</intent-filter>
+</receiver>
+<receiver android:exported="false" android:name="com.google.firebase.iid.FirebaseInstanceIdInternalReceiver">
+</receiver>
+<service android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdService">
+<intent-filter android:priority="-500">
+<action android:name="com.google.firebase.INSTANCE_ID_EVENT">
+</action>
+</intent-filter>
+</service>
+<provider android:authorities="com.vedik.milk.firebaseinitprovider" android:exported="false" android:initOrder="100" android:name="com.google.firebase.provider.FirebaseInitProvider">
+</provider>
+<meta-data android:name="com.google.android.gms.version" android:value="@7F090006">
+</meta-data>
+</application>
+</manifest>

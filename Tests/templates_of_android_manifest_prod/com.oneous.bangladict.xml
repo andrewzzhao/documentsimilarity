@@ -1,0 +1,122 @@
+<?xml version="1.0" ?><manifest android:versionCode="23" android:versionName="1.5.1" package="com.oneous.bangladict" platformBuildVersionCode="25" platformBuildVersionName="7.1.1" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="15" android:targetSdkVersion="25">
+</uses-sdk>
+<uses-permission android:name="com.android.vending.CHECK_LICENSE">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<meta-data android:name="android.support.VERSION" android:value="25.3.1">
+</meta-data>
+<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE">
+</uses-permission>
+<permission android:name="com.oneous.bangladict.permission.C2D_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="com.oneous.bangladict.permission.C2D_MESSAGE">
+</uses-permission>
+<application android:allowBackup="true" android:icon="@7F020093" android:label="@7F07005C" android:name="com.oneous.bangladict.service.MainApplicationStore" android:theme="@android:0103006E">
+<meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@7F070076">
+</meta-data>
+<activity android:configChanges="0x00000480" android:label="@7F07005C" android:name="com.oneous.bangladict.ui.DictionaryMainActivity">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.SEND">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:mimeType="text/plain">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.PROCESS_TEXT">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:mimeType="text/plain">
+</data>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x00000480" android:label="About" android:name="com.oneous.bangladict.ui.AboutActivity">
+</activity>
+<activity android:configChanges="0x00000480" android:label="Settings" android:name="com.oneous.bangladict.ui.SettingsActivity">
+</activity>
+<activity android:configChanges="0x00000480" android:label="Send Feedback" android:name="com.oneous.bangladict.ui.FeedbackActivity">
+</activity>
+<activity android:configChanges="0x00000480" android:label="@7F07005C" android:name="com.oneous.bangladict.service.downloader.SampleDownloaderActivity">
+</activity>
+<activity android:configChanges="0x00000480" android:label="@7F0700A0" android:name="com.oneous.bangladict.ui.RegisterPremium">
+</activity>
+<activity android:configChanges="0x00000480" android:name="com.oneous.bangladict.ui.PaymentActivity">
+</activity>
+<activity android:configChanges="0x00000480" android:label="@7F0700BB" android:name="com.oneous.bangladict.ui.PermissionRequestAcitivty">
+</activity>
+<activity android:configChanges="0x00000480" android:label="@7F07007A" android:name="com.oneous.bangladict.ui.PremiumDetailsActivity">
+</activity>
+<service android:name="com.oneous.bangladict.service.downloader.SampleDownloaderService">
+</service>
+<receiver android:name="com.oneous.bangladict.service.downloader.SampleAlarmReceiver">
+</receiver>
+<activity android:configChanges="0x00000480" android:label="@7F0700CC" android:name="com.oneous.bangladict.ui.AccountActivity">
+</activity>
+<activity android:configChanges="0x000005B0" android:label="@7F07005B" android:name="com.facebook.FacebookActivity" android:theme="@7F090196">
+</activity>
+<provider android:authorities="com.facebook.app.FacebookContentProvider1606460489652470" android:exported="true" android:name="com.facebook.FacebookContentProvider">
+</provider>
+<activity android:name="com.facebook.CustomTabMainActivity">
+</activity>
+<provider android:authorities="com.oneous.bangladict.FacebookInitProvider" android:exported="false" android:name="com.facebook.internal.FacebookInitProvider">
+</provider>
+<activity android:configChanges="0x00000FB0" android:name="com.google.android.gms.ads.AdActivity" android:theme="@android:0103000F">
+</activity>
+<activity android:name="com.google.android.gms.ads.purchase.InAppPurchaseActivity" android:theme="@7F09013B">
+</activity>
+<activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:01030010">
+</activity>
+<receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementReceiver">
+</receiver>
+<receiver android:enabled="true" android:name="com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver" android:permission="android.permission.INSTALL_PACKAGES">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementService">
+</service>
+<receiver android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+<category android:name="com.oneous.bangladict">
+</category>
+</intent-filter>
+</receiver>
+<receiver android:exported="false" android:name="com.google.firebase.iid.FirebaseInstanceIdInternalReceiver">
+</receiver>
+<service android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdService">
+<intent-filter android:priority="-500">
+<action android:name="com.google.firebase.INSTANCE_ID_EVENT">
+</action>
+</intent-filter>
+</service>
+<provider android:authorities="com.oneous.bangladict.firebaseinitprovider" android:exported="false" android:initOrder="100" android:name="com.google.firebase.provider.FirebaseInitProvider">
+</provider>
+<meta-data android:name="com.google.android.gms.version" android:value="@7F0B0006">
+</meta-data>
+</application>
+</manifest>

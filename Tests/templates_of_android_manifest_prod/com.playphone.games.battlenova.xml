@@ -1,0 +1,98 @@
+<?xml version="1.0" ?><manifest android:installLocation="2" android:versionCode="16" android:versionName="2.0.2.1" package="com.playphone.games.battlenova" platformBuildVersionCode="21" platformBuildVersionName="APKTOOL" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="6" android:targetSdkVersion="8">
+</uses-sdk>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<application android:debuggable="false" android:icon="@7F020000" android:label="@7F030000">
+<activity android:label="@7F030000" android:name="com.playphone.games.battlenova.OverrideExample" android:screenOrientation="0" configChanges="keyboardHidden|orientation">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<service android:name="com.playphone.psgn.PSGNService">
+</service>
+<service android:name="com.playphone.psgn.android.BillingService">
+</service>
+<activity android:label="@7F030000" android:name="com.playphone.psgn.vzw.BillingActivity" android:screenOrientation="0" configChanges="keyboardHidden|orientation">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.playphone.psgn.PSGNProxyActivity" android:screenOrientation="0" android:theme="@android:01030006">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.action.BROWSABLE">
+</category>
+</intent-filter>
+</activity>
+<receiver android:name="com.playphone.psgn.android.BillingReceiver">
+<intent-filter>
+<action android:name="com.android.vending.billing.RESPONSE_CODE">
+</action>
+<action android:name="com.android.vending.billing.IN_APP_NOTIFY">
+</action>
+<action android:name="com.android.vending.billing.PURCHASE_STATE_CHANGED">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:exported="true" android:name="com.playphone.psgn.InstallReferrerReceiver">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name="com.playphone.psgn.PSGNPushReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+<category android:name="com.playphone.games.demo2.unity">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.REGISTRATION">
+</action>
+<category android:name="com.playphone.games.demo2.unity">
+</category>
+</intent-filter>
+</receiver>
+<receiver android:exported="true" android:name="com.tapjoy.TapjoyReferralTracker">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+</application>
+<permission android:name="com.playphone.games.demo2.unity.permission.C2D_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="com.playphone.games.demo2.unity.permission.C2D_MESSAGE">
+</uses-permission>
+<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="com.android.vending.BILLING">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-feature android:glEsVersion="0x00010001">
+</uses-feature>
+<uses-feature android:name="android.hardware.touchscreen">
+</uses-feature>
+<uses-feature android:name="android.hardware.touchscreen.multitouch" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.touchscreen.multitouch.distinct" android:required="false">
+</uses-feature>
+</manifest>

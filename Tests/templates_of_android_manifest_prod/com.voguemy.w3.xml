@@ -1,0 +1,206 @@
+<?xml version="1.0" ?><manifest android:versionCode="112" android:versionName="1.1.2" package="com.voguemy.w3" platformBuildVersionCode="25" platformBuildVersionName="7.1.1" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="15" android:targetSdkVersion="23">
+</uses-sdk>
+<permission android:name="com.voguemy.w3.permission.JPUSH_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="com.voguemy.w3.permission.JPUSH_MESSAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_USER_PRESENT">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS">
+</uses-permission>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-permission android:name="android.permission.FLASHLIGHT">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW">
+</uses-permission>
+<application android:allowBackup="true" android:icon="@7F03000B" android:label="典娜" android:name="com.qihoo.util.StubApp2470686753" android:qihoo="activity" android:supportsRtl="true" android:theme="@7F0900A9">
+<meta-data android:name="APP_NAME" android:value="典娜">
+</meta-data>
+<meta-data android:name="JPUSH" android:value="32426f6e68d00fde9eaef4d0">
+</meta-data>
+<meta-data android:name="QQ" android:value="1106088895">
+</meta-data>
+<meta-data android:name="WEIXIN" android:value="wx9802d7c17b105760">
+</meta-data>
+<meta-data android:name="QQ_MTA" android:value="">
+</meta-data>
+<meta-data android:name="BAISC" android:value="1">
+</meta-data>
+<meta-data android:name="FULLSCREEN" android:value="">
+</meta-data>
+<meta-data android:name="InstallChannel" android:value="lt-app">
+</meta-data>
+<activity android:allowTaskReparenting="true" android:configChanges="0x000004A0" android:hardwareAccelerated="true" android:launchMode="1" android:name="com.lt.app.MainActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<service android:enabled="false" android:exported="false" android:name="com.qihoo.util.QhJobService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<activity android:excludeFromRecents="true" android:exported="false" android:launchMode="2" android:name="com.qihoo.util.CommonActivity" android:taskAffinity="com.voguemy.w3.util" android:theme="@android:0103005F">
+</activity>
+<service android:enabled="true" android:exported="true" android:name="com.qihoo.util.CommonService">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.qihoo.util.CommonService2">
+</service>
+<receiver android:enabled="true" android:exported="false" android:name="com.qihoo.util.CommonReceiver">
+</receiver>
+<provider android:authorities="com.voguemy.w3.COMMONPROVIDER" android:exported="true" android:name="com.qihoo.util.CommonProvider">
+</provider>
+<activity android:configChanges="0x000000A0" android:exported="false" android:launchMode="2" android:name="com.qihoo.ls.LsActivity" android:screenOrientation="1" android:theme="@android:01030060">
+</activity>
+<service android:exported="false" android:name="com.qihoo.ls.SoService">
+</service>
+<activity android:name="com.lt.app.JumpActivity">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="app" android:scheme="ltapp3210">
+</data>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004A0" android:hardwareAccelerated="true" android:launchMode="0" android:name="com.lt.app.WebActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:name="com.lt.app.QrActivity" android:screenOrientation="1">
+</activity>
+<service android:exported="true" android:name="com.loveplusplus.update.DownloadService">
+</service>
+<provider android:authorities="com.voguemy.w3.TENCENT.MID.V3" android:exported="true" android:name="com.tencent.mid.api.MidProvider">
+</provider>
+<receiver android:enabled="true" android:exported="false" android:name="com.lt.app.busi.JPushReceiver">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.REGISTRATION">
+</action>
+<action android:name="cn.jpush.android.intent.UNREGISTRATION">
+</action>
+<action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED">
+</action>
+<action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED">
+</action>
+<action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED">
+</action>
+<action android:name="cn.jpush.android.intent.ACTION_RICHPUSH_CALLBACK">
+</action>
+<action android:name="cn.jpush.android.intent.CONNECTION">
+</action>
+<category android:name="com.voguemy.w3">
+</category>
+</intent-filter>
+</receiver>
+<activity android:exported="true" android:launchMode="1" android:name="com.voguemy.w3.wxapi.WXEntryActivity" android:screenOrientation="1" android:theme="@android:0103000F">
+</activity>
+<activity android:exported="true" android:launchMode="1" android:name="com.voguemy.w3.wxapi.WXPayEntryActivity" android:screenOrientation="1" android:theme="@android:0103000F">
+</activity>
+<activity android:launchMode="2" android:name="com.tencent.tauth.AuthActivity" android:noHistory="true">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="tencent1106088895">
+</data>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.tencent.connect.common.AssistActivity" android:screenOrientation="3" android:theme="@android:01030010">
+</activity>
+<activity android:exported="false" android:name="cn.jpush.android.ui.PopWinActivity" android:theme="@7F0900D8">
+</activity>
+<activity android:configChanges="0x000000A0" android:exported="false" android:name="cn.jpush.android.ui.PushActivity" android:theme="@android:01030006">
+<intent-filter>
+<action android:name="cn.jpush.android.ui.PushActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="com.voguemy.w3">
+</category>
+</intent-filter>
+</activity>
+<service android:enabled="true" android:exported="false" android:name="cn.jpush.android.service.PushService" android:process=":pushcore">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.REGISTER">
+</action>
+<action android:name="cn.jpush.android.intent.REPORT">
+</action>
+<action android:name="cn.jpush.android.intent.PushService">
+</action>
+<action android:name="cn.jpush.android.intent.PUSH_TIME">
+</action>
+</intent-filter>
+</service>
+<service android:enabled="true" android:exported="true" android:name="cn.jpush.android.service.DaemonService">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.DaemonService">
+</action>
+<category android:name="com.voguemy.w3">
+</category>
+</intent-filter>
+</service>
+<receiver android:enabled="true" android:exported="false" android:name="cn.jpush.android.service.PushReceiver" android:process=":pushcore">
+<intent-filter android:priority="1000">
+<action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY">
+</action>
+<category android:name="com.voguemy.w3">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.USER_PRESENT">
+</action>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_ADDED">
+</action>
+<action android:name="android.intent.action.PACKAGE_REMOVED">
+</action>
+<data android:scheme="package">
+</data>
+</intent-filter>
+</receiver>
+<receiver android:exported="false" android:name="cn.jpush.android.service.AlarmReceiver">
+</receiver>
+<meta-data android:name="JPUSH_CHANNEL" android:value="developer-default">
+</meta-data>
+<meta-data android:name="JPUSH_APPKEY" android:value="32426f6e68d00fde9eaef4d0">
+</meta-data>
+</application>
+</manifest>

@@ -1,0 +1,66 @@
+<?xml version="1.0" ?><manifest android:versionCode="304" android:versionName="2021.11" package="com.neoexpert.scdown" platformBuildVersionCode="27" platformBuildVersionName="8.1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="16" android:targetSdkVersion="28">
+</uses-sdk>
+<uses-permission android:name="com.android.vending.BILLING">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:maxSdkVersion="23" android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-feature android:name="android.software.live_wallpaper">
+</uses-feature>
+<application android:allowBackup="true" android:fullBackupContent="true" android:icon="@7F030000" android:label="@7F0D001F" android:name="com.neoexpert.scdown.MyAPP" android:supportsRtl="false" android:theme="@android:0103000A">
+<activity android:label="@7F0D001F" android:launchMode="3" android:name="com.neoexpert.scdown.MainActivity" android:theme="@7F0A015A" android:windowSoftInputMode="0x00000002">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="scdown" android:scheme="neoexpert">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<service android:label="@7F0D001F" android:name="com.neoexpert.scdown.ChatService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<service android:label="Chat service" android:name="com.neoexpert.scdown.MyJobService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<service android:label="Countdown" android:name="com.neoexpert.neogl.LiveWallpaper" android:permission="android.permission.BIND_WALLPAPER">
+<intent-filter>
+<action android:name="android.service.wallpaper.WallpaperService">
+</action>
+</intent-filter>
+<meta-data android:name="android.service.wallpaper" android:resource="@7F060000">
+</meta-data>
+</service>
+<receiver android:name="com.neoexpert.scdown.AutoStart">
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_REPLACED">
+</action>
+<data android:path="com.neoexpert.scdown" android:scheme="package">
+</data>
+</intent-filter>
+</receiver>
+</application>
+</manifest>

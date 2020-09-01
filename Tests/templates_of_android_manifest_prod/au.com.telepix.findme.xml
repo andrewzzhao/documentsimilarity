@@ -1,0 +1,82 @@
+<?xml version="1.0" ?><manifest android:versionCode="11" android:versionName="1.1.1" package="au.com.telepix.findme" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-permission android:name="android.permission.SEND_SMS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_CONTACTS">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_SMS">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-sdk android:maxSdkVersion="19" android:minSdkVersion="6" android:targetSdkVersion="8">
+</uses-sdk>
+<supports-screens android:anyDensity="true" android:largeScreens="true" android:normalScreens="true" android:smallScreens="true">
+</supports-screens>
+<application android:icon="@7F020004" android:label="@7F040001" android:name="AppData">
+<activity android:label="@7F040001" android:name=".MainActivity" android:windowSoftInputMode="0x00000010">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:name="com.codinguser.android.contactpicker.ContactsPickerActivity">
+</activity>
+<activity android:label="@7F040001" android:name=".HelpPage">
+<intent-filter>
+<action android:name="au.com.telepix.findme.HELP">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<receiver android:name=".services.SMSListener">
+<intent-filter>
+<action android:name="android.provider.Telephony.SMS_RECEIVED">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name=".services.SmsSentIntentReceiver">
+<intent-filter>
+<action android:name="au.com.telepix.findme.SMS_SENT">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name=".services.SmsDeliveredIntentReceiver">
+<intent-filter>
+<action android:name="au.com.telepix.findme.SMS_DELIVERED">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name=".services.AlarmReceiver">
+<intent-filter>
+<action android:name="au.com.telepix.findme.ALARM">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name=".services.BootIntentReceiver">
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+<category android:name="android.intent.category.HOME">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.REBOOT">
+</action>
+<category android:name="android.intent.category.HOME">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.ACTION_SHUTDOWN">
+</action>
+<category android:name="android.intent.category.HOME">
+</category>
+</intent-filter>
+</receiver>
+</application>
+</manifest>

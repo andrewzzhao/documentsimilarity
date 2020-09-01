@@ -1,0 +1,312 @@
+<?xml version="1.0" ?><manifest android:versionCode="208" android:versionName="2.0.8" package="com.chunnuanhk.book" platformBuildVersionCode="25" platformBuildVersionName="7.1.1" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="15" android:targetSdkVersion="21">
+</uses-sdk>
+<uses-permission android:name="android.permission.BLUETOOTH">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="com.chunnuanhk.book.permission.JPUSH_MESSAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<permission android:name="com.chunnuanhk.book.permission.JPUSH_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_USER_PRESENT">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<meta-data android:name="android.support.VERSION" android:value="25.3.1">
+</meta-data>
+<application android:allowBackup="true" android:icon="@7F030001" android:label="@7F070037" android:name="com.stub.StubApp" android:qihoo="activity" android:supportsRtl="true" android:theme="@7F0900A8">
+<activity android:configChanges="0x000000A0" android:exported="false" android:name="cn.jpush.android.ui.PushActivity" android:screenOrientation="1" android:theme="@android:01030006">
+<intent-filter>
+<action android:name="cn.jpush.android.ui.PushActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="com.chunnuanhk.book">
+</category>
+</intent-filter>
+</activity>
+<service android:exported="false" android:name="cn.jpush.android.service.PushService" android:process=":mult">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.REGISTER">
+</action>
+<action android:name="cn.jpush.android.intent.REPORT">
+</action>
+<action android:name="cn.jpush.android.intent.PushService">
+</action>
+<action android:name="cn.jpush.android.intent.PUSH_TIME">
+</action>
+</intent-filter>
+</service>
+<receiver android:enabled="true" android:exported="false" android:name="cn.jpush.android.service.PushReceiver">
+<intent-filter android:priority="1000">
+<action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY">
+</action>
+<category android:name="com.chunnuanhk.book">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.USER_PRESENT">
+</action>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_ADDED">
+</action>
+<action android:name="android.intent.action.PACKAGE_REMOVED">
+</action>
+<data android:scheme="package">
+</data>
+</intent-filter>
+</receiver>
+<receiver android:exported="false" android:name="cn.jpush.android.service.AlarmReceiver">
+</receiver>
+<receiver android:enabled="true" android:name="com.chunnuanhk.book.jpush.JpushReceiver">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.REGISTRATION">
+</action>
+<action android:name="cn.jpush.android.intent.UNREGISTRATION">
+</action>
+<action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED">
+</action>
+<action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED">
+</action>
+<action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED">
+</action>
+<action android:name="cn.jpush.android.intent.ACTION_RICHPUSH_CALLBACK">
+</action>
+<action android:name="cn.jpush.android.intent.CONNECTION">
+</action>
+<category android:name="com.chunnuanhk.book">
+</category>
+</intent-filter>
+</receiver>
+<meta-data android:name="JPUSH_CHANNEL" android:value="developer-default">
+</meta-data>
+<meta-data android:name="JPUSH_APPKEY" android:value="1eb930d73336d47e355a546f">
+</meta-data>
+<activity android:configChanges="0x000000A0" android:name="com.chunnuanhk.book.WBShareActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004A0" android:exported="true" android:name="com.chunnuanhk.book.wxapi.WXEntryActivity" android:screenOrientation="1" android:theme="@android:01030010">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:scheme="wx68d0e0e0b0781931">
+</data>
+</intent-filter>
+</activity>
+<activity android:launchMode="2" android:name="com.umeng.qq.tencent.AuthActivity" android:noHistory="true" android:screenOrientation="1">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="tencent1106330588">
+</data>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.umeng.qq.tencent.AssistActivity" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<activity android:excludeFromRecents="true" android:name="com.umeng.socialize.editorpage.ShareActivity" android:screenOrientation="1" android:theme="@7F090137">
+</activity>
+<meta-data android:name="UMENG_APPKEY" android:value="5976a8c0c89576108e0028cf">
+</meta-data>
+<activity android:exported="true" android:launchMode="1" android:name="com.chunnuanhk.book.wxapi.WXPayEntryActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:scheme="wx68d0e0e0b0781931">
+</data>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004E0" android:exported="false" android:name="com.alipay.sdk.app.H5PayActivity" android:screenOrientation="3" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:configChanges="0x000000E0" android:exported="false" android:name="com.alipay.sdk.app.H5AuthActivity" android:screenOrientation="3" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:exported="true" android:launchMode="1" android:name="com.chunnuanhk.book.wxapi.CallbackActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:scheme="qwallet101418681">
+</data>
+</intent-filter>
+</activity>
+<meta-data android:name="UMENG_CHANNEL" android:value="10010">
+</meta-data>
+<activity android:configChanges="0x000004A0" android:name="com.chunnuanhk.book.start.StartActivity" android:screenOrientation="1" android:theme="@7F0900AA">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.chunnuanhk.book.chooseSex.ChooseSexActivity" android:screenOrientation="1" android:theme="@7F0900AA">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="com.chunnuanhk.book.main.MainActivity" android:theme="@7F0900A8">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="com.chunnuanhk.book.login.LoginActivity" android:screenOrientation="1" android:theme="@7F0900A8">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="com.chunnuanhk.book.register.RegisterActivity" android:screenOrientation="1" android:theme="@7F0900A8">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="com.chunnuanhk.book.forgetPassword.ForgetPasswordActivity" android:screenOrientation="1" android:theme="@7F0900A8">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="com.chunnuanhk.book.changePassword.ChangePasswordActivity" android:screenOrientation="1" android:theme="@7F0900A8">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="com.chunnuanhk.book.userCenter.UserCenterActivity" android:screenOrientation="1" android:theme="@7F0900A8">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="com.chunnuanhk.book.userWallet.UserWalletActivity" android:screenOrientation="1" android:theme="@7F0900A8">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="com.chunnuanhk.book.ranking.BookRankingActivity" android:screenOrientation="1" android:theme="@7F0900A8">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="com.chunnuanhk.book.bookCategory.BookCategoryListActivity" android:screenOrientation="1" android:theme="@7F0900A8">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.chunnuanhk.book.bookDetail.BookDetailActivity" android:screenOrientation="1" android:theme="@7F0900A8">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="com.chunnuanhk.book.bookReview.BookReviewListActivity" android:screenOrientation="1" android:theme="@7F0900A8">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="com.chunnuanhk.book.bookReview.BookReviewReplyActivity" android:screenOrientation="1" android:theme="@7F0900A8">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="com.chunnuanhk.book.bookReview.BookReviewWriteActivity" android:screenOrientation="1" android:theme="@7F0900A8">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="com.chunnuanhk.book.bookSpecial.BookSpecialDetailActivity" android:screenOrientation="1" android:theme="@7F0900A8">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="com.chunnuanhk.book.read.ReadActivity" android:screenOrientation="1" android:theme="@7F0900A8">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="com.chunnuanhk.book.search.SearchActivity" android:screenOrientation="1" android:theme="@7F0900A8">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="com.chunnuanhk.book.systemSetting.SystemSettingActivity" android:screenOrientation="1" android:theme="@7F0900A8">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="com.chunnuanhk.book.about.AboutActivity" android:screenOrientation="1" android:theme="@7F0900A8">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="com.chunnuanhk.book.rechargeRecord.RechargeRecordActivity" android:screenOrientation="1" android:theme="@7F0900A8">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="com.chunnuanhk.book.recentlyRead.RecentlyReadActivity" android:screenOrientation="1" android:theme="@7F0900A8">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="com.chunnuanhk.book.signRecord.SignRecordActivity" android:screenOrientation="1" android:theme="@7F0900A8">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="com.chunnuanhk.book.consumeRecord.ConsumeRecordActivity" android:screenOrientation="1" android:theme="@7F0900A8">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="com.chunnuanhk.book.consumeRecord.ConsumeRecordDetailActivity" android:screenOrientation="1" android:theme="@7F0900A8">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="com.chunnuanhk.book.bindPhoneNumber.BindPhoneNumberActivity" android:screenOrientation="1" android:theme="@7F0900A8">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="com.chunnuanhk.book.rewardRecord.RewardRecordActivity" android:screenOrientation="1" android:theme="@7F0900A8">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="com.chunnuanhk.book.userHome.UserHomeActivity" android:screenOrientation="1" android:theme="@7F0900A8">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="com.chunnuanhk.book.loginRegist.LoginRegisterActivity" android:screenOrientation="1" android:theme="@7F0900A8">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="com.chunnuanhk.book.fans.FansActivity" android:screenOrientation="1" android:theme="@7F0900A8">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="0" android:name="com.chunnuanhk.book.read.BookDirectoryActivity" android:screenOrientation="1" android:theme="@7F0900A8">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="com.chunnuanhk.book.main.MainActivityNew" android:screenOrientation="1" android:theme="@7F0900A8">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.chunnuanhk.book.webView.WebViewActivity" android:screenOrientation="1" android:theme="@7F0900A8">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="com.chunnuanhk.book.debug.DebugActivity" android:screenOrientation="1" android:theme="@7F0900A8">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="com.chunnuanhk.book.community.CommunityActivity" android:screenOrientation="1" android:theme="@7F0900A8">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="com.chunnuanhk.book.accountSecurity.AccountSecurityActivity" android:screenOrientation="1" android:theme="@7F0900A8">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="com.chunnuanhk.book.message.MessageActivity" android:screenOrientation="1" android:theme="@7F0900A8">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="com.chunnuanhk.book.message.MessageCommentBackActivity" android:screenOrientation="1" android:theme="@7F0900A8">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="com.chunnuanhk.book.message.MessagePraiseActivity" android:screenOrientation="1" android:theme="@7F0900A8">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="com.chunnuanhk.book.message.MessageSystemActivity" android:screenOrientation="1" android:theme="@7F0900A8">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="com.chunnuanhk.book.userCenter.RenameActivity" android:screenOrientation="1" android:theme="@7F0900A8">
+</activity>
+<service android:name="com.chunnuanhk.book.updateApp.DownLoadAppService">
+</service>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="com.chunnuanhk.book.sign.SignActivity" android:screenOrientation="1" android:theme="@7F0900A8">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="com.chunnuanhk.book.fansNew.FansNewActivity" android:screenOrientation="1" android:theme="@7F0900A8">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="com.chunnuanhk.book.chat.myCreation.MyCreationActivity" android:screenOrientation="1" android:theme="@7F0900A8">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="com.chunnuanhk.book.chat.productDetail.ProductDetailActivity" android:screenOrientation="1" android:theme="@7F0900A8">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="com.chunnuanhk.book.chat.bookShare.SubmitSuccessActivity" android:screenOrientation="1" android:theme="@7F0900A8">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="com.chunnuanhk.book.chat.bookDetailEdit.BookDetailEditActivity" android:screenOrientation="1" android:theme="@7F0900A8">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="com.chunnuanhk.book.chat.roleManage.RoleManageActivity" android:screenOrientation="1" android:theme="@7F0900A8">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.chunnuanhk.book.webView.WebViewNoTitleActivity" android:screenOrientation="1" android:theme="@7F0900A8">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="com.chunnuanhk.book.chat.bookCommentList.BookCommentListActivity" android:screenOrientation="1" android:theme="@7F0900A8">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.chunnuanhk.book.imageloader.ClipImageActivity" android:screenOrientation="1" android:theme="@7F0900A8">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="com.chunnuanhk.book.chat.chatCategory.ChatCategoryActivity" android:screenOrientation="1" android:theme="@7F0900A8">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="com.chunnuanhk.book.buyRecord.UserPurchaseBookActivity" android:screenOrientation="1" android:theme="@7F0900A8">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="com.chunnuanhk.book.fans.DonateListActivity" android:screenOrientation="1" android:theme="@7F0900A8">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="com.chunnuanhk.book.donate.DonateActivity" android:screenOrientation="1" android:theme="@7F0900A8">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="com.chunnuanhk.book.recommend.ReadRecommendActivity" android:screenOrientation="1" android:theme="@7F0900A8">
+</activity>
+<activity android:name="com.zhihu.matisse.ui.MatisseActivity">
+</activity>
+<activity android:name="com.zhihu.matisse.internal.ui.AlbumPreviewActivity">
+</activity>
+<activity android:name="com.zhihu.matisse.internal.ui.SelectedPreviewActivity">
+</activity>
+</application>
+</manifest>

@@ -1,0 +1,330 @@
+<?xml version="1.0" ?><manifest android:versionCode="29" android:versionName="10.3" package="com.mybms.in" platformBuildVersionCode="21" platformBuildVersionName="5.0.1-1624448" xmlns:android="http://schemas.android.com/apk/res/android">
+<supports-screens android:anyDensity="true" android:largeScreens="true" android:normalScreens="true" android:smallScreens="true" android:xlargeScreens="true">
+</supports-screens>
+<uses-sdk android:minSdkVersion="11" android:targetSdkVersion="19">
+</uses-sdk>
+<permission android:name="com.mybms.in.permission.C2D_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-feature android:name="android.hardware.telephony" android:required="false">
+</uses-feature>
+<uses-permission android:name="com.mybms.in.permission.C2D_MESSAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.DISABLE_KEYGUARD">
+</uses-permission>
+<uses-permission android:name="android.permission.CALL_PHONE">
+</uses-permission>
+<uses-permission android:name="android.permission.CALL_PRIVILEGED">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.MODIFY_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_CONTACTS">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_SMS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_SMS">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_CALL_LOG">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<application android:allowBackup="false" android:debuggable="false" android:icon="@7F0200C7" android:label="@7F0A0026" android:largeHeap="true" android:logo="@7F0200C6" android:name=".MylmsApplication" android:theme="@7F0B0059">
+<meta-data android:name="com.google.android.gms.version" android:value="@7F080001">
+</meta-data>
+<activity android:label="@7F0A002F" android:name=".WelcomeActivity" android:windowSoftInputMode="0x00000012">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x00000480" android:label="@7F0A002F" android:name=".ZBeatsListActivity" android:theme="@7F0B005A" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:configChanges="0x00000480" android:label="@7F0A002F" android:name=".AddSubscriptionActivity" android:theme="@7F0B005A" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:configChanges="0x00000480" android:label="@7F0A002F" android:name=".CategoriesMainActivity" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:configChanges="0x00000480" android:label="@7F0A002F" android:name=".ImagePagerActivity" android:theme="@7F0B0057" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:configChanges="0x00000480" android:label="@7F0A002F" android:name=".ProductInquiryActivity" android:theme="@7F0B005A" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:configChanges="0x00000480" android:label="@7F0A002F" android:name=".ProductOrderActivity" android:theme="@7F0B005A" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:configChanges="0x00000480" android:label="@7F0A002F" android:name=".SubscriptionListActivity" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:configChanges="0x00000480" android:label="@7F0A00B4" android:name=".AddNewRetailerActitvity" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:configChanges="0x00000480" android:label="Retailer List" android:name=".ZRetailersListFragment" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:configChanges="0x00000480" android:label="@7F0A00B4" android:name=".ZRetailersListActivity" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:configChanges="0x00000480" android:label="@7F0A00B1" android:name=".ZTourProgramListActivity" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:label="@7F0A002F" android:name=".ProductDetailsActivity">
+</activity>
+<activity android:label="@7F0A002F" android:name=".StaticPagesListActivity">
+</activity>
+<activity android:label="@7F0A002F" android:name=".CartActivity">
+</activity>
+<receiver android:name=".services.MyLMSBootUpReceiver" android:permission="android.permission.RECEIVE_BOOT_COMPLETED">
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</receiver>
+<receiver android:name="com.google.android.gcm.GCMBroadcastReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+<action android:name="com.google.android.c2dm.intent.REGISTRATION">
+</action>
+<category android:name="com.mybms.in">
+</category>
+</intent-filter>
+</receiver>
+<receiver android:enabled="true" android:name=".services.MyLMSBroadcastReceiver" android:priority="99999">
+<intent-filter>
+<action android:name="android.intent.action.PHONE_STATE">
+</action>
+<action android:name="android.intent.action.NEW_OUTGOING_CALL">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:enabled="true" android:name=".services.MyLMSReceivedSMSReceiver">
+<intent-filter>
+<action android:name="android.provider.Telephony.SMS_RECEIVED">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:enabled="true" android:name=".services.SubscriptionReceiver">
+<intent-filter>
+<action android:name="com.mybms.in.services.subscriptionreceiver">
+</action>
+</intent-filter>
+</receiver>
+<activity android:configChanges="0x000004A0" android:label="@7F0A003B" android:launchMode="3" android:name=".MyLMSIncomingCall" android:noHistory="true" android:screenOrientation="1" android:theme="@7F0B0057">
+<intent-filter>
+<action android:name="android.intent.action.ANSWER">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<receiver android:enabled="true" android:name=".services.MyLMSNetworkBroadcastReceiver">
+<intent-filter>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name=".services.LocationReceiver">
+</receiver>
+<receiver android:name=".services.LocationPoller">
+</receiver>
+<service android:name=".services.LocationPollerService">
+</service>
+<receiver android:name=".services.ReminderBroadcastReceiver">
+</receiver>
+<service android:name=".services.WriteImagesTodiskService">
+</service>
+<service android:name=".services.AddReminderService">
+</service>
+<service android:name=".GCMIntentService">
+</service>
+<service android:name=".services.ScanPendingCallAlertsService">
+</service>
+<service android:name=".services.HttpRequestQueueProcessor">
+</service>
+<service android:name=".services.MyLMSSMSObserverService">
+</service>
+<service android:name=".services.MyLMSCallLogObserverService">
+</service>
+<service android:name=".services.MyLMSScanSMSService">
+</service>
+<service android:name=".services.MyLMSScanCallLogService">
+</service>
+<service android:name=".services.SetReminderAfterBootupService">
+</service>
+<service android:name=".services.MyLMSIJettyService">
+</service>
+<service android:name=".services.AddSubscriptionService">
+</service>
+<service android:name=".services.RemoveSubscriptionDetailsService">
+</service>
+<activity android:excludeFromRecents="true" android:label="@7F0A003B" android:launchMode="2" android:name=".DefaultGCMHandlerActivity" android:taskAffinity="">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".DefaultGCMHandlerActivity">
+</meta-data>
+</activity>
+<activity android:label="@7F0A003B" android:launchMode="3" android:name=".GCMShowAlertActivity" android:theme="@android:01030011">
+</activity>
+<activity android:label="@7F0A003B" android:launchMode="3" android:name=".GCMCallAlertActivity" android:theme="@android:01030011">
+</activity>
+<service android:icon="@7F0200C6" android:label="@7F0A003D" android:name=".services.MyLMSService">
+</service>
+<activity android:label="@7F0A003B" android:name=".DashboardActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F0A007D" android:name=".SettingsActivity">
+</activity>
+<activity android:label="@7F0A003B" android:name=".BlockedContactsActivity">
+</activity>
+<activity android:label="@7F0A003C" android:name=".AddNewCustomField">
+</activity>
+<activity android:label="@7F0A003B" android:launchMode="3" android:name=".EnableLocationSettingsAlertActivity" android:theme="@android:01030011">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F0A003B" android:name=".CallOpportunityFeedback">
+</activity>
+<activity android:label="@7F0A003B" android:name=".OppItemListActivity">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".DashboardActivity">
+</meta-data>
+</activity>
+<activity android:label="Opportunity List" android:name=".OpportunityListActivity" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:label="@7F0A003B" android:launchMode="3" android:name=".ConfirmAddToContactActivity" android:theme="@android:01030011">
+</activity>
+<activity android:label="@7F0A003B" android:launchMode="3" android:name=".ShowOpportunitySelectionActivity" android:theme="@android:01030011">
+</activity>
+<activity android:label="@7F0A003B" android:name=".UpdateLeadOrContactActivity">
+</activity>
+<activity android:label="@7F0A003B" android:launchMode="3" android:name=".ShowActivityOptionsActivity" android:theme="@android:01030011">
+</activity>
+<activity android:configChanges="0x00000480" android:label="@7F0A003B" android:launchMode="3" android:name=".ConfirmAddToBlockContactActivity" android:theme="@android:01030011">
+</activity>
+<activity android:configChanges="0x00000480" android:label="@7F0A003B" android:launchMode="3" android:name=".ConfirmDeleteDealActivity" android:theme="@android:01030011">
+</activity>
+<activity android:configChanges="0x00000480" android:label="@7F0A003B" android:launchMode="3" android:name=".ConfirmWebConnectionActivity" android:theme="@android:01030011">
+</activity>
+<activity android:label="@7F0A003B" android:name=".OppItemDetailActivity">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".OppItemListActivity">
+</meta-data>
+</activity>
+<activity android:label="@7F0A003B" android:name=".ContactListActivity">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".DashboardActivity">
+</meta-data>
+</activity>
+<activity android:configChanges="0x00000480" android:label="@7F0A003B" android:name=".ContactDetailActivity">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".ContactListActivity">
+</meta-data>
+</activity>
+<activity android:label="@7F0A003B" android:name=".AddNewContactActivity" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:label="@7F0A003B" android:name=".AddQuickContactActivity" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:label="@7F0A003B" android:name=".LeadListActivity">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".DashboardActivity">
+</meta-data>
+</activity>
+<activity android:configChanges="0x00000480" android:label="@7F0A003B" android:name=".LeadDetailActivity">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".LeadListActivity">
+</meta-data>
+</activity>
+<activity android:label="@7F0A003B" android:name=".AddNewLeadActivity" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:label="@7F0A0066" android:name=".RegisterActivity">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".WelcomeActivity">
+</meta-data>
+</activity>
+<activity android:label="@7F0A003B" android:name=".ReminderActivity">
+</activity>
+<activity android:label="@7F0A006F" android:name=".ProductCategoryActivity">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".SubscriptionActivity">
+</meta-data>
+</activity>
+<activity android:label="@7F0A0075" android:name=".ProductDetailActivity">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".ProductCategoryActivity">
+</meta-data>
+</activity>
+<activity android:label="@7F0A0077" android:name=".SubscriptionActivity">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".DashboardActivity">
+</meta-data>
+</activity>
+<activity android:configChanges="0x00000480" android:label="@7F0A007A" android:name=".SubscribeActivity" android:noHistory="true" android:theme="@android:01030011">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".SubscriptionActivity">
+</meta-data>
+</activity>
+<activity android:label="@7F0A007C" android:name=".ChartActivity">
+</activity>
+<activity android:label="@7F0A003B" android:name=".ZVisitingActivity">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".DashboardActivity">
+</meta-data>
+</activity>
+<activity android:configChanges="0x000000A0" android:label="@7F0A003B" android:name=".ZOrderBookingActivity" android:windowSoftInputMode="0x00000002">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".DashboardActivity">
+</meta-data>
+</activity>
+<activity android:label="@7F0A003B" android:name=".ZDailyReportActivity">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".DashboardActivity">
+</meta-data>
+</activity>
+<activity android:label="@7F0A003B" android:name=".ZCartViewActivity">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".DashboardActivity">
+</meta-data>
+</activity>
+<activity android:label="@7F0A003B" android:name=".ZMyOrdersListActivity">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".DashboardActivity">
+</meta-data>
+</activity>
+<activity android:label="@7F0A003B" android:name=".ZNotificationListActivity">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".DashboardActivity">
+</meta-data>
+</activity>
+<activity android:label="@7F0A003B" android:name=".ZForceUpdateActivity">
+</activity>
+<activity android:label="@7F0A003B" android:name=".ZLastOrderDetailsActivity">
+</activity>
+<activity android:label="@7F0A003B" android:name=".ZNotificationDetailsActivity">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".ZNotificationListActivity">
+</meta-data>
+</activity>
+<activity android:label="@7F0A003B" android:name=".ZOrderDetailsActivity">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".ZMyOrdersListActivity">
+</meta-data>
+</activity>
+<activity android:label="@7F0A00A8" android:launchMode="3" android:name=".ForgotPasswordActivity" android:theme="@android:01030011">
+</activity>
+<activity android:label="@7F0A00A9" android:launchMode="3" android:name=".ZOrderRetailersDataActivity" android:theme="@android:01030011">
+</activity>
+<activity android:label="@7F0A00AD" android:name=".VDailyReportActivity">
+</activity>
+<activity android:label="Order Booking" android:name=".ZOrderBookingWithTabsActivity">
+</activity>
+<activity android:label="Check-in/Check-out" android:name=".ZCheckinCheckoutActivity">
+</activity>
+<activity android:label="@7F0A00B3" android:name=".ZydusRetailersListActivity" android:parentActivityName=".DashboardActivity">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value="DashboardActivity">
+</meta-data>
+</activity>
+<activity android:label="@7F0A00B2" android:name=".ZydusAddNewRetailerActivity" android:parentActivityName=".ZydusRetailersListActivity">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value="ZydusRetailersListActivity">
+</meta-data>
+</activity>
+</application>
+</manifest>

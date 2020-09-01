@@ -1,0 +1,86 @@
+<?xml version="1.0" ?><manifest android:versionCode="1" android:versionName="1.0.0" package="com.expert.door.lock.fingerprint.pattern.lock" platformBuildVersionCode="25" platformBuildVersionName="7.1.1" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="13" android:targetSdkVersion="25">
+</uses-sdk>
+<uses-permission android:name="android.permission.BLUETOOTH">
+</uses-permission>
+<uses-permission android:name="android.permission.BLUETOOTH_ADMIN">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.DISABLE_KEYGUARD">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-permission android:name="android.permission.CAPTURE_AUDIO_OUTPUT">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission-sdk-23 android:name="android.permission.WRITE_SETTINGS">
+</uses-permission-sdk-23>
+<uses-feature android:name="android.hardware.camera">
+</uses-feature>
+<application android:allowBackup="true" android:icon="@7F030000" android:label="@7F090047" android:screenOrientation="1" android:supportsRtl="true">
+<activity android:launchMode="3" android:name="com.expert.door.lock.fingerprint.pattern.lock.activities.SettingActivitySS" android:theme="@android:01030010">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:name="com.expert.door.lock.fingerprint.pattern.lock.activities.SetPatternActivitySS" android:screenOrientation="1">
+</activity>
+<activity android:name="com.expert.door.lock.fingerprint.pattern.lock.activities.DisableSystemLockActivitySS" android:screenOrientation="1">
+</activity>
+<activity android:excludeFromRecents="true" android:launchMode="3" android:name="com.expert.door.lock.fingerprint.pattern.lock.activities.MainLockScreenActivitySS" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<activity android:name="com.expert.door.lock.fingerprint.pattern.lock.activities.SetThemeActivitySS" android:screenOrientation="1">
+</activity>
+<service android:enabled="true" android:name="com.expert.door.lock.fingerprint.pattern.lock.services.ScreenLockService">
+</service>
+<receiver android:enabled="true" android:name="com.expert.door.lock.fingerprint.pattern.lock.broadcast_receivers.ScreenStateReceiver">
+<intent-filter>
+<action android:name="android.intent.action.SCREEN_ON">
+</action>
+<action android:name="android.intent.action.USER_PRESENT">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:enabled="true" android:exported="true" android:name="com.expert.door.lock.fingerprint.pattern.lock.broadcast_receivers.BootCompleteReceiver">
+<intent-filter android:priority="999">
+<action android:name="android.intent.action.SCREEN_ON">
+</action>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+</intent-filter>
+</receiver>
+<meta-data android:name="com.google.android.gms.version" android:value="@7F0D0006">
+</meta-data>
+<activity android:configChanges="0x00000FB0" android:name="com.google.android.gms.ads.AdActivity" android:theme="@android:0103000F">
+</activity>
+<activity android:label="@7F090054" android:name="com.expert.door.lock.fingerprint.pattern.lock.activities.UserGuidActivitySS">
+</activity>
+<activity android:name="com.google.android.gms.ads.purchase.InAppPurchaseActivity" android:theme="@7F0B0126">
+</activity>
+<activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:01030010">
+</activity>
+</application>
+</manifest>

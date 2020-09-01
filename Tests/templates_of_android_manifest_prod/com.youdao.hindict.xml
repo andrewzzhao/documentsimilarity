@@ -1,0 +1,388 @@
+<?xml version="1.0" ?><manifest android:compileSdkVersion="29" android:compileSdkVersionCodename="10" android:versionCode="128" android:versionName="4.6.1" package="com.youdao.hindict" platformBuildVersionCode="29" platformBuildVersionName="10" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="21" android:targetSdkVersion="29">
+</uses-sdk>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT">
+</uses-permission>
+<uses-permission android:name="com.android.launcher.permission.UNINSTALL_SHORTCUT">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-permission android:name="android.permission.DISABLE_KEYGUARD">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-permission android:name="android.permission.RECORD_AUDIO">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_ALL_DOWNLOADS">
+</uses-permission>
+<uses-permission android:name="android.permission.FOREGROUND_SERVICE">
+</uses-permission>
+<uses-permission android:name="com.android.vending.BILLING">
+</uses-permission>
+<uses-feature android:name="android.hardware.camera" android:required="true">
+</uses-feature>
+<uses-feature android:name="android.hardware.camera.autofocus" android:required="true">
+</uses-feature>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-feature android:name="android.hardware.camera.front" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.microphone" android:required="false">
+</uses-feature>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_CONFIGURATION">
+</uses-permission>
+<uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE">
+</uses-permission>
+<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS">
+</uses-permission>
+<application android:allowBackup="true" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:icon="@7F0F0000" android:label="@7F13002F" android:name="com.youdao.hindict.HinDictApplication" android:networkSecurityConfig="@7F160004" android:requestLegacyExternalStorage="true" android:roundIcon="@7F0F0001" android:supportsRtl="true" android:theme="@7F14010A">
+<uses-library android:name="org.apache.http.legacy" android:required="false">
+</uses-library>
+<activity android:excludeFromRecents="true" android:exported="true" android:launchMode="2" android:name="com.youdao.hindict.activity.MagicFakeActivity" android:screenOrientation="3" android:taskAffinity="" android:theme="@7F1401D1">
+</activity>
+<activity android:launchMode="1" android:name="com.youdao.hindict.activity.SplashActivity" android:screenOrientation="1" android:theme="@7F140019">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+<meta-data android:name="android.app.shortcuts" android:resource="@7F160008">
+</meta-data>
+</activity>
+<service android:label="@7F13002F" android:name="com.youdao.hindict.service.MagicTranslationService" android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE" android:process=":udictclip">
+<intent-filter>
+<action android:name="android.accessibilityservice.AccessibilityService">
+</action>
+</intent-filter>
+<meta-data android:name="android.accessibilityservice" android:resource="@7F160000">
+</meta-data>
+</service>
+<activity android:name="com.youdao.hindict.activity.SetLanguageActivity" android:screenOrientation="1">
+</activity>
+<activity android:exported="true" android:name="com.youdao.hindict.activity.MagicSettingActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.youdao.hindict.activity.MagicTranIntroActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.youdao.hindict.activity.MagicLanguageActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.youdao.hindict.activity.SentenceGradeActivity" android:screenOrientation="1" android:theme="@7F14021D">
+</activity>
+<activity android:name="com.youdao.hindict.activity.SentenceFollowActivity" android:screenOrientation="1" android:theme="@7F140109">
+</activity>
+<activity android:name="com.youdao.hindict.activity.DailyQuotesActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.youdao.hindict.activity.TextWatcherActivity">
+</activity>
+<activity android:name="com.youdao.hindict.activity.HostActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="2" android:name="com.youdao.hindict.activity.GuideActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.youdao.hindict.activity.SearchActivity" android:screenOrientation="1" android:theme="@7F140108">
+</activity>
+<activity android:excludeFromRecents="true" android:exported="true" android:launchMode="2" android:name="com.youdao.hindict.activity.QuickSearchActivity" android:screenOrientation="1" android:taskAffinity="" android:theme="@7F140108">
+</activity>
+<activity android:name="com.youdao.hindict.activity.DefinitionActivity" android:screenOrientation="1" android:theme="@7F140108">
+</activity>
+<activity android:name="com.youdao.hindict.activity.SettingActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.youdao.hindict.activity.WebActivity" android:screenOrientation="1" android:theme="@7F14010A">
+</activity>
+<activity android:name="com.youdao.hindict.activity.DisplayLanguageActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.youdao.hindict.activity.CopySettingActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.youdao.hindict.activity.LockScreenSettingActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.youdao.hindict.activity.SurveyActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.youdao.hindict.activity.SuggestActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.youdao.hindict.activity.MyFavoriteActivity" android:screenOrientation="1" android:theme="@7F14010A">
+</activity>
+<activity android:name="com.youdao.hindict.activity.WordbookActivity" android:screenOrientation="1" android:theme="@7F14010A">
+</activity>
+<activity android:name="com.youdao.hindict.activity.CopyTranIntroActivity" android:screenOrientation="1">
+</activity>
+<receiver android:exported="true" android:name="com.google.ads.conversiontracking.InstallReceiver">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+<meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@7F1300F3">
+</meta-data>
+<meta-data android:name="com.google.android.gms.version" android:value="@7F0B000C">
+</meta-data>
+<receiver android:name="com.youdao.hindict.receiver.UserPresentReceiver">
+<intent-filter>
+<action android:name="android.intent.action.USER_PRESENT">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name="com.youdao.hindict.receiver.NetBroadcastReceiver">
+<intent-filter>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name="com.youdao.hindict.receiver.BootCompletedReceiver">
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+</intent-filter>
+</receiver>
+<service android:name="com.youdao.hindict.push.MyFirebaseMessagingService">
+<intent-filter>
+<action android:name="com.google.firebase.MESSAGING_EVENT">
+</action>
+</intent-filter>
+</service>
+<meta-data android:name="com.google.firebase.messaging.default_notification_channel_id" android:value="hindict_push">
+</meta-data>
+<meta-data android:name="com.google.firebase.messaging.default_notification_icon" android:resource="@7F08022D">
+</meta-data>
+<meta-data android:name="com.google.firebase.messaging.default_notification_color" android:resource="@7F060049">
+</meta-data>
+<activity android:name="com.youdao.hindict.activity.YoutubeActivity">
+</activity>
+<activity android:excludeFromRecents="true" android:launchMode="3" android:name="com.youdao.hindict.activity.ClipboardTransActivity" android:screenOrientation="3" android:taskAffinity=".activity.ClipboardTransActivity" android:theme="@7F1400F5">
+</activity>
+<activity android:exported="true" android:launchMode="1" android:name="com.youdao.hindict.activity.PermissionDialogActivity" android:process=":udictclip" android:taskAffinity=".activity.PermissionDialogActivity" android:theme="@7F1401D1">
+</activity>
+<activity android:name="com.youdao.hindict.activity.AutoStartDialogActivity" android:taskAffinity=".activity.AutoStartDialogActivity" android:theme="@7F1401D1">
+</activity>
+<activity android:excludeFromRecents="true" android:exported="false" android:launchMode="3" android:name="com.youdao.hindict.activity.LockScreenActivity" android:process=":udictclip" android:resizeableActivity="false" android:screenOrientation="3" android:taskAffinity=".activity.LockScreenActivity" android:theme="@7F14010B">
+</activity>
+<activity android:name="com.youdao.hindict.activity.YoutubeWebViewActivity">
+</activity>
+<activity android:label="@7F1301CA" android:name="com.youdao.hindict.activity.OcrRegionResultActivity">
+</activity>
+<activity android:launchMode="2" android:name="com.youdao.hindict.activity.WordLockSettingsActivity">
+</activity>
+<service android:exported="true" android:name="com.youdao.hindict.service.ClipboardWatcher" android:process=":udictclip">
+</service>
+<service android:enabled="true" android:exported="true" android:name="com.youdao.hindict.service.JobService" android:permission="android.permission.BIND_JOB_SERVICE" android:process=":udictclip">
+</service>
+<service android:exported="true" android:name="com.youdao.hindict.service.LockScreenService" android:process=":udictclip">
+</service>
+<service android:name="com.youdao.hindict.offline.DownloadService">
+</service>
+<provider android:authorities="com.youdao.hindict.favorite" android:exported="false" android:name="com.youdao.hindict.provider.FavoriteProvider">
+</provider>
+<receiver android:name="com.youdao.hindict.receiver.MainProcessReceiver">
+<intent-filter>
+<action android:name="com.youdao.hindict.IPC_DICT">
+</action>
+</intent-filter>
+</receiver>
+<meta-data android:name="io.fabric.ApiKey" android:value="42d1ca0a14d835f229722f0bb748f328794dd5ae">
+</meta-data>
+<meta-data android:name="BUGRPT_APPID" android:value="A002287344">
+</meta-data>
+<meta-data android:name="android.max_aspect" android:value="2.200000">
+</meta-data>
+<meta-data android:name="CHANNEL" android:value="google_play">
+</meta-data>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="com.youdao.sdk.common.YouDaoBrowser">
+</activity>
+<meta-data android:name="AD_AGENT_APPKEY" android:value="a84b6e171a673ab531983051f9b3cb29">
+</meta-data>
+<meta-data android:name="AD_AGENT_SECRET" android:value="8f0ae3350c0aed5da9ca4585de308352">
+</meta-data>
+<activity android:name="com.youdao.hindict.activity.DictCardDetailActivity" android:screenOrientation="1" android:theme="@7F140108">
+</activity>
+<activity android:name="com.youdao.hindict.activity.DictImageActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.youdao.hindict.activity.TabActivity" android:screenOrientation="1" android:theme="@7F14021E">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="com.youdao.hindict.activity.HotSplashActivity" android:screenOrientation="1" android:theme="@7F14021E">
+</activity>
+<provider android:authorities="com.youdao.hindict.provider" android:exported="false" android:grantUriPermissions="true" android:name="androidx.core.content.FileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F160005">
+</meta-data>
+</provider>
+<activity android:name="com.youdao.hindict.activity.DialogueTransActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.youdao.hindict.activity.TranslationHistoryActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.youdao.hindict.activity.PrivacyActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name="com.youdao.hindict.activity.PushTestActivity">
+</activity>
+<meta-data android:name="com.google.android.gms.ads.APPLICATION_ID" android:value="@7F130025">
+</meta-data>
+<activity android:configChanges="0x000004A0" android:name="com.youdao.hindict.activity.FishGameActivity">
+</activity>
+<receiver android:name="com.youdao.hindict.receiver.TimezoneReceiver">
+<intent-filter>
+<action android:name="android.intent.action.TIMEZONE_CHANGED">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:exported="true" android:name="com.appsflyer.SingleInstallBroadcastReceiver">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+<activity android:configChanges="0x000004A0" android:name="com.youdao.sdk.nativeads.YouDaoInterstitialActivity" android:theme="@android:0103000F">
+</activity>
+<activity android:exported="true" android:name="com.youdao.hindict.activity.GrammarActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.youdao.hindict.offline.OfflinePackageActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name="com.youdao.hindict.language.LangChooseActivity" android:screenOrientation="1" android:theme="@7F140108">
+</activity>
+<activity android:name="com.youdao.hindict.offline.DownloadedPackageActivity">
+</activity>
+<activity android:name="com.youdao.hindict.activity.LockScreenLanguageActivity">
+</activity>
+<activity android:launchMode="2" android:name="com.youdao.hindict.activity.CameraActivity" android:screenOrientation="1" android:theme="@7F1400F1">
+</activity>
+<activity android:name="com.youdao.hindict.activity.AccessibilityGuideActivity" android:theme="@7F1401D1">
+</activity>
+<activity android:exported="true" android:launchMode="1" android:name="com.youdao.hindict.activity.MagicNoticeDialogActivity" android:process=":udictclip" android:taskAffinity=".activity.PermissionDialogActivity" android:theme="@7F1401D1">
+</activity>
+<activity android:name="com.youdao.hindict.subscription.activity.MyVipActivity" android:screenOrientation="1">
+</activity>
+<activity android:exported="true" android:name="com.youdao.hindict.subscription.activity.VipGuideActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.youdao.hindict.subscription.activity.PolicyActivity" android:screenOrientation="1">
+</activity>
+<receiver android:name="com.youdao.hindict.subscription.receiver.VipStatusReceiver" android:process=":udictclip">
+<intent-filter>
+<action android:name="com.youdao.hindict.UPDATE_VIP_STATUS">
+</action>
+</intent-filter>
+</receiver>
+<activity android:name="com.youdao.uclass.activity.CourseDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.youdao.uclass.activity.LoginActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.youdao.uclass.activity.PhoneLoginActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.youdao.uclass.activity.VerticalPageActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F13002F" android:name="com.youdao.cropper.YDCropActivity">
+</activity>
+<activity android:configChanges="0x000005B0" android:label="@7F13002F" android:name="com.facebook.FacebookActivity" android:theme="@7F1402B6">
+</activity>
+<activity android:name="com.facebook.CustomTabMainActivity">
+</activity>
+<provider android:authorities="com.youdao.hindict.FacebookInitProvider" android:exported="false" android:name="com.facebook.internal.FacebookInitProvider">
+</provider>
+<provider android:authorities="com.youdao.hindict.com.squareup.picasso" android:exported="false" android:name="com.squareup.picasso.PicassoProvider">
+</provider>
+<service android:exported="false" android:name="androidx.room.MultiInstanceInvalidationService">
+</service>
+<service android:exported="false" android:name="com.google.firebase.messaging.FirebaseMessagingService">
+<intent-filter android:priority="-500">
+<action android:name="com.google.firebase.MESSAGING_EVENT">
+</action>
+</intent-filter>
+</service>
+<provider android:authorities="com.youdao.hindict.firebaseperfprovider" android:exported="false" android:initOrder="101" android:name="com.google.firebase.perf.provider.FirebasePerfProvider">
+</provider>
+<service android:exported="false" android:name="com.google.firebase.components.ComponentDiscoveryService">
+<meta-data android:name="com.google.firebase.components:com.google.firebase.perf.FirebasePerfRegistrar" android:value="com.google.firebase.components.ComponentRegistrar">
+</meta-data>
+<meta-data android:name="com.google.firebase.components:com.google.firebase.ml.naturallanguage.NaturalLanguageRegistrar" android:value="com.google.firebase.components.ComponentRegistrar">
+</meta-data>
+<meta-data android:name="com.google.firebase.components:com.google.firebase.ml.naturallanguage.translate.NaturalLanguageTranslateRegistrar" android:value="com.google.firebase.components.ComponentRegistrar">
+</meta-data>
+<meta-data android:name="com.google.firebase.components:com.google.firebase.remoteconfig.RemoteConfigRegistrar" android:value="com.google.firebase.components.ComponentRegistrar">
+</meta-data>
+<meta-data android:name="com.google.firebase.components:com.google.firebase.ml.common.CommonComponentRegistrar" android:value="com.google.firebase.components.ComponentRegistrar">
+</meta-data>
+<meta-data android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar" android:value="com.google.firebase.components.ComponentRegistrar">
+</meta-data>
+<meta-data android:name="com.google.firebase.components:com.google.firebase.iid.Registrar" android:value="com.google.firebase.components.ComponentRegistrar">
+</meta-data>
+<meta-data android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar" android:value="com.google.firebase.components.ComponentRegistrar">
+</meta-data>
+<meta-data android:name="com.google.firebase.components:com.google.firebase.abt.component.AbtRegistrar" android:value="com.google.firebase.components.ComponentRegistrar">
+</meta-data>
+</service>
+<provider android:authorities="com.youdao.hindict.crashlyticsinitprovider" android:exported="false" android:initOrder="90" android:name="com.crashlytics.android.CrashlyticsInitProvider">
+</provider>
+<meta-data android:name="com.google.android.play.billingclient.version" android:value="2.0.3">
+</meta-data>
+<activity android:configChanges="0x000005B0" android:name="com.android.billingclient.api.ProxyBillingActivity" android:theme="@android:01030010">
+</activity>
+<receiver android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+</intent-filter>
+</receiver>
+<activity android:configChanges="0x00000FB0" android:exported="false" android:name="com.google.android.gms.ads.AdActivity" android:theme="@android:0103000F">
+</activity>
+<provider android:authorities="com.youdao.hindict.mobileadsinitprovider" android:exported="false" android:initOrder="100" android:name="com.google.android.gms.ads.MobileAdsInitProvider">
+</provider>
+<receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementReceiver">
+</receiver>
+<receiver android:enabled="true" android:exported="true" android:name="com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver" android:permission="android.permission.INSTALL_PACKAGES">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementService">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementJobService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<activity android:excludeFromRecents="true" android:exported="false" android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity" android:theme="@android:01030010">
+</activity>
+<service android:exported="true" android:name="com.google.android.gms.auth.api.signin.RevocationBoundService" android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION">
+</service>
+<activity android:excludeFromRecents="true" android:exported="true" android:launchMode="2" android:name="com.google.firebase.auth.internal.FederatedSignInActivity" android:permission="com.google.firebase.auth.api.gms.permission.LAUNCH_FEDERATED_SIGN_IN" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x000004A0" android:exported="false" android:name="com.facebook.ads.AudienceNetworkActivity" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x000004A0" android:exported="false" android:name="com.facebook.ads.internal.ipc.RemoteANActivity" android:process=":adnw" android:theme="@android:01030010">
+</activity>
+<service android:exported="false" android:name="com.facebook.ads.internal.ipc.AdsProcessPriorityService">
+</service>
+<service android:exported="false" android:name="com.facebook.ads.internal.ipc.AdsMessengerService" android:process=":adnw">
+</service>
+<provider android:authorities="com.youdao.hindict.firebaseinitprovider" android:exported="false" android:initOrder="100" android:name="com.google.firebase.provider.FirebaseInitProvider">
+</provider>
+<activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:01030010">
+</activity>
+<provider android:authorities="com.youdao.hindict.lifecycle-process" android:exported="false" android:multiprocess="true" android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer">
+</provider>
+<activity android:configChanges="0x000004A0" android:name="com.youdao.ydaccount.activity.GoogleCallbackActivity" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.youdao.ydaccount.activity.FacebookCallbackActivity" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F13002F" android:name="com.youdao.ydaccount.activity.ThirdPartyWebLoginActivity" android:screenOrientation="1" android:theme="@android:0103000D">
+</activity>
+<activity android:configChanges="0x000000A0" android:hardwareAccelerated="true" android:name="com.youdao.sdk.listvideo.YouDaoListVideoActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000DB0" android:hardwareAccelerated="true" android:name="com.inmobi.rendering.InMobiAdActivity" android:resizeableActivity="false" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="com.youdao.sdk.video.YouDaoVideoActivity">
+</activity>
+<activity android:configChanges="0x40000FB4" android:hardwareAccelerated="true" android:name="com.inmobi.ads.rendering.InMobiAdActivity" android:theme="@android:01030006">
+</activity>
+</application>
+</manifest>

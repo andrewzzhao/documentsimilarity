@@ -1,0 +1,298 @@
+<?xml version="1.0" ?><manifest android:versionCode="37" android:versionName="2.2.1" package="tonybits.com.cinemax" platformBuildVersionCode="26" platformBuildVersionName="8.0.0" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="16" android:targetSdkVersion="26">
+</uses-sdk>
+<uses-feature android:name="android.hardware.touchscreen" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.software.leanback" android:required="false">
+</uses-feature>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE">
+</uses-permission>
+<uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE">
+</uses-permission>
+<permission android:name="tonybits.com.cinemax.permission.C2D_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="tonybits.com.cinemax.permission.C2D_MESSAGE">
+</uses-permission>
+<meta-data android:name="android.support.VERSION" android:value="25.3.1">
+</meta-data>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<application android:allowBackup="true" android:banner="@7F020064" android:debuggable="true" android:icon="@7F030001" android:label="@7F0A01A9" android:name="tonybits.com.cinemax.App" android:supportsRtl="true" android:theme="@7F0D0049">
+<meta-data android:name="com.google.firebase.messaging.default_notification_icon" android:resource="@7F020215">
+</meta-data>
+<meta-data android:name="android.max_aspect" android:value="2.100000">
+</meta-data>
+<service android:description="@7F0A0243" android:label="@7F0A01A9" android:name="tonybits.com.cinemax.extensions.SeriesGuideWrapper">
+<intent-filter>
+<action android:name="com.battlelancer.seriesguide.api.SeriesGuideExtension">
+</action>
+</intent-filter>
+</service>
+<activity android:launchMode="2" android:name="tonybits.com.cinemax.activities.MainActivity" android:windowSoftInputMode="0x00000020">
+<intent-filter android:autoVerify="true" android:label="@7F0A01A9">
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="freeflixhq.com" android:pathPrefix="/android_index" android:scheme="http">
+</data>
+<data android:host="freeflixhq.com" android:pathPrefix="/android_index" android:scheme="https">
+</data>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000005A0" android:launchMode="2" android:name="tonybits.com.cinemax.activities.PlayerActivity" android:screenOrientation="0" android:theme="@7F0D0098">
+</activity>
+<activity android:exported="true" android:launchMode="2" android:name="tonybits.com.cinemax.activities.SearchResultsActivityOld">
+</activity>
+<activity android:name="tonybits.com.cinemax.activities.MovieDetailActivity">
+</activity>
+<activity android:name="tonybits.com.cinemax.activities.TrailerActivity">
+</activity>
+<activity android:configChanges="0x000005A0" android:launchMode="2" android:name="tonybits.com.cinemax.activities.WebPlayerActivity" android:screenOrientation="0" android:theme="@7F0D0098">
+</activity>
+<activity android:launchMode="2" android:name="tonybits.com.cinemax.activities.SettingActivity">
+</activity>
+<activity android:name="tonybits.com.cinemax.activities.YouTubePlayerActivity" android:screenOrientation="0">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="tonybits.com.cinemax.activities.SplashScreenActivity" android:theme="@7F0D0048">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+<category android:name="android.intent.category.MULTIWINDOW_LAUNCHER">
+</category>
+<category android:name="android.intent.category.LEANBACK_LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:launchMode="2" android:name="tonybits.com.cinemax.activities.SeriesActivityFmovies">
+</activity>
+<activity android:launchMode="2" android:name="tonybits.com.cinemax.activities.XMoviesSeriesActivity">
+</activity>
+<activity android:launchMode="2" android:name="tonybits.com.cinemax.activities.PlayerActivitySeriesSolarST" android:screenOrientation="0">
+</activity>
+<activity android:launchMode="2" android:name="tonybits.com.cinemax.activities.MovieDetailFMovies">
+</activity>
+<service android:name="tonybits.com.cinemax.services.GMSService">
+<intent-filter>
+<action android:name="com.google.firebase.MESSAGING_EVENT">
+</action>
+</intent-filter>
+</service>
+<service android:name="tonybits.com.cinemax.services.FirebaseInstanceIDService">
+<intent-filter>
+<action android:name="com.google.firebase.INSTANCE_ID_EVENT">
+</action>
+</intent-filter>
+</service>
+<activity android:launchMode="2" android:name="tonybits.com.cinemax.activities.NotificationsActivity" android:theme="@7F0D00AC">
+</activity>
+<activity android:configChanges="0x000005A0" android:launchMode="2" android:name="tonybits.com.cinemax.activities.VideoPlayerActivity" android:screenOrientation="0" android:theme="@7F0D0098">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".activities.MainActivity">
+</meta-data>
+</activity>
+<activity android:launchMode="2" android:name="tonybits.com.cinemax.activities.DownloadsActivity">
+</activity>
+<activity android:name="tonybits.com.cinemax.activities.IntroActivity" android:theme="@7F0D0109">
+</activity>
+<provider android:authorities="br.com.mauker.materialsearchview.searchhistorydatabase" android:exported="false" android:name="br.com.mauker.materialsearchview.db.HistoryProvider" android:protectionLevel="0x00000002" android:syncable="true">
+</provider>
+<activity android:name="tonybits.com.cinemax.activities.FCMMessageActivity">
+</activity>
+<activity android:name="tonybits.com.cinemax.activities.MySubscriptionActivity" android:theme="@7F0D00AC">
+</activity>
+<activity android:launchMode="2" android:name="tonybits.com.cinemax.activities.PlayerActivityBundleSeries" android:screenOrientation="0">
+</activity>
+<activity android:name="tonybits.com.cinemax.activities.GoSeriesActivity">
+</activity>
+<meta-data android:name="com.google.android.gms.cast.framework.OPTIONS_PROVIDER_CLASS_NAME" android:value="tonybits.com.cinemax.helpers.CastOptionsProvider">
+</meta-data>
+<activity android:label="@7F0A01A9" android:launchMode="2" android:name="tonybits.com.cinemax.activities.ExpandedCastControlsActivity" android:screenOrientation="1" android:theme="@7F0D019A">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+</intent-filter>
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".activities.MainActivity">
+</meta-data>
+</activity>
+<activity android:name="tonybits.com.cinemax.activities.SeriesActivitySolar">
+</activity>
+<activity android:name="tonybits.com.cinemax.activities.VideoCastPlayerActivity">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".activities.MainActivity">
+</meta-data>
+</activity>
+<service android:enabled="true" android:exported="true" android:name="tonybits.com.cinemax.services.SubWebServerService">
+</service>
+<activity android:launchMode="2" android:name="tonybits.com.cinemax.activities.YouTubeWebviewActivity" android:screenOrientation="0">
+</activity>
+<activity android:name="tonybits.com.cinemax.activities.IntroActivityFireTV">
+</activity>
+<provider android:authorities="tonybits.com.cinemax.provider" android:exported="false" android:grantUriPermissions="true" android:name="android.support.v4.content.FileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F080004">
+</meta-data>
+</provider>
+<activity android:name="tonybits.com.cinemax.activities.SeriesActivityBundle">
+</activity>
+<activity android:name="tonybits.com.cinemax.activities.NotificationItemActivity">
+</activity>
+<activity android:name="tonybits.com.cinemax.activities.SerieSeasonsActivity">
+</activity>
+<activity android:name="tonybits.com.cinemax.activities.TracktActvity" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:name="tonybits.com.cinemax.activities.TraktAccountActivity">
+</activity>
+<activity android:name="tonybits.com.cinemax.activities.TraktTvSettingsActivity">
+</activity>
+<activity android:launchMode="2" android:name="tonybits.com.cinemax.activities.MovieDetailActivityIsStream">
+</activity>
+<activity android:launchMode="2" android:name="tonybits.com.cinemax.activities.SeriesActivityISStream">
+</activity>
+<activity android:name="tonybits.com.cinemax.activities.AnimeDetailActivity" android:theme="@7F0D00AA">
+</activity>
+<activity android:launchMode="2" android:name="tonybits.com.cinemax.activities.AnimesListActivity" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:launchMode="2" android:name="tonybits.com.cinemax.activities.SearchResultActivtyAnime">
+</activity>
+<activity android:launchMode="2" android:name="tonybits.com.cinemax.activities.PlayerActivityAnime" android:screenOrientation="0">
+</activity>
+<activity android:name="tonybits.com.cinemax.activities.SeriesActivitySolarST">
+</activity>
+<activity android:name="tonybits.com.cinemax.activities.TraktActivationActivity">
+</activity>
+<activity android:name="tonybits.com.cinemax.activities.CartoonListActivity">
+</activity>
+<activity android:launchMode="2" android:name="tonybits.com.cinemax.activities.SearchResultActivtyCartoon" android:theme="@7F0D00AC">
+</activity>
+<activity android:name="tonybits.com.cinemax.activities.CartoonDetailActivity">
+</activity>
+<activity android:launchMode="2" android:name="tonybits.com.cinemax.activities.OLDPlayerActivityCartoon" android:screenOrientation="0">
+</activity>
+<activity android:name="tonybits.com.cinemax.activities.NewsActivity" android:theme="@7F0D0098">
+</activity>
+<activity android:launchMode="2" android:name="tonybits.com.cinemax.activities.PlayerActivityFSeries" android:screenOrientation="0">
+</activity>
+<activity android:name="tonybits.com.cinemax.activities.NewsItemActivity">
+</activity>
+<activity android:launchMode="2" android:name="tonybits.com.cinemax.activities.PlayerActivityLiveTV" android:screenOrientation="0">
+</activity>
+<activity android:name="tonybits.com.cinemax.activities.MovieDetailActivityBundle">
+</activity>
+<activity android:name="tonybits.com.cinemax.activities.MovieDetailPageSolarST">
+</activity>
+<activity android:name="tonybits.com.cinemax.activities.ServerStatusChartActivity" android:screenOrientation="0">
+</activity>
+<activity android:name="tonybits.com.cinemax.activities.MovieDetailPageXMovies">
+</activity>
+<activity android:launchMode="2" android:name="tonybits.com.cinemax.activities.PlayerActivityXSeries" android:screenOrientation="0">
+</activity>
+<activity android:name="tonybits.com.cinemax.activities.SeriesActivityXSeries">
+</activity>
+<activity android:launchMode="2" android:name="tonybits.com.cinemax.activities.WweActivity" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:launchMode="2" android:name="tonybits.com.cinemax.activities.ChannelsListActivity" android:screenOrientation="0" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:launchMode="2" android:name="tonybits.com.cinemax.activities.PlayerActivityWWE" android:screenOrientation="0">
+</activity>
+<activity android:launchMode="2" android:name="tonybits.com.cinemax.activities.WebActivityChannels" android:screenOrientation="0">
+</activity>
+<activity android:launchMode="2" android:name="tonybits.com.cinemax.activities.TVHomeActivity">
+</activity>
+<activity android:name="tonybits.com.cinemax.activities.TvHistoryActivity">
+</activity>
+<activity android:name="tonybits.com.cinemax.activities.WWESearchActivity">
+</activity>
+<activity android:name="tonybits.com.cinemax.activities.WWEDetailsActivity">
+</activity>
+<activity android:name="tonybits.com.cinemax.activities.SettingsActivityTV">
+</activity>
+<activity android:name="tonybits.com.cinemax.activities.MovieDetailActivityFlenix">
+</activity>
+<activity android:name="tonybits.com.cinemax.activities.TVScheduleActivity">
+</activity>
+<activity android:name="tonybits.com.cinemax.activities.WweHistoryActivity">
+</activity>
+<activity android:name="tonybits.com.cinemax.activities.TVScheduleHistoryActivity">
+</activity>
+<activity android:name="tonybits.com.cinemax.activities.WebViewActivity">
+</activity>
+<activity android:name="tonybits.com.cinemax.activities.SearchResultsActivity">
+</activity>
+<activity android:launchMode="2" android:name="tonybits.com.cinemax.activities.SearchResultsAllServers">
+</activity>
+<activity android:launchMode="2" android:name="tonybits.com.cinemax.activities.SearchResultsAllServersSeries">
+</activity>
+<activity android:name="tonybits.com.cinemax.activities.DiscoverActivity">
+</activity>
+<activity android:name="tonybits.com.cinemax.activities.AnimesFavoritesAcvivity">
+</activity>
+<activity android:name="tonybits.com.cinemax.activities.AnimeHistoryActivity">
+</activity>
+<receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementReceiver">
+</receiver>
+<receiver android:enabled="true" android:name="com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver" android:permission="android.permission.INSTALL_PACKAGES">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementService">
+</service>
+<service android:exported="true" android:name="com.google.firebase.messaging.FirebaseMessagingService">
+<intent-filter android:priority="-500">
+<action android:name="com.google.firebase.MESSAGING_EVENT">
+</action>
+</intent-filter>
+</service>
+<receiver android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+<category android:name="tonybits.com.cinemax">
+</category>
+</intent-filter>
+</receiver>
+<receiver android:exported="false" android:name="com.google.firebase.iid.FirebaseInstanceIdInternalReceiver">
+</receiver>
+<service android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdService">
+<intent-filter android:priority="-500">
+<action android:name="com.google.firebase.INSTANCE_ID_EVENT">
+</action>
+</intent-filter>
+</service>
+<provider android:authorities="tonybits.com.cinemax.firebaseinitprovider" android:exported="false" android:initOrder="100" android:name="com.google.firebase.provider.FirebaseInitProvider">
+</provider>
+<receiver android:name="com.google.android.gms.cast.framework.media.MediaIntentReceiver">
+</receiver>
+<service android:name="com.google.android.gms.cast.framework.media.MediaNotificationService">
+</service>
+<service android:name="com.google.android.gms.cast.framework.ReconnectionService">
+</service>
+<meta-data android:name="android.support.VERSION" android:value="26.0.1">
+</meta-data>
+<activity android:configChanges="0x00000FB0" android:name="com.google.android.gms.ads.AdActivity" android:theme="@android:0103000F">
+</activity>
+<activity android:name="com.google.android.gms.ads.purchase.InAppPurchaseActivity" android:theme="@7F0D01A1">
+</activity>
+<activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:01030010">
+</activity>
+<meta-data android:name="com.google.android.gms.version" android:value="@7F100008">
+</meta-data>
+</application>
+</manifest>

@@ -1,0 +1,258 @@
+<?xml version="1.0" ?><manifest android:versionCode="2" android:versionName="1.1" package="com.hxyt.baidianfeng" platformBuildVersionCode="21" platformBuildVersionName="5.0.1-1624448" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="8" android:targetSdkVersion="21">
+</uses-sdk>
+<application android:allowBackup="true" android:icon="@7F020057" android:label="@7F070056" android:name="com.tencent.StubShell.TxAppEntry" android:theme="@7F080001">
+<meta-data android:name="TxAppEntry" android:value="com.hxyt.baidianfeng.application.MyApplication">
+</meta-data>
+<activity android:label="@7F070056" android:name="com.hxyt.baidianfeng.activity.Start" android:theme="@android:01030007">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:name="com.hxyt.baidianfeng.activity.TestActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.hxyt.baidianfeng.activity.CityListActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.hxyt.baidianfeng.activity.ViewFlipperActivity" android:screenOrientation="1" android:theme="@android:01030007">
+</activity>
+<activity android:name="com.hxyt.baidianfeng.activity.LoginActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.hxyt.baidianfeng.activity.RegisterActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.hxyt.baidianfeng.activity.FindPwdActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.hxyt.baidianfeng.activity.ResetPwdActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.hxyt.baidianfeng.activity.HomeActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.hxyt.baidianfeng.activity.DoctorDetailIntroduce" android:screenOrientation="1">
+</activity>
+<activity android:name="com.hxyt.baidianfeng.activity.ReasonActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.hxyt.baidianfeng.activity.ReasonActivity1" android:screenOrientation="1">
+</activity>
+<activity android:name="com.hxyt.baidianfeng.activity.ProfessorActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.hxyt.baidianfeng.activity.DetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.hxyt.baidianfeng.activity.Organization" android:screenOrientation="1">
+</activity>
+<activity android:name="com.hxyt.baidianfeng.activity.BookingActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="2" android:name="com.hxyt.baidianfeng.activity.MycollectActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.hxyt.baidianfeng.activity.PhotoViewActivity" android:screenOrientation="1" android:theme="@android:0103000D">
+</activity>
+<activity android:launchMode="2" android:name="com.hxyt.baidianfeng.activity.WebViewActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="2" android:name="com.hxyt.baidianfeng.activity.GridviewHeadPic" android:screenOrientation="1">
+</activity>
+<service android:enabled="true" android:name="com.hxyt.baidianfeng.GetService" android:process=":remote">
+</service>
+<activity android:configChanges="0x000000A0" android:name="cn.jpush.android.ui.PushActivity" android:theme="@android:01030010">
+<intent-filter>
+<action android:name="cn.jpush.android.ui.PushActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="com.hxyt.baidianfeng">
+</category>
+</intent-filter>
+</activity>
+<service android:enabled="true" android:exported="false" android:name="cn.jpush.android.service.DownloadService">
+</service>
+<service android:enabled="true" android:exported="false" android:name="cn.jpush.android.service.PushService">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.REGISTER">
+</action>
+<action android:name="cn.jpush.android.intent.REPORT">
+</action>
+<action android:name="cn.jpush.android.intent.PushService">
+</action>
+<action android:name="cn.jpush.android.intent.PUSH_TIME">
+</action>
+</intent-filter>
+</service>
+<receiver android:enabled="true" android:name="cn.jpush.android.service.PushReceiver">
+<intent-filter android:priority="1000">
+<action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY">
+</action>
+<category android:name="com.hxyt.baidianfeng">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.USER_PRESENT">
+</action>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_ADDED">
+</action>
+<action android:name="android.intent.action.PACKAGE_REMOVED">
+</action>
+<data android:scheme="package">
+</data>
+</intent-filter>
+</receiver>
+<receiver android:name="cn.jpush.android.service.AlarmReceiver">
+</receiver>
+<receiver android:enabled="true" android:name="com.hxyt.baidianfeng.jpush.MyReceiver">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.REGISTRATION">
+</action>
+<action android:name="cn.jpush.android.intent.UNREGISTRATION">
+</action>
+<action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED">
+</action>
+<action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED">
+</action>
+<action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED">
+</action>
+<action android:name="cn.jpush.android.intent.ACTION_RICHPUSH_CALLBACK">
+</action>
+<action android:name="cn.jpush.android.intent.CONNECTION">
+</action>
+<category android:name="com.hxyt.baidianfeng">
+</category>
+</intent-filter>
+</receiver>
+<meta-data android:name="JPUSH_CHANNEL" android:value="developer-default">
+</meta-data>
+<meta-data android:name="JPUSH_APPKEY" android:value="bd24584e379dfc28f9bd403c">
+</meta-data>
+<activity android:exported="true" android:name="com.hxyt.baidianfeng.wxapi.WXEntryActivity" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.mob.tools.MobUIShell" android:theme="@android:01030010" android:windowSoftInputMode="0x00000012">
+<meta-data android:name="AuthorizeAdapter" android:value="cn.sharesdk.demo.MyAdapter">
+</meta-data>
+<intent-filter>
+<data android:scheme="db-7janx53ilz11gbs">
+</data>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+<intent-filter>
+<data android:scheme="tencent100371282">
+</data>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004A0" android:excludeFromRecents="true" android:exported="true" android:launchMode="1" android:name=".yxapi.YXEntryActivity" android:theme="@android:01030010">
+</activity>
+<service android:enabled="true" android:name="com.baidu.location.f" android:process=":remote">
+<intent-filter>
+<action android:name="com.baidu.location.service_v2.2">
+</action>
+</intent-filter>
+</service>
+</application>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.CALL_PHONE">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_CONFIGURATION">
+</uses-permission>
+<permission android:name="com.hxyt.baidianfeng.permission.JPUSH_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="com.hxyt.baidianfeng.permission.JPUSH_MESSAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_USER_PRESENT">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.MANAGE_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_LOGS">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SETTINGS">
+</uses-permission>
+<supports-screens android:anyDensity="true" android:largeScreens="true" android:normalScreens="true" android:resizeable="true" android:smallScreens="true">
+</supports-screens>
+</manifest>

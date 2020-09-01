@@ -1,0 +1,494 @@
+<?xml version="1.0" ?><manifest android:compileSdkVersion="28" android:compileSdkVersionCodename="9" android:installLocation="0" android:versionCode="1235" android:versionName="5.7.4 (28)" package="za.co.fnb.connect.itt" platformBuildVersionCode="28" platformBuildVersionName="9" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="19" android:targetSdkVersion="27">
+</uses-sdk>
+<supports-screens android:largeScreens="true" android:normalScreens="true" android:smallScreens="true" android:xlargeScreens="true">
+</supports-screens>
+<uses-feature android:name="android.hardware.location.gps" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.telephony" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.microphone" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.bluetooth" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.bluetooth_le" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.nfc.hce" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.sip.voip" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.wifi" android:required="false">
+</uses-feature>
+<uses-feature android:glEsVersion="0x00020000" android:required="true">
+</uses-feature>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_GPS">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_CONTACTS">
+</uses-permission>
+<uses-permission android:name="android.permission.RECORD_AUDIO">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CALL_PHONE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.BLUETOOTH">
+</uses-permission>
+<uses-permission android:name="android.permission.BLUETOOTH_ADMIN">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.USE_FINGERPRINT">
+</uses-permission>
+<uses-permission android:name="com.google.android.gms.permission.ACTIVITY_RECOGNITION">
+</uses-permission>
+<uses-permission android:name="com.samsung.android.providers.context.permission.WRITE_USE_APP_FEATURE_SURVEY">
+</uses-permission>
+<uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES">
+</uses-permission>
+<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE">
+</uses-permission>
+<uses-permission android:name="android.permission.USE_SIP">
+</uses-permission>
+<uses-permission android:name="android.permission.NFC">
+</uses-permission>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-permission android:name="android.permission.FLASHLIGHT">
+</uses-permission>
+<uses-feature android:name="android.hardware.camera" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.location" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.sensor.accelerometer" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.sensor.compass" android:required="false">
+</uses-feature>
+<uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE">
+</uses-permission>
+<application android:allowBackup="false" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:fullBackupContent="@7F130006" android:icon="@7F0E0000" android:label="@7F100086" android:name=".ProtectedFNBApp" android:roundIcon="@7F0E0003" android:theme="@7F1100E1">
+<activity android:configChanges="0x00000030" android:label="@7F100086" android:name="za.co.fnb.connect.itt.gui.ZoneWelcomeActivity" android:screenOrientation="2" android:theme="@7F1101EA">
+<intent-filter>
+<action android:name="android.appwidget.action.APPWIDGET_CONFIGURE">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="fnbui">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="fnb.co.za" android:scheme="http">
+</data>
+<data android:host="fnb.co.za" android:scheme="https">
+</data>
+</intent-filter>
+</activity>
+<receiver android:name="za.co.fnb.connect.itt.ExtendedDeviceBootReceiver">
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+</intent-filter>
+</receiver>
+<service android:enabled="true" android:exported="false" android:name="za.co.fnb.connect.itt.ExtendedReplenishmentCheckService" android:permission="signatureOnly">
+</service>
+<service android:enabled="true" android:exported="false" android:name="za.co.fnb.connect.itt.hce.service.ReplenishmentService" android:permission="signature">
+<intent-filter>
+<action android:name="com.visa.cbp.action.REPLENISH">
+</action>
+</intent-filter>
+</service>
+<service android:enabled="true" android:exported="true" android:name="za.co.fnb.connect.itt.hce.service.ApduService" android:permission="android.permission.BIND_NFC_SERVICE">
+<intent-filter>
+<action android:name="android.nfc.cardemulation.action.HOST_APDU_SERVICE">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+<meta-data android:name="android.nfc.cardemulation.host_apdu_service" android:resource="@7F130001">
+</meta-data>
+</service>
+<provider android:authorities="za.co.fnb.connect.itt.provider" android:exported="false" android:grantUriPermissions="true" android:name="androidx.core.content.FileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F130003">
+</meta-data>
+</provider>
+<receiver android:name="za.co.fnb.connect.itt.appwidget.AppWidget">
+<intent-filter>
+<action android:name="android.appwidget.action.APPWIDGET_UPDATE">
+</action>
+<action android:name="za.co.fnb.connect.itt.appwidget.WidgetContstants.ACTION_WIDGET_REFRESH">
+</action>
+</intent-filter>
+<meta-data android:name="android.appwidget.provider" android:resource="@7F130002">
+</meta-data>
+</receiver>
+<uses-library android:name="com.google.android.maps" android:required="false">
+</uses-library>
+<meta-data android:name="com.google.android.gms.version" android:value="@7F0A0008">
+</meta-data>
+<meta-data android:name="com.google.android.gms.vision.DEPENDENCIES" android:value="ocr">
+</meta-data>
+<meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="@7F10019E">
+</meta-data>
+<receiver android:name="za.co.fnb.connect.itt.StartReceiver">
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+</intent-filter>
+</receiver>
+<activity android:label="@7F100086" android:name="za.co.fnb.connect.itt.gui.templates.TemplateLogoResultsViewActivity" android:screenOrientation="2" android:theme="@7F110001">
+</activity>
+<activity android:name="za.co.fnb.connect.itt.gui.templates.TemplateLinkingViewActivity" android:screenOrientation="2" android:theme="@7F110001" android:windowSoftInputMode="0x00000024">
+</activity>
+<activity android:name="za.co.fnb.connect.itt.gui.templates.TemplateLinkingWelcomeViewActivity" android:screenOrientation="2" android:theme="@7F110001">
+</activity>
+<activity android:name="za.co.fnb.connect.itt.gui.templates.TemplateResultsViewActivity" android:screenOrientation="2" android:theme="@7F110001">
+</activity>
+<activity android:name="za.co.fnb.connect.itt.gui.templates.TemplateLoginViewActivity" android:screenOrientation="2" android:theme="@7F110001" android:windowSoftInputMode="0x00000024">
+</activity>
+<activity android:name="za.co.fnb.connect.itt.gui.templates.TemplateNewsViewActivity" android:screenOrientation="2" android:theme="@7F110001">
+</activity>
+<activity android:name="za.co.fnb.connect.itt.gui.templates.TemplateListViewActivity" android:screenOrientation="2" android:theme="@7F110001">
+</activity>
+<activity android:configChanges="0x00000080" android:name="za.co.fnb.connect.itt.gui.templates.TemplateListViewWithParentActivity" android:screenOrientation="2" android:theme="@7F110001" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="za.co.fnb.connect.itt.gui.templates.TemplateWebViewActivity" android:screenOrientation="2" android:theme="@7F110001">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="za.co.fnb.connect.itt.gui.templates.TemplateHTML5ViewActivity" android:screenOrientation="2" android:theme="@7F110001">
+</activity>
+<activity android:name="za.co.fnb.connect.itt.gui.templates.TemplateOptionsViewPlainActivity" android:screenOrientation="2" android:theme="@7F110001">
+</activity>
+<activity android:name="za.co.fnb.connect.itt.gui.templates.TemplateOptionsViewWithParentActivity" android:screenOrientation="2" android:theme="@7F110001">
+</activity>
+<activity android:name="za.co.fnb.connect.itt.gui.templates.TemplateTransfersViewActivity" android:screenOrientation="2" android:theme="@7F110001" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:name="za.co.fnb.connect.itt.gui.templates.TemplateLottoViewActivity" android:screenOrientation="2" android:theme="@7F110001">
+</activity>
+<activity android:name="za.co.fnb.connect.itt.gui.templates.TemplateServicesViewActivity" android:screenOrientation="2" android:theme="@7F110001" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:name="za.co.fnb.connect.itt.gui.templates.TemplateOverviewViewActivity" android:screenOrientation="2" android:theme="@7F110001" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:name="za.co.fnb.connect.itt.gui.templates.TemplateMagicMountainViewActivity" android:screenOrientation="2" android:theme="@7F110001" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:launchMode="3" android:name="za.co.fnb.connect.itt.gui.templates.TemplateOverviewDialogActivity" android:screenOrientation="2" android:theme="@7F110000" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:name="za.co.fnb.connect.itt.gui.templates.TemplateSettingsViewActivity" android:screenOrientation="2" android:theme="@7F110001">
+</activity>
+<activity android:name="za.co.fnb.connect.itt.gui.templates.TemplateContactsViewActivity" android:screenOrientation="2" android:theme="@7F110001">
+</activity>
+<activity android:name="za.co.fnb.connect.itt.gui.templates.TemplateContactOptionsActivity" android:screenOrientation="2" android:theme="@7F110001">
+</activity>
+<activity android:name="za.co.fnb.connect.itt.gui.templates.TemplateSMSComposeActivity" android:screenOrientation="2" android:theme="@7F110001" android:windowSoftInputMode="0x00000015">
+</activity>
+<activity android:name="za.co.fnb.connect.itt.gui.templates.TemplateSMSConversationViewActivity" android:screenOrientation="2" android:theme="@7F110001" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="za.co.fnb.connect.itt.gui.templates.TemplateCallViewActivity" android:screenOrientation="2" android:theme="@7F110001">
+</activity>
+<activity android:name="za.co.fnb.connect.itt.gui.templates.TemplateVideoViewActivity" android:screenOrientation="2" android:theme="@7F110001">
+</activity>
+<activity android:name="za.co.fnb.connect.itt.gui.templates.TemplateGraphLandscapeViewActivity" android:screenOrientation="0" android:theme="@7F110001">
+</activity>
+<activity android:name="za.co.fnb.connect.itt.gui.templates.TemplateGalleryViewActivity" android:screenOrientation="2" android:theme="@7F110001" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="za.co.fnb.connect.itt.gui.templates.TemplateDeviceSettingResultViewActivity" android:screenOrientation="2" android:theme="@7F110001">
+</activity>
+<activity android:name="za.co.fnb.connect.itt.gui.templates.TemplateImageGalleryViewActivity" android:screenOrientation="0" android:theme="@7F110001">
+</activity>
+<activity android:name="za.co.fnb.connect.itt.gui.templates.TemplatePickerViewActivity" android:screenOrientation="2" android:theme="@7F110001" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="za.co.fnb.connect.itt.gui.templates.TemplateCameraViewActivity" android:screenOrientation="2" android:theme="@7F110001" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:launchMode="3" android:name="za.co.fnb.connect.itt.gui.ZoneErrorPage" android:screenOrientation="2" android:theme="@7F110001">
+</activity>
+<activity android:launchMode="1" android:name="za.co.fnb.connect.itt.gui.IncomingCall" android:screenOrientation="2" android:theme="@7F110001">
+</activity>
+<activity android:launchMode="1" android:name="za.co.fnb.connect.itt.gui.PushCall" android:screenOrientation="2" android:theme="@7F110001">
+</activity>
+<activity android:name="za.co.fnb.connect.itt.gui.PushCallViewActivity" android:screenOrientation="2" android:theme="@7F110001">
+</activity>
+<activity android:name="za.co.fnb.connect.itt.gui.templates.magicmountain.symbols.scanner.ocr.OcrCaptureActivity" android:screenOrientation="0" android:theme="@7F1101AD">
+</activity>
+<activity android:name="za.co.fnb.connect.itt.gui.templates.magicmountain.symbols.scanner.barcode.BarcodeCaptureActivity" android:theme="@7F1101AD">
+</activity>
+<activity android:launchMode="1" android:name="za.co.fnb.connect.itt.gui.util.cropimage.CropImageActivity" android:screenOrientation="2" android:theme="@android:01030006">
+</activity>
+<activity android:name="za.co.fnb.connect.itt.gui.DialerActivity" android:screenOrientation="2" android:theme="@7F1101D5">
+</activity>
+<activity-alias android:enabled="true" android:icon="@7F080146" android:label="@7F100086" android:name="za.co.fnb.connect.itt.gui.DialerAliasActivity" android:targetActivity="za.co.fnb.connect.itt.gui.DialerActivity">
+<intent-filter>
+<action android:name="android.intent.action.CALL_BUTTON">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.CALL_PRIVILEGED">
+</action>
+<data android:scheme="tel">
+</data>
+</intent-filter>
+</activity-alias>
+<activity android:name="za.co.fnb.connect.itt.gui.templates.TemplateSocialShareViewActivity" android:screenOrientation="2" android:theme="@7F110001">
+</activity>
+<activity android:name="za.co.fnb.connect.itt.gui.templates.TemplateMediaSocialShareViewActivity" android:screenOrientation="2" android:theme="@7F110001">
+</activity>
+<activity android:name="za.co.fnb.connect.itt.gui.templates.TemplateMarketingViewActivity" android:screenOrientation="2" android:theme="@7F110001">
+</activity>
+<activity android:name="za.co.fnb.connect.itt.gui.templates.TemplatePdfView" android:screenOrientation="2" android:theme="@7F110001">
+</activity>
+<activity android:configChanges="0x00000400" android:name="za.co.fnb.connect.itt.gui.templates.TemplateArViewActivity" android:screenOrientation="2" android:theme="@7F110001">
+</activity>
+<activity android:name="za.co.fnb.connect.itt.gui.templates.TemplateDevicePermissionsActivity" android:screenOrientation="1" android:theme="@7F110001">
+</activity>
+<activity android:name="za.co.fnb.connect.itt.gui.IncomingPushCallActivity" android:screenOrientation="2">
+</activity>
+<activity android:name="za.co.fnb.connect.itt.gui.PermissionActivity" android:screenOrientation="2" android:theme="@7F1101EA">
+</activity>
+<activity android:name="com.wikitude.architect.BrowserActivity">
+</activity>
+<activity android:name="za.co.fnb.connect.itt.hid.license.LicenseActivity">
+</activity>
+<activity android:name="za.co.fnb.connect.itt.barcodescanner.barcode.TemplateVisionScannerActivity" android:theme="@7F110001">
+</activity>
+<activity android:name="za.co.fnb.connect.itt.gui.PushMessageActivity" android:screenOrientation="2" android:theme="@7F110001">
+</activity>
+<activity android:name="za.co.fnb.connect.itt.gui.InfoActivity" android:theme="@7F110001">
+</activity>
+<service android:name="za.co.fnb.connect.itt.voip.PhoneService">
+</service>
+<provider android:authorities="@7F1000EF" android:exported="true" android:name="za.co.fnb.connect.itt.net.util.media.MediaContentProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F130004">
+</meta-data>
+</provider>
+<receiver android:name="za.co.fnb.connect.itt.loc.LocationChangedReceiver">
+</receiver>
+<receiver android:name="za.co.fnb.connect.itt.net.WifiStateChangedReceiver">
+<intent-filter>
+<action android:name="android.net.wifi.WIFI_STATE_CHANGED">
+</action>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+<action android:name="android.net.wifi.STATE_CHANGE">
+</action>
+</intent-filter>
+</receiver>
+<service android:label="@7F100227" android:name="za.co.fnb.connect.itt.loc.TransitionsIntentService">
+</service>
+<service android:name="za.co.fnb.connect.itt.wear.IncomingWearService">
+<intent-filter>
+<data android:host="*" android:pathPrefix="@7F1001CC" android:scheme="wear">
+</data>
+<action android:name="com.google.android.gms.wearable.MESSAGE_RECEIVED">
+</action>
+</intent-filter>
+</service>
+<service android:exported="false" android:name="za.co.fnb.connect.itt.wear.OutgoingWearService">
+</service>
+<service android:exported="false" android:name="za.co.fnb.connect.itt.net.magicmountain.DownloadIntentService">
+</service>
+<service android:exported="false" android:name="za.co.fnb.connect.itt.net.magicmountain.UploadIntentService">
+</service>
+<receiver android:enabled="true" android:name="za.co.fnb.connect.itt.PackageReplacedReceiver">
+<intent-filter>
+<action android:name="android.intent.action.MY_PACKAGE_REPLACED">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name="za.co.fnb.connect.itt.appwidget.WidgetReceiver">
+</receiver>
+<service android:name="za.co.fnb.connect.itt.appwidget.WidgetService" android:permission="android.permission.BIND_REMOTEVIEWS">
+</service>
+<service android:name="za.co.fnb.connect.itt.push.FCMListenerService">
+<intent-filter>
+<action android:name="com.google.firebase.MESSAGING_EVENT">
+</action>
+</intent-filter>
+</service>
+<receiver android:enabled="true" android:name="za.co.fnb.connect.itt.gui.util.SMSReaderBroadcastReceiver">
+<intent-filter>
+<action android:name="com.google.android.gms.auth.api.phone.SMS_RETRIEVED">
+</action>
+</intent-filter>
+</receiver>
+<service android:name="za.co.fnb.connect.itt.sensors.ActivityTracker">
+</service>
+<service android:name="za.co.fnb.connect.itt.ExitOnSwipeAwayService" android:stopWithTask="false">
+</service>
+<meta-data android:name="firebase_performance_logcat_enabled" android:value="true">
+</meta-data>
+<uses-library android:name="org.apache.http.legacy" android:required="false">
+</uses-library>
+<provider android:authorities="za.co.fnb.connect.itt.firebaseperfprovider" android:exported="false" android:initOrder="101" android:name="com.google.firebase.perf.provider.FirebasePerfProvider">
+</provider>
+<service android:exported="false" android:name="com.google.firebase.components.ComponentDiscoveryService">
+<meta-data android:name="com.google.firebase.components:com.google.firebase.perf.FirebasePerfRegistrar" android:value="com.google.firebase.components.ComponentRegistrar">
+</meta-data>
+<meta-data android:name="com.google.firebase.components:com.google.firebase.remoteconfig.RemoteConfigRegistrar" android:value="com.google.firebase.components.ComponentRegistrar">
+</meta-data>
+<meta-data android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar" android:value="com.google.firebase.components.ComponentRegistrar">
+</meta-data>
+<meta-data android:name="com.google.firebase.components:com.google.firebase.iid.Registrar" android:value="com.google.firebase.components.ComponentRegistrar">
+</meta-data>
+<meta-data android:name="com.google.firebase.components:com.google.firebase.abt.component.AbtRegistrar" android:value="com.google.firebase.components.ComponentRegistrar">
+</meta-data>
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.tagmanager.TagManagerService">
+</service>
+<activity android:exported="true" android:name="com.google.android.gms.tagmanager.TagManagerPreviewActivity" android:noHistory="true">
+<intent-filter>
+<data android:scheme="tagmanager.c.za.co.fnb.connect.itt">
+</data>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+</intent-filter>
+</activity>
+<service android:exported="false" android:name="com.google.firebase.messaging.FirebaseMessagingService">
+<intent-filter android:priority="-500">
+<action android:name="com.google.firebase.MESSAGING_EVENT">
+</action>
+</intent-filter>
+</service>
+<receiver android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+</intent-filter>
+</receiver>
+<service android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdService">
+<intent-filter android:priority="-500">
+<action android:name="com.google.firebase.INSTANCE_ID_EVENT">
+</action>
+</intent-filter>
+</service>
+<activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:01030010">
+</activity>
+<provider android:authorities="za.co.fnb.connect.itt.firebaseinitprovider" android:exported="false" android:initOrder="100" android:name="com.google.firebase.provider.FirebaseInitProvider">
+</provider>
+<receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementReceiver">
+</receiver>
+<receiver android:enabled="true" android:exported="true" android:name="com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver" android:permission="android.permission.INSTALL_PACKAGES">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementService">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementJobService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<provider android:authorities="za.co.fnb.connect.itt.workmanager-init" android:directBootAware="false" android:exported="false" android:multiprocess="true" android:name="androidx.work.impl.WorkManagerInitializer">
+</provider>
+<service android:directBootAware="false" android:enabled="@7F050003" android:exported="false" android:name="androidx.work.impl.background.systemalarm.SystemAlarmService">
+</service>
+<service android:directBootAware="false" android:enabled="@7F050004" android:exported="true" android:name="androidx.work.impl.background.systemjob.SystemJobService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<receiver android:directBootAware="false" android:enabled="true" android:exported="false" android:name="androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver">
+</receiver>
+<receiver android:directBootAware="false" android:enabled="false" android:exported="false" android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryChargingProxy">
+<intent-filter>
+<action android:name="android.intent.action.ACTION_POWER_CONNECTED">
+</action>
+<action android:name="android.intent.action.ACTION_POWER_DISCONNECTED">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:directBootAware="false" android:enabled="false" android:exported="false" android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryNotLowProxy">
+<intent-filter>
+<action android:name="android.intent.action.BATTERY_OKAY">
+</action>
+<action android:name="android.intent.action.BATTERY_LOW">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:directBootAware="false" android:enabled="false" android:exported="false" android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$StorageNotLowProxy">
+<intent-filter>
+<action android:name="android.intent.action.DEVICE_STORAGE_LOW">
+</action>
+<action android:name="android.intent.action.DEVICE_STORAGE_OK">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:directBootAware="false" android:enabled="false" android:exported="false" android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$NetworkStateProxy">
+<intent-filter>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:directBootAware="false" android:enabled="false" android:exported="false" android:name="androidx.work.impl.background.systemalarm.RescheduleReceiver">
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+<action android:name="android.intent.action.TIME_SET">
+</action>
+<action android:name="android.intent.action.TIMEZONE_CHANGED">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:directBootAware="false" android:enabled="@7F050003" android:exported="false" android:name="androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver">
+<intent-filter>
+<action android:name="androidx.work.impl.background.systemalarm.UpdateProxies">
+</action>
+</intent-filter>
+</receiver>
+<service android:enabled="false" android:exported="true" android:name="com.assaabloy.mobilekeys.api.hce.HceService" android:permission="android.permission.BIND_NFC_SERVICE">
+<intent-filter>
+<action android:name="android.nfc.cardemulation.action.HOST_APDU_SERVICE">
+</action>
+</intent-filter>
+<meta-data android:name="android.nfc.cardemulation.host_apdu_service" android:resource="@7F130005">
+</meta-data>
+</service>
+<service android:name="com.assaabloy.mobilekeys.api.ble.BleScanService">
+</service>
+<activity android:allowTaskReparenting="true" android:alwaysRetainTaskState="false" android:clearTaskOnLaunch="true" android:enabled="true" android:excludeFromRecents="true" android:finishOnTaskLaunch="true" android:name="com.assaabloy.mobilekeys.api.internal.PersistentServiceActivity" android:noHistory="true" android:stateNotNeeded="true" android:theme="@android:01030055">
+</activity>
+<meta-data android:name="com.mixpanel.android.MPConfig.DisableDecideChecker" android:value="true">
+</meta-data>
+<meta-data android:name="com.mixpanel.android.MPConfig.DisableViewCrawler" android:value="true">
+</meta-data>
+<provider android:authorities="za.co.fnb.connect.itt.lifecycle-process" android:exported="false" android:multiprocess="true" android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer">
+</provider>
+<meta-data android:name="com.google.android.wearable.beta.app" android:resource="@7F130000">
+</meta-data>
+</application>
+</manifest>

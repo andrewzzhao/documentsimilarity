@@ -1,0 +1,638 @@
+<?xml version="1.0" ?><manifest android:installLocation="1" android:versionCode="3057" android:versionName="8.2.6.203" coreApp="true" package="com.baidu.input_huawei" platformBuildVersionCode="26" platformBuildVersionName="8.0.0" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="14" android:targetSdkVersion="23">
+</uses-sdk>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_CONTACTS">
+</uses-permission>
+<uses-permission android:name="android.permission.RECORD_AUDIO">
+</uses-permission>
+<uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_LOGS">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-permission android:name="com.android.launcher.permission.READ_SETTINGS">
+</uses-permission>
+<uses-permission android:name="com.android.launcher.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.BLUETOOTH">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-permission android:name="android.permission.FLASHLIGHT">
+</uses-permission>
+<uses-feature android:name="android.hardware.camera">
+</uses-feature>
+<uses-feature android:name="android.hardware.camera.autofocus">
+</uses-feature>
+<uses-feature android:name="android.hardware.bluetooth_le" android:required="true">
+</uses-feature>
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-permission android:name="com.baidu.permission.SHARE">
+</uses-permission>
+<uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT">
+</uses-permission>
+<uses-permission android:name="com.android.launcher.permission.UNINSTALL_SHORTCUT">
+</uses-permission>
+<uses-permission android:name="android.permission.EXPAND_STATUS_BAR">
+</uses-permission>
+<uses-permission android:name="android.permission.MANAGE_ACCOUNTS">
+</uses-permission>
+<permission android:name="com.baidu.input_huawei.permission.SENDBROADCAST" android:protectionLevel="0x00000002">
+</permission>
+<permission android:name="com.baidu.input_huawei.permission.REGISTERRECEIVE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="com.baidu.input_huawei.permission.REGISTERRECEIVE">
+</uses-permission>
+<uses-permission android:name="com.baidu.input_huawei.permission.SEND">
+</uses-permission>
+<uses-permission android:name="com.baidu.input_huawei.permission.RECEIVE">
+</uses-permission>
+<uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_SMS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_SMS">
+</uses-permission>
+<uses-permission android:name="com.huawei.hwid.permission.ACCESS">
+</uses-permission>
+<uses-permission android:name="com.huawei.permission.MANAGE_FOLD_SCREEN">
+</uses-permission>
+<uses-permission android:name="com.baidu.input_huawei.permission.PLUGININTERFACESERVICE">
+</uses-permission>
+<permission android:name="com.baidu.input_huawei.permission.PLUGININTERFACESERVICE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS">
+</uses-permission>
+<uses-permission android:name="android.permission.BAIDU_LOCATION_SERVICE">
+</uses-permission>
+<application android:allowBackup="false" android:directBootAware="true" android:icon="@7F0203A6" android:label="@7F090072" android:name="com.baidu.input.ImeApplication" android:resizeableActivity="false" android:supportsRtl="true">
+<meta-data android:name="platcode" android:value="@7F09059F">
+</meta-data>
+<meta-data android:name="hwc-theme" android:value="androidhwext:style/Theme.Emui">
+</meta-data>
+<meta-data android:name="support_display_mode" android:value="default">
+</meta-data>
+<meta-data android:name="android.max_aspect" android:value="2.200000">
+</meta-data>
+<meta-data android:name="android.min_aspect" android:value="1.000000">
+</meta-data>
+<service android:name="com.baidu.input_huawei.ImeService" android:permission="android.permission.BIND_INPUT_METHOD">
+<intent-filter android:directBootAware="true" android:priority="100">
+<action android:name="android.view.InputMethod">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+<meta-data android:name="android.view.im" android:resource="@7F0600DB">
+</meta-data>
+</service>
+<activity android:clearTaskOnLaunch="true" android:configChanges="0x000004A0" android:excludeFromRecents="true" android:hardwareAccelerated="true" android:label="@7F090072" android:launchMode="2" android:name="com.baidu.input.ImeAppMainActivity" android:screenOrientation="1" android:taskAffinity="com.baidu.input.appmain" android:windowSoftInputMode="0x00000020">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:clearTaskOnLaunch="true" android:configChanges="0x000004A0" android:excludeFromRecents="true" android:label="@7F090072" android:launchMode="2" android:name="com.baidu.input.ImeMainConfigActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:excludeFromRecents="true" android:hardwareAccelerated="false" android:name="com.baidu.input.ImeOpcateSkinActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:excludeFromRecents="true" android:hardwareAccelerated="false" android:name="com.baidu.input.ImeSkinTryActivity" android:screenOrientation="1" android:theme="@android:01030010" android:windowSoftInputMode="0x00000014">
+</activity>
+<activity android:configChanges="0x000004A0" android:excludeFromRecents="true" android:hardwareAccelerated="false" android:name="com.baidu.input.ImeSpShowActivity" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004A0" android:excludeFromRecents="true" android:hardwareAccelerated="false" android:name="com.baidu.input_huawei.ImeAccountActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:excludeFromRecents="true" android:hardwareAccelerated="false" android:launchMode="2" android:name="com.baidu.input.ImeGuiderActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:excludeFromRecents="true" android:hardwareAccelerated="false" android:name="com.baidu.input.ImeCikuManActivity" android:noHistory="true">
+</activity>
+<activity android:configChanges="0x000004A0" android:excludeFromRecents="true" android:hardwareAccelerated="false" android:name="com.baidu.input.layout.store.search.SkinStoreSrchActivity" android:screenOrientation="1" android:theme="@android:01030006" android:windowSoftInputMode="0x00000024">
+</activity>
+<activity android:configChanges="0x000004A0" android:excludeFromRecents="true" android:hardwareAccelerated="false" android:name="com.baidu.input.layout.store.search.EmojiStoreSrchActivity" android:screenOrientation="1" android:theme="@android:01030006" android:windowSoftInputMode="0x00000024">
+</activity>
+<activity android:configChanges="0x000004A0" android:excludeFromRecents="true" android:hardwareAccelerated="false" android:name="com.baidu.input.emojis.view.AREmojiManagerActivity" android:screenOrientation="1" android:theme="@7F0B005A">
+</activity>
+<activity android:configChanges="0x000004A0" android:excludeFromRecents="true" android:hardwareAccelerated="true" android:name="com.baidu.input.ime.ocr.ui.OcrCameraActivity" android:screenOrientation="1" android:taskAffinity="@7F090534" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004A0" android:excludeFromRecents="true" android:hardwareAccelerated="false" android:name="com.baidu.input.ime.ocr.ui.OcrMaskActivity" android:screenOrientation="1" android:taskAffinity="@7F090534" android:theme="@android:01030006" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:configChanges="0x000004A0" android:excludeFromRecents="true" android:hardwareAccelerated="false" android:launchMode="2" android:name="com.baidu.input.ime.ocr.ui.ocrresult.OcrResultActivity" android:screenOrientation="1" android:taskAffinity="@7F090534" android:windowSoftInputMode="0x00000013">
+</activity>
+<activity android:configChanges="0x000004A0" android:excludeFromRecents="true" android:hardwareAccelerated="false" android:launchMode="2" android:name="com.baidu.input.ime.ocr.ui.ocrresult.OcrTranslateResultActivity" android:screenOrientation="1" android:taskAffinity="@7F090534" android:theme="@android:01030010" android:windowSoftInputMode="0x00000013">
+</activity>
+<activity android:configChanges="0x000004A0" android:excludeFromRecents="true" android:hardwareAccelerated="false" android:launchMode="2" android:name="com.baidu.input.ime.ocr.ui.OcrEmptyActivity" android:screenOrientation="1" android:taskAffinity="@7F090534" android:theme="@android:0103000B">
+</activity>
+<activity android:configChanges="0x000004A0" android:excludeFromRecents="true" android:label="@7F090073" android:launchMode="2" android:name="com.baidu.input.ImeSearchActivity" android:process=":search" android:taskAffinity="com.baidu.input.search" android:theme="@7F0B0116">
+</activity>
+<service android:enabled="true" android:exported="false" android:name="com.baidu.input.ime.event.ImeForWebService" android:process=":search">
+</service>
+<activity android:excludeFromRecents="true" android:hardwareAccelerated="false" android:launchMode="2" android:name="com.baidu.input.ImeCLipListActivity" android:screenOrientation="1" android:taskAffinity="com.baidu.input.float.clip" android:theme="@7F0B01BD" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:excludeFromRecents="true" android:hardwareAccelerated="false" android:launchMode="2" android:name="com.baidu.input.ImeNoteListActivity" android:screenOrientation="1" android:taskAffinity="com.baidu.input.float.note" android:theme="@7F0B01BD" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:configChanges="0x000004A0" android:excludeFromRecents="true" android:hardwareAccelerated="false" android:launchMode="1" android:name="com.baidu.input.ImeFrontSettingActivity" android:taskAffinity="com.baidu.input.front.setting" android:theme="@7F0B0116" android:windowSoftInputMode="0x00000023">
+</activity>
+<activity android:configChanges="0x000004A0" android:excludeFromRecents="true" android:hardwareAccelerated="false" android:name="com.baidu.input.ImeSpEditActivity" android:noHistory="true" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:configChanges="0x000004A0" android:excludeFromRecents="true" android:hardwareAccelerated="false" android:name="com.baidu.input.ImeMyPhraseActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:excludeFromRecents="true" android:hardwareAccelerated="false" android:name="com.baidu.input.ImeCellManActivity" android:screenOrientation="1" android:taskAffinity="com.baidu.input.cell" android:theme="@android:01030006">
+<meta-data android:name="hwc-theme" android:value="androidhwext:style/Theme.Emui.NoTitleBar">
+</meta-data>
+</activity>
+<activity android:configChanges="0x000004A0" android:excludeFromRecents="true" android:hardwareAccelerated="false" android:name="com.baidu.input.ImeLayoutActivity" android:theme="@7F0B01CB" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:configChanges="0x000004A0" android:excludeFromRecents="true" android:hardwareAccelerated="false" android:name="com.baidu.input.ImeCropImageActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:excludeFromRecents="true" android:hardwareAccelerated="false" android:name="com.baidu.input.ImeListEditorActivity" android:noHistory="true" android:taskAffinity="com.baidu.input.listeditor" android:theme="@android:0103000B">
+<meta-data android:name="hwc-theme" android:value="androidhwext:style/Theme.Emui.Dialog">
+</meta-data>
+</activity>
+<activity android:configChanges="0x000004A0" android:excludeFromRecents="true" android:name="com.baidu.input.ImeSubConfigActivity">
+</activity>
+<activity android:excludeFromRecents="true" android:hardwareAccelerated="false" android:name="com.baidu.input.ImeDataClearActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:excludeFromRecents="true" android:hardwareAccelerated="false" android:name="com.baidu.input_huawei.ImeUserExperienceActivity" android:theme="@7F0B0167">
+<meta-data android:name="hwc-theme" android:value="androidhwext:style/Theme.Emui.Translucent.NoTitleBar">
+</meta-data>
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="input.baidu.com" android:scheme="remote">
+</data>
+<data android:host="input.baidu.com" android:scheme="baiduinput">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="com.baidu.input.activity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004A0" android:excludeFromRecents="true" android:hardwareAccelerated="false" android:name="com.baidu.input.ImeFloatModeActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:excludeFromRecents="true" android:hardwareAccelerated="false" android:name="com.baidu.input.ime.international.view.LanguageAndInputTypeSettingActivity" android:noHistory="true" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:excludeFromRecents="true" android:hardwareAccelerated="false" android:name="com.baidu.input.ImeNotiCenterActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:excludeFromRecents="true" android:hardwareAccelerated="false" android:name="com.baidu.input.ImeUpdateActivity" android:noHistory="true" android:theme="@7F0B0167">
+<meta-data android:name="hwc-theme" android:value="androidhwext:style/Theme.Emui.Translucent.NoTitleBar">
+</meta-data>
+<intent-filter>
+<action android:name="com.baidu.input.action.INSTALL">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:host="*" android:pathPattern=".*\.bds" android:scheme="file">
+</data>
+<data android:host="*" android:pathPattern=".*\.bdt" android:scheme="file">
+</data>
+<data android:host="*" android:pathPattern=".*\.bcd" android:scheme="file">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:host="*" android:mimeType="*/*" android:pathPattern=".*\.bds" android:scheme="file">
+</data>
+<data android:host="*" android:mimeType="*/*" android:pathPattern=".*\.bds" android:scheme="http">
+</data>
+<data android:host="*" android:mimeType="*/*" android:pathPattern=".*\.bcd" android:scheme="file">
+</data>
+<data android:host="*" android:mimeType="*/*" android:pathPattern=".*\.bcd" android:scheme="http">
+</data>
+<data android:host="*" android:mimeType="*/*" android:pathPattern=".*\.bdt" android:scheme="file">
+</data>
+<data android:host="*" android:mimeType="*/*" android:pathPattern=".*\.bdt" android:scheme="http">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:host="*" android:mimeType="application/baidu-fepskin" android:pathPattern=".*\.bds" android:scheme="http">
+</data>
+<data android:host="*" android:mimeType="application/x-baiduspecialwords" android:pathPattern=".*\.bcd" android:scheme="http">
+</data>
+<data android:host="*" android:mimeType="application/baidu-fepskin" android:pathPattern=".*\.bdt" android:scheme="http">
+</data>
+</intent-filter>
+</activity>
+<activity android:excludeFromRecents="true" android:exported="true" android:hardwareAccelerated="false" android:label="@7F090072" android:launchMode="1" android:name="com.baidu.input_huawei.wxapi.WXEntryActivity" android:theme="@7F0B0167">
+</activity>
+<activity android:configChanges="0x000004A0" android:excludeFromRecents="true" android:launchMode="2" android:name="com.baidu.input.ImeAppRecommendActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:name="com.baidu.input.ImeDeveloperActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.baidu.input.ImeDynamicViewDevActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:excludeFromRecents="true" android:hardwareAccelerated="false" android:launchMode="2" android:name="com.baidu.input.ImeSymCollectionActivity" android:taskAffinity="com.baidu.input.symcollection" android:theme="@7F0B01C9">
+</activity>
+<activity android:configChanges="0x000004A0" android:excludeFromRecents="true" android:hardwareAccelerated="false" android:name="com.baidu.input.ImeOpcateEmojiActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:excludeFromRecents="true" android:hardwareAccelerated="false" android:launchMode="2" android:name="com.baidu.input.ImeLazyCorpusAddActivity" android:taskAffinity="com.baidu.input.lazy" android:theme="@7F0B01BA" android:windowSoftInputMode="0x00000014">
+</activity>
+<activity android:configChanges="0x000004A0" android:excludeFromRecents="true" android:hardwareAccelerated="false" android:launchMode="2" android:name="com.baidu.input.ImeLazyCorpusActivity" android:theme="@7F0B01CB" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:configChanges="0x000004A0" android:excludeFromRecents="true" android:exported="false" android:launchMode="2" android:name="com.baidu.input.ImeSettingsSearchActivity" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:configChanges="0x000004A0" android:excludeFromRecents="true" android:exported="false" android:hardwareAccelerated="false" android:name="com.baidu.input.ImeAcgFontActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.baidu.browser.sailor.feature.appswitch.AppSwitchActivity" android:process=":search" android:screenOrientation="1" android:theme="@android:0103006F">
+</activity>
+<activity android:configChanges="0x00000480" android:excludeFromRecents="true" android:finishOnCloseSystemDialogs="false" android:name="com.baidu.input.mpermissions.ImePermissionActivity" android:resizeableActivity="true" android:taskAffinity="com.baidu.input_huawei.permission" android:theme="@android:0103000F">
+<meta-data android:name="hwc-theme" android:value="androidhwext:style/Theme.Emui.Translucent.NoTitleBar">
+</meta-data>
+</activity>
+<activity android:excludeFromRecents="true" android:name="com.baidu.input.ime.voicerecognize.NetCheckActivity" android:screenOrientation="1" android:theme="@android:0103000F">
+</activity>
+<activity android:configChanges="0x00000480" android:excludeFromRecents="true" android:launchMode="1" android:name="com.baidu.input.ImeGameBoardSettingActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000480" android:excludeFromRecents="true" android:hardwareAccelerated="false" android:launchMode="2" android:name="com.baidu.input.ImeGameCorpusActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000480" android:excludeFromRecents="true" android:hardwareAccelerated="false" android:launchMode="1" android:name="com.baidu.input.ImeGameCorpusEditActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000480" android:excludeFromRecents="true" android:hardwareAccelerated="false" android:launchMode="2" android:name="com.baidu.input.meeting.ui.activity.NoteActivity" android:screenOrientation="1" android:taskAffinity="@7F090505" android:theme="@7F0B015B" android:windowSoftInputMode="0x00000010">
+</activity>
+<service android:exported="false" android:name="com.baidu.input.meeting.service.NoteService" android:taskAffinity="@7F090505">
+</service>
+<activity android:excludeFromRecents="true" android:hardwareAccelerated="true" android:launchMode="2" android:name="com.baidu.input.ImeAREmotionActivity" android:screenOrientation="1" android:taskAffinity="@7F0902BE" android:theme="@7F0B00AD">
+</activity>
+<activity android:excludeFromRecents="true" android:hardwareAccelerated="true" android:name="com.baidu.input.ImeARPreviewActivity" android:screenOrientation="1" android:taskAffinity="@7F0902BE" android:theme="@7F0B00AE">
+</activity>
+<service android:exported="false" android:name="com.baidu.input.ime.front.note.NoteService">
+</service>
+<service android:exported="false" android:name="com.baidu.input.ime.front.clipboard.RecordService">
+</service>
+<service android:exported="false" android:name="com.baidu.input.ImeIntentService">
+</service>
+<service android:exported="false" android:name="com.baidu.input.AutoBackIntentService">
+</service>
+<service android:exported="true" android:name="com.baidu.sapi2.share.ShareService">
+<intent-filter>
+<action android:name="baidu.intent.action.account.SHARE_SERVICE">
+</action>
+</intent-filter>
+</service>
+<activity android:configChanges="0x000000A0" android:exported="false" android:label="@7F090072" android:launchMode="2" android:name="com.baidu.input.sso.activity.BDHuaweiSSOLoginActivity" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<service android:exported="true" android:name="com.baidu.input.pub.VoiceRecognitionService">
+<intent-filter>
+<action android:name="com.baidu.input.pub.VoiceRecognitionService">
+</action>
+</intent-filter>
+</service>
+<receiver android:directBootAware="true" android:name="com.baidu.input.directboot.DirectBootReceiver">
+<intent-filter>
+<action android:name="android.intent.action.LOCKED_BOOT_COMPLETED">
+</action>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+</intent-filter>
+</receiver>
+<provider android:authorities="com.baidu.input_huawei.hwbackup" android:exported="true" android:name="com.baidu.input.hwbackup.HuaweiBackupProvider">
+</provider>
+<activity android:configChanges="0x000004A0" android:excludeFromRecents="true" android:hardwareAccelerated="false" android:name="com.baidu.input.ImeCustomSkinActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:excludeFromRecents="true" android:exported="false" android:hardwareAccelerated="false" android:name="com.baidu.input.ImeSkinRecommendActivity" android:theme="@android:01030010" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:configChanges="0x000004A0" android:excludeFromRecents="true" android:exported="false" android:hardwareAccelerated="false" android:name="com.baidu.input.ime.international.util.ImeSkinCompatActivity" android:theme="@android:01030010" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:excludeFromRecents="true" android:exported="false" android:hardwareAccelerated="false" android:name="com.baidu.input.CrashLogUploadHintActivity" android:theme="@android:01030010">
+</activity>
+<receiver android:name="com.baidu.input.switchguide.InputMethodChangedReceiver">
+<intent-filter>
+<action android:name="android.intent.action.INPUT_METHOD_CHANGED">
+</action>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+</intent-filter>
+</receiver>
+<service android:name="com.baidu.input.switchguide.GuideService" android:process="com.baidu.switchguide">
+</service>
+<receiver android:exported="false" android:name="com.baidu.input.ImeGalaxyReceiver">
+<meta-data android:name="galaxy_data" android:value="ew0KICAidmVyIjogMSwNCiAgInBrZyI6ImNvbS5iYWlkdS5pbnB1dCIsDQogICJzaWdzIjogWw0KICAgICJlYTI2MzcyNTE1ZGNhMzBhMTQyZTNmNGQzNmRiMTkzMzdhYmM3NDU0Ig0KICBdLA0KICAicHJpb3JpdHkiOjIwMDANCn0=">
+</meta-data>
+<meta-data android:name="galaxy_sf" android:value="EYwY1LjCo2CbXQasTaI/lmPCi4a2QkzAvTqtIO729f0tixvca1mQwP57i2drlYnILNPYU7x2lXTrS/MmJF0oB94OYWqbzeOJ4fjaOZUYpfWvqS0zC/QCN4v71vKAYM8akaINxVMyRG5/mahyDQjiGQ7afGdr1bUQd9g2mv7G9Mlz8V5ewjzZNXx5YI80f3nNxOViUWiL4PCvoCjrR2UKd/rUPUhz5t7psDVSlajXkuG9CnzgyZZPFjAFzzBG4Qq7MDoSzf9royAzGSRH1agcHdwyUd4N3Vq+QaWUqGbX054zLB87cRpv6b2y+bvEYKvApl/DU4m31ig1tLvW7jeIgQ==">
+</meta-data>
+<intent-filter>
+<action android:name="com.baidu.intent.action.GALAXY">
+</action>
+</intent-filter>
+</receiver>
+<service android:enabled="true" android:label="@7F09083F" android:name="com.baidu.acs.service.AcsService" android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE">
+<intent-filter>
+<action android:name="android.accessibilityservice.AccessibilityService">
+</action>
+</intent-filter>
+<meta-data android:name="android.accessibilityservice" android:resource="@7F060000">
+</meta-data>
+</service>
+<service android:exported="false" android:name="com.baidu.hotpatch.HotPatchResultService">
+</service>
+<provider android:authorities="com.baidu.input_huawei.ime.inputcontent" android:exported="false" android:grantUriPermissions="true" android:name="android.support.v4.content.FileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F060001">
+</meta-data>
+</provider>
+<provider android:authorities="com.baidu.input_huawei" android:exported="false" android:grantUriPermissions="true" android:name="com.baidu.input.layout.share.FileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F060001">
+</meta-data>
+</provider>
+<service android:exported="false" android:name="com.baidu.webkit.sdk.DumperService" android:process=":dumper">
+</service>
+<activity android:configChanges="0x00000490" android:excludeFromRecents="true" android:name="com.baidu.input.ImeKeyboardHeightSettingActivity" android:windowSoftInputMode="0x00000015">
+</activity>
+<activity android:configChanges="0x000000A0" android:launchMode="1" android:name="com.baidu.sapi2.activity.LoginActivity" android:screenOrientation="1" android:theme="@7F0B0111" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000000A0" android:launchMode="1" android:name="com.baidu.sapi2.activity.LoadExternalWebViewActivity" android:screenOrientation="1" android:theme="@7F0B0111" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000000A0" android:launchMode="1" android:name="com.baidu.sapi2.activity.social.SocialLoginActivity" android:screenOrientation="1" android:theme="@7F0B0111">
+</activity>
+<activity android:configChanges="0x000000A0" android:launchMode="1" android:name="com.baidu.sapi2.activity.social.HuaweiLoginActivity" android:screenOrientation="1" android:theme="@7F0B0111">
+</activity>
+<activity android:configChanges="0x000000A0" android:launchMode="1" android:name="com.baidu.sapi2.activity.social.WXLoginActivity" android:screenOrientation="1" android:theme="@7F0B0111">
+</activity>
+<activity android:configChanges="0x000000A0" android:launchMode="1" android:name="com.baidu.sapi2.activity.ForgetPwdActivity" android:screenOrientation="1" android:theme="@7F0B0111" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000000A0" android:launchMode="1" android:name="com.baidu.sapi2.activity.FastRegActivity" android:screenOrientation="1" android:theme="@7F0B0111" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000000A0" android:launchMode="1" android:name="com.baidu.sapi2.activity.RegisterActivity" android:screenOrientation="1" android:theme="@7F0B0111" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000000A0" android:launchMode="1" android:name="com.baidu.sapi2.activity.AccountCenterActivity" android:screenOrientation="1" android:theme="@7F0B0111" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000000A0" android:launchMode="1" android:name="com.baidu.sapi2.activity.BindWidgetActivity" android:screenOrientation="1" android:theme="@7F0B0111" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000000A0" android:launchMode="1" android:name="com.baidu.sapi2.activity.ModifyPwdActivity" android:screenOrientation="1" android:theme="@7F0B0111" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000000A0" android:launchMode="1" android:name="com.baidu.sapi2.activity.OperationRecordActivity" android:screenOrientation="1" android:theme="@7F0B0111" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000000A0" android:exported="true" android:name="com.baidu.sapi2.activity.ShareActivity" android:screenOrientation="1" android:theme="@7F0B0111" android:windowSoftInputMode="0x00000002">
+<intent-filter>
+<action android:name="baidu.intent.action.account.SHARE_ACTIVITY">
+</action>
+</intent-filter>
+</activity>
+<meta-data android:name="com.huawei.hms.client.appid" android:value="appid=10294798">
+</meta-data>
+<provider android:authorities="com.baidu.input.hms.update.provider" android:exported="false" android:grantUriPermissions="true" android:name="com.huawei.hms.update.provider.UpdateProvider">
+</provider>
+<activity android:configChanges="0x40002484" android:excludeFromRecents="true" android:exported="false" android:hardwareAccelerated="true" android:name="com.huawei.hms.activity.BridgeActivity" android:theme="@android:0103000F">
+<meta-data android:name="hwc-theme" android:value="androidhwext:style/Theme.Emui.Translucent">
+</meta-data>
+</activity>
+<activity android:configChanges="0x000004A0" android:excludeFromRecents="true" android:launchMode="2" android:name="com.baidu.input.ImeOpenSourceLicencesActivity" android:process=":search" android:taskAffinity="com.baidu.input.search">
+</activity>
+<service android:enabled="true" android:exported="false" android:name="com.q.m.QS">
+</service>
+<service android:exported="true" android:name="com.baidu.plugin.PluginInterfaceService" android:permission="com.baidu.input_huawei.permission.PLUGININTERFACESERVICE">
+</service>
+<meta-data android:name="BUILD_VERSION" android:value="e008d05">
+</meta-data>
+<provider android:authorities="com.baidu.input_huawei.dprefrenceprovider" android:enabled="true" android:name="com.baidu.simeji.dpreference.PreferenceProvider">
+</provider>
+<receiver android:exported="false" android:name="com.baidu.simeji.common.statistic.StatisticReceiver" android:process=":push">
+</receiver>
+<receiver android:name="com.baidu.simeji.common.statistic.GlobalMessageReceiver">
+</receiver>
+<meta-data android:name="com.baidu.input.common.imageloader.glide.ImageLoaderGlideModule" android:value="GlideModule">
+</meta-data>
+<meta-data android:name="android.support.VERSION" android:value="26.0.2">
+</meta-data>
+<service android:exported="false" android:name="com.tencent.tinker.lib.service.TinkerPatchService" android:process=":patch">
+</service>
+<service android:exported="false" android:name="com.tencent.tinker.lib.service.TinkerPatchService$InnerService" android:process=":patch">
+</service>
+<service android:exported="false" android:name="com.tencent.tinker.lib.service.DefaultTinkerResultService">
+</service>
+<service android:exported="false" android:name="com.baidu.flywheel.module.memory.LeakWatchService">
+</service>
+<activity android:launchMode="1" android:name="com.baidu.pass.biometrics.face.liveness.activity.LivenessRecogActivity" android:screenOrientation="1" android:theme="@7F0B010B">
+</activity>
+<activity android:launchMode="1" android:name="com.baidu.pass.biometrics.face.liveness.activity.LivenessLoadingActivity" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x000000A0" android:launchMode="1" android:name="com.baidu.sapi2.activity.AccountRealNameActivity" android:screenOrientation="1" android:theme="@7F0B0111" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000000A0" android:launchMode="1" android:name="com.baidu.sapi2.activity.QrLoginActivity" android:screenOrientation="1" android:theme="@7F0B0111" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000000A0" android:launchMode="1" android:name="com.baidu.sapi2.activity.NormalizeGuestAccountActivity" android:screenOrientation="1" android:theme="@7F0B0111" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000000A0" android:launchMode="1" android:name="com.baidu.sapi2.activity.AuthWidgetActivity" android:screenOrientation="1" android:theme="@7F0B0111" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000000A0" android:launchMode="1" android:name="com.baidu.sapi2.activity.social.HuaweiSSOLoginActivity" android:screenOrientation="1" android:theme="@7F0B0111">
+</activity>
+<activity android:configChanges="0x000000A0" android:launchMode="1" android:name="com.baidu.sapi2.activity.social.MeizuSSOLoginActivity" android:screenOrientation="1" android:theme="@7F0B0111">
+</activity>
+<activity android:configChanges="0x000000A0" android:launchMode="1" android:name="com.baidu.sapi2.activity.social.SinaSSOLoginActivity" android:screenOrientation="1" android:theme="@7F0B0111">
+</activity>
+<activity android:configChanges="0x000000A0" android:launchMode="1" android:name="com.baidu.sapi2.activity.social.XiaomiSSOLoginActivity" android:screenOrientation="1" android:theme="@7F0B0111">
+</activity>
+<activity android:configChanges="0x000000A0" android:launchMode="1" android:name="com.baidu.sapi2.activity.social.QQSSOLoginActivity" android:screenOrientation="1" android:theme="@7F0B0111">
+</activity>
+<activity android:configChanges="0x40000FFF" android:excludeFromRecents="true" android:exported="false" android:launchMode="0" android:name="com.baidu.sofire.MyActivity" android:theme="@android:0103000F">
+<intent-filter>
+<action android:name="com.baidu.action.SOFIRE.VIEW">
+</action>
+<category android:name="com.baidu.category.SOFIRE">
+</category>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<service android:exported="false" android:name="com.baidu.sofire.MyService">
+<intent-filter>
+<action android:name="com.baidu.action.SOFIRE.VIEW">
+</action>
+<category android:name="com.baidu.category.SOFIRE">
+</category>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</service>
+<provider android:authorities="com.baidu.input_huawei.sofire.ac.provider" android:exported="false" android:name="com.baidu.sofire.MyProvider">
+</provider>
+<meta-data android:name="seckey_avscan" android:value="660346260f8a841a04ec2a56815b421b">
+</meta-data>
+<meta-data android:name="appkey_avscan" android:value="100034">
+</meta-data>
+<activity android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$STDStub_00">
+</activity>
+<activity android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$STDStub_01">
+</activity>
+<activity android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$STDStub_02">
+</activity>
+<activity android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$STDStub_03">
+</activity>
+<activity android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$STDStub_04">
+</activity>
+<activity android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$STDStub_05">
+</activity>
+<activity android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$STDStub_06">
+</activity>
+<activity android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$STDStub_07">
+</activity>
+<activity android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$STDStub_08">
+</activity>
+<activity android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$STDStub_09">
+</activity>
+<activity android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$STDStub_00_T" android:theme="@android:0103000F">
+</activity>
+<activity android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$STDStub_01_T" android:theme="@android:0103000F">
+</activity>
+<activity android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$STDStub_02_T" android:theme="@android:0103000F">
+</activity>
+<activity android:launchMode="1" android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SGTStub_00">
+</activity>
+<activity android:launchMode="1" android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SGTStub_01">
+</activity>
+<activity android:launchMode="1" android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SGTStub_02">
+</activity>
+<activity android:launchMode="1" android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SGTStub_03">
+</activity>
+<activity android:launchMode="1" android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SGTStub_04">
+</activity>
+<activity android:launchMode="1" android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SGTStub_05">
+</activity>
+<activity android:launchMode="1" android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SGTStub_06">
+</activity>
+<activity android:launchMode="1" android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SGTStub_07">
+</activity>
+<activity android:launchMode="1" android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SGTStub_08">
+</activity>
+<activity android:launchMode="1" android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SGTStub_09">
+</activity>
+<activity android:launchMode="1" android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SGTStub_00_T" android:theme="@android:0103000F">
+</activity>
+<activity android:launchMode="1" android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SGTStub_01_T" android:theme="@android:0103000F">
+</activity>
+<activity android:launchMode="1" android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SGTStub_02_T" android:theme="@android:0103000F">
+</activity>
+<activity android:launchMode="2" android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SGTKStub_00">
+</activity>
+<activity android:launchMode="2" android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SGTKStub_01">
+</activity>
+<activity android:launchMode="2" android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SGTKStub_02">
+</activity>
+<activity android:launchMode="2" android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SGTKStub_03">
+</activity>
+<activity android:launchMode="2" android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SGTKStub_04">
+</activity>
+<activity android:launchMode="2" android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SGTKStub_05">
+</activity>
+<activity android:launchMode="2" android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SGTKStub_06">
+</activity>
+<activity android:launchMode="2" android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SGTKStub_07">
+</activity>
+<activity android:launchMode="2" android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SGTKStub_08">
+</activity>
+<activity android:launchMode="2" android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SGTKStub_09">
+</activity>
+<activity android:launchMode="2" android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SGTKStub_00_T" android:theme="@android:0103000F">
+</activity>
+<activity android:launchMode="2" android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SGTKStub_01_T" android:theme="@android:0103000F">
+</activity>
+<activity android:launchMode="2" android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SGTKStub_02_T" android:theme="@android:0103000F">
+</activity>
+<activity android:launchMode="3" android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SIStub_00">
+</activity>
+<activity android:launchMode="3" android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SIStub_01">
+</activity>
+<activity android:launchMode="3" android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SIStub_02">
+</activity>
+<activity android:launchMode="3" android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SIStub_03">
+</activity>
+<activity android:launchMode="3" android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SIStub_04">
+</activity>
+<activity android:launchMode="3" android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SIStub_05">
+</activity>
+<activity android:launchMode="3" android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SIStub_06">
+</activity>
+<activity android:launchMode="3" android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SIStub_07">
+</activity>
+<activity android:launchMode="3" android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SIStub_08">
+</activity>
+<activity android:launchMode="3" android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SIStub_09">
+</activity>
+<activity android:launchMode="3" android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SIStub_00_T" android:theme="@android:0103000F">
+</activity>
+<activity android:launchMode="3" android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SIStub_01_T" android:theme="@android:0103000F">
+</activity>
+<activity android:launchMode="3" android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SIStub_02_T" android:theme="@android:0103000F">
+</activity>
+<meta-data android:name="tinker_version" android:value="1.9.1">
+</meta-data>
+<service android:enabled="false" android:name="com.squareup.leakcanary.internal.HeapAnalyzerService" android:process=":leakcanary">
+</service>
+<service android:enabled="false" android:name="com.squareup.leakcanary.DisplayLeakService">
+</service>
+<activity android:enabled="false" android:icon="@7F020405" android:label="@7F09005B" android:name="com.squareup.leakcanary.internal.DisplayLeakActivity" android:taskAffinity="com.squareup.leakcanary.com.baidu.input_huawei" android:theme="@7F0B0096">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:enabled="false" android:icon="@7F020405" android:label="@7F090069" android:name="com.squareup.leakcanary.internal.RequestStoragePermissionActivity" android:taskAffinity="com.squareup.leakcanary.com.baidu.input_huawei" android:theme="@7F0B01BB">
+</activity>
+<meta-data android:name="com.bumptech.glide.integration.okhttp3.OkHttpGlideModule" android:value="GlideModule">
+</meta-data>
+<meta-data android:name="TINKER_ID" android:value="tinker_id_versionhuaweiforurltestoem8.2.6.203">
+</meta-data>
+</application>
+</manifest>

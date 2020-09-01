@@ -1,0 +1,141 @@
+<?xml version="1.0" ?><manifest android:installLocation="0" android:versionCode="701" android:versionName="7.0.1" package="com.spritefish.fastburstcameralite" platformBuildVersionCode="26" platformBuildVersionName="8.0.0" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="14" android:targetSdkVersion="26">
+</uses-sdk>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-permission android:name="android.permission.FLASHLIGHT">
+</uses-permission>
+<uses-feature android:name="android.hardware.camera" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.screen.landscape" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.software.live_wallpaper" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.camera.flash" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.camera.autofocus" android:required="false">
+</uses-feature>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<application android:allowBackup="true" android:hardwareAccelerated="true" android:icon="@7F0200EC" android:label="@7F07005B" android:largeHeap="true" android:name="com.spritefish.fastburstcamera.platform.FastBurstCameraApplication" android:theme="@7F0B001E">
+<receiver android:name="com.spritefish.fastburstcamera.receivers.PhotoPickedReceiver">
+<intent-filter>
+<action android:name="com.spritefish.fbc.PICKEDPHOTO">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name="com.spritefish.fastburstcamera.receivers.UserPresentReceiver">
+<intent-filter>
+<action android:name="android.intent.action.USER_PRESENT">
+</action>
+</intent-filter>
+</receiver>
+<service android:label="@7F07005B" android:name="com.spritefish.fastburstcamera.wallpaper.FbcWallpaper" android:permission="android.permission.BIND_WALLPAPER">
+<intent-filter>
+<action android:name="android.service.wallpaper.WallpaperService">
+</action>
+</intent-filter>
+<meta-data android:name="android.service.wallpaper" android:resource="@7F050000">
+</meta-data>
+</service>
+<receiver android:enabled="true" android:name="com.spritefish.fastburstcamera.receivers.NewPictureReceiver" android:process=":com.spritefish.fastburstcamera.nonrecord">
+<intent-filter>
+<action android:name="com.spritefish.fastburstcamera.newpicture">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:exported="true" android:name="com.spritefish.fastburstcamera.platform.ReferralCatcher">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+<activity android:configChanges="0x000004A0" android:name="com.spritefish.fastburstcamera.activities.RecorderActivity" android:theme="@7F0B001F">
+<intent-filter>
+<action android:name="android.intent.action.CAMERA_BUTTON">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.media.action.STILL_IMAGE_CAMERA">
+</action>
+<action android:name="android.media.action.IMAGE_CAPTURE">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.spritefish.fastburstcamera.activities.Preferences">
+</activity>
+<activity android:immersive="true" android:name="com.spritefish.fastburstcamera.activities.MainOptionsActivity" android:screenOrientation="10" android:theme="@7F0B001F">
+</activity>
+<activity android:name="com.spritefish.fastburstcamera.activities.BurstListActivity" android:process=":com.spritefish.fastburstcamera.nonrecord">
+</activity>
+<activity android:name="com.spritefish.fastburstcamera.activities.GalleryListActivity" android:process=":com.spritefish.fastburstcamera.nonrecord">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.spritefish.fastburstcamera.activities.GifSetupActivity" android:process=":com.spritefish.fastburstcamera.nonrecord">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.spritefish.fastburstcamera.activities.MultiExposureActivity" android:process=":com.spritefish.fastburstcamera.nonrecord">
+</activity>
+<activity android:name="com.spritefish.fastburstcamera.activities.ViewImageActivity" android:process=":com.spritefish.fastburstcamera.nonrecord" android:theme="@7F0B001F">
+</activity>
+<activity android:name="com.spritefish.fastburstcamera.activities.SupportActivity">
+</activity>
+<activity android:name="com.spritefish.fastburstcamera.activities.ReferralDialogActivity" android:theme="@android:01030011">
+</activity>
+<activity android:name="com.spritefish.fastburstcamera.activities.CommonQuestionsActivity">
+</activity>
+<activity android:name="com.spritefish.fastburstcamera.activities.FaceDetectActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.spritefish.fastburstcamera.activities.GifAnimationActivity" android:process=":com.spritefish.fastburstcamera.nonrecord" android:theme="@7F0B001F">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.spritefish.fastburstcamera.activities.CollageActivity" android:process=":com.spritefish.fastburstcamera.nonrecord" android:theme="@7F0B001F">
+</activity>
+<activity android:label="@7F070117" android:name="com.spritefish.fastburstcamera.NagActivity" android:theme="@android:0103000B">
+</activity>
+<activity android:name="com.spritefish.fastburstcamera.activities.FullScreenAd">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.amazon.device.ads.AdActivity">
+</activity>
+
+a
+
+<meta-data android:name="com.crashlytics.ApiKey" android:value="6d2ae1071f4ace750c6a90c504937c34b4273b9f">
+</meta-data>
+<activity android:configChanges="0x000004A0" android:name="com.spritefish.fastburstcamera.InitActivity" android:screenOrientation="1" android:theme="@7F0B001F">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x00000FB0" android:name="com.google.android.gms.ads.AdActivity" android:theme="@android:0103000F">
+</activity>
+<provider android:authorities="com.spritefish.fastburstcameralite.google_measurement_service" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementContentProvider">
+</provider>
+<receiver android:enabled="true" android:name="com.google.android.gms.measurement.AppMeasurementReceiver">
+<intent-filter>
+<action android:name="com.google.android.gms.measurement.UPLOAD">
+</action>
+</intent-filter>
+</receiver>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementService">
+</service>
+<activity android:name="com.google.android.gms.ads.purchase.InAppPurchaseActivity" android:theme="@7F0B012F">
+</activity>
+<meta-data android:name="com.google.android.gms.version" android:value="@7F0F0004">
+</meta-data>
+<meta-data android:name="android.support.VERSION" android:value="26.1.0">
+</meta-data>
+<meta-data android:name="android.arch.lifecycle.VERSION" android:value="27.0.0-SNAPSHOT">
+</meta-data>
+</application>
+</manifest>

@@ -1,0 +1,521 @@
+<?xml version="1.0" ?><manifest android:installLocation="2" android:versionCode="103" android:versionName="3.1.3" package="com.yunjia365.android" platformBuildVersionCode="23" platformBuildVersionName="6.0-2704002" xmlns:android="http://schemas.android.com/apk/res/android">
+ API5�
+<uses-sdk android:minSdkVersion="15" android:targetSdkVersion="23">
+</uses-sdk>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_CONTACTS">
+</uses-permission>
+<uses-permission android:name="com.android.vending.BILLING">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="android.permission.USE_CREDENTIALS">
+</uses-permission>
+<uses-permission android:name="android.permission.MANAGE_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="com.android.launcher.permission.READ_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS">
+</uses-permission>
+<uses-permission android:name="android.permission.BAIDU_LOCATION_SERVICE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.BROADCAST_STICKY">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_GPS">
+</uses-permission>
+<uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERACT_ACROSS_USERS_FULL">
+</uses-permission>
+<uses-permission android:name="android.permission.RECORD_AUDIO">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCES_MOCK_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.CALL_PHONE">
+</uses-permission>
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW">
+</uses-permission>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<permission android:name="com.yunjia365.android.permission.JPUSH_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="com.yunjia365.android.permission.JPUSH_MESSAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_USER_PRESENT">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS">
+</uses-permission>
+<uses-permission android:name="android.permission.TELEPHONY_SERVICE">
+</uses-permission>
+<application android:allowBackup="true" android:icon="@7F020409" android:label="@7F0900DC" android:name="com.stub.StubApp" android:qihoo="activity" android:supportsRtl="true" android:theme="@7F0B0092">
+ -
+
+<meta-data android:name="PGYER_APPID" android:value="9aaf88cf63681ac015e50044f9591d7f">
+</meta-data>
+<activity android:configChanges="0x000000A0" android:exported="false" android:name="cn.jpush.android.ui.PushActivity" android:theme="@android:01030006">
+<intent-filter>
+<action android:name="cn.jpush.android.ui.PushActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="com.yunjia365.android">
+</category>
+</intent-filter>
+</activity>
+<service android:enabled="true" android:exported="false" android:name="cn.jpush.android.service.DownloadService">
+</service>
+<service android:enabled="true" android:exported="false" android:name="cn.jpush.android.service.PushService">
+ -
+
+<intent-filter>
+<action android:name="cn.jpush.android.intent.REGISTER">
+</action>
+<action android:name="cn.jpush.android.intent.REPORT">
+</action>
+<action android:name="cn.jpush.android.intent.PushService">
+</action>
+<action android:name="cn.jpush.android.intent.PUSH_TIME">
+</action>
+</intent-filter>
+</service>
+<service android:enabled="true" android:exported="true" android:name="cn.jpush.android.service.DaemonService">
+ -
+
+<intent-filter>
+<action android:name="cn.jpush.android.intent.DaemonService">
+</action>
+<category android:name="com.yunjia365.android">
+</category>
+</intent-filter>
+</service>
+<receiver android:enabled="true" android:exported="false" android:name="cn.jpush.android.service.PushReceiver">
+<intent-filter android:priority="1000">
+<action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY">
+</action>
+<category android:name="com.yunjia365.android">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.USER_PRESENT">
+</action>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_ADDED">
+</action>
+<action android:name="android.intent.action.PACKAGE_REMOVED">
+</action>
+<data android:scheme="package">
+</data>
+</intent-filter>
+</receiver>
+<receiver android:exported="false" android:name="cn.jpush.android.service.AlarmReceiver">
+</receiver>
+<receiver android:enabled="true" android:exported="false" android:name="com.cheweishi.android.recevier.JPushReceiver">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.REGISTRATION">
+</action>
+<action android:name="cn.jpush.android.intent.UNREGISTRATION">
+</action>
+<action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED">
+</action>
+<action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED">
+</action>
+<action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED">
+</action>
+<action android:name="cn.jpush.android.intent.ACTION_RICHPUSH_CALLBACK">
+</action>
+<action android:name="cn.jpush.android.intent.CONNECTION">
+</action>
+<category android:name="com.yunjia365.android">
+</category>
+</intent-filter>
+</receiver>
+<meta-data android:name="JPUSH_CHANNEL" android:value="developer-default">
+</meta-data>
+<meta-data android:name="JPUSH_APPKEY" android:value="ea08937a0841c91b83c5f67f">
+</meta-data>
+<meta-data android:name="UMENG_APPKEY" android:value="551a1660fd98c51e5700085f">
+</meta-data>
+<meta-data android:name="UMENG_MESSAGE_SECRET" android:value="32a48958059fb1ab067436afd836b61a">
+</meta-data>
+<meta-data android:name="UMENG_CHANNEL" android:value="Umeng">
+</meta-data>
+<service android:enabled="true" android:name="com.baidu.location.f" android:process=":remote">
+<intent-filter>
+<action android:name="com.baidu.location.service_v2.6">
+</action>
+</intent-filter>
+</service>
+<activity android:launchMode="2" android:name="com.cheweishi.android.activity.LoginActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<service android:enabled="true" android:name="com.baidu.navi.location.f">
+<intent-filter>
+<action android:name="com.baidu.location.service_v2.2">
+</action>
+</intent-filter>
+</service>
+<meta-data android:name="com.baidu.lbsapi.API_KEY" android:value="mBiIDsmtzqMXPTVnRjx1DpDXskLx4yBc">
+</meta-data>
+<activity android:name="com.cheweishi.android.activity.CarDynamicActivity" android:screenOrientation="1" android:theme="@7F0B0167">
+</activity>
+<activity android:configChanges="0x000004B0" android:name="com.cheweishi.android.activity.BNavigatorActivity" android:screenOrientation="1" android:theme="@7F0B0167">
+</activity>
+<activity android:name="com.cheweishi.android.activity.CarReportActivity" android:screenOrientation="1" android:theme="@7F0B0167">
+</activity>
+<activity android:name="com.cheweishi.android.activity.StarsRankingActivity" android:screenOrientation="1" android:theme="@7F0B0167">
+</activity>
+<activity android:launchMode="2" android:name="com.cheweishi.android.activity.CarManagerActivity" android:screenOrientation="1" android:theme="@7F0B0167">
+</activity>
+<activity android:name="com.cheweishi.android.activity.StarRankingActivity" android:screenOrientation="1" android:theme="@7F0B0167">
+</activity>
+<activity android:name="com.cheweishi.android.activity.FootmarkActivity" android:screenOrientation="1" android:theme="@7F0B0167">
+</activity>
+<activity android:name="com.cheweishi.android.activity.NavigationActivity" android:screenOrientation="1" android:theme="@7F0B0167">
+</activity>
+<activity android:name="com.cheweishi.android.activity.FindCarportActivity" android:screenOrientation="1" android:theme="@7F0B016A">
+</activity>
+<activity android:name="com.cheweishi.android.activity.UserDetailActivity" android:screenOrientation="1" android:theme="@7F0B0167">
+</activity>
+<activity android:name="com.cheweishi.android.activity.SignInDetailActivity" android:screenOrientation="1" android:theme="@7F0B0167">
+</activity>
+<activity android:launchMode="2" android:name="com.cheweishi.android.activity.PrivacySettingsActivity" android:screenOrientation="1" android:theme="@7F0B0167">
+</activity>
+<activity android:name="com.cheweishi.android.activity.WelcomeActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:name="com.cheweishi.android.activity.AddCarActivity" android:screenOrientation="1" android:theme="@7F0B0167" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:name="com.cheweishi.android.activity.CarTypeCarBrandModelActivity" android:screenOrientation="1" android:theme="@7F0B0167">
+</activity>
+<activity android:name="com.cheweishi.android.activity.CarTypeCarStyleActivity" android:screenOrientation="1" android:theme="@7F0B0167">
+</activity>
+<activity android:name="com.cheweishi.android.activity.RegistActivity" android:screenOrientation="1" android:theme="@7F0B0167">
+</activity>
+<activity android:name="com.cheweishi.android.activity.UserInfoEditActivity" android:screenOrientation="1" android:theme="@7F0B0167">
+</activity>
+<activity android:name="com.cheweishi.android.activity.FootmarkMapActivity" android:screenOrientation="1" android:theme="@7F0B0167">
+</activity>
+<activity android:name="com.cheweishi.android.activity.PlateChooseActivity" android:screenOrientation="1" android:theme="@7F0B0167" android:windowSoftInputMode="0x00000025">
+</activity>
+<activity android:name="com.cheweishi.android.activity.RankingDetailActivity" android:screenOrientation="1" android:theme="@7F0B0167">
+</activity>
+<activity android:name="com.cheweishi.android.activity.GasStationActivity" android:screenOrientation="1" android:theme="@7F0B016A">
+</activity>
+<activity android:label="@7F09058F" android:name="com.cheweishi.android.activity.ProvinceCityCountryActivity" android:screenOrientation="1" android:theme="@7F0B0167">
+</activity>
+<activity android:label="@7F09058F" android:name="com.cheweishi.android.activity.WebActivity" android:screenOrientation="1" android:theme="@7F0B0167">
+</activity>
+<activity android:name="com.cheweishi.android.activity.DetactionInfoActivity" android:screenOrientation="1" android:theme="@7F0B0167">
+</activity>
+<activity android:name="com.cheweishi.android.activity.PushDialogActivity" android:screenOrientation="1" android:theme="@7F0B00CD">
+</activity>
+<activity android:label="@7F0905A9" android:name="com.cheweishi.android.activity.UserSignActivity" android:screenOrientation="1" android:theme="@7F0B0167" android:windowSoftInputMode="0x00000025">
+</activity>
+<activity android:label="@7F090587" android:name="com.cheweishi.android.activity.PasswordForgetActivity" android:screenOrientation="1" android:theme="@7F0B0167">
+</activity>
+<activity android:label="@7F090588" android:name="com.cheweishi.android.activity.PasswordModifyActivity" android:screenOrientation="1" android:theme="@7F0B0167">
+</activity>
+<activity android:label="@7F090573" android:name="com.cheweishi.android.activity.AboutUsActivity" android:screenOrientation="1" android:theme="@7F0B0167">
+</activity>
+<activity android:name="com.cheweishi.android.activity.FunctionIntroductionActivity" android:screenOrientation="1" android:theme="@7F0B0167">
+</activity>
+<activity android:name="com.cheweishi.android.activity.TeamIntroduceActivity" android:screenOrientation="1" android:theme="@7F0B0167">
+</activity>
+<activity android:name="com.cheweishi.android.activity.AddCarExtraActivity" android:screenOrientation="1" android:theme="@7F0B0167">
+</activity>
+<activity android:name="com.cheweishi.android.activity.RegistFinishActivity" android:screenOrientation="1" android:theme="@7F0B0167">
+</activity>
+<activity android:name="com.cheweishi.android.activity.RegistServiceActivity" android:screenOrientation="1" android:theme="@7F0B0167">
+</activity>
+<activity android:label="@7F090572" android:name="com.cheweishi.android.activity.DrvingBehaviorActivity" android:screenOrientation="1" android:theme="@7F0B0167">
+</activity>
+<activity android:label="@7F090572" android:name="com.cheweishi.android.activity.PurseActivity" android:screenOrientation="1" android:theme="@7F0B0167">
+</activity>
+<activity android:label="@7F090572" android:name="com.cheweishi.android.activity.PurseRedPacketsActivity" android:screenOrientation="1" android:theme="@7F0B0167">
+</activity>
+<activity android:label="@7F090572" android:name="com.cheweishi.android.activity.PurseIntegralActivity" android:screenOrientation="1" android:theme="@7F0B0167">
+</activity>
+<activity android:label="@7F090572" android:name="com.cheweishi.android.activity.PurseBalanceActivity" android:screenOrientation="1" android:theme="@7F0B0167">
+</activity>
+<activity android:label="@7F090572" android:name="com.cheweishi.android.activity.PurseTotalChargesActivity" android:screenOrientation="1" android:theme="@7F0B0167">
+</activity>
+<activity android:label="@7F090584" android:name="com.cheweishi.android.activity.MyAccountActivity" android:screenOrientation="1" android:theme="@7F0B0167">
+</activity>
+<activity android:label="@7F0905A8" android:name="com.cheweishi.android.activity.UserNickActivity" android:screenOrientation="1" android:theme="@7F0B0167">
+</activity>
+<activity android:name="com.cheweishi.android.activity.SetActivity" android:screenOrientation="1" android:theme="@7F0B0167">
+</activity>
+<activity android:name="com.cheweishi.android.activity.AboutUsNewActivity" android:screenOrientation="1" android:theme="@7F0B0167">
+</activity>
+<activity android:name="com.cheweishi.android.activity.CarReportFreeAddActivity" android:screenOrientation="1" android:theme="@7F0B0167">
+</activity>
+<activity android:label="@7F09057F" android:name="com.cheweishi.android.activity.IntegralActivity" android:screenOrientation="1" android:theme="@7F0B0167">
+</activity>
+<activity android:label="@7F090580" android:name="com.cheweishi.android.activity.IntegralHelpActivity" android:screenOrientation="1" android:theme="@7F0B0167">
+</activity>
+<activity android:label="@7F09059E" android:name="com.cheweishi.android.activity.SettingActivity" android:screenOrientation="1" android:theme="@7F0B0167">
+</activity>
+<activity android:label="@7F09056C" android:name="com.cheweishi.android.activity.ChooseDateBirthActivity" android:screenOrientation="1" android:theme="@7F0B0167">
+</activity>
+<activity android:name="com.cheweishi.android.activity.MyTreasureActivity" android:screenOrientation="1" android:theme="@7F0B0167">
+</activity>
+<activity android:label="@7F090580" android:name="com.cheweishi.android.activity.MessagerCenterActivity" android:screenOrientation="1" android:theme="@7F0B0167">
+</activity>
+<activity android:label="@7F09059E" android:name="com.cheweishi.android.activity.MessageCenterDetailsActivity" android:screenOrientation="1" android:theme="@7F0B0167">
+</activity>
+<activity android:launchMode="2" android:name="com.cheweishi.android.activity.CarManagerBindActivity" android:screenOrientation="1" android:theme="@7F0B0167">
+</activity>
+<activity android:name="com.cheweishi.android.activity.CarManagerAfterBindActivity" android:screenOrientation="1" android:theme="@7F0B0167">
+</activity>
+<activity android:label="@7F090599" android:name="com.cheweishi.android.activity.ReturnFeeThatActivity" android:screenOrientation="1" android:theme="@7F0B0167">
+</activity>
+<activity android:label="@7F0905A4" android:name="com.cheweishi.android.activity.TelephoneExplainActivity" android:screenOrientation="1" android:theme="@7F0B0167">
+</activity>
+<activity android:label="@7F0905AB" android:name="com.cheweishi.android.activity.WithdrawDepositActivity" android:screenOrientation="1" android:theme="@7F0B0167">
+</activity>
+<activity android:label="@7F09059A" android:name="com.cheweishi.android.activity.ReturnTheMoneyDatailsActivity" android:screenOrientation="1" android:theme="@7F0B0167">
+</activity>
+<activity android:label="@7F0905A3" android:name="com.cheweishi.android.activity.TelephoneChargeDetilsActivity" android:screenOrientation="1" android:theme="@7F0B0167">
+</activity>
+<activity android:name="com.cheweishi.android.activity.PushDetailsActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.cheweishi.android.activity.CircleInformationDetailActivity" android:screenOrientation="1" android:theme="@7F0B0167">
+</activity>
+<activity android:name="com.cheweishi.android.activity.InformationSecondListActivity" android:screenOrientation="1" android:theme="@7F0B0167">
+</activity>
+<activity android:name="com.cheweishi.android.activity.CarInformationActivity" android:screenOrientation="1" android:theme="@7F0B0167">
+</activity>
+<activity android:name="com.cheweishi.android.activity.DetectionExplainActivity" android:screenOrientation="1" android:theme="@7F0B0167">
+</activity>
+<activity android:name="com.cheweishi.android.activity.DTCDetailsActivity" android:screenOrientation="1" android:theme="@7F0B0167">
+</activity>
+<activity android:name="com.cheweishi.android.activity.FindcarActivity" android:screenOrientation="1" android:theme="@7F0B0167">
+</activity>
+<activity android:name="com.cheweishi.android.activity.MyStallctivity" android:screenOrientation="1" android:theme="@7F0B0167">
+</activity>
+<activity android:name="com.cheweishi.android.activity.ParkDetailsActivity" android:screenOrientation="1" android:theme="@7F0B0167">
+</activity>
+<activity android:name="com.cheweishi.android.activity.SetReportActivity" android:screenOrientation="1" android:theme="@7F0B0167">
+</activity>
+<activity android:name="com.cheweishi.android.activity.SetSOSActivity" android:screenOrientation="1" android:theme="@7F0B0167">
+</activity>
+<activity android:name="com.cheweishi.android.activity.SOSCrashLevelActivity" android:screenOrientation="1" android:theme="@7F0B0167">
+</activity>
+<activity android:name="com.cheweishi.android.activity.SOSContactActivity" android:screenOrientation="1" android:theme="@7F0B0167">
+</activity>
+<activity android:launchMode="2" android:name="com.cheweishi.android.activity.RechargeActivity" android:screenOrientation="1" android:theme="@7F0B0167">
+</activity>
+<activity android:name="com.cheweishi.android.activity.WashCarActivity" android:screenOrientation="1" android:theme="@7F0B0167">
+</activity>
+<activity android:name="com.cheweishi.android.activity.WashcarListActivity" android:screenOrientation="1" android:theme="@7F0B0167">
+</activity>
+<activity android:name="com.cheweishi.android.activity.WashcarDetailsActivity" android:screenOrientation="1" android:theme="@7F0B0167">
+</activity>
+<activity android:name="com.cheweishi.android.activity.WashCarPayActivity" android:screenOrientation="1" android:theme="@7F0B0167">
+</activity>
+<activity android:label="@7F09059B" android:name="com.cheweishi.android.activity.SCActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000E0" android:exported="false" android:name="com.alipay.sdk.app.H5AuthActivity" android:screenOrientation="3" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:configChanges="0x000000E0" android:exported="false" android:name="com.alipay.sdk.app.H5PayActivity" android:screenOrientation="3" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:configChanges="0x000000E0" android:label="@7F09057E" android:name="com.cheweishi.android.activity.InsurancePolicyActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000E0" android:label="@7F09057B" android:name="com.cheweishi.android.activity.InsuranceBuyActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.cheweishi.android.activity.WashcarHistoryActivity" android:screenOrientation="1" android:theme="@7F0B0167">
+</activity>
+<receiver android:name="com.cheweishi.android.utils.weixinpay.simcpux.AppRegister">
+<intent-filter>
+<action android:name="com.tencent.mm.plugin.openapi.Intent.ACTION_REFRESH_WXAPP">
+</action>
+</intent-filter>
+</receiver>
+<activity android:exported="true" android:label="@7F0900DC" android:launchMode="1" android:name="com.cheweishi.android.wxapi.WXEntryActivity">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:scheme="sdksample">
+</data>
+</intent-filter>
+</activity>
+<activity android:exported="true" android:launchMode="1" android:name="com.cheweishi.android.wxapi.WXPayEntryActivity">
+</activity>
+<activity android:name="com.cheweishi.android.activity.PayActivty" android:screenOrientation="1" android:theme="@7F0B0167">
+</activity>
+<activity android:label="@7F09057A" android:name="com.cheweishi.android.activity.InsuranceActivity" android:screenOrientation="1" android:theme="@7F0B0167" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:label="@7F09057D" android:name="com.cheweishi.android.activity.InsuranceInformationUploadActivity" android:screenOrientation="1" android:theme="@7F0B0167">
+</activity>
+<activity android:label="@7F09058A" android:name="com.cheweishi.android.activity.PeccancyCommissionActivity" android:screenOrientation="1" android:theme="@7F0B0167">
+</activity>
+<activity android:label="@7F09058C" android:name="com.cheweishi.android.activity.PessanySearchActivity" android:screenOrientation="1" android:theme="@7F0B0167">
+</activity>
+<activity android:label="@7F09058D" android:name="com.cheweishi.android.activity.PessanySearchResultActivity" android:screenOrientation="1" android:theme="@7F0B0167">
+</activity>
+<activity android:label="@7F090589" android:name="com.cheweishi.android.activity.PayPessanyActivity" android:screenOrientation="1" android:theme="@7F0B0167">
+</activity>
+<activity android:launchMode="2" android:name="com.cheweishi.android.activity.MainNewActivity" android:screenOrientation="1" android:theme="@7F0B0167">
+</activity>
+<activity android:name="com.cheweishi.android.activity.CarDetectionActivity" android:screenOrientation="1" android:theme="@7F0B0167">
+</activity>
+<activity android:name="com.cheweishi.android.activity.SecurityScanActivity" android:screenOrientation="1" android:theme="@7F0B0167">
+</activity>
+<activity android:label="@7F09058E" android:name="com.cheweishi.android.activity.SoSActivity" android:screenOrientation="1" android:theme="@7F0B0167">
+</activity>
+<activity android:label="@7F09058E" android:name="com.cheweishi.android.activity.SosSeekActivity" android:screenOrientation="1" android:theme="@7F0B0167">
+</activity>
+<activity android:name="com.cheweishi.android.activity.BeautyListActivity" android:screenOrientation="1" android:theme="@7F0B0167">
+</activity>
+<activity android:name="com.cheweishi.android.activity.BeautyActivity" android:screenOrientation="1" android:theme="@7F0B0167">
+</activity>
+<activity android:name="com.cheweishi.android.activity.AppointmentMaintainActivity" android:screenOrientation="1" android:theme="@7F0B0167">
+</activity>
+<activity android:name="com.cheweishi.android.activity.MaintainListActivity" android:screenOrientation="1" android:theme="@7F0B0167">
+</activity>
+<activity android:name="com.cheweishi.android.activity.MaintainDetilsActivity" android:screenOrientation="1" android:theme="@7F0B0167">
+</activity>
+<activity android:name="com.cheweishi.android.activity.MaintainOrderDetilsActivity" android:screenOrientation="1" android:theme="@7F0B0167">
+</activity>
+<activity android:name="com.cheweishi.android.activity.MaintainCancelActivity" android:screenOrientation="1" android:theme="@7F0B0167">
+</activity>
+<activity android:name="com.cheweishi.android.activity.ProvinceAndCharGridActivity" android:screenOrientation="1" android:theme="@7F0B0167">
+</activity>
+<activity android:name="com.cheweishi.android.activity.MipcaActivityCapture" android:screenOrientation="1" android:theme="@7F0B0167">
+</activity>
+<activity android:name="com.cheweishi.android.activity.QRCodeResultActivity" android:screenOrientation="1" android:theme="@7F0B0167">
+</activity>
+<activity android:name="com.cheweishi.android.activity.MyorderActivity" android:screenOrientation="1" android:theme="@7F0B0167">
+</activity>
+<activity android:name="com.cheweishi.android.activity.OrderDetailsActivity" android:screenOrientation="1" android:theme="@7F0B0167">
+</activity>
+<activity android:name="com.cheweishi.android.activity.BaskOrderActivity" android:screenOrientation="1" android:theme="@7F0B0167">
+</activity>
+<activity android:name="com.cheweishi.android.activity.AllCommentActivity" android:screenOrientation="1" android:theme="@7F0B0167">
+</activity>
+<activity android:name="com.cheweishi.android.activity.FindParkingSpaceActivity" android:screenOrientation="1" android:theme="@7F0B0167">
+</activity>
+<activity android:name="com.cheweishi.android.activity.SearchActivity" android:screenOrientation="1" android:theme="@7F0B0167">
+</activity>
+<activity android:name="com.cheweishi.android.activity.IdeaReturnActivity" android:screenOrientation="1" android:theme="@7F0B0167">
+</activity>
+<activity android:name="com.cheweishi.android.activity.AddDeviceActivity" android:screenOrientation="1" android:theme="@7F0B0167">
+</activity>
+<activity android:name="com.cheweishi.android.activity.ValidateLoginActivity" android:screenOrientation="1" android:theme="@7F0B0167">
+</activity>
+<activity android:name="com.cheweishi.android.activity.OrderPaymentSuccessActivity" android:screenOrientation="1" android:theme="@7F0B0167">
+</activity>
+<activity android:name="com.cheweishi.android.activity.WebPhoneActivity" android:screenOrientation="1" android:theme="@7F0B0167">
+</activity>
+<activity android:name="com.cheweishi.android.activity.InsuranceCalculationActivity" android:screenOrientation="1" android:theme="@7F0B0167">
+</activity>
+<activity android:name="com.cheweishi.android.activity.MessageCenterActivity">
+</activity>
+<activity android:name="com.cheweishi.android.activity.CarShopActivity">
+</activity>
+<activity android:name="com.cheweishi.android.activity.MaintainDetailsActivity">
+</activity>
+<activity android:name="com.cheweishi.android.activity.BeautyDetailsActivity">
+</activity>
+<activity android:name="com.cheweishi.android.activity.PessanySearchDetailActivity">
+</activity>
+<activity android:name="com.cheweishi.android.activity.MaintainListActivity_new">
+</activity>
+<activity android:name="com.cheweishi.android.activity.BeautyListActivity_new">
+</activity>
+<activity android:name="com.cheweishi.android.activity.ServiceDetailActivity">
+</activity>
+<activity android:name="com.cheweishi.android.activity.CouponActivity">
+</activity>
+<activity android:name="com.cheweishi.android.activity.CouponDetailActivity">
+</activity>
+<activity android:name="com.cheweishi.android.activity.MaintainComponentActivity">
+</activity>
+<activity android:name="com.cheweishi.android.activity.ChoiceComponentActivity">
+</activity>
+<activity android:name="com.cheweishi.android.activity.DevicesListActivity">
+</activity>
+<activity android:name="com.cheweishi.android.activity.TenantHeadImgActivity">
+</activity>
+<activity android:name="com.cheweishi.android.activity.CreditActivity">
+</activity>
+<activity android:name="com.cheweishi.android.activity.Main1Activity">
+</activity>
+<activity android:name="com.cheweishi.android.activity.DetactionInfoActivity_new">
+</activity>
+<activity android:name="com.cheweishi.android.activity.FootmarkActivity_New">
+</activity>
+<activity android:name="com.cheweishi.android.activity.FootmarkActivity_TimeMark">
+</activity>
+<activity android:name="com.cheweishi.android.activity.FootmarkActivity_TimeMarkMap">
+</activity>
+<activity android:name="com.cheweishi.android.activity.ServicesHall">
+</activity>
+<activity android:name="com.cheweishi.android.activity.NavigationActivity_New">
+</activity>
+<activity android:name="com.cheweishi.android.activity.AddDeviceActivity_New">
+</activity>
+<activity android:name="com.cheweishi.android.activity.ObdDetailsActivity">
+</activity>
+<activity android:name="com.cheweishi.android.activity.PurseRedEnvelopeActivity">
+</activity>
+<activity android:name="com.cheweishi.android.activity.OffLineActivity">
+</activity>
+<activity android:name="com.cheweishi.android.activity.IncidentPackedPartsActivity_New">
+</activity>
+<activity android:name="com.cheweishi.android.activity.BaiduOfflineMapActivity">
+</activity>
+<activity android:name="com.cheweishi.android.activity.BaiduOfflineMapActivity1">
+</activity>
+<activity android:name="com.cheweishi.android.adapter.MyExpendableadapler">
+</activity>
+<activity android:name="com.cheweishi.android.activity.PermissionsActivity" android:screenOrientation="1" android:theme="@7F0B0095">
+</activity>
+<activity android:name="com.cheweishi.android.activity.PermissionsMainActivity" android:screenOrientation="1" android:theme="@7F0B0167">
+</activity>
+<activity android:name="com.cheweishi.android.activity.SetReportActivity_New">
+</activity>
+<activity android:name="com.cheweishi.android.activity.IntegratedMallActivity">
+</activity>
+</application>
+</manifest>

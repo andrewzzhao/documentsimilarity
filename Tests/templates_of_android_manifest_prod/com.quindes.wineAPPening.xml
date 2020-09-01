@@ -1,0 +1,218 @@
+<?xml version="1.0" ?><manifest android:installLocation="0" android:versionCode="40" android:versionName="2.0" package="com.quindes.wineAPPening" platformBuildVersionCode="25" platformBuildVersionName="7.1.1" xmlns:android="http://schemas.android.com/apk/res/android">
+<compatible-screens>
+<screen android:screenDensity="120" android:screenSize="200">
+</screen>
+<screen android:screenDensity="160" android:screenSize="200">
+</screen>
+<screen android:screenDensity="240" android:screenSize="200">
+</screen>
+<screen android:screenDensity="320" android:screenSize="200">
+</screen>
+<screen android:screenDensity="480" android:screenSize="200">
+</screen>
+<screen android:screenDensity="640" android:screenSize="200">
+</screen>
+<screen android:screenDensity="120" android:screenSize="300">
+</screen>
+<screen android:screenDensity="160" android:screenSize="300">
+</screen>
+<screen android:screenDensity="240" android:screenSize="300">
+</screen>
+<screen android:screenDensity="320" android:screenSize="300">
+</screen>
+<screen android:screenDensity="420" android:screenSize="300">
+</screen>
+<screen android:screenDensity="480" android:screenSize="300">
+</screen>
+<screen android:screenDensity="560" android:screenSize="300">
+</screen>
+<screen android:screenDensity="640" android:screenSize="300">
+</screen>
+</compatible-screens>
+<uses-sdk android:minSdkVersion="21" android:targetSdkVersion="24">
+</uses-sdk>
+<permission android:name="com.quindes.wineAPPening.permission.C2D_MESSAGE">
+</permission>
+<uses-permission android:name="com.quindes.wineAPPening.permission.C2D_MESSAGE">
+</uses-permission>
+<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE">
+</uses-permission>
+<uses-feature android:name="android.hardware.camera" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.camera.autofocus" android:required="false">
+</uses-feature>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.BATTERY_STATS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_LOGS">
+</uses-permission>
+<uses-permission android:name="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE">
+</uses-permission>
+<uses-permission android:name="android.permission.RECORD_AUDIO">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_CONTACTS">
+</uses-permission>
+<uses-permission android:name="android.permission.NFC">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-permission android:name=".permission.C2D_MESSAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION">
+</uses-permission>
+<uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES">
+</uses-permission>
+<permission android:name=".permission.C2D_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-feature android:name="android.hardware.nfc" android:required="false">
+</uses-feature>
+<application android:allowBackup="false" android:icon="@7F020154" android:label="wineAPP" android:name="md57730c6ffb8b73978a72da0fb4c060491.MainApplication" android:supportsRtl="true" android:theme="@7F0C01C7">
+<provider android:authorities="com.quindes.wineAPPening.fileprovider" android:exported="false" android:grantUriPermissions="true" android:name="android.support.v4.content.FileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F070000">
+</meta-data>
+</provider>
+<meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@7F0900BA">
+</meta-data>
+<meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="AIzaSyDXAOAizsctOblTjFn__ehJIh1TXB6y-xg">
+</meta-data>
+<meta-data android:name="com.google.android.gms.version" android:value="@7F080000">
+</meta-data>
+<activity android:configChanges="0x000005B0" android:label="@7F09003F" android:name="com.facebook.FacebookActivity" android:theme="@android:01030010">
+</activity>
+<receiver android:exported="false" android:name="com.google.firebase.iid.FirebaseInstanceIdInternalReceiver">
+</receiver>
+<receiver android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+<action android:name="com.google.android.c2dm.intent.REGISTRATION">
+</action>
+<category android:name="com.quindes.wineAPPening">
+</category>
+</intent-filter>
+</receiver>
+<receiver android:name="md57730c6ffb8b73978a72da0fb4c060491.PushHandlerBroadcastReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+</intent-filter>
+<intent-filter android:priority="-1000">
+<action android:name="PushNotificationReceived">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+<category android:name="com.quindes.wineAPPening">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.REGISTRATION">
+</action>
+<category android:name="com.quindes.wineAPPening">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="com.google.android.gcm.intent.RETRY">
+</action>
+<category android:name="com.quindes.wineAPPening">
+</category>
+</intent-filter>
+</receiver>
+<service android:name="md57730c6ffb8b73978a72da0fb4c060491.GcmService">
+</service>
+<activity android:icon="@7F030000" android:label="wineAPPening" android:launchMode="2" android:name="md57730c6ffb8b73978a72da0fb4c060491.MainActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="android.nfc.action.NDEF_DISCOVERED">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:mimeType="text/plain">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="md57730c6ffb8b73978a72da0fb4c060491.SplashActivity" android:noHistory="true" android:screenOrientation="1" android:theme="@7F0C01CA">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x00000480" android:name="md5a3e164e78ade0c22cefea770ddd0bc49.MediaPickerActivity">
+</activity>
+<service android:name="md59f70a99687498e7ba187118950981d26.KeepAliveService">
+</service>
+<activity android:configChanges="0x000001A0" android:label="Scanner" android:name="md5ef9f064d53649f8127c2c8b1447b0176.ZxingActivity">
+</activity>
+<provider android:authorities="com.quindes.wineAPPening.mono.MonoRuntimeProvider.__mono_init__" android:exported="false" android:initOrder="2147483647" android:name="mono.MonoRuntimeProvider">
+</provider>
+<activity android:name="net.hockeyapp.android.UpdateActivity">
+</activity>
+<activity android:name="net.hockeyapp.android.FeedbackActivity" android:windowSoftInputMode="0x00000014">
+</activity>
+<activity android:name="net.hockeyapp.android.PaintActivity">
+</activity>
+<activity android:name="net.hockeyapp.android.LoginActivity">
+</activity>
+<activity android:name="net.hockeyapp.android.ExpiryInfoActivity">
+</activity>
+<activity android:configChanges="0x000005B0" android:name="com.facebook.FacebookActivity" android:theme="@7F0C000E">
+</activity>
+<activity android:name="com.facebook.CustomTabMainActivity">
+</activity>
+<provider android:authorities="com.quindes.wineAPPening.FacebookInitProvider" android:exported="false" android:name="com.facebook.internal.FacebookInitProvider">
+</provider>
+<receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementReceiver">
+</receiver>
+<receiver android:enabled="true" android:name="com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver" android:permission="android.permission.INSTALL_PACKAGES">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementService">
+</service>
+<receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementReceiver">
+</receiver>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementService">
+</service>
+<provider android:authorities="com.quindes.wineAPPening.firebaseinitprovider" android:exported="false" android:initOrder="100" android:name="com.google.firebase.provider.FirebaseInitProvider">
+</provider>
+<service android:exported="true" android:name="com.google.firebase.messaging.FirebaseMessagingService">
+<intent-filter android:priority="-500">
+<action android:name="com.google.firebase.MESSAGING_EVENT">
+</action>
+</intent-filter>
+</service>
+<activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:01030010">
+</activity>
+<meta-data android:name="com.google.android.gms.version" android:value="@7F080000">
+</meta-data>
+</application>
+<meta-data android:name="android.support.VERSION" android:value="25.3.1">
+</meta-data>
+</manifest>

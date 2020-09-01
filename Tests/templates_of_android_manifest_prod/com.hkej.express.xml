@@ -1,0 +1,74 @@
+<?xml version="1.0" ?><manifest android:installLocation="0" android:versionCode="2" android:versionName="2.0.7" package="com.hkej.express" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="14" android:targetSdkVersion="20">
+</uses-sdk>
+<supports-screens android:largeScreens="true" android:normalScreens="true" android:smallScreens="true" android:xlargeScreens="true">
+</supports-screens>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<application android:allowBackup="true" android:hardwareAccelerated="true" android:icon="@7F02008D" android:label="@7F05002A" android:name="com.hkej.express.ExpressApp" android:screenOrientation="1" android:theme="@android:01030007">
+<activity android:configChanges="0x000004A0" android:label="@7F05002A" android:launchMode="2" android:name="com.hkej.express.activities.MainActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x00000480" android:label="@7F05002A" android:launchMode="2" android:name="com.hkej.express.activities.RootActivity" android:screenOrientation="1" android:theme="@7F08004F">
+</activity>
+<activity android:label="@7F05002A" android:launchMode="2" android:name="com.hkej.express.activities.SeriesListActivity" android:screenOrientation="1" android:theme="@7F08004F">
+</activity>
+<activity android:label="@7F05003C" android:launchMode="2" android:name="com.hkej.express.activities.NewsDetailActivity" android:screenOrientation="1" android:theme="@7F080051">
+</activity>
+<activity android:label="@7F05003C" android:launchMode="2" android:name="com.hkej.express.activities.NewsStockDetailActivity" android:screenOrientation="1" android:theme="@7F080051">
+</activity>
+<activity android:label="@7F05002A" android:name="com.hkej.express.activities.TutorialActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F050037" android:launchMode="2" android:name="com.hkej.express.activities.CommentActivity" android:screenOrientation="1" android:theme="@7F080047">
+</activity>
+<activity android:label="@7F050038" android:launchMode="2" android:name="com.hkej.express.activities.ImageDetailActivity" android:screenOrientation="1" android:theme="@7F080049">
+</activity>
+<activity android:label="@7F05003D" android:launchMode="2" android:name="com.hkej.express.activities.SettingActivity" android:screenOrientation="1" android:theme="@7F080053">
+</activity>
+<activity android:label="@7F050035" android:launchMode="2" android:name="com.hkej.express.activities.AboutUsActivity" android:screenOrientation="1" android:theme="@7F080042">
+</activity>
+<activity android:configChanges="0x00000480" android:label="@7F050036" android:launchMode="2" android:name="com.hkej.express.activities.BrowserActivity" android:screenOrientation="1" android:theme="@7F080045">
+</activity>
+<activity android:configChanges="0x00000480" android:label="@7F05003A" android:launchMode="2" android:name="com.hkej.express.activities.market.MarketPushActivity" android:screenOrientation="1" android:theme="@7F08004B">
+</activity>
+<activity android:configChanges="0x00000480" android:label="@7F050039" android:launchMode="2" android:name="com.hkej.express.activities.market.ChartViewActivity" android:screenOrientation="6" android:theme="@android:0103006D">
+</activity>
+<provider android:authorities="com.hkej.express.articleprovider" android:enabled="true" android:exported="false" android:name="com.hkej.express.provider.ArticleProvider">
+</provider>
+<provider android:authorities="com.hkej.express.externalprovider" android:enabled="true" android:exported="false" android:name="com.hkej.express.provider.ExternalProvider">
+</provider>
+<service android:enabled="true" android:exported="false" android:name="com.hkej.express.BackgroundService">
+<intent-filter>
+<action android:name="com.hkej.express.ACTION_REFRESH_ALL">
+</action>
+<action android:name="com.hkej.express.ACTION_REFRESH_NEWS">
+</action>
+<action android:name="com.hkej.express.ACTION_REFRESH_CONFIG">
+</action>
+</intent-filter>
+</service>
+<receiver android:enabled="true" android:name="com.hkej.express.AlarmReceiver">
+<intent-filter>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+<action android:name="android.net.wifi.WIFI_STATE_CHANGED">
+</action>
+</intent-filter>
+</receiver>
+<meta-data android:name="com.google.android.gms.version" android:value="@7F090002">
+</meta-data>
+<activity android:configChanges="0x00000FB0" android:name="com.google.android.gms.ads.AdActivity">
+</activity>
+</application>
+</manifest>

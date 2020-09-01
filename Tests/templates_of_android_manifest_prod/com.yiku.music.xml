@@ -1,0 +1,54 @@
+<?xml version="1.0" ?><manifest android:versionCode="1" android:versionName="1.0" package="com.yiku.music" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="8" android:targetSdkVersion="17">
+</uses-sdk>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<application android:icon="@7F020029" android:label="@7F070001" android:name="BelmotPlayer">
+<activity android:name=".activity.SplashscreenActivity" android:screenOrientation="1" android:theme="@android:01030007">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:label="@7F070001" android:name=".activity.HomeActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:name=".activity.MenuActivity">
+</activity>
+<activity android:name=".activity.MenuListActivity">
+</activity>
+<activity android:name=".activity.MusicListActivity">
+</activity>
+<activity android:name=".activity.PlayerActivity" android:screenOrientation="1">
+</activity>
+<activity android:name=".activity.PlaylistActivity">
+</activity>
+<activity android:name=".activity.LocalMusicListActivity">
+</activity>
+<activity android:name=".activity.SearchMusicActivity">
+</activity>
+<provider android:authorities="com.yiku.music.db.databaseprovider" android:name=".db.DataBaseProvider">
+</provider>
+<activity android:configChanges="0x000000B0" android:label="@7F070002" android:name="com.rrgame.RGActivity">
+</activity>
+<service android:exported="false" android:name="com.rrgame.download.RGDownloadService">
+</service>
+</application>
+</manifest>

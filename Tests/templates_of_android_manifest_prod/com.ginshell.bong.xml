@@ -1,0 +1,520 @@
+<?xml version="1.0" ?><manifest android:versionCode="3050" android:versionName="3.0.5.0" package="com.ginshell.bong" platformBuildVersionCode="22" platformBuildVersionName="5.1.1-1819727" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="18" android:targetSdkVersion="22">
+</uses-sdk>
+<uses-feature android:name="android.hardware.bluetooth_le" android:required="true">
+</uses-feature>
+<uses-permission android:name="android.permission.BLUETOOTH">
+</uses-permission>
+<uses-permission android:name="android.permission.BLUETOOTH_ADMIN">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_CONTACTS">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_SMS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_SMS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_LOGS">
+</uses-permission>
+<uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS">
+</uses-permission>
+<uses-permission android:name="cn.bong.android.permission.EVENT">
+</uses-permission>
+<uses-permission android:name="android.permission.DISABLE_KEYGUARD">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="getui.permission.GetuiService.com.ginshell.bong">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-permission android:name="android.permission.RECORD_AUDIO">
+</uses-permission>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS">
+</uses-permission>
+<uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS">
+</uses-permission>
+<permission android:name="getui.permission.GetuiService.com.ginshell.bong" android:protectionLevel="0x00000000">
+</permission>
+<uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS">
+</uses-permission>
+<uses-permission android:name="android.permission.DEVICE_POWER">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_APN_SETTINGS">
+</uses-permission>
+<application android:allowBackup="true" android:icon="@7F020199" android:label="@7F0D003E" android:largeHeap="true" android:name="com.ginshell.bong.app.BongApp" android:theme="@7F060018">
+<meta-data android:name="EASEMOB_APPKEY" android:value="ginshell#bongapp">
+</meta-data>
+<meta-data android:name="QBSDKAppKey" android:value="fGKfogXluCGWPljfC5wWRYF4">
+</meta-data>
+<activity android:name="com.ginshell.bong.login.WelcomeActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000023">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:launchMode="2" android:name="com.ginshell.bong.TabActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000023">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:host="action" android:path="/home" android:scheme="bong">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:host="action" android:path="/addOn" android:scheme="bong">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:host="action" android:path="/im/home" android:scheme="bong">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.ginshell.bong.web.BongWebActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ginshell.bong.web.BongWebViewActivity" android:screenOrientation="1">
+</activity>
+<activity android:finishOnTaskLaunch="true" android:name="com.ginshell.bong.login.LoginActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000010">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:host="action" android:path="/login" android:scheme="bong">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.ginshell.bong.reg.Reg3PsdActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ginshell.bong.reg.Reg1PhoneActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ginshell.bong.reg.Reg6NameActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ginshell.bong.reg.Reg2CodeActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ginshell.bong.guider.GuiderActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ginshell.bong.guider.GuiderForXXActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ginshell.bong.password.PsdReset1PhoneActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ginshell.bong.password.PsdReset2CodeActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ginshell.bong.password.PsdReset3InputNewActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ginshell.bong.settings.TabSettingActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ginshell.bong.settings.SettingHomeActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ginshell.bong.settings.CommonSettingActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ginshell.bong.settings.DrawBongAnimationActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ginshell.bong.settings.SettingActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ginshell.bong.settings.AboutBongActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ginshell.bong.settings.ActPointActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ginshell.bong.settings.AlarmClockActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ginshell.bong.settings.UserAvatarActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ginshell.bong.settings.AlarmAddActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ginshell.bong.settings.UserAimActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ginshell.bong.settings.UserWeightAimActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ginshell.bong.settings.LightClockActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ginshell.bong.settings.YeskeyActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ginshell.bong.settings.UserHiNickActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000013">
+</activity>
+<activity android:name="com.ginshell.bong.settings.UserInfoActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:host="action" android:path="/userinfo" android:scheme="bong">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.ginshell.bong.active.BongChoiceActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:host="action" android:path="/bongscan" android:scheme="bong">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.ginshell.bong.active.BongBindActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ginshell.bong.active.Bong2BindActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ginshell.bong.active.BongXBindActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ginshell.bong.active.BongXXBindActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ginshell.bong.active.BongScanActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ginshell.bong.active.BongBindSucActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ginshell.bong.active.BongXBindSucActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ginshell.bong.settings.ModifyPhoneActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ginshell.bong.settings.ModifyPhoneCheckPasswordActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ginshell.bong.settings.BluetoothBroadcastActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ginshell.bong.settings.CropAvatarActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ginshell.bong.settings.MyProductActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ginshell.bong.settings.MessageNotifyActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ginshell.bong.settings.SettingBongVibrateForXXActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ginshell.bong.settings.MessageNotifySettingActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ginshell.bong.settings.SelectBongAnimationActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ginshell.bong.settings.SettingBongVibrateActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ginshell.bong.settings.TriggerSelectActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ginshell.bong.settings.EventSelectActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ginshell.bong.settings.SettingUserAimActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ginshell.bong.settings.BleAppCenterActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ginshell.bong.settings.SmartHomeCenterActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ginshell.bong.settings.ByHiNotifySettingActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ginshell.bong.settings.CountDownTimerForBongXXActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ginshell.bong.settings.MessageNotifyForBongXXActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ginshell.bong.settings.LongQuietSettingActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ginshell.bong.settings.SportWatchShowActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ginshell.bong.settings.BongAnimationLibraryActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ginshell.bong.settings.SettingLibraryActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ginshell.bong.settings.UserAimForXXActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ginshell.bong.settings.HiForBongXXActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ginshell.bong.settings.AboutHiActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ginshell.bong.settings.TiggerLightManagerActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ginshell.bong.settings.TiggerLightSettingActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ginshell.bong.settings.TiggerLightUserActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ginshell.bong.settings.TiggerLightSearchActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ginshell.bong.settings.TiggerLightChangeActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ginshell.bong.settings.TiggerLightPhoneActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:exported="true" android:launchMode="2" android:name="com.ginshell.sdk.wxapi.WXEntryActivity" android:theme="@android:01030010">
+</activity>
+<activity android:name="com.ginshell.bong.myapp.DaFeijiActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ginshell.bong.settings.AppLockChoiceActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ginshell.bong.settings.NoDisturbActivity" android:screenOrientation="1">
+</activity>
+<service android:name="no.nordicsemi.android.dfu.DfuBaseService">
+</service>
+<service android:name="com.ginshell.sdk.service.BongDaemonService">
+<intent-filter>
+<action android:name="cn.bong.android.action.command">
+</action>
+<data android:host="command" android:scheme="bong">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="cn.bong.android.action.polling">
+</action>
+</intent-filter>
+</service>
+<service android:name="com.litesuits.common.service.NotificationDetectService" android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE">
+<intent-filter>
+<action android:name="android.service.notification.NotificationListenerService">
+</action>
+</intent-filter>
+</service>
+<receiver android:name="com.ginshell.bong.receiver.SmsReceiver">
+</receiver>
+<receiver android:name="com.ginshell.bong.receiver.MsgCenterReceiver">
+<intent-filter>
+<action android:name="cn.bong.android.action.msg">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="cn.bong.android.mobile.msg">
+</action>
+</intent-filter>
+</receiver>
+<service android:name="com.easemob.chat.EMChatService">
+</service>
+<activity android:name="com.ginshell.sdk.login.QQLoginActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ginshell.curve.curve.BongDayActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ginshell.curve.curve.SubmitErrorActivity" android:screenOrientation="1">
+</activity>
+<meta-data android:name="com.amap.api.v2.apikey" android:value="1eaab69d19dbb5857fd9d02ca12b3370">
+</meta-data>
+<meta-data android:name="com.baidu.lbsapi.API_KEY" android:value="VaS7REK7VgyftgNjMBb2xmzf">
+</meta-data>
+<activity android:name="com.ginshell.bong.gps.SportRecordActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ginshell.bong.gps.OriginDataActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ginshell.bong.gps.GpsRecordSettingActivity" android:screenOrientation="1">
+</activity>
+<receiver android:name="com.ginshell.bong.gps.LbsReceiver">
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.ACTION_BATTERY_LOW">
+</action>
+<action android:name="android.intent.action.ACTION_BATTERY_OKAY">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.ACTION_POWER_CONNECTED">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.bluetooth.adapter.action.STATE_CHANGED">
+</action>
+</intent-filter>
+</receiver>
+<service android:enabled="true" android:name="com.baidu.location.f" android:process=":remote">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.ginshell.bong.gps.services.LbsBaiDuService" android:persistent="true">
+</service>
+<meta-data android:name="UMENG_APPKEY" android:value="5257808956240b9b92069a6f">
+</meta-data>
+<meta-data android:name="UMENG_CHANNEL" android:value="bongcn">
+</meta-data>
+<activity android:name="com.ginshell.sdk.sdk.tips.ImageTipActivity" android:screenOrientation="1" android:theme="@7F060016">
+</activity>
+<activity android:name="com.ginshell.sdk.BongTogetherWebViewActivity" android:screenOrientation="1" android:theme="@7F060016">
+</activity>
+<activity android:name="com.ginshell.sdk.lock.AppLockActivity" android:screenOrientation="1" android:theme="@7F060018">
+</activity>
+<activity android:name="com.ginshell.sdk.sdk.tips.LoginTipsActivity" android:screenOrientation="1" android:theme="@7F060017">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:host="action" android:path="/login_tips" android:scheme="bong">
+</data>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x00000090" android:launchMode="2" android:name="com.umeng.socialize.view.ShareActivity" android:noHistory="true" android:theme="@7F060052" android:windowSoftInputMode="0x00000014">
+</activity>
+<activity android:launchMode="2" android:name="com.tencent.tauth.AuthActivity" android:noHistory="true">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="tencent1101738654">
+</data>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.tencent.connect.common.AssistActivity" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<activity android:launchMode="1" android:name="com.ginshell.social.social.pk.BongPksActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:host="action" android:path="/pk/home" android:scheme="bong">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.ginshell.social.social.pk.FriendsActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ginshell.social.social.pk.UserProfileActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ginshell.social.social.NewUserProfileActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:host="friend" android:scheme="bong">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.ginshell.social.social.pk.ContactActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name="com.ginshell.social.social.pk.NewFriendsActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:host="action" android:path="/pk/new" android:scheme="bong">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.ginshell.social.social.pk.ShareActivity" android:screenOrientation="1" android:theme="@7F06005A">
+</activity>
+<activity android:launchMode="1" android:name="com.ginshell.social.im.ImSessionActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.ginshell.social.im.ImFriendActivity" android:screenOrientation="1" android:theme="@7F060060" android:windowSoftInputMode="0x00000023">
+</activity>
+<activity android:name="com.ginshell.social.im.ImSelectFriendActivity" android:screenOrientation="1" android:theme="@7F060060" android:windowSoftInputMode="0x00000023">
+</activity>
+<activity android:name="com.ginshell.social.im.SelectFriendForResultActivity" android:screenOrientation="1" android:theme="@7F060060" android:windowSoftInputMode="0x00000023">
+</activity>
+<activity android:name="com.ginshell.social.im.ImTogetherSleepFriendActivity" android:screenOrientation="1" android:theme="@7F060060" android:windowSoftInputMode="0x00000023">
+</activity>
+<activity android:name="com.ginshell.social.im.ImTogetherSportFriendActivity" android:screenOrientation="1" android:theme="@7F060060" android:windowSoftInputMode="0x00000023">
+</activity>
+<activity android:name="com.ginshell.social.im.ImSettingActivity" android:screenOrientation="1" android:theme="@7F060060" android:windowSoftInputMode="0x00000023">
+</activity>
+<activity android:launchMode="1" android:name="com.ginshell.social.im.ChatActivity" android:screenOrientation="1" android:theme="@7F060060" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.ginshell.social.im.AddContactActivity" android:screenOrientation="1" android:theme="@7F060060">
+</activity>
+<activity android:name="com.ginshell.social.im.GroupDetailsActivity" android:screenOrientation="1" android:theme="@7F060060">
+</activity>
+<activity android:name="com.ginshell.social.im.GroupsActivity" android:screenOrientation="1" android:theme="@7F060060" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:name="com.ginshell.social.im.NewGroupActivity" android:screenOrientation="1" android:theme="@7F060060" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:name="com.ginshell.social.im.ExitGroupDialog" android:screenOrientation="1" android:theme="@7F060035">
+</activity>
+<activity android:name="com.ginshell.social.im.GroupPickContactsActivity" android:screenOrientation="1" android:theme="@7F060060" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:name="com.ginshell.social.im.NewFriendsMsgActivity" android:screenOrientation="1" android:theme="@7F060060">
+</activity>
+<activity android:name="com.ginshell.social.im.ForwardMessageActivity" android:screenOrientation="1" android:theme="@7F060060" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:name="com.ginshell.social.im.ContextMenu" android:screenOrientation="1" android:theme="@7F060034">
+</activity>
+<activity android:name="com.ginshell.social.im.AlertDialog" android:screenOrientation="1" android:theme="@7F060034">
+</activity>
+<activity android:name="com.ginshell.social.im.ShowBigImage" android:screenOrientation="1" android:theme="@7F060060">
+</activity>
+<activity android:name="com.ginshell.social.im.ShowNormalFileActivity" android:screenOrientation="1" android:theme="@7F060060">
+</activity>
+<activity android:name="com.ginshell.social.im.BlacklistActivity" android:screenOrientation="1" android:theme="@7F060060">
+</activity>
+<activity android:name="com.ginshell.social.im.PublicGroupsActivity" android:screenOrientation="1" android:theme="@7F060060" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:name="com.ginshell.social.im.VoiceCallActivity" android:screenOrientation="1" android:theme="@7F060062">
+</activity>
+<activity android:name="com.ginshell.social.im.GroupSimpleDetailActivity" android:screenOrientation="1" android:theme="@7F060060">
+</activity>
+<activity android:name="com.ginshell.social.im.GroupBlacklistActivity" android:screenOrientation="1" android:theme="@7F060060">
+</activity>
+<activity android:name="com.ginshell.social.im.EditActivity" android:screenOrientation="1" android:theme="@7F060060" android:windowSoftInputMode="0x00000004">
+</activity>
+<activity android:name="com.ginshell.social.im.ShowVideoActivity" android:screenOrientation="1" android:theme="@7F060060" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.ginshell.social.im.ImageGridActivity" android:screenOrientation="1" android:theme="@7F060060" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.ginshell.social.im.RecorderVideoActivity" android:screenOrientation="1" android:theme="@7F060060" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.ginshell.social.im.DiagnoseActivity" android:screenOrientation="1" android:theme="@7F060060" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:launchMode="2" android:name="com.ginshell.social.social.hi.HiFriendListActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="2" android:name="com.ginshell.social.social.hi.HiListActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ginshell.social.im.HiFriendContactActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000023">
+</activity>
+<receiver android:name="com.easemob.chat.StartServiceReceiver">
+<intent-filter android:priority="1000">
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+<action android:name="android.intent.action.QUICKBOOT_POWERON">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</receiver>
+</application>
+</manifest>

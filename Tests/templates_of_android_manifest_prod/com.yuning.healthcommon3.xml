@@ -1,0 +1,142 @@
+<?xml version="1.0" ?><manifest android:versionCode="1" android:versionName="1.0" package="com.yuning.healthcommon3" platformBuildVersionCode="19" platformBuildVersionName="4.4.2-1456859" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="18" android:targetSdkVersion="18">
+</uses-sdk>
+<uses-feature android:name="android.hardware.bluetooth_le" android:required="true">
+</uses-feature>
+<uses-permission android:name="android.permission.BLUETOOTH">
+</uses-permission>
+<uses-permission android:name="android.permission.BLUETOOTH_ADMIN">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.RECORD_AUDIO">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_CONFIGURATION">
+</uses-permission>
+<application android:allowBackup="true" android:icon="@7F020027" android:label="@7F080000" android:largeHeap="true" android:theme="@7F090002">
+<activity android:label="@7F080000" android:name="com.yuning.activity.MainActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:label="@7F080000" android:name="com.yuning.activity.TherapyMode" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F080000" android:name="com.yuning.activity.MassageMode" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F080000" android:name="com.yuning.activity.MusicMode" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F080000" android:name="com.yuning.activity.MusicAdd" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F080000" android:name="com.yuning.activity.DanceMode" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F080000" android:name="com.yuning.activity.SetMode" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F080000" android:name="com.yuning.activity.FwUpdateActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F080000" android:name="com.yuning.activity.About" android:screenOrientation="1">
+</activity>
+<service android:enabled="true" android:name="com.yuning.Service.BluetoothLeService">
+</service>
+<service android:enabled="true" android:name="com.yuning.Service.MusicPlayService">
+</service>
+<receiver android:exported="false" android:name="com.umeng.message.NotificationProxyBroadcastReceiver">
+</receiver>
+<receiver android:name="com.umeng.message.RegistrationReceiver">
+<intent-filter>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_REMOVED">
+</action>
+<data android:scheme="package">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name="com.umeng.message.UmengBroadcastReceiver">
+<intent-filter>
+<action android:name="org.agoo.android.intent.action.RECEIVE">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="com.yuning.healthcommon.intent.action.COMMAND">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="org.agoo.android.intent.action.RE_ELECTION_V2">
+</action>
+</intent-filter>
+</receiver>
+<service android:exported="true" android:name="com.umeng.message.UmengService" android:process=":umengService_v1">
+<intent-filter>
+<action android:name="com.yuning.healthcommon.intent.action.START">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="com.yuning.healthcommon.intent.action.COCKROACH">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="org.agoo.android.intent.action.PING">
+</action>
+</intent-filter>
+</service>
+<service android:exported="true" android:name="org.android.agoo.service.ElectionService" android:process=":umengService_v1">
+<intent-filter>
+<action android:name="org.agoo.android.intent.action.ELECTION_V2">
+</action>
+</intent-filter>
+</service>
+<service android:name="com.umeng.message.UmengIntentService">
+</service>
+<service android:name="com.umeng.message.UmengDownloadResourceService">
+</service>
+<service android:name="com.umeng.update.net.DownloadingService" android:process=":DownloadingService">
+</service>
+<activity android:name="com.umeng.update.UpdateDialogActivity" android:theme="@android:01030010">
+</activity>
+<activity android:name=".analytics.WebviewAnalytic">
+</activity>
+<activity android:name=".analytics.FragmentStack">
+</activity>
+<activity android:name=".analytics.FragmentTabs">
+</activity>
+<meta-data android:name="UMENG_APPKEY" android:value="579ec17767e58e42360000d0">
+</meta-data>
+<meta-data android:name="UMENG_MESSAGE_SECRET" android:value="b0222ff6f9f1144e75ec7ff86d82f018">
+</meta-data>
+<meta-data android:name="UMENG_CHANNEL" android:value="Myself">
+</meta-data>
+</application>
+</manifest>

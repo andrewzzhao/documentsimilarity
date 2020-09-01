@@ -1,0 +1,176 @@
+<?xml version="1.0" ?><manifest android:installLocation="0" android:versionCode="25" android:versionName="1.5" package="aidushuba.dxll" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:maxSdkVersion="10" android:minSdkVersion="4">
+</uses-sdk>
+<supports-screens android:anyDensity="true" android:largeScreens="true" android:normalScreens="true" android:smallScreens="true">
+</supports-screens>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.FLASHLIGHT">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<application android:debuggable="true" android:icon="@7F020014" android:label="@7F060000" android:name="org.geometerplus.zlibrary.ui.android.library.ZLAndroidApplication">
+<activity android:configChanges="0x000000A0" android:label="YYReader crash" android:name="org.geometerplus.zlibrary.ui.android.library.BugReportActivity" android:process=":crash">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="org.geometerplus.android.fbreader.crash.FixBooksDirectoryActivity" android:process=":crash" android:theme="@android:0103000B">
+<intent-filter>
+<action android:name="android.fbreader.action.CRASH">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:scheme="CachedCharStorageException">
+</data>
+</intent-filter>
+</activity>
+<service android:name="org.geometerplus.android.fbreader.api.ApiService">
+<intent-filter>
+<action android:name="android.fbreader.action.API">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</service>
+<activity android:label="@7F060000" android:name="com.picaso.mm.MenuX">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000A0" android:launchMode="2" android:name="com.nd.dianjin.activity.OfferAppActivity">
+</activity>
+<activity android:configChanges="0x000000A0" android:launchMode="1" android:name="com.nd.dianjin.activity.DownloadManagerActivity">
+</activity>
+<activity android:configChanges="0x000000A0" android:launchMode="1" android:name="com.nd.dianjin.activity.DetailActivity" android:theme="@android:01030009">
+</activity>
+<service android:name="com.nd.dianjin.service.PackageChangedService">
+</service>
+<service android:name="com.nd.dianjin.appdownload.DownloadService">
+<intent-filter>
+<action android:name="aidushuba.dxll">
+</action>
+</intent-filter>
+</service>
+<activity android:configChanges="0x000000A0" android:icon="@7F020014" android:label="@7F060000" android:launchMode="2" android:name="org.geometerplus.android.fbreader.FBReader">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:host="" android:scheme="file">
+</data>
+<data android:pathPattern=".*\.epub">
+</data>
+<data android:pathPattern=".*\.oeb">
+</data>
+<data android:pathPattern=".*\.fb2">
+</data>
+<data android:pathPattern=".*\.fb2\.zip">
+</data>
+<data android:pathPattern=".*\.mobi">
+</data>
+<data android:pathPattern=".*\.prc">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:host="" android:mimeType="text/plain" android:scheme="file">
+</data>
+<data android:pathPattern=".*\.epub">
+</data>
+<data android:pathPattern=".*\.oeb">
+</data>
+<data android:pathPattern=".*\.fb2">
+</data>
+<data android:pathPattern=".*\.mobi">
+</data>
+<data android:pathPattern=".*\.prc">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:pathPattern=".*\.fb2" android:scheme="content">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="" android:scheme="file">
+</data>
+<data android:mimeType="application/epub+zip">
+</data>
+<data android:mimeType="application/x-pilot-prc">
+</data>
+<data android:mimeType="application/x-mobipocket-ebook">
+</data>
+<data android:mimeType="application/x-fictionbook+xml">
+</data>
+<data android:mimeType="application/x-fictionbook">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.SEARCH">
+</action>
+</intent-filter>
+<meta-data android:name="android.app.searchable" android:resource="@7F040000">
+</meta-data>
+</activity>
+<activity android:configChanges="0x000000A0" android:name="org.geometerplus.android.fbreader.CancelActivity" android:theme="@android:0103000B">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="org.geometerplus.android.fbreader.image.ImageViewActivity" android:process=":imageView">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="org.geometerplus.android.fbreader.library.BookInfoActivity" android:process=":library">
+</activity>
+<receiver android:name="org.geometerplus.android.fbreader.library.KillerCallback" android:process=":library">
+</receiver>
+<activity android:configChanges="0x000000A0" android:launchMode="2" android:name="org.geometerplus.android.fbreader.library.LibraryActivity" android:process=":library">
+<intent-filter>
+<action android:name="android.intent.action.SEARCH">
+</action>
+</intent-filter>
+<meta-data android:name="android.app.searchable" android:resource="@7F040000">
+</meta-data>
+</activity>
+<activity android:configChanges="0x000000A0" android:name="org.geometerplus.android.fbreader.TOCActivity">
+</activity>
+<activity android:configChanges="0x000000A0" android:launchMode="2" android:name="org.geometerplus.android.fbreader.BookmarksActivity">
+<intent-filter>
+<action android:name="android.intent.action.SEARCH">
+</action>
+</intent-filter>
+<meta-data android:name="android.app.searchable" android:resource="@7F040000">
+</meta-data>
+</activity>
+<activity android:configChanges="0x000000A0" android:name="org.geometerplus.android.fbreader.BookmarkEditActivity" android:theme="@android:0103000B">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="org.geometerplus.android.fbreader.preferences.PreferenceActivity">
+</activity>
+</application>
+</manifest>

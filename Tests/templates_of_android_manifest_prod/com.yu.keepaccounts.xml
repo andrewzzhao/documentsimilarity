@@ -1,0 +1,130 @@
+<?xml version="1.0" ?><manifest android:compileSdkVersion="28" android:compileSdkVersionCodename="9" android:versionCode="72" android:versionName="4.8.3.2" package="com.yu.keepaccounts" platformBuildVersionCode="72" platformBuildVersionName="4.8.3.2" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="16" android:targetSdkVersion="26">
+</uses-sdk>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.USE_FINGERPRINT">
+</uses-permission>
+<uses-permission android:name="android.permission.USE_BIOMETRIC">
+</uses-permission>
+<uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES">
+</uses-permission>
+<uses-permission android:name="android.permission.SET_WALLPAPER">
+</uses-permission>
+<uses-permission android:name="android.permission.SET_WALLPAPER_HINTS">
+</uses-permission>
+<application android:allowBackup="false" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:icon="@7F0E0002" android:label="@7F0F001D" android:name="com.stub.StubApp" android:supportsRtl="true" android:theme="@7F10000E">
+<meta-data android:name="android.max_aspect" android:value="2.100000">
+</meta-data>
+<activity android:label="@7F0F001D" android:name="com.yu.keepaccounts.ui.activity.Welcome" android:screenOrientation="1">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+</intent-filter>
+<meta-data android:name="android.app.shortcuts" android:resource="@7F120000">
+</meta-data>
+</activity>
+<activity android:name="com.yu.keepaccounts.TestMainActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.yu.keepaccounts.main.old.MainActivity" android:screenOrientation="1">
+</activity>
+<receiver android:icon="@7F0E0002" android:name="com.yu.keepaccounts.app_widget.YuAppWidgetProvider">
+<meta-data android:name="android.appwidget.provider" android:resource="@7F120001">
+</meta-data>
+<intent-filter>
+<action android:name="com.yu.broadcast.action.UPDATE_APP_WIDGET">
+</action>
+<action android:name="android.appwidget.action.APPWIDGET_UPDATE">
+</action>
+</intent-filter>
+</receiver>
+<activity android:name="com.yu.modules.accounting.Charge" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.yu.intent.Charge">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:name="com.yu.keepaccounts.libcommon.widget.ImageDetail" android:screenOrientation="1">
+</activity>
+<activity android:name="com.yu.keepaccounts.ui.activity.GesturePassActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.yu.keepaccounts.ui.activity.UserInfoActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.yu.keepaccounts.ui.activity.RankingList" android:screenOrientation="1">
+</activity>
+<activity android:name="com.yu.keepaccounts.app_widget.TempClass" android:screenOrientation="1">
+</activity>
+<activity android:name="com.yu.keepaccounts.ui.activity.ResetPass" android:screenOrientation="1">
+</activity>
+<activity android:name="com.yu.modules.accounting.template.ChargeTemplateActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.yu.intent.ChargeTemplate">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:name="com.yu.modules.biz.detail.DetailRootActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.yu.intent.Detail">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:name="com.yu.keepaccounts.libcommon.baseui.FragmentRootActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.yu.plugin.root.activity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:name="com.yu.modules.biz.tables.TableRootActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.yu.intent.Table">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:name="com.yu.modules.biz.community.CommunityRootActivity" android:screenOrientation="1">
+</activity>
+<meta-data android:name="leancloud" android:value="LeanCloud">
+</meta-data>
+<meta-data android:name="android.support.VERSION" android:value="26.1.0">
+</meta-data>
+<provider android:authorities="com.yu.keepaccounts.yu.self.fileprovider" android:exported="false" android:grantUriPermissions="true" android:name="com.yu.keepaccounts.libcommon.utils.KeepAccountsFileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F120002">
+</meta-data>
+</provider>
+<activity android:name="com.yu.modules.wallpaper.WallpaperActivity">
+</activity>
+<activity android:multiprocess="true" android:name="com.yu.bundles.album.preview.ImagePreviewActivity" android:screenOrientation="1" android:theme="@7F100246">
+</activity>
+<activity android:multiprocess="true" android:name="com.yu.bundles.album.image.ImageCursorActivity" android:screenOrientation="1" android:theme="@7F100246">
+</activity>
+<activity android:multiprocess="true" android:name="com.yu.bundles.album.preview.ImagePreviewOuter2Activity" android:screenOrientation="1" android:theme="@7F100246">
+</activity>
+<provider android:authorities="com.yu.keepaccounts.yu.bundles.album.fileprovider" android:exported="false" android:grantUriPermissions="true" android:name="com.yu.bundles.album.preview.MaeBundleAlbumProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F120003">
+</meta-data>
+</provider>
+</application>
+</manifest>

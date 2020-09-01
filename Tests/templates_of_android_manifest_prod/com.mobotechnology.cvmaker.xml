@@ -1,0 +1,198 @@
+<?xml version="1.0" ?><manifest android:compileSdkVersion="28" android:compileSdkVersionCodename="9" android:versionCode="3000169" android:versionName="9.0.0.pro" package="com.mobotechnology.cvmaker" platformBuildVersionCode="3000169" platformBuildVersionName="9.0.0.pro" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="15" android:targetSdkVersion="28">
+</uses-sdk>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="com.android.vending.BILLING">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.MANAGE_DOCUMENTS">
+</uses-permission>
+<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES">
+</uses-permission>
+<uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE">
+</uses-permission>
+<application android:allowBackup="true" android:appComponentFactory="android.support.v4.app.CoreComponentFactory" android:hardwareAccelerated="true" android:icon="@7F0E0002" android:label="Resume Builder Pro" android:name="com.mobotechnology.cvmaker.singleton.AppSingleton" android:supportsRtl="true" android:theme="@7F100006">
+<meta-data android:name="com.google.android.gms.ads.APPLICATION_ID" android:value="ca-app-pub-9162944906946983~1561140091">
+</meta-data>
+<service android:name="com.mobotechnology.cvmaker.singleton.AdsServices">
+</service>
+<service android:name="com.mobotechnology.cvmaker.fcm.MyFirebaseMessagingService">
+<intent-filter>
+<action android:name="com.google.firebase.MESSAGING_EVENT">
+</action>
+</intent-filter>
+</service>
+<service android:name="com.mobotechnology.cvmaker.fcm.MyFirebaseInstanceIDService">
+<intent-filter>
+<action android:name="com.google.firebase.INSTANCE_ID_EVENT">
+</action>
+</intent-filter>
+</service>
+<meta-data android:name="firebase_performance_logcat_enabled" android:value="true">
+</meta-data>
+<meta-data android:name="firebase_crashlytics_collection_enabled" android:value="false">
+</meta-data>
+<meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@7F0F00E4">
+</meta-data>
+<activity android:configChanges="0x000005B0" android:label="@7F0F0041" android:name="com.facebook.FacebookActivity" android:theme="@7F10021D">
+</activity>
+<provider android:authorities="com.mobotechnology.cvmaker.provider" android:exported="false" android:grantUriPermissions="true" android:name="android.support.v4.content.FileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F120000">
+</meta-data>
+</provider>
+<activity android:name="com.yalantis.ucrop.UCropActivity" android:screenOrientation="1" android:theme="@7F1000CA">
+</activity>
+<activity android:name="com.mobotechnology.cvmaker.module.other.slider.SliderActivity" android:screenOrientation="1" android:theme="@7F100008">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:label="@7F0F020D" android:name="com.mobotechnology.cvmaker.module.sign_in.login.LoginActivity" android:screenOrientation="1" android:theme="@7F1000CA">
+</activity>
+<activity android:label="@7F0F020E" android:name="com.mobotechnology.cvmaker.module.other.exported_resume.ExportedResumeActivity" android:screenOrientation="1" android:theme="@7F1000CB">
+</activity>
+<activity android:label="@7F0F020F" android:name="com.mobotechnology.cvmaker.module.resume_preview.ResumePreviewActivity" android:screenOrientation="1" android:theme="@7F1000CA">
+</activity>
+<activity android:label="Resume Builder Pro" android:name="com.mobotechnology.cvmaker.module.home_section.SectionActivity" android:screenOrientation="1" android:theme="@7F1000CA">
+</activity>
+<activity android:label="@7F0F0216" android:name="com.mobotechnology.cvmaker.module.other.list_template.TemplateChooserActivity" android:screenOrientation="1" android:theme="@7F1000CA">
+</activity>
+<activity android:label="@7F0F0205" android:name="com.mobotechnology.cvmaker.module.form.about.AboutActivity" android:screenOrientation="1" android:theme="@7F1000CA" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:label="@7F0F020A" android:name="com.mobotechnology.cvmaker.module.form.education.EducationActivity" android:screenOrientation="1" android:theme="@7F1000CA" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:label="@7F0F0208" android:name="com.mobotechnology.cvmaker.module.form.other_info.AdditionalInfoActivity" android:screenOrientation="1" android:theme="@7F1000CA" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:label="@7F0F020B" android:name="com.mobotechnology.cvmaker.module.form.experience.ExperienceActivity" android:screenOrientation="1" android:theme="@7F1000CA" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:label="@7F0F0210" android:name="com.mobotechnology.cvmaker.module.form.projects.ProjectActivity" android:screenOrientation="1" android:theme="@7F1000CA" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:label="@7F0F0212" android:name="com.mobotechnology.cvmaker.module.send_resume.SendActivity" android:screenOrientation="1" android:theme="@7F1000CA">
+</activity>
+<activity android:label="@7F0F0209" android:name="com.mobotechnology.cvmaker.module.form.cover_letter.CoverLetterActivity" android:screenOrientation="1" android:theme="@7F1000CA" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:label="@7F0F020C" android:name="com.mobotechnology.cvmaker.module.other.interview_qn.InterviewQnActivity" android:screenOrientation="1" android:theme="@7F1000CD">
+</activity>
+<activity android:label="@7F0F021A" android:name="com.mobotechnology.cvmaker.module.other.open_website.WebsiteActivity" android:screenOrientation="1" android:theme="@7F1000CA">
+</activity>
+<activity android:label="@7F0F0215" android:name="com.mobotechnology.cvmaker.module.premium.SubscribeActivity" android:screenOrientation="1" android:theme="@7F1000CA">
+</activity>
+<activity android:label="@7F0F01C2" android:name="com.mobotechnology.cvmaker.module.other.app_feedback.FeedbackActivity" android:screenOrientation="1" android:theme="@7F1000CA" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:label="@7F0F01A8" android:name="com.mobotechnology.cvmaker.module.settings.settings_resume.activity.ResumeSettingsActivity" android:theme="@7F1000CA">
+<intent-filter>
+<action android:name="activity_settings.SettingsActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:label="@7F0F0218" android:name="com.mobotechnology.cvmaker.module.settings.settings_user.UserSettings" android:theme="@7F1000CA">
+</activity>
+<activity android:label="@7F0F0219" android:name="com.mobotechnology.cvmaker.module.form.signature.UserSignatureActivity" android:screenOrientation="1" android:theme="@7F1000CA" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:label="@7F0F00F5" android:name="com.mobotechnology.cvmaker.module.settings.settings_fonts.FontsSettingActivity" android:screenOrientation="1" android:theme="@7F1000CA" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:label="@7F0F0207" android:name="com.mobotechnology.cvmaker.module.sign_in.account.AccountActivity" android:screenOrientation="1" android:theme="@7F1000CA">
+</activity>
+<activity android:label="@7F0F0206" android:name="com.mobotechnology.cvmaker.module.sign_in.about_app.AboutAppActivity" android:theme="@7F1000CA">
+</activity>
+<activity android:label="@7F0F0217" android:name="com.mobotechnology.cvmaker.module.other.tutorial.TutorialActivity" android:theme="@7F10019B">
+</activity>
+<activity android:label="@7F0F0063" android:name="com.mobotechnology.cvmaker.module.other.list_cover_letter.LetterListingActivity" android:theme="@7F1000CA">
+</activity>
+<activity android:name="com.facebook.CustomTabMainActivity">
+</activity>
+<activity android:name="com.facebook.CustomTabActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.facebook.ads.AudienceNetworkActivity">
+</activity>
+<activity android:excludeFromRecents="true" android:exported="false" android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity" android:theme="@android:01030010">
+</activity>
+<service android:exported="true" android:name="com.google.android.gms.auth.api.signin.RevocationBoundService" android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION">
+</service>
+<activity android:excludeFromRecents="true" android:exported="true" android:launchMode="2" android:name="com.google.firebase.auth.internal.FederatedSignInActivity" android:permission="com.google.firebase.auth.api.gms.permission.LAUNCH_FEDERATED_SIGN_IN" android:theme="@android:01030010">
+</activity>
+<service android:exported="false" android:name="com.google.firebase.components.ComponentDiscoveryService">
+<meta-data android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar" android:value="com.google.firebase.components.ComponentRegistrar">
+</meta-data>
+<meta-data android:name="com.google.firebase.components:com.google.firebase.perf.component.FirebasePerfRegistrar" android:value="com.google.firebase.components.ComponentRegistrar">
+</meta-data>
+<meta-data android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar" android:value="com.google.firebase.components.ComponentRegistrar">
+</meta-data>
+<meta-data android:name="com.google.firebase.components:com.google.firebase.iid.Registrar" android:value="com.google.firebase.components.ComponentRegistrar">
+</meta-data>
+</service>
+<service android:exported="true" android:name="com.google.firebase.messaging.FirebaseMessagingService">
+<intent-filter android:priority="-500">
+<action android:name="com.google.firebase.MESSAGING_EVENT">
+</action>
+</intent-filter>
+</service>
+<provider android:authorities="com.mobotechnology.cvmaker.firebaseperfprovider" android:exported="false" android:initOrder="101" android:name="com.google.firebase.perf.provider.FirebasePerfProvider">
+</provider>
+<receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementReceiver">
+</receiver>
+<receiver android:enabled="true" android:exported="true" android:name="com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver" android:permission="android.permission.INSTALL_PACKAGES">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementService">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementJobService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<receiver android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+</intent-filter>
+</receiver>
+<service android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdService">
+<intent-filter android:priority="-500">
+<action android:name="com.google.firebase.INSTANCE_ID_EVENT">
+</action>
+</intent-filter>
+</service>
+<activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x00000FB0" android:exported="false" android:name="com.google.android.gms.ads.AdActivity" android:theme="@android:0103000F">
+</activity>
+<provider android:authorities="com.mobotechnology.cvmaker.mobileadsinitprovider" android:exported="false" android:initOrder="100" android:name="com.google.android.gms.ads.MobileAdsInitProvider">
+</provider>
+<provider android:authorities="com.mobotechnology.cvmaker.firebaseinitprovider" android:exported="false" android:initOrder="100" android:name="com.google.firebase.provider.FirebaseInitProvider">
+</provider>
+<meta-data android:name="com.google.android.gms.version" android:value="@7F0A0009">
+</meta-data>
+<provider android:authorities="com.mobotechnology.cvmaker.crashlyticsinitprovider" android:exported="false" android:initOrder="90" android:name="com.crashlytics.android.CrashlyticsInitProvider">
+</provider>
+<provider android:authorities="com.mobotechnology.cvmaker.MarketingInitProvider" android:exported="false" android:name="com.facebook.marketing.internal.MarketingInitProvider">
+</provider>
+<provider android:authorities="com.mobotechnology.cvmaker.FacebookInitProvider" android:exported="false" android:name="com.facebook.internal.FacebookInitProvider">
+</provider>
+<receiver android:exported="false" android:name="com.facebook.CurrentAccessTokenExpirationBroadcastReceiver">
+<intent-filter>
+<action android:name="com.facebook.sdk.ACTION_CURRENT_ACCESS_TOKEN_CHANGED">
+</action>
+</intent-filter>
+</receiver>
+</application>
+</manifest>

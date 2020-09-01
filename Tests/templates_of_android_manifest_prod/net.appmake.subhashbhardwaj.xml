@@ -1,0 +1,98 @@
+<?xml version="1.0" ?><manifest android:versionCode="101" android:versionName="2.0" package="net.appmake.subhashbhardwaj" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="9" android:targetSdkVersion="18">
+</uses-sdk>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE">
+</uses-permission>
+<permission android:name="net.appmake.subhashbhardwaj.permission.C2D_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="net.appmake.subhashbhardwaj.permission.C2D_MESSAGE">
+</uses-permission>
+<application android:allowBackup="false" android:icon="@7F020035" android:label="@7F070033" android:name="net.appmake.subhashbhardwaj.Application" android:theme="@7F0B0001">
+<meta-data android:name="com.google.android.gms.version" android:value="@7F080000">
+</meta-data>
+<activity android:configChanges="0x000000A0" android:label="@7F070033" android:name="net.appmake.subhashbhardwaj.Splash" android:screenOrientation="1" android:theme="@android:01030007">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F070033" android:name="net.appmake.subhashbhardwaj.IbWebViewer" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F070033" android:name="net.appmake.subhashbhardwaj.UserQuestion" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F070033" android:name="net.appmake.subhashbhardwaj.youtube.YoutubePlayer" android:screenOrientation="5" android:theme="@android:01030006">
+<meta-data android:name="minVersion" android:value="8">
+</meta-data>
+</activity>
+<receiver android:name="net.appmake.subhashbhardwaj.MyBroadcastReceiver">
+<intent-filter android:priority="99999999">
+<action android:name="android.net.appmake.subhashbhardwaj.receiver1">
+</action>
+<action android:name="android.net.appmake.subhashbhardwaj.receiver2">
+</action>
+<action android:name="android.net.appmake.subhashbhardwaj.receiver3">
+</action>
+<action android:name="android.net.appmake.subhashbhardwaj.receiver4">
+</action>
+</intent-filter>
+</receiver>
+<service android:name="com.parse.PushService">
+</service>
+<receiver android:name="com.parse.ParseBroadcastReceiver">
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+<action android:name="android.intent.action.USER_PRESENT">
+</action>
+<action android:name="android.intent.action.RECEIVE_BOOT_COMPLETED">
+</action>
+<action android:name="android.intent.action.QUICKBOOT_POWERON">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</receiver>
+<receiver android:name="com.parse.GcmBroadcastReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+<action android:name="com.google.android.c2dm.intent.REGISTRATION">
+</action>
+<category android:name="net.appmake.subhashbhardwaj">
+</category>
+</intent-filter>
+</receiver>
+<receiver android:exported="false" android:name="net.appmake.subhashbhardwaj.MyParsePushBroadcastReceiver">
+<intent-filter>
+<action android:name="com.parse.push.intent.RECEIVE">
+</action>
+<action android:name="com.parse.push.intent.OPEN">
+</action>
+<action android:name="com.parse.push.intent.DELETE">
+</action>
+</intent-filter>
+</receiver>
+<meta-data android:name="com.parse.push.gcm_sender_id" android:value="id:278665066893">
+</meta-data>
+</application>
+</manifest>

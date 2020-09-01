@@ -1,0 +1,161 @@
+<?xml version="1.0" ?><manifest android:versionCode="19" android:versionName="2.0.6" package="in.truzio.uzzmevendorapp" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="17" android:targetSdkVersion="25">
+</uses-sdk>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.CALL_PHONE">
+</uses-permission>
+<uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES">
+</uses-permission>
+<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_SMS">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_SMS">
+</uses-permission>
+<uses-permission android:name="in.truzio.UzzMeVendorApp.permission.MAPS_RECEIVE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_CONTACTS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_CONTACTS">
+</uses-permission>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-permission android:name="android.permission.MANAGE_DOCUMENTS">
+</uses-permission>
+<uses-feature android:name="android.hardware.camera" android:required="true">
+</uses-feature>
+<permission android:name="in.truzio.uzzmevendorapp.permission.MAPS_RECEIVE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-feature android:glEsVersion="0x00020000" android:required="true">
+</uses-feature>
+<permission android:name="in.truzio.uzzmevendorapp.permission.C2D_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="in.truzio.uzzmevendorapp.permission.C2D_MESSAGE">
+</uses-permission>
+<application android:allowBackup="true" android:icon="@7F0800BA" android:label="@7F0E002E" android:largeHeap="true" android:name="in.truzio.uzzmevendorapp.app.App" android:supportsRtl="true" android:theme="@7F0F0005">
+<uses-library android:name="com.google.android.maps">
+</uses-library>
+<activity android:name="in.truzio.uzzmevendorapp.activity.SplashActivity" android:screenOrientation="1" android:theme="@7F0F011E">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<action android:name="android.intent.action.SEND_MULTIPLE">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:name="in.truzio.uzzmevendorapp.activity.LoginActivity" android:screenOrientation="1" android:theme="@7F0F011E" android:windowSoftInputMode="0x00000005">
+</activity>
+<activity android:label="Vendor Information" android:name="in.truzio.uzzmevendorapp.activity.VendorInformationActivity" android:screenOrientation="1" android:theme="@7F0F011E" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:label="Inbox" android:name="in.truzio.uzzmevendorapp.activity.InboxActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="About Us" android:name="in.truzio.uzzmevendorapp.activity.AboutActivity" android:screenOrientation="1" android:theme="@7F0F011E">
+</activity>
+<activity android:label="Profile" android:name="in.truzio.uzzmevendorapp.activity.VendorProfileActivity" android:screenOrientation="1" android:theme="@7F0F011E" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:label="Users Details" android:name="in.truzio.uzzmevendorapp.activity.ViewersList" android:screenOrientation="1" android:theme="@7F0F011E">
+</activity>
+<receiver android:enabled="true" android:name="in.truzio.uzzmevendorapp.receiver.SmsReceiver" android:permission="android.permission.BROADCAST_SMS">
+<intent-filter>
+<action android:name="android.provider.Telephony.SMS_RECEIVED">
+</action>
+</intent-filter>
+</receiver>
+<activity android:name="in.truzio.uzzmevendorapp.activity.ChatWindowActivity" android:screenOrientation="1" android:theme="@7F0F011E">
+</activity>
+<activity android:label=" My Favourites" android:name="in.truzio.uzzmevendorapp.activity.FavouritesActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="Settings" android:name="in.truzio.uzzmevendorapp.activity.SettingsActivity" android:screenOrientation="1" android:theme="@7F0F011E">
+</activity>
+<activity android:label="Change Password" android:name="in.truzio.uzzmevendorapp.activity.ChangePasswordActivity" android:screenOrientation="1" android:theme="@7F0F011E">
+</activity>
+<meta-data android:name="com.google.android.geo.API_KEY" android:value="AIzaSyAKdVxfthVXFKKSKNKS9HX9scPyG01TYrE">
+</meta-data>
+<activity android:label="@7F0E0067" android:name="in.truzio.uzzmevendorapp.activity.MapsActivity" android:screenOrientation="1" android:theme="@7F0F011E">
+</activity>
+<provider android:authorities="in.truzio.uzzmevendorapp.provider" android:exported="false" android:grantUriPermissions="true" android:name="android.support.v4.content.FileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F110000">
+</meta-data>
+</provider>
+<service android:enabled="true" android:name="in.truzio.uzzmevendorapp.service.MyFireBaseSerivce">
+</service>
+<service android:enabled="true" android:name="in.truzio.uzzmevendorapp.service.ChatMessageService">
+</service>
+<activity android:name="in.truzio.uzzmevendorapp.activity.KeywordsActivity" android:screenOrientation="1" android:theme="@7F0F011E">
+</activity>
+<activity android:name="in.truzio.uzzmevendorapp.activity.ChatProfileActivity" android:screenOrientation="1" android:theme="@7F0F011E">
+</activity>
+<activity android:name="in.truzio.uzzmevendorapp.activity.ChatImageCaptionActivity" android:screenOrientation="1" android:theme="@7F0F011E" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="in.truzio.uzzmevendorapp.activity.ChatOneOnOneActivity" android:screenOrientation="1" android:theme="@7F0F011E">
+</activity>
+<activity android:name="in.truzio.uzzmevendorapp.activity.NewVendorRegistrationActivity" android:screenOrientation="1" android:theme="@7F0F011E">
+</activity>
+<receiver android:name="in.truzio.uzzmevendorapp.receiver.ConnectivityReceiver">
+android:enabled=true&gt;
+<intent-filter>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+</receiver>
+<activity android:label="@7F0E0000" android:name="in.truzio.uzzmevendorapp.activity.AddPromoActivity" android:screenOrientation="1" android:theme="@7F0F011E">
+</activity>
+<activity android:label="@7F0E0000" android:name="in.truzio.uzzmevendorapp.activity.EditPromoActivity" android:screenOrientation="1" android:theme="@7F0F011E">
+</activity>
+<meta-data android:name="android.support.VERSION" android:value="25.4.0">
+</meta-data>
+<activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:01030010">
+</activity>
+<receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementReceiver">
+</receiver>
+<receiver android:enabled="true" android:name="com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver" android:permission="android.permission.INSTALL_PACKAGES">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementService">
+</service>
+<receiver android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+<action android:name="com.google.android.c2dm.intent.REGISTRATION">
+</action>
+<category android:name="in.truzio.uzzmevendorapp">
+</category>
+</intent-filter>
+</receiver>
+<receiver android:exported="false" android:name="com.google.firebase.iid.FirebaseInstanceIdInternalReceiver">
+</receiver>
+<service android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdService">
+<intent-filter android:priority="-500">
+<action android:name="com.google.firebase.INSTANCE_ID_EVENT">
+</action>
+</intent-filter>
+</service>
+<provider android:authorities="in.truzio.uzzmevendorapp.firebaseinitprovider" android:exported="false" android:initOrder="100" android:name="com.google.firebase.provider.FirebaseInitProvider">
+</provider>
+<meta-data android:name="com.google.android.gms.version" android:value="@7F0A0006">
+</meta-data>
+</application>
+</manifest>

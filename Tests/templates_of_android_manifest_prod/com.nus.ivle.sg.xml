@@ -1,0 +1,568 @@
+<?xml version="1.0" ?><manifest android:versionCode="25" android:versionName="4.5" package="com.nus.ivle.sg" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="7" android:targetSdkVersion="18">
+</uses-sdk>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_CALENDAR">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_CALENDAR">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="com.nus.ivle.sg.VIDEO_PERM">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE">
+</uses-permission>
+<permission android:name="com.nus.ivle.sg.permission.C2D_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="com.nus.ivle.sg.permission.C2D_MESSAGE">
+</uses-permission>
+<application android:allowClearUserData="true" android:enabled="true" android:icon="@7F02007B" android:label="@7F070000" android:name="com.nus.ivle.sg.MyApplication">
+<activity android:configChanges="0x000000A0" android:label="@7F070000" android:name=".LauncherActivity" android:theme="@android:01030009">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000A0" android:icon="@7F02007B" android:label="@7F070000" android:name=".NUSIVLEActivity" android:theme="@7F0D005D">
+<intent-filter>
+<action android:name="com.nus.ivle.sg.NUSIVLEActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x00000480" android:label="@7F070000" android:name=".NUSIvleTab">
+<intent-filter>
+<action android:name="com.nus.ivle.sg.NUSIvleTab">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000A0" android:icon="@7F020093" android:label="@7F070027" android:name=".NewsDetails" android:theme="@android:01030009">
+<intent-filter>
+<action android:name="com.nus.ivle.sg.NewsDetails">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000A0" android:icon="@7F0200C0" android:label="@7F07002A" android:name=".Staff_Search" android:theme="@android:01030009">
+<intent-filter>
+<action android:name="com.nus.ivle.sg.Staff_Search">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000A0" android:icon="@7F0200C0" android:label="@7F07002A" android:name=".StaffSearch_Details" android:theme="@android:01030009">
+<intent-filter>
+<action android:name="com.nus.ivle.sg.StaffSearch_Details">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000A0" android:icon="@7F020091" android:label="@7F07002E" android:name=".MyOrganizerPersonal" android:theme="@android:01030009">
+<intent-filter>
+<action android:name="com.nus.ivle.sg.MyOrganizerPersonal">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000A0" android:icon="@7F020091" android:label="@7F070030" android:name=".MyOrganizerIVLE" android:theme="@android:01030009">
+<intent-filter>
+<action android:name="com.nus.ivle.sg.MyOrganizerIVLE">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000A0" android:icon="@7F020091" android:label="@7F070032" android:name=".MyOrganizerTimeTable" android:theme="@android:01030009">
+<intent-filter>
+<action android:name="com.nus.ivle.sg.MyOrganizerTimeTable">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000A0" android:icon="@7F020091" android:label="@7F070031" android:name=".MyOrganizerSpecial" android:theme="@android:01030009">
+<intent-filter>
+<action android:name="com.nus.ivle.sg.MyOrganizerSpecial">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000A0" android:icon="@7F020091" android:label="@7F07002F" android:name=".Add_Personal_Event" android:theme="@android:01030009">
+<intent-filter>
+<action android:name="com.nus.ivle.sg.Add_Personal_Event">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000A0" android:icon="@7F0200C1" android:label="@7F070028" android:name=".StudentEvents" android:theme="@android:01030009">
+<intent-filter>
+<action android:name="com.nus.ivle.sg.StudentEvents">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000A0" android:icon="@7F0200C1" android:label="@7F070028" android:name=".StudentEventDetails" android:theme="@android:01030009">
+<intent-filter>
+<action android:name="com.nus.ivle.sg.StudentEventDetails">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000A0" android:icon="@7F0200CF" android:label="@7F070033" android:name=".UnReadDetails" android:theme="@android:01030009">
+<intent-filter>
+<action android:name="com.nus.ivle.sg.UnReadDetails">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000A0" android:icon="@7F020059" android:label="Announcements" android:name=".Announcements" android:theme="@android:01030009">
+<intent-filter>
+<action android:name="com.nus.ivle.sg.Announcements">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000A0" android:icon="@7F020059" android:label="Announcements" android:name=".Announcement_Details" android:theme="@android:01030009">
+<intent-filter>
+<action android:name="com.nus.ivle.sg.Announcement_Details">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000A0" android:icon="@7F0200D3" android:label="Workbin" android:name=".NewWorkbin" android:theme="@android:01030009">
+<intent-filter>
+<action android:name="com.nus.ivle.sg.NewWorkbin">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000A0" android:icon="@7F0200D3" android:label="Workbin" android:name=".WorkbinLevel2" android:theme="@android:01030009">
+<intent-filter>
+<action android:name="com.nus.ivle.sg.WorkbinLevel2">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000A0" android:icon="@7F0200D3" android:label="Workbin" android:name=".WorkbinLevel3" android:theme="@android:01030009">
+<intent-filter>
+<action android:name="com.nus.ivle.sg.WorkbinLevel3">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000A0" android:icon="@7F0200D3" android:label="Workbin" android:name=".WorkbinLevel4" android:theme="@android:01030009">
+<intent-filter>
+<action android:name="com.nus.ivle.sg.WorkbinLevel4">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000A0" android:icon="@7F020074" android:label="Forum" android:name=".Forum" android:theme="@android:01030009">
+<intent-filter>
+<action android:name="com.nus.ivle.sg.Forum">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000A0" android:icon="@7F020074" android:label="Forum" android:name=".ForumHeadings" android:theme="@android:01030009">
+<intent-filter>
+<action android:name="com.nus.ivle.sg.ForumHeadings">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000A0" android:icon="@7F020074" android:label="Forum" android:name=".ForumThreads" android:theme="@android:01030009">
+<intent-filter>
+<action android:name="com.nus.ivle.sg.ForumThreads">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000A0" android:icon="@7F020074" android:label="Forum" android:name=".ForumDetails" android:theme="@android:01030009">
+<intent-filter>
+<action android:name="com.nus.ivle.sg.ForumDetails">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000A0" android:icon="@7F0200C7" android:label="timeTable" android:name=".TimeTable" android:theme="@android:01030009">
+<intent-filter>
+<action android:name="com.nus.ivle.sg.TimeTable">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000A0" android:icon="@7F020076" android:label="GradeBook" android:name=".GradeBook" android:theme="@android:01030009">
+<intent-filter>
+<action android:name="com.nus.ivle.sg.GradeBook">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000A0" android:icon="@7F020076" android:label="GradeBook" android:name=".GradeBookDetails" android:theme="@android:01030009">
+<intent-filter>
+<action android:name="com.nus.ivle.sg.GradeBookDetails">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000A0" android:icon="@7F020065" android:label="Class Roster" android:name=".IvleRosterActivity" android:theme="@android:01030009">
+<intent-filter>
+<action android:name="com.nus.ivle.sg.IvleRosterActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000A0" android:icon="@7F0200CE" android:label="Web Links" android:name=".Weblinks" android:theme="@android:01030009">
+<intent-filter>
+<action android:name="com.nus.ivle.sg.Weblinks">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000A0" android:icon="@7F0200CD" android:label="Webcast Lectures" android:name=".ModuleWebcasts" android:theme="@android:01030009">
+<intent-filter>
+<action android:name="com.nus.ivle.sg.ModuleWebcasts">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000A0" android:icon="@7F020082" android:label="Module Facilitators" android:name=".IvleModuleLecturers" android:theme="@android:01030009">
+<intent-filter>
+<action android:name="com.nus.ivle.sg.IvleModuleLecturers">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000A0" android:icon="@7F0200C4" android:label="Module Readings" android:name=".ModuleReadings" android:theme="@android:01030009">
+<intent-filter>
+<action android:name="com.nus.ivle.sg.ModuleReadings">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000A0" android:icon="@7F0200C4" android:label="Module Readings" android:name=".ReadingDetails" android:theme="@android:01030009">
+<intent-filter>
+<action android:name="com.nus.ivle.sg.ReadingDetails">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000A0" android:icon="@7F020068" android:label="CourseDescription" android:name=".CourseDescription" android:theme="@android:01030009">
+<intent-filter>
+<action android:name="com.nus.ivle.sg.CourseDescription">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000A0" android:icon="@7F0200B6" android:label="Modules Search" android:name=".Modules_Search" android:theme="@android:01030009">
+<intent-filter>
+<action android:name="com.nus.ivle.sg.Modules_Search">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000A0" android:icon="@7F0200C7" android:label="Exam TimeTable" android:name=".ExamTimeTable" android:theme="@android:01030009">
+<intent-filter>
+<action android:name="com.nus.ivle.sg.ExamTimeTable">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000A0" android:icon="@7F0200C7" android:label="Exam TimeTable" android:name=".Module_Exam_TimeTable" android:theme="@android:01030009">
+<intent-filter>
+<action android:name="com.nus.ivle.sg.Module_Exam_TimeTable">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000A0" android:icon="@7F0200B6" android:label="Module Search Details" android:name=".Module_Search_Details" android:theme="@android:01030009">
+<intent-filter>
+<action android:name="com.nus.ivle.sg.Module_Search_Details">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000A0" android:icon="@7F0200CE" android:label="Add Weblinks" android:name=".WebLinks_Add" android:theme="@android:01030009">
+<intent-filter>
+<action android:name="com.nus.ivle.sg.WebLinks_Add">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<receiver android:name=".Autostart">
+<intent-filter>
+<action android:name="android.intent.action.QUICKBOOT_POWERON">
+</action>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+</intent-filter>
+</receiver>
+<service android:name=".UpdateWidgetService">
+</service>
+<receiver android:icon="@7F02005A" android:label="@7F070000" android:name="MyWidgetProvider">
+<intent-filter>
+<action android:name="android.appwidget.action.APPWIDGET_UPDATE">
+</action>
+</intent-filter>
+<meta-data android:name="android.appwidget.provider" android:resource="@7F050000">
+</meta-data>
+</receiver>
+<receiver android:name="com.urbanairship.CoreReceiver">
+</receiver>
+<receiver android:name="com.urbanairship.push.GCMPushReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+<action android:name="com.google.android.c2dm.intent.REGISTRATION">
+</action>
+<category android:name="com.nus.ivle.sg">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_REPLACED">
+</action>
+<data android:scheme="package">
+</data>
+</intent-filter>
+</receiver>
+<service android:label="Push Notification Service" android:name="com.urbanairship.push.PushService">
+</service>
+<service android:label="Push Notification Worker Service" android:name="com.urbanairship.push.PushWorkerService">
+</service>
+<service android:label="Event Service" android:name="com.urbanairship.analytics.EventService">
+</service>
+<provider android:authorities="com.nus.ivle.sg.urbanairship.provider" android:exported="false" android:multiprocess="true" android:name="com.urbanairship.UrbanAirshipProvider">
+</provider>
+<receiver android:name="com.nus.ivle.sg.IntentReceiver">
+</receiver>
+<activity android:configChanges="0x000004B0" android:icon="@7F020059" android:label="Announcements" android:name=".Push_Announcement" android:theme="@android:01030009">
+<intent-filter>
+<action android:name="com.nus.ivle.sg.Push_Announcement">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004B0" android:icon="@7F020074" android:label="Forum" android:name=".Push_Forum" android:theme="@android:01030009">
+<intent-filter>
+<action android:name="com.nus.ivle.sg.Push_Forum">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004B0" android:icon="@7F0200D3" android:label="Forum" android:name=".Push_WorkBin" android:theme="@android:01030009">
+<intent-filter>
+<action android:name="com.nus.ivle.sg.Push_WorkBin">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004B0" android:icon="@7F0200B7" android:label="Settings" android:name=".Settings" android:theme="@android:01030009">
+<intent-filter>
+<action android:name="com.nus.ivle.sg.Settings">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004B0" android:icon="@7F020099" android:label="Poll" android:name=".Module_Poll" android:theme="@android:01030009">
+<intent-filter>
+<action android:name="com.nus.ivle.sg.Module_Poll">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004B0" android:icon="@7F020099" android:label="Poll" android:name=".Poll_Details" android:theme="@android:01030009">
+<intent-filter>
+<action android:name="com.nus.ivle.sg.Poll_Details">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004B0" android:icon="@7F020088" android:label="Profile" android:name=".Profile" android:theme="@android:01030009">
+<intent-filter>
+<action android:name="com.nus.ivle.sg.Profile">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004B0" android:icon="@7F020062" android:label="Profile" android:name=".ClassGroups" android:theme="@android:01030009">
+<intent-filter>
+<action android:name="com.nus.ivle.sg.ClassGroups">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004B0" android:icon="@7F020062" android:label="Profile" android:name=".ClassGroupUsers" android:theme="@android:01030009">
+<intent-filter>
+<action android:name="com.nus.ivle.sg.ClassGroupUsers">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004B0" android:icon="@7F0200C1" android:label="@7F070028" android:name=".StudentEvents_Tab" android:theme="@android:01030009">
+<intent-filter>
+<action android:name="com.nus.ivle.sg.StudentEvents_Tab">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004B0" android:icon="@7F0200D3" android:label="Downloaded Files" android:name=".DownLoadFileList" android:theme="@android:01030009">
+<intent-filter>
+<action android:name="com.nus.ivle.sg.DownLoadFileList">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000005B0" android:icon="@7F020089" android:label="Module" android:name=".ModuleSection" android:theme="@android:01030009">
+<intent-filter>
+<action android:name="com.nus.ivle.sg.ModuleSection">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004B0" android:icon="@7F020074" android:label="Module" android:name=".Feedback_Forum" android:theme="@android:01030009">
+<intent-filter>
+<action android:name="com.nus.ivle.sg.Feedback_Forum">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004B0" android:icon="@7F02008D" android:label="Module" android:name=".Multimedia" android:theme="@android:01030009">
+<intent-filter>
+<action android:name="com.nus.ivle.sg.Multimedia">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004B0" android:icon="@7F02008D" android:label="Module" android:name=".MultimediaFiles" android:theme="@android:01030009">
+<intent-filter>
+<action android:name="com.nus.ivle.sg.MultimediaFiles">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004B0" android:icon="@7F020084" android:label="Module" android:name=".LessonPlan" android:theme="@android:01030009">
+<intent-filter>
+<action android:name="com.nus.ivle.sg.LessonPlan">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004B0" android:icon="@7F020084" android:label="Module" android:name=".LessonPlanDetails" android:theme="@android:01030009">
+<intent-filter>
+<action android:name="com.nus.ivle.sg.LessonPlanDetails">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004B0" android:icon="@7F020084" android:label="Module" android:name=".LessonPlanEvents" android:theme="@android:01030009">
+<intent-filter>
+<action android:name="com.nus.ivle.sg.LessonPlanEvents">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004B0" android:hardwareAccelerated="true" android:label="@7F070000" android:name=".VideoPlayer" android:screenOrientation="4">
+<intent-filter>
+<action android:name="com.nus.ivle.sg.VideoPlayer">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004B0" android:icon="@7F020067" android:label="Module" android:name=".ModuleConsultation">
+<intent-filter>
+<action android:name="com.nus.ivle.sg.ModuleConsultation">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004B0" android:icon="@7F02008F" android:label="Module" android:name=".ModuleConsultation_SignUp">
+<intent-filter>
+<action android:name="com.nus.ivle.sg.ModuleConsultation_SignUp">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004B0" android:icon="@7F020092" android:label="NearBy" android:name=".NearBy">
+<intent-filter>
+<action android:name="com.nus.ivle.sg.NearBy">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+</application>
+</manifest>

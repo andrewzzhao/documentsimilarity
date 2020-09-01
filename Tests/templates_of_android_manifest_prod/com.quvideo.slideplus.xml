@@ -1,0 +1,764 @@
+<?xml version="1.0" ?><manifest android:compileSdkVersion="28" android:compileSdkVersionCodename="9" android:installLocation="0" android:versionCode="124" android:versionName="3.8.4" package="com.quvideo.slideplus" platformBuildVersionCode="124" platformBuildVersionName="3.8.4" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="18" android:targetSdkVersion="28">
+</uses-sdk>
+<uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_USER_PRESENT">
+</uses-permission>
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="com.quvideo.slideplus.permission.DATACENTER">
+</uses-permission>
+<uses-permission android:name="com.quvideo.slideplus.permission.JPUSH_MESSAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="com.android.vending.BILLING">
+</uses-permission>
+<permission android:name="com.quvideo.slideplus.permission.DATACENTER" android:protectionLevel="0x00000002">
+</permission>
+<permission android:name="com.quvideo.slideplus.permission.JPUSH_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<permission android:name="com.quvideo.slideplus.permission.MIPUSH_RECEIVE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="com.quvideo.slideplus.permission.MIPUSH_RECEIVE">
+</uses-permission>
+<uses-permission android:name="android.permission.FOREGROUND_SERVICE">
+</uses-permission>
+<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE">
+</uses-permission>
+<permission android:name="com.quvideo.slideplus.permission.C2D_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="com.quvideo.slideplus.permission.C2D_MESSAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES">
+</uses-permission>
+<permission android:name="com.quvideo.slideplus.permission.PROCESS_PUSH_MSG" android:protectionLevel="0x00000003">
+</permission>
+<uses-permission android:name="com.quvideo.slideplus.permission.PROCESS_PUSH_MSG">
+</uses-permission>
+<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE">
+</uses-permission>
+<supports-screens android:anyDensity="true" android:largeScreens="true" android:normalScreens="true" android:resizeable="true" android:smallScreens="true">
+</supports-screens>
+<application android:allowBackup="true" android:appComponentFactory="android.support.v4.app.CoreComponentFactory" android:icon="@7F0D0000" android:label="@7F0F017A" android:largeHeap="true" android:name="com.quvideo.slideplus.app.ApplicationBase" android:networkSecurityConfig="@7F120002" android:supportsRtl="true" android:theme="@7F1000CC" android:usesCleartextTraffic="true">
+<uses-library android:name="org.apache.http.legacy" android:required="false">
+</uses-library>
+<activity android:configChanges="0x000000A0" android:name="com.quvideo.slideplus.app.splash.SplashActivity" android:screenOrientation="1" android:theme="@7F1000FF" android:windowSoftInputMode="0x00000020">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="slideplus">
+</data>
+</intent-filter>
+<meta-data android:name="entry" android:value="0">
+</meta-data>
+</activity>
+<activity-alias android:enabled="true" android:icon="@7F0D0000" android:label="@7F0F0179" android:name="com.quvideo.slideplus.app.splash.SplashActivity_fake" android:targetActivity="com.quvideo.slideplus.app.splash.SplashActivity">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity-alias>
+<activity android:launchMode="2" android:name="com.quvideo.slideplus.activity.home.HomeActivity" android:screenOrientation="1" android:theme="@7F1000CB" android:windowSoftInputMode="0x00000030">
+</activity>
+<activity android:name="com.quvideo.slideplus.activity.setting.AboutUsActivity" android:screenOrientation="1">
+</activity>
+<activity android:clearTaskOnLaunch="true" android:configChanges="0x000000A0" android:exported="false" android:launchMode="2" android:name="com.quvideo.slideplus.activity.edit.AutoEditPreview" android:screenOrientation="1" android:theme="@7F1000CB" android:windowSoftInputMode="0x00000030">
+<intent-filter>
+<action android:name="com.quvideo.slideplus.intent.action.EDIT">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:name="com.quvideo.slideplus.activity.edit.AutoEditFullScreenPreview" android:screenOrientation="0" android:windowSoftInputMode="0x00000030">
+<intent-filter>
+<action android:name="com.quvideo.slideplus.intent.action.PREVIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:name="com.quvideo.slideplus.login.SnsLoginActivity" android:theme="@7F100228">
+</activity>
+<activity android:name="com.quvideo.slideplus.studio.AccountInfoActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.quvideo.slideplus.studio.NicknameEditor" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.quvideo.slideplus.studio.ui.VideoPlayerActivity" android:screenOrientation="4" android:theme="@7F1000CB">
+</activity>
+<activity android:name="com.quvideo.slideplus.app.CommonWebPage" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="2" android:name="com.quvideo.slideplus.activity.share.PublishActivity" android:screenOrientation="1" android:theme="@7F1000DF">
+</activity>
+<activity android:name="com.quvideo.slideplus.login.SnsLoginNewActivity" android:theme="@7F100228">
+</activity>
+<activity android:clearTaskOnLaunch="true" android:configChanges="0x000000A0" android:exported="false" android:name="com.quvideo.slideplus.activity.edit.TrimActivity" android:screenOrientation="1" android:theme="@7F1000CB">
+<intent-filter>
+<action android:name="com.quvideo.xiaoying.intent.action.FILEPICKER">
+</action>
+<action android:name="com.quvideo.xiaoying.intent.action.EDITORFILEPICKER">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:name="com.quvideo.slideplus.activity.edit.ReplaceActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.quvideo.slideplus.activity.theme.ThemeHouseActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:hardwareAccelerated="true" android:launchMode="2" android:name="com.quvideo.slideplus.activity.theme.TemplatePreviewActivity" android:theme="@7F100228">
+</activity>
+<activity android:name="com.quvideo.slideplus.activity.setting.SettingActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.quvideo.slideplus.activity.studio.StudioActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.quvideo.slideplus.funny.FunnyTemplateInfoActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.quvideo.slideplus.funny.FunnyEditActivity" android:screenOrientation="1" android:theme="@7F100168" android:windowSoftInputMode="0x00000030">
+</activity>
+<activity android:name="com.quvideo.slideplus.activity.theme.ThemeCenterActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="2" android:name="com.quvideo.slideplus.activity.XYPermissionActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.quvideo.slideplus.activity.ExtraHelpActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.quvideo.slideplus.login.BindAccountActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.quvideo.xiaoying.sns.share.sina.SinaWeiboShareActivity" android:screenOrientation="1" android:theme="@7F100232">
+</activity>
+<activity android:name="com.quvideo.xiaoying.verify.VerifyBaseActivity" android:screenOrientation="1">
+</activity>
+<provider android:authorities="com.quvideo.slideplus.provider" android:exported="false" android:grantUriPermissions="true" android:name="android.support.v4.content.FileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F120000">
+</meta-data>
+</provider>
+<receiver android:name="com.diggds.adsdk.DGReceiver">
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_ADDED">
+</action>
+<data android:scheme="package">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+</receiver>
+<service android:name="com.diggds.adsdk.DGService">
+</service>
+<service android:exported="false" android:name="com.quvideo.xiaoying.datacenter.SocialService">
+<intent-filter>
+<action android:name="socialservice.action.USER">
+</action>
+<action android:name="socialservice.action.VIDEO">
+</action>
+<action android:name="socialservice.action.MISC">
+</action>
+<action android:name="socialservice.action.CONTENTS">
+</action>
+<action android:name="socialservice.action.INTERACTION">
+</action>
+<action android:name="socialservice.action.RPC">
+</action>
+<action android:name="socialservice.action.PAY">
+</action>
+</intent-filter>
+</service>
+<service android:exported="false" android:name="com.quvideo.xiaoying.datacenter.DownloadService">
+<intent-filter>
+<action android:name="socialservice.action.DOWNLOAD">
+</action>
+</intent-filter>
+</service>
+<provider android:authorities="com.quvideo.slideplus.datacenter" android:exported="false" android:multiprocess="false" android:name="com.quvideo.xiaoying.datacenter.SocialProvider">
+</provider>
+<receiver android:name="com.quvideo.xiaoying.socialclient.MonitorBroadReceiver">
+<intent-filter android:priority="1001">
+<action android:name="android.intent.action.MEDIA_BAD_REMOVAL">
+</action>
+<action android:name="android.intent.action.MEDIA_UNMOUNTED">
+</action>
+<action android:name="android.intent.action.MEDIA_MOUNTED">
+</action>
+<action android:name="android.intent.action.MEDIA_EJECT">
+</action>
+<action android:name="android.intent.action.MEDIA_REMOVED">
+</action>
+<action android:name="android.intent.action.MEDIA_SHARED">
+</action>
+<data android:scheme="file">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="socialservice.action.DOWNLOAD.completed">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:exported="true" android:name="com.appsflyer.MultipleInstallBroadcastReceiver">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:enabled="true" android:exported="true" android:name="com.google.android.gms.analytics.CampaignTrackingReceiver">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.analytics.CampaignTrackingService">
+</service>
+<receiver android:enabled="true" android:name="com.quvideo.xiaoying.pushclient.JpushReceiver">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.REGISTRATION">
+</action>
+<action android:name="cn.jpush.android.intent.UNREGISTRATION">
+</action>
+<action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED">
+</action>
+<action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED">
+</action>
+<action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED">
+</action>
+<action android:name="cn.jpush.android.intent.CONNECTION">
+</action>
+<category android:name="com.quvideo.slideplus">
+</category>
+</intent-filter>
+</receiver>
+<service android:name="com.quvideo.xiaoying.pushclient.XYFirebaseMessagingService">
+<intent-filter>
+<action android:name="com.google.firebase.MESSAGING_EVENT">
+</action>
+</intent-filter>
+</service>
+<meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@7F0F01C4">
+</meta-data>
+<activity android:configChanges="0x000005B0" android:label="@7F0F0179" android:name="com.facebook.FacebookActivity" android:theme="@7F10021A">
+</activity>
+<provider android:authorities="com.facebook.app.FacebookContentProvider933178746725046" android:exported="true" android:name="com.facebook.FacebookContentProvider">
+</provider>
+<activity android:configChanges="0x000005B0" android:name="com.instagram.InstagramActivity" android:theme="@android:01030010">
+</activity>
+<receiver android:exported="false" android:name="com.quvideo.xiaoying.alarm.AlarmReceiver">
+<intent-filter android:priority="1000">
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+<action android:name="com.android.slideplus.imagescan.alarm">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:exported="false" android:name="com.quvideo.slideplus.app.NotificationClickReceiver">
+<intent-filter android:priority="1000">
+<action android:name="com.android.slideplus.noti.click">
+</action>
+</intent-filter>
+</receiver>
+<service android:exported="false" android:name="com.quvideo.xiaoying.datacenter.TaskService">
+<intent-filter>
+<action android:name="socialservice.action.TASK">
+</action>
+</intent-filter>
+</service>
+<service android:exported="false" android:name="com.quvideo.slideplus.services.PrjCreateIntentService">
+</service>
+<service android:exported="false" android:name="com.quvideo.slideplus.services.MyInstanceIdService">
+<intent-filter>
+<action android:name="com.google.firebase.INSTANCE_ID_EVENT">
+</action>
+</intent-filter>
+</service>
+<activity android:name="com.quvideo.xiaoying.sns.share.SnsSdkShareActivity" android:theme="@7F100232">
+<intent-filter>
+<action android:name="com.meitu.mp.sdk.action.ACTION_SDK_RESP_ACTIVITY">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:launchMode="2" android:name="com.tencent.tauth.AuthActivity" android:noHistory="true">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="tencent1104838190">
+</data>
+</intent-filter>
+</activity>
+<activity android:exported="true" android:label="@7F0F0179" android:launchMode="1" android:name="com.quvideo.slideplus.wxapi.WXEntryActivity" android:screenOrientation="-1" android:theme="@android:0103000F">
+</activity>
+<activity android:name="com.tencent.connect.common.AssistActivity" android:screenOrientation="-1" android:theme="@android:01030010">
+</activity>
+<receiver android:exported="true" android:name="com.adjust.sdk.AdjustReferrerReceiver">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+<service android:enabled="true" android:name="com.xiaomi.push.service.XMPushService" android:process=":pushservice">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.xiaomi.push.service.XMJobService" android:permission="android.permission.BIND_JOB_SERVICE" android:process=":pushservice">
+</service>
+<service android:enabled="true" android:exported="true" android:name="com.xiaomi.mipush.sdk.PushMessageHandler">
+</service>
+<service android:enabled="true" android:name="com.xiaomi.mipush.sdk.MessageHandleService">
+</service>
+<receiver android:exported="true" android:name="com.xiaomi.push.service.receivers.NetworkStatusReceiver">
+<intent-filter>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</receiver>
+<receiver android:exported="false" android:name="com.xiaomi.push.service.receivers.PingReceiver" android:process=":pushservice">
+<intent-filter>
+<action android:name="com.xiaomi.push.PING_TIMER">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:exported="true" android:name="com.quvideo.xiaoying.pushclient.XMPushReceiver">
+<intent-filter>
+<action android:name="com.xiaomi.mipush.RECEIVE_MESSAGE">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="com.xiaomi.mipush.MESSAGE_ARRIVED">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="com.xiaomi.mipush.ERROR">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:exported="true" android:name="com.quvideo.xiaoying.pushclient.MyXMReceiver">
+<intent-filter>
+<action android:name="com.quvideo.xiaoying.pushclient.MyXMReceiver.opened">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name="com.quvideo.xiaoying.NotificationReceiver">
+</receiver>
+<provider android:authorities="com.quvideo.slideplus.hms.update.provider" android:exported="false" android:grantUriPermissions="true" android:name="com.huawei.hms.update.provider.UpdateProvider">
+</provider>
+<activity android:configChanges="0x40002484" android:excludeFromRecents="true" android:exported="false" android:hardwareAccelerated="true" android:name="com.huawei.hms.activity.BridgeActivity" android:theme="@android:0103000F">
+<meta-data android:name="hwc-theme" android:value="androidhwext:style/Theme.Emui.Translucent">
+</meta-data>
+</activity>
+<activity android:name="com.quvideo.slideplus.activity.MiddleActivity" android:noHistory="true" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="2" android:name="com.quvideo.slideplus.activity.UriSchemeProcessActivity" android:noHistory="true" android:screenOrientation="1">
+<intent-filter>
+<data android:host="linkedme" android:scheme="slideplusmlink">
+</data>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+</intent-filter>
+<intent-filter android:autoVerify="true">
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="lkme.cc" android:pathPrefix="/BXD" android:scheme="https">
+</data>
+<data android:host="lkme.cc" android:pathPrefix="/BXD" android:scheme="http">
+</data>
+</intent-filter>
+</activity>
+<meta-data android:name="com.quvideo.slideplus.common.GlideConfiguration" android:value="GlideModule">
+</meta-data>
+<meta-data android:name="GCM_APPKEY" android:value="@7F0F022F">
+</meta-data>
+<meta-data android:name="MIPUSH_APP_ID" android:value="@7F0F0231">
+</meta-data>
+<meta-data android:name="MIPUSH_APP_KEY" android:value="@7F0F0233">
+</meta-data>
+<meta-data android:name="UMENG_APPKEY" android:value="55cd5504e0f55a3bfc001f64">
+</meta-data>
+<meta-data android:name="XiaoYing_Channel" android:value="SlidePlus">
+</meta-data>
+<meta-data android:name="GA_TRACKER_ID" android:value="UA-66334651-1">
+</meta-data>
+<meta-data android:name="QQ_APP_KEY" android:value="@7F0F021F">
+</meta-data>
+<meta-data android:name="WECHAT_APP_KEY" android:value="@7F0F02D6">
+</meta-data>
+<meta-data android:name="WECHAT_APP_SECRET" android:value="@7F0F02D7">
+</meta-data>
+<meta-data android:name="SINA_APP_KEY" android:value="@7F0F0236">
+</meta-data>
+<meta-data android:name="google_server_client_id" android:value="243711101741-7u23913tjm9jf70cvmm9s8tbn3g8vlda.apps.googleusercontent.com">
+</meta-data>
+<meta-data android:name="com.huawei.hms.client.appid" android:value="10402214">
+</meta-data>
+<meta-data android:name="com.huawei.hms.client.cpid" android:value="40085999220424704.000000">
+</meta-data>
+<meta-data android:name="io.fabric.ApiKey" android:value="1c6032bed405cdf04ad827b1c91adb7ebe9e7e90">
+</meta-data>
+<meta-data android:name="UMENG_CHANNEL" android:value="tencent">
+</meta-data>
+<meta-data android:name="XiaoYing_AppKey" android:value="10012109">
+</meta-data>
+<service android:exported="false" android:name="com.quvideo.slideplus.slide.ProjectSaveService">
+<intent-filter>
+<action android:name="slideshow.intent.action.prj.save.finish">
+</action>
+<action android:name="slideshow.intent.action.prj.save.progress">
+</action>
+</intent-filter>
+</service>
+<meta-data android:name="linkedme.sdk.key" android:value="598e1ba5c67e65fdd4d6b24ee592485e">
+</meta-data>
+<meta-data android:name="XYPIN.key" android:value="1263">
+</meta-data>
+<meta-data android:name="WX_PAY_APP_ID" android:value="wxd2f98a80f5e6e4e8">
+</meta-data>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="com.quvideo.slideplus.gallery.activity.MediaGalleryActivity" android:screenOrientation="1">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="com.quvideo.slideplus.gallery" android:scheme="router">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.quvideo.slideplus.gallery.activity.GalleryPreviewActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.quvideo.slideplus.gallery.activity.MediaGallerySelectActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.quvideo.slideplus.gallery.activity.GalleryPreviewActivitySelect" android:screenOrientation="1">
+</activity>
+<activity android:name="com.quvideo.slideplus.iap.domestic.ui.PayNotifyDialog" android:screenOrientation="1" android:theme="@7F1000DD">
+</activity>
+<activity android:name="com.quvideo.slideplus.iap.IAPGeneralDialogImpl" android:screenOrientation="1" android:theme="@7F1000DD">
+</activity>
+<receiver android:name="com.quvideo.mobile.platform.mediasource._XYMediaSourceReceiver">
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_FIRST_LAUNCH">
+</action>
+</intent-filter>
+</receiver>
+<activity android:configChanges="0x000004A0" android:name="com.mintegral.msdk.mtgjscommon.authority.activity.MTGAuthorityActivity">
+</activity>
+<activity android:launchMode="2" android:name="com.bytedance.sdk.openadsdk.activity.TTLandingPageActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="com.bytedance.sdk.openadsdk.activity.TTVideoLandingPageActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="com.bytedance.sdk.openadsdk.activity.TTRewardVideoActivity">
+</activity>
+<activity android:launchMode="2" android:name="com.bytedance.sdk.openadsdk.activity.TTDelegateActivity" android:theme="@android:01030010">
+</activity>
+<service android:name="com.bytedance.sdk.openadsdk.service.TTDownloadService">
+</service>
+<service android:name="com.bytedance.sdk.openadsdk.service.TTDownloadHandlerService">
+</service>
+<activity android:name="com.quvideo.xiaoying.activity.FeedbackActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:name="com.quvideo.xiaoying.activity.FeedbackHistoryActivity">
+</activity>
+<activity android:name="com.quvideo.xiaoying.activity.FeedbackDetailActivity">
+</activity>
+<activity android:name="com.facebook.CustomTabMainActivity">
+</activity>
+<activity android:name="com.facebook.CustomTabActivity">
+</activity>
+<activity android:excludeFromRecents="true" android:exported="false" android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity" android:theme="@android:01030010">
+</activity>
+<service android:exported="true" android:name="com.google.android.gms.auth.api.signin.RevocationBoundService" android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION">
+</service>
+<receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.analytics.AnalyticsReceiver">
+</receiver>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.analytics.AnalyticsService">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.analytics.AnalyticsJobService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<service android:exported="true" android:name="com.google.firebase.messaging.FirebaseMessagingService">
+<intent-filter android:priority="-500">
+<action android:name="com.google.firebase.MESSAGING_EVENT">
+</action>
+</intent-filter>
+</service>
+<receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementReceiver">
+</receiver>
+<receiver android:enabled="true" android:exported="true" android:name="com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver" android:permission="android.permission.INSTALL_PACKAGES">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementService">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementJobService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:01030010">
+</activity>
+<receiver android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+<category android:name="com.quvideo.slideplus">
+</category>
+</intent-filter>
+</receiver>
+<service android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdService">
+<intent-filter android:priority="-500">
+<action android:name="com.google.firebase.INSTANCE_ID_EVENT">
+</action>
+</intent-filter>
+</service>
+<provider android:authorities="com.quvideo.slideplus.firebaseinitprovider" android:exported="false" android:initOrder="100" android:name="com.google.firebase.provider.FirebaseInitProvider">
+</provider>
+<activity android:configChanges="0x00000FB0" android:exported="false" android:name="com.google.android.gms.ads.AdActivity" android:theme="@android:0103000F">
+</activity>
+<meta-data android:name="com.google.android.gms.version" android:value="@7F090008">
+</meta-data>
+<activity android:configChanges="0x000004E0" android:exported="false" android:hardwareAccelerated="true" android:name="com.vivavideo.mobile.h5core.ui.H5Activity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.vivavideo.mobile.h5core.ui.H5TransActivity">
+</activity>
+<activity android:exported="true" android:launchMode="1" android:name="com.quvideo.plugin.payclient.wechat.WeChatPayActivity" android:theme="@android:01030010">
+</activity>
+<activity-alias android:exported="true" android:name="com.quvideo.slideplus.wxapi.WXPayEntryActivity" android:targetActivity="com.quvideo.plugin.payclient.wechat.WeChatPayActivity">
+</activity-alias>
+<activity android:name="com.quvideo.xiaoying.vivaiap.payment.ProxyPayActivity" android:theme="@android:01030010">
+</activity>
+<service android:name="com.quvideo.xiaoying.plugin.downloader.business.DownloadService">
+</service>
+<activity android:configChanges="0x000000A0" android:exported="false" android:name="com.sina.weibo.sdk.web.WeiboSdkWebActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:configChanges="0x000000A0" android:launchMode="1" android:name="com.sina.weibo.sdk.share.WbShareTransActivity" android:theme="@android:01030010">
+<intent-filter>
+<action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000A0" android:launchMode="2" android:name="com.sina.weibo.sdk.share.WbShareToStoryActivity" android:theme="@android:01030010">
+<intent-filter>
+<action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_STORY">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<provider android:authorities="com.quvideo.slideplus.crashlyticsinitprovider" android:exported="false" android:initOrder="90" android:name="com.crashlytics.android.CrashlyticsInitProvider">
+</provider>
+<provider android:authorities="com.quvideo.slideplus.updateSdk.fileProvider" android:exported="false" android:grantUriPermissions="true" android:name="com.huawei.updatesdk.fileprovider.UpdateSdkFileProvider">
+</provider>
+<activity android:configChanges="0x40002484" android:excludeFromRecents="true" android:exported="false" android:hardwareAccelerated="true" android:name="com.huawei.android.hms.agent.common.HMSAgentActivity" android:theme="@android:0103000F">
+<meta-data android:name="hwc-theme" android:value="androidhwext:style/Theme.Emui.Translucent">
+</meta-data>
+</activity>
+<activity android:configChanges="0x40002484" android:excludeFromRecents="true" android:exported="false" android:hardwareAccelerated="true" android:name="com.huawei.android.hms.agent.pay.HMSPayAgentActivity" android:theme="@android:0103000F">
+<meta-data android:name="hwc-theme" android:value="androidhwext:style/Theme.Emui.Translucent">
+</meta-data>
+</activity>
+<activity android:configChanges="0x40002484" android:excludeFromRecents="true" android:exported="false" android:hardwareAccelerated="true" android:name="com.huawei.android.hms.agent.pay.HMSPMSPayAgentActivity" android:theme="@android:0103000F">
+<meta-data android:name="hwc-theme" android:value="androidhwext:style/Theme.Emui.Translucent">
+</meta-data>
+</activity>
+<service android:exported="false" android:name="com.huawei.updatesdk.service.deamon.download.DownloadService">
+</service>
+<activity android:configChanges="0x40002484" android:excludeFromRecents="true" android:exported="false" android:hardwareAccelerated="true" android:name="com.huawei.android.hms.agent.hwid.HMSSignInAgentActivity" android:theme="@android:0103000F">
+<meta-data android:name="hwc-theme" android:value="androidhwext:style/Theme.Emui.Translucent">
+</meta-data>
+</activity>
+<activity android:configChanges="0x00000480" android:exported="false" android:name="com.huawei.updatesdk.service.otaupdate.AppUpdateActivity" android:theme="@7F10022D">
+<meta-data android:name="hwc-theme" android:value="androidhwext:style/Theme.Emui.Translucent.NoTitleBar">
+</meta-data>
+</activity>
+<activity android:configChanges="0x000004A0" android:exported="false" android:name="com.huawei.updatesdk.support.pm.PackageInstallerActivity" android:theme="@7F10022D">
+<meta-data android:name="hwc-theme" android:value="androidhwext:style/Theme.Emui.Translucent">
+</meta-data>
+</activity>
+<receiver android:name="com.quvideo.mobile.hms.push.HuaWeiPushReceiver" android:permission="com.quvideo.slideplus.permission.PROCESS_PUSH_MSG">
+<intent-filter>
+<action android:name="com.huawei.android.push.intent.REGISTRATION">
+</action>
+<action android:name="com.huawei.android.push.intent.RECEIVE">
+</action>
+<action android:name="com.huawei.intent.action.PUSH_DELAY_NOTIFY">
+</action>
+<action android:name="com.huawei.android.push.intent.CLICK">
+</action>
+<action android:name="com.huawei.intent.action.PUSH_STATE">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name="com.huawei.hms.support.api.push.PushEventReceiver" android:process=":pushservice">
+<intent-filter>
+<action android:name="com.huawei.intent.action.PUSH">
+</action>
+</intent-filter>
+</receiver>
+<meta-data android:name="com.huawei.hms.version" android:value="2.6.1">
+</meta-data>
+<activity android:exported="false" android:name="cn.jpush.android.ui.PopWinActivity" android:theme="@7F1000DC">
+</activity>
+<activity android:configChanges="0x000000A0" android:exported="false" android:name="cn.jpush.android.ui.PushActivity" android:theme="@android:01030006">
+<intent-filter>
+<action android:name="cn.jpush.android.ui.PushActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="com.quvideo.slideplus">
+</category>
+</intent-filter>
+</activity>
+<service android:enabled="true" android:exported="false" android:name="cn.jpush.android.service.PushService" android:process=":pushcore">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.REGISTER">
+</action>
+<action android:name="cn.jpush.android.intent.REPORT">
+</action>
+<action android:name="cn.jpush.android.intent.PushService">
+</action>
+<action android:name="cn.jpush.android.intent.PUSH_TIME">
+</action>
+</intent-filter>
+</service>
+<service android:enabled="true" android:exported="true" android:name="cn.jpush.android.service.DaemonService">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.DaemonService">
+</action>
+<category android:name="com.quvideo.slideplus">
+</category>
+</intent-filter>
+</service>
+<receiver android:enabled="true" android:exported="false" android:name="cn.jpush.android.service.PushReceiver">
+<intent-filter android:priority="1000">
+<action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY">
+</action>
+<category android:name="com.quvideo.slideplus">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.USER_PRESENT">
+</action>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_ADDED">
+</action>
+<action android:name="android.intent.action.PACKAGE_REMOVED">
+</action>
+<data android:scheme="package">
+</data>
+</intent-filter>
+</receiver>
+<receiver android:exported="false" android:name="cn.jpush.android.service.AlarmReceiver">
+</receiver>
+<provider android:authorities="com.quvideo.slideplus.DataProvider" android:exported="false" android:name="cn.jpush.android.service.DataProvider" android:process=":pushcore">
+</provider>
+<provider android:authorities="com.quvideo.slideplus.DownloadProvider" android:exported="true" android:name="cn.jpush.android.service.DownloadProvider">
+</provider>
+<meta-data android:name="JPUSH_CHANNEL" android:value="tencent">
+</meta-data>
+<meta-data android:name="JPUSH_APPKEY" android:value="eec4857c69cb2b07c8599556">
+</meta-data>
+<activity android:configChanges="0x000000E0" android:exported="false" android:name="com.alipay.sdk.app.H5PayActivity" android:screenOrientation="3">
+</activity>
+<activity android:configChanges="0x000000E0" android:exported="false" android:name="com.alipay.sdk.app.H5AuthActivity" android:screenOrientation="3">
+</activity>
+<activity android:configChanges="0x000000E0" android:exported="true" android:launchMode="3" android:name="com.alipay.sdk.app.PayResultActivity" android:screenOrientation="1" android:theme="@android:01030010">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="true" android:launchMode="2" android:name="com.alipay.sdk.app.AlipayResultActivity" android:theme="@android:01030010">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="alipaysdk">
+</data>
+</intent-filter>
+</activity>
+<provider android:authorities="com.quvideo.slideplus.union_adsdk_tt" android:exported="false" android:name="com.bytedance.sdk.openadsdk.service.TTDownloadProvider">
+</provider>
+<provider android:authorities="com.quvideo.slideplus.FacebookInitProvider" android:exported="false" android:name="com.facebook.internal.FacebookInitProvider">
+</provider>
+<receiver android:exported="false" android:name="com.facebook.CurrentAccessTokenExpirationBroadcastReceiver">
+<intent-filter>
+<action android:name="com.facebook.sdk.ACTION_CURRENT_ACCESS_TOKEN_CHANGED">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:exported="true" android:name="com.facebook.CampaignTrackingReceiver" android:permission="android.permission.INSTALL_PACKAGES">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+<meta-data android:name="com.bumptech.glide.integration.okhttp3.OkHttpGlideModule" android:value="GlideModule">
+</meta-data>
+</application>
+</manifest>

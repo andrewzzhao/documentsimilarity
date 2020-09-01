@@ -1,0 +1,68 @@
+<?xml version="1.0" ?><manifest android:hardwareAccelerated="true" android:versionCode="200064" android:versionName="2.1" package="com.iFASTIndia.iPass" platformBuildVersionCode="23" platformBuildVersionName="6.0-2704002" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="16" android:targetSdkVersion="20">
+</uses-sdk>
+<supports-screens android:anyDensity="true" android:largeScreens="true" android:normalScreens="true" android:resizeable="true" android:smallScreens="true" android:xlargeScreens="true">
+</supports-screens>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE">
+</uses-permission>
+<permission android:name="com.iFASTIndia.iPass.permission.C2D_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="com.iFASTIndia.iPass.permission.C2D_MESSAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-feature android:name="android.hardware.telephony" android:required="false">
+</uses-feature>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_SMS">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_WAP_PUSH">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_MMS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_SMS">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SMS">
+</uses-permission>
+<uses-permission android:name="android.permission.SEND_SMS">
+</uses-permission>
+<application android:hardwareAccelerated="true" android:icon="@7F020009" android:label="@7F060007" android:supportsRtl="true">
+<activity android:configChanges="0x000004B4" android:label="@7F060006" android:launchMode="1" android:name="com.iFASTIndia.iPass.MainActivity" android:theme="@android:01030129" android:windowSoftInputMode="0x00000010">
+<intent-filter android:label="@7F060008">
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="true" android:name="com.plugin.gcm.PushHandlerActivity">
+</activity>
+<receiver android:name="com.plugin.gcm.CordovaGCMBroadcastReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+<action android:name="com.google.android.c2dm.intent.REGISTRATION">
+</action>
+<category android:name="com.iFASTIndia.iPass">
+</category>
+</intent-filter>
+</receiver>
+<service android:name="com.plugin.gcm.GCMIntentService">
+</service>
+<activity android:label="@7F060004" android:name="com.synconset.MultiImageChooserActivity" android:theme="@android:0103006E">
+</activity>
+<meta-data android:name="com.android.vending.derived.apk.id" android:value="1">
+</meta-data>
+</application>
+</manifest>

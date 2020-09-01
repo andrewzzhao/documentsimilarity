@@ -1,0 +1,692 @@
+<?xml version="1.0" ?><manifest android:compileSdkVersion="28" android:compileSdkVersionCodename="9" android:installLocation="0" android:versionCode="21651" android:versionName="5.2.2" package="com.delta.mobile.android" platformBuildVersionCode="28" platformBuildVersionName="9" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="21" android:targetSdkVersion="28">
+</uses-sdk>
+<permission android:name="com.delta.mobile.android.permission.C2D_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="com.delta.mobile.android.permission.C2D_MESSAGE">
+</uses-permission>
+<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE">
+</uses-permission>
+<permission android:description="@7F11040E" android:label="@7F11040E" android:name="com.delta.mobile.android.BROADCAST" android:protectionLevel="0x00000000">
+</permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-feature android:name="android.hardware.camera" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.camera.autofocus" android:required="false">
+</uses-feature>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.BLUETOOTH">
+</uses-permission>
+<uses-permission android:name="android.permission.BLUETOOTH_ADMIN">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-permission android:name="com.delta.mobile.android.BROADCAST">
+</uses-permission>
+<uses-feature android:name="android.hardware.telephony" android:required="false">
+</uses-feature>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-feature android:glEsVersion="0x00020000" android:required="true">
+</uses-feature>
+<application android:allowBackup="false" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:hardwareAccelerated="true" android:icon="@7F08023F" android:label="@7F1100B3" android:largeHeap="true" android:logo="@7F080418" android:name="com.delta.mobile.android.DeltaApplication" android:networkSecurityConfig="@7F140001" android:resizeableActivity="false" android:roundIcon="@7F080240" android:supportsRtl="true" android:theme="@7F12015E">
+<meta-data android:name="com.crashlytics.ApiKey" android:value="b852051b0224ff12371074e3b44649ec658f21bc">
+</meta-data>
+<meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="@7F110A9F">
+</meta-data>
+<meta-data android:name="com.delta.mobile.android.airportmaps.presenters.LocusLabsPresenter.ACCOUNT_ID" android:value="@7F1105C8">
+</meta-data>
+<activity android:configChanges="0x00000020" android:launchMode="2" android:name="com.delta.mobile.android.SplashScreen" android:screenOrientation="1" android:theme="@7F120162">
+<intent-filter>
+<data android:scheme="@7F110662">
+</data>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+<intent-filter>
+<data android:scheme="@7F1101C0">
+</data>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+<intent-filter android:autoVerify="true">
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="@7F110495" android:pathPrefix="@7F11041C" android:scheme="@7F110849">
+</data>
+<data android:host="@7F110495" android:pathPrefix="@7F110493" android:scheme="@7F110849">
+</data>
+<data android:host="@7F110495" android:pathPrefix="@7F11041F" android:scheme="@7F110849">
+</data>
+<data android:host="@7F110495" android:pathPrefix="@7F110A20" android:scheme="@7F110849">
+</data>
+<data android:host="@7F110495" android:pathPrefix="@7F110A1B" android:scheme="@7F110849">
+</data>
+<data android:host="@7F110495" android:pathPrefix="@7F110664" android:scheme="@7F110849">
+</data>
+<data android:host="@7F110495" android:pathPrefix="@7F110433" android:scheme="@7F110849">
+</data>
+<data android:host="@7F110495" android:pathPrefix="@7F110430" android:scheme="@7F110849">
+</data>
+<data android:host="@7F110495" android:pathPrefix="@7F110425" android:scheme="@7F110849">
+</data>
+<data android:host="@7F110495" android:pathPrefix="@7F1106A5" android:scheme="@7F110849">
+</data>
+<data android:host="@7F110495" android:pathPrefix="@7F11076A" android:scheme="@7F110849">
+</data>
+<data android:host="@7F110495" android:pathPrefix="@7F1103EE" android:scheme="@7F110849">
+</data>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+</intent-filter>
+<intent-filter android:autoVerify="true">
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="@7F11015A" android:scheme="@7F110849">
+</data>
+<data android:host="@7F110157" android:scheme="@7F110849">
+</data>
+</intent-filter>
+<intent-filter>
+<data android:scheme="@7F110538">
+</data>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<service android:exported="false" android:name="com.delta.apiclient.DeltaSpiceService">
+</service>
+<service android:exported="false" android:name="com.delta.apiclient.DeltaSpiceImageDownloadService">
+</service>
+<service android:exported="false" android:name="com.delta.mobile.services.fcm.FCMIntentService">
+<intent-filter>
+<action android:name="com.google.firebase.MESSAGING_EVENT">
+</action>
+</intent-filter>
+</service>
+<uses-library android:name="com.google.android.maps" android:required="false">
+</uses-library>
+<uses-library android:name="android.location.Criteria" android:required="false">
+</uses-library>
+<uses-library android:name="android.location.Location" android:required="false">
+</uses-library>
+<uses-library android:name="android.location.LocationListener" android:required="false">
+</uses-library>
+<uses-library android:name="android.location.LocationManager" android:required="false">
+</uses-library>
+<activity android:configChanges="0x000000A0" android:name="com.delta.mobile.android.umnr.PinActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000014">
+</activity>
+<activity android:configChanges="0x00000020" android:name="com.delta.mobile.android.SplashScreenActivity" android:screenOrientation="1" android:theme="@7F120162">
+</activity>
+<activity android:exported="false" android:label="" android:name="com.delta.mobile.android.WebPage" android:screenOrientation="1">
+</activity>
+<activity android:label="" android:name="com.delta.mobile.android.JsInjectableWebPage" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000020" android:label="@7F110660" android:name="com.delta.mobile.android.itineraries.MyTripsActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:label="@7F11084A" android:name="com.delta.mobile.android.itineraries.CustomerFindTrips" android:screenOrientation="1" android:windowSoftInputMode="0x00000014">
+</activity>
+<activity android:configChanges="0x00000020" android:label="@7F110369" android:name="com.delta.mobile.android.mydelta.MyReceipts" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000020" android:label="@7F110369" android:name="com.delta.mobile.android.receipts.views.ReceiptsListActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000020" android:label="@7F110369" android:name="com.delta.mobile.android.receipts.views.filter.ReceiptsListFilterActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000020" android:label="@7F11065C" android:name="com.delta.mobile.android.receipts.views.filter.DateFilterSelectionActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000020" android:label="@7F110369" android:name="com.delta.mobile.android.receipts.views.FlightReceiptDetailsActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000020" android:label="@7F110369" android:name="com.delta.mobile.android.receipts.views.WifiReceiptDetailsActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000020" android:label="@7F110369" android:name="com.delta.mobile.android.receipts.views.SeatReceiptDetailsActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000020" android:label="@7F110369" android:name="com.delta.mobile.android.receipts.views.UpgradeSeatReceiptDetailsActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000020" android:label="@7F110369" android:name="com.delta.mobile.android.receipts.views.CarReceiptDetailsActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000020" android:label="@7F110369" android:name="com.delta.mobile.android.receipts.views.BaggageReceiptDetailsActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000020" android:label="@7F110369" android:name="com.delta.mobile.android.receipts.views.InsuranceReceiptDetailsActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000020" android:label="@7F110369" android:name="com.delta.mobile.android.receipts.views.HotelReceiptDetailsActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000020" android:label="@7F110369" android:name="com.delta.mobile.android.receipts.views.SkyMilesReceiptDetailsActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000020" android:label="@7F110369" android:name="com.delta.mobile.android.receipts.views.SkyClubReceiptDetailsActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000020" android:label="@7F110369" android:name="com.delta.mobile.android.receipts.views.MultiProductReceiptDetailsActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000020" android:label="@7F110369" android:name="com.delta.mobile.android.receipts.views.ServiceFeeReceiptDetailsActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000020" android:label="@7F110369" android:name="com.delta.mobile.android.receipts.views.MyTripReceiptDetailsActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000020" android:label="@7F11065C" android:name="com.delta.mobile.android.mydelta.MyReceiptsFilter" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000020" android:label="@7F11065C" android:name="com.delta.mobile.android.mydelta.MyReceiptsFilterDateRange" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000020" android:label="@7F11065C" android:name="com.delta.mobile.android.mydelta.ReceiptDetailsActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000020" android:label="@7F11065C" android:name="com.delta.mobile.android.mydelta.ConsolidateReceipts" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000020" android:label="@7F110369" android:name="com.delta.mobile.android.mydelta.accountactivity.AccountActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000020" android:label="@7F110046" android:name="com.delta.mobile.android.mydelta.accountactivity.ActivityDetails" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000020" android:label="@7F110369" android:name="com.delta.mobile.android.mydelta.accountactivity.AccountActivityFilter" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000020" android:label="@7F1105D9" android:name="com.delta.mobile.android.mydelta.wallet.SkymilesCard" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000020" android:label="@7F11090D" android:name="com.delta.mobile.android.mydelta.wallet.SkyClubCard" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000020" android:label="@7F1108B1" android:name="com.delta.mobile.android.CustomerSettings" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000020" android:label="@7F1108B1" android:name="com.delta.mobile.android.settings.TogglesSettingActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000020" android:label="@7F11084A" android:name="com.delta.mobile.android.flightstatus.FlightStatusActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:configChanges="0x00000020" android:label="@7F110423" android:name="com.delta.mobile.android.flightstatus.FlightStatusResultActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000020" android:label="@7F11041A" android:name="com.delta.mobile.android.schedules.CustFlightSchedulesResult" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000020" android:label="@7F110423" android:name="com.delta.mobile.android.schedules.CustFlightSchedulesResultDetails" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.delta.mobile.android.webview.DeltaEmbeddedWeb" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000020" android:label="@7F11004C" android:name="com.delta.mobile.android.flightstatus.FlightTracker" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000020" android:label="@7F11004D" android:name="com.delta.mobile.android.itineraries.FlightDetailsPolaris" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000020" android:label="@7F110A64" android:name="com.delta.mobile.android.itineraries.UpgradeRequestActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000020" android:label="@7F11004E" android:name="com.delta.mobile.android.itineraries.TripOverview" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000020" android:label="@7F1101C3" android:name="com.delta.mobile.android.checkin.CheckInPolaris" android:screenOrientation="1" android:taskAffinity="@7F1101B6">
+</activity>
+<activity android:configChanges="0x00000020" android:label="@7F1101C3" android:name="com.delta.mobile.android.checkin.CheckinIntercept" android:screenOrientation="1" android:taskAffinity="@7F1101B6">
+</activity>
+<activity android:configChanges="0x00000020" android:label="@7F1101B5" android:name="com.delta.mobile.android.checkin.CheckInConfirmation" android:screenOrientation="1" android:taskAffinity="@7F1101B6">
+</activity>
+<activity android:configChanges="0x000000A0" android:label="@7F1101C3" android:name="com.delta.mobile.android.checkin.CheckInPassportActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000000A0" android:label="@7F110AFB" android:name="com.delta.mobile.android.navigationDrawer.OfflineModeActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:configChanges="0x00000020" android:label="@7F1101C3" android:name="com.delta.mobile.android.checkin.IntlCheckInPolaris" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:label="@7F1101C3" android:name="com.delta.mobile.android.checkin.CheckInReturnDateActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:configChanges="0x000000A0" android:label="@7F110724" android:name="com.delta.mobile.android.passportScan.PassportScanActivity" android:screenOrientation="0" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:configChanges="0x000000A0" android:label="@7F11029C" android:name="com.delta.mobile.android.cardScan.CardScanActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:configChanges="0x00000020" android:label="@7F1101C3" android:name="com.delta.mobile.android.checkin.USAddressActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:configChanges="0x00000020" android:label="@7F1101C3" android:name="com.delta.mobile.android.checkin.AdvisoryActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000020" android:label="@7F1101C3" android:name="com.delta.mobile.android.checkin.UsEntryAdvisoryActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000020" android:label="@7F1101C3" android:name="com.delta.mobile.android.checkin.CheckInTerms" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000020" android:label="@7F1104EF" android:name="com.delta.mobile.android.irop.IropAffectedFlightReference" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000020" android:label="@7F110369" android:name="com.delta.mobile.trips.irop.view.IropAlternativeSearchResultsActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:label="@7F11085B" android:name="com.delta.mobile.android.legacycsm.SeatMapActivity" android:screenOrientation="1" android:taskAffinity="@7F11078F">
+</activity>
+<activity android:configChanges="0x000000A0" android:label="@7F11085B" android:name="com.delta.mobile.android.seatmap.MyTripsSeatMapActivity" android:screenOrientation="1" android:taskAffinity="@7F11078F">
+</activity>
+<activity android:configChanges="0x000000A0" android:label="@7F110792" android:name="com.delta.mobile.android.payment.upsell.PurchaseSummaryActivity" android:screenOrientation="1" android:taskAffinity="@7F11078F">
+</activity>
+<activity android:configChanges="0x00000020" android:label="" android:name="com.delta.mobile.android.PredictiveCitySearch" android:screenOrientation="1" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:configChanges="0x00000020" android:label="@7F110238" android:name="com.delta.mobile.android.citydetail.CityDetailTabHost" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000020" android:label="@7F110083" android:name="com.delta.mobile.android.citydetail.CityDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:label="@7F1105EC" android:name="com.delta.mobile.android.citydetail.CityAirportMap" android:screenOrientation="4" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:configChanges="0x000000A0" android:label="@7F1105EC" android:name="com.delta.mobile.android.airportmaps.MapActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:label="@7F1105EC" android:name="com.delta.mobile.android.citydetail.CityAirportMapDetail" android:screenOrientation="4" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:configChanges="0x000000A0" android:label="@7F1105EA" android:name="com.delta.mobile.android.citydetail.CityAirportMapKey" android:screenOrientation="4" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:configChanges="0x00000020" android:label="@7F1109FD" android:name="com.delta.mobile.android.citydetail.CityGoogleMapTransit" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000020" android:label="@7F110AE0" android:name="com.delta.mobile.android.citydetail.CityWeather" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000020" android:label="@7F1102E7" android:name="com.delta.mobile.android.citydetail.CitySkyClubs" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000020" android:label="@7F1102E7" android:name="com.delta.mobile.android.citydetail.CitySkyClubInfo" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:label="@7F11084A" android:name="com.delta.mobile.android.baggage.BaggageSearchActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000024">
+</activity>
+<activity android:name="com.delta.mobile.android.baggage.BaggageRecentSearchActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F11071B" android:name="com.delta.mobile.android.profile.PassportInfoActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x00000020" android:label="@7F11093C" android:name="com.delta.mobile.android.baggage.SpecialItems" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000020" android:label="@7F110070" android:name="com.delta.mobile.android.baggage.BaggageDisclaimer" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000020" android:label="@7F110792" android:name="com.delta.mobile.android.payment.CheckinPurchaseSummaryActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000020" android:label="@7F110792" android:name="com.delta.mobile.android.payment.ExtrasPurchaseSummaryActivity" android:screenOrientation="1" android:taskAffinity="@7F11078F">
+</activity>
+<activity android:configChanges="0x00000020" android:label="" android:name="com.delta.mobile.android.payment.pcr.PurchaseConfirmationExtrasActivity" android:screenOrientation="1" android:taskAffinity="@7F11078F">
+</activity>
+<activity android:configChanges="0x00000020" android:label="" android:name="com.delta.mobile.android.payment.pcr.BagsPurchaseConfirmationActivity" android:screenOrientation="1" android:taskAffinity="@7F11078F">
+</activity>
+<activity android:configChanges="0x00000020" android:label="" android:name="com.delta.mobile.android.payment.pcr.EFirstUpgradePurchaseConfirmationActivity" android:screenOrientation="1" android:taskAffinity="@7F11078F">
+</activity>
+<activity android:configChanges="0x00000020" android:label="@7F110792" android:name="com.delta.mobile.android.upsell.UpsellPurchaseSummaryActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x00000020" android:label="" android:name="com.delta.mobile.android.payment.pcr.UpsellPurchaseConfirmationActivity" android:screenOrientation="1" android:taskAffinity="@7F11078F">
+</activity>
+<activity android:configChanges="0x00000020" android:label="@7F11078D" android:name="com.delta.mobile.android.payment.PurchaseConfirmationDetails" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000020" android:label="@7F110079" android:name="com.delta.mobile.android.traveling.AircraftList" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000020" android:label="@7F11007A" android:name="com.delta.mobile.android.traveling.AircraftDetail" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000020" android:label="@7F11007B" android:name="com.delta.mobile.android.traveling.AircraftLayout" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000020" android:label="@7F110080" android:name="com.delta.mobile.android.traveling.DeltaPartners" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000020" android:label="@7F110369" android:name="com.delta.mobile.android.recentsearches.RecentSearches" android:screenOrientation="1" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:configChanges="0x00000020" android:label="@7F110369" android:name="com.delta.mobile.android.traveling.AirportsRecentSearch" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000020" android:label="" android:name="com.delta.mobile.android.upsell.UpSellInfoActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000020" android:label="@7F110944" android:name="com.delta.mobile.android.ssrs.SSRActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:configChanges="0x00000020" android:label="@7F110944" android:name="com.delta.mobile.android.ssrs.AddSpecialServices" android:screenOrientation="1" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:configChanges="0x00000020" android:label="@7F110A0C" android:name="com.delta.mobile.android.extras.ExtrasActivity" android:screenOrientation="1" android:taskAffinity="@7F11078F" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:configChanges="0x00000020" android:label="@7F110A0C" android:name="com.delta.mobile.android.extras.TripExtrasDetailActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:configChanges="0x00000020" android:label="" android:name="com.delta.mobile.android.extras.ExtrasSkyMileActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:configChanges="0x00000020" android:label="" android:name="com.delta.mobile.android.extras.ExtrasSkyMilesNumber" android:screenOrientation="1" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:configChanges="0x00000020" android:label="@7F11096C" android:name="com.delta.mobile.android.extras.TermsAndConditions" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:label="@7F110458" android:name="com.delta.mobile.android.frequentflier.FrequentFlyerNumber" android:screenOrientation="1" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:configChanges="0x00000020" android:label="@7F11035A" android:name="com.delta.mobile.android.checkin.EUpgradeActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000020" android:label="@7F110634" android:name="com.delta.mobile.android.checkin.MilitaryBags" android:screenOrientation="1">
+</activity>
+<service android:name="com.delta.mobile.services.cart.DeltaCartService">
+</service>
+<activity android:configChanges="0x00000020" android:label="@7F11004D" android:name="com.delta.mobile.android.merchandise.MerchandiseDetailsActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:label="@7F110152" android:name="com.delta.mobile.android.booking.FlightSearchActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000000A0" android:label="@7F110152" android:name="com.delta.mobile.android.booking.flightsearch.FlightSearchResultsActivity" android:screenOrientation="1" android:taskAffinity="com.delta.mobile.android.shopping" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:configChanges="0x000000A0" android:label="@7F110152" android:name="com.delta.mobile.android.booking.FlightDetailsActivity" android:screenOrientation="1" android:taskAffinity="com.delta.mobile.android.shopping" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:configChanges="0x000000A0" android:label="@7F110152" android:name="com.delta.mobile.android.booking.legacyseatmap.LogicalSeatmapActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:configChanges="0x000000A0" android:label="@7F110152" android:name="com.delta.mobile.android.booking.legacyseatmap.InteractiveSeatmapActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:configChanges="0x000000A0" android:label="@7F110152" android:name="com.delta.mobile.android.booking.FlightSummaryActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:configChanges="0x000000A0" android:label="@7F110152" android:name="com.delta.bridge.WebViewActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:configChanges="0x000000A0" android:label="@7F110152" android:name="com.delta.mobile.android.booking.reviewAndPurchase.ReviewAndPurchaseActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:configChanges="0x00000480" android:label="@7F110152" android:name="com.delta.mobile.android.booking.reviewAndPurchase.AmexCheckoutActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:configChanges="0x00000480" android:label="@7F110152" android:name="com.delta.mobile.android.booking.reviewAndPurchase.AmexCardDetailsActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:configChanges="0x000000A0" android:label="@7F110152" android:name="com.delta.mobile.android.tripextras.TripExtrasMainActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:configChanges="0x000000A0" android:label="@7F110A0C" android:name="com.delta.mobile.android.booking.checkout.tripextras.TripExtrasActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:configChanges="0x000000A0" android:label="@7F110A0C" android:name="com.delta.mobile.android.booking.checkout.tripextras.savetripextras.SaveTripExtrasActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:configChanges="0x000000A0" android:label="@7F110152" android:name="com.delta.mobile.android.tripextras.TripExtrasDetailsActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:configChanges="0x000000A0" android:label="@7F110152" android:name="com.delta.mobile.android.booking.PassengerInfoActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:configChanges="0x000000A0" android:label="@7F110152" android:name="com.delta.mobile.android.booking.BookingConfirmationActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:configChanges="0x000000A0" android:label="@7F110152" android:name="com.delta.mobile.android.booking.SeatsTripExtrasActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:configChanges="0x000000A0" android:label="@7F110152" android:name="com.delta.mobile.android.booking.flightsearch.AddPassengerActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:configChanges="0x000000A0" android:label="@7F11044C" android:name="com.delta.mobile.android.forceappupdate.ForceAppUpdatePageActivity" android:noHistory="true" android:screenOrientation="1" android:theme="@7F120162" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:configChanges="0x000000A0" android:label="" android:name="com.delta.mobile.android.productModalPages.flightSpecificProductModal.PostPurchaseFlightSpecificProductActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:label="" android:name="com.delta.mobile.android.productModalPages.flightSpecificProductModal.BookingFlightSpecificProductActivity" android:screenOrientation="1" android:taskAffinity="com.delta.mobile.android.shopping">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:label="@7F110012" android:name="com.foresee.sdk.cxMeasure.tracker.app.SurveyInviteActivity" android:theme="@android:01030010">
+<intent-filter>
+<action android:name="com.fsr.tracker.app.LAUNCH_INVITE">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004B0" android:description="@7F11000B" android:exported="false" android:label="@7F110012" android:name="com.foresee.sdk.cxMeasure.tracker.app.ContactSurveyInviteActivity" android:theme="@android:01030010">
+<intent-filter>
+<action android:name="com.fsr.tracker.app.LAUNCH_INVITE">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:name="com.foresee.sdk.cxMeasure.tracker.app.SurveyActivity">
+<intent-filter>
+<action android:name="com.fsr.tracker.app.LAUNCH_SURVEY">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:label="" android:name="com.delta.mobile.android.mydelta.wallet.MyWalletActivity" android:screenOrientation="1" android:theme="@7F12015F">
+</activity>
+<activity android:name="com.delta.mobile.android.appunavailable.AppUnavailableActivity" android:screenOrientation="1" android:theme="@7F120163">
+</activity>
+<activity android:label="@7F1100B3" android:name="com.delta.mobile.android.navigationDrawer.NavigationDrawerActivity" android:screenOrientation="1" android:theme="@7F12015F" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:configChanges="0x000000A0" android:label="@7F110369" android:name="com.delta.mobile.android.profile.UsernameActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:configChanges="0x000000A0" android:label="@7F110369" android:name="com.delta.mobile.android.profile.PasswordActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:label="@7F1102E7" android:name="com.delta.mobile.android.citydetail.CityDetailSkyClubActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F110369" android:name="com.delta.mobile.android.todaymode.views.TourActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:label="@7F1109BC" android:name="com.delta.mobile.android.todaymode.views.TodayTripsListActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F110AE5" android:name="com.delta.mobile.android.whatsnew.WhatsNewActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F11031A" android:name="com.delta.mobile.android.mydelta.wallet.VoucherListActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F110ACA" android:name="com.delta.mobile.android.mydelta.wallet.RedeemBarcodeVoucherActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F110ACA" android:name="com.delta.mobile.android.mydelta.wallet.RedeemPromoCodeVoucherActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F110ACA" android:name="com.delta.mobile.android.mydelta.wallet.VoucherDisclaimerActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F110507" android:name="com.delta.mobile.trips.irop.view.IropAlternateItinerariesActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="" android:name="com.delta.mobile.trips.irop.view.IropAlternateItineraryDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F11004F" android:name="com.delta.mobile.android.asl.ASLActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F1109B8" android:name="com.delta.mobile.android.mydelta.profile.UpgradePreferenceActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F11004A" android:name="com.delta.mobile.android.baggage.BaggageTrackingActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F11004B" android:name="com.delta.mobile.android.asl.UpgradeStandbyFlightSelectionActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F11004A" android:name="com.delta.mobile.android.baggage.BaggagePassengerSelectionActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F11004A" android:name="com.delta.mobile.android.baggage.BaggageTrackingOnMapActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="" android:name="com.delta.mobile.android.booking.compareExperiences.ui.CompareExperiencesActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="" android:name="com.delta.mobile.android.productModalPages.genericProductModal.ui.GenericProductModalActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F110369" android:name="com.delta.mobile.android.booking.companionlist.CompanionListActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F110083" android:name="com.delta.mobile.android.skyclub.AirportSkyClubsResultActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F110369" android:name="com.delta.mobile.android.skyMilesEnrollment.SkyMilesEnrollmentActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:label="@7F110369" android:name="com.delta.mobile.android.skyMilesEnrollment.booking.SkyMilesEnrollmentBookingActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:label="@7F110369" android:name="com.delta.mobile.android.skyMilesEnrollment.EnrollmentConfirmationActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:label="@7F110369" android:name="com.delta.mobile.android.skyMilesEnrollment.trips.SkyMilesEnrollmentTripsActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:label="@7F110140" android:name="com.delta.mobile.android.minimalebp.ui.MinimalEbpActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:label="@7F110143" android:name="com.delta.mobile.android.minimalebp.ui.MinimalEbpListActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:label="@7F1101B3" android:name="com.delta.mobile.android.checkin.complimentaryupgrade.ComplimentaryUpgradeActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:label="@7F1103E6" android:name="com.delta.mobile.android.baggage.FileReportForBaggageActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F1107C7" android:name="com.delta.mobile.android.baggage.ReportConfirmationActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:label="@7F110111" android:name="com.delta.mobile.android.baggage.BagTypeSelectionActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F1100EB" android:name="com.delta.mobile.android.baggage.BaggageClaimStatusActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F110152" android:name="com.delta.mobile.android.booking.expresscheckout.ExpressCheckoutActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F110642" android:name="com.delta.mobile.android.booking.reshop.ReshopActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F110152" android:name="com.delta.mobile.android.booking.checkout.CheckoutActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F110186" android:name="com.delta.mobile.android.payment.emv3ds.CardAuthenticationActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F11085B" android:name="com.delta.mobile.android.booking.seatmap.SeatMapActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F11012A" android:name="com.delta.mobile.android.baggage.BaggageSelectionActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000020" android:label="@7F110765" android:name="com.delta.mobile.android.preselectmeal.views.PreSelectMealActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.delta.mobile.android.todaymode.views.BoardingStatusActivity" android:screenOrientation="1" android:theme="@7F120162">
+</activity>
+<service android:exported="false" android:name="com.delta.mobile.services.notification.shareablemoments.LocationMonitoringService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<service android:exported="false" android:name="com.delta.mobile.android.ibeacon.DeltaBeaconJobWorker" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<service android:exported="false" android:name="com.delta.mobile.android.ibeacon.StopBeaconJobWorker" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<service android:enabled="true" android:exported="false" android:isolatedProcess="false" android:label="iBeacon" android:name="com.radiusnetworks.ibeacon.service.IBeaconService">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.radiusnetworks.ibeacon.IBeaconIntentProcessor">
+<meta-data android:name="background" android:value="true">
+</meta-data>
+<intent-filter android:priority="1">
+<action android:name="com.delta.mobile.android.DID_RANGING">
+</action>
+<action android:name="com.delta.mobile.android.DID_MONITORING">
+</action>
+</intent-filter>
+</service>
+<service android:enabled="true" android:name="com.delta.mobile.services.notification.WearToPhoneService">
+<intent-filter>
+<action android:name="com.google.android.gms.wearable.BIND_LISTENER">
+</action>
+</intent-filter>
+</service>
+<service android:exported="false" android:name="com.delta.mobile.services.AirportImageDeleteService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<receiver android:exported="false" android:name="com.delta.mobile.android.notification.display.AlarmNotificationReceiver">
+<intent-filter>
+<action android:name="com.delta.mobile.android.DISPLAY_NOTIFICATION">
+</action>
+<data android:host="com.delta.mobile.android" android:scheme="notify">
+</data>
+</intent-filter>
+</receiver>
+<receiver android:exported="false" android:name="com.delta.mobile.android.notification.schedule.NotificationAlarmsSchedulerReceiver">
+<intent-filter>
+<action android:name="GET_ALL_PNRS">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="com.delta.mobile.android.NEW_PNR_ADDED">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="GET_PNR">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="com.delta.mobile.android.DELETE_PNR">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="com.delta.mobile.android.DELETE_PROFILE_PNR">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="com.delta.mobile.android.ENABLE_LOCAL_NOTIFICATIONS">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:exported="false" android:name="com.delta.mobile.services.notification.NotificationActionReceiver">
+<intent-filter>
+<action android:name="DISMISS_ACTION">
+</action>
+</intent-filter>
+</receiver>
+<service android:name="com.delta.mobile.android.boardingpass.service.BoardingPassWearService">
+</service>
+<service android:exported="false" android:name="com.delta.mobile.android.boardingpass.service.EBPWearService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<service android:exported="false" android:name="com.delta.mobile.android.minimalebp.service.EbpCleanupJobWorker" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<service android:exported="false" android:name="com.delta.mobile.services.notification.EbpNotificationJobWorker" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<service android:exported="false" android:name="com.delta.mobile.android.notification.AppNotificationJobWorker" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<service android:exported="false" android:name="com.delta.mobile.android.todaymode.notification.PnrNotificationJobWorker" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<service android:exported="false" android:name="com.delta.mobile.android.notification.display.CheckInNotificationJobWorker" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<service android:exported="false" android:name="com.delta.mobile.android.forceappupdate.ForceAppUpdateCheckJobWorker" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<service android:exported="false" android:name="com.delta.mobile.android.serversidetoggles.ServerSideTogglesJobWorker" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<service android:exported="false" android:name="com.delta.mobile.android.notificationbanner.NotificationBannerJobWorker" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<service android:exported="false" android:name="com.delta.mobile.android.notificationbanner.NotificationBannerDisplayJobWorker" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<service android:exported="false" android:name="com.delta.mobile.services.notification.IropNotificationJobWorker" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<service android:exported="false" android:name="com.delta.mobile.services.notification.VirtualQueueNotificationJobWorker" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<service android:exported="false" android:name="com.delta.mobile.services.notification.action.IropFlightService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<meta-data android:name="com.google.android.gms.version" android:value="@7F0A000C">
+</meta-data>
+<activity android:configChanges="0x000000A0" android:exported="false" android:label="@7F1105D0" android:name="com.delta.mobile.android.login.LoginActivity" android:screenOrientation="1" android:taskAffinity="com.delta.mobile.android.login" android:theme="@7F120162" android:windowSoftInputMode="0x00000012">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000A0" android:label="@7F1105D3" android:name="com.delta.mobile.android.login.ForceLoginActivity" android:screenOrientation="1" android:taskAffinity="com.delta.mobile.android.login" android:theme="@7F120162" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:configChanges="0x000000A0" android:label="@7F110816" android:name="com.delta.mobile.android.login.ReshopVerifyAccountActivity" android:screenOrientation="1" android:taskAffinity="com.delta.mobile.android.login" android:theme="@7F120162" android:windowSoftInputMode="0x00000012">
+</activity>
+<meta-data android:name="tracking.performance.PerformanceLogger.AGENT_ENVIRONMENT" android:value="@7F110340">
+</meta-data>
+<meta-data android:name="tracking.performance.PerformanceLogger.APPLICATION_ID" android:value="@7F110341">
+</meta-data>
+<meta-data android:name="tracking.performance.PerformanceLogger.CLUSTER_URL" android:value="@7F110342">
+</meta-data>
+<meta-data android:name="tracking.networksecurity.NetworkSecurityTracker.HEADER_KEY" android:value="@7F11069E">
+</meta-data>
+<meta-data android:name="tracking.networksecurity.NetworkSecurityTracker.DUMMY_VALUE" android:value="@7F11069D">
+</meta-data>
+<meta-data android:name="tracking.networksecurity.NetworkSecurityTracker.DUMMY_HEADER_KEY" android:value="@7F11069C">
+</meta-data>
+<meta-data android:name="tracking.adobe.API_KEY" android:value="@7F11006F">
+</meta-data>
+<meta-data android:name="io.branch.sdk.BranchKey" android:value="@7F110158">
+</meta-data>
+<uses-library android:name="org.apache.http.legacy" android:required="false">
+</uses-library>
+<service android:name="com.locuslabs.sdk.ibeacon.BeaconService">
+</service>
+<service android:name="com.locuslabs.sdk.ibeacon.service.IBeaconService">
+</service>
+<service android:name="com.locuslabs.sdk.ibeacon.IBeaconIntentProcessor">
+</service>
+<service android:exported="false" android:name="com.google.firebase.messaging.FirebaseMessagingService">
+<intent-filter android:priority="-500">
+<action android:name="com.google.firebase.MESSAGING_EVENT">
+</action>
+</intent-filter>
+</service>
+<service android:exported="false" android:name="com.google.firebase.components.ComponentDiscoveryService">
+<meta-data android:name="com.google.firebase.components:com.google.firebase.iid.Registrar" android:value="com.google.firebase.components.ComponentRegistrar">
+</meta-data>
+</service>
+<receiver android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+</intent-filter>
+</receiver>
+<activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:01030010">
+</activity>
+<provider android:authorities="com.delta.mobile.android.firebaseinitprovider" android:exported="false" android:initOrder="100" android:name="com.google.firebase.provider.FirebaseInitProvider">
+</provider>
+<activity android:configChanges="0x00000FB0" android:exported="false" android:name="com.google.android.gms.ads.AdActivity" android:theme="@android:0103000F">
+</activity>
+<receiver android:name="com.foresee.sdk.cxMeasure.tracker.services.NotificationReceiver">
+</receiver>
+<activity android:configChanges="0x00000480" android:name="americanexpress.expresscheckoutlib.AECNewActivity">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="io.card.payment.CardIOActivity">
+</activity>
+<activity android:name="io.card.payment.DataEntryActivity">
+</activity>
+<activity android:name="com.cardinalcommerce.shared.cs.userinterfaces.ChallengeHTMLView" android:theme="@7F1200DA">
+</activity>
+<activity android:name="com.cardinalcommerce.shared.cs.userinterfaces.ChallengeNativeView" android:theme="@7F1200DA" android:windowSoftInputMode="0x00000013">
+</activity>
+<provider android:authorities="com.delta.mobile.android.crashlyticsinitprovider" android:exported="false" android:initOrder="90" android:name="com.crashlytics.android.CrashlyticsInitProvider">
+</provider>
+<meta-data android:name="com.google.android.wearable.beta.app" android:resource="@7F140000">
+</meta-data>
+</application>
+</manifest>

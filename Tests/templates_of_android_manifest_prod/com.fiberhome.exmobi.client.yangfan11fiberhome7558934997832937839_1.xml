@@ -1,0 +1,278 @@
+<?xml version="1.0" ?><manifest android:versionCode="20130801" android:versionName="4.8.0.0" package="com.fiberhome.exmobi.client.yangfan11fiberhome7558934997832937839_1" xmlns:android="http://schemas.android.com/apk/res/android">
+<application android:debuggable="false" android:icon="@7F020099" android:label="@7F070015" android:name="com.fiberhome.gaea.client.base.GmapApiMan">
+<meta-data android:name="com.amap.api.v2.apikey" android:value="f11bb340701253dd22537d97ec7a9410">
+</meta-data>
+<activity android:configChanges="0x000000E0" android:label="@7F070015" android:name="com.fiberhome.gaea.client.base.GaeaAndroid" android:screenOrientation="2" android:theme="@android:0103000F" android:windowSoftInputMode="0x00000013">
+</activity>
+<activity android:configChanges="0x000000E0" android:name="com.fiberhome.gaea.client.html.activity.DownLoadManagerActivity" android:screenOrientation="1" android:theme="@android:0103000C" android:windowSoftInputMode="0x00000023">
+</activity>
+<activity android:configChanges="0x000000E0" android:name="com.fiberhome.gaea.client.html.activity.DemoHomeActivity" android:screenOrientation="1" android:theme="@android:0103000C" android:windowSoftInputMode="0x00000023">
+</activity>
+<activity android:configChanges="0x000000E0" android:name="com.fiberhome.gaea.client.html.activity.DemoAppManagerActivity" android:screenOrientation="1" android:theme="@android:0103000C" android:windowSoftInputMode="0x00000023">
+</activity>
+<activity android:configChanges="0x000000E0" android:label="@7F070015" android:name="com.fiberhome.gaea.client.html.activity.SelectDirActivity" android:screenOrientation="1" android:theme="@android:0103000C" android:windowSoftInputMode="0x00000023">
+</activity>
+<activity android:configChanges="0x000000E0" android:label="@7F070015" android:name="com.fiberhome.gaea.client.html.activity.DeskTopActivity" android:screenOrientation="1" android:theme="@android:01030008" android:windowSoftInputMode="0x00000023">
+</activity>
+<activity android:configChanges="0x000000E0" android:label="@7F070015" android:name="com.fiberhome.gaea.client.html.activity.WelcomActivity" android:screenOrientation="1" android:theme="@android:01030008" android:windowSoftInputMode="0x00000023">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000E0" android:label="@7F070015" android:name="com.fiberhome.gaea.client.html.activity.WelcomMessagePushActivity" android:screenOrientation="1" android:theme="@android:01030008" android:windowSoftInputMode="0x00000023">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="e.cn" android:scheme="http">
+</data>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000E0" android:name="com.fiberhome.gaea.client.html.activity.AppViewActivity" android:screenOrientation="1" android:theme="@android:01030008" android:windowSoftInputMode="0x00000023">
+</activity>
+<activity android:configChanges="0x000000E0" android:name="com.fiberhome.gaea.client.html.activity.PushListActivity" android:screenOrientation="1" android:theme="@android:0103000C" android:windowSoftInputMode="0x00000023">
+</activity>
+<receiver android:name="com.fiberhome.gaea.client.core.sms.SmsReceiver">
+<intent-filter android:priority="2147483647">
+<action android:name="android.provider.Telephony.SMS_RECEIVED">
+</action>
+<action android:name="SMS_SEND">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name="com.fiberhome.gaea.client.core.tel.TeleReceiver">
+<intent-filter>
+<action android:name="android.intent.action.PHONE_STATE">
+</action>
+<action android:name="android.intent.action.NEW_OUTGOING_CALL">
+</action>
+</intent-filter>
+</receiver>
+<service android:enabled="true" android:name="com.baidu.location.f" android:permission="android.permission.BAIDU_LOCATION_SERVICE" android:process=":remote">
+<intent-filter>
+<action android:name="com.baidu.location.service_v2.6">
+</action>
+</intent-filter>
+</service>
+<receiver android:name="com.fiberhome.xpush.EventBroadcastReceiver">
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+<action android:name="com.fiberhome.exmobi.client.yangfan11fiberhome7558934997832937839_1.com.fiberhome.xpush.repeating">
+</action>
+<action android:name="com.fiberhome.exmobi.client.yangfan11fiberhome7558934997832937839_1com.fh.xpush.openmessage">
+</action>
+<action android:name="com.fiberhome.exmobi.client.yangfan11fiberhome7558934997832937839_1com.fh.xpush.derecttcppush">
+</action>
+<action android:name="com.fiberhome.exmobi.client.yangfan11fiberhome7558934997832937839_1com.fh.xpush.derecttcppush.bomb">
+</action>
+<action android:name="com.fiberhome.exmobi.client.yangfan11fiberhome7558934997832937839_1com.fh.xpush.pressderecttcppush">
+</action>
+<action android:name="com.fiberhome.exmobi.client.yangfan11fiberhome7558934997832937839_1com.fh.xpush.com.fiberhome.timer">
+</action>
+<action android:name="com.fiberhome.exmobi.client.yangfan11fiberhome7558934997832937839_1com.fh.xpush.openmessage.deleteall">
+</action>
+<action android:name="com.fiberhome.exmobi.client.yangfan11fiberhome7558934997832937839_1com.fh.xpush.tonotification">
+</action>
+<action android:name="com.fiberhome.exmobi.client.yangfan11fiberhome7558934997832937839_1.restartpusherver">
+</action>
+<action android:name="android.intent.action.MEDIA_MOUNTED">
+</action>
+<action android:name="android.intent.action.MEDIA_UNMOUNTED">
+</action>
+<action android:name="android.intent.action.USER_PRESENT">
+</action>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+<action android:name="com.fiberhome.exmobi.client.yangfan11fiberhome7558934997832937839_1.com.fiberhome.xpush.startBackgroundService">
+</action>
+</intent-filter>
+</receiver>
+<service android:enabled="true" android:label="BGForPushService" android:name="com.fiberhome.xpush.BGForPushService" android:process=":push">
+</service>
+<service android:enabled="true" android:label="TCPPushService" android:name="com.fiberhome.xpush.TCPPushService" android:process=":push">
+</service>
+<service android:enabled="true" android:label="BackgroundService" android:name="com.fiberhome.xpush.BackgroundService" android:process=":push">
+</service>
+<service android:enabled="true" android:label="LocalService" android:name="com.fiberhome.xloc.broadcast.LocalService" android:process=":lbs">
+</service>
+<receiver android:name="com.fiberhome.xloc.broadcast.LocTaskReceiver">
+<intent-filter android:priority="100">
+<action android:name="android.intent.action.USER_PRESENT">
+</action>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+<action android:name="com.fiberhome.xloc.calling">
+</action>
+<action android:name="com.fiberhome.xloc.location">
+</action>
+<action android:name="android.intent.action.MEDIA_MOUNTED">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name="com.fiberhome.xloc.broadcast.ScreenReceiver">
+<intent-filter android:priority="100">
+<action android:name="android.intent.action.SCREEN_OFF">
+</action>
+<action android:name="android.intent.action.SCREEN_ON">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name="com.fiberhome.gaea.client.core.conn.NetCheckReceiver">
+<intent-filter android:priority="100">
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+</receiver>
+<activity android:name="com.fiberhome.gaea.client.html.activity.SettingActivity" android:screenOrientation="1" android:theme="@android:0103000C" android:windowSoftInputMode="0x00000023">
+</activity>
+<activity android:name="com.fiberhome.gaea.client.html.activity.AboutActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000023">
+</activity>
+<activity android:name="com.fiberhome.gaea.client.nativeapp.NaiveShareClientActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000023">
+</activity>
+<activity android:name="com.fiberhome.gaea.client.html.activity.RegisterActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000023">
+</activity>
+<activity android:configChanges="0x000000E0" android:name="com.fiberhome.gaea.client.html.activity.GMapActivity" android:screenOrientation="2" android:windowSoftInputMode="0x00000013">
+</activity>
+<activity android:configChanges="0x000000E0" android:name="com.fiberhome.gaea.client.html.activity.GaodeMapActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000013">
+</activity>
+<activity android:configChanges="0x000000E0" android:name="com.fiberhome.gaea.client.html.activity.PhotoActivity" android:windowSoftInputMode="0x00000023">
+</activity>
+<activity android:label="@7F070003" android:name="com.fiberhome.gaea.client.bluetooth.BluetoothPrint" android:theme="@android:0103000C" android:windowSoftInputMode="0x00000023">
+</activity>
+<activity android:name="com.fiberhome.gaea.client.html.activity.RecordActivity" android:theme="@android:0103000C" android:windowSoftInputMode="0x00000023">
+</activity>
+<activity android:name="com.fiberhome.gaea.client.html.activity.RecordListActivity" android:theme="@android:0103000C" android:windowSoftInputMode="0x00000023">
+</activity>
+<activity android:configChanges="0x000000A0" android:label="@7F07000D" android:name="com.fiberhome.gaea.client.bluetooth.DeviceListActivity" android:theme="@android:0103000B" android:windowSoftInputMode="0x00000023">
+</activity>
+<activity android:name="com.fiberhome.gaea.client.html.activity.CustCameraActivity">
+</activity>
+<activity android:name="com.fiberhome.gaea.client.base.MailListActivity">
+</activity>
+<activity android:name="com.fiberhome.gaea.client.html.activity.ContinueCameraActivity">
+</activity>
+<activity android:name="com.fiberhome.gaea.client.html.activity.CameraAlbumActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.fiberhome.gaea.client.html.activity.CameraPreviewActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.tencent.weibo.webview.OAuthV2AuthorizeWebView" android:screenOrientation="1">
+</activity>
+<activity android:name="com.weibo.sdk.android.WeiboWebView" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000E0" android:name="com.fiberhome.gaea.client.html.activity.HandwritingActivity" android:screenOrientation="2">
+</activity>
+<activity android:label="@7F0700EE" android:name="be.ppareit.swiftp.MainActivity" android:screenOrientation="1" android:theme="@7F0B0004">
+</activity>
+<activity android:label="@7F0700EE" android:name="be.ppareit.swiftp.SettingActivity" android:screenOrientation="1" android:theme="@7F0B0004">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="decode.CaptureActivity" android:screenOrientation="0" android:theme="@android:01030007" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.fiberhome.gaea.client.nativeapp.NativeAppMarkActivity" android:screenOrientation="1" android:theme="@7F0B0008" android:windowSoftInputMode="0x00000023">
+</activity>
+<activity android:name="com.fiberhome.gaea.client.nativeapp.NativeAppDetialActivity" android:screenOrientation="1" android:theme="@7F0B0008" android:windowSoftInputMode="0x00000023">
+</activity>
+<activity android:name="com.fiberhome.gaea.client.nativeapp.NativeCategoryDetailActivity" android:screenOrientation="1" android:theme="@7F0B0008" android:windowSoftInputMode="0x00000023">
+</activity>
+<activity android:name="com.fiberhome.gaea.client.nativeapp.adapter.NativeAppMarkFenleiAdapter" android:screenOrientation="1" android:theme="@7F0B0008" android:windowSoftInputMode="0x00000023">
+</activity>
+<service android:name="be.ppareit.swiftp.FTPServerService">
+</service>
+<receiver android:exported="false" android:name="be.ppareit.swiftp.ServerRunningNotification">
+<intent-filter>
+<action android:name="be.ppareit.swiftp.FTPServerService.STARTED">
+</action>
+<action android:name="be.ppareit.swiftp.FTPServerService.STOPPED">
+</action>
+</intent-filter>
+</receiver>
+</application>
+<permission android:name="android.permission.BAIDU_LOCATION_SERVICE">
+</permission>
+<uses-permission android:name="android.permission.BAIDU_LOCATION_SERVICE">
+</uses-permission>
+<uses-permission android:name="android.permission.DEVICE_POWER">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_CONTACTS">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_CONTACTS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_CALENDAR">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_CALENDAR">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.intent.action.USER_PRESENT">
+</uses-permission>
+<uses-permission android:name="android.permission.RESTART_PACKAGES">
+</uses-permission>
+<uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_GPS">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_ASSISTED_GPS">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS">
+</uses-permission>
+<uses-permission android:name="android.permission.RECORD_AUDIO">
+</uses-permission>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.CALL_PHONE">
+</uses-permission>
+<uses-permission android:name="android.permission.MODIFY_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.SEND_SMS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_SMS">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_SMS">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS">
+</uses-permission>
+<uses-permission android:name="android.permission.BLUETOOTH_ADMIN">
+</uses-permission>
+<uses-permission android:name="android.permission.BLUETOOTH">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_APN_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SETTIINGS">
+</uses-permission>
+<supports-screens android:anyDensity="true" android:largeScreens="true" android:normalScreens="true" android:smallScreens="true">
+</supports-screens>
+<uses-sdk android:minSdkVersion="5">
+</uses-sdk>
+</manifest>

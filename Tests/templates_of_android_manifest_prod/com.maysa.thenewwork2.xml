@@ -1,0 +1,142 @@
+<?xml version="1.0" ?><manifest android:versionCode="25" android:versionName="1.2.5" package="com.maysa.thenewwork2" platformBuildVersionCode="25" platformBuildVersionName="7.1.1" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="16" android:targetSdkVersion="25">
+</uses-sdk>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.RECORD_AUDIO">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-permission android:name="android.permission.RECORD_VIDEO">
+</uses-permission>
+<uses-permission android:name="android.permission.FLASHLIGHT">
+</uses-permission>
+<uses-feature android:name="android.hardware.camera" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.camera.autofocus" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.camera.flash" android:required="false">
+</uses-feature>
+<application android:allowBackup="true" android:icon="@7F030000" android:label="@7F070026" android:largeHeap="true" android:name="com.maysa.thenewwork2.MainApplication" android:supportsRtl="true" android:theme="@7F0900A4">
+<meta-data android:name="QQ_APPID" android:value="1105817224">
+</meta-data>
+<meta-data android:name="RONG_CLOUD_APP_KEY" android:value="mgb7ka1nm3gcg">
+</meta-data>
+<meta-data android:name="UMENG_APPKEY" android:value="582316f47f2c74031a000a5d">
+</meta-data>
+<meta-data android:name="UMENG_CHANNEL" android:value="maysa2">
+</meta-data>
+<activity android:configChanges="0x000004B0" android:label="@7F070026" android:launchMode="1" android:name="com.maysa.thenewwork2.MainActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:host="com.maysa.thenewwork2" android:pathPrefix="/conversation" android:scheme="rong">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.facebook.react.devsupport.DevSettingsActivity">
+</activity>
+<activity android:exported="true" android:launchMode="1" android:name="com.maysa.thenewwork2.wxapi.WXEntryActivity">
+</activity>
+<activity android:exported="true" android:launchMode="1" android:name="com.maysa.thenewwork2.wxapi.WXPayEntryActivity">
+</activity>
+<service android:exported="true" android:name="io.rong.imlib.ipc.RongService" android:process=":ipc">
+</service>
+<service android:exported="true" android:name="io.rong.imlib.ReConnectService">
+</service>
+<receiver android:exported="true" android:name="io.rong.imlib.ConnectChangeReceiver">
+</receiver>
+<receiver android:name="io.rong.imlib.HeartbeatReceiver" android:process=":ipc">
+</receiver>
+<service android:exported="false" android:name="io.rong.push.core.PushRegistrationService">
+</service>
+<service android:exported="true" android:name="io.rong.push.core.MessageHandleService">
+</service>
+<service android:exported="false" android:name="io.rong.push.PushService" android:process="io.rong.push">
+</service>
+<receiver android:name="io.rong.push.PushReceiver" android:process="io.rong.push">
+<intent-filter>
+<action android:name="io.rong.push.intent.action.HEART_BEAT">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.USER_PRESENT">
+</action>
+<action android:name="android.intent.action.ACTION_POWER_CONNECTED">
+</action>
+<action android:name="android.intent.action.ACTION_POWER_DISCONNECTED">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:exported="true" android:name="io.rong.imlib.ipc.PushReceiver">
+<intent-filter>
+<action android:name="io.rong.push.intent.MESSAGE_ARRIVED">
+</action>
+<action android:name="io.rong.push.intent.MI_MESSAGE_ARRIVED">
+</action>
+<action android:name="io.rong.push.intent.MESSAGE_CLICKED">
+</action>
+<action android:name="io.rong.push.intent.MI_MESSAGE_CLICKED">
+</action>
+</intent-filter>
+</receiver>
+<activity android:launchMode="2" android:name="com.tencent.tauth.AuthActivity" android:noHistory="true">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="tencentxxx">
+</data>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.tencent.connect.common.AssistActivity" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x000000E0" android:exported="false" android:name="com.alipay.sdk.app.H5PayActivity" android:screenOrientation="3">
+</activity>
+<activity android:configChanges="0x000000E0" android:exported="false" android:name="com.alipay.sdk.auth.AuthActivity" android:screenOrientation="3">
+</activity>
+</application>
+</manifest>

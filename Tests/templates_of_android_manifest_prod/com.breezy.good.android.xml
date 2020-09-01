@@ -1,0 +1,460 @@
+<?xml version="1.0" ?><manifest android:versionCode="357165" android:versionName="2.8.35.357165" package="com.breezy.good.android" platformBuildVersionCode="27" platformBuildVersionName="8.1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="19" android:targetSdkVersion="27">
+</uses-sdk>
+<uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE" android:required="true">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.MANAGE_DOCUMENTS">
+</uses-permission>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-feature android:name="android.hardware.camera">
+</uses-feature>
+<permission android:name="android.permission.FLASHLIGHT" android:permissionGroup="android.permission-group.HARDWARE_CONTROLS" android:protectionLevel="0x00000000">
+</permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.BLUETOOTH">
+</uses-permission>
+<uses-permission android:name="android.permission.BLUETOOTH_ADMIN">
+</uses-permission>
+<uses-feature android:glEsVersion="0x00020000" android:required="true">
+</uses-feature>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE">
+</uses-permission>
+<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE">
+</uses-permission>
+<permission android:name="com.breezy.good.android.permission.C2D_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="com.breezy.good.android.permission.C2D_MESSAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.USE_FINGERPRINT">
+</uses-permission>
+<application android:allowBackup="false" android:hardwareAccelerated="true" android:icon="@7F020164" android:label="@7F080091" android:logo="@7F020169" android:name="com.breezy.android.base.BreezyApplication" android:supportsRtl="false" android:theme="@7F0A0020">
+<meta-data android:name="GDApplicationVersion" android:value="2.0.0">
+</meta-data>
+<activity android:alwaysRetainTaskState="true" android:excludeFromRecents="true" android:exported="true" android:name="com.good.gd.GDIccReceivingActivity">
+<intent-filter>
+<action android:name="com.good.gd.intent.action.ACTION_ICC_COMMAND">
+</action>
+</intent-filter>
+</activity>
+<activity android:name="com.good.gd.ui.GDInternalActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<service android:enabled="true" android:exported="false" android:name="com.good.gd.service.GDService">
+</service>
+<activity android:alwaysRetainTaskState="true" android:excludeFromRecents="true" android:exported="true" android:name="com.good.gt.ndkproxy.icc.IccActivity" android:theme="@android:01030055">
+<intent-filter>
+<action android:name="com.good.gd.intent.action.ACTION_ICC_COMMAND">
+</action>
+</intent-filter>
+</activity>
+<service android:name="com.good.gt.ndkproxy.icc.IccManagerService">
+</service>
+<activity android:label="@7F08004A" android:name="com.zendesk.sdk.feedback.ui.ContactZendeskActivity" android:theme="@7F0A0244" android:windowSoftInputMode="0x00000014">
+<meta-data android:name="GDMonitorActivity" android:value="true">
+</meta-data>
+</activity>
+<activity android:label="@7F080061" android:name="com.zendesk.sdk.requests.RequestActivity" android:theme="@7F0A0244">
+<meta-data android:name="GDMonitorActivity" android:value="true">
+</meta-data>
+</activity>
+<activity android:label="@7F080069" android:name="com.zendesk.sdk.support.SupportActivity" android:theme="@7F0A0244" android:windowSoftInputMode="0x00000010">
+<meta-data android:name="GDMonitorActivity" android:value="true">
+</meta-data>
+</activity>
+<activity android:label="@7F08004A" android:name="com.zendesk.sdk.requests.ViewRequestActivity" android:theme="@7F0A0244" android:windowSoftInputMode="0x00000012">
+<meta-data android:name="GDMonitorActivity" android:value="true">
+</meta-data>
+</activity>
+<activity android:configChanges="0x00000480" android:name="com.zendesk.sdk.support.ViewArticleActivity" android:theme="@7F0A0244">
+<meta-data android:name="GDMonitorActivity" android:value="true">
+</meta-data>
+</activity>
+<activity android:name="com.nbsp.materialfilepicker.ui.FilePickerActivity" android:theme="@7F0A00FD">
+<meta-data android:name="GDMonitorActivity" android:value="true">
+</meta-data>
+</activity>
+<activity android:excludeFromRecents="true" android:exported="false" android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity" android:theme="@android:01030010">
+<meta-data android:name="GDMonitorActivity" android:value="true">
+</meta-data>
+</activity>
+<provider android:authorities="@7F0800EE" android:exported="false" android:grantUriPermissions="true" android:name="android.support.v4.content.FileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F060001">
+</meta-data>
+</provider>
+<activity android:launchMode="1" android:name="com.breezy.android.view.welcome.WelcomeActivity" android:screenOrientation="1" android:theme="@7F0A0156">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="AIzaSyBFcPSoCIuI9pEGxdAQ6ae80BH6nfo16ug">
+</meta-data>
+<meta-data android:name="com.google.android.apps.drive.APP_ID" android:value="AIzaSyBFcPSoCIuI9pEGxdAQ6ae80BH6nfo16ug">
+</meta-data>
+<meta-data android:name="com.crashlytics.ApiKey" android:value="32e26f1349ac317f4f3b007a6e25e27c34ec4ddc">
+</meta-data>
+<service android:enabled="true" android:exported="false" android:name="com.breezy.android.service.PrintService">
+</service>
+<activity android:configChanges="0x00000480" android:launchMode="1" android:name="com.breezy.android.view.home.PrintActivity" android:theme="@7F0A0156">
+</activity>
+<activity android:configChanges="0x00000480" android:launchMode="1" android:name="com.breezy.android.view.fax.FaxActivity" android:theme="@7F0A0156">
+</activity>
+<activity android:configChanges="0x00000480" android:launchMode="1" android:name="com.breezy.android.view.history.HistoryActivity" android:theme="@7F0A0156">
+</activity>
+<activity android:configChanges="0x00000480" android:launchMode="1" android:name="com.breezy.android.view.settings.SettingsActivity" android:theme="@7F0A0156">
+</activity>
+<activity android:configChanges="0x00000480" android:launchMode="1" android:name="com.breezy.android.view.help.HelpActivity" android:theme="@7F0A0156">
+</activity>
+<activity android:configChanges="0x00000480" android:launchMode="1" android:name="com.breezy.android.view.admin.AdminActivity" android:theme="@7F0A0156">
+</activity>
+<activity android:configChanges="0x00000480" android:launchMode="1" android:name="com.breezy.android.view.zephyr.ZephyrActivity" android:theme="@7F0A0156">
+</activity>
+<activity android:configChanges="0x00000480" android:launchMode="1" android:name="com.breezy.android.base.IntentFilterActivity" android:theme="@7F0A0156">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:mimeType="image/*">
+</data>
+<data android:mimeType="file/*">
+</data>
+<data android:mimeType="text/html">
+</data>
+<data android:mimeType="text/plain">
+</data>
+<data android:mimeType="text/richtext">
+</data>
+<data android:mimeType="text/rtf">
+</data>
+<data android:mimeType="application/pdf">
+</data>
+<data android:mimeType="application/msword">
+</data>
+<data android:mimeType="application/vnd.openxmlformats-officedocument.wordprocessingml.document">
+</data>
+<data android:mimeType="application/vnd.ms-word.document.macroEnabled.12">
+</data>
+<data android:mimeType="application/vnd.openxmlformats-officedocument.wordprocessingml.template">
+</data>
+<data android:mimeType="application/vnd.ms-word.template.macroEnabled.12">
+</data>
+<data android:mimeType="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet">
+</data>
+<data android:mimeType="application/vnd.ms-excel.sheet.macroEnabled.12">
+</data>
+<data android:mimeType="application/vnd.openxmlformats-officedocument.spreadsheetml.template">
+</data>
+<data android:mimeType="application/vnd.ms-excel.template.macroEnabled.12">
+</data>
+<data android:mimeType="application/vnd.ms-excel.sheet.binary.macroEnabled.12">
+</data>
+<data android:mimeType="application/vnd.ms-excel.addin.macroEnabled.12">
+</data>
+<data android:mimeType="application/vnd.openxmlformats-officedocument.presentationml.presentation">
+</data>
+<data android:mimeType="application/vnd.ms-powerpoint.presentation.macroEnabled.12">
+</data>
+<data android:mimeType="application/vnd.openxmlformats-officedocument.presentationml.slideshow">
+</data>
+<data android:mimeType="application/vnd.ms-powerpoint.slideshow.macroEnabled.12">
+</data>
+<data android:mimeType="application/vnd.openxmlformats-officedocument.presentationml.template">
+</data>
+<data android:mimeType="application/vnd.ms-powerpoint.template.macroEnabled.12">
+</data>
+<data android:mimeType="application/vnd.ms-powerpoint.addin.macroEnabled.12">
+</data>
+<data android:mimeType="application/vnd.openxmlformats-officedocument.presentationml.slide">
+</data>
+<data android:mimeType="application/vnd.ms-powerpoint.slide.macroEnabled.12">
+</data>
+<data android:mimeType="application/oda">
+</data>
+<data android:mimeType="application/vnd.ms-powerpoint">
+</data>
+<data android:mimeType="application/vnd.ms-project">
+</data>
+<data android:mimeType="application/vnd.ms-excel">
+</data>
+<data android:mimeType="application/vnd.ms-works">
+</data>
+<data android:mimeType="application/rtf">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.SEND">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:mimeType="image/*">
+</data>
+<data android:mimeType="message/rfc822">
+</data>
+<data android:mimeType="file/*">
+</data>
+<data android:mimeType="text/html">
+</data>
+<data android:mimeType="text/plain">
+</data>
+<data android:mimeType="text/richtext">
+</data>
+<data android:mimeType="text/rtf">
+</data>
+<data android:mimeType="application/pdf">
+</data>
+<data android:mimeType="application/msword">
+</data>
+<data android:mimeType="application/vnd.openxmlformats-officedocument.wordprocessingml.document">
+</data>
+<data android:mimeType="application/vnd.ms-word.document.macroEnabled.12">
+</data>
+<data android:mimeType="application/vnd.openxmlformats-officedocument.wordprocessingml.template">
+</data>
+<data android:mimeType="application/vnd.ms-word.template.macroEnabled.12">
+</data>
+<data android:mimeType="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet">
+</data>
+<data android:mimeType="application/vnd.ms-excel.sheet.macroEnabled.12">
+</data>
+<data android:mimeType="application/vnd.openxmlformats-officedocument.spreadsheetml.template">
+</data>
+<data android:mimeType="application/vnd.ms-excel.template.macroEnabled.12">
+</data>
+<data android:mimeType="application/vnd.ms-excel.sheet.binary.macroEnabled.12">
+</data>
+<data android:mimeType="application/vnd.ms-excel.addin.macroEnabled.12">
+</data>
+<data android:mimeType="application/vnd.openxmlformats-officedocument.presentationml.presentation">
+</data>
+<data android:mimeType="application/vnd.ms-powerpoint.presentation.macroEnabled.12">
+</data>
+<data android:mimeType="application/vnd.openxmlformats-officedocument.presentationml.slideshow">
+</data>
+<data android:mimeType="application/vnd.ms-powerpoint.slideshow.macroEnabled.12">
+</data>
+<data android:mimeType="application/vnd.openxmlformats-officedocument.presentationml.template">
+</data>
+<data android:mimeType="application/vnd.ms-powerpoint.template.macroEnabled.12">
+</data>
+<data android:mimeType="application/vnd.ms-powerpoint.addin.macroEnabled.12">
+</data>
+<data android:mimeType="application/vnd.openxmlformats-officedocument.presentationml.slide">
+</data>
+<data android:mimeType="application/vnd.ms-powerpoint.slide.macroEnabled.12">
+</data>
+<data android:mimeType="application/oda">
+</data>
+<data android:mimeType="application/vnd.ms-powerpoint">
+</data>
+<data android:mimeType="application/vnd.ms-project">
+</data>
+<data android:mimeType="application/vnd.ms-excel">
+</data>
+<data android:mimeType="application/vnd.ms-works">
+</data>
+<data android:mimeType="application/rtf">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="org.androidprinting.intent.action.PRINT">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:mimeType="image/*">
+</data>
+<data android:mimeType="file/*">
+</data>
+<data android:mimeType="text/html">
+</data>
+<data android:mimeType="text/plain">
+</data>
+<data android:mimeType="text/richtext">
+</data>
+<data android:mimeType="text/rtf">
+</data>
+<data android:mimeType="application/pdf">
+</data>
+<data android:mimeType="application/msword">
+</data>
+<data android:mimeType="application/vnd.openxmlformats-officedocument.wordprocessingml.document">
+</data>
+<data android:mimeType="application/vnd.ms-word.document.macroEnabled.12">
+</data>
+<data android:mimeType="application/vnd.openxmlformats-officedocument.wordprocessingml.template">
+</data>
+<data android:mimeType="application/vnd.ms-word.template.macroEnabled.12">
+</data>
+<data android:mimeType="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet">
+</data>
+<data android:mimeType="application/vnd.ms-excel.sheet.macroEnabled.12">
+</data>
+<data android:mimeType="application/vnd.openxmlformats-officedocument.spreadsheetml.template">
+</data>
+<data android:mimeType="application/vnd.ms-excel.template.macroEnabled.12">
+</data>
+<data android:mimeType="application/vnd.ms-excel.sheet.binary.macroEnabled.12">
+</data>
+<data android:mimeType="application/vnd.ms-excel.addin.macroEnabled.12">
+</data>
+<data android:mimeType="application/vnd.openxmlformats-officedocument.presentationml.presentation">
+</data>
+<data android:mimeType="application/vnd.ms-powerpoint.presentation.macroEnabled.12">
+</data>
+<data android:mimeType="application/vnd.openxmlformats-officedocument.presentationml.slideshow">
+</data>
+<data android:mimeType="application/vnd.ms-powerpoint.slideshow.macroEnabled.12">
+</data>
+<data android:mimeType="application/vnd.openxmlformats-officedocument.presentationml.template">
+</data>
+<data android:mimeType="application/vnd.ms-powerpoint.template.macroEnabled.12">
+</data>
+<data android:mimeType="application/vnd.ms-powerpoint.addin.macroEnabled.12">
+</data>
+<data android:mimeType="application/vnd.openxmlformats-officedocument.presentationml.slide">
+</data>
+<data android:mimeType="application/vnd.ms-powerpoint.slide.macroEnabled.12">
+</data>
+<data android:mimeType="application/oda">
+</data>
+<data android:mimeType="application/vnd.ms-powerpoint">
+</data>
+<data android:mimeType="application/vnd.ms-project">
+</data>
+<data android:mimeType="application/vnd.ms-excel">
+</data>
+<data android:mimeType="application/vnd.ms-works">
+</data>
+<data android:mimeType="application/rtf">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="breezy">
+</data>
+<data android:host="uq">
+</data>
+<data android:pathPrefix="/release">
+</data>
+</intent-filter>
+</activity>
+<service android:name="com.breezy.android.gcm.GcmMessageListenerService">
+<intent-filter>
+<action android:name="com.google.firebase.MESSAGING_EVENT">
+</action>
+</intent-filter>
+</service>
+<service android:name="com.breezy.print.gcm.GcmTokenListenerService">
+<intent-filter>
+<action android:name="com.google.firebase.INSTANCE_ID_EVENT">
+</action>
+</intent-filter>
+</service>
+<service android:exported="true" android:name="com.google.firebase.messaging.FirebaseMessagingService">
+<intent-filter android:priority="-500">
+<action android:name="com.google.firebase.MESSAGING_EVENT">
+</action>
+</intent-filter>
+</service>
+<activity android:name="com.microsoft.aad.adal.AuthenticationActivity">
+</activity>
+<service android:exported="true" android:name="com.google.android.gms.auth.api.signin.RevocationBoundService" android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION">
+</service>
+<receiver android:name="com.zendesk.sdk.power.BatteryStateBroadcastReceiver">
+<intent-filter>
+<action android:name="android.intent.action.BATTERY_LOW">
+</action>
+<action android:name="android.intent.action.BATTERY_OKAY">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:exported="false" android:name="com.zendesk.sdk.deeplinking.ZendeskDeepLinkingBroadcastReceiver">
+<intent-filter>
+<action android:name="com.zendesk.sdk.deeplinking">
+</action>
+</intent-filter>
+</receiver>
+<provider android:authorities="com.breezy.good.android.belvedere.attachments" android:exported="false" android:grantUriPermissions="true" android:name="com.zendesk.belvedere.BelvedereFileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F060000">
+</meta-data>
+</provider>
+<service android:name="com.google.firebase.components.ComponentDiscoveryService">
+<meta-data android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar" android:value="com.google.firebase.components.ComponentRegistrar">
+</meta-data>
+<meta-data android:name="com.google.firebase.components:com.google.firebase.iid.Registrar" android:value="com.google.firebase.components.ComponentRegistrar">
+</meta-data>
+</service>
+<receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementReceiver">
+</receiver>
+<receiver android:enabled="true" android:exported="true" android:name="com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver" android:permission="android.permission.INSTALL_PACKAGES">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementService">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementJobService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<receiver android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+<category android:name="com.breezy.good.android">
+</category>
+</intent-filter>
+</receiver>
+<service android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdService">
+<intent-filter android:priority="-500">
+<action android:name="com.google.firebase.INSTANCE_ID_EVENT">
+</action>
+</intent-filter>
+</service>
+<activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:01030010">
+</activity>
+<provider android:authorities="com.breezy.good.android.firebaseinitprovider" android:exported="false" android:initOrder="100" android:name="com.google.firebase.provider.FirebaseInitProvider">
+</provider>
+<meta-data android:name="com.google.android.gms.version" android:value="@7F0C000D">
+</meta-data>
+<activity android:name="com.good.gd.ui.runtimepermissions_ui.GDRuntimePermissionsControlActivity">
+</activity>
+<service android:enabled="true" android:exported="true" android:name="com.good.gd.service.GDIccService">
+<intent-filter>
+<action android:name="com.good.gd.intent.action.ACTION_ICC_COMMAND">
+</action>
+</intent-filter>
+<meta-data android:name="GD_ICC_VERSION" android:value="2.400000">
+</meta-data>
+</service>
+<activity android:excludeFromRecents="true" android:name="com.good.gd.ui.dialogs.GDDialogActivity" android:theme="@7F0A00EB">
+</activity>
+</application>
+</manifest>

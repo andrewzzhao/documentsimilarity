@@ -1,0 +1,616 @@
+<?xml version="1.0" ?><manifest android:compileSdkVersion="29" android:compileSdkVersionCodename="10" android:installLocation="2" android:versionCode="13" android:versionName="1.1.2" package="com.tagginglove.app" platformBuildVersionCode="29" platformBuildVersionName="10" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="21" android:targetSdkVersion="29">
+</uses-sdk>
+<uses-feature android:name="android.hardware.camera">
+</uses-feature>
+<uses-feature android:name="android.hardware.camera.autofocus">
+</uses-feature>
+<uses-feature android:name="android.hardware.location.gps">
+</uses-feature>
+<uses-feature android:glEsVersion="0x00020000" android:required="true">
+</uses-feature>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_INTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_INTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNAL_SYSTEM_WINDOW">
+</uses-permission>
+<uses-permission android:name="android.permission.BROADCAST_SMS">
+</uses-permission>
+<uses-permission android:name="android.permission.BIND_JOB_SERVICE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="android.permission.USE_CREDENTIALS">
+</uses-permission>
+<uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT">
+</uses-permission>
+<uses-permission android:name="com.android.launcher.permission.UNINSTALL_SHORTCUT">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_MEDIA_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.RECORD_AUDIO">
+</uses-permission>
+<uses-permission android:name="com.android.vending.BILLING">
+</uses-permission>
+<permission android:name="com.tagginglove.app.permission.C2D_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="com.wowondertimeline.app.permission.C2D_MESSAGE">
+</uses-permission>
+<permission android:name="com.tagginglove.app.permission.MAPS_RECEIVE" android:protectionLevel="0x00000002">
+</permission>
+<uses-feature android:name="android.hardware.location.network">
+</uses-feature>
+<application android:allowBackup="false" android:hardwareAccelerated="true" android:icon="@7F100000" android:label="Tagged Love" android:largeHeap="true" android:name="crc643bab5c740f624fb4.MainApplication" android:requestLegacyExternalStorage="true" android:roundIcon="@7F100001" android:supportsRtl="@7F050000" android:theme="@7F1300F6" android:usesCleartextTraffic="true">
+<meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="@7F1204A2">
+</meta-data>
+<meta-data android:name="com.google.android.gms.version" android:value="@7F0C0009">
+</meta-data>
+<meta-data android:name="com.google.android.gms.ads.APPLICATION_ID" android:value="@7F120428">
+</meta-data>
+<activity android:configChanges="0x00000FB0" android:name="com.google.android.gms.ads.AdActivity">
+</activity>
+<activity android:name="com.yalantis.ucrop.UCropActivity" android:screenOrientation="1" android:theme="@7F1301CD">
+</activity>
+<activity android:name="com.theartofdev.edmodo.cropper.CropImageActivity" android:theme="@7F130049">
+</activity>
+<meta-data android:name="android.webkit.WebView.EnableSafeBrowsing" android:value="false">
+</meta-data>
+<receiver android:name="com.onesignal.GcmBroadcastReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+<category android:name="com.tagginglove.app">
+</category>
+</intent-filter>
+</receiver>
+<uses-library android:name="org.apache.http.legacy" android:required="false">
+</uses-library>
+<meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@7F12049D">
+</meta-data>
+<meta-data android:name="com.facebook.sdk.AutoLogAppEventsEnabled" android:value="false">
+</meta-data>
+<meta-data android:name="com.facebook.sdk.AdvertiserIDCollectionEnabled" android:value="false">
+</meta-data>
+<activity android:configChanges="0x000005B0" android:label="appname" android:name="com.facebook.FacebookActivity">
+</activity>
+<activity android:hardwareAccelerated="true" android:name="com.facebook.ads.AudienceNetworkActivity">
+</activity>
+<activity android:exported="true" android:name="com.facebook.CustomTabActivity">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="@7F12049E">
+</data>
+</intent-filter>
+</activity>
+<activity android:label="@7F12042C" android:name=".Tabbed_Main_Activity" android:theme="@7F1300F6">
+<intent-filter>
+<data android:host="appname" android:scheme="https">
+</data>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+</intent-filter>
+</activity>
+<service android:exported="true" android:name=".DataLoaderJobService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<provider android:authorities="com.tagginglove.app.fileprovider" android:exported="false" android:grantUriPermissions="true" android:name="android.support.v4.content.FileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F160007">
+</meta-data>
+</provider>
+<meta-data android:name="firebase_performance_logcat_enabled" android:value="true">
+</meta-data>
+<activity android:configChanges="0x00000684" android:icon="@7F100000" android:name="crc64cd5609a6ccc11888.LocationActivity" android:theme="@7F1300F6">
+</activity>
+<activity android:configChanges="0x00000684" android:icon="@7F100000" android:name="crc640411ade2e1788e65.PaymentCardDetailsActivity" android:theme="@7F1300F6">
+</activity>
+<activity android:configChanges="0x00000684" android:icon="@7F100000" android:name="crc640411ade2e1788e65.PaymentLocalActivity" android:theme="@7F1300F6">
+</activity>
+<receiver android:name="crc64708dea99db5f6981.Methods_LocalNotification_NotificationBroadcasterCloser">
+<intent-filter>
+<action android:name="select.notif.id">
+</action>
+</intent-filter>
+</receiver>
+<service android:name="crc64708dea99db5f6981.Methods_LocalNotification_BackgroundRunner">
+</service>
+<receiver android:name="crc64e3f0aab333e84ad0.VideoDownloadAsyncControler_DownloadComplete">
+<intent-filter>
+<action android:name="android.intent.action.DOWNLOAD_COMPLETE">
+</action>
+</intent-filter>
+</receiver>
+<activity android:configChanges="0x00000684" android:icon="@7F100000" android:name="crc6462331cae10739f4a.LocalWebViewActivity" android:theme="@7F1300F6">
+</activity>
+<activity android:configChanges="0x00000684" android:icon="@7F100000" android:name="crc6462331cae10739f4a.SplashScreenActivity" android:noHistory="true" android:theme="@7F130146">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x00000684" android:icon="@7F100000" android:name="crc64b7401b1cc845868f.TabbedWalletActivity" android:theme="@7F1300F6">
+</activity>
+<activity android:configChanges="0x00000684" android:icon="@7F100000" android:name="crc645446c848f33428ea.AppIntroWalkTroutPage" android:theme="@7F1301CD">
+</activity>
+<activity android:configChanges="0x00000FB4" android:icon="@7F100000" android:launchMode="3" android:name="crc64cccfb2021728938f.FullScreenVideoActivity" android:theme="@7F1300F6">
+</activity>
+<activity android:configChanges="0x00000FB0" android:icon="@7F100000" android:name="crc64cccfb2021728938f.VideoViewerActivity" android:resizeableActivity="true" android:theme="@7F1300F6">
+</activity>
+<activity android:configChanges="0x00000684" android:icon="@7F100000" android:name="crc645e36ce8f88ce4808.AllViewerActivity" android:theme="@7F1300F6">
+</activity>
+<activity android:configChanges="0x00000684" android:icon="@7F100000" android:name="crc645e36ce8f88ce4808.ImagePostViewerActivity" android:theme="@7F1300F6">
+</activity>
+<activity android:configChanges="0x00000684" android:icon="@7F100000" android:name="crc645e36ce8f88ce4808.MultiImagesPostViewerActivity" android:theme="@7F1300F6">
+</activity>
+<activity android:configChanges="0x00000684" android:icon="@7F100000" android:name="crc64f554c0b0a5a45f85.UserProfileActivity" android:theme="@7F1300F6">
+</activity>
+<activity android:configChanges="0x00000684" android:icon="@7F100000" android:name="crc649126ca5a318be7b3.LastActivitiesActivity" android:theme="@7F1300F6">
+</activity>
+<activity android:configChanges="0x00000FB4" android:icon="@7F100000" android:name="crc649126ca5a318be7b3.TabbedMainActivity" android:theme="@7F1300F6">
+</activity>
+<activity android:configChanges="0x00000684" android:icon="@7F100000" android:name="crc649db9f33f03730c06.SuggestionsUsersActivity" android:theme="@7F1300F6">
+</activity>
+<activity android:configChanges="0x00000684" android:icon="@7F100000" android:name="crc64b1ec268d8ec8b25c.AllSuggestedGroupActivity" android:theme="@7F1300F6">
+</activity>
+<activity android:configChanges="0x00000684" android:icon="@7F100000" android:name="crc64b1ec268d8ec8b25c.GroupByCategoriesActivity" android:theme="@7F1300F6">
+</activity>
+<activity android:configChanges="0x00000684" android:icon="@7F100000" android:name="crc64b1ec268d8ec8b25c.SuggestedGroupActivity" android:theme="@7F1300F6">
+</activity>
+<activity android:configChanges="0x00000684" android:icon="@7F100000" android:name="crc64c69c6fc695949cf5.AddStoryActivity" android:theme="@7F1300F6">
+</activity>
+<activity android:configChanges="0x00000684" android:icon="@7F100000" android:name="crc64c69c6fc695949cf5.ViewStoryActivity" android:theme="@7F1300F6">
+</activity>
+<activity android:configChanges="0x00000684" android:icon="@7F100000" android:name="crc646bd41e9db9b3ccd5.SupportActivity" android:theme="@7F1300F6">
+</activity>
+<activity android:configChanges="0x00000684" android:icon="@7F100000" android:name="crc64e120d7c860e97bc2.PrivacyActivity" android:theme="@7F1300F6">
+</activity>
+<activity android:configChanges="0x00000684" android:icon="@7F100000" android:name="crc648f06ccf2cea36293.MessegeNotificationActivity" android:theme="@7F1300F6">
+</activity>
+<activity android:configChanges="0x00000684" android:icon="@7F100000" android:name="crc64cd50179d11c5e083.InviteFriendsActivity" android:theme="@7F1300F6">
+</activity>
+<activity android:configChanges="0x00000684" android:icon="@7F100000" android:name="crc6448a6e1a03d77e40f.MyPointsActivity" android:theme="@7F1300F6">
+</activity>
+<activity android:configChanges="0x00000684" android:icon="@7F100000" android:name="crc6448a6e1a03d77e40f.MyAffiliatesActivity" android:theme="@7F1300F6">
+</activity>
+<activity android:configChanges="0x00000684" android:icon="@7F100000" android:name="crc6448a6e1a03d77e40f.TellFriendActivity" android:theme="@7F1300F6">
+</activity>
+<activity android:configChanges="0x00000684" android:icon="@7F100000" android:name="crc6448a6e1a03d77e40f.WithdrawalsActivity" android:theme="@7F1300F6">
+</activity>
+<activity android:configChanges="0x00000684" android:icon="@7F100000" android:name="crc64da14d866b9a308c4.MyInformationActivity" android:theme="@7F1300F6">
+</activity>
+<activity android:configChanges="0x00000684" android:icon="@7F100000" android:name="crc64e5500db5ae76212a.InvitationLinksActivity" android:theme="@7F1300F6">
+</activity>
+<activity android:configChanges="0x00000684" android:icon="@7F100000" android:name="crc6422d4b17d582d6e56.DeleteAccountActivity" android:theme="@7F1300F6">
+</activity>
+<activity android:configChanges="0x00000684" android:icon="@7F100000" android:name="crc6422d4b17d582d6e56.GeneralAccountActivity" android:theme="@7F1300F6">
+</activity>
+<activity android:configChanges="0x00000684" android:icon="@7F100000" android:name="crc6422d4b17d582d6e56.ManageSessionsActivity" android:theme="@7F1300F6">
+</activity>
+<activity android:configChanges="0x00000684" android:icon="@7F100000" android:name="crc6422d4b17d582d6e56.MyAccountActivity" android:theme="@7F1300F6">
+</activity>
+<activity android:configChanges="0x00000684" android:icon="@7F100000" android:name="crc6422d4b17d582d6e56.VerificationActivity" android:theme="@7F1300F6">
+</activity>
+<activity android:configChanges="0x00000684" android:icon="@7F100000" android:name="crc6422d4b17d582d6e56.PasswordActivity" android:theme="@7F1300F6">
+</activity>
+<activity android:configChanges="0x00000684" android:icon="@7F100000" android:name="crc6422d4b17d582d6e56.TwoFactorAuthActivity" android:theme="@7F1300F6">
+</activity>
+<activity android:configChanges="0x00000684" android:icon="@7F100000" android:name="crc64bd45b837a9cf59f3.SearchTabbedActivity" android:theme="@7F1300F6">
+</activity>
+<activity android:configChanges="0x00000684" android:icon="@7F100000" android:name="crc64ad75529682b5367d.SearchForPostsActivity" android:theme="@7F1300F6">
+</activity>
+<activity android:configChanges="0x00000684" android:icon="@7F100000" android:name="crc64205d15e144792056.PostDataActivity" android:theme="@7F1300F6">
+</activity>
+<activity android:configChanges="0x00000684" android:icon="@7F100000" android:name="crc64205d15e144792056.ReactionPostTabbedActivity" android:theme="@7F1300F6">
+</activity>
+<activity android:configChanges="0x00000684" android:icon="@7F100000" android:name="crc64ba3fd34857980c37.PopularPostsActivity" android:theme="@7F1300F6">
+</activity>
+<activity android:configChanges="0x00000684" android:icon="@7F100000" android:name="crc64d95d52caa09d18cf.PokesActivity" android:theme="@7F1300F6">
+</activity>
+<activity android:configChanges="0x00000684" android:icon="@7F100000" android:name="crc64af087887e8ff2536.CreateOffersActivity" android:theme="@7F1300F6">
+</activity>
+<activity android:configChanges="0x00000684" android:icon="@7F100000" android:name="crc64af087887e8ff2536.EditOffersActivity" android:theme="@7F1300F6">
+</activity>
+<activity android:configChanges="0x00000684" android:icon="@7F100000" android:name="crc64af087887e8ff2536.OffersActivity" android:theme="@7F1300F6">
+</activity>
+<activity android:configChanges="0x00000684" android:icon="@7F100000" android:name="crc64af087887e8ff2536.OffersViewActivity" android:theme="@7F1300F6">
+</activity>
+<activity android:configChanges="0x00000684" android:icon="@7F100000" android:name="crc6486acf089c237650a.PeopleNearByActivity" android:theme="@7F1300F6">
+</activity>
+<activity android:configChanges="0x00000684" android:icon="@7F100000" android:name="crc64d8639dd10fd535b5.NearbyShopsActivity" android:theme="@7F1300F6">
+</activity>
+<activity android:configChanges="0x00000684" android:icon="@7F100000" android:name="crc6463aa80307716c2c0.NearbyBusinessActivity" android:theme="@7F1300F6">
+</activity>
+<activity android:configChanges="0x00000684" android:icon="@7F100000" android:name="crc64ebe0947fbd861d63.SharePostActivity" android:theme="@7F1300F6">
+</activity>
+<activity android:configChanges="0x00000684" android:icon="@7F100000" android:name="crc6493e97e9b710fab84.HashTagPostsActivity" android:theme="@7F1300F6">
+</activity>
+<activity android:configChanges="0x00000684" android:icon="@7F100000" android:name="crc6493e97e9b710fab84.SavedPostsActivity" android:theme="@7F1300F6">
+</activity>
+<activity android:configChanges="0x00000FB4" android:icon="@7F100000" android:launchMode="3" android:name="crc6493e97e9b710fab84.VideoFullScreenActivity" android:theme="@7F1300F6">
+</activity>
+<activity android:configChanges="0x00000684" android:icon="@7F100000" android:name="crc6493e97e9b710fab84.ViewFullPostActivity" android:theme="@7F1300F6">
+</activity>
+<activity android:configChanges="0x00000FB0" android:icon="@7F100000" android:name="crc645d531d68d1ea7905.YoutubePlayerActivity" android:resizeableActivity="true" android:theme="@7F13020D">
+</activity>
+<activity android:configChanges="0x00000684" android:icon="@7F100000" android:name="crc64e0c19a2d9c730e92.MyVideoActivity" android:theme="@7F1300F6">
+</activity>
+<activity android:configChanges="0x00000684" android:icon="@7F100000" android:name="crc64531308277d4d067c.EditMyProfileActivity" android:theme="@7F1300F6">
+</activity>
+<activity android:configChanges="0x00000684" android:icon="@7F100000" android:name="crc64531308277d4d067c.EditSocialLinksActivity" android:theme="@7F1300F6">
+</activity>
+<activity android:configChanges="0x00000684" android:icon="@7F100000" android:name="crc64531308277d4d067c.MyActivitiesActivity" android:theme="@7F1300F6">
+</activity>
+<activity android:configChanges="0x00000684" android:icon="@7F100000" android:name="crc64531308277d4d067c.MyProfileActivity" android:theme="@7F1300F6">
+</activity>
+<activity android:configChanges="0x00000684" android:icon="@7F100000" android:name="crc64af6f46529a60b620.MyPhotoViewActivity" android:theme="@7F1300F6">
+</activity>
+<activity android:configChanges="0x00000684" android:icon="@7F100000" android:name="crc64af6f46529a60b620.MyPhotosActivity" android:theme="@7F1300F6">
+</activity>
+<activity android:configChanges="0x00000684" android:icon="@7F100000" android:name="crc64ec9a14cd52f9c71f.MoviesActivity" android:theme="@7F1300F6">
+</activity>
+<activity android:configChanges="0x00000684" android:icon="@7F100000" android:name="crc64853d97a343ebe088.MemoriesActivity" android:theme="@7F1300F6">
+</activity>
+<activity android:configChanges="0x00000684" android:icon="@7F100000" android:name="crc644e62c38dd9bf4678.CreateProductActivity" android:theme="@7F1300F6">
+</activity>
+<activity android:configChanges="0x00000684" android:icon="@7F100000" android:name="crc644e62c38dd9bf4678.EditProductActivity" android:theme="@7F1300F6">
+</activity>
+<activity android:configChanges="0x00000684" android:icon="@7F100000" android:name="crc644e62c38dd9bf4678.ProductViewActivity" android:theme="@7F1300F6">
+</activity>
+<activity android:configChanges="0x00000684" android:icon="@7F100000" android:name="crc644e62c38dd9bf4678.TabbedMarketActivity" android:theme="@7F1300F6">
+</activity>
+<activity android:configChanges="0x00000684" android:icon="@7F100000" android:name="crc649ec0a7aa76ef071c.ApplyJobActivity" android:theme="@7F1300F6">
+</activity>
+<activity android:configChanges="0x00000684" android:icon="@7F100000" android:name="crc649ec0a7aa76ef071c.CreateJobActivity" android:theme="@7F1300F6">
+</activity>
+<activity android:configChanges="0x00000684" android:icon="@7F100000" android:name="crc649ec0a7aa76ef071c.EditJobsActivity" android:theme="@7F1300F6">
+</activity>
+<activity android:configChanges="0x00000684" android:icon="@7F100000" android:name="crc649ec0a7aa76ef071c.JobsActivity" android:theme="@7F1300F6">
+</activity>
+<activity android:configChanges="0x00000684" android:icon="@7F100000" android:name="crc649ec0a7aa76ef071c.JobsViewActivity" android:theme="@7F1300F6">
+</activity>
+<activity android:configChanges="0x00000684" android:icon="@7F100000" android:name="crc649ec0a7aa76ef071c.OfferAJobActivity" android:theme="@7F1300F6">
+</activity>
+<activity android:configChanges="0x00000684" android:icon="@7F100000" android:name="crc649ec0a7aa76ef071c.ShowApplyJobActivity" android:theme="@7F1300F6">
+</activity>
+<activity android:configChanges="0x00000FB4" android:icon="@7F100000" android:name="crc64789a8dac6ef76284.GoProActivity" android:theme="@7F1300F6">
+</activity>
+<activity android:configChanges="0x00000684" android:icon="@7F100000" android:name="crc64135a19bce3cac32a.GamesActivity" android:theme="@7F1300F6">
+</activity>
+<activity android:configChanges="0x00000684" android:icon="@7F100000" android:name="crc64135a19bce3cac32a.GamesViewActivity" android:theme="@7F1300F6">
+</activity>
+<activity android:configChanges="0x00000684" android:icon="@7F100000" android:name="crc6457f4421e48eb2448.CreateFundingActivity" android:theme="@7F1300F6">
+</activity>
+<activity android:configChanges="0x00000684" android:icon="@7F100000" android:name="crc6457f4421e48eb2448.EditFundingActivity" android:theme="@7F1300F6">
+</activity>
+<activity android:configChanges="0x00000684" android:icon="@7F100000" android:name="crc6457f4421e48eb2448.FundingActivity" android:theme="@7F1300F6">
+</activity>
+<activity android:configChanges="0x00000684" android:icon="@7F100000" android:name="crc6457f4421e48eb2448.FundingViewActivity" android:theme="@7F1300F6">
+</activity>
+<activity android:configChanges="0x00000684" android:icon="@7F100000" android:name="crc643a652260da9234e5.FriendRequestActivity" android:theme="@7F1300F6">
+</activity>
+<activity android:configChanges="0x00000684" android:icon="@7F100000" android:name="crc644d51a390cb39eaa6.CreateEventActivity" android:theme="@7F1300F6">
+</activity>
+<activity android:configChanges="0x00000684" android:icon="@7F100000" android:name="crc644d51a390cb39eaa6.EditEventActivity" android:theme="@7F1300F6">
+</activity>
+<activity android:configChanges="0x00000684" android:icon="@7F100000" android:name="crc644d51a390cb39eaa6.EventMainActivity" android:theme="@7F1300F6">
+</activity>
+<activity android:configChanges="0x00000684" android:icon="@7F100000" android:name="crc644d51a390cb39eaa6.EventViewActivity" android:theme="@7F1300F6">
+</activity>
+<activity android:configChanges="0x00000684" android:icon="@7F100000" android:name="crc6408c63ef235895be6.EditPostActivity" android:theme="@7F1300F6">
+</activity>
+<activity android:configChanges="0x00000684" android:icon="@7F100000" android:name="crc640f6fdfbfce9bf390.FirstActivity" android:theme="@7F1300F6">
+</activity>
+<activity android:configChanges="0x00000684" android:icon="@7F100000" android:name="crc640f6fdfbfce9bf390.ForgetPasswordActivity" android:theme="@7F1300F6">
+</activity>
+<activity android:configChanges="0x00000684" android:icon="@7F100000" android:name="crc640f6fdfbfce9bf390.LoginActivity" android:theme="@7F1300F6">
+</activity>
+<activity android:configChanges="0x00000684" android:icon="@7F100000" android:name="crc640f6fdfbfce9bf390.RegisterActivity" android:theme="@7F1300F6">
+</activity>
+<activity android:configChanges="0x00000684" android:icon="@7F100000" android:name="crc640f6fdfbfce9bf390.VerificationCodeActivity" android:theme="@7F1300F6">
+</activity>
+<activity android:configChanges="0x00000684" android:icon="@7F100000" android:name="crc6405a37cb2967bf2dc.MyContactsActivity" android:theme="@7F1300F6">
+</activity>
+<activity android:configChanges="0x00000684" android:icon="@7F100000" android:name="crc6405a37cb2967bf2dc.SelectContactsActivity" android:theme="@7F1300F6">
+</activity>
+<activity android:configChanges="0x00000684" android:icon="@7F100000" android:name="crc643a8455bb19c3e257.DeleteCommunitiesActivity" android:theme="@7F1300F6">
+</activity>
+<activity android:configChanges="0x00000684" android:icon="@7F100000" android:name="crc640881361dc0703e64.CreatePageActivity" android:theme="@7F1300F6">
+</activity>
+<activity android:configChanges="0x00000684" android:icon="@7F100000" android:name="crc640881361dc0703e64.InviteMembersPageActivity" android:theme="@7F1300F6">
+</activity>
+<activity android:configChanges="0x00000684" android:icon="@7F100000" android:name="crc640881361dc0703e64.PageProfileActivity" android:theme="@7F1300F6">
+</activity>
+<activity android:configChanges="0x00000684" android:icon="@7F100000" android:name="crc640881361dc0703e64.PagesActivity" android:theme="@7F1300F6">
+</activity>
+<activity android:configChanges="0x00000684" android:icon="@7F100000" android:name="crc640881361dc0703e64.ReviewsPageActivity" android:theme="@7F1300F6">
+</activity>
+<activity android:configChanges="0x00000684" android:icon="@7F100000" android:name="crc64daf69b8d0a781c02.PageActionButtonsActivity" android:theme="@7F1300F6">
+</activity>
+<activity android:configChanges="0x00000684" android:icon="@7F100000" android:name="crc64daf69b8d0a781c02.PageGeneralActivity" android:theme="@7F1300F6">
+</activity>
+<activity android:configChanges="0x00000684" android:icon="@7F100000" android:name="crc64daf69b8d0a781c02.PageInfoActivity" android:theme="@7F1300F6">
+</activity>
+<activity android:configChanges="0x00000684" android:icon="@7F100000" android:name="crc64daf69b8d0a781c02.PagesAdminActivity" android:theme="@7F1300F6">
+</activity>
+<activity android:configChanges="0x00000684" android:icon="@7F100000" android:name="crc64daf69b8d0a781c02.PageSocialLinksActivity" android:theme="@7F1300F6">
+</activity>
+<activity android:configChanges="0x00000684" android:icon="@7F100000" android:name="crc64daf69b8d0a781c02.SettingsPageActivity" android:theme="@7F1300F6">
+</activity>
+<activity android:configChanges="0x00000684" android:icon="@7F100000" android:name="crc64c2f67ecf4b6c370e.CreateGroupActivity" android:theme="@7F1300F6">
+</activity>
+<activity android:configChanges="0x00000684" android:icon="@7F100000" android:name="crc64c2f67ecf4b6c370e.GroupMembersActivity" android:theme="@7F1300F6">
+</activity>
+<activity android:configChanges="0x00000684" android:icon="@7F100000" android:name="crc64c2f67ecf4b6c370e.GroupProfileActivity" android:theme="@7F1300F6">
+</activity>
+<activity android:configChanges="0x00000684" android:icon="@7F100000" android:name="crc64c2f67ecf4b6c370e.GroupsActivity" android:theme="@7F1300F6">
+</activity>
+<activity android:configChanges="0x00000684" android:icon="@7F100000" android:name="crc64c2f67ecf4b6c370e.InviteMembersGroupActivity" android:theme="@7F1300F6">
+</activity>
+<activity android:configChanges="0x00000684" android:icon="@7F100000" android:name="crc64c2f67ecf4b6c370e.JoinRequestActivity" android:theme="@7F1300F6">
+</activity>
+<activity android:configChanges="0x00000684" android:icon="@7F100000" android:name="crc64b91b833efe2120ad.GroupGeneralActivity" android:theme="@7F1300F6">
+</activity>
+<activity android:configChanges="0x00000684" android:icon="@7F100000" android:name="crc64b91b833efe2120ad.GroupPrivacyActivity" android:theme="@7F1300F6">
+</activity>
+<activity android:configChanges="0x00000684" android:icon="@7F100000" android:name="crc64b91b833efe2120ad.SettingsGroupActivity" android:theme="@7F1300F6">
+</activity>
+<activity android:configChanges="0x00000684" android:icon="@7F100000" android:name="crc64d5bbbb9587026094.CommonThingsActivity" android:theme="@7F1300F6">
+</activity>
+<activity android:configChanges="0x00000684" android:icon="@7F100000" android:name="crc6454b7d4eb24fc3d0c.BlockedUsersActivity" android:theme="@7F1300F6">
+</activity>
+<activity android:configChanges="0x00000684" android:icon="@7F100000" android:name="crc646bb324bc4b123e90.CommentActivity" android:theme="@7F130131">
+</activity>
+<activity android:configChanges="0x00000684" android:icon="@7F100000" android:name="crc646bb324bc4b123e90.ReplyCommentActivity" android:theme="@7F1300F6">
+</activity>
+<activity android:configChanges="0x00000684" android:icon="@7F100000" android:name="crc6447b7d00dc8d7ead2.ArticlesActivity" android:theme="@7F1300F6">
+</activity>
+<activity android:configChanges="0x00000684" android:icon="@7F100000" android:name="crc6447b7d00dc8d7ead2.ArticlesViewActivity" android:theme="@7F1300F6">
+</activity>
+<activity android:configChanges="0x00000684" android:icon="@7F100000" android:name="crc647f8ac66c39d81454.AddImageToAlbumActivity" android:theme="@7F1300F6">
+</activity>
+<activity android:configChanges="0x00000684" android:icon="@7F100000" android:name="crc647f8ac66c39d81454.CreateAlbumActivity" android:theme="@7F1300F6">
+</activity>
+<activity android:configChanges="0x00000684" android:icon="@7F100000" android:name="crc647f8ac66c39d81454.ImageByAlbumActivity" android:theme="@7F1300F6">
+</activity>
+<activity android:configChanges="0x00000684" android:icon="@7F100000" android:name="crc647f8ac66c39d81454.MyAlbumActivity" android:theme="@7F1300F6">
+</activity>
+<activity android:configChanges="0x00000684" android:icon="@7F100000" android:name="crc64c51607effc384a79.AddPostActivity" android:theme="@7F1300F6">
+</activity>
+<activity android:configChanges="0x00000684" android:icon="@7F100000" android:name="crc64c51607effc384a79.FeelingsActivity" android:theme="@7F1300F6">
+</activity>
+<activity android:configChanges="0x00000684" android:icon="@7F100000" android:name="crc64c51607effc384a79.GifActivity" android:theme="@7F1300F6">
+</activity>
+<activity android:configChanges="0x00000684" android:icon="@7F100000" android:name="crc64c51607effc384a79.MentionActivity" android:theme="@7F1300F6">
+</activity>
+<service android:exported="false" android:name="crc64ff88a238e659b0f6.PostService">
+</service>
+<provider android:authorities="com.tagginglove.app.mono.MonoRuntimeProvider.__mono_init__" android:exported="false" android:initOrder="1999999999" android:name="mono.MonoRuntimeProvider">
+</provider>
+<activity android:configChanges="0x000004A0" android:exported="false" android:name="com.facebook.ads.AudienceNetworkActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:exported="false" android:name="com.facebook.ads.internal.ipc.RemoteANActivity" android:process=":adnw">
+</activity>
+<service android:exported="false" android:name="com.facebook.ads.internal.ipc.AdsProcessPriorityService">
+</service>
+<service android:exported="false" android:name="com.facebook.ads.internal.ipc.AdsMessengerService" android:process=":adnw">
+</service>
+<activity android:configChanges="0x000005B0" android:name="com.facebook.FacebookActivity" android:theme="@7F1302E1">
+</activity>
+<activity android:name="com.facebook.CustomTabMainActivity">
+</activity>
+<activity android:name="com.facebook.CustomTabActivity">
+</activity>
+<provider android:authorities="com.tagginglove.app.FacebookInitProvider" android:exported="false" android:name="com.facebook.internal.FacebookInitProvider">
+</provider>
+<receiver android:exported="false" android:name="com.facebook.CurrentAccessTokenExpirationBroadcastReceiver">
+<intent-filter>
+<action android:name="com.facebook.sdk.ACTION_CURRENT_ACCESS_TOKEN_CHANGED">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:exported="true" android:name="com.facebook.CampaignTrackingReceiver" android:permission="android.permission.INSTALL_PACKAGES">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementReceiver">
+</receiver>
+<receiver android:enabled="true" android:exported="true" android:name="com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver" android:permission="android.permission.INSTALL_PACKAGES">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementService">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementJobService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<provider android:authorities="com.tagginglove.app.firebaseinitprovider" android:exported="false" android:initOrder="100" android:name="com.google.firebase.provider.FirebaseInitProvider">
+</provider>
+<service android:exported="false" android:name="com.google.firebase.components.ComponentDiscoveryService">
+<meta-data android:name="com.google.firebase.components:com.google.firebase.iid.Registrar" android:value="com.google.firebase.components.ComponentRegistrar">
+</meta-data>
+</service>
+<receiver android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+</intent-filter>
+</receiver>
+<service android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdService">
+<intent-filter android:priority="-500">
+<action android:name="com.google.firebase.INSTANCE_ID_EVENT">
+</action>
+</intent-filter>
+</service>
+<service android:exported="true" android:name="com.google.firebase.messaging.FirebaseMessagingService">
+<intent-filter android:priority="-500">
+<action android:name="com.google.firebase.MESSAGING_EVENT">
+</action>
+</intent-filter>
+</service>
+<provider android:authorities="com.tagginglove.app.firebaseperfprovider" android:exported="false" android:initOrder="101" android:name="com.google.firebase.perf.provider.FirebasePerfProvider">
+</provider>
+<service android:name="com.google.firebase.components.ComponentDiscoveryService">
+<meta-data android:name="com.google.firebase.components:com.google.firebase.perf.component.FirebasePerfRegistrar" android:value="com.google.firebase.components.ComponentRegistrar">
+</meta-data>
+</service>
+<activity android:exported="false" android:hardwareAccelerated="true" android:label="@7F1204FC" android:name="com.google.android.libraries.places.widget.AutocompleteActivity" android:theme="@7F1300FE" android:windowSoftInputMode="0x00000025">
+</activity>
+<activity android:configChanges="0x00000FB0" android:exported="false" android:name="com.google.android.gms.ads.AdActivity" android:theme="@android:0103000F">
+</activity>
+<provider android:authorities="com.tagginglove.app.mobileadsinitprovider" android:exported="false" android:initOrder="100" android:name="com.google.android.gms.ads.MobileAdsInitProvider">
+</provider>
+<activity android:excludeFromRecents="true" android:exported="false" android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity" android:theme="@android:01030010">
+</activity>
+<service android:exported="true" android:name="com.google.android.gms.auth.api.signin.RevocationBoundService" android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION">
+</service>
+<activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="io.card.payment.CardIOActivity">
+</activity>
+<activity android:name="io.card.payment.DataEntryActivity">
+</activity>
+<activity android:name="com.paypal.android.sdk.payments.PaymentActivity">
+</activity>
+<activity android:name="com.paypal.android.sdk.payments.PaymentMethodActivity">
+</activity>
+<activity android:name="com.paypal.android.sdk.payments.PaymentConfirmActivity">
+</activity>
+<activity android:name="com.paypal.android.sdk.payments.LoginActivity">
+</activity>
+<activity android:name="com.paypal.android.sdk.payments.PayPalFuturePaymentActivity">
+</activity>
+<activity android:name="com.paypal.android.sdk.payments.FuturePaymentConsentActivity">
+</activity>
+<activity android:name="com.paypal.android.sdk.payments.FuturePaymentInfoActivity">
+</activity>
+<activity android:name="com.paypal.android.sdk.payments.PayPalProfileSharingActivity">
+</activity>
+<activity android:name="com.paypal.android.sdk.payments.ProfileSharingConsentActivity">
+</activity>
+<service android:exported="false" android:name="com.paypal.android.sdk.payments.PayPalService">
+</service>
+<meta-data android:name="com.google.android.gms.ads.AD_MANAGER_APP" android:value="true">
+</meta-data>
+<activity android:name="com.stripe.android.view.AddSourceActivity" android:theme="@7F130147" android:windowSoftInputMode="0x00000004">
+</activity>
+<activity android:name="com.stripe.android.view.PaymentMethodsActivity" android:theme="@7F130147">
+</activity>
+<activity android:name="com.stripe.android.view.PaymentFlowActivity" android:theme="@7F130147">
+</activity>
+<receiver android:name="com.onesignal.NotificationOpenedReceiver">
+</receiver>
+<service android:name="com.onesignal.GcmIntentService">
+</service>
+<service android:name="com.onesignal.GcmIntentJobService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<service android:name="com.onesignal.RestoreJobService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<service android:name="com.onesignal.RestoreKickoffJobService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<service android:name="com.onesignal.SyncService" android:stopWithTask="true">
+</service>
+<service android:name="com.onesignal.SyncJobService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<activity android:name="com.onesignal.PermissionsActivity" android:theme="@android:01030010">
+</activity>
+<service android:name="com.onesignal.NotificationRestoreService">
+</service>
+<receiver android:name="com.onesignal.BootUpReceiver">
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+<action android:name="android.intent.action.QUICKBOOT_POWERON">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name="com.onesignal.UpgradeReceiver">
+<intent-filter>
+<action android:name="android.intent.action.MY_PACKAGE_REPLACED">
+</action>
+</intent-filter>
+</receiver>
+<provider android:authorities="com.tagginglove.app.iceteck.silicompressor.provider" android:exported="false" android:grantUriPermissions="true" android:name="com.iceteck.silicompressorr.provider.GenericFileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F160010">
+</meta-data>
+</provider>
+<meta-data android:name="com.android.vending.derived.apk.id" android:value="1">
+</meta-data>
+</application>
+<uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE">
+</uses-permission>
+<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE">
+</uses-permission>
+<uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-permission android:name="com.sec.android.provider.badge.permission.READ">
+</uses-permission>
+<uses-permission android:name="com.sec.android.provider.badge.permission.WRITE">
+</uses-permission>
+<uses-permission android:name="com.htc.launcher.permission.READ_SETTINGS">
+</uses-permission>
+<uses-permission android:name="com.htc.launcher.permission.UPDATE_SHORTCUT">
+</uses-permission>
+<uses-permission android:name="com.sonyericsson.home.permission.BROADCAST_BADGE">
+</uses-permission>
+<uses-permission android:name="com.sonymobile.home.permission.PROVIDER_INSERT_BADGE">
+</uses-permission>
+<uses-permission android:name="com.anddoes.launcher.permission.UPDATE_COUNT">
+</uses-permission>
+<uses-permission android:name="com.majeur.launcher.permission.UPDATE_BADGE">
+</uses-permission>
+<uses-permission android:name="com.huawei.android.launcher.permission.CHANGE_BADGE">
+</uses-permission>
+<uses-permission android:name="com.huawei.android.launcher.permission.READ_SETTINGS">
+</uses-permission>
+<uses-permission android:name="com.huawei.android.launcher.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_APP_BADGE">
+</uses-permission>
+<uses-permission android:name="com.oppo.launcher.permission.READ_SETTINGS">
+</uses-permission>
+<uses-permission android:name="com.oppo.launcher.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="me.everything.badger.permission.BADGE_COUNT_READ">
+</uses-permission>
+<uses-permission android:name="me.everything.badger.permission.BADGE_COUNT_WRITE">
+</uses-permission>
+</manifest>

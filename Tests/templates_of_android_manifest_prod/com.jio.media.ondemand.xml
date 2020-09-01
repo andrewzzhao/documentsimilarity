@@ -1,0 +1,623 @@
+<?xml version="1.0" ?><manifest android:installLocation="0" android:versionCode="90" android:versionName="1.5.5.2" package="com.jio.media.ondemand" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="19" android:targetSdkVersion="26">
+</uses-sdk>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<permission android:name="com.jio.media.ALLOWPERMISSION" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="com.jio.media.MYPERMISSION">
+</uses-permission>
+<uses-feature android:name="android.hardware.bluetooth" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.location" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.telephony" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.wifi" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.location.gps" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.location.network" android:required="false">
+</uses-feature>
+<supports-screens android:anyDensity="true" android:largeScreens="true" android:normalScreens="true" android:resizeable="true" android:smallScreens="true" android:xlargeScreens="true">
+</supports-screens>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.BLUETOOTH">
+</uses-permission>
+<uses-permission android:name="android.permission.RECORD_AUDIO">
+</uses-permission>
+<uses-permission android:name="android.permission.BLUETOOTH_ADMIN">
+</uses-permission>
+<uses-permission android:name="android.permission.BLUETOOTH_PRIVILEGED">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_INTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<permission android:name="com.jio.media.ondemand.permission.C2D_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="com.jio.media.ondemand.permission.C2D_MESSAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE">
+</uses-permission>
+<uses-permission android:name="android.permission.MANAGE_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="android.permission.USE_CREDENTIALS">
+</uses-permission>
+<application android:allowBackup="false" android:icon="@7F0E0000" android:label="@7F100069" android:largeHeap="true" android:name="com.jio.media.mobile.apps.jioondemand.JioVodApplication" android:roundIcon="@7F0E0003" android:supportsRtl="true" android:theme="@7F110009">
+<activity android:configChanges="0x40000490" android:label="@7F100069" android:launchMode="2" android:name="com.jio.media.mobile.apps.jioondemand.splash.SplashScreenActivity" android:resizeableActivity="false" android:theme="@7F11018E">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="jioondemand">
+</data>
+<data android:scheme="jiocinema">
+</data>
+</intent-filter>
+</activity>
+<receiver android:name="com.jio.media.mobile.apps.jioondemand.appshortcuts.LocaleChangedReceiver">
+<intent-filter>
+<action android:name="android.intent.action.LOCALE_CHANGED">
+</action>
+</intent-filter>
+</receiver>
+<activity android:label="@7F10048D" android:launchMode="3" android:name="com.jio.media.mobile.apps.jioondemand.login.LoginActivity">
+</activity>
+<activity android:name="com.jio.media.mobile.apps.jioondemand.DisneyLockActivity">
+</activity>
+<activity android:configChanges="0x40000490" android:name="com.jio.media.mobile.apps.jioondemand.landing.MainLandingActivity" android:theme="@7F110009" android:windowSoftInputMode="0x00000030">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="directlaunch">
+</data>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x40000490" android:name="com.jio.media.mobile.apps.jioondemand.support.DetailWebViewActivity" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x40000490" android:name="com.jio.media.mobile.apps.jioondemand.cinemadownload.activity.DownloadQualityChooserActivity" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x40000490" android:name="com.jio.media.mobile.apps.jioondemand.metadata.activities.FilterEpisodeActivity" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x40000490" android:name="com.jio.media.mobile.apps.jioondemand.metadata.activities.CustomerReviewActivity" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x40000490" android:name="com.jio.media.mobile.apps.jioondemand.search.SortSearchActivity" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x40000490" android:name="com.jio.media.mobile.apps.jioondemand.metadata.activities.SortReviewActivity" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x40000490" android:name="com.jio.media.mobile.apps.jioondemand.metadata.activities.SortReviewDialogActivity" android:theme="@7F1100F9" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x40000490" android:name="jiofeedback.jio.com.jiofeedbackaar.FeedbackActivity" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x40000490" android:name="com.jio.media.mobile.apps.jioondemand.languageonboarding.LanguageOnBoardingActivity" android:theme="@7F110009" android:windowSoftInputMode="0x00000002">
+</activity>
+<receiver android:name="com.jio.media.mobile.apps.jioondemand.download.DownloadReceiver">
+<intent-filter>
+<action android:name="com.jio.media.mobile.apps.jioondemand.downloads">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name="com.jio.media.mobile.apps.jioondemand.cinemadownload.DownloadBroadcastReciever">
+<intent-filter>
+<action android:name="com.jio.media.ondemand.v2.downloads">
+</action>
+</intent-filter>
+</receiver>
+<service android:exported="false" android:name="com.jio.media.analytics.AnalyticsService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<service android:name="com.jio.media.mobile.apps.jioondemand.mediaplayer.views.dock.DockedPlayerMediaService">
+</service>
+<receiver android:name="com.jio.media.mobile.apps.jioondemand.sso.receivers.JioLogoutReceiver">
+<intent-filter>
+<action android:name="com.jio.media.sso.broadcast">
+</action>
+</intent-filter>
+</receiver>
+<provider android:authorities="com.jio.media.ondemand.JIOSSOProvider" android:enabled="true" android:exported="true" android:name="com.jio.media.sdk.sso.content.provider.SSOContentProvider">
+</provider>
+<receiver android:name="com.jio.media.mobile.apps.jioondemand.mediaplayer.NetworkChangeReceiver">
+<intent-filter>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+<action android:name="android.net.wifi.WIFI_STATE_CHANGED">
+</action>
+</intent-filter>
+</receiver>
+<service android:enabled="true" android:exported="true" android:name="com.jio.media.mobile.apps.jioondemand.vodservices.JioCinemaExternalService">
+</service>
+<receiver android:name="com.jio.media.framework.services.background.SmartDownloadStartReceiver">
+<intent-filter>
+<action android:name="com.jio.media.ondemand.download.start">
+</action>
+<action android:name="com.jio.media.ondemand.download.stop">
+</action>
+</intent-filter>
+</receiver>
+<activity android:configChanges="0x000000A0" android:name="com.clevertap.android.sdk.InAppNotificationActivity" android:theme="@android:01030010">
+</activity>
+<meta-data android:name="io.fabric.ApiKey" android:value="b2cb0240a920ed8ea4e35d61f43735ece69b3fd2">
+</meta-data>
+<meta-data android:name="CLEVERTAP_INAPP_EXCLUDE" android:value="SplashScreenActivity">
+</meta-data>
+<meta-data android:name="CLEVERTAP_REGION" android:value="in">
+</meta-data>
+<meta-data android:name="CLEVERTAP_ACCOUNT_ID" android:value="WW5-K94-874Z">
+</meta-data>
+<meta-data android:name="CLEVERTAP_TOKEN" android:value="4c3-500">
+</meta-data>
+<meta-data android:name="CLEVERTAP_NOTIFICATION_ICON" android:value="ic_notification_icon">
+</meta-data>
+<meta-data android:name="com.google.android.gms.version" android:value="@7F0A0010">
+</meta-data>
+<service android:name="com.jio.media.mobile.apps.jioondemand.adobe.NeoTripFirebaseInstanceIDService">
+<intent-filter>
+<action android:name="com.google.firebase.INSTANCE_ID_EVENT">
+</action>
+</intent-filter>
+</service>
+<service android:name="com.jio.media.mobile.apps.jioondemand.clevertap.InteractiveFcmPushMessageListenerService">
+<intent-filter>
+<action android:name="com.google.firebase.MESSAGING_EVENT">
+</action>
+</intent-filter>
+</service>
+<receiver android:exported="true" android:name="com.clevertap.android.sdk.InstallReferrerBroadcastReceiver">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+<meta-data android:name="com.google.android.gms.cast.framework.OPTIONS_PROVIDER_CLASS_NAME" android:value="com.jio.media.mobile.apps.jioondemand.cast.JioCastOptionsProvider">
+</meta-data>
+<activity android:configChanges="0x40000490" android:exported="false" android:name="com.jio.media.mobile.apps.jioondemand.parentalcontrol.ParentalControlActivity" android:permission="com.jio.media.MYPERMISSION">
+</activity>
+<activity android:configChanges="0x40000490" android:label="@7F100258" android:name="com.jio.media.mobile.apps.jioondemand.KidsHomeActivity" android:theme="@7F11000C" android:windowSoftInputMode="0x00000032">
+</activity>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.analytics.AnalyticsService">
+</service>
+<receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.analytics.AnalyticsReceiver">
+<intent-filter>
+<action android:name="com.google.android.gms.analytics.ANALYTICS_DISPATCH">
+</action>
+</intent-filter>
+</receiver>
+;
+<service android:name="com.google.android.gms.analytics.CampaignTrackingService">
+</service>
+<receiver android:exported="true" android:name="com.google.android.gms.analytics.CampaignTrackingReceiver">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+<service android:name="com.google.android.gms.tagmanager.InstallReferrerService">
+</service>
+<receiver android:exported="true" android:name="com.google.android.gms.tagmanager.InstallReferrerReceiver">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+<service android:enabled="true" android:exported="false" android:name="com.jio.media.framework.services.external.download.service.JioDownloaderServices" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<activity android:label="@7F100069" android:name="com.google.android.gms.tagmanager.PreviewActivity" android:noHistory="true">
+<intent-filter>
+<data android:scheme="tagmanager.c.com.jio.media.mobile.apps.jioondemand">
+</data>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+</intent-filter>
+</activity>
+<meta-data android:name="android.max_aspect" android:value="2.100000">
+</meta-data>
+<receiver android:exported="true" android:name="com.jio.media.mobile.apps.jioondemand.ApplicationSelectorReceiver">
+</receiver>
+<activity android:configChanges="0x40000490" android:name="com.jio.media.jiodisney.ui.main.DisneyMainActivity" android:theme="@7F110011" android:windowSoftInputMode="0x00000030">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x40000490" android:label="@7F100250" android:name="com.jio.media.jiokids.ProfileChooserActivity" android:theme="@7F11000C">
+</activity>
+<activity android:hardwareAccelerated="false" android:label="@7F100252" android:name="com.jio.media.jiokids.KidsSplashActivity" android:theme="@7F11000C" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:label="@7F100454" android:name="com.jio.media.sdk.ssoui.JioMediaSSOMainActivity" android:screenOrientation="1" android:theme="@7F110009">
+</activity>
+<meta-data android:name="android.support.VERSION" android:value="26.1.0">
+</meta-data>
+<activity android:name="com.jio.media.market.InstallerActivity">
+</activity>
+<receiver android:enabled="true" android:exported="false" android:name="com.jio.media.market.AppInstallListener">
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_ADDED">
+</action>
+<action android:name="android.intent.action.PACKAGE_NEEDS_VERIFICATION">
+</action>
+<action android:name="android.intent.action.PACKAGE_VERIFIED">
+</action>
+<data android:scheme="package">
+</data>
+</intent-filter>
+</receiver>
+<service android:enabled="true" android:exported="false" android:name="com.jio.media.market.AppInstallerService">
+</service>
+<receiver android:enabled="true" android:exported="false" android:name="com.jio.media.sdk.sso.connectivity.ConnectivityChangeReciever">
+<intent-filter>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name="com.google.android.gms.cast.framework.media.MediaIntentReceiver">
+</receiver>
+<service android:name="com.google.android.gms.cast.framework.media.MediaNotificationService">
+</service>
+<service android:name="com.google.android.gms.cast.framework.ReconnectionService">
+</service>
+<service android:exported="true" android:name="com.google.firebase.messaging.FirebaseMessagingService">
+<intent-filter android:priority="-500">
+<action android:name="com.google.firebase.MESSAGING_EVENT">
+</action>
+</intent-filter>
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.analytics.AnalyticsJobService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<meta-data android:name="App-ID" android:value="1012">
+</meta-data>
+<meta-data android:name="Group-ID" android:value="MAD001">
+</meta-data>
+<activity android:exported="true" android:name="com.madme.mobile.sdk.activity.profile.ChangeProfileActivity" android:taskAffinity="@7F100318" android:theme="@7F1100D3">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:host="com.jio.media.ondemand" android:path="/profile" android:scheme="madme">
+</data>
+</intent-filter>
+</activity>
+<activity android:autoRemoveFromRecents="true" android:name="com.madme.mobile.sdk.activity.AdActivity" android:screenOrientation="1" android:taskAffinity="@7F100318" android:theme="@7F1100D0">
+</activity>
+<activity android:autoRemoveFromRecents="true" android:name="com.madme.mobile.sdk.activity.OverlayAdActivity" android:screenOrientation="@7F0A001C" android:taskAffinity="@7F100318" android:theme="@7F1100D2">
+</activity>
+<activity android:autoRemoveFromRecents="true" android:name="com.madme.mobile.sdk.activity.SurveyActivity" android:screenOrientation="1" android:taskAffinity="@7F100318" android:theme="@7F1100E7" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:autoRemoveFromRecents="true" android:name="com.madme.mobile.sdk.activity.BrowserActivity" android:screenOrientation="1" android:taskAffinity="@7F100318" android:theme="@7F1100D3">
+</activity>
+<activity android:name="com.madme.mobile.sdk.activity.SavedAdActivity" android:screenOrientation="1" android:taskAffinity="@7F100318" android:theme="@7F1100D0">
+</activity>
+<activity android:exported="true" android:name="com.madme.mobile.sdk.activity.MyOffersHistoryActivity" android:taskAffinity="@7F100318" android:theme="@7F1100D3">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:host="com.jio.media.ondemand" android:path="/gallery" android:scheme="madme">
+</data>
+</intent-filter>
+</activity>
+<activity android:enabled="@7F05000C" android:name="com.madme.mobile.sdk.activity.AdListActivity" android:taskAffinity="@7F100318" android:theme="@7F1100DD">
+</activity>
+<activity android:name="com.madme.mobile.sdk.activity.WebViewActivity" android:taskAffinity="@7F100318" android:theme="@7F1100D3">
+</activity>
+<activity android:excludeFromRecents="true" android:label="@7F1002EC" android:name="com.madme.mobile.sdk.activity.TermsActivity" android:noHistory="true" android:taskAffinity="@7F100318" android:theme="@7F1100DA">
+</activity>
+<activity android:label="@7F1002EC" android:name="com.madme.mobile.sdk.activity.LegalInformationActivityResources" android:taskAffinity="@7F100318" android:theme="@7F1100D3">
+</activity>
+<activity android:label="@7F1002E0" android:name="com.madme.mobile.sdk.activity.BenefitsActivity" android:taskAffinity="@7F100318" android:theme="@7F1100D3">
+</activity>
+<activity android:excludeFromRecents="true" android:name="com.madme.mobile.sdk.activity.AppTrackingConsentDialogActivity" android:noHistory="true" android:screenOrientation="@7F0A001C" android:taskAffinity="@7F100318" android:theme="@7F1100DA">
+</activity>
+<activity android:enabled="@7F050009" android:excludeFromRecents="true" android:label="@7F1002E3" android:launchMode="2" android:name="com.madme.mobile.sdk.activity.MadmeDebugActivity" android:screenOrientation="1" android:taskAffinity="@7F100318" android:theme="@7F1100D3">
+</activity>
+<activity android:alwaysRetainTaskState="false" android:autoRemoveFromRecents="true" android:launchMode="2" android:name="com.madme.mobile.sdk.activity.MadmePermissionActivity" android:screenOrientation="@7F0A001C" android:taskAffinity="@7F100318" android:theme="@7F1100DE">
+</activity>
+<activity android:excludeFromRecents="true" android:launchMode="1" android:name="com.madme.mobile.sdk.activity.ThankYouActivity" android:noHistory="true" android:screenOrientation="1" android:taskAffinity="@7F100318" android:theme="@7F1100E8">
+</activity>
+<service android:name="com.madme.mobile.sdk.service.LoginService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<service android:name="com.madme.mobile.sdk.service.DownloadService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<service android:name="com.madme.mobile.sdk.service.DbUpdateService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<service android:name="com.madme.mobile.sdk.service.AdAlarmHelperService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<service android:name="com.madme.mobile.sdk.service.location.GeofenceService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<service android:name="com.madme.mobile.sdk.service.ad.ShowAdService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<service android:name="com.madme.mobile.sdk.service.TrackingService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<service android:name="com.madme.mobile.sdk.service.AppTrackingService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<service android:name="com.madme.mobile.sdk.service.AdTriggerEventsService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<service android:enabled="@7F050015" android:name="com.madme.mobile.sdk.service.SBSTService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<service android:enabled="@7F05000E" android:name="com.madme.mobile.features.cellinfo.CICLService">
+</service>
+<service android:enabled="@7F05000E" android:name="com.madme.mobile.features.calllog.CallLogTrackingService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<service android:enabled="@7F050029" android:name="com.madme.mobile.sdk.service.TrackingSubmissionService">
+</service>
+<service android:enabled="@7F050028" android:name="com.madme.mobile.sdk.service.TrackingSubmissionJobService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<service android:enabled="@7F050029" android:name="com.madme.mobile.sdk.service.SurveySubmissionService">
+</service>
+<service android:enabled="@7F050028" android:name="com.madme.mobile.sdk.service.SurveySubmissionJobService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<service android:name="com.madme.mobile.sdk.service.CampaignHelperService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<service android:name="com.madme.mobile.sdk.service.AdReminderHelperService">
+</service>
+<receiver android:enabled="@7F05001E" android:exported="true" android:name="com.madme.mobile.sdk.broadcast.AdReminderReceiver">
+<intent-filter>
+<action android:name="com.jio.media.ondemand.madme.ACTION_AD_REMINDER">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:enabled="@7F050029" android:name="com.madme.mobile.sdk.broadcast.adtriggers.PowerConnectionAdTrigger">
+<intent-filter>
+<action android:name="android.intent.action.ACTION_POWER_CONNECTED">
+</action>
+<action android:name="android.intent.action.ACTION_POWER_DISCONNECTED">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:enabled="@7F050029" android:name="com.madme.mobile.sdk.broadcast.adtriggers.AirplaneModeChangedAdTrigger">
+<intent-filter>
+<action android:name="android.intent.action.AIRPLANE_MODE">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:enabled="@7F050029" android:name="com.madme.mobile.sdk.broadcast.adtriggers.WiFiAdTrigger">
+<intent-filter>
+<action android:name="android.net.wifi.STATE_CHANGE">
+</action>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:enabled="@7F050029" android:name="com.madme.mobile.sdk.broadcast.adtriggers.WiFiAvailableTrigger">
+<intent-filter>
+<action android:name="android.net.wifi.SCAN_RESULTS">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:enabled="@7F050029" android:name="com.madme.mobile.sdk.broadcast.adtriggers.RoamingAdTrigger">
+<intent-filter>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:enabled="@7F050029" android:name="com.madme.mobile.sdk.broadcast.PackageRemovalReceiver">
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_REMOVED">
+</action>
+<data android:scheme="package">
+</data>
+</intent-filter>
+</receiver>
+<receiver android:enabled="@7F050029" android:name="com.madme.mobile.sdk.broadcast.MadmeSmsTrigger">
+<intent-filter>
+<action android:name="android.provider.Telephony.SMS_RECEIVED">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:enabled="@7F050029" android:name="com.madme.mobile.sdk.broadcast.UnlockReceiver">
+<intent-filter>
+<action android:name="android.intent.action.USER_PRESENT">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name="com.madme.mobile.sdk.broadcast.EOCTrigger">
+<intent-filter>
+<action android:name="android.intent.action.NEW_OUTGOING_CALL">
+</action>
+<action android:name="android.intent.action.PHONE_STATE">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name="com.madme.mobile.sdk.broadcast.DailyTaskReceiver">
+<intent-filter>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+<action android:name="android.intent.action.PHONE_STATE">
+</action>
+<action android:name="android.intent.action.NEW_OUTGOING_CALL">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:exported="true" android:name="com.madme.mobile.sdk.broadcast.BootReceiver">
+<intent-filter android:priority="@7F0A0003">
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:exported="true" android:name="com.madme.mobile.sdk.broadcast.AdAlarmReceiver">
+<intent-filter>
+<action android:name="com.jio.media.ondemand.madme.ACTION_AD_ALARM">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:exported="true" android:name="com.madme.mobile.sdk.broadcast.GeofenceReceiver">
+</receiver>
+<receiver android:exported="false" android:name="com.madme.mobile.sdk.broadcast.NotificationActionReceiver">
+<intent-filter>
+<action android:name="com.jio.media.ondemand.madme.ACTION_NOTIFICATION_CLICK">
+</action>
+<action android:name="com.jio.media.ondemand.madme.ACTION_NOTIFICATION_REMOVAL">
+</action>
+<action android:name="com.jio.media.ondemand.madme.ACTION_INTERMEDIATE_NOTIFICATION_CLICK">
+</action>
+<action android:name="com.jio.media.ondemand.madme.ACTION_INTERMEDIATE_NOTIFICATION_REMOVAL">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name="com.madme.mobile.sdk.broadcast.IdSnsReceiver">
+<intent-filter>
+<action android:name="com.madme.idsns.U3">
+</action>
+<action android:name="com.madme.idsns.U4">
+</action>
+</intent-filter>
+</receiver>
+<provider android:authorities="com.jio.media.ondemand.madme.files" android:exported="false" android:grantUriPermissions="true" android:name="com.madme.mobile.sdk.provider.MadmeFileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F130000">
+</meta-data>
+</provider>
+<provider android:authorities="com.jio.media.ondemand.madme.idsns" android:exported="true" android:name="com.madme.mobile.sdk.provider.IdSnsProvider">
+</provider>
+<receiver android:exported="true" android:name="com.google.android.gms.gcm.GcmReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+<category android:name="com.jio.media.ondemand">
+</category>
+</intent-filter>
+</receiver>
+<service android:exported="false" android:name="com.madme.mobile.sdk.service.gcm.MyGcmListenerService">
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+</intent-filter>
+</service>
+<service android:exported="false" android:name="com.madme.mobile.sdk.service.gcm.MyInstanceIDListenerService">
+<intent-filter>
+<action android:name="com.google.android.gms.iid.InstanceID">
+</action>
+</intent-filter>
+</service>
+<service android:exported="false" android:name="com.madme.mobile.sdk.service.gcm.GcmRegistrationIntentService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<service android:enabled="@7F050029" android:exported="false" android:name="com.madme.mobile.sdk.service.LSService">
+</service>
+<service android:enabled="@7F050028" android:exported="false" android:name="com.madme.mobile.sdk.service.LSJobService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<service android:enabled="@7F050028" android:exported="false" android:name="com.madme.mobile.sdk.service.LSJobService2" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:01030010">
+</activity>
+<receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementReceiver">
+</receiver>
+<receiver android:enabled="true" android:exported="true" android:name="com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver" android:permission="android.permission.INSTALL_PACKAGES">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementService">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementJobService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<receiver android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+<category android:name="com.jio.media.ondemand">
+</category>
+</intent-filter>
+</receiver>
+<receiver android:exported="false" android:name="com.google.firebase.iid.FirebaseInstanceIdInternalReceiver">
+</receiver>
+<service android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdService">
+<intent-filter android:priority="-500">
+<action android:name="com.google.firebase.INSTANCE_ID_EVENT">
+</action>
+</intent-filter>
+</service>
+<provider android:authorities="com.jio.media.ondemand.firebaseinitprovider" android:exported="false" android:initOrder="100" android:name="com.google.firebase.provider.FirebaseInitProvider">
+</provider>
+<receiver android:enabled="true" android:exported="false" android:name="com.clevertap.android.sdk.CTPushNotificationReceiver">
+</receiver>
+<receiver android:name="com.jio.media.framework.services.updateapp.updateUtil.DownloadUpdateReciever">
+<intent-filter>
+<action android:name="android.intent.action.DOWNLOAD_COMPLETE">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name="com.jio.media.framework.services.external.network.NetworkChangedBroadcastListener">
+<intent-filter>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+<action android:name="android.net.wifi.WIFI_STATE_CHANGED">
+</action>
+<action android:name="android.intent.action.AIRPLANE_MODE">
+</action>
+<action android:name="android.intent.action.SIM_STATE_CHANGED">
+</action>
+</intent-filter>
+</receiver>
+<provider android:authorities="com.jio.media.ondemand.crashlyticsinitprovider" android:exported="false" android:initOrder="100" android:name="com.crashlytics.android.CrashlyticsInitProvider">
+</provider>
+<receiver android:enabled="true" android:exported="true" android:name="com.vmax.android.ads.common.DataReceiver">
+<intent-filter>
+<action android:name="com.jio.ads">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:enabled="true" android:exported="true" android:name="com.vmax.android.ads.common.AppInstallReceiver">
+<intent-filter>
+<action android:name="com.jio.ads.package_added">
+</action>
+</intent-filter>
+</receiver>
+<activity android:configChanges="0x00000FB0" android:name="com.vmax.android.ads.vast.VastBillBoardActivity" android:theme="@android:01030007">
+</activity>
+<activity android:configChanges="0x00000FB0" android:name="com.vmax.android.ads.vast.VmaxAudioAdActivity" android:theme="@android:01030007">
+</activity>
+<activity android:configChanges="0x00000FB0" android:name="com.vmax.android.ads.webview.WebViewFullscreenActivity">
+</activity>
+<activity android:configChanges="0x00000FB0" android:name="com.vmax.android.ads.api.FullscreenHtmlAdActivity" android:theme="@android:01030007">
+</activity>
+<activity android:configChanges="0x00000FB0" android:name="com.vmax.android.ads.api.FullscreenNativeAdActivity" android:theme="@android:01030007">
+</activity>
+<service android:name="com.vmax.android.ads.api.OnClearFromRecentService" android:stopWithTask="false">
+</service>
+<meta-data android:name="android.arch.lifecycle.VERSION" android:value="27.0.0-SNAPSHOT">
+</meta-data>
+</application>
+</manifest>

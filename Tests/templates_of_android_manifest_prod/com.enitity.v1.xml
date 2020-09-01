@@ -1,0 +1,40 @@
+<?xml version="1.0" ?><manifest android:installLocation="1" android:versionCode="10" android:versionName="1.0.0" android:windowSoftInputMode="0x00000020" package="com.enitity.v1" platformBuildVersionCode="25" platformBuildVersionName="7.1.1" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="14" android:targetSdkVersion="26">
+</uses-sdk>
+<supports-screens android:anyDensity="true" android:largeScreens="true" android:normalScreens="true" android:resizeable="true" android:smallScreens="true" android:xlargeScreens="true">
+</supports-screens>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<application android:debuggable="true" android:hardwareAccelerated="true" android:icon="@7F030000" android:label="@7F06000A">
+<activity android:configChanges="0x000004B4" android:label="@7F06000A" android:name="com.enitity.v1.EnityXF" android:screenOrientation="-1" android:windowSoftInputMode="0x00000000">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<receiver android:enabled="true" android:name="nl.xservices.plugins.ShareChooserPendingIntent">
+<intent-filter>
+<action android:name="android.intent.action.SEND">
+</action>
+</intent-filter>
+</receiver>
+<provider android:authorities="com.enitity.v1.sharing.provider" android:exported="false" android:grantUriPermissions="true" android:name="nl.xservices.plugins.FileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F050001">
+</meta-data>
+</provider>
+<activity android:configChanges="0x00000FB0" android:exported="false" android:name="com.google.android.gms.ads.AdActivity" android:theme="@android:0103000F">
+</activity>
+<meta-data android:name="android.support.VERSION" android:value="26.1.0">
+</meta-data>
+<meta-data android:name="android.arch.lifecycle.VERSION" android:value="27.0.0-SNAPSHOT">
+</meta-data>
+<meta-data android:name="com.google.android.gms.version" android:value="@7F0C0001">
+</meta-data>
+</application>
+</manifest>

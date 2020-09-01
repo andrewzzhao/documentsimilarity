@@ -1,0 +1,358 @@
+<?xml version="1.0" ?><manifest android:versionCode="22" android:versionName="1.6.2" package="cn.hjr360.wenjin" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="18" android:targetSdkVersion="27">
+</uses-sdk>
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.BLUETOOTH">
+</uses-permission>
+<uses-permission android:name="android.permission.BLUETOOTH_ADMIN">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-permission android:name="getui.permission.GetuiService.cn.hjr360.wenjin">
+</uses-permission>
+<permission android:name="getui.permission.GetuiService.cn.hjr360.wenjin" android:protectionLevel="0x00000000">
+</permission>
+<uses-permission android:name="android.permission.BROADCAST_PACKAGE_ADDED">
+</uses-permission>
+<uses-permission android:name="android.permission.BROADCAST_PACKAGE_CHANGED">
+</uses-permission>
+<uses-permission android:name="android.permission.BROADCAST_PACKAGE_INSTALL">
+</uses-permission>
+<uses-permission android:name="android.permission.BROADCAST_PACKAGE_REPLACED">
+</uses-permission>
+<uses-permission android:name="android.permission.RESTART_PACKAGES">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_NETWORK_STATE">
+</uses-permission>
+<meta-data android:name="android.support.VERSION" android:value="25.3.1">
+</meta-data>
+<application android:allowBackup="false" android:icon="@7F0C0003" android:label="@7F0E0029" android:name="cn.rumeng.qianzhuozi.app.XcApplication" android:persistent="true" android:resizeableActivity="false" android:supportsRtl="true" android:theme="@7F0F0007">
+<activity android:name="cn.rumeng.qianzhuozi.activity.RechargeResultActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.rumeng.qianzhuozi.activity.BindCardResultActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.rumeng.qianzhuozi.activity.XcRechargeUnbindActivity">
+</activity>
+<service android:exported="true" android:label="PushService" android:name="cn.rumeng.qianzhuozi.getui.GeTuiPushService" android:process=":pushservice">
+</service>
+<service android:name="cn.rumeng.qianzhuozi.getui.GeTuiNotificationService">
+</service>
+<meta-data android:name="UMENG_APPKEY" android:value="5cee8edc3fc1955f64000dc1">
+</meta-data>
+<meta-data android:name="UMENG_CHANNEL" android:value="HuaWei">
+</meta-data>
+<meta-data android:name="android.max_aspect" android:value="2.400000">
+</meta-data>
+<activity android:exported="true" android:name="cn.finalteam.rxgalleryfinal.ui.activity.MediaActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.yalantis.ucrop.UCropActivity" android:screenOrientation="1">
+</activity>
+<receiver android:exported="false" android:name="cn.rumeng.qianzhuozi.receiver.NetworkChangeReceiver">
+<intent-filter>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name="cn.rumeng.qianzhuozi.receiver.NotificationDeletedReceiver">
+<intent-filter>
+<action android:name="notification_deleted_action">
+</action>
+</intent-filter>
+</receiver>
+<activity android:launchMode="2" android:name="cn.rumeng.qianzhuozi.MainActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="cn.rumeng.qianzhuozi.activity.XcGuideActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="2" android:name="cn.rumeng.qianzhuozi.activity.XcSplashActivity" android:screenOrientation="1" android:theme="@7F0F00C8">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:scheme="yplc">
+</data>
+<data android:host="splash">
+</data>
+<data android:path="/entry/0111">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="cn.rumeng.qianzhuozi.activity.XcSettingActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.rumeng.qianzhuozi.activity.XcTransactionRecordActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.rumeng.qianzhuozi.activity.XcCardActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.rumeng.qianzhuozi.activity.XcHelpCenterActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.rumeng.qianzhuozi.activity.XcFeedbackActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="cn.rumeng.qianzhuozi.activity.XcAboutUsActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.rumeng.qianzhuozi.activity.XcPatternLockActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.rumeng.qianzhuozi.activity.XcUpdateLoginPasswdActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="cn.rumeng.qianzhuozi.activity.XcRealNameAuthActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="cn.rumeng.qianzhuozi.activity.XcUpdateTransactionPasswdActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:launchMode="2" android:name="cn.rumeng.qianzhuozi.activity.XcLoginActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.rumeng.qianzhuozi.activity.XcForgetPasswdActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:launchMode="2" android:name="cn.rumeng.qianzhuozi.activity.XcProductDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.rumeng.qianzhuozi.base.XcBaseWebActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="cn.rumeng.qianzhuozi.activity.XcCreateTransactionPasswdActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="cn.rumeng.qianzhuozi.activity.XcRechargeActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="cn.rumeng.qianzhuozi.activity.XcWithdrawActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:name="cn.rumeng.qianzhuozi.activity.XcBuyResultActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="cn.rumeng.qianzhuozi.activity.XcOrderTransactionDetailActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="cn.rumeng.qianzhuozi.activity.XcWithdrawRecordActivity" android:screenOrientation="1">
+</activity>
+<activity android:exported="true" android:name="cn.hjr360.wenjin.wxapi.WXEntryActivity">
+</activity>
+<activity android:name="cn.rumeng.qianzhuozi.activity.XcCheckLoginPasswdActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name="cn.rumeng.qianzhuozi.activity.XcBuyActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.rumeng.qianzhuozi.activity.XcCheckAuthCodeActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.rumeng.qianzhuozi.activity.XcWithdrawDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.rumeng.qianzhuozi.activity.XcTwoTabActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="2" android:name="cn.rumeng.qianzhuozi.activity.XcCheckPatternLockActivity">
+</activity>
+<activity android:name="cn.rumeng.qianzhuozi.activity.XcKnowledgeActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.rumeng.qianzhuozi.activity.XcAuthBindActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.rumeng.qianzhuozi.activity.XcCouponChooseActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name="cn.rumeng.qianzhuozi.activity.XcChangeCardActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.rumeng.qianzhuozi.activity.XcHelpAndFeedbackActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.rumeng.qianzhuozi.activity.XcMsgContentActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.rumeng.qianzhuozi.activity.XcChangePhoneEntryActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.rumeng.qianzhuozi.activity.XcChangePhoneActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.rumeng.qianzhuozi.activity.XcFrescoImgActivity" android:theme="@7F0F00AB">
+</activity>
+<activity android:name="cn.rumeng.qianzhuozi.activity.XcSupportBanksActivity">
+</activity>
+<activity android:name="cn.rumeng.qianzhuozi.activity.XcCheckTraderPasswdActivity">
+</activity>
+<activity android:name="cn.rumeng.qianzhuozi.activity.XcBenefitActivity">
+</activity>
+<provider android:authorities="cn.hjr360.wenjin.AgentWebFileProvider" android:exported="false" android:grantUriPermissions="true" android:name="com.just.agentweb.AgentWebFileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F110000">
+</meta-data>
+</provider>
+<activity android:configChanges="0x000004A0" android:exported="false" android:launchMode="0" android:name="com.just.agentweb.ActionActivity" android:screenOrientation="1" android:theme="@7F0F0189" android:windowSoftInputMode="0x00000003">
+</activity>
+<receiver android:name="com.just.agentweb.RealDownLoader$NotificationBroadcastReceiver">
+</receiver>
+<meta-data android:name="PUSH_APPID" android:value="gdEWRkbHvDAMSDxGX9qQLA">
+</meta-data>
+<meta-data android:name="PUSH_APPKEY" android:value="BQVrMTcqEZAgQkhJUHfhd5">
+</meta-data>
+<meta-data android:name="PUSH_APPSECRET" android:value="QGThWXpjf37atpCE11M3b1">
+</meta-data>
+<service android:exported="true" android:label="NotificationCenter" android:name="com.igexin.sdk.PushService" android:process=":pushservice">
+<intent-filter>
+<action android:name="com.igexin.sdk.action.service.message">
+</action>
+</intent-filter>
+</service>
+<receiver android:name="com.igexin.sdk.PushReceiver">
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+<action android:name="android.intent.action.USER_PRESENT">
+</action>
+<action android:name="com.igexin.sdk.action.refreshls">
+</action>
+<action android:name="android.intent.action.MEDIA_MOUNTED">
+</action>
+<action android:name="android.intent.action.ACTION_POWER_CONNECTED">
+</action>
+<action android:name="android.intent.action.ACTION_POWER_DISCONNECTED">
+</action>
+</intent-filter>
+</receiver>
+<activity android:excludeFromRecents="true" android:exported="false" android:name="com.igexin.sdk.PushActivity" android:process=":pushservice" android:taskAffinity="com.igexin.sdk.PushActivityTask" android:theme="@android:01030010">
+</activity>
+<activity android:excludeFromRecents="true" android:exported="true" android:name="com.igexin.sdk.GActivity" android:process=":pushservice" android:taskAffinity="com.igexin.sdk.PushActivityTask" android:theme="@android:01030010">
+</activity>
+<service android:exported="true" android:name="com.taobao.accs.ChannelService" android:process=":channel">
+<intent-filter>
+<action android:name="com.taobao.accs.intent.action.SERVICE">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="com.taobao.accs.intent.action.ELECTION">
+</action>
+</intent-filter>
+</service>
+<service android:exported="true" android:name="com.taobao.accs.data.MsgDistributeService">
+<intent-filter>
+<action android:name="com.taobao.accs.intent.action.RECEIVE">
+</action>
+</intent-filter>
+</service>
+<receiver android:name="com.taobao.accs.EventReceiver" android:process=":channel">
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_REMOVED">
+</action>
+<data android:scheme="package">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.USER_PRESENT">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name="com.taobao.accs.ServiceReceiver" android:process=":channel">
+<intent-filter>
+<action android:name="com.taobao.accs.intent.action.COMMAND">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="com.taobao.accs.intent.action.START_FROM_AGOO">
+</action>
+</intent-filter>
+</receiver>
+<service android:name="com.taobao.accs.internal.AccsJobService" android:permission="android.permission.BIND_JOB_SERVICE" android:process=":channel">
+</service>
+<service android:name="com.taobao.accs.ChannelService$KernelService" android:process=":channel">
+</service>
+<service android:exported="true" android:name="org.android.agoo.accs.AgooService">
+<intent-filter>
+<action android:name="com.taobao.accs.intent.action.RECEIVE">
+</action>
+</intent-filter>
+</service>
+<service android:exported="true" android:name="com.umeng.message.UmengIntentService" android:process=":channel">
+<intent-filter>
+<action android:name="org.agoo.android.intent.action.RECEIVE">
+</action>
+</intent-filter>
+</service>
+<service android:exported="true" android:name="com.umeng.message.XiaomiIntentService" android:process=":channel">
+<intent-filter>
+<action android:name="org.agoo.android.intent.action.RECEIVE">
+</action>
+</intent-filter>
+</service>
+<receiver android:exported="true" android:name="com.taobao.agoo.AgooCommondReceiver" android:process=":channel">
+<intent-filter>
+<action android:name="cn.hjr360.wenjin.intent.action.COMMAND">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_REMOVED">
+</action>
+<data android:scheme="package">
+</data>
+</intent-filter>
+</receiver>
+<service android:exported="true" android:name="com.umeng.message.UmengMessageIntentReceiverService" android:process=":channel">
+<intent-filter>
+<action android:name="org.android.agoo.client.MessageReceiverService">
+</action>
+</intent-filter>
+</service>
+<receiver android:exported="false" android:name="com.umeng.message.NotificationProxyBroadcastReceiver">
+</receiver>
+<service android:exported="false" android:name="com.umeng.message.UmengMessageCallbackHandlerService">
+<intent-filter>
+<action android:name="com.umeng.messge.registercallback.action">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="com.umeng.message.enablecallback.action">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="com.umeng.message.disablecallback.action">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="com.umeng.message.message.handler.action">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="com.umeng.message.message.sendmessage.action">
+</action>
+</intent-filter>
+</service>
+<service android:exported="false" android:name="com.umeng.message.UmengDownloadResourceService">
+</service>
+<provider android:authorities="cn.hjr360.wenjin.umeng.message" android:exported="false" android:name="com.umeng.message.provider.MessageProvider">
+<grant-uri-permission android:pathPattern=".*">
+</grant-uri-permission>
+</provider>
+</application>
+</manifest>

@@ -1,0 +1,220 @@
+<?xml version="1.0" ?><manifest android:versionCode="1" android:versionName="3.5.0" package="com.srcb.mbank" platformBuildVersionCode="21" platformBuildVersionName="5.0.1-1624448" xmlns:android="http://schemas.android.com/apk/res/android">
+<application android:debuggable="false" android:icon="@7F020142" android:label="@7F0B0001" android:name="com.secneo.apkwrapper.ApplicationWrapper">
+<uses-library android:name="com.google.android.maps" android:required="false">
+</uses-library>
+<activity android:label="@7F0B0001" android:name=".LPSplashScreen" android:screenOrientation="1">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:clearTaskOnLaunch="true" android:configChanges="0x000000A0" android:exported="false" android:name="com.rytong.zxing.CaptureActivity" android:screenOrientation="0" android:stateNotNeeded="true" android:theme="@android:01030007" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:clearTaskOnLaunch="true" android:configChanges="0x000000A0" android:exported="false" android:name="com.rytong.newzxing.CaptureActivity" android:screenOrientation="1" android:stateNotNeeded="true" android:theme="@android:01030007" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:exported="false" android:name=".CashFace" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<activity android:exported="false" android:name=".PrepareCash" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<activity android:exported="false" android:name=".LPLoginView" android:screenOrientation="1">
+</activity>
+<activity android:exported="false" android:name=".BOCMainView" android:screenOrientation="1">
+</activity>
+<activity android:exported="false" android:name=".DemoMainView" android:screenOrientation="1">
+</activity>
+<activity android:exported="false" android:name=".MenuManage" android:screenOrientation="1">
+</activity>
+<activity android:exported="false" android:name=".BOCDetailView" android:screenOrientation="1">
+</activity>
+<activity android:exported="false" android:name=".MapViewAndroid" android:screenOrientation="1">
+</activity>
+<activity android:exported="false" android:name=".LPHelpView" android:screenOrientation="1">
+</activity>
+<activity android:exported="false" android:name=".LPMapView" android:screenOrientation="1">
+</activity>
+<activity android:exported="false" android:name=".BOCWebView" android:screenOrientation="1">
+</activity>
+<activity android:exported="false" android:name=".PublicNoticeActivity" android:screenOrientation="1">
+</activity>
+<activity android:exported="false" android:name=".PublicNoticeInfoActivity" android:screenOrientation="1">
+</activity>
+<activity android:exported="false" android:name=".FirstInstallActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000480" android:exported="false" android:name="com.cfca.srcbulanview.SigActivity" android:screenOrientation="1" android:theme="@7F070008">
+</activity>
+<activity android:configChanges="0x00000480" android:exported="false" android:name="com.cfca.srcbulanview.FeiTianSigActivity" android:screenOrientation="1" android:theme="@7F070008">
+</activity>
+<service android:exported="false" android:name=".SRCBService">
+<intent-filter>
+<action android:name="com.srcb.mbank.SRCBService">
+</action>
+</intent-filter>
+</service>
+<service android:exported="false" android:name=".UpdateService">
+<intent-filter>
+<action android:name="com.srcb.mbank.UpdateService">
+</action>
+</intent-filter>
+</service>
+<service android:enabled="true" android:exported="false" android:label="SrcbSmbsNotificationService" android:name="org.androidpn.client.SrcbSmbsNotificationService">
+<intent-filter>
+<action android:name="org.androidpn.client.SrcbSmbsNotificationService">
+</action>
+</intent-filter>
+</service>
+<receiver android:exported="false" android:name="com.srcb.mbank.BootReceiver">
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+<action android:name="com.srcb.ok">
+</action>
+<action android:name="com.srcb.restart_push">
+</action>
+<action android:name="com.srcb.push4pay">
+</action>
+</intent-filter>
+</receiver>
+<service android:enabled="true" android:name="com.gieseckedevrient.android.pushclient.HcePushService" android:process=":push">
+</service>
+<receiver android:name="com.gieseckedevrient.android.cpclientdemoapp.PushBroadCastReceiver" android:process=":push">
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:enabled="true" android:name="com.gieseckedevrient.android.hceclient.PushRecieveMsgReceiver">
+<intent-filter>
+<action android:name="com.gieseckedevrient.android.intent.MESSAGE_RECEIVED">
+</action>
+<action android:name="com.gieseckedevrient.android.intent.REGISTRATION">
+</action>
+</intent-filter>
+</receiver>
+<service android:exported="true" android:name="com.cps.view.CustomHostApduService" android:permission="android.permission.BIND_NFC_SERVICE">
+<intent-filter>
+<action android:name="android.nfc.cardemulation.action.HOST_APDU_SERVICE">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+<meta-data android:name="android.nfc.cardemulation.host_apdu_service" android:resource="@7F050000">
+</meta-data>
+</service>
+<activity android:name="com.cps.activity.CardDeclareOpenActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.cps.activity.ApplyCardListActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.cps.activity.ApplyCardActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.cps.activity.CardActivationActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.cps.activity.TransactionRecordActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.cps.activity.ActivateResultActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.cps.activity.CardListActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.cps.activity.CardDetailsActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.cps.activity.PaymentSettingActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="2" android:name="com.cps.activity.PaymentResultActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.cps.activity.DefaultCardAcitivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.cps.activity.HelpInfoActivity" android:screenOrientation="1">
+</activity>
+<service android:exported="false" android:name="com.cps.view.HceClientService">
+<intent-filter>
+<action android:name="com.cps.view.HceClientService">
+</action>
+</intent-filter>
+</service>
+<service android:exported="true" android:name="com.unionpay.uphce.service.HceBankService">
+<intent-filter>
+<action android:name="com.unionpay.uppay.action.HCE">
+</action>
+</intent-filter>
+</service>
+</application>
+<uses-feature android:name="android.hardware.nfc.hce" android:required="true">
+</uses-feature>
+<uses-permission android:name="android.permission.NFC">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.INSTALL_PACKAGES">
+</uses-permission>
+<uses-permission android:name="Android.permission.CALL_PHONE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.RAISED_THREAD_PRIORITY">
+</uses-permission>
+<uses-permission android:name="android.permission.DISABLE_KEYGUARD">
+</uses-permission>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_CONTACTS">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-permission android:name="android.permission.BLUETOOTH">
+</uses-permission>
+<uses-permission android:name="android.permission.BLUETOOTH_ADMIN">
+</uses-permission>
+<uses-feature android:name="android.hardware.camera">
+</uses-feature>
+<uses-feature android:name="android.hardware.camera.autofocus">
+</uses-feature>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.FLASHLIGHT">
+</uses-permission>
+<uses-permission android:name="android.permission.RESTART_PACKAGES">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_SMS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_SMS">
+</uses-permission>
+<permission android:name="com.srcb.mbank.permission.HCE_PUSH_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="com.srcb.mbank.permission.HCE_PUSH_MESSAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<supports-screens android:anyDensity="false" android:largeScreens="true" android:normalScreens="true" android:smallScreens="true" android:xlargeScreens="true">
+</supports-screens>
+<uses-sdk android:minSdkVersion="5" android:targetSdkVersion="11">
+</uses-sdk>
+</manifest>

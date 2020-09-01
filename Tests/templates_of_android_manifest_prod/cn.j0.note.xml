@@ -1,0 +1,174 @@
+<?xml version="1.0" ?><manifest android:versionCode="177" android:versionName="1.7.5" package="cn.j0.note" platformBuildVersionCode="25" platformBuildVersionName="7.1.1" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="18" android:targetSdkVersion="23">
+</uses-sdk>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.MANAGE_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.RECORD_AUDIO">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_CALENDAR">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_CALENDAR">
+</uses-permission>
+<uses-feature android:name="android.hardware.bluetooth" android:required="false">
+</uses-feature>
+<uses-permission android:name="android.permission.BLUETOOTH">
+</uses-permission>
+<uses-permission android:name="android.permission.BLUETOOTH_ADMIN">
+</uses-permission>
+<meta-data android:name="android.support.VERSION" android:value="26.0.0-alpha1">
+</meta-data>
+<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_LOGS">
+</uses-permission>
+<application android:allowBackup="true" android:hardwareAccelerated="true" android:icon="@7F030000" android:label="@7F0A005E" android:largeHeap="true" android:name="com.tencent.StubShell.TxAppEntry" android:theme="@7F0D0045">
+<meta-data android:name="TxAppEntry" android:value="cn.j0.note.MyApplication">
+</meta-data>
+<activity android:name="cn.j0.note.ui.activity.SplashActivity" android:screenOrientation="1" android:theme="@7F0D00B0">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="j0note">
+</data>
+</intent-filter>
+ //地幖用scheme
+
+<intent-filter android:priority="0">
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="geo">
+</data>
+</intent-filter>
+</activity>
+<activity android:launchMode="2" android:name="cn.j0.note.ui.activity.LoginActivity" android:screenOrientation="1" android:theme="@7F0D00AF">
+</activity>
+<activity android:launchMode="2" android:name="cn.j0.note.ui.activity.HomeActivity" android:screenOrientation="1" android:theme="@7F0D00AF">
+</activity>
+<activity android:name="cn.j0.note.ui.activity.SearchNoteActivity" android:screenOrientation="1" android:theme="@7F0D00AF">
+</activity>
+<activity android:name="cn.j0.note.ui.activity.draw.EditDrawActivity" android:screenOrientation="1" android:theme="@7F0D00B0">
+</activity>
+<activity android:name="cn.j0.note.ui.activity.microcourse.MicroCourseActivity" android:screenOrientation="1" android:theme="@7F0D00AF">
+</activity>
+<activity android:name="cn.j0.note.ui.activity.microcourse.RecordMicroCourseActivity" android:screenOrientation="1" android:theme="@7F0D00AF">
+</activity>
+<activity android:name="cn.j0.note.ui.activity.microcourse.PreviewCourseActivity" android:screenOrientation="1" android:theme="@7F0D00AF">
+</activity>
+<activity android:configChanges="0x00000480" android:name="cn.j0.note.ui.activity.microcourse.VideoPlayActivity" android:screenOrientation="1" android:theme="@7F0D00AF">
+</activity>
+<activity android:name="cn.j0.note.ui.activity.microcourse.SelectNotePicActivity" android:screenOrientation="1" android:theme="@7F0D00AF">
+</activity>
+<activity android:name="cn.j0.note.ui.activity.microcourse.SaveMicroCourseActivity" android:screenOrientation="1" android:theme="@7F0D00AF" android:windowSoftInputMode="0x00000014">
+</activity>
+<activity android:name="cn.j0.note.ui.activity.draw.PreviewDrawActivity" android:screenOrientation="1" android:theme="@7F0D00B0">
+</activity>
+<activity android:name="cn.j0.note.ui.activity.images.ImagesGridActivity" android:screenOrientation="1" android:theme="@7F0D00AF">
+</activity>
+<activity android:name="cn.j0.note.ui.activity.ImageInfoActivity" android:screenOrientation="1" android:theme="@7F0D00B0">
+</activity>
+<activity android:name="cn.j0.note.ui.activity.images.AvatarCropActivity" android:screenOrientation="1" android:theme="@7F0D00AF">
+</activity>
+<activity android:name="cn.j0.note.ui.activity.draw.PlaybackActivity" android:screenOrientation="1" android:theme="@7F0D00B0">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.mob.tools.MobUIShell" android:theme="@android:01030010" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:configChanges="0x000004A0" android:exported="true" android:name="cn.j0.note.wxapi.WXEntryActivity" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x000004A0" android:exported="true" android:name="cn.j0.iflynote.wxapi.WXEntryActivity" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<meta-data android:name="SCANBOT_SDK_LICENSE_KEY" android:value="D4gfB9hTYUcVXu+pV8Ns6aJ9wHqZI+bi0T1MR9AyQ0CLfJ3iaEk3F/xEeyPwr83Dd72gVsVfuV7391Q3HYQntoqqaMzDtYSZQ6MUOOIEJN9sedwllWf9kTvEJISz+E6T6YIZa12zRivm8FYqHxoDC1mMNo0y1EPEREn3lI4kksOUbFcRGmJguENolArFLqSUBYMve9ZuEVsgluBzRD0eTqwo+E9fY/1rqBgiK1OxcolS6Y8CeM7bfR2pMipdiEPdHlXrHR1S4PIFoJIuSAMN+Eg6suF0f+JKMmKWf1iaKjnJQc2atM2Wzrf4mql078whuont/pExvcJtkdLEUbboHw== U2NhbmJvdFNESwpjbi5qMC5ub3RlCjE0NzI3NzQzOTkKNzgKMw==">
+</meta-data>
+<activity android:configChanges="0x00000480" android:name="cn.j0.note.ui.activity.TakePhotoActivity" android:screenOrientation="-1" android:theme="@7F0D00B0">
+</activity>
+<activity android:name="cn.j0.note.ui.activity.scanner.CropImageActivity" android:screenOrientation="1" android:theme="@7F0D00AF">
+</activity>
+<activity android:name="cn.j0.note.ui.activity.scanner.DeviceActivity" android:screenOrientation="1" android:theme="@7F0D00AF">
+</activity>
+<activity android:name="cn.j0.note.ui.activity.scanner.ScannerActivity" android:screenOrientation="1" android:theme="@7F0D00AF">
+</activity>
+<activity android:name="cn.j0.note.ui.activity.scanner.ScannerSettingActivity" android:screenOrientation="1" android:theme="@7F0D00AF">
+</activity>
+<activity android:name="cn.j0.note.ui.showpicture.BigPhotoActivity" android:screenOrientation="1" android:theme="@7F0D00AF">
+</activity>
+<activity android:name="cn.j0.note.ui.activity.draw.ShareNoteActivity" android:screenOrientation="1" android:theme="@7F0D00B0">
+</activity>
+<activity android:name="cn.j0.note.ui.activity.AlarmListActivity" android:screenOrientation="1" android:theme="@7F0D00AF">
+</activity>
+<activity android:name="cn.j0.note.ui.penguide.GuideActivity" android:screenOrientation="1" android:theme="@7F0D00B0">
+</activity>
+<activity android:name="cn.j0.note.ui.activity.draw.SplitNoteActivity" android:screenOrientation="1" android:theme="@7F0D00B0">
+</activity>
+<activity android:configChanges="0x00000480" android:name="cn.j0.note.ui.activity.draw.NotesDemoActivity" android:screenOrientation="1" android:theme="@7F0D00B0">
+</activity>
+<activity android:name="cn.j0.note.ui.activity.A5UpgradeActivity" android:screenOrientation="1" android:theme="@7F0D00AF">
+</activity>
+<activity android:name="cn.j0.note.ui.activity.UserGuideActivity" android:screenOrientation="1" android:theme="@7F0D00AF">
+</activity>
+<activity android:name="cn.j0.note.ui.activity.draw.EditShareTextActivity" android:screenOrientation="1" android:theme="@7F0D00AF">
+</activity>
+<service android:enabled="true" android:name="cn.j0.penmanager.service.GattAppService">
+</service>
+<service android:name="com.talkingdata.sdk.TDAntiCheatingService">
+<intent-filter>
+<action android:name="com.talkingdata.sdk.TDAntiCheatingService">
+</action>
+</intent-filter>
+</service>
+<activity android:name="cn.j0.library.base.BaseWebActivity" android:screenOrientation="1" android:theme="@7F0D00AF">
+</activity>
+<activity android:name="cn.j0.library.base.FragmentContainerActivity" android:screenOrientation="1" android:theme="@7F0D00AF">
+</activity>
+<activity android:configChanges="0x000004A4" android:name="com.tencent.bugly.beta.ui.BetaActivity" android:theme="@android:0103000F">
+</activity>
+<provider android:authorities="cn.j0.note.fileProvider" android:exported="false" android:grantUriPermissions="true" android:name="com.tencent.bugly.beta.utils.BuglyFileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F08000F">
+</meta-data>
+</provider>
+<service android:exported="false" android:name="com.tencent.bugly.beta.tinker.TinkerResultService">
+</service>
+<service android:exported="false" android:name="com.tencent.tinker.lib.service.TinkerPatchService" android:process=":patch">
+</service>
+<service android:exported="false" android:name="com.tencent.tinker.lib.service.TinkerPatchService$InnerService" android:process=":patch">
+</service>
+<service android:exported="false" android:name="com.tencent.tinker.lib.service.DefaultTinkerResultService">
+</service>
+</application>
+</manifest>

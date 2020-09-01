@@ -1,0 +1,522 @@
+<?xml version="1.0" ?><manifest android:versionCode="51" android:versionName="3.9.3" package="com.pingan.elife.pab" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="16" android:targetSdkVersion="23">
+</uses-sdk>
+<supports-screens android:anyDensity="true" android:largeScreens="true" android:normalScreens="true" android:xlargeScreens="true">
+</supports-screens>
+<uses-permission android:name="android.permission.GET_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="android.permission.RECORD_AUDIO">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_CONTACTS">
+</uses-permission>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-permission android:name="android.permission.BLUETOOTH">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CALL_PHONE">
+</uses-permission>
+<uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-permission android:name="android.permission.BROADCAST_STICKY">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.RESTART_PACKAGES">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.SEND_SMS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_SMS">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SMS">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_SMS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_LOGS">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION">
+</uses-permission>
+<application android:allowBackup="false" android:hardwareAccelerated="true" android:icon="@7F070185" android:label="@7F0B0034" android:name="s.h.e.l.l.S" android:supportsRtl="true" android:theme="@7F0C0181">
+<meta-data android:name="android.max_aspect" android:value="2.100000">
+</meta-data>
+<meta-data android:name="TD_APP_ID" android:value="DC490CFDADB468438E2F48A509A54D51">
+</meta-data>
+<meta-data android:name="TD_CHANNEL_ID" android:value="pingan_sx_pab">
+</meta-data>
+<meta-data android:name="MPUSH_GATEWAY" android:value="PRODUCTION_GATEWAY">
+</meta-data>
+<meta-data android:name="MPUSH_APPID" android:value="56aac9258dbd1a6571c144d6">
+</meta-data>
+<service android:enabled="true" android:exported="true" android:name="com.mrocker.push.service.PushService" android:process=":push">
+</service>
+<receiver android:exported="true" android:name="com.mrocker.push.service.PushServiceReceiver">
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+<action android:name="android.intent.action.USER_PRESENT">
+</action>
+<action android:name="android.mpushservice.action.notification.SHOW">
+</action>
+<action android:name="android.mpushservice.action.media.MESSAGE">
+</action>
+<action android:name="android.intent.action.CMD">
+</action>
+<action android:name="android.mpushservice.action.media.CLICK">
+</action>
+<action android:name="android.mpushservice.action.media.CLICK_AFTER">
+</action>
+<action android:name="android.mpushservice.notification.action.INTERACTIVE">
+</action>
+<action android:name="android.mpushservice.action.arrive.APP">
+</action>
+</intent-filter>
+<intent-filter android:priority="999">
+<action android:name="android.intent.action.PACKAGE_REMOVED">
+</action>
+<action android:name="android.intent.action.PACKAGE_ADDED">
+</action>
+<action android:name="android.intent.action.PACKAGE_REPLACED">
+</action>
+<action android:name="android.intent.extra.DONT_KILL_APP">
+</action>
+<data android:scheme="com.pingan.elife.pab">
+</data>
+</intent-filter>
+</receiver>
+<receiver android:enabled="true" android:name="com.pingan.elife.pab.push.MyPushMessageReceiver">
+<intent-filter>
+<action android:name="android.mpushservice.action.media.MESSAGE">
+</action>
+<action android:name="android.mpushservice.action.media.CLICK">
+</action>
+<action android:name="android.mpushservice.action.media.TOKEN">
+</action>
+<action android:name="android.mpushservice.action.notification.SHOW">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:exported="false" android:name="com.pingan.elife.pab.receiver.AlarmReceiver">
+<intent-filter>
+<action android:name="MYALARMRECEIVER">
+</action>
+</intent-filter>
+</receiver>
+<activity android:label="@7F0B0034" android:name="com.pingan.elife.pab.splash.SplashActivity" android:screenOrientation="1" android:theme="@7F0C0097">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+<category android:name="android.intent.category.home">
+</category>
+<category android:name="android.intent.category.monkey">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.pingan.elife.pab.mian.MainActivity" android:screenOrientation="1" android:theme="@7F0C0126" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.pingan.elife.pab.mian.TestActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.pingan.elife.pab.register.RegisterActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000000A0" android:launchMode="1" android:name="com.pingan.elife.pab.login.LoginActivity" android:screenOrientation="1" android:theme="@7F0C0097" android:windowSoftInputMode="0x00000013">
+</activity>
+<activity android:configChanges="0x000000A0" android:launchMode="2" android:name="com.pingan.elife.pab.activity.WithDrawalActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000013">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.pingan.elife.pab.activity.SettingWithDrawalPwdActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.pingan.elife.pab.activity.InputWithDrawalPwdActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000000A0" android:launchMode="1" android:name="com.pingan.elife.pab.activity.WithDrawalResultActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000000A0" android:launchMode="1" android:name="com.pingan.elife.pab.activity.BankCardManagerActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.pingan.elife.pab.activity.RebateDetailsActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000000A0" android:launchMode="2" android:name="com.pingan.elife.pab.activity.AwardActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.pingan.elife.pab.activity.ProductDetailActivity" android:screenOrientation="1" android:theme="@7F0C0097" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.pingan.elife.pab.activity.ProductDetailHtmlActivity" android:screenOrientation="1" android:theme="@7F0C0097" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000000A0" android:launchMode="1" android:name="com.pingan.elife.pab.activity.OrderDetailActivity" android:screenOrientation="1" android:theme="@7F0C0097" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000000A0" android:exported="true" android:name="com.pingan.elife.pab.wxapi.WXEntryActivity" android:screenOrientation="1" android:theme="@android:01030010" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:launchMode="2" android:name="com.tencent.tauth.AuthActivity" android:noHistory="true">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="tencent1104927475">
+</data>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000A0" android:launchMode="1" android:name="com.pingan.elife.pab.activity.VerifyPersInfoActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000000A0" android:launchMode="1" android:name="com.pingan.elife.pab.activity.MessagedActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000000A0" android:launchMode="1" android:name="com.pingan.elife.pab.activity.BillDetaileActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000000A0" android:launchMode="1" android:name="com.pingan.elife.pab.activity.SettingActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.pingan.elife.pab.activity.FeedBackActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000000A0" android:launchMode="1" android:name="com.pingan.elife.pab.activity.BindingActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.tencent.connect.common.AssistActivity" android:screenOrientation="3" android:theme="@android:01030010">
+</activity>
+<service android:exported="false" android:name="com.pingan.elife.pab.services.ChatMessageService">
+<intent-filter>
+<action android:name="com.pingan.elife.pab.mian.chatmessage">
+</action>
+</intent-filter>
+</service>
+<activity android:configChanges="0x000000A0" android:launchMode="1" android:name="com.pingan.elife.pab.activity.MyRebateActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.pingan.elife.pab.activity.SharedActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000000A0" android:launchMode="1" android:name="com.pingan.elife.pab.activity.HtmlActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.pingan.elife.pab.activity.BindUserActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.pingan.elife.pab.activity.SetNewPassActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.pingan.elife.pab.activity.SelectRevateActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.pingan.elife.pab.activity.BindIDCardActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.pingan.elife.pab.activity.PowerActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.pingan.elife.pab.activity.AboutAppActivity" android:screenOrientation="1" android:theme="@7F0C0097" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.pingan.elife.pab.activity.SelectGroomActivity" android:screenOrientation="1" android:theme="@android:0103000F" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.pingan.elife.pab.activity.SelectGroomProcuteActivity" android:screenOrientation="1" android:theme="@android:0103000F" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.pingan.elife.pab.activity.GuideActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.pingan.elife.pab.activity.RegisterTermActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.pingan.elife.pab.activity.ProductShareQrCodeActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.pingan.elife.pab.activity.UserRecommedQrCodeActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.pingan.elife.pab.activity.UserCenterActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.pingan.elife.pab.activity.SupplementUmActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.pingan.elife.pab.activity.PwdManagerActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.pingan.elife.pab.activity.LoginBindIDCardActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.pingan.elife.pab.activity.UpperLowerLineManagerActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.pingan.elife.pab.activity.TeamIssueActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.pingan.elife.pab.activity.TeamMembersActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.pingan.elife.pab.activity.UpOrDownLineOrderManagerActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.pingan.elife.pab.activity.DownOrderActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.pingan.elife.pab.activity.AttornActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.pingan.elife.pab.activity.AttornUserCenterActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.pingan.elife.pab.activity.AttornSuccessActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.pingan.elife.pab.activity.DownFinishActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.pingan.elife.pab.activity.DownPayActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.pingan.elife.pab.activity.DownUnPayActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.pingan.elife.pab.activity.DownLineActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.pingan.elife.pab.activity.AgentEnterSilpHtmlActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.pingan.elife.pab.activity.SilpServiceActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.pingan.elife.pab.activity.CreateElePlanActivity" android:screenOrientation="1" android:theme="@7F0C0097" android:windowSoftInputMode="0x00000003">
+</activity>
+<service android:exported="false" android:name="com.pingan.elife.pab.tool.DownloadService">
+</service>
+<service android:exported="false" android:name="com.pingan.elife.pab.tool.SilentDownloadService">
+</service>
+<service android:exported="false" android:name="com.pingan.elife.pab.services.ContactsService">
+</service>
+<uses-library android:name="com.google.android.wearable" android:required="false">
+</uses-library>
+<activity android:configChanges="0x000000A0" android:name="com.pingan.elife.pab.activity.CommonQuestionActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.pingan.elife.pab.activity.GetNoCodeActivity" android:screenOrientation="1" android:theme="@7F0C0097" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.pingan.elife.pab.activity.PolicyDetailHtmlActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.pingan.elife.pab.activity.ContentNewsActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.pingan.elife.pab.activity.YBProductDetailActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.pingan.elife.pab.activity.YBOrderDetailActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.pingan.elife.pab.activity.YBMyTeamActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.pingan.elife.pab.activity.YBUserCenterActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.pingan.elife.pab.activity.YBDownLineActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.pingan.elife.pab.activity.YBUpLineActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000000A0" android:exported="true" android:name="com.pingan.elife.pab.activity.UserCardActivity" android:screenOrientation="1" android:theme="@7F0C0097" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.pingan.elife.pab.activity.UserFeedBackActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000000A0" android:hardwareAccelerated="true" android:name="com.pingan.elife.pab.activity.ClientFeedBackActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000000A0" android:hardwareAccelerated="true" android:name="com.pingan.elife.pab.activity.NewClientFeedBackActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000000A0" android:hardwareAccelerated="true" android:name="com.pingan.elife.pab.activity.FeedTempletActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="e.pingan.com" android:path="/customerFeedback" android:scheme="pinganbao">
+</data>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000A0" android:hardwareAccelerated="true" android:name="com.pingan.elife.pab.activity.NewFeedTempletActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.pingan.elife.pab.activity.FeedPreviewActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.pingan.elife.pab.activity.SilpHtmlActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.pingan.elife.pab.activity.MyQaActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.pingan.elife.pab.activity.ResetPhoneNumActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.pingan.elife.pab.activity.PhoneVerifyActivity" android:screenOrientation="1" android:theme="@7F0C0097" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.pingan.elife.pab.activity.PhoneNumChangeActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.pingan.elife.pab.activity.PhoneChangeSucActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.pingan.elife.pab.activity.YBInviteDownLineActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.pingan.elife.pab.activity.SearchActivity" android:screenOrientation="1" android:theme="@7F0C0097" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.pingan.elife.pab.activity.AddClientActivity" android:screenOrientation="1" android:theme="@7F0C0097" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.pingan.elife.pab.activity.ClientDatumActivity" android:screenOrientation="1" android:theme="@7F0C0097" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.pingan.elife.pab.activity.AddClientDatumActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.pingan.elife.pab.activity.ClientBriActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.pingan.elife.pab.activity.EditGroupActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.pingan.elife.pab.activity.AddClientGroupActivity" android:screenOrientation="1" android:theme="@7F0C0097" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.pingan.elife.pab.activity.GroupManagerActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.pingan.elife.pab.activity.UserCardPreviewActivity" android:screenOrientation="1" android:theme="@7F0C0098" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.pingan.elife.pab.activity.UserCardPreviewHtmlActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000000A0" android:exported="true" android:name="com.pingan.elife.pab.activity.UserCardQrcodeActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.pingan.elife.pab.activity.YBCmsDetailActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.pingan.elife.pab.activity.ShareMonitorActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.pingan.elife.pab.activity.UserDetailActionActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.pingan.elife.pab.activity.ShareMonitorDetailActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.pingan.elife.pab.activity.CmsSearchActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.pingan.elife.pab.activity.NewWithDrawalResultActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.pingan.elife.pab.activity.UnderWritingHtmlActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.pingan.elife.pab.activity.ProductBannerDetailActivity" android:screenOrientation="1" android:theme="@7F0C0097" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.pingan.elife.pab.activity.ProductBannerDetailInfoActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.pingan.elife.pab.activity.MyToolsActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.pingan.elife.pab.activity.PARUNActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.pingan.elife.pab.activity.AllSearchActivity" android:screenOrientation="1" android:theme="@7F0C0097" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.pingan.elife.pab.activity.VoiceActivity" android:screenOrientation="1" android:theme="@7F0C0097" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.pingan.elife.pab.activity.NewPhoneNumChangeActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.pingan.elife.pab.activity.PlanDetailHtmlActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.pingan.elife.pab.activity.ChatMessageActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.pingan.elife.pab.activity.ChatSessionActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.pingan.elife.pab.activity.ChatSearchActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000005">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.pingan.elife.pab.activity.ComprehensiveActivity" android:screenOrientation="1" android:theme="@7F0C0097" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.pingan.elife.pab.activity.AutoHomeActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.pingan.elife.pab.tool.gallery.GalleryPickActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.pingan.elife.pab.activity.BlackActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.pingan.elife.pab.activity.QEWebActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.pingan.elife.pab.activity.BankcardActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.pingan.elife.pab.activity.SetBankcardActivity" android:screenOrientation="1" android:theme="@7F0C0097" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.pingan.elife.pab.activity.ChatSessionImageActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.pingan.elife.pab.activity.ChatClientActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.pingan.elife.pab.activity.YBClientActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.pingan.elife.pab.activity.YBClientDetailActivity" android:screenOrientation="1" android:theme="@7F0C0097" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.pingan.elife.pab.activity.YBClientTidyActivity" android:screenOrientation="1" android:theme="@7F0C0097" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.pingan.elife.pab.activity.SelectProductActivity" android:screenOrientation="1" android:theme="@7F0C0097" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.pingan.elife.pab.activity.ESchoolActivity" android:screenOrientation="1" android:theme="@7F0C0097" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.pingan.elife.pab.activity.ESchoolDetailActivity" android:screenOrientation="1" android:theme="@7F0C0097" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.pingan.elife.pab.activity.SmartBotActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.pingan.elife.pab.activity.VoiceSearchActivity" android:screenOrientation="1" android:theme="@7F0C0097" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.pingan.elife.pab.activity.DonateBookActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.pingan.elife.pab.activity.ClientManagerActivity" android:screenOrientation="1" android:theme="@7F0C0097" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.pingan.elife.pab.activity.ESchoolDetailHtmlActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.pingan.elife.pab.activity.AnswerActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.pingan.elife.pab.activity.ESchoolDetailCarouselActivity" android:screenOrientation="1" android:theme="@7F0C0097" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.pingan.elife.pab.activity.OrderManageLocusActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.pingan.elife.pab.activity.CarWebActivity">
+</activity>
+<activity android:name="com.pingan.elife.pab.activity.H5Activity">
+</activity>
+<activity android:configChanges="0x00000CB0" android:name="com.pingan.elife.pab.activity.ESchoolDetailVideoActivity" android:screenOrientation="1" android:theme="@7F0C0091">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.pingan.elife.pab.activity.VehicleDispatchActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000000A0" android:hardwareAccelerated="true" android:name="com.pingan.elife.pab.activity.EShoppingActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.pingan.elife.pab.activity.InteractSetLabelActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000023">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.pingan.elife.pab.activity.InteractAddClientActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.pingan.elife.pab.activity.InteractManualAddClientActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000023">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.pingan.elife.pab.activity.InteractSearchActivity" android:screenOrientation="1" android:theme="@7F0C0098" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.pingan.elife.pab.activity.InteractClientListActivity" android:screenOrientation="1" android:theme="@7F0C0098" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.pingan.elife.pab.activity.InteractFriendMomentsActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.pingan.elife.pab.activity.InteractFriendRecordsActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.pingan.elife.pab.activity.InteractFriendExampleActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.pingan.elife.pab.activity.InteractHomepageActivity" android:screenOrientation="1" android:theme="@7F0C0126" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.pingan.elife.pab.activity.InteractClientMessageActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x00000CB0" android:name="com.pingan.elife.pab.activity.InteractManagerActivity" android:screenOrientation="1" android:theme="@7F0C0091">
+</activity>
+<activity android:name="com.pingan.elife.pab.activity.EnergyActivity">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="e.pingan.com" android:path="/energyShop" android:scheme="pinganbao">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.pingan.elife.pab.activity.EnergyPrefectureActivity">
+</activity>
+<activity android:name="com.pingan.elife.pab.activity.EnergySearchActivity">
+</activity>
+<activity android:name="com.pingan.elife.pab.activity.EnergyCouponActivity">
+</activity>
+<activity android:name="com.pingan.elife.pab.activity.EnergyCouponDetailActivity">
+</activity>
+<activity android:name="com.pingan.elife.pab.activity.EnergyRecordActivity">
+</activity>
+<activity android:name="com.pingan.elife.pab.activity.EnergyDetailActivity">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="e.pingan.com" android:path="/energyExchange" android:scheme="pinganbao">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.pingan.elife.pab.activity.EnergyConvertSuccessActivity">
+</activity>
+<activity android:configChanges="0x00000CB0" android:name="com.pingan.elife.pab.activity.VideoActivity" android:screenOrientation="0" android:theme="@7F0C0126">
+</activity>
+<provider android:authorities="pab.gallerypick.fileprovider" android:exported="false" android:grantUriPermissions="true" android:name="android.support.v4.content.FileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F0E0000">
+</meta-data>
+</provider>
+</application>
+</manifest>

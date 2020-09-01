@@ -1,0 +1,130 @@
+<?xml version="1.0" ?><manifest android:compileSdkVersion="29" android:compileSdkVersionCodename="10" android:installLocation="0" android:versionCode="10128" android:versionName="1.1.28" package="com.mogame.survivaldaily" platformBuildVersionCode="10128" platformBuildVersionName="1.1.28" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="16" android:targetSdkVersion="29">
+</uses-sdk>
+<supports-screens android:anyDensity="true" android:largeScreens="true" android:normalScreens="true" android:smallScreens="true" android:xlargeScreens="true">
+</supports-screens>
+<uses-feature android:glEsVersion="0x00020000">
+</uses-feature>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-feature android:name="android.hardware.touchscreen" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.touchscreen.multitouch" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.touchscreen.multitouch.distinct" android:required="false">
+</uses-feature>
+<uses-permission android:name="android.permission.READ_CONTACTS">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<application android:banner="@7F060000" android:icon="@7F0A0000" android:isGame="true" android:label="@7F0B0001" android:name="com.stub.StubApp" android:networkSecurityConfig="@7F0E0001" android:theme="@7F0C000D" android:usesCleartextTraffic="true">
+<activity android:configChanges="0x40003FFF" android:hardwareAccelerated="true" android:label="@7F0B0001" android:launchMode="2" android:name="com.mogame.survivaldaily.LWPlayerActivity" android:screenOrientation="0">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+<category android:name="android.intent.category.LEANBACK_LAUNCHER">
+</category>
+</intent-filter>
+<meta-data android:name="unityplayer.UnityActivity" android:value="true">
+</meta-data>
+</activity>
+<receiver android:name="net.agasper.unitynotification.UnityNotificationManager">
+</receiver>
+<receiver android:name="net.agasper.unitynotification.UnityNotificationActionHandler">
+</receiver>
+<provider android:authorities="com.mogame.survivaldaily.TTFileProvider" android:exported="false" android:grantUriPermissions="true" android:name="com.bytedance.sdk.openadsdk.TTFileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F0E0000">
+</meta-data>
+</provider>
+<provider android:authorities="com.mogame.survivaldaily.TTMultiProvider" android:exported="false" android:name="com.bytedance.sdk.openadsdk.multipro.TTMultiProvider">
+</provider>
+<provider android:authorities="com.mogame.survivaldaily.fileprovider" android:exported="false" android:grantUriPermissions="true" android:name="android.support.v4.content.FileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F0E0002">
+</meta-data>
+</provider>
+<meta-data android:name="unity.build-id" android:value="3be69676-46dd-48cd-afe9-c760a88b57fc">
+</meta-data>
+<meta-data android:name="unity.splash-mode" android:value="0">
+</meta-data>
+<meta-data android:name="unity.splash-enable" android:value="true">
+</meta-data>
+<meta-data android:name="TA_APPKEY" android:value="A255MFVL7KTE">
+</meta-data>
+<meta-data android:name="InstallChannel" android:value="home">
+</meta-data>
+<uses-library android:name="org.apache.http.legacy" android:required="false">
+</uses-library>
+<meta-data android:name="android.support.VERSION" android:value="26.1.0">
+</meta-data>
+<service android:name="com.ss.android.socialbase.downloader.notification.DownloadNotificationService">
+</service>
+<service android:name="com.ss.android.socialbase.downloader.downloader.DownloadService">
+</service>
+<service android:name="com.ss.android.socialbase.downloader.downloader.IndependentProcessDownloadService" android:process=":downloader">
+<intent-filter>
+<action android:name="com.ss.android.socialbase.downloader.remote">
+</action>
+</intent-filter>
+</service>
+<service android:name="com.ss.android.socialbase.downloader.impls.DownloadHandleService">
+</service>
+<service android:name="com.ss.android.socialbase.appdownloader.DownloadHandlerService">
+</service>
+<activity android:launchMode="2" android:name="com.ss.android.socialbase.appdownloader.view.DownloadSizeLimitActivity" android:theme="@android:0103000B">
+</activity>
+<activity android:launchMode="2" android:name="com.ss.android.socialbase.appdownloader.view.DownloadTaskDeleteActivity" android:theme="@android:0103000B">
+</activity>
+<activity android:launchMode="2" android:name="com.ss.android.downloadlib.activity.TTDelegateActivity" android:theme="@android:01030010">
+</activity>
+<receiver android:name="com.ss.android.downloadlib.core.download.DownloadReceiver">
+</receiver>
+<receiver android:enabled="true" android:exported="true" android:name="com.bytedance.embedapplog.collector.Collector">
+</receiver>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="com.bytedance.sdk.openadsdk.activity.TTLandingPageActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="com.bytedance.sdk.openadsdk.activity.TTPlayableLandingPageActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="com.bytedance.sdk.openadsdk.activity.TTVideoLandingPageActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="com.bytedance.sdk.openadsdk.activity.TTRewardVideoActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="com.bytedance.sdk.openadsdk.activity.TTRewardExpressVideoActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="com.bytedance.sdk.openadsdk.activity.TTFullScreenVideoActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="com.bytedance.sdk.openadsdk.activity.TTFullScreenExpressVideoActivity">
+</activity>
+<activity android:launchMode="2" android:name="com.bytedance.sdk.openadsdk.activity.TTDelegateActivity" android:theme="@android:01030010">
+</activity>
+<service android:name="com.bytedance.sdk.openadsdk.multipro.aidl.BinderPoolService">
+</service>
+<meta-data android:name="android.arch.lifecycle.VERSION" android:value="27.0.0-SNAPSHOT">
+</meta-data>
+</application>
+</manifest>

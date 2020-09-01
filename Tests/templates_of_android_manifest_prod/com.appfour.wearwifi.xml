@@ -1,0 +1,138 @@
+<?xml version="1.0" ?><manifest android:compileSdkVersion="28" android:compileSdkVersionCodename="9" android:versionCode="2004070010" android:versionName="1.0.200407" package="com.appfour.wearwifi" platformBuildVersionCode="28" platformBuildVersionName="9" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="18" android:targetSdkVersion="28">
+</uses-sdk>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="com.android.vending.BILLING">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE">
+</uses-permission>
+<permission android:name="com.appfour.wearwifi.permission.C2D_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="com.appfour.wearwifi.permission.C2D_MESSAGE">
+</uses-permission>
+<uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE">
+</uses-permission>
+<permission android:name="com.appfour.wearwifi.permission.iab" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="com.appfour.wearcalendar.permission.iab">
+</uses-permission>
+<uses-permission android:name="com.appfour.weardocuments.permission.iab">
+</uses-permission>
+<uses-permission android:name="com.appfour.wearkeyboard.permission.iab">
+</uses-permission>
+<uses-permission android:name="com.appfour.wearlauncher.permission.iab">
+</uses-permission>
+<uses-permission android:name="com.appfour.wearmail.permission.iab">
+</uses-permission>
+<uses-permission android:name="com.appfour.wearmessages.permission.iab">
+</uses-permission>
+<uses-permission android:name="com.appfour.wearphotos.permission.iab">
+</uses-permission>
+<uses-permission android:name="com.appfour.weartube.permission.iab">
+</uses-permission>
+<uses-permission android:name="com.appfour.wearvideos.permission.iab">
+</uses-permission>
+<uses-permission android:name="com.appfour.wearweather.permission.iab">
+</uses-permission>
+<uses-permission android:name="com.appfour.wearbrowser.permission.iab">
+</uses-permission>
+<uses-permission android:name="com.appfour.wearwifi.permission.iab">
+</uses-permission>
+<uses-permission android:name="com.appfour.weartracker.permission.iab">
+</uses-permission>
+<uses-permission android:name="com.appfour.wearinstruments.permission.iab">
+</uses-permission>
+<uses-permission android:name="com.appfour.wearaltimeter.permission.iab">
+</uses-permission>
+<uses-permission android:name="com.appfour.wearspeedometer.permission.iab">
+</uses-permission>
+<uses-permission android:name="com.appfour.wearcompass.permission.iab">
+</uses-permission>
+<uses-permission android:name="com.appfour.wearstopwatch.permission.iab">
+</uses-permission>
+<application android:allowBackup="true" android:icon="@7F0F0000" android:label="@7F120022" android:name="com.appfour.wearwifi.PhoneApplication" android:theme="@7F130007">
+<activity android:configChanges="0x000007B0" android:label="@7F120022" android:launchMode="2" android:name="com.appfour.wearwifi.PhoneActivity">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:name="com.appfour.wearwifi.AppSettingsActivity">
+</activity>
+<uses-library android:name="org.apache.http.legacy" android:required="false">
+</uses-library>
+<meta-data android:name="com.google.android.gms.version" android:value="@7F0B000A">
+</meta-data>
+<service android:name="com.appfour.wearlibrary.phone.connection.PhoneConnectionService">
+<intent-filter>
+<action android:name="com.google.android.gms.wearable.BIND_LISTENER">
+</action>
+</intent-filter>
+</service>
+<receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.analytics.AnalyticsReceiver">
+<intent-filter>
+<action android:name="com.google.android.gms.analytics.ANALYTICS_DISPATCH">
+</action>
+</intent-filter>
+</receiver>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.analytics.AnalyticsService">
+</service>
+<receiver android:name="com.appfour.wearlibrary.phone.util.PackageUpgradedBroadcastReceiver">
+<intent-filter>
+<action android:name="android.intent.action.MY_PACKAGE_REPLACED">
+</action>
+</intent-filter>
+</receiver>
+<activity android:configChanges="0x000007B0" android:name="com.appfour.googleapis.WebAuthActivity">
+</activity>
+<receiver android:name="com.appfour.marketing.InAppShopNotification">
+</receiver>
+<receiver android:name="com.appfour.util.PeriodicalWakeUpReceiver">
+<intent-filter>
+<action android:name="com.appfour.RUNNING_ALARM">
+</action>
+</intent-filter>
+</receiver>
+<provider android:authorities="com.appfour.wearwifi.fileprovider" android:exported="false" android:grantUriPermissions="true" android:name="android.support.v4.content.FileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F150002">
+</meta-data>
+</provider>
+<receiver android:exported="true" android:name="com.appfour.marketing.InAppPurchasesChangedReceiver">
+<intent-filter>
+<action android:name="com.appfour.wear.IN_APP_PURCHASES_CHANGED">
+</action>
+</intent-filter>
+</receiver>
+<provider android:authorities="com.appfour.wearwifi.provider.iab" android:exported="true" android:name="com.appfour.googleapis.inappbilling.InAppBillingInformationProvider" android:process=":iabprovider" android:readPermission="com.appfour.wearwifi.permission.iab">
+</provider>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.analytics.AnalyticsJobService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<uses-library android:name="com.google.android.wearable" android:required="false">
+</uses-library>
+<activity android:excludeFromRecents="true" android:exported="false" android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity" android:theme="@android:01030010">
+</activity>
+<service android:exported="true" android:name="com.google.android.gms.auth.api.signin.RevocationBoundService" android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION">
+</service>
+<activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:01030010">
+</activity>
+<meta-data android:name="android.support.VERSION" android:value="26.0.2">
+</meta-data>
+<meta-data android:name="com.google.android.wearable.beta.app" android:resource="@7F150000">
+</meta-data>
+</application>
+</manifest>

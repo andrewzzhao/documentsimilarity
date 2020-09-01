@@ -1,0 +1,578 @@
+<?xml version="1.0" ?><manifest android:versionCode="40" android:versionName="3.8.6" package="com.starbar.dodofans" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="8" android:targetSdkVersion="21">
+</uses-sdk>
+<permission android:name="com.starbar.dodofans.permission.JPUSH_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-feature android:name="android.hardware.camera">
+</uses-feature>
+<uses-feature android:name="android.hardware.camera.autofocus">
+</uses-feature>
+<uses-permission android:name="com.starbar.dodofans.permission.JPUSH_MESSAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_USER_PRESENT">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<action android:name="cn.jpush.android.intent.REGISTRATION">
+</action>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-permission android:name="android.permission.CALL_PHONE">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_CONTACTS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_SMS">
+</uses-permission>
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_DOWNLOAD_MANAGER">
+</uses-permission>
+<uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERACT_ACROSS_USERS_FULL">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-permission android:name="android.permission.SET_DEBUG_APP">
+</uses-permission>
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="android.permission.USE_CREDENTIALS">
+</uses-permission>
+<uses-permission android:name="android.permission.MANAGE_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="com.android.launcher.permission.READ_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.BAIDU_LOCATION_SERVICE">
+</uses-permission>
+<supports-screens android:anyDensity="true" android:largeScreens="true" android:normalScreens="false" android:resizeable="true" android:smallScreens="true">
+</supports-screens>
+<application android:allowBackup="true" android:icon="@7F02016D" android:label="@7F060007" android:largeHeap="true" android:name=".utils.app.LAppLication" android:theme="@android:0103000D">
+<activity android:label="@7F060007" android:name=".activity.AppStartActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<meta-data android:name="UMENG_APPKEY" android:value="55f9298ae0f55a5aef0000f2">
+</meta-data>
+<meta-data android:name="UMENG_CHANNEL" android:value="xiaomi">
+</meta-data>
+<meta-data android:name="com.baidu.lbsapi.API_KEY" android:value="hzUycq6hTlmk8LLRy4r16EbwZzURjeY0">
+</meta-data>
+<activity android:configChanges="0x000000A0" android:exported="false" android:name="cn.jpush.android.ui.PushActivity" android:theme="@android:01030006">
+<intent-filter>
+<action android:name="cn.jpush.android.ui.PushActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="com.starbar.dodofans">
+</category>
+</intent-filter>
+</activity>
+<service android:enabled="true" android:exported="false" android:name="cn.jpush.android.service.DownloadService">
+</service>
+<service android:enabled="true" android:exported="false" android:name="cn.jpush.android.service.PushService">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.REGISTER">
+</action>
+<action android:name="cn.jpush.android.intent.REPORT">
+</action>
+<action android:name="cn.jpush.android.intent.PushService">
+</action>
+<action android:name="cn.jpush.android.intent.PUSH_TIME">
+</action>
+</intent-filter>
+</service>
+<service android:enabled="true" android:name="com.baidu.location.f" android:process=":remote">
+</service>
+<receiver android:enabled="true" android:exported="false" android:name="cn.jpush.android.service.PushReceiver">
+<intent-filter android:priority="1000">
+<action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY">
+</action>
+<category android:name="com.starbar.dodofans">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.USER_PRESENT">
+</action>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_ADDED">
+</action>
+<action android:name="android.intent.action.PACKAGE_REMOVED">
+</action>
+<data android:scheme="package">
+</data>
+</intent-filter>
+</receiver>
+<receiver android:exported="false" android:name="cn.jpush.android.service.AlarmReceiver">
+</receiver>
+<meta-data android:name="JPUSH_CHANNEL" android:value="developer-default">
+</meta-data>
+<meta-data android:name="JPUSH_APPKEY" android:value="9bb28ac76a8fc7bd77cdce39">
+</meta-data>
+<activity android:launchMode="2" android:name=".ac.LocationDemo" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:launchMode="2" android:name=".ac.BMapApiDemoMain" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:launchMode="2" android:name=".ac.RoutePlanDemo" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:launchMode="2" android:name=".activity.MainActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name=".activity.StarRecommendActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name=".activity.GuideActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name=".activity.LoginActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name=".activity.NewOneLoginActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name=".activity.NewTwoLoginActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name=".activity.RegisterActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name=".activity.NewTwoRegisterActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name=".activity.NewRegisterActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:configChanges="0x000004F0" android:name=".play.PlayActivity">
+</activity>
+<activity android:configChanges="0x000004F0" android:name=".play.PlayTwoActivity">
+</activity>
+<activity android:name=".activity.FindPasswordActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name=".activity.NewFindPasswordActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name=".activity.SearchActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000004">
+</activity>
+<activity android:name=".activity.BindAcountActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name=".activity.MemberDetailActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name=".activity.ReportingActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name=".activity.CommentReportActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name=".activity.WorksReportActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name=".activity.ActivityReportActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name=".activity.AllCommentActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name=".activity.ActivityCommentActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name=".activity.PointShopActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name=".activity.GiftTypeActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name=".activity.BrandTypeActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name=".activity.BrandDetailActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name=".activity.GiftTypeDetailActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name=".activity.ExchangedGiftActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name=".activity.GiftDetailActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name=".activity.GiftExchangeActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name=".activity.ExchangeRecordActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name=".activity.GiftBoxActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name=".activity.ReceiverAddressActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name=".activity.AddAddressActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name=".activity.UpdateAddressActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name=".activity.MyPointActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name=".activity.MyReportActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name=".activity.MyCommentActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name=".activity.ExchangeAddressActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name=".activity.AllGiftCommentActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name=".activity.PointHelpActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name=".activity.SettingActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name=".activity.ContactsActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name=".activity.AboutActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name=".activity.AboutdfActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name=".activity.FeedbackActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name=".activity.MemberAgreeActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name=".activity.NewMemberAgreeActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name=".activity.PolicyActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name=".activity.ExpIntroductActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name=".activity.WelcomeActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:configChanges="0x000000A0" android:name=".activity.ReplyCommentActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:name=".activity.ImagePagerActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name=".activity.StarPhbActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name=".activity.NewStarPhbActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name=".activity.DaoHangActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name=".activity.HDActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name=".activity.HDBMActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name=".activity.HDPartActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name=".activity.SearchAllActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name=".activity.MySubActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name=".activity.MyUpdateSubActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name=".activity.MyMediaActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name=".activity.NewMemberActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name=".activity.MemberMediaActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name=".activity.MediaSettingActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name=".activity.MediaManageActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name=".activity.MediaDeleteActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name=".activity.MediaDeleteActivity2" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name=".activity.MyMediaSearchActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name=".activity.FirstWelcomeActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name=".activity.SuperBabyActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name=".activity.NewHdActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name=".activity.AdvancedVideo" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name=".activity.NewHdShowAcitivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name=".activity.CommentActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000004">
+</activity>
+<activity android:name=".activity.MediaReportActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:launchMode="2" android:name=".activity.NetworkActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:launchMode="2" android:name=".activity.YphActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:launchMode="2" android:name=".activity.MyNewHdActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:launchMode="2" android:name=".activity.MyHdShowAcitivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:launchMode="2" android:name=".activity.HDListActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:launchMode="2" android:name=".activity.WebViewActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:launchMode="2" android:name=".activity.WebLive" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name=".activity.YphShowActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name=".activity.StudentActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name=".activity.OrganizateCommentActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000004">
+</activity>
+<activity android:name=".activity.GoodVideoActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name=".activity.OrganizateShowAcitivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name=".activity.StudentShowAcitivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name=".activity.MemberActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name=".activity.ImprovePouplarActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name=".activity.HelpActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name=".activity.PayActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name=".activity.YphSearchActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name=".activity.MediaCommentActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name=".activity.CommentManageActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name=".activity.MoreVideoActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name=".activity.StudySubjectActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:configChanges="0x000004A0" android:name=".activity.NewSearchActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000004A0" android:name=".activity.NewMainActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="www.dodofans.com" android:scheme="dodofenAlipay">
+</data>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004A0" android:name=".activity.SplendidVideoActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000000E0" android:exported="false" android:name="com.starbar.dodofans.activity.H5PayDemoActivity" android:screenOrientation="3">
+</activity>
+<activity android:configChanges="0x000004E0" android:exported="false" android:name="com.alipay.sdk.app.H5PayActivity" android:screenOrientation="3" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:configChanges="0x000004A0" android:exported="true" android:name=".wxapi.WXEntryActivity" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<activity android:launchMode="2" android:name="com.tencent.tauth.AuthActivity" android:noHistory="true">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="tencent1104824765">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.tencent.connect.common.AssistActivity" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x00000090" android:launchMode="2" android:name="com.umeng.socialize.view.ShareActivity" android:noHistory="true" android:theme="@7F070025" android:windowSoftInputMode="0x00000014">
+</activity>
+<activity android:configChanges="0x000000A0" android:exported="false" android:name="com.sina.weibo.sdk.component.WeiboSdkBrowser" android:windowSoftInputMode="0x00000010">
+</activity>
+<service android:exported="false" android:name="com.sina.weibo.sdk.net.DownloadService">
+</service>
+<activity android:name=".activity.MyPersonalDataActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:name=".activity.MyWorksActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name=".activity.ModifyImageActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:name=".activity.MyAttentionActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name=".activity.ChannelActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name=".activity.VideoPlayerActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name=".activity.HuoDongFaBuAcitvity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:configChanges="0x000000E0" android:launchMode="1" android:name="io.vov.vitamio.activity.InitActivity" android:theme="@android:01030006" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name=".activity.ClassifyActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name=".activity.HuoDongListActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name=".activity.HuoDongDetailActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name=".activity.Earth_MyOrderActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name=".activity.Earth_Exchange" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name=".activity.Earth_Message" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name=".activity.Earth_MessageSystem" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name=".activity.Earth_MessagePerson" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name=".activity.Earth_Replymessage" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:configChanges="0x000004A0" android:name=".activity.Earth_message_communication" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:name=".activity.Earth_help" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name=".activity.Earth_ImprovePouplarActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name=".activity.WorksPrefectureActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name=".activity.HuoDongHuiguActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name=".activity.MyLiteratureUpActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:name=".utils.other.CropMusic" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name=".utils.other.CropVideo" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name=".activity.YphCompileActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name=".activity.YphCompileVoucherActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name=".activity.YphCompileChangeActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name=".activity.YphCompileChangeTwoActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name=".activity.YphCompileHeadActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name=".activity.YphCompileVideoActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name=".activity.YphMyReleaseActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:name=".activity.EditMyReleaseActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:name=".activity.MyReleaseActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:name=".activity.SearchMyWorkActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000004">
+</activity>
+<activity android:name=".activity.ModifyActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:name=".activity.DraftsActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:name=".utils.cache.CropImage" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name=".utils.cache.CropImageTwo" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name=".activity.DescribeActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:name=".activity.AlbumActivity" android:screenOrientation="1">
+</activity>
+<activity android:name=".activity.AlbumTwoActivity" android:screenOrientation="1">
+</activity>
+<activity android:name=".activity.GalleryActivity">
+</activity>
+<activity android:name=".activity.GalleryTwoActivity">
+</activity>
+<activity android:name=".activity.ImageFile" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name=".activity.ShowAllPhoto" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name=".activity.PhotoActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name=".activity.TestPicActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name=".activity.SubscriptionDetailsActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name=".activity.SubscriptionActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name=".activity.WeMediaOneActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name=".activity.WeMediaOneTextActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000004">
+</activity>
+<activity android:name=".activity.ApplyActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000004">
+</activity>
+<activity android:name=".activity.ApplyActivityTwo" android:screenOrientation="1" android:windowSoftInputMode="0x00000004">
+</activity>
+<activity android:name=".activity.UpWorkActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name=".activity.RuleActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name=".activity.WeMediaOnePreviewActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name=".activity.PlayVideoActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F060024" android:name=".HDActivity">
+</activity>
+<activity android:name=".activity.EarthYouthActivity" android:screenOrientation="1">
+</activity>
+<activity android:name=".activity.EarthYouthActivityDetalie" android:screenOrientation="1">
+</activity>
+<activity android:name=".activity.PushActivity" android:screenOrientation="1">
+</activity>
+<activity android:exported="true" android:launchMode="1" android:name=".wxapi.WXPayEntryActivity">
+</activity>
+<activity android:name=".activity.MyHomeActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name=".activity.SendGiftActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name=".activity.ApplyDataActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name=".activity.NewHdDetailActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name=".activity.HdPayActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name=".activity.MyNewOrderActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name=".activity.HdOrderDetailActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name=".activity.YhjOrderDetailActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name=".activity.DofanStarActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name=".activity.NearOrganizateActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:configChanges="0x000004A0" android:name=".activity.MediaWorkShowActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:name=".activity.MyAttendHdActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name=".activity.WorkReleaseActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:name=".activity.HdkindActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:name=".activity.MyNewFriendActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:name=".activity.MyReceiveDzActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:name=".activity.MyReceiverGiftActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:name=".activity.CommentListActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:name=".activity.RechargeActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:name=".activity.MyWalletActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000020">
+</activity>
+</application>
+</manifest>

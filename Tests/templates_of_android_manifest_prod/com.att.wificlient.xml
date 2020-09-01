@@ -1,0 +1,168 @@
+<?xml version="1.0" ?><manifest android:versionCode="4252" android:versionName="4.2.5.3012" package="com.att.wificlient" platformBuildVersionCode="26" platformBuildVersionName="8.0.0" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="26" android:targetSdkVersion="26">
+</uses-sdk>
+<permission android:name="com.example.mapdemo.permission.MAPS_RECEIVE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="com.example.mapdemo.permission.MAPS_RECEIVE">
+</uses-permission>
+<uses-feature android:name="android.hardware.telephony" android:required="false">
+</uses-feature>
+<uses-feature android:glEsVersion="0x00020000" android:required="true">
+</uses-feature>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.CALL_PHONE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_LOGS">
+</uses-permission>
+<uses-permission android:name="com.ipsec.client.permission.MANAGING_VPN">
+</uses-permission>
+<uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE">
+</uses-permission>
+<permission android:name="com.att.wificlient.permission.C2D_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="com.att.wificlient.permission.C2D_MESSAGE">
+</uses-permission>
+<application android:allowBackup="false" android:hardwareAccelerated="true" android:icon="@7F020034" android:label="@7F070072" android:largeHeap="true" android:name="com.att.wificlient.AGNCApp" android:theme="@android:0103006E">
+<meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="AIzaSyAq3m_mUcKAGbmDnueRV_cUfm0oLklm7bE">
+</meta-data>
+<meta-data android:name="com.google.android.gms.version" android:value="@7F0E0001">
+</meta-data>
+<activity android:configChanges="0x000004A0" android:label="@7F070071" android:name="com.att.wificlient.SplashScreen" android:theme="@android:0103006C">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x00000480" android:name="com.att.agnclient.home.NDHomeActivity">
+</activity>
+<activity android:name="com.att.agnclient.home.WifiActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.att.agnclient.support.PLAActivity" android:theme="@android:0103006C">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.att.agnclient.hotspot.NearbyHotspotActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.att.agnclient.hotspot.HotspotDetailActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="com.att.agnclient.hotspot.HotspotSearchActivity">
+<intent-filter>
+<action android:name="android.intent.action.SEARCH">
+</action>
+</intent-filter>
+<meta-data android:name="android.app.searchable" android:resource="@7F050006">
+</meta-data>
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.att.agnclient.hotspot.NearbyHotspotPrefActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.att.agnclient.preferences.EditPreferencesActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.att.agnclient.preferences.CredentialPreferenceActivity">
+</activity>
+<activity android:name="com.att.agnclient.NativeVpn.NativeVpnActivity" android:theme="@android:01030055">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.att.agnclient.support.PDToolsActivity">
+</activity>
+<service android:exported="false" android:name="com.att.agnclient.proxysettings.ClearProxyService" android:stopWithTask="false">
+</service>
+<service android:enabled="true" android:exported="false" android:label="VPN Adapter" android:name="com.att.agnclient.NativeVpn.NativeVpnService">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.att.agnclient.NativeVpn.agnc_sslt_vpn.AGNC_SSLT_VpnService" android:permission="android.permission.BIND_VPN_SERVICE">
+<intent-filter>
+<action android:name="android.net.VpnService">
+</action>
+</intent-filter>
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.att.agnclient.vpnConnection.AutoSwitchWiFiScheduler">
+</service>
+<receiver android:name="com.att.agnclient.wifinetwork.NetworkConnectionReceiver">
+<intent-filter>
+<action android:name="android.net.wifi.STATE_CHANGE">
+</action>
+<action android:name="android.net.wifi.WIFI_STATE_CHANGED">
+</action>
+<action android:name="android.net.wifi.SCAN_RESULTS">
+</action>
+<action android:name="android.net.wifi.supplicant.STATE_CHANGE">
+</action>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+<action android:name="android.intent.action.BATTERY_LOW">
+</action>
+<action android:name="android.intent.action.BATTERY_OKAY">
+</action>
+</intent-filter>
+</receiver>
+<meta-data android:name="android.app.default_searchable" android:value="com.att.agnclient.hotspot.HotspotSearchActivity">
+</meta-data>
+<activity android:name="com.att.agnclient.support.ItemListActivity">
+</activity>
+<activity android:name="com.att.agnclient.support.ItemDetailActivity">
+</activity>
+<service android:exported="false" android:name="com.att.agnclient.controller.VpnDisconnectController">
+</service>
+<service android:exported="false" android:name="com.att.agnclient.database.HotspotUpdateService">
+</service>
+<receiver android:name="com.att.agnclient.mdm.GCMReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+<category android:name="com.att.wificlient">
+</category>
+</intent-filter>
+</receiver>
+<service android:exported="false" android:name="com.att.agnclient.mdm.GCMService">
+</service>
+<receiver android:description="@7F0700D1" android:label="Device Admin" android:name="com.att.agnclient.mdm.MDMAdminReceiver" android:permission="android.permission.BIND_DEVICE_ADMIN">
+<meta-data android:name="android.app.device_admin" android:resource="@7F050002">
+</meta-data>
+<intent-filter>
+<action android:name="android.app.action.DEVICE_ADMIN_ENABLED">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:exported="false" android:name="com.att.agnclient.vpnConnection.AutoReconnectReciever">
+</receiver>
+<service android:exported="false" android:name="com.att.agnclient.vpnConnection.AutoReconnectIntentService">
+</service>
+<activity android:configChanges="0x000004A0" android:name="com.att.agnclient.database.HotspotRegionsAct">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.att.agnclient.database.UpdateHotspotDirAct">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.att.agnclient.preferences.HotspotDirSettingsAct">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.att.agnclient.wifiConnection.AutoReconnectWifiPrefAct">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.att.agnclient.preferences.ProxySettingsActivity">
+</activity>
+<activity android:label="@7F07031D" android:name="com.att.agnclient.support.AboutDetailsActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.att.agnclient.wifiConnection.UnpublishedHotspotAct">
+</activity>
+<meta-data android:name="android.support.VERSION" android:value="26.0.1">
+</meta-data>
+</application>
+</manifest>

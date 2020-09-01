@@ -1,0 +1,422 @@
+<?xml version="1.0" ?><manifest android:installLocation="1" android:versionCode="99" android:versionName="1.3.9" package="com.biz.app" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="16" android:targetSdkVersion="25">
+</uses-sdk>
+<uses-permission android:name="android.permission.BLUETOOTH">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PROFILE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_CALL_LOG">
+</uses-permission>
+<uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_CONTACTS">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_CONTACTS">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_LOGS">
+</uses-permission>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-permission android:name="android.permission.RECORD_AUDIO">
+</uses-permission>
+<uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION">
+</uses-permission>
+<uses-permission android:name="com.biz.app.permission.C2D_MESSAGE">
+</uses-permission>
+<permission android:name="com.biz.app.permission.C2D_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE">
+</uses-permission>
+<uses-feature android:name="android.hardware.telephony.gsm" android:required="false">
+</uses-feature>
+<supports-screens android:anyDensity="true">
+</supports-screens>
+<uses-permission android:name="android.permission.NFC">
+</uses-permission>
+<uses-feature android:name="android.hardware.nfc" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.location" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.location.network" android:required="false">
+</uses-feature>
+<uses-permission android:name="android.permission.BLUETOOTH_ADMIN">
+</uses-permission>
+<uses-permission-sdk-23 android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission-sdk-23>
+<uses-feature android:name="android.hardware.bluetooth_le" android:required="false">
+</uses-feature>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-feature android:glEsVersion="0x00020000" android:required="true">
+</uses-feature>
+<uses-feature android:name="android.hardware.camera" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.camera.front" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.camera.autofocus" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.camera.flash" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.screen.landscape" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.wifi" android:required="false">
+</uses-feature>
+<application android:allowBackup="false" android:icon="@7F0E0003" android:label="@7F100074" android:largeHeap="true" android:name="com.familyhawk.app.familyhawkutil.MyApplication" android:screenOrientation="1" android:supportsRtl="true" android:theme="@7F110017">
+<meta-data android:name="firebase_analytics_collection_enabled" android:value="false">
+</meta-data>
+<meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@7F10024D">
+</meta-data>
+<activity android:name="com.familyhawk.app.senior.activity.WelcomePageActivity" android:screenOrientation="1" android:theme="@7F11001A" android:windowSoftInputMode="0x00000022">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<receiver android:name="com.familyhawk.app.junior.receiver.ShutDownReceiver">
+<intent-filter>
+<action android:name="android.intent.action.ACTION_SHUTDOWN">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name="com.familyhawk.app.junior.receiver.SwitchOnReceiverBootCall" android:permission="android.permission.RECEIVE_BOOT_COMPLETED">
+<intent-filter android:priority="999">
+<action android:name="YouWillNeverKillMe">
+</action>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+<action android:name="android.intent.action.LOCKED_BOOT_COMPLETED">
+</action>
+<action android:name="android.intent.action.QUICKBOOT_POWERON">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name="com.familyhawk.app.junior.receiver.InternetReceiver">
+<intent-filter>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+</receiver>
+<service android:name="com.familyhawk.app.junior.service.CoreService">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.familyhawk.app.senior.service.VoiceRecordingService" android:stopWithTask="false">
+</service>
+<activity android:name="com.familyhawk.app.senior.activity.DummyActivity">
+</activity>
+<meta-data android:name="DATABASE" android:value="lock.db">
+</meta-data>
+<meta-data android:name="VERSION" android:value="16">
+</meta-data>
+<meta-data android:name="QUERY_LOG" android:value="@7F050000">
+</meta-data>
+<meta-data android:name="DOMAIN_PACKAGE_NAME" android:value="com.familyhawk.app.junior.models">
+</meta-data>
+<meta-data android:name="android.support.UI_OPTIONS" android:value="splitActionBarWhenNarrow">
+</meta-data>
+<meta-data android:name="io.fabric.ApiKey" android:value="769084bb0cb450c0a67b23f6a2bec613770431ca">
+</meta-data>
+<meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@7F10024D">
+</meta-data>
+<meta-data android:name="com.facebook.accountkit.ApplicationName" android:value="@7F100074">
+</meta-data>
+<meta-data android:name="com.facebook.accountkit.ClientToken" android:value="@7F100000">
+</meta-data>
+<activity android:label="@7F100148" android:launchMode="1" android:name="com.facebook.accountkit.ui.AccountKitActivity" android:theme="@7F11016C" android:windowSoftInputMode="0x00000010">
+</activity>
+<service android:exported="false" android:name="com.familyhawk.app.junior.jobbschedler.SmartSchedulerAlarmReceiverService">
+</service>
+<service android:exported="true" android:name="com.familyhawk.app.junior.jobbschedler.SmartSchedulerPeriodicTaskService" android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE">
+<intent-filter>
+<action android:name="com.google.android.gms.gcm.ACTION_TASK_READY">
+</action>
+</intent-filter>
+</service>
+<receiver android:exported="false" android:name="com.familyhawk.app.junior.jobbschedler.SmartSchedulerAlarmReceiver">
+</receiver>
+<receiver android:name="com.familyhawk.app.senior.client.AutostartReceiver">
+</receiver>
+<activity android:name="com.familyhawk.app.senior.activity.OldRegisterActivity" android:screenOrientation="1" android:theme="@7F110017" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:name="com.familyhawk.app.senior.activity.ProximityActivity" android:screenOrientation="1" android:theme="@7F110017" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:launchMode="1" android:name="com.familyhawk.app.senior.activity.LoginActivity" android:screenOrientation="1" android:theme="@7F11001A" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:name="com.familyhawk.app.senior.activity.ChangePasswordActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:name="com.familyhawk.app.senior.activity.LocationChooseMapsActivity" android:screenOrientation="1" android:theme="@7F11001A" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:name="com.familyhawk.app.senior.activity.PlacesActivity" android:screenOrientation="1" android:theme="@7F11001A" android:windowSoftInputMode="0x00000005">
+</activity>
+<service android:exported="false" android:name="com.familyhawk.app.senior.service.FetchAddressIntentService">
+</service>
+<meta-data android:name="com.google.android.gms.version" android:value="@7F0A0009">
+</meta-data>
+<meta-data android:name="com.google.android.geo.API_KEY" android:value="AIzaSyDi5O_ZKHS7Tfh5Z8bbPDVe4AzD1BdWhUA">
+</meta-data>
+<activity android:name="com.familyhawk.app.senior.activity.HomeActivity" android:screenOrientation="1" android:theme="@7F11001C" android:windowSoftInputMode="0x00000002">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:host="@7F100070" android:scheme="https">
+</data>
+<data android:host="@7F100070" android:scheme="http">
+</data>
+<data android:host="@7F100071" android:scheme="https">
+</data>
+<data android:host="@7F100071" android:scheme="http">
+</data>
+<data android:host="@7F100072" android:scheme="https">
+</data>
+<data android:host="@7F100072" android:scheme="http">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.SEND">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:mimeType="text/plain">
+</data>
+<data android:mimeType="image/*">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.familyhawk.app.senior.activity.CommonActivity" android:screenOrientation="1" android:theme="@7F11001A" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:name="com.familyhawk.app.senior.activity.AfterHomeActivity" android:screenOrientation="1" android:theme="@7F11001A" android:windowSoftInputMode="0x00000012">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.familyhawk.app.senior.activity.HomeActivity">
+</meta-data>
+</activity>
+<activity android:configChanges="0x00000030" android:name="com.familyhawk.app.senior.activity.FloatingMediaImageActivity" android:screenOrientation="1" android:theme="@7F1100E7" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name="com.familyhawk.app.senior.activity.ForgotPasswordActivity">
+</activity>
+<activity android:name="com.theartofdev.edmodo.cropper.CropImageActivity">
+</activity>
+<activity android:configChanges="0x00000480" android:label="@7F10053B" android:name="com.familyhawk.app.ccavenue.uifiles.WebViewActivity">
+</activity>
+<receiver android:name="com.familyhawk.app.ccavenue.uifiles.SmsReceiver">
+<intent-filter>
+<action android:name="android.provider.Telephony.SMS_RECEIVED">
+</action>
+</intent-filter>
+</receiver>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.analytics.CampaignTrackingService">
+</service>
+<receiver android:enabled="true" android:name="com.familyhawk.app.junior.receiver.CustomCampaignReceiver">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:exported="true" android:name="com.google.android.gms.gcm.GcmReceiver">
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name="com.familyhawk.app.junior.receiver.GpsLocationReceiver">
+<intent-filter>
+<action android:name="android.location.PROVIDERS_CHANGED">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</receiver>
+<service android:name="com.familyhawk.app.firebase.MyFirebaseMessagingService">
+<intent-filter>
+<action android:name="com.google.firebase.MESSAGING_EVENT">
+</action>
+</intent-filter>
+</service>
+<service android:name="com.familyhawk.app.firebase.FirebaseIDService">
+<intent-filter>
+<action android:name="com.google.firebase.INSTANCE_ID_EVENT">
+</action>
+</intent-filter>
+</service>
+<provider android:authorities="com.biz.app.provider" android:exported="false" android:grantUriPermissions="true" android:name="android.support.v4.content.FileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F130003">
+</meta-data>
+</provider>
+<activity android:configChanges="0x000004A0" android:label="@7F1004F0" android:name="com.familyhawk.app.senior.activity.RegisterActivity" android:theme="@7F1100E9">
+</activity>
+<provider android:authorities="com.biz.app.crashlyticsinitprovider" android:exported="false" android:initOrder="100" android:name="com.crashlytics.android.CrashlyticsInitProvider">
+</provider>
+<service android:exported="false" android:name="com.estimote.mgmtsdk.connection.strategy.DeviceConnectionProviderService">
+</service>
+<service android:name="com.estimote.mgmtsdk.repackaged.dfu_v0_6_1.no.nordicsemi.android.dfu.DfuBaseService">
+</service>
+<service android:exported="false" android:name="com.estimote.coresdk.service.BeaconService">
+</service>
+<activity android:name="com.estimote.coresdk.common.requirements.DefaultRequirementsCheckerCallback$Activity" android:theme="@7F110191">
+</activity>
+<receiver android:name="com.estimote.coresdk.scanning.scheduling.SystemAlarmManager$AlarmBroadcastReceiver">
+</receiver>
+<service android:enabled="true" android:exported="false" android:name="com.estimote.scanning_sdk.packet_provider.service.PacketProviderWrapperService">
+</service>
+<service android:exported="false" android:name="com.zopim.android.sdk.widget.ChatWidgetService">
+</service>
+<activity android:label="@7F100110" android:name="com.zopim.android.sdk.prechat.ZopimChatActivity" android:theme="@7F1101F6" android:windowSoftInputMode="0x00000011">
+<intent-filter android:priority="-1000">
+<action android:name="zopim.action.RESUME_CHAT">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:label="@7F10041D" android:name="com.zopim.android.sdk.chatlog.ZopimCommentActivity" android:theme="@7F1101F6" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:exported="true" android:name="com.facebook.accountkit.ui.AccountKitEmailRedirectActivity" android:noHistory="true">
+</activity>
+<provider android:authorities="com.biz.app.AccountKitInitialization" android:exported="false" android:name="com.facebook.accountkit.internal.AccountKitInitProvider">
+</provider>
+<activity android:configChanges="0x000005B0" android:name="com.facebook.FacebookActivity" android:theme="@7F110241">
+</activity>
+<activity android:name="com.facebook.CustomTabMainActivity">
+</activity>
+<activity android:name="com.facebook.CustomTabActivity">
+</activity>
+<service android:exported="false" android:name="com.zopim.android.sdk.api.ChatService">
+</service>
+<provider android:authorities="com.biz.app.belvedere.attachments" android:exported="false" android:grantUriPermissions="true" android:name="com.zendesk.belvedere.BelvedereFileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F130001">
+</meta-data>
+</provider>
+<receiver android:name="com.google.android.gms.cast.framework.media.MediaIntentReceiver">
+</receiver>
+<service android:name="com.google.android.gms.cast.framework.media.MediaNotificationService">
+</service>
+<service android:name="com.google.android.gms.cast.framework.ReconnectionService">
+</service>
+<service android:exported="true" android:name="com.firebase.jobdispatcher.GooglePlayReceiver" android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE">
+<intent-filter>
+<action android:name="com.google.android.gms.gcm.ACTION_TASK_READY">
+</action>
+</intent-filter>
+</service>
+<receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.analytics.AnalyticsReceiver">
+</receiver>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.analytics.AnalyticsService">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.analytics.AnalyticsJobService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<activity android:excludeFromRecents="true" android:exported="true" android:launchMode="3" android:name="com.google.firebase.auth.internal.FederatedSignInActivity" android:permission="com.google.firebase.auth.api.gms.permission.LAUNCH_FEDERATED_SIGN_IN" android:theme="@android:01030010">
+</activity>
+<service android:exported="true" android:name="com.google.firebase.messaging.FirebaseMessagingService">
+<intent-filter android:priority="-500">
+<action android:name="com.google.firebase.MESSAGING_EVENT">
+</action>
+</intent-filter>
+</service>
+<activity android:configChanges="0x00000FB0" android:exported="false" android:name="com.google.android.gms.ads.AdActivity" android:theme="@android:0103000F">
+</activity>
+<activity android:exported="true" android:name="com.google.android.gms.appinvite.PreviewActivity" android:theme="@7F110183">
+<intent-filter>
+<action android:name="com.google.android.gms.appinvite.ACTION_PREVIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:excludeFromRecents="true" android:exported="false" android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity" android:theme="@android:01030010">
+</activity>
+<service android:exported="true" android:name="com.google.android.gms.auth.api.signin.RevocationBoundService" android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION">
+</service>
+<activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:01030010">
+</activity>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.tagmanager.TagManagerService">
+</service>
+<activity android:exported="true" android:name="com.google.android.gms.tagmanager.TagManagerPreviewActivity" android:noHistory="true">
+<intent-filter>
+<data android:scheme="tagmanager.c.com.biz.app">
+</data>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+</intent-filter>
+</activity>
+<receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementReceiver">
+</receiver>
+<receiver android:enabled="true" android:exported="true" android:name="com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver" android:permission="android.permission.INSTALL_PACKAGES">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementService">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementJobService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<receiver android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+<category android:name="com.biz.app">
+</category>
+</intent-filter>
+</receiver>
+<service android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdService">
+<intent-filter android:priority="-500">
+<action android:name="com.google.firebase.INSTANCE_ID_EVENT">
+</action>
+</intent-filter>
+</service>
+<provider android:authorities="com.biz.app.firebaseinitprovider" android:exported="false" android:initOrder="100" android:name="com.google.firebase.provider.FirebaseInitProvider">
+</provider>
+<activity android:clearTaskOnLaunch="true" android:name="com.journeyapps.barcodescanner.CaptureActivity" android:screenOrientation="6" android:stateNotNeeded="true" android:theme="@7F11027E" android:windowSoftInputMode="0x00000003">
+</activity>
+<provider android:authorities="com.biz.app.MarketingInitProvider" android:exported="false" android:name="com.facebook.marketing.internal.MarketingInitProvider">
+</provider>
+<provider android:authorities="com.biz.app.FacebookInitProvider" android:exported="false" android:name="com.facebook.internal.FacebookInitProvider">
+</provider>
+<receiver android:exported="false" android:name="com.facebook.CurrentAccessTokenExpirationBroadcastReceiver">
+<intent-filter>
+<action android:name="com.facebook.sdk.ACTION_CURRENT_ACCESS_TOKEN_CHANGED">
+</action>
+</intent-filter>
+</receiver>
+</application>
+</manifest>

@@ -1,0 +1,158 @@
+<?xml version="1.0" ?><manifest android:hardwareAccelerated="true" android:versionCode="338" android:versionName="3.2.33" package="com.iafclub.jrh" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="14" android:targetSdkVersion="25">
+</uses-sdk>
+<supports-screens android:anyDensity="true" android:largeScreens="true" android:normalScreens="true" android:resizeable="true" android:smallScreens="true" android:xlargeScreens="true">
+</supports-screens>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.USE_FINGERPRINT">
+</uses-permission>
+<permission android:name="com.iafclub.jrh.permission.JPUSH_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="com.iafclub.jrh.permission.JPUSH_MESSAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_USER_PRESENT">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SETTINGS">
+</uses-permission>
+<application android:allowBackup="true" android:hardwareAccelerated="true" android:icon="@7F070056" android:label="@7F0B0017" android:name="com.iafclub.jrh.IafclubApplication" android:supportsRtl="true" android:theme="@7F0C00FA">
+<activity android:configChanges="0x000004B4" android:label="@7F0B0013" android:launchMode="2" android:name="com.iafclub.jrh.MainActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000010">
+<intent-filter android:label="@7F0B0039">
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004B4" android:name="com.iafclub.jrh.login.activity.FingerprintActivity" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004B4" android:name="com.iafclub.jrh.login.activity.GuideGesturePasswordActivity" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004B4" android:name="com.iafclub.jrh.login.activity.CreateGesturePasswordActivity" android:screenOrientation="1" android:theme="@android:01030006" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:configChanges="0x000004B4" android:name="com.iafclub.jrh.login.activity.UnlockGesturePasswordActivity" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004B4" android:name="com.iafclub.jrh.login.activity.UserInputActivity" android:screenOrientation="1" android:theme="@android:01030006" android:windowSoftInputMode="0x00000024">
+</activity>
+<activity android:configChanges="0x000004B4" android:name="com.iafclub.jrh.activity.activity.ActivityWebViewActivity" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004B4" android:name="com.iafclub.jrh.custom.activity.CustomWebViewActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004B4" android:exported="true" android:label="@7F0B0039" android:name="com.iafclub.jrh.wxapi.WXEntryActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:scheme="wxf1d1c10902bd1d95">
+</data>
+</intent-filter>
+</activity>
+<activity android:label="@7F0B0017" android:name="com.dxtx.push.PushSetActivity">
+</activity>
+<activity android:label="@7F0B0017" android:name="com.dxtx.push.SettingActivity">
+</activity>
+<activity android:exported="false" android:name="com.dxtx.push.TestActivity">
+<intent-filter>
+<action android:name="jpush.testAction">
+</action>
+<category android:name="jpush.testCategory">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:name="cn.jpush.android.ui.PopWinActivity" android:theme="@7F0C0098">
+</activity>
+<activity android:configChanges="0x000000A0" android:exported="false" android:name="cn.jpush.android.ui.PushActivity" android:theme="@android:01030006">
+<intent-filter>
+<action android:name="cn.jpush.android.ui.PushActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="com.iafclub.jrh">
+</category>
+</intent-filter>
+</activity>
+<service android:enabled="true" android:exported="false" android:name="cn.jpush.android.service.DownloadService">
+</service>
+<service android:name="cn.jpush.android.service.PushService" android:process=":mult">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.REGISTER">
+</action>
+<action android:name="cn.jpush.android.intent.REPORT">
+</action>
+<action android:name="cn.jpush.android.intent.PushService">
+</action>
+<action android:name="cn.jpush.android.intent.PUSH_TIME">
+</action>
+</intent-filter>
+</service>
+<provider android:authorities="com.iafclub.jrh.DataProvider" android:exported="false" android:name="cn.jpush.android.service.DataProvider" android:process=":pushcore">
+</provider>
+<service android:enabled="true" android:exported="true" android:name="cn.jpush.android.service.DaemonService">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.DaemonService">
+</action>
+<category android:name="com.iafclub.jrh">
+</category>
+</intent-filter>
+</service>
+<provider android:authorities="com.iafclub.jrh.DownloadProvider" android:exported="true" android:name="cn.jpush.android.service.DownloadProvider">
+</provider>
+<receiver android:enabled="true" android:name="cn.jpush.android.service.PushReceiver">
+<intent-filter android:priority="1000">
+<action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY">
+</action>
+<category android:name="com.iafclub.jrh">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.USER_PRESENT">
+</action>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_ADDED">
+</action>
+<action android:name="android.intent.action.PACKAGE_REMOVED">
+</action>
+<data android:scheme="package">
+</data>
+</intent-filter>
+</receiver>
+<receiver android:exported="false" android:name="cn.jpush.android.service.AlarmReceiver">
+</receiver>
+<receiver android:enabled="true" android:exported="false" android:name="com.dxtx.push.MyReceiver">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.REGISTRATION">
+</action>
+<action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED">
+</action>
+<action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED">
+</action>
+<action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED">
+</action>
+<action android:name="cn.jpush.android.intent.CONNECTION">
+</action>
+<category android:name="com.iafclub.jrh">
+</category>
+</intent-filter>
+</receiver>
+<meta-data android:name="JPUSH_CHANNEL" android:value="developer-default">
+</meta-data>
+<meta-data android:name="JPUSH_APPKEY" android:value="e5e086cc97526e2cac6a3891">
+</meta-data>
+</application>
+</manifest>

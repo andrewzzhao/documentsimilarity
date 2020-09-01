@@ -1,0 +1,126 @@
+<?xml version="1.0" ?><manifest android:versionCode="7" android:versionName="1.3.3" package="com.idyllic.schloopparent" platformBuildVersionCode="23" platformBuildVersionName="6.0-2704002" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="16" android:targetSdkVersion="23">
+</uses-sdk>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.MANAGE_DOCUMENTS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE">
+</uses-permission>
+<permission android:name="com.idyllic.schloopparent.permission.C2D_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="com.idyllic.schloopparent.permission.C2D_MESSAGE">
+</uses-permission>
+<application android:allowBackup="true" android:icon="@7F030000" android:label="@7F06004A" android:name="com.idyllic.schloopparent.ApplicationController" android:supportsRtl="true" android:theme="@7F08010B">
+<activity android:name="com.idyllic.schloopparent.MainActivity" android:theme="@7F0800B8">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:name="com.idyllic.schloopparent.SignUpActivity" android:screenOrientation="1" android:theme="@7F08010B">
+</activity>
+<activity android:name="com.idyllic.schloopparent.ForgotPassword" android:screenOrientation="1" android:theme="@7F0800B8">
+</activity>
+<activity android:name="com.idyllic.schloopparent.ChangePasswordActivity" android:screenOrientation="1" android:theme="@7F0800B8">
+</activity>
+<activity android:name="com.idyllic.schloopparent.DashboardActivity" android:screenOrientation="1" android:theme="@7F08010B">
+</activity>
+<activity android:name="com.idyllic.schloopparent.CreateEcircularActivity" android:screenOrientation="1" android:theme="@7F08010B">
+</activity>
+<activity android:name="com.idyllic.schloopparent.SelectTagActivity" android:screenOrientation="1" android:theme="@7F08010B">
+</activity>
+<activity android:name="com.idyllic.schloopparent.FilterEcircularActivity" android:screenOrientation="1" android:theme="@7F08010B">
+</activity>
+<activity android:name="com.idyllic.schloopparent.SelectRecipientsActivity" android:screenOrientation="1" android:theme="@7F08010B">
+</activity>
+<activity android:name="com.idyllic.schloopparent.ViewEcircularActivity" android:screenOrientation="1" android:theme="@7F08010B">
+<intent-filter>
+<action android:name="android.intent.action.MEDIA_MOUNTED">
+</action>
+<data android:scheme="file">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.idyllic.schloopparent.ViewContentActivity" android:screenOrientation="1" android:theme="@7F08010B">
+</activity>
+<activity android:name="com.idyllic.schloopparent.FilterContentActivity" android:screenOrientation="1" android:theme="@7F08010B">
+</activity>
+<activity android:name="com.idyllic.schloopparent.SettingsActivity" android:screenOrientation="1" android:theme="@7F08010B">
+</activity>
+<activity android:name="com.idyllic.schloopparent.PrivacyPolicyActivity" android:screenOrientation="1" android:theme="@7F08010B">
+</activity>
+<activity android:name="com.idyllic.schloopparent.LikesActivity" android:screenOrientation="1" android:theme="@7F08010B">
+</activity>
+<activity android:name="com.idyllic.schloopparent.CommentsFollowUpActivity" android:screenOrientation="1" android:theme="@7F08010B">
+</activity>
+<activity android:name="com.idyllic.schloopparent.ViewBookmarkingActivity" android:screenOrientation="1" android:theme="@7F08010B">
+</activity>
+<service android:enabled="true" android:name="com.amazonaws.mobileconnectors.s3.transferutility.TransferService">
+</service>
+ //Services defined for FCM
+
+<service android:name="com.idyllic.schloopparent.firebase.MyFirebaseMessagingService">
+<intent-filter>
+<action android:name="com.google.firebase.MESSAGING_EVENT">
+</action>
+</intent-filter>
+</service>
+<service android:name="com.idyllic.schloopparent.firebase.MyFirebaseInstanceIDService">
+<intent-filter>
+<action android:name="com.google.firebase.INSTANCE_ID_EVENT">
+</action>
+</intent-filter>
+</service>
+<service android:exported="true" android:name="com.google.firebase.messaging.FirebaseMessagingService">
+<intent-filter android:priority="-500">
+<action android:name="com.google.firebase.MESSAGING_EVENT">
+</action>
+</intent-filter>
+</service>
+<meta-data android:name="com.google.android.gms.version" android:value="@7F0A0006">
+</meta-data>
+<receiver android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+<action android:name="com.google.android.c2dm.intent.REGISTRATION">
+</action>
+<category android:name="com.idyllic.schloopparent">
+</category>
+</intent-filter>
+</receiver>
+<receiver android:exported="false" android:name="com.google.firebase.iid.FirebaseInstanceIdInternalReceiver">
+</receiver>
+<service android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdService">
+<intent-filter android:priority="-500">
+<action android:name="com.google.firebase.INSTANCE_ID_EVENT">
+</action>
+</intent-filter>
+</service>
+<provider android:authorities="com.idyllic.schloopparent.firebaseinitprovider" android:exported="false" android:initOrder="100" android:name="com.google.firebase.provider.FirebaseInitProvider">
+</provider>
+<receiver android:enabled="true" android:name="com.google.android.gms.measurement.AppMeasurementReceiver">
+<intent-filter>
+<action android:name="com.google.android.gms.measurement.UPLOAD">
+</action>
+</intent-filter>
+</receiver>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementService">
+</service>
+<activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:01030010">
+</activity>
+</application>
+</manifest>

@@ -1,0 +1,96 @@
+<?xml version="1.0" ?><manifest android:versionCode="4" android:versionName="1.1.1" package="com.wjsk.travel.chishui" platformBuildVersionCode="25" platformBuildVersionName="7.1.1" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="17" android:targetSdkVersion="25">
+</uses-sdk>
+<uses-permission android:name="android.permission.READ_LOGS">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS">
+</uses-permission>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_CONFIGURATION">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-feature android:name="android.hardware.camera">
+</uses-feature>
+<uses-feature android:name="android.hardware.camera.autofocus">
+</uses-feature>
+<uses-feature android:glEsVersion="0x00020000" android:required="true">
+</uses-feature>
+<supports-gl-texture android:name="GL_OES_compressed_ETC1_RGB8_texture">
+</supports-gl-texture>
+<supports-gl-texture android:name="GL_OES_compressed_paletted_texture">
+</supports-gl-texture>
+<supports-screens android:anyDensity="true" android:largeScreens="true" android:normalScreens="true" android:smallScreens="true" android:xlargeScreens="true">
+</supports-screens>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<uses-feature android:name="android.hardware.sensor.accelerometer" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.touchscreen" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.touchscreen.multitouch" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.touchscreen.multitouch.distinct" android:required="false">
+</uses-feature>
+<meta-data android:name="android.support.VERSION" android:value="25.3.1">
+</meta-data>
+<application android:allowBackup="true" android:icon="@7F030003" android:label="@7F080021" android:name="com.tencent.StubShell.TxAppEntry" android:supportsRtl="true" android:theme="@7F0A0043">
+<meta-data android:name="TxAppEntry" android:value="com.wjsk.travel.chishui.app.MyApplication">
+</meta-data>
+<meta-data android:name="com.amap.api.v2.apikey" android:value="45786bef04a995b0deb3c1a292e3190f">
+</meta-data>
+<meta-data android:name="UMENG_APPKEY" android:value="58784c6b677baa2d560003f2">
+</meta-data>
+<activity android:configChanges="0x00000480" android:label="VideoPlayerActivity" android:name="com.wjsk.travel.chishui.md360.VideoPlayerActivity" android:screenOrientation="10">
+</activity>
+<activity android:configChanges="0x00000480" android:label="BitmapPlayerActivity" android:name="com.wjsk.travel.chishui.md360.BitmapPlayerActivity" android:screenOrientation="10">
+</activity>
+<activity android:configChanges="0x40000FFF" android:name="com.wjsk.travel.chishui.MainActivity" android:screenOrientation="1" android:theme="@7F0A0045">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x00000480" android:name="com.wjsk.travel.chishui.view.IntroDetailActivity" android:screenOrientation="4" android:theme="@7F0A00AC" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:configChanges="0x00000480" android:name="com.wjsk.travel.chishui.view.ShopActivity" android:theme="@7F0A00AC">
+</activity>
+<activity android:configChanges="0x000004A0" android:imeOptions="0x00000006" android:name="com.wjsk.travel.chishui.view.VideoIntroActivity" android:screenOrientation="4" android:theme="@7F0A00AC">
+</activity>
+<receiver android:name="com.wjsk.travel.chishui.broadcast.WheatherBroadCastReceiver">
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+</intent-filter>
+</receiver>
+<service android:name="com.wjsk.travel.chishui.services.MusicService" android:permission="android.permission.CAMERA">
+<intent-filter>
+<action android:name="com.play.ACTION_PLAY">
+</action>
+<action android:name="com.play.ACTION_PAUSE">
+</action>
+<action android:name="com.play.ACTION_EXIT">
+</action>
+</intent-filter>
+</service>
+<service android:name="com.amap.api.location.APSService">
+</service>
+</application>
+</manifest>

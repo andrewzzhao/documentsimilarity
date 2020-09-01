@@ -1,0 +1,390 @@
+<?xml version="1.0" ?><manifest android:versionCode="2017020900" android:versionName="2.3.6.0" package="com.redpass.pay" platformBuildVersionCode="23" platformBuildVersionName="6.0-2704002" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="14" android:targetSdkVersion="22">
+</uses-sdk>
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW">
+</uses-permission>
+<permission android:name="com.redpass.pay.permission.JPUSH_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CALL_PHONE">
+</uses-permission>
+<uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS">
+</uses-permission>
+<uses-permission android:name="com.redpass.pay.permission.JPUSH_MESSAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.NFC">
+</uses-permission>
+<uses-feature android:name="android.hardware.nfc" android:required="true">
+</uses-feature>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-feature android:name="android.hardware.camera" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.camera.front" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.camera.autofocus" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.camera.flash" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.screen.landscape" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.wifi" android:required="false">
+</uses-feature>
+<application android:allowBackup="true" android:icon="@7F03003B" android:label="@7F08004B" android:name="com.qihoo.util.StubApp2517820352" android:qihoo="activity" android:supportsRtl="true" android:theme="@7F0A00D0">
+<service android:enabled="true" android:name="com.baidu.location.f" android:process=":remote">
+<intent-filter>
+<action android:name="com.baidu.location.service_v2.2">
+</action>
+</intent-filter>
+</service>
+<activity android:configChanges="0x000000A0" android:name="com.redpass.pay.ui.activity.WelcomeActivity" android:screenOrientation="1" android:theme="@7F0A00D2" android:windowSoftInputMode="0x00000027">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+<action android:name="com.redpass.pay.ui.activity.WelcomeActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:scheme="wxd930ea5d5a258f4f">
+</data>
+</intent-filter>
+</activity>
+<service android:exported="false" android:name="com.qihoo.util.QhJobService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<activity android:excludeFromRecents="true" android:exported="false" android:name="com.qihoo.util.CommonActivity" android:theme="@android:0103005F">
+</activity>
+<service android:enabled="true" android:exported="true" android:name="com.qihoo.util.CommonService">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.qihoo.util.CommonService2">
+</service>
+<receiver android:enabled="true" android:exported="false" android:name="com.qihoo.util.CommonReceiver">
+</receiver>
+<provider android:authorities="com.redpass.pay.COMMONPROVIDER" android:exported="true" android:name="com.qihoo.util.CommonProvider">
+</provider>
+<activity android:configChanges="0x000000A0" android:exported="false" android:launchMode="2" android:name="com.qihoo.ls.LsActivity" android:screenOrientation="1" android:theme="@android:01030060">
+</activity>
+<service android:exported="false" android:name="com.qihoo.ls.SoService">
+</service>
+<activity android:configChanges="0x000000A0" android:name="com.redpass.pay.ui.activity.MainActivity" android:screenOrientation="1" android:theme="@7F0A00D2" android:windowSoftInputMode="0x00000027">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.redpass.pay.ui.activity.LockViewActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000027">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.redpass.pay.base.activity.BaseActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000027">
+</activity>
+<activity android:configChanges="0x000000A0" android:label="登入" android:name="com.redpass.pay.ui.activity.LoginActivity" android:screenOrientation="1" android:theme="@7F0A00D2" android:windowSoftInputMode="0x00000027">
+</activity>
+<activity android:configChanges="0x000000A0" android:label="@7F080168" android:name="com.redpass.pay.ui.activity.SignupActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000027">
+</activity>
+<activity android:configChanges="0x000000A0" android:label="@7F080157" android:name="com.redpass.pay.ui.activity.RetrievePasswordActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000027">
+</activity>
+<activity android:configChanges="0x000000A0" android:label="商户�" android:name="com.redpass.pay.ui.activity.MerchantActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000027">
+</activity>
+<activity android:configChanges="0x000000A0" android:label="佾息" android:name="com.redpass.pay.ui.activity.MerchantDetailActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000027">
+</activity>
+<activity android:configChanges="0x000000A0" android:label="优你息" android:name="com.redpass.pay.ui.activity.PreferentialInfoActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000027">
+</activity>
+<activity android:configChanges="0x000000A0" android:label="ፎ杦" android:name="com.redpass.pay.ui.activity.TradeRecordsActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000027">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.redpass.pay.ui.activity.CardCenterActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000027">
+</activity>
+<activity android:configChanges="0x000000A0" android:label="剭卡�" android:name="com.redpass.pay.ui.activity.CardAddActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000027">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.redpass.pay.ui.activity.CardRemoveActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000027">
+</activity>
+<activity android:configChanges="0x000000A0" android:label="@7F0800AF" android:name="com.redpass.pay.ui.activity.CardRechargeActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000027">
+</activity>
+<activity android:configChanges="0x000000A0" android:label="@7F0800AE" android:name="com.redpass.pay.ui.activity.CardRechargeConfirmActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000027">
+</activity>
+<activity android:configChanges="0x000000A0" android:label="@7F080140" android:name="com.redpass.pay.ui.activity.PwdActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000027">
+</activity>
+<activity android:configChanges="0x000000A0" android:label="@7F08013E" android:name="com.redpass.pay.ui.activity.PwdLoginActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000027">
+</activity>
+<activity android:configChanges="0x000000A0" android:label="在䕾㱑�" android:name="com.redpass.pay.ui.activity.RechargeActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000027">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.redpass.pay.ui.activity.PwdPayActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000027">
+</activity>
+<activity android:configChanges="0x000000A0" android:label="支敎式" android:name="com.redpass.pay.ui.activity.RechargeTypeActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000027">
+</activity>
+<activity android:configChanges="0x000000A0" android:label="瑞特包充值" android:name="com.redpass.pay.ui.activity.RedpassRechargeActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000027">
+</activity>
+<activity android:configChanges="0x000000A0" android:label="@7F08016C" android:name="com.redpass.pay.ui.activity.SysSetActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000027">
+</activity>
+<activity android:configChanges="0x000000A0" android:label="@7F08002A" android:name="com.redpass.pay.ui.activity.AboutActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000027">
+</activity>
+<activity android:configChanges="0x000000A0" android:label="@7F08004A" android:name="com.redpass.pay.ui.activity.AdviseActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000027">
+</activity>
+<activity android:configChanges="0x000000A0" android:label="@7F08002B" android:name="com.redpass.pay.ui.activity.CompanyIntroActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000027">
+</activity>
+<activity android:configChanges="0x000000A0" android:label="@7F080040" android:name="com.redpass.pay.ui.activity.ContactWeiboActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000027">
+</activity>
+<activity android:configChanges="0x000000A0" android:label="@7F0800EA" android:name="com.redpass.pay.ui.activity.MyOrderActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000027">
+</activity>
+<activity android:configChanges="0x000000A0" android:label="余�" android:name="com.redpass.pay.ui.activity.BalanceActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000027">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.redpass.pay.ui.activity.BookActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000027">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.redpass.pay.ui.activity.BookMaintainActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000027">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.redpass.pay.ui.activity.BookRepairActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000027">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.redpass.pay.ui.activity.BookTestDriveActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000027">
+</activity>
+<activity android:configChanges="0x000000A0" android:label="@7F0800E3" android:name="com.redpass.pay.ui.activity.MyBookActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000027">
+</activity>
+<activity android:configChanges="0x000000A0" android:label="@7F08008A" android:name="com.redpass.pay.ui.activity.ViewBrandActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000027">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.redpass.pay.ui.activity.ViewAutoActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000027">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.redpass.pay.ui.activity.ViewCarActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000027">
+</activity>
+<activity android:configChanges="0x000000A0" android:label="@7F080033" android:name="com.redpass.pay.ui.activity.ViewCarInfoActivity" android:screenOrientation="1" android:theme="@android:01030006" android:windowSoftInputMode="0x00000027">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.redpass.pay.ui.activity.ViewDistriActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000027">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.redpass.pay.ui.activity.ViewDistriMapActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000027">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.redpass.pay.ui.activity.ViewImageActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000027">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.redpass.pay.ui.activity.ViewParamActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000027">
+</activity>
+<activity android:configChanges="0x000000A0" android:label="@7F0800E4" android:name="com.redpass.pay.ui.activity.MyCarActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000027">
+</activity>
+<activity android:configChanges="0x000000A0" android:label="@7F08008B" android:name="com.redpass.pay.ui.activity.CarSituatActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000027">
+</activity>
+<activity android:configChanges="0x000000A0" android:label="@7F080080" android:name="com.redpass.pay.ui.activity.CarCounterActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000027">
+</activity>
+<activity android:configChanges="0x000000A0" android:label="噢�" android:name="com.redpass.pay.ui.activity.LuckyDrawActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000027">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.redpass.pay.ui.activity.CarCounterBizActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000027">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.redpass.pay.ui.activity.CarCounterNeedActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000027">
+</activity>
+<activity android:configChanges="0x000000A0" android:label="@7F08008E" android:name="com.redpass.pay.ui.activity.CarWashIndexActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000027">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.redpass.pay.ui.activity.CarRescueActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000027">
+</activity>
+<activity android:configChanges="0x000000A0" android:label="@7F08008D" android:name="com.redpass.pay.ui.activity.CarUseReplace" android:screenOrientation="1" android:windowSoftInputMode="0x00000027">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.redpass.pay.ui.activity.CarIllegalActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000027">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.redpass.pay.ui.activity.CarIllegalResultActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000027">
+</activity>
+<activity android:configChanges="0x000000A0" android:label="@7F080133" android:name="com.redpass.pay.ui.activity.PushMsgActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000027">
+</activity>
+<activity android:configChanges="0x000000A0" android:label="@7F080132" android:name="com.redpass.pay.ui.activity.PushMsgDetailActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000027">
+</activity>
+<activity android:configChanges="0x000000A0" android:label="@7F080131" android:name="com.redpass.pay.ui.activity.PreferInfoActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000027">
+</activity>
+<activity android:configChanges="0x000000A0" android:label="@7F080130" android:name="com.redpass.pay.ui.activity.PreferInfoDetailActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000027">
+</activity>
+<activity android:configChanges="0x000000A0" android:label="@7F0800FE" android:name="com.redpass.pay.ui.activity.MyProfileActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000027">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.redpass.pay.ui.activity.InsuranceServiceActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000027">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.redpass.pay.ui.activity.InsuranceQueryActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000027">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.redpass.pay.ui.activity.InsuranceRenewalActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000027">
+</activity>
+<activity android:configChanges="0x000000A0" android:label="@7F080044" android:name="com.redpass.pay.ui.activity.ActiveMsgActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000027">
+</activity>
+<activity android:configChanges="0x000000A0" android:label="@7F0800AD" android:name="com.redpass.pay.ui.activity.CardPwdSetActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000027">
+</activity>
+<activity android:configChanges="0x000000A0" android:label="@7F08009E" android:name="com.redpass.pay.ui.activity.CardPwdFlgActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000027">
+</activity>
+<activity android:configChanges="0x000000A0" android:label="@7F0800D8" android:name="com.redpass.pay.ui.activity.HomeMaintainActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000027">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.redpass.pay.ui.activity.HomeMaintainXyActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000027">
+</activity>
+<activity android:configChanges="0x000000A0" android:label="手机充值" android:name="com.redpass.pay.ui.activity.PhoneRechargeActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000027">
+</activity>
+<activity android:configChanges="0x000000A0" android:label="㹎敫式" android:name="com.redpass.pay.ui.activity.PayTypeActivity" android:screenOrientation="1" android:theme="@7F0A00D1" android:windowSoftInputMode="0x00000027">
+</activity>
+<activity android:configChanges="0x000000A0" android:label="㹎�" android:name="com.redpass.pay.ui.activity.PayActivity" android:screenOrientation="1" android:theme="@7F0A00D1" android:windowSoftInputMode="0x00000027">
+</activity>
+<activity android:configChanges="0x000000A0" android:label="中睖�" android:name="com.redpass.pay.ui.activity.ChinaOilActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000027">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.redpass.pay.ui.activity.VoucherDetailActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000027">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.redpass.pay.ui.activity.GoodsIntroActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000027">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.redpass.pay.ui.activity.MerchantAddrActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000027">
+</activity>
+<activity android:configChanges="0x000000A0" android:label="@7F080090" android:name="com.redpass.pay.ui.activity.CardListActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000027">
+</activity>
+<activity android:configChanges="0x000000A0" android:label="@7F0800D6" android:name="com.redpass.pay.ui.activity.BarCodeActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000027">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.redpass.pay.ui.activity.VouchersUsedActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000027">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.redpass.pay.ui.activity.MerchantMapActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000027">
+</activity>
+<activity android:configChanges="0x000000A0" android:label="@7F08016D" android:name="com.redpass.pay.ui.activity.BusCardTopupActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000027">
+</activity>
+<activity android:configChanges="0x000000A0" android:label="@7F080170" android:launchMode="2" android:name="com.redpass.pay.ui.activity.BusCardOrderInfoActivity2" android:screenOrientation="1" android:windowSoftInputMode="0x00000027">
+<intent-filter>
+<action android:name="android.nfc.action.TECH_DISCOVERED">
+</action>
+</intent-filter>
+<meta-data android:name="android.nfc.action.TECH_DISCOVERED" android:resource="@7F060000">
+</meta-data>
+<intent-filter>
+<action android:name="android.nfc.action.TAG_DISCOVERED">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000A0" android:label="@7F08016E" android:name="com.redpass.pay.ui.activity.BusCardAutoPayActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000027">
+</activity>
+<activity android:configChanges="0x000000A0" android:label="@7F080171" android:name="com.redpass.pay.ui.activity.BusCardOrderListActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000027">
+</activity>
+<activity android:configChanges="0x000000A0" android:label="@7F08016D" android:name="com.redpass.pay.ui.activity.BusCardMenuActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000027">
+</activity>
+<activity android:configChanges="0x000000A0" android:label="@7F08016F" android:name="com.redpass.pay.ui.activity.BusCardInstitutionsListActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000027">
+</activity>
+<activity android:configChanges="0x000000A0" android:label="@7F08016F" android:name="com.redpass.pay.ui.activity.BusCardMapActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000027">
+</activity>
+<activity android:configChanges="0x000000A0" android:label="公䕎㱑⹐剞" android:name="com.redpass.pay.ui.activity.BusCardHelpActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000027">
+</activity>
+<activity android:configChanges="0x000000A0" android:label="ࡒ塗[᩟协" android:name="com.redpass.pay.ui.activity.BusCardAgreementActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000027">
+</activity>
+<activity android:exported="true" android:label="@7F08014A" android:launchMode="1" android:name="com.redpass.pay.wxapi.WXPayEntryActivity">
+</activity>
+<service android:enabled="true" android:exported="false" android:name="com.redpass.pay.service.BusCardService">
+<intent-filter>
+<action android:name="com.redpass.pay.service.action.BusCardService">
+</action>
+</intent-filter>
+</service>
+<activity android:configChanges="0x000000E0" android:exported="false" android:label="支孎" android:name="com.alipay.sdk.app.H5PayActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000E0" android:exported="false" android:label="支孎" android:name="com.alipay.sdk.auth.AuthActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.unionpay.uppay.PayActivity">
+</activity>
+<activity android:configChanges="0x000004B0" android:label="百孞�" android:name="com.redpass.pay.ui.activity.BNDemoGuideActivity">
+</activity>
+<meta-data android:name="com.baidu.lbsapi.API_KEY" android:value="9fIou22TZzHFSb6VnKGfER1T">
+</meta-data>
+<activity android:configChanges="0x000000A0" android:exported="false" android:name="cn.jpush.android.ui.PushActivity">
+<intent-filter>
+<action android:name="cn.jpush.android.ui.PushActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="com.redpass.pay">
+</category>
+</intent-filter>
+</activity>
+<service android:enabled="true" android:exported="false" android:name="cn.jpush.android.service.DownloadService">
+</service>
+<service android:enabled="true" android:exported="false" android:name="cn.jpush.android.service.PushService">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.REGISTER">
+</action>
+<action android:name="cn.jpush.android.intent.REPORT">
+</action>
+<action android:name="cn.jpush.android.intent.PushService">
+</action>
+<action android:name="cn.jpush.android.intent.PUSH_TIME">
+</action>
+</intent-filter>
+</service>
+<service android:enabled="true" android:exported="true" android:name="cn.jpush.android.service.DaemonService">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.DaemonService">
+</action>
+<category android:name="com.redpass.pay">
+</category>
+</intent-filter>
+</service>
+<receiver android:enabled="true" android:exported="false" android:name="cn.jpush.android.service.PushReceiver">
+<intent-filter android:priority="1000">
+<action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY">
+</action>
+<category android:name="com.redpass.pay">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.USER_PRESENT">
+</action>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_ADDED">
+</action>
+<action android:name="android.intent.action.PACKAGE_REMOVED">
+</action>
+<data android:scheme="package">
+</data>
+</intent-filter>
+</receiver>
+<receiver android:name="cn.jpush.android.service.AlarmReceiver">
+</receiver>
+<receiver android:enabled="true" android:exported="false" android:name="com.redpass.pay.receiver.MyReceiver">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.REGISTRATION">
+</action>
+<action android:name="cn.jpush.android.intent.UNREGISTRATION">
+</action>
+<action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED">
+</action>
+<action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED">
+</action>
+<action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED">
+</action>
+<action android:name="cn.jpush.android.intent.ACTION_RICHPUSH_CALLBACK">
+</action>
+<action android:name="cn.jpush.android.intent.CONNECTION">
+</action>
+<category android:name="com.redpass.pay">
+</category>
+</intent-filter>
+</receiver>
+<meta-data android:name="JPUSH_CHANNEL" android:value="developer-default">
+</meta-data>
+<meta-data android:name="JPUSH_APPKEY" android:value="48e227a8f560518e4a75beda">
+</meta-data>
+<activity android:clearTaskOnLaunch="true" android:name="com.journeyapps.barcodescanner.CaptureActivity" android:screenOrientation="6" android:stateNotNeeded="true" android:theme="@7F0A001F" android:windowSoftInputMode="0x00000003">
+</activity>
+<meta-data android:name="UMENG_CHANNEL" android:value="1">
+</meta-data>
+</application>
+</manifest>

@@ -1,0 +1,477 @@
+<?xml version="1.0" ?><manifest android:versionCode="35" android:versionName="1.2.2" package="com.zmlxj.www" platformBuildVersionCode="23" platformBuildVersionName="6.0-2166767" xmlns:android="http://schemas.android.com/apk/res/android">
+ //搜索权੐�
+<uses-sdk android:minSdkVersion="16" android:targetSdkVersion="23">
+</uses-sdk>
+<permission android:name="com.zmlxj.www.permission.JPUSH_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="com.zmlxj.www.permission.JPUSH_MESSAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_USER_PRESENT">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-permission android:name="android.permission.RECORD_AUDIO">
+</uses-permission>
+<uses-permission android:name="android.permission.MANAGE_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="android.permission.BLUETOOTH">
+</uses-permission>
+<uses-permission android:name="android.permission.BLUETOOTH_ADMIN">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_CONTACTS">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_CONTACTS">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS">
+</uses-permission>
+<uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES">
+</uses-permission>
+<uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION">
+</uses-permission>
+<uses-permission android:name="android.permission.FLASHLIGHT">
+</uses-permission>
+<uses-permission android:name="android.hardware.camera">
+</uses-permission>
+<uses-feature android:name="android.hardware.camera.autofocus">
+</uses-feature>
+<uses-permission android:name="android.permission.RECORD_VIDEO">
+</uses-permission>
+<uses-feature android:name="android.hardware.camera">
+</uses-feature>
+<uses-feature android:name="android.hardware.camera.flash">
+</uses-feature>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW">
+</uses-permission>
+<uses-permission android:name="getui.permission.GetuiService.com.zmlxj.www">
+</uses-permission>
+<permission android:name="getui.permission.GetuiService.com.zmlxj.www" android:protectionLevel="0x00000000">
+</permission>
+<application android:allowBackup="true" android:hardwareAccelerated="true" android:icon="@7F020059" android:label="@7F0900AD" android:name="com.stub.StubApp" android:qihoo="activity" android:supportsRtl="true" android:theme="@7F0C0095">
+<service android:exported="true" android:label="PushService" android:name="www.geoparker.cn.service.GeTuiDiyService" android:process=":pushservice">
+</service>
+<service android:name="www.geoparker.cn.service.GeTuiMyIntentService">
+</service>
+<service android:enabled="true" android:exported="true" android:name="www.geoparker.cn.service.LocationService">
+</service>
+<service android:enabled="true" android:name="www.geoparker.cn.service.UpdateService">
+</service>
+<meta-data android:name="com.amap.api.v2.apikey" android:value="206fd06f6dd9939c0b4cb566188be008">
+</meta-data>
+<service android:name="com.amap.api.location.APSService" android:process=":process1">
+</service>
+<receiver android:name="www.geoparker.cn.receiver.Receiver1" android:process=":process1">
+</receiver>
+<service android:name="www.geoparker.cn.service.Service2" android:process=":process2">
+</service>
+<receiver android:name="www.geoparker.cn.receiver.Receiver2" android:process=":process2">
+</receiver>
+<service android:enabled="true" android:exported="false" android:name="www.geoparker.cn.service.WhiteService" android:process=":white">
+</service>
+<receiver android:enabled="true" android:exported="false" android:name="www.geoparker.cn.receiver.WakeReceiver">
+<intent-filter>
+<action android:name="com.wake.gray">
+</action>
+</intent-filter>
+</receiver>
+<service android:enabled="true" android:exported="false" android:name="www.geoparker.cn.service.GrayService" android:process=":gray">
+</service>
+<service android:enabled="true" android:exported="false" android:name="www.geoparker.cn.service.GrayService$GrayInnerService" android:process=":gray">
+</service>
+<service android:enabled="true" android:exported="false" android:name="www.geoparker.cn.receiver.WakeReceiver$WakeGrayInnerService">
+</service>
+<service android:name="www.geoparker.cn.service.MyScenicMusicService">
+</service>
+<meta-data android:name="UMENG_APPKEY" android:value="5937b8e8aed17955e00011bb">
+</meta-data>
+<meta-data android:name="UMENG_CHANNEL" android:value="vivo">
+</meta-data>
+<activity android:name="www.geoparker.cn.activity.StartActivity">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:name="www.geoparker.cn.activity.GuideViewActivity">
+</activity>
+<activity android:launchMode="2" android:name="www.geoparker.cn.activity.MainActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="www.geoparker.cn.activity.ImageScaleActivity">
+</activity>
+<activity android:name="www.geoparker.cn.TestActivity">
+</activity>
+<activity android:launchMode="2" android:name="www.geoparker.cn.activity.LoginActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:name="www.geoparker.cn.activity.RegisterActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:name="www.geoparker.cn.activity.ForgetPswActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:name="www.geoparker.cn.activity.EditTravelActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:name="www.geoparker.cn.activity.EditTravelLabelActivity">
+</activity>
+<activity android:name="www.geoparker.cn.activity.ProfileMessageActivity">
+</activity>
+<activity android:name="www.geoparker.cn.activity.ProfileSettingActivity">
+</activity>
+<activity android:name="www.geoparker.cn.activity.AboutMeActivity">
+</activity>
+<activity android:name="www.geoparker.cn.activity.SuggestionActionActivity">
+</activity>
+<service android:name="www.geoparker.cn.service.MyAudioService">
+</service>
+<activity android:name="www.geoparker.cn.activity.SaveTrackActivity">
+</activity>
+<activity android:name="www.geoparker.cn.activity.LoadTrackActivity">
+</activity>
+<activity android:name="www.geoparker.cn.activity.SelectorLoadTrackActivity">
+</activity>
+<activity android:name="www.geoparker.cn.activity.ColorPickerActivity">
+</activity>
+<activity android:name="www.geoparker.cn.activity.DeletePopupwindowActivity" android:theme="@7F0C00C8">
+</activity>
+<activity android:name="www.geoparker.cn.activity.SearchActivity">
+</activity>
+<activity android:hardwareAccelerated="false" android:name="www.geoparker.cn.activity.MyActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="www.geoparker.cn.activity.ScenicSpotActivity">
+</activity>
+<activity android:name="www.geoparker.cn.activity.VolunteerOneActivity" android:theme="@7F0C00C8">
+</activity>
+<activity android:name="www.geoparker.cn.activity.VolunteerSexActivity" android:theme="@7F0C012F">
+</activity>
+<activity android:name="www.geoparker.cn.activity.TravelItemInfoActivity">
+</activity>
+<activity android:name="www.geoparker.cn.activity.ProfileInfoActivity">
+</activity>
+<activity android:name="www.geoparker.cn.activity.ProfileNickActivity">
+</activity>
+<activity android:name="www.geoparker.cn.activity.ProfileSexActivity">
+</activity>
+<activity android:name="www.geoparker.cn.activity.ProfileSignatureActivity">
+</activity>
+<activity android:name="www.geoparker.cn.activity.SelectCityActivity">
+</activity>
+<activity android:name="www.geoparker.cn.activity.BindActivity">
+</activity>
+<activity android:name="www.geoparker.cn.activity.AgreementActivity">
+</activity>
+<activity android:name="www.geoparker.cn.activity.TrackGpsActivity">
+</activity>
+<activity android:launchMode="1" android:name="www.geoparker.cn.activity.PersonalCenterActivity">
+</activity>
+<activity android:launchMode="1" android:name="www.geoparker.cn.activity.MyAttentionActivity">
+</activity>
+<activity android:launchMode="1" android:name="www.geoparker.cn.activity.MyFensiActivity">
+</activity>
+<activity android:name="www.geoparker.cn.activity.ProfileMessageComposeActivity">
+</activity>
+<activity android:name="www.geoparker.cn.activity.ProfileMessageDiscussActivity">
+</activity>
+<activity android:name="www.geoparker.cn.activity.ProfileMessagePraiseActivity">
+</activity>
+<activity android:name="www.geoparker.cn.activity.ProfileMessageCollectActivity">
+</activity>
+<activity android:name="www.geoparker.cn.activity.ProfileMessageMyActivity">
+</activity>
+<activity android:name="www.geoparker.cn.activity.ProfileChatMessageActivity" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:name="www.geoparker.cn.activity.TravelCommentActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:name="www.geoparker.cn.activity.TrackTypeActivity" android:theme="@7F0C00C8">
+</activity>
+<activity android:name="www.geoparker.cn.activity.AvtivitiesCommentActivity">
+</activity>
+<activity android:name="www.geoparker.cn.activity.VolunteerApplyActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.mob.tools.MobUIShell" android:screenOrientation="1" android:theme="@android:01030010" android:windowSoftInputMode="0x00000012">
+<intent-filter>
+<data android:scheme="tencent101402561">
+</data>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<meta-data android:name="Mob-AppKey" android:value="20cd6db8eada8">
+</meta-data>
+<meta-data android:name="Mob-AppSecret" android:value="dc64d06a81962129b53543199f659361">
+</meta-data>
+<activity android:configChanges="0x000004A0" android:exported="true" android:name="com.zmlxj.www.wxapi.WXEntryActivity" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<activity android:name="me.iwf.photopicker.PhotoPickerActivity" android:theme="@7F0C011D">
+</activity>
+<activity android:name="me.iwf.photopicker.PhotoPagerActivity" android:theme="@7F0C011D">
+</activity>
+<meta-data android:name="com.google.android.gms.version" android:value="@7F0D0007">
+</meta-data>
+<activity android:name="www.geoparker.cn.activity.PathLineMoreInfoActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="www.geoparker.cn.activity.PathLineShowImgActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="www.geoparker.cn.activity.ProfileTravelActivity">
+</activity>
+<activity android:name="www.geoparker.cn.activity.ProfileFootprintActivity">
+</activity>
+<activity android:name="www.geoparker.cn.activity.ProfileShippingAddressActivity">
+</activity>
+<activity android:name="www.geoparker.cn.activity.AddShippingAddressActivity">
+</activity>
+<activity android:name="www.geoparker.cn.activity.OfflineMapActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="www.geoparker.cn.activity.ProfileDownloadActivity">
+</activity>
+<activity android:name="www.geoparker.cn.activity.ParkDownloadActivity">
+</activity>
+<activity android:name="www.geoparker.cn.activity.ProfileHeadActivity">
+</activity>
+<activity android:name="www.geoparker.cn.activity.TourPathMoreInfoActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="www.geoparker.cn.activity.TourPathSubmitOrderActivity" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name="www.geoparker.cn.activity.TourGuideHelpCenterActivity">
+</activity>
+<activity android:name="www.geoparker.cn.activity.TourGuideActivity">
+</activity>
+<activity android:name="www.geoparker.cn.activity.TourAuthenticateActivity" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:name="www.geoparker.cn.activity.TourCarVerifyActivity" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:name="www.geoparker.cn.activity.TourTouristVerifyActivity" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:name="www.geoparker.cn.activity.TourAuthenticateIDActivity" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:name="www.geoparker.cn.selectpark.activity.SortCityActivity">
+</activity>
+<activity android:name="www.geoparker.cn.activity.AddFootActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:name="www.geoparker.cn.activity.ProfielTrackActivity">
+</activity>
+<activity android:name="www.geoparker.cn.activity.TourGuiderInfoActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="2" android:name="www.geoparker.cn.activity.TravelListActivity">
+</activity>
+<activity android:name="www.geoparker.cn.activity.PersonTrackActivity">
+</activity>
+<activity android:name="www.geoparker.cn.activity.TourAddCategoryLabelsActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="www.geoparker.cn.activity.TourAddLightspotActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="www.geoparker.cn.activity.PersonTravelActivity">
+</activity>
+<activity android:name="www.geoparker.cn.activity.PersonFootActivity">
+</activity>
+<activity android:name="www.geoparker.cn.activity.TourAddLoadTrackActivity">
+</activity>
+<activity android:name="www.geoparker.cn.activity.TourAddDetailsInfoActivity">
+</activity>
+<activity android:name="www.geoparker.cn.activity.TourAddTitleActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="www.geoparker.cn.activity.TourAddGoAndBackActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="www.geoparker.cn.activity.TourAddNoticeActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="www.geoparker.cn.activity.TourAddHowToUsedActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="www.geoparker.cn.activity.TourAddHikingActivity">
+</activity>
+<activity android:name="www.geoparker.cn.activity.TourAddRefundActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:name="www.geoparker.cn.activity.TourAddVisitDetailsActivity">
+</activity>
+<activity android:name="www.geoparker.cn.activity.TourAddSubmitActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:name="www.geoparker.cn.activity.TourAddDetailListActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="www.geoparker.cn.activity.TourAddDetailItemActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:name="www.geoparker.cn.activity.TourAddServiceDescriptionActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="www.geoparker.cn.activity.TourAddSuccessActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="www.geoparker.cn.activity.TourAddWebActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="www.geoparker.cn.activity.TourAddCostNoIncludeActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:name="www.geoparker.cn.activity.TourAddCostSettingActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="www.geoparker.cn.activity.TourAddMoneyActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="www.geoparker.cn.activity.TourAddCostIncludeActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:name="www.geoparker.cn.activity.RedPacketMapActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="2" android:name="www.geoparker.cn.activity.FootItemInfoActivity">
+</activity>
+<activity android:name="www.geoparker.cn.activity.ProfileRewardActivity">
+</activity>
+<activity android:name="www.geoparker.cn.activity.RedPacketUnclaimedActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="www.geoparker.cn.activity.RedItemInfoListActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="www.geoparker.cn.activity.RedPacketResultRedActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="www.geoparker.cn.activity.RedPacketResultCouponActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="www.geoparker.cn.activity.RedResultShowActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="www.geoparker.cn.activity.RedPacketResultGiftActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="www.geoparker.cn.activity.ParkTravelActivity">
+</activity>
+<activity android:name="www.geoparker.cn.activity.FootListActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="www.geoparker.cn.activity.UserCenterActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="www.geoparker.cn.activity.SendRedPacketOneActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:name="www.geoparker.cn.activity.InputTipsActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="www.geoparker.cn.activity.SendRedPacketTwoActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name="www.geoparker.cn.activity.RedPacketFootPrintMapActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="www.geoparker.cn.activity.ReceiveRedEnvelopeActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="www.geoparker.cn.activity.RedMapItemInfoActivity">
+</activity>
+<activity android:name="www.geoparker.cn.activity.HotParkListActivity">
+</activity>
+<activity android:name="www.geoparker.cn.activity.ParkItemInfoActivity">
+</activity>
+<activity android:name="www.geoparker.cn.activity.ParkMoreInfoActivity">
+</activity>
+<activity android:name="www.geoparker.cn.activity.ParkMoreRoadItemActivity">
+</activity>
+<activity android:name="www.geoparker.cn.activity.RoadBookMapActivity">
+</activity>
+<activity android:name="www.geoparker.cn.activity.ParkAudioScenicActivity">
+</activity>
+<activity android:name="www.geoparker.cn.activity.PlayVideoActivity">
+</activity>
+<activity android:name="www.geoparker.cn.activity.SearchHotParkActivity">
+</activity>
+<activity android:name="www.geoparker.cn.activity.HomeSearchTypeActivity">
+</activity>
+<activity android:name="www.geoparker.cn.activity.SearchTypeItemActivity">
+</activity>
+<activity android:name="www.geoparker.cn.activity.ProfileRoadBookActivity">
+</activity>
+<activity android:name="com.xys.libzxing.zxing.activity.CaptureActivity">
+</activity>
+<provider android:authorities="com.zmlxj.www.provider" android:exported="false" android:grantUriPermissions="true" android:name="android.support.v4.content.FileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F070000">
+</meta-data>
+</provider>
+<activity android:configChanges="0x00000080" android:name="com.duanqu.qupai.trim.TrimActivity" android:process="@7F090110" android:screenOrientation="1" android:theme="@7F0C0128">
+</activity>
+<activity android:configChanges="0x00000080" android:name="com.duanqu.qupai.trim.VideoFileActivity" android:process="@7F090110" android:screenOrientation="1" android:theme="@7F0C0128">
+</activity>
+<activity android:configChanges="0x00000080" android:name="com.duanqu.qupai.trim.VideoGalleryActivity" android:process="@7F090110" android:screenOrientation="1" android:theme="@7F0C0128">
+</activity>
+<service android:name="com.duanqu.qupai.MediaServer" android:process="@7F090110">
+</service>
+<activity android:configChanges="0x00000080" android:name="com.duanqu.qupai.ui.render.RenderProgressActivity" android:process="@7F090110" android:screenOrientation="1" android:theme="@7F0C0129">
+</activity>
+<activity android:launchMode="1" android:name="com.duanqu.qupai.VideoActivity" android:parentActivityName="com.duanqu.qupai.recorder.@string/qupai_video_activity_parent" android:process="@7F090110" android:screenOrientation="1" android:theme="@7F0C0128" android:windowSoftInputMode="0x00000030">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value="@7F090135">
+</meta-data>
+</activity>
+<activity android:launchMode="1" android:name="com.duanqu.qupai.PhotoActivity" android:parentActivityName="com.duanqu.qupai.recorder.@string/qupai_video_activity_parent" android:process="@7F090110" android:screenOrientation="1" android:theme="@7F0C0128" android:windowSoftInputMode="0x00000030">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value="@7F090135">
+</meta-data>
+</activity>
+<activity android:configChanges="0x00000080" android:name="com.duanqu.qupai.DraftsActivity" android:parentActivityName="com.duanqu.qupai.VideoActivity" android:process="@7F090110" android:screenOrientation="1" android:theme="@7F0C0128">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.duanqu.qupai.VideoActivity">
+</meta-data>
+</activity>
+<meta-data android:name="PUSH_APPID" android:value="ysBBBIBkpB6j2UJPdfuHg9">
+</meta-data>
+<meta-data android:name="PUSH_APPKEY" android:value="Sm2dDd2k937uYPzW3xnHx2">
+</meta-data>
+<meta-data android:name="PUSH_APPSECRET" android:value="zQxCMPu8XJ720YaSDmUiI3">
+</meta-data>
+<service android:exported="true" android:label="NotificationCenter" android:name="com.igexin.sdk.PushService" android:process=":pushservice">
+<intent-filter>
+<action android:name="com.igexin.sdk.action.service.message">
+</action>
+</intent-filter>
+</service>
+<receiver android:name="com.igexin.sdk.PushReceiver">
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+<action android:name="android.intent.action.USER_PRESENT">
+</action>
+<action android:name="com.igexin.sdk.action.refreshls">
+</action>
+<action android:name="android.intent.action.MEDIA_MOUNTED">
+</action>
+<action android:name="android.intent.action.ACTION_POWER_CONNECTED">
+</action>
+<action android:name="android.intent.action.ACTION_POWER_DISCONNECTED">
+</action>
+</intent-filter>
+</receiver>
+<activity android:excludeFromRecents="true" android:exported="false" android:name="com.igexin.sdk.PushActivity" android:process=":pushservice" android:taskAffinity="com.igexin.sdk.PushActivityTask" android:theme="@android:01030010">
+</activity>
+<activity android:excludeFromRecents="true" android:exported="true" android:name="com.igexin.sdk.GActivity" android:process=":pushservice" android:taskAffinity="com.igexin.sdk.PushActivityTask" android:theme="@android:01030010">
+</activity>
+<service android:name="com.igexin.download.DownloadService" android:process=":pushservice">
+</service>
+<receiver android:name="com.igexin.download.DownloadReceiver">
+<intent-filter>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+</receiver>
+<provider android:authorities="downloads.com.zmlxj.www" android:exported="true" android:name="com.igexin.download.DownloadProvider" android:process=":pushservice">
+</provider>
+</application>
+</manifest>

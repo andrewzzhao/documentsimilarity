@@ -1,0 +1,726 @@
+<?xml version="1.0" ?><manifest android:versionCode="38" android:versionName="4.9" package="com.ronghang.finaassistant" platformBuildVersionCode="25" platformBuildVersionName="7.1.1" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="14" android:targetSdkVersion="19">
+</uses-sdk>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.MANAGE_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.RECORD_AUDIO">
+</uses-permission>
+<uses-feature android:name="android.hardware.camera">
+</uses-feature>
+<uses-feature android:name="android.hardware.camera.autofocus">
+</uses-feature>
+<uses-permission android:name="android.permission.CALL_PHONE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.CALL_PHONE">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-permission android:name="android.permission.DISABLE_KEYGUARD">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_DOWNLOAD_MANAGER">
+</uses-permission>
+<uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION">
+</uses-permission>
+<uses-permission android:name="android.permission.EXPAND_STATUS_BAR">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_CONTACTS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.SEND_SMS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_SMS">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SMS">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_SMS">
+</uses-permission>
+<application android:allowBackup="true" android:icon="@7F020254" android:label="@7F060064" android:name="com.ronghang.finaassistant.utils.MyApplication" android:screenOrientation="1" android:theme="@android:0103000D">
+<service android:enabled="true" android:name="com.baidu.location.f" android:process=":remote">
+</service>
+<meta-data android:name="BaiduMobAd_STAT_ID" android:value="e1aee25bab">
+</meta-data>
+<meta-data android:name="BaiduMobAd_CHANNEL" android:value="baidu market">
+</meta-data>
+<meta-data android:name="BaiduMobAd_EXCEPTION_LOG" android:value="true">
+</meta-data>
+<meta-data android:name="BaiduMobAd_SEND_STRATEGY" android:value="APP_START">
+</meta-data>
+<meta-data android:name="BaiduMobAd_ONLY_WIFI" android:value="false">
+</meta-data>
+<meta-data android:name="BaiduMobAd_CELL_LOCATION" android:value="true">
+</meta-data>
+<meta-data android:name="BaiduMobAd_GPS_LOCATION" android:value="true">
+</meta-data>
+<meta-data android:name="BaiduMobAd_WIFI_LOCATION" android:value="true">
+</meta-data>
+<receiver android:name="com.baidu.android.pushservice.PushServiceReceiver" android:process=":bdservice_v1">
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+<action android:name="com.baidu.android.pushservice.action.notification.SHOW">
+</action>
+<action android:name="com.baidu.android.pushservice.action.media.CLICK">
+</action>
+<action android:name="android.intent.action.MEDIA_MOUNTED">
+</action>
+<action android:name="android.intent.action.USER_PRESENT">
+</action>
+<action android:name="android.intent.action.ACTION_POWER_CONNECTED">
+</action>
+<action android:name="android.intent.action.ACTION_POWER_DISCONNECTED">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name="com.baidu.android.pushservice.RegistrationReceiver" android:process=":bdservice_v1">
+<intent-filter>
+<action android:name="com.baidu.android.pushservice.action.METHOD">
+</action>
+<action android:name="com.baidu.android.pushservice.action.BIND_SYNC">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_REMOVED">
+</action>
+<data android:scheme="package">
+</data>
+</intent-filter>
+</receiver>
+<service android:exported="true" android:name="com.baidu.android.pushservice.PushService" android:process=":bdservice_v1">
+<intent-filter>
+<action android:name="com.baidu.android.pushservice.action.PUSH_SERVICE">
+</action>
+</intent-filter>
+</service>
+<service android:exported="true" android:name="com.baidu.android.pushservice.CommandService">
+</service>
+<activity android:launchMode="3" android:name="com.baidu.android.pushservice.PushKeepAlive" android:theme="@android:01030010">
+</activity>
+<meta-data android:name="api_key" android:value="WQQpf5LegsQukk7uoNSAz0NS">
+</meta-data>
+<receiver android:name="com.ronghang.finaassistant.RYPushReceiver">
+<intent-filter>
+<action android:name="com.baidu.android.pushservice.action.MESSAGE">
+</action>
+<action android:name="com.baidu.android.pushservice.action.RECEIVE">
+</action>
+<action android:name="com.baidu.android.pushservice.action.notification.CLICK">
+</action>
+</intent-filter>
+</receiver>
+<meta-data android:name="com.baidu.lbsapi.API_KEY" android:value="8NnGrilxUz7sXCaNfMN098IL">
+</meta-data>
+<activity android:configChanges="0x000004A0" android:name="com.mob.tools.MobUIShell" android:screenOrientation="1" android:theme="@android:01030010" android:windowSoftInputMode="0x00000012">
+<intent-filter>
+<data android:scheme="tencent1104495111">
+</data>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004A0" android:exported="true" android:name="com.ronghang.finaassistant.wxapi.WXEntryActivity" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<activity android:launchMode="2" android:name="com.ronghang.finaassistant.activity.MainActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:launchMode="1" android:name="com.ronghang.finaassistant.activity.UnlockActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ronghang.finaassistant.activity.BuildLockActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.activity.LoginActivity" android:screenOrientation="1" android:theme="@7F080004">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="rongyu100assistant">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.ronghang.finaassistant.activity.GuidanceActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:alwaysRetainTaskState="true" android:clearTaskOnLaunch="false" android:name="com.ronghang.finaassistant.activity.WelcomeActivity" android:screenOrientation="1" android:theme="@7F080004">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+<intent-filter>
+<data android:host="financeassistant" android:scheme="financeassistant">
+</data>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+</intent-filter>
+</activity>
+<activity android:name="com.ronghang.finaassistant.activity.ReGetPwdActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.activity.CreditApplyActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.activity.ChoseByMoneyActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.fragment.SafeSetActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.activity.ChangePwdActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.fragment.AboutActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.activity.ChoseByProductActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.activity.InformatioDetectionActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.activity.CreditApplyProgressActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.activity.MaterailPhotoActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.activity.MaterialApplyHelpActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<service android:name="com.ronghang.finaassistant.common.servers.GestureService">
+</service>
+<activity android:name="com.ronghang.finaassistant.ui.archives.PersonalInfoActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.ui.archives.RelateCompanyInfoActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.activity.CreateApplyActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.activity.CreateApplyByCompanyActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.base.BaseWebActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.activity.CreditResultActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.activity.WebInfoActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.activity.PreviewPhotoActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.activity.AttachmentExplainActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.activity.promotion.PromotionActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.ui.archives.ArchivesInfoActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.ui.archives.ArchivesMemberfeeListsActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.ui.archives.ArchivesCompanyQualificationListActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.ronghang.finaassistant.activity.AttachmentActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.common.CommonActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.activity.CreditRobotActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.ui.archives.ArchivesGalleryActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.ui.usersafe.ForgetPasswodActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.ui.usersafe.ValidationSetpsdActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.ui.usersafe.ChceckPSDActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.ui.usersafe.NewPhoneActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.ui.usersafe.CheckCodeActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.ui.usersafe.SetNewPswActivity" android:screenOrientation="1" android:theme="@7F080004" android:windowSoftInputMode="0x00000014">
+</activity>
+<activity android:name="com.ronghang.finaassistant.ui.product.ProductDetailsActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.ui.product.ExampleActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.ui.product.MaterialExampleActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.ui.product.ProductActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.ui.apply.ChoiceCompanyMainActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.ui.apply.ChioceCompamyActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.ui.apply.CreateCompanyActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.ui.apply.CreateApplyMainActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.ui.apply.SelectProductTypeActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.ui.apply.RobotFormActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.activity.ApplyDetailActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.ui.upload.UploadActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.activity.CoreDataActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.activity.SigningPhotosActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.activity.SignInfoActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.activity.SignBaseInfoActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.activity.SignContractActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.activity.SignContractDetailActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.activity.VideoSampleActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.activity.VideoShowActivity" android:screenOrientation="0" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.ui.archives.ArchivesSelectBorrowManActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.ui.archives.ArchivesPersonalAssetsActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.ui.archives.SearchBankActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.ui.archives.ArchivesAssetsHouseSociusActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.ui.archives.CorporateTaxActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="org.suanhua.grpc.SHGRPCActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="org.suanhua.grpc.WebViewActivity" android:screenOrientation="1">
+</activity>
+<service android:name="org.suanhua.grpc.service.WebParserService" android:process=":grpcservice">
+</service>
+<activity android:name="com.ronghang.finaassistant.ui.contact.OnlineMaterialsActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.ui.contact.OnlineMaterialListActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.ui.contact.ContactDetailActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.ui.contact.OperatorLoginActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.ui.contact.VerifyLoginActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.ui.message.ChatActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.ui.message.GroupDetailActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.ui.message.UserInfoActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<service android:name="com.ronghang.finaassistant.common.servers.TaskService">
+</service>
+<activity android:name="com.ronghang.finaassistant.ui.contact.SimpleCentralBankCreditInvestigationReportActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.ui.sign.SignInActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.ui.product.ProductSearchActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.ui.sign.SearchSignInMemoryActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.ui.sign.SignInMemoryActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.ui.contact.CirculationPeriodActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.rocom.ronghang.finaassistant.ui.sign.SignInSetActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.ui.sign.SignInLocationActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<service android:name="com.ronghang.finaassistant.ui.contact.service.AutoSignInService">
+</service>
+<activity android:name="com.ronghang.finaassistant.ui.userimage.PersonalInfoActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.ui.userimage.SelectPhotoActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.ui.userimage.PreviewImageActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.ui.userimage.HistoryHeadActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.activity.UserRegistActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.common.DCloudWebActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.ui.contact.AccessRecordsToReportActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.ui.contact.ContactRecordActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.ui.questionnaire.BorrowerSurveyActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.ui.questionnaire.CommitResultActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.ui.questionnaire.InvestigationRecordActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.ui.questionnaire.QuesitionnaireFormAcitivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.ui.questionnaire.RecordResultActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.ui.questionnaire.QuesistionnareQuery" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.activity.ApplyDetailTipActivity" android:screenOrientation="1" android:theme="@7F08001A">
+</activity>
+<activity android:name="com.crop.CropImageActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.ui.h5.activity.H5JIMUActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.ui.archives.GetMoreCompanyInfoActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.ui.archives.GetMoreCompanyInfoActivity2" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.ui.archives.GetMoreCompanyInfoActivity3" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.ui.archives.GetMoreCompanyInfoActivity4" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.activity.WhatIsCloudActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.ui.h5.activity.H5RongCatActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.fragment.AddCloudActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.image.ChoiceImageMainActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.ui.archives.mortgage.CanMortgageActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.ui.archives.mortgage.CanMortgageCarActivity" android:screenOrientation="1" android:theme="@7F080004" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:name="com.ronghang.finaassistant.ui.archives.mortgage.CanMortgageHouseActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.ui.archives.mortgage.CarInsuranceAddActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.ui.archives.mortgage.CanMortgageSelectedActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.ui.archives.mortgage.RenewLoansListActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.ui.archives.mortgage.RenewLoansDetailActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.ui.archives.mortgage.HousingOwnerAddActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:launchMode="2" android:name="com.ui.visual.main.activity.MainPageActivity" android:screenOrientation="1" android:theme="@7F080004">
+<intent-filter>
+<data android:host="com.ui.visual.main.activity.MainPageActivity" android:scheme="financeAssistant">
+</data>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+</intent-filter>
+</activity>
+<activity android:name="com.ui.visual.home.activity.FinancingreCommendReportActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ui.visual.home.activity.FinancingreCommendReportDetailActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ui.visual.home.activity.IWantConsultActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ui.visual.home.activity.CreditRecordActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ui.visual.home.activity.GuidancesActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ui.visual.home.activity.ApplyScheduleActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ui.visual.apply.activity.ApplyDetailActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ui.visual.home.activity.LeaveAMessageActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ui.visual.apply.activity.MaterialTakenActvity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ui.visual.apply.activity.AttachmentHelpActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ui.visual.apply.activity.MaterialPhotoActivityNew" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ui.visual.apply.activity.PatchListActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ui.visual.apply.CreditApplyActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ui.visual.apply.OwnChoiceActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ui.visual.apply.RobotReferralConditionActivity" android:screenOrientation="1" android:theme="@7F080004" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:name="com.ui.visual.apply.IncomeStatementActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ui.visual.apply.ChioceCompamyActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ui.visual.apply.CreateCompanyActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:launchMode="1" android:name="com.ui.visual.apply.RobotReferralActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ui.visual.apply.ProductListActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ui.visual.apply.ProductQueryActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ui.visual.upload.UploadActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<service android:name="com.ui.visual.upload.UploadService">
+</service>
+<activity android:name="com.ui.visual.apply.ProductQueryListActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ui.visual.apply.activity.PatchPhotoActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ui.visual.apply.ProductMoreActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.ui.message.MsgCentreActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ui.visual.apply.ProductInfoActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ui.visual.apply.activity.ApplyTemplateDownloadActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ui.visual.apply.ProductDetailActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ui.visual.home.activity.SafeSetActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ui.visual.home.activity.ResetGesturePasswordActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ui.visual.apply.activity.ApplyMaterialNewActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ui.visual.apply.activity.ApplyMaterialSelectedActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.ui.product.MaterialActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ui.visual.photooptimize.activity.HomeUploadDetailActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ui.visual.photooptimize.activity.MaterialPhotographUploadDetailActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ui.visual.photooptimize.activity.MaterialPhotographUploadListActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.activity.SignContractDetailNewActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.ui.questionnaire.DSRMainActiviy" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.ui.questionnaire.CreditCardUseActiviy" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.ui.questionnaire.AddCreditCardUseActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.ui.questionnaire.HaveCreditAndGuaranteeActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.ui.questionnaire.AddHaveCreditAndGuaranteeActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.ui.questionnaire.QuestionnaireTaxActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.ui.questionnaire.QuestionnaireBaseActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ui.visual.apply.LocalProviderServiceActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ui.visual.apply.ProductListNewActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.ui.burse.BurseActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.ui.burse.CashExplainActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.ui.burse.CashWithDrawalActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.ui.burse.ChoiceSendUserActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.ui.burse.DrawalDetailActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.ui.burse.DrawBackActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.ui.burse.ListEnvelopesActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.ui.burse.LuckyMoneyActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.ui.burse.SendLuckMoneyExplainActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.ui.burse.SendRedEnvelopeActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.ui.burse.WithdrawalRecordActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.ui.burse.WaitingDrawActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.ui.burse.TradeHistory" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.ui.burse.TakeCashActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.ui.burse.SingleBurseActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.ui.burse.MyLuckyMoneyActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.pay.RechargeAmountActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.pay.RechargeTypeActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.pay.RechargeResultActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:configChanges="0x000000E0" android:exported="false" android:name="com.alipay.sdk.app.H5PayActivity" android:screenOrientation="3">
+</activity>
+<activity android:configChanges="0x000000E0" android:exported="false" android:name="com.alipay.sdk.auth.AuthActivity" android:screenOrientation="3">
+</activity>
+<activity android:exported="true" android:launchMode="1" android:name="com.ronghang.finaassistant.wxapi.WXPayEntryActivity">
+</activity>
+<activity android:name="com.ronghang.finaassistant.ui.product.DeclareHistoryActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.ui.product.DeclareResultAcitivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.ui.product.DeclareNewProductAcitivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.activity.RegisterNewActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.ui.product.ProductListMainActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.ui.search.activity.SearchActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.fragment.EditPlacePerfectActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.ui.product.ProductFiltrateActivity" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<activity android:name="com.ui.visual.warning.AuthorizationVoiceActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ui.visual.warning.EarlyWarningMainActiviy" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ui.visual.warning.FaceRecognitionActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ui.visual.warning.FaceRecognitionResultActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ui.visual.warning.HistoryForSearchActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ui.visual.warning.HistoryForVerifyActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ui.visual.warning.IDVerificationActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ui.visual.warning.IDVerificationResultActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ui.visual.warning.PreviewPhotoActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ui.visual.warning.VerifyForBankCardActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ui.visual.warning.VerifyForBankCardItemActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ui.visual.warning.VerifyForBankCardResultActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ui.visual.warning.VerifyForEarlyWarningActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ui.visual.warning.VerifyForEarlyWarningItemAcitivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ui.visual.warning.VerifyForEarlyWarningResultActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ui.visual.warning.VerifyForTariffActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.ui.product.DeclareNewOrganizationAcitivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.ui.product.DeclareHistoryOrganizationActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.ui.product.DeclareResultOrganizationAcitivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.ui.product.FinancialOrganizationDetailActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ui.visual.home.activity.ClientTransferApplyActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ui.visual.home.activity.IamXiaoBaiActivity" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<activity android:name="com.ui.visual.home.activity.IWantConsultNewActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ui.visual.home.activity.NoviceReadingActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.fragment.CommitmentLetterActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.fragment.CommitmentLetterAddActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.ui.product.ProductOrganizationListMainActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.ui.search.activity.SearchOrganizationActivity" android:screenOrientation="1" android:theme="@7F080004" android:windowSoftInputMode="0x00000004">
+</activity>
+<activity android:name="com.ui.visual.apply.ReferralTransitionActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.pay.ReferralAmountActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.pay.ReferralResultActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.ui.recommend.activity.AccompanyServiceActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.ui.recommend.activity.ApplyAccompanyServiceActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.ui.search.activity.SearchCommonActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.ui.recommend.activity.FinancialCatIntelligentRecommendedActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.ui.recommend.activity.RegisterHistoryActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.ui.recommend.activity.SpecialistRecommendedActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.ui.recommend.activity.AccompanyHistoryActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ui.visual.home.activity.MyFriendInvitedActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ui.visual.home.activity.SearchResultActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ui.visual.home.activity.MyInviteFriendDetailActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ui.visual.home.activity.CloudShareRegisterByQrcodeActivity" android:screenOrientation="1" android:theme="@7F080004">
+<intent-filter>
+<data android:host="com.ui.visual.home.activity.CloudShareRegisterByQrcodeActivity" android:scheme="financeAssistant">
+</data>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+</intent-filter>
+</activity>
+<activity android:name="com.ui.visual.warning.PhoneVerificationActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ui.visual.warning.PhoneVerificationResultActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ui.visual.home.activity.ExpertRecommendLetterActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ui.visual.home.activity.FinancingreRecommendReportDetailActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ui.visual.home.activity.FinancingreRecommendReportActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.qrcode.activity.CaptureActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.qrcode.activity.ResultActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.qrcode.activity.ResultTextActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.ui.contact.PDFViewActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.ui.userimage.WriteIdCardActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.pay.ApplyPayAmountActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.image.PreviewFolderActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.image.PreviewImageActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ui.visual.home.activity.SuccessfulCaseActivity" android:screenOrientation="1" android:theme="@7F080004">
+</activity>
+<activity android:name="com.ronghang.finaassistant.ui.customPay.CustomPayActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ronghang.finaassistant.ui.customPay.CustomPayRecorderSearch" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ronghang.finaassistant.ui.customPay.PayRecorderActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ronghang.finaassistant.ui.customPay.ProtocolPayActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ronghang.finaassistant.ui.customPay.VerificationPayActivity" android:screenOrientation="1">
+</activity>
+</application>
+</manifest>

@@ -1,0 +1,92 @@
+<?xml version="1.0" ?><manifest android:versionCode="28" android:versionName="4.0.4-prod" package="mmanager.scnx5.com.mitvmanager.prod" platformBuildVersionCode="28" platformBuildVersionName="4.0.4-prod" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="19" android:targetSdkVersion="27">
+</uses-sdk>
+<uses-feature android:name="android.software.leanback" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.touchscreen" android:required="false">
+</uses-feature>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-permission android:name="android.permission.PACKAGE_USAGE_STATS">
+</uses-permission>
+<uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES">
+</uses-permission>
+<application android:allowBackup="true" android:banner="@7F0E0000" android:icon="@7F0E0000" android:label="@7F10001E" android:name="mmanager.scnx5.com.mitvmanager.layar3" android:roundIcon="@7F0E0002" android:supportsRtl="true" android:theme="@7F110006">
+<meta-data android:name="com.bugsnag.android.API_KEY" android:value="c97d4c8632b6243380f5a76dd23b0512">
+</meta-data>
+<service android:name="mmanager.scnx5.com.mitvmanager.FloatingMiTV">
+</service>
+<activity android:name="mmanager.scnx5.com.login.login_activity">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+<category android:name="android.intent.category.LEANBACK_LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:name="mmanager.scnx5.com.authorization.check_authorization">
+</activity>
+<activity android:configChanges="0x00002480" android:name="mmanager.scnx5.com.authorization.logout_main" android:screenOrientation="0">
+</activity>
+<activity android:configChanges="0x00002480" android:name="mmanager.scnx5.com.authorization.newui_logout_main">
+</activity>
+<activity android:configChanges="0x00002480" android:name="mmanager.scnx5.com.mitvmanager.VODGrid.vod_grid_activity" android:screenOrientation="0">
+</activity>
+<activity android:configChanges="0x00002480" android:name="mmanager.scnx5.com.mitvmanager.VODGrid.Book_Activity" android:screenOrientation="6">
+</activity>
+<activity android:configChanges="0x00002480" android:name="mmanager.scnx5.com.mitvmanager.RedBoxGrid.redbox_grid_activity" android:screenOrientation="6">
+</activity>
+<activity android:configChanges="0x00002480" android:name="mmanager.scnx5.com.mitvmanager.livetv_menu" android:screenOrientation="6">
+</activity>
+<activity android:configChanges="0x00002480" android:name="mmanager.scnx5.com.mitvmanager.Exoplayer.exoplayer_layar" android:screenOrientation="6">
+</activity>
+<activity android:configChanges="0x00002480" android:name="mmanager.scnx5.com.mitvmanager.Exoplayer.exoplayer_layar_vod" android:screenOrientation="0">
+</activity>
+<activity android:configChanges="0x00002480" android:name="mmanager.scnx5.com.mitvmanager.Exoplayer.android_player_vod" android:screenOrientation="0">
+</activity>
+<activity android:configChanges="0x00002480" android:name="mmanager.scnx5.com.mitvmanager.Exoplayer.vlc_player_livetv" android:screenOrientation="0">
+</activity>
+<activity android:configChanges="0x00002480" android:name="mmanager.scnx5.com.mitvmanager.Exoplayer.VLC_VOD_RTMP" android:screenOrientation="0">
+</activity>
+<activity android:configChanges="0x00002480" android:name="mmanager.scnx5.com.mitvmanager.Exoplayer.exoplayer_layar_vod_new_code" android:screenOrientation="6">
+</activity>
+<provider android:authorities="mmanager.scnx5.com.mitvmanager.prod.provider" android:exported="false" android:grantUriPermissions="true" android:name="android.support.v4.content.FileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F140000">
+</meta-data>
+</provider>
+<meta-data android:name="io.fabric.ApiKey" android:value="75ee24d6c3cc3bdd4ca097dcea5ef25f701231f1">
+</meta-data>
+<receiver android:name="mmanager.scnx5.com.mitvmanager.ShutdownReceiver">
+<intent-filter>
+<action android:name="android.intent.action.ACTION_SHUTDOWN">
+</action>
+</intent-filter>
+</receiver>
+<activity android:configChanges="0x00002480" android:name="mmanager.scnx5.com.authorization.user_setting">
+</activity>
+<provider android:authorities="mmanager.scnx5.com.mitvmanager.prod.CrashReporterInitProvider" android:enabled="true" android:exported="false" android:name="com.balsikandar.crashreporter.CrashReporterInitProvider">
+</provider>
+<activity android:launchMode="2" android:name="com.balsikandar.crashreporter.ui.CrashReporterActivity" android:taskAffinity="com.balsikandar.android.task" android:theme="@7F1100A9">
+</activity>
+<activity android:name="com.balsikandar.crashreporter.ui.LogMessageActivity" android:parentActivityName="com.balsikandar.crashreporter.ui.CrashReporterActivity" android:theme="@7F1100A9">
+</activity>
+<activity android:name="com.karumi.dexter.DexterActivity" android:theme="@7F1100AA">
+</activity>
+<meta-data android:name="com.bugsnag.android.BUILD_UUID" android:value="3795ca13-c474-4ec2-b8b1-29ee8c970188">
+</meta-data>
+</application>
+</manifest>

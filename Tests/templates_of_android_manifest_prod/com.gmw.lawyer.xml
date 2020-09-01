@@ -1,0 +1,522 @@
+<?xml version="1.0" ?><manifest android:versionCode="13" android:versionName="1.10.22" package="com.gmw.lawyer" platformBuildVersionCode="23" platformBuildVersionName="6.0-2704002" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="15" android:targetSdkVersion="23">
+</uses-sdk>
+<supports-screens android:anyDensity="true" android:largeScreens="true" android:normalScreens="true" android:resizeable="true" android:smallScreens="true" android:xlargeScreens="true">
+</supports-screens>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS">
+</uses-permission>
+<uses-permission android:name="android.permission.RECORD_AUDIO">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_APN_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-permission android:name="android.permission.BROADCAST_PACKAGE_ADDED">
+</uses-permission>
+<uses-permission android:name="android.permission.BROADCAST_PACKAGE_CHANGED">
+</uses-permission>
+<uses-permission android:name="android.permission.BROADCAST_PACKAGE_INSTALL">
+</uses-permission>
+<uses-permission android:name="android.permission.BROADCAST_PACKAGE_REPLACED">
+</uses-permission>
+<uses-permission android:name="android.permission.RESTART_PACKAGES">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.SEND_SMS">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_SMS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_SMS">
+</uses-permission>
+<uses-permission android:name="android.permission.CALL_PHONE">
+</uses-permission>
+<uses-permission android:name="android.permission.USE_CREDENTIALS">
+</uses-permission>
+<uses-permission android:name="android.permission.MANAGE_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_LOGS">
+</uses-permission>
+<uses-permission android:name="android.permission.SET_DEBUG_APP">
+</uses-permission>
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-permission android:name="android.permission.BLUETOOTH">
+</uses-permission>
+<uses-feature android:name="android.hardware.camera">
+</uses-feature>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERACT_ACROSS_USERS_FULL">
+</uses-permission>
+<uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS">
+</uses-permission>
+<uses-permission android:name="com.google.android.apps.photos.permission.GOOGLE_PHOTOS">
+</uses-permission>
+<application android:allowBackup="true" android:fullBackupContent="true" android:icon="@7F020187" android:label="@7F070108" android:name="com.gmw.lawyer.activity.LawyerApplication" android:supportsRtl="true" android:theme="@7F0A008D">
+<meta-data android:name="UMENG_APPKEY" android:value="5746ae6b67e58e85d5001610">
+</meta-data>
+<meta-data android:name="UMENG_MESSAGE_SECRET" android:value="1668e62eac9ef8af613d73ee55f06deb">
+</meta-data>
+<meta-data android:name="UMENG_CHANNEL" android:value="tencent">
+</meta-data>
+<meta-data android:name="BUGLY_APPID" android:value="72adbb0480">
+</meta-data>
+<meta-data android:name="BUGLY_APP_VERSION" android:value="V1.0.1">
+</meta-data>
+<meta-data android:name="BUGLY_APP_CHANNEL" android:value="tencent">
+</meta-data>
+<meta-data android:name="BUGLY_ENABLE_DEBUG" android:value="false">
+</meta-data>
+<receiver android:exported="false" android:name="com.umeng.message.NotificationProxyBroadcastReceiver">
+</receiver>
+<receiver android:name="com.umeng.message.SystemReceiver" android:process=":push">
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_REMOVED">
+</action>
+<data android:scheme="package">
+</data>
+</intent-filter>
+</receiver>
+<receiver android:exported="false" android:name="com.umeng.message.MessageReceiver" android:process=":push">
+<intent-filter>
+<action android:name="org.agoo.android.intent.action.RECEIVE">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name="com.umeng.message.ElectionReceiver" android:process=":push">
+<intent-filter>
+<action android:name="org.agoo.android.intent.action.ELECTION_RESULT_V4">
+</action>
+<category android:name="umeng">
+</category>
+</intent-filter>
+</receiver>
+<receiver android:exported="false" android:name="com.umeng.message.RegistrationReceiver">
+<intent-filter>
+<action android:name="com.gmw.lawyer.intent.action.COMMAND">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name="com.umeng.message.UmengMessageBootReceiver">
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+</intent-filter>
+</receiver>
+<service android:exported="true" android:label="PushService" android:name="com.umeng.message.UmengService" android:process=":push">
+<intent-filter>
+<action android:name="com.gmw.lawyer.intent.action.START">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="com.gmw.lawyer.intent.action.COCKROACH">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="org.agoo.android.intent.action.PING_V4">
+</action>
+<category android:name="umeng">
+</category>
+</intent-filter>
+</service>
+<service android:name="com.umeng.message.UmengIntentService" android:process=":push">
+</service>
+<service android:exported="true" android:name="com.umeng.message.UmengMessageIntentReceiverService" android:process=":push">
+<intent-filter>
+<action android:name="org.android.agoo.client.MessageReceiverService">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="org.android.agoo.client.ElectionReceiverService">
+</action>
+</intent-filter>
+</service>
+<service android:exported="false" android:name="com.umeng.message.UmengMessageCallbackHandlerService">
+<intent-filter>
+<action android:name="com.umeng.messge.registercallback.action">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="com.umeng.message.unregistercallback.action">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="com.umeng.message.message.handler.action">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="com.umeng.message.autoupdate.handler.action">
+</action>
+</intent-filter>
+</service>
+<service android:exported="false" android:name="com.umeng.message.UmengDownloadResourceService">
+</service>
+<service android:exported="false" android:name="com.umeng.message.local.UmengLocalNotificationService">
+</service>
+<receiver android:name="com.gmw.lawyer.listener.UmengPushReceiver">
+<intent-filter>
+<action android:name="com.gmw.lawyer.listener.UmengPushReceiver">
+</action>
+</intent-filter>
+</receiver>
+<activity android:configChanges="0x000000A0" android:name="com.gmw.lawyer.activity.main.SplashScreenActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:launchMode="2" android:name="com.gmw.lawyer.activity.main.HomeActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.gmw.lawyer.activity.main.WebviewActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.gmw.lawyer.activity.lawyer.LawyerDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.gmw.lawyer.activity.lawyer.LawyerCertifyActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name="com.gmw.lawyer.activity.goods.ProbonoDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.gmw.lawyer.activity.cases.CaseDetailActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.gmw.lawyer.activity.goods.ServerDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.gmw.lawyer.activity.goods.ServerListActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.gmw.lawyer.activity.goods.ReleaseServerFirstActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name="com.gmw.lawyer.activity.goods.LawyerServerListActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.gmw.lawyer.activity.goods.ReleaseServerSecondActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:name="com.gmw.lawyer.activity.goods.ModifyServerSecondActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:name="com.gmw.lawyer.activity.personal.LoginNewActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name="com.gmw.lawyer.activity.personal.LoginPasswordActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:launchMode="1" android:name="com.gmw.lawyer.activity.personal.EnterIntoActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name="com.gmw.lawyer.activity.personal.LoginForgetActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name="com.gmw.lawyer.activity.personal.AboutNewActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name="com.gmw.lawyer.activity.question.BusinessActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name="com.gmw.lawyer.activity.question.TreatyAcyivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name="com.gmw.lawyer.activity.question.AccountListActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name="com.gmw.lawyer.activity.question.IntegralActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name="com.gmw.lawyer.activity.cases.CaseHotActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:launchMode="1" android:name="com.gmw.lawyer.activity.question.AccountLawyListActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name="com.gmw.lawyer.activity.question.WithdrawActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:launchMode="1" android:name="com.gmw.lawyer.activity.question.RedpacketActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name="com.gmw.lawyer.activity.personal.SystemSettingsActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name="com.gmw.lawyer.activity.personal.PersonalDataActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name="com.gmw.lawyer.activity.personal.AddressModifyActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.gmw.lawyer.activity.personal.NicknameModifyActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.gmw.lawyer.activity.personal.PasswordModifyActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.gmw.lawyer.activity.personal.RealnameCertifyActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.gmw.lawyer.activity.personal.RealnameStatusActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.gmw.lawyer.activity.personal.EmailModifyActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.gmw.lawyer.activity.personal.ResetPasswordActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.gmw.lawyer.activity.personal.LawyerJudgeListActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.gmw.lawyer.activity.personal.LawyerCollectListActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.gmw.lawyer.activity.document.LawyerDocListActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.gmw.lawyer.activity.document.DocDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.gmw.lawyer.activity.document.DocumentListActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.gmw.lawyer.activity.question.FeedbackActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.gmw.lawyer.activity.order.OrderJudgeActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name="com.gmw.lawyer.activity.order.OrderConfirmActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name="com.gmw.lawyer.activity.help.HelpDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.gmw.lawyer.activity.help.ExpressActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.gmw.lawyer.activity.help.ForHelpDetailsActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.gmw.lawyer.activity.help.HelpReleaseActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:name="com.gmw.lawyer.activity.help.HelpSelectCategoryActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.gmw.lawyer.activity.help.LawyerHelpActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.gmw.lawyer.activity.message.HelpMsgListActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.gmw.lawyer.activity.message.OrderMsgListActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.gmw.lawyer.activity.message.QuestionMsgListActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.gmw.lawyer.activity.message.ServiceMsgListActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.gmw.lawyer.activity.message.NewjudgeMsgListActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.gmw.lawyer.activity.message.InfoMsgListActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.gmw.lawyer.activity.message.SystemMessageActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="2" android:name="com.tencent.tauth.AuthActivity" android:noHistory="true">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="tencent100424468">
+</data>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.tencent.connect.common.AssistActivity" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x000000A0" android:exported="false" android:name="com.sina.weibo.sdk.component.WeiboSdkBrowser" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:launchMode="1" android:name="com.gmw.lawyer.activity.personal.ConversationActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:host="com.gmw.lawyer" android:pathPrefix="/conversation" android:scheme="rong">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.gmw.lawyer.activity.personal.ConversationListActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:host="com.gmw.lawyer" android:pathPrefix="/conversationlist" android:scheme="rong">
+</data>
+</intent-filter>
+</activity>
+<receiver android:exported="true" android:name="com.gmw.lawyer.model.service.RongIMNotificationReceiver">
+<intent-filter>
+<action android:name="io.rong.push.intent.MESSAGE_ARRIVED">
+</action>
+<action android:name="io.rong.push.intent.MI_MESSAGE_ARRIVED">
+</action>
+<action android:name="io.rong.push.intent.MESSAGE_CLICKED">
+</action>
+<action android:name="io.rong.push.intent.MI_MESSAGE_CLICKED">
+</action>
+</intent-filter>
+</receiver>
+<activity android:configChanges="0x000004A0" android:exported="true" android:name="com.gmw.lawyer.wxapi.WXEntryActivity" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<activity android:exported="true" android:launchMode="1" android:name="com.gmw.lawyer.wxapi.WXPayEntryActivity" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x000004E0" android:exported="false" android:name="com.alipay.sdk.app.H5PayActivity" android:screenOrientation="3" android:theme="@android:01030010" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:configChanges="0x000000E0" android:exported="false" android:name="com.alipay.sdk.auth.AuthActivity" android:screenOrientation="3" android:theme="@android:01030010">
+</activity>
+<activity android:name="com.gmw.lawyer.activity.goods.SearchActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:name="com.gmw.lawyer.activity.main.GuideActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.gmw.lawyer.activity.order.OrderListActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.gmw.lawyer.activity.order.OrderDetailXActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.gmw.lawyer.activity.document.ContractDemoActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.gmw.lawyer.activity.document.MyDocActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.gmw.lawyer.activity.document.ContractDemoDetailActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:name="com.gmw.lawyer.activity.goods.BuyServiceActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.gmw.lawyer.activity.lawyer.LawyerProductActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.gmw.lawyer.activity.cases.CaseListActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.gmw.lawyer.activity.goods.RankingListActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="乥戉" android:name="com.gmw.lawyer.activity.document.FileManagerActivity">
+</activity>
+<activity android:label="申㸀�" android:launchMode="1" android:name="com.gmw.lawyer.activity.order.RefundActivity" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:name="com.gmw.lawyer.activity.document.MyDocDetailActivity">
+</activity>
+<activity android:label="申㸀�" android:launchMode="1" android:name="com.gmw.lawyer.activity.order.QuitOrderActivity" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:label="䝖橲ݒ�" android:name="com.gmw.lawyer.activity.image.ImageCutActivity">
+</activity>
+<activity android:label="䝖ॲ�" android:name="com.gmw.lawyer.activity.image.SingleChoiceAlbumActivity">
+</activity>
+ .
+
+<receiver android:enabled="true" android:exported="true" android:name="com.gmw.lawyer.activity.personal.UpdataBroadcastReceiver">
+</receiver>
+<activity android:configChanges="0x000004A0" android:name="com.gmw.lawyer.activity.lawyer.LawyerNewCertifyActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.gmw.lawyer.activity.personal.BioActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.gmw.lawyer.activity.message.CommentDetailActivity">
+</activity>
+<activity android:name="com.gmw.lawyer.activity.event.EventListActivity">
+</activity>
+<activity android:name="com.gmw.lawyer.activity.event.EventDetail01Activity">
+</activity>
+<activity android:name="com.gmw.lawyer.activity.event.EventDetail02Activity" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name="com.gmw.lawyer.activity.question.InstructionsActivity">
+</activity>
+<activity android:name="io.rong.imkit.activity.PictureSelectorActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="io.rong.imkit.activity.PicturePreviewActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="io.rong.imkit.tools.RongWebviewActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="io.rong.imkit.intent.action.webview">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+<intent-filter>
+<data android:host="*" android:scheme="http">
+</data>
+<data android:host="*" android:scheme="https">
+</data>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000A0" android:name="io.rong.imkit.widget.provider.TakingPicturesActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="io.rong.imkit.activity.PicturePagerActivity" android:theme="@android:01030007">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="io.rong.imkit.mention.MemberMentionedActivity" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name="io.rong.imkit.activity.FileManagerActivity">
+</activity>
+<activity android:name="io.rong.imkit.activity.FileListActivity">
+</activity>
+<activity android:name="io.rong.imkit.activity.FilePreviewActivity">
+</activity>
+<service android:exported="false" android:name="io.rong.push.core.PushRegistrationService">
+</service>
+<service android:exported="true" android:name="io.rong.push.core.MessageHandleService">
+</service>
+<service android:exported="false" android:name="io.rong.push.PushService" android:process="io.rong.push">
+</service>
+<receiver android:name="io.rong.push.PushReceiver" android:process="io.rong.push">
+<intent-filter>
+<action android:name="io.rong.push.intent.action.HEART_BEAT">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.USER_PRESENT">
+</action>
+<action android:name="android.intent.action.ACTION_POWER_CONNECTED">
+</action>
+<action android:name="android.intent.action.ACTION_POWER_DISCONNECTED">
+</action>
+</intent-filter>
+</receiver>
+<meta-data android:name="RONG_CLOUD_APP_KEY" android:value="pwe86ga5eo3g6">
+</meta-data>
+<service android:exported="true" android:name="io.rong.imlib.ipc.RongService" android:process=":ipc">
+</service>
+<service android:exported="true" android:name="io.rong.imlib.ReConnectService">
+</service>
+<receiver android:exported="true" android:name="io.rong.imlib.ConnectChangeReceiver">
+</receiver>
+<receiver android:name="io.rong.imlib.HeartbeatReceiver" android:process=":ipc">
+</receiver>
+<activity android:configChanges="0x000000A0" android:launchMode="1" android:name="com.sobot.chat.activity.SobotChatActivity" android:screenOrientation="1" android:theme="@7F0A0190" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:configChanges="0x000000A0" android:hardwareAccelerated="false" android:name="com.sobot.chat.activity.SobotPhotoActivity" android:screenOrientation="1" android:theme="@7F0A0190">
+</activity>
+<activity android:name="com.sobot.chat.activity.WebViewActivity" android:screenOrientation="1" android:theme="@7F0A0190" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.sobot.chat.activity.DCRCActivity" android:screenOrientation="1" android:theme="@7F0A0199" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.sobot.chat.activity.SobotSkillGroupActivity" android:theme="@7F0A019A">
+</activity>
+<activity android:name="com.sobot.chat.activity.SobotPostMsgActivity" android:screenOrientation="1" android:theme="@7F0A0190" android:windowSoftInputMode="0x00000010">
+</activity>
+<service android:exported="true" android:label="SobotChatTCPServer" android:name="com.sobot.chat.socket.channel.SobotTCPServer" android:process=":sobotChatPush">
+</service>
+<service android:exported="true" android:label="SobotAssistService" android:name="com.sobot.chat.socket.channel.SobotTCPServer$AssistService" android:process=":sobotChatPush">
+</service>
+<service android:name="com.sobot.chat.server.SobotSessionServer">
+</service>
+</application>
+</manifest>

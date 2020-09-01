@@ -1,0 +1,172 @@
+<?xml version="1.0" ?><manifest android:installLocation="1" android:versionCode="104" android:versionName="0.44.4" package="net.rgruet.android.g3watchdog" platformBuildVersionCode="25" platformBuildVersionName="7.1.1" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="14" android:targetSdkVersion="22">
+</uses-sdk>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-permission android:name="android.permission.PACKAGE_USAGE_STATS">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-feature android:name="android.hardware.telephony" android:required="false">
+</uses-feature>
+<supports-screens android:anyDensity="true" android:largeScreens="true" android:normalScreens="true" android:resizeable="true" android:smallScreens="true" android:xlargeScreens="true">
+</supports-screens>
+<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE">
+</uses-permission>
+<permission android:name="net.rgruet.android.g3watchdog.permission.C2D_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="net.rgruet.android.g3watchdog.permission.C2D_MESSAGE">
+</uses-permission>
+<application android:allowBackup="true" android:icon="@7F020001" android:label="@7F050137" android:name="net.rgruet.android.g3watchdog.MyApplication" android:theme="@7F070000">
+<activity android:label="@7F050137" android:name="net.rgruet.android.g3watchdog.MainActivity" android:taskAffinity=":ThreeGWatchdogProAffinity">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:name="net.rgruet.android.g3watchdog.WelcomeActivity">
+</activity>
+<activity android:name="net.rgruet.android.g3watchdog.report.UsageReportActivity" android:taskAffinity=":ThreeGWatchdogProAffinity" android:theme="@7F070001">
+<intent-filter>
+<action android:name="net.rgruet.android.g3watchdog.ACTION_NET_DATA_CHANGED">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:name="net.rgruet.android.g3watchdog.rtt.RealTimeTrafficActivity" android:taskAffinity=":ThreeGWatchdogProAffinity" android:theme="@7F070001">
+</activity>
+<activity android:name="net.rgruet.android.g3watchdog.settings.SettingsActivity" android:taskAffinity=":ThreeGWatchdogProAffinity">
+</activity>
+<activity android:name="net.rgruet.android.g3watchdog.history.TrafficHistoryActivity" android:taskAffinity=":ThreeGWatchdogProAffinity">
+</activity>
+<activity android:name="net.rgruet.android.g3watchdog.widget.DisablerWidgetConfiguratorActivity">
+<intent-filter>
+<action android:name="android.appwidget.action.APPWIDGET_CONFIGURE">
+</action>
+</intent-filter>
+</activity>
+<activity android:name="net.rgruet.android.g3watchdog.util.UtilDialogActivity" android:theme="@android:0103000B">
+</activity>
+<activity android:name="net.rgruet.android.g3watchdog.net.disabling.ServiceInstallOrUninstallActivity" android:theme="@android:0103000B">
+</activity>
+<activity android:name="net.rgruet.android.g3watchdog.report.UsageReportActivity$SelectTestActivity" android:taskAffinity=":ThreeGWatchdogProAffinity" android:theme="@android:0103000B">
+</activity>
+<activity android:excludeFromRecents="true" android:finishOnTaskLaunch="true" android:launchMode="3" android:name="org.acra.CrashReportDialog" android:theme="@android:0103000B">
+</activity>
+<service android:enabled="true" android:exported="false" android:label="@7F050149" android:name="net.rgruet.android.g3watchdog.service.NetMonitorService">
+</service>
+<receiver android:exported="false" android:name="net.rgruet.android.g3watchdog.BootCompletedIntentReceiver">
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:exported="false" android:name="net.rgruet.android.g3watchdog.UpdateMgr$PackageReplacedIntentReceiver">
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_REPLACED">
+</action>
+<data android:path="net.rgruet.android.g3watchdog" android:scheme="package">
+</data>
+</intent-filter>
+</receiver>
+<receiver android:exported="false" android:name="net.rgruet.android.g3watchdog.service.NetMonitorServiceLifeChecker">
+<intent-filter>
+<action android:name="net.rgruet.android.g3watchdog.ACTION_CHECK_SERVICE_ALIVE">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:exported="true" android:label="@7F05014E" android:name="net.rgruet.android.g3watchdog.widget.G3DogWidgetProvider">
+<intent-filter>
+<action android:name="net.rgruet.android.g3watchdog.ACTION_NET_DATA_CHANGED">
+</action>
+<action android:name="net.rgruet.android.g3watchdog.ACTION_ROAMING_STATUS_CHANGED">
+</action>
+<action android:name="net.rgruet.android.g3watchdog.ACTION_SETTINGS_CHANGED">
+</action>
+<action android:name="android.appwidget.action.APPWIDGET_UPDATE">
+</action>
+</intent-filter>
+<meta-data android:name="android.appwidget.provider" android:resource="@7F040002">
+</meta-data>
+</receiver>
+<receiver android:exported="true" android:label="@7F050108" android:name="net.rgruet.android.g3watchdog.widget.G3DogWidgetBigProvider">
+<intent-filter>
+<action android:name="net.rgruet.android.g3watchdog.ACTION_NET_DATA_CHANGED">
+</action>
+<action android:name="net.rgruet.android.g3watchdog.ACTION_ROAMING_STATUS_CHANGED">
+</action>
+<action android:name="net.rgruet.android.g3watchdog.ACTION_SETTINGS_CHANGED">
+</action>
+<action android:name="android.appwidget.action.APPWIDGET_UPDATE">
+</action>
+</intent-filter>
+<meta-data android:name="android.appwidget.provider" android:resource="@7F040001">
+</meta-data>
+</receiver>
+<receiver android:exported="true" android:label="@7F050135" android:name="net.rgruet.android.g3watchdog.widget.DisablerWidgetProvider">
+<intent-filter>
+<action android:name="net.rgruet.android.g3watchdog.ACTION_MOBILE_DATA_ENABLED_CHANGED">
+</action>
+<action android:name="android.appwidget.action.APPWIDGET_UPDATE">
+</action>
+</intent-filter>
+<meta-data android:name="android.appwidget.provider" android:resource="@7F040000">
+</meta-data>
+</receiver>
+<receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementReceiver">
+</receiver>
+<receiver android:enabled="true" android:exported="true" android:name="com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver" android:permission="android.permission.INSTALL_PACKAGES">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementService">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementJobService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<receiver android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+<category android:name="net.rgruet.android.g3watchdog">
+</category>
+</intent-filter>
+</receiver>
+<receiver android:exported="false" android:name="com.google.firebase.iid.FirebaseInstanceIdInternalReceiver">
+</receiver>
+<service android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdService">
+<intent-filter android:priority="-500">
+<action android:name="com.google.firebase.INSTANCE_ID_EVENT">
+</action>
+</intent-filter>
+</service>
+<provider android:authorities="net.rgruet.android.g3watchdog.firebaseinitprovider" android:exported="false" android:initOrder="100" android:name="com.google.firebase.provider.FirebaseInitProvider">
+</provider>
+<meta-data android:name="com.google.android.gms.version" android:value="@7F0A0000">
+</meta-data>
+<provider android:authorities="net.rgruet.android.g3watchdog.crashlyticsinitprovider" android:exported="false" android:initOrder="100" android:name="com.crashlytics.android.CrashlyticsInitProvider">
+</provider>
+</application>
+</manifest>

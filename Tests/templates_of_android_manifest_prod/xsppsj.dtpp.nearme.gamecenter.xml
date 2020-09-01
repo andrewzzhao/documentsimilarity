@@ -1,0 +1,192 @@
+<?xml version="1.0" ?><manifest android:versionCode="15" android:versionName="15.0" package="xsppsj.dtpp.nearme.gamecenter" platformBuildVersionCode="15" platformBuildVersionName="15.000000" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:maxSdkVersion="28" android:minSdkVersion="15" android:targetSdkVersion="27">
+</uses-sdk>
+<uses-feature android:glEsVersion="0x00020000">
+</uses-feature>
+<uses-feature android:name="android.hardware.touchscreen" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.touchscreen.multitouch" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.touchscreen.multitouch.distinct" android:required="false">
+</uses-feature>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="android.permission.USE_CREDENTIALS">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<application android:allowBackup="true" android:icon="@7F060062" android:label="@7F0A001D" android:name="cool.uuu.MyApplication" android:supportsRtl="true">
+<activity android:configChanges="0x40003FFF" android:hardwareAccelerated="false" android:label="@7F0A001D" android:launchMode="2" android:name="cool.uuu.UnityPlayerActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+<category android:name="android.intent.category.LEANBACK_LAUNCHER">
+</category>
+</intent-filter>
+<meta-data android:name="unityplayer.UnityActivity" android:value="true">
+</meta-data>
+</activity>
+<meta-data android:name="unity.build-id" android:value="1cce44f2-0744-4432-9599-868971a5bc43">
+</meta-data>
+<meta-data android:name="unity.splash-mode" android:value="0">
+</meta-data>
+<meta-data android:name="unity.splash-enable" android:value="true">
+</meta-data>
+<service android:name="coolsoft.smsPack.DownloadServiceTemp">
+</service>
+<provider android:authorities="xsppsj.dtpp.nearme.gamecenter.fileprovider" android:exported="false" android:grantUriPermissions="true" android:name="android.support.v4.content.FileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F0D0000">
+</meta-data>
+</provider>
+<receiver android:name="coolsoft.smsPack.HomeWatcherReceiver">
+<intent-filter>
+<action android:name="android.intent.action.CLOSE_SYSTEM_DIALOGS">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name="coolsoft.smsPack.HxHomeWatcherReceiver">
+<intent-filter>
+<action android:name="android.intent.action.CLOSE_SYSTEM_DIALOGS">
+</action>
+</intent-filter>
+</receiver>
+<activity android:name="coolsoft.smsPack.SplashActivity" android:screenOrientation="1" android:theme="@android:0103000E">
+</activity>
+<activity android:name="coolsoft.smsPack.LandSplashActivity" android:screenOrientation="0" android:theme="@android:0103000E">
+</activity>
+<uses-library android:name="org.apache.http.legacy" android:required="false">
+</uses-library>
+<meta-data android:name="debug_mode" android:value="false">
+</meta-data>
+<meta-data android:name="is_offline_game" android:value="true">
+</meta-data>
+<meta-data android:name="app_key" android:value="a6a4f8ba3f41477b98340087a26bda57">
+</meta-data>
+<activity android:configChanges="0x000004A0" android:name="com.nearme.game.sdk.component.proxy.ProxyActivity" android:process=":gcsdk" android:theme="@7F0B010C">
+</activity>
+<service android:name="com.nearme.game.sdk.component.proxy.ProxyApiService" android:priority="1000" android:process=":gcsdk">
+</service>
+<receiver android:exported="true" android:name="com.nearme.game.sdk.component.proxy.ProxyUserCenterOperateReceiver" android:process=":gcsdk">
+<intent-filter>
+<action android:name="com.oppo.usercenter.account_login">
+</action>
+<action android:name="com.oppo.usercenter.account_logout">
+</action>
+<action android:name="com.oppo.usercenter.modify_name">
+</action>
+<action android:name="com.usercenter.action.receiver.account_login">
+</action>
+<action android:name="com.heytap.usercenter.account_logout">
+</action>
+</intent-filter>
+</receiver>
+<activity android:name="com.oppo.mobad.activity.AdActivity">
+</activity>
+<service android:name="com.oppo.mobad.service.AdService">
+</service>
+<activity android:configChanges="0x000004A0" android:name="com.oppo.mobad.activity.VideoActivity" android:screenOrientation="1">
+</activity>
+<service android:exported="false" android:name="com.pfu.popstar.DownloadService">
+</service>
+<service android:exported="false" android:name="com.ij.f.d.download.service.FADDLService">
+</service>
+<activity android:configChanges="0x000004B0" android:name="com.pfu.popstar.ADActivity">
+</activity>
+<activity android:configChanges="0x000004B0" android:name="com.pfu.popstar.PortraitADActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004B0" android:name="com.pfu.popstar.LandscapeADActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004B0" android:name="com.umeng.analytics.prov.v.view.AdVideoActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004B0" android:name="com.umeng.analytics.prov.v.view.AdVideoLandscapeActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004B0" android:name="com.ij.f.d.ad.KSVideoAdActivity" android:screenOrientation="1" android:theme="@android:0103000E">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="com.bzakf.sdk.abfcore.activity.TTLandingPageActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="com.bzakf.sdk.abfcore.activity.TTPlayableLandingPageActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="com.bzakf.sdk.abfcore.activity.TTVideoLandingPageActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="com.bzakf.sdk.abfcore.activity.TTRewardVideoActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="com.bzakf.sdk.abfcore.activity.TTFullScreenVideoActivity">
+</activity>
+<activity android:launchMode="2" android:name="com.bzakf.sdk.abfcore.activity.TTDelegateActivity" android:theme="@android:01030010">
+</activity>
+<service android:name="com.bzakf.sdk.abfcore.multipro.aidl.BinderPoolService">
+</service>
+<service android:name="com.ss.android.socialbase.downloader.notification.DownloadNotificationService">
+</service>
+<service android:name="com.ss.android.socialbase.downloader.downloader.DownloadService">
+</service>
+<service android:name="com.ss.android.socialbase.downloader.downloader.IndependentProcessDownloadService" android:process=":downloader">
+<intent-filter>
+<action android:name="com.ss.android.socialbase.downloader.remote">
+</action>
+</intent-filter>
+</service>
+<service android:name="com.ss.android.socialbase.downloader.impls.DownloadHandleService">
+</service>
+<service android:name="com.ss.android.socialbase.appdownloader.DownloadHandlerService">
+</service>
+<activity android:launchMode="2" android:name="com.ss.android.socialbase.appdownloader.view.DownloadSizeLimitActivity" android:theme="@android:0103000B">
+</activity>
+<activity android:launchMode="2" android:name="com.ss.android.socialbase.appdownloader.view.DownloadTaskDeleteActivity" android:theme="@android:0103000B">
+</activity>
+<activity android:launchMode="2" android:name="com.ss.android.downloadlib.activity.TTDelegateActivity" android:theme="@android:01030010">
+</activity>
+<receiver android:name="com.ss.android.downloadlib.core.download.DownloadReceiver">
+</receiver>
+<provider android:authorities="xsppsj.dtpp.nearme.gamecenter.TTMultiProvider" android:exported="false" android:name="com.bzakf.sdk.abfcore.multipro.TTMultiProvider">
+</provider>
+<provider android:authorities="xsppsj.dtpp.nearme.gamecenter.TTFileProvider" android:exported="false" android:grantUriPermissions="true" android:name="com.bzakf.sdk.abfcore.TTFileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F0D0002">
+</meta-data>
+</provider>
+<activity android:name="coolsoft.smsPack.Splash2Activity" android:screenOrientation="1" android:theme="@android:01030007">
+</activity>
+</application>
+</manifest>

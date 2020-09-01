@@ -1,0 +1,706 @@
+<?xml version="1.0" ?><manifest android:versionCode="204010" android:versionName="2.4.1" package="com.vct.ccc" platformBuildVersionCode="24" platformBuildVersionName="7.000000" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="15" android:targetSdkVersion="22">
+</uses-sdk>
+<uses-feature android:name="android.hardware.camera">
+</uses-feature>
+<uses-feature android:name="android.hardware.autofocus">
+</uses-feature>
+<uses-feature android:name="android.hardware.audio.low_latency">
+</uses-feature>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-permission android:name="android.permission.RECORD_AUDIO">
+</uses-permission>
+<uses-permission android:name="android.permission.FLASHLIGHT">
+</uses-permission>
+<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FIND_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT">
+</uses-permission>
+<uses-permission android:name="com.android.launcher.permission.UNINSTALL_SHORTCUT">
+</uses-permission>
+<uses-permission android:name="com.android.launcher.permission.READ_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_LOGS">
+</uses-permission>
+<uses-permission android:name="android.permission.FLASHLIGHT">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SDCARD">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_CONFIGURATION">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-permission android:name="android.permission.RAISED_THREAD_PRIORITY">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.RAISED_THREAD_PRIORITY">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-permission android:name="android.permission.BLUETOOTH">
+</uses-permission>
+<uses-permission android:name="android.permission.BLUETOOTH_ADMIN">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW">
+</uses-permission>
+<uses-permission android:name="getui.permission.GetuiService.com.vct.ccc">
+</uses-permission>
+<permission android:name="getui.permission.GetuiService.com.vct.ccc" android:protectionLevel="0x00000000">
+</permission>
+<uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<meta-data android:name="android.support.VERSION" android:value="25.3.1">
+</meta-data>
+<uses-feature android:glEsVersion="0x00020000" android:required="true">
+</uses-feature>
+<supports-gl-texture android:name="GL_OES_compressed_ETC1_RGB8_texture">
+</supports-gl-texture>
+<supports-gl-texture android:name="GL_OES_compressed_paletted_texture">
+</supports-gl-texture>
+<android:uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</android:uses-permission>
+<application android:allowBackup="true" android:icon="@7F0300BB" android:label="@7F080055" android:largeHeap="true" android:name="com.stub.StubApp" android:qihoo="activity" android:supportsRtl="true" android:theme="@7F0A00AA">
+<activity android:name="com.vct.redbean.AppStartActivity" android:screenOrientation="1" android:theme="@7F0A00EF">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:name="com.vct.redbean.LoginActivity" android:screenOrientation="1" android:theme="@7F0A00EB">
+</activity>
+<activity android:name="com.vct.redbean.RegisterActivity" android:screenOrientation="1" android:theme="@7F0A0134">
+</activity>
+<activity android:name="com.vct.redbean.RegisterAccountActivity" android:screenOrientation="1" android:theme="@7F0A0134">
+</activity>
+<activity android:name="com.vct.redbean.ForgetPasswordActivity" android:screenOrientation="1" android:theme="@7F0A0134">
+</activity>
+<activity android:name="com.vct.redbean.GuideActivity" android:screenOrientation="1" android:theme="@7F0A00EB">
+</activity>
+<meta-data android:name="RONG_CLOUD_APP_KEY" android:value="4z3hlwrv3vhjt">
+</meta-data>
+<service android:exported="true" android:name="io.rong.imlib.ipc.RongService" android:process=":ipc">
+</service>
+<service android:exported="true" android:name="io.rong.imlib.ReConnectService">
+</service>
+<receiver android:exported="true" android:name="io.rong.imlib.ConnectChangeReceiver">
+</receiver>
+<receiver android:name="io.rong.imlib.HeartbeatReceiver" android:process=":ipc">
+</receiver>
+<service android:exported="false" android:name="io.rong.push.core.PushRegistrationService">
+</service>
+<service android:exported="true" android:name="io.rong.push.core.MessageHandleService">
+</service>
+<service android:exported="true" android:name="io.rong.push.PushService" android:process="io.rong.push">
+</service>
+<receiver android:name="io.rong.push.PushReceiver" android:process="io.rong.push">
+<intent-filter>
+<action android:name="io.rong.push.intent.action.HEART_BEAT">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.USER_PRESENT">
+</action>
+<action android:name="android.intent.action.ACTION_POWER_CONNECTED">
+</action>
+<action android:name="android.intent.action.ACTION_POWER_DISCONNECTED">
+</action>
+</intent-filter>
+</receiver>
+<meta-data android:name="com.amap.api.v2.apikey" android:value="b9d46f96d910f5dd3bd6bfd2531f1ba9">
+</meta-data>
+<meta-data android:name="BUGRPT_APPID" android:value="A007908790">
+</meta-data>
+<meta-data android:name="UMENG_APPKEY" android:value="577ce9c467e58e8613002f5b">
+</meta-data>
+<meta-data android:name="UMENG_CHANNEL" android:value="hdj">
+</meta-data>
+<meta-data android:name="CloudwiseChannel" android:value="hdj">
+</meta-data>
+<meta-data android:name="PUSH_APPID" android:value="Qq8Zi7RGPf5syPXL6iZWF4">
+</meta-data>
+<meta-data android:name="PUSH_APPKEY" android:value="4sx8Ph9ihF6iFiUUfbrtQ6">
+</meta-data>
+<meta-data android:name="PUSH_APPSECRET" android:value="JDGKjuZNOR6aivFTRmPWC6">
+</meta-data>
+<meta-data android:name="APP_VERSION_ID" android:value="74">
+</meta-data>
+<service android:exported="true" android:label="NotificationCenter" android:name="com.igexin.sdk.PushService" android:process=":pushservice">
+<intent-filter>
+<action android:name="com.igexin.sdk.action.service.message">
+</action>
+</intent-filter>
+</service>
+<receiver android:name="com.igexin.sdk.PushReceiver">
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+<action android:name="android.intent.action.USER_PRESENT">
+</action>
+<action android:name="com.igexin.sdk.action.refreshls">
+</action>
+<action android:name="android.intent.action.MEDIA_MOUNTED">
+</action>
+<action android:name="android.intent.action.ACTION_POWER_CONNECTED">
+</action>
+<action android:name="android.intent.action.ACTION_POWER_DISCONNECTED">
+</action>
+</intent-filter>
+</receiver>
+<activity android:excludeFromRecents="true" android:exported="false" android:name="com.igexin.sdk.PushActivity" android:process=":pushservice" android:taskAffinity="com.igexin.sdk.PushActivityTask" android:theme="@android:01030010">
+</activity>
+<service android:name="com.igexin.download.DownloadService" android:process=":pushservice">
+</service>
+<receiver android:name="com.igexin.download.DownloadReceiver">
+<intent-filter>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+</receiver>
+<provider android:authorities="downloads.com.vct.ccc" android:exported="true" android:name="com.igexin.download.DownloadProvider" android:process=":pushservice">
+</provider>
+<activity android:excludeFromRecents="true" android:exported="true" android:name="com.igexin.sdk.GActivity" android:process=":pushservice" android:taskAffinity="com.igexin.sdk.PushActivityTask" android:theme="@android:01030010">
+</activity>
+<service android:exported="true" android:label="PushService" android:name="com.vct.thirdparty.getui.DemoPushService" android:process=":pushservice">
+</service>
+<service android:name="com.vct.thirdparty.getui.DemoIntentService" android:process=":pushservice">
+</service>
+<receiver android:name="com.vct.thirdparty.getui.NotificationReceiver" android:process=":pushservice">
+</receiver>
+<activity android:exported="true" android:label="@7F080055" android:launchMode="1" android:name="com.vct.redbean.wxapi.WXEntryActivity" android:screenOrientation="1" android:theme="@android:01030010">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:scheme="sdksample">
+</data>
+</intent-filter>
+</activity>
+<activity android:exported="true" android:launchMode="1" android:name="com.vct.redbean.wxapi.WXPayEntryActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="2" android:name="com.tencent.tauth.AuthActivity" android:noHistory="true">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="tencent1105394781">
+</data>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.tencent.connect.common.AssistActivity" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x000000A0" android:exported="false" android:name="com.sina.weibo.sdk.component.WeiboSdkBrowser" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:launchMode="2" android:name="com.vct.redbean.MainActivity" android:screenOrientation="1" android:theme="@7F0A0134">
+</activity>
+<activity android:name="com.vct.redbean.LivePrepareActivity" android:screenOrientation="1" android:theme="@7F0A0134">
+</activity>
+<activity android:name="com.vct.redbean.UserCenterActivity" android:screenOrientation="1" android:theme="@7F0A0134">
+</activity>
+<activity android:name="com.vct.redbean.MyIncomeActivity" android:screenOrientation="1" android:theme="@7F0A0134">
+</activity>
+<activity android:name="com.vct.redbean.RedBeanCoinActivity" android:screenOrientation="1" android:theme="@7F0A0134">
+</activity>
+<activity android:name="com.vct.redbean.UserAttentionActivity" android:screenOrientation="1" android:theme="@7F0A0134">
+</activity>
+<activity android:name="com.vct.redbean.SellerCenterActivity" android:screenOrientation="1" android:theme="@7F0A0134">
+</activity>
+<activity android:name="com.vct.redbean.StoreEditActivity" android:screenOrientation="1" android:theme="@7F0A0134" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:name="com.vct.redbean.ReleaseApplyActivity" android:screenOrientation="1" android:theme="@7F0A0134">
+</activity>
+<activity android:name="com.vct.redbean.AddApplyTypeActivity" android:screenOrientation="1" android:theme="@7F0A0134">
+</activity>
+<activity android:name="com.vct.redbean.StoreProveAvtivity" android:screenOrientation="1" android:theme="@7F0A0134" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:name="com.vct.redbean.StoreProveListActivity" android:screenOrientation="1" android:theme="@7F0A0134">
+</activity>
+<activity android:name="com.vct.redbean.ProveRealNameActivity" android:screenOrientation="1" android:theme="@7F0A0134" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:name="com.vct.redbean.ProveRealStoreActivity" android:screenOrientation="1" android:theme="@7F0A0134" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:name="com.vct.redbean.ProveRedManActivity" android:screenOrientation="1" android:theme="@7F0A0134" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:name="com.vct.redbean.ProveOverseasActivity" android:screenOrientation="1" android:theme="@7F0A0134" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:name="com.vct.redbean.ProveFactoryActivity" android:screenOrientation="1" android:theme="@7F0A0134" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:name="com.vct.redbean.ProveSourceActivity" android:screenOrientation="1" android:theme="@7F0A0134" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:name="com.vct.redbean.ProveFlagshipActivity" android:screenOrientation="1" android:theme="@7F0A0134" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:name="com.vct.redbean.ApplyManageActivity" android:screenOrientation="1" android:theme="@7F0A0134">
+</activity>
+<activity android:name="com.vct.redbean.ApplyManageCommoditActivity" android:screenOrientation="1" android:theme="@7F0A0134">
+</activity>
+<activity android:name="com.vct.redbean.ApplyCommodityEditingActivity" android:screenOrientation="1" android:theme="@7F0A0134">
+</activity>
+<activity android:name="com.vct.redbean.OrderSearchActivity" android:screenOrientation="1" android:theme="@7F0A0134">
+</activity>
+<activity android:name="com.vct.redbean.SearchResultActivity" android:screenOrientation="1" android:theme="@7F0A0134">
+</activity>
+<activity android:name="com.vct.redbean.CommodityLogisticsActivity" android:screenOrientation="1" android:theme="@7F0A0134">
+</activity>
+<activity android:name="com.vct.redbean.StoreQrcodeActivity" android:screenOrientation="1" android:theme="@7F0A0134">
+</activity>
+<activity android:name="com.vct.redbean.StoreQrcodeActivityTwo" android:screenOrientation="1" android:theme="@7F0A0134">
+</activity>
+<activity android:name="com.vct.redbean.ShopColumnActivity" android:screenOrientation="1" android:theme="@7F0A0134">
+</activity>
+<activity android:name="com.vct.redbean.StoreServiceActivity" android:screenOrientation="1" android:theme="@7F0A0134">
+</activity>
+<activity android:name="com.vct.redbean.CashDepositActivity" android:screenOrientation="1" android:theme="@7F0A0134">
+</activity>
+<activity android:name="com.vct.redbean.SVIPActivity" android:screenOrientation="1" android:theme="@7F0A0134">
+</activity>
+<activity android:name="com.vct.redbean.DepositRecordActovity" android:screenOrientation="1" android:theme="@7F0A0134">
+</activity>
+<activity android:name="com.vct.redbean.ReleaseFriendCircleActivity" android:screenOrientation="1" android:theme="@7F0A0134" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:name="com.vct.redbean.ChooseGoodsActivity" android:screenOrientation="1" android:theme="@7F0A0134">
+</activity>
+<activity android:name="com.vct.redbean.UserSettingNewActivity" android:screenOrientation="1" android:theme="@7F0A0134">
+</activity>
+<activity android:name="com.vct.redbean.BindPhoneActivity" android:screenOrientation="1" android:theme="@7F0A0134">
+</activity>
+<activity android:name="com.vct.redbean.UserSettingPersonalActivity" android:screenOrientation="1" android:theme="@7F0A0134">
+</activity>
+<activity android:name="com.vct.redbean.UserSettingAboutActivity" android:screenOrientation="1" android:theme="@7F0A0134">
+</activity>
+<activity android:name="com.vct.redbean.UserSettingDetailActivity" android:screenOrientation="1" android:theme="@7F0A0134">
+</activity>
+<activity android:name="com.vct.redbean.UserSettingHelpActivity" android:screenOrientation="1" android:theme="@7F0A0134">
+</activity>
+<activity android:name="com.vct.redbean.UserSettingSecretActivity" android:screenOrientation="1" android:theme="@7F0A0134">
+</activity>
+<activity android:name="com.vct.redbean.UserFavoriteActivity" android:screenOrientation="1" android:theme="@7F0A0134">
+</activity>
+<activity android:name="com.yalantis.ucrop.UCropActivity" android:screenOrientation="1" android:theme="@7F0A0139">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.vct.redbean.PictureActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.vct.redbean.AddressActivity" android:screenOrientation="1" android:theme="@7F0A0134">
+</activity>
+<activity android:name="com.vct.redbean.EditAddressActivity" android:screenOrientation="1" android:theme="@7F0A0134">
+</activity>
+<activity android:name="com.vct.redbean.AddressSelectActivity" android:screenOrientation="1" android:theme="@7F0A0134">
+</activity>
+<activity android:name="com.vct.redbean.HomepageActivity" android:screenOrientation="1" android:theme="@7F0A0134">
+</activity>
+<activity android:name="com.vct.redbean.ShopActivityThree" android:screenOrientation="1" android:theme="@7F0A0134">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="redbean.shop" android:scheme="hdj">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.vct.redbean.ShopInformationActivity" android:screenOrientation="1" android:theme="@7F0A0134">
+</activity>
+<activity android:name="com.vct.redbean.ProductDetailsActivity" android:screenOrientation="1" android:theme="@7F0A0134">
+</activity>
+<activity android:name="com.vct.redbean.LiveBuyGoodsActivity" android:screenOrientation="1" android:theme="@7F0A00DE">
+</activity>
+<activity android:name="com.vct.redbean.LiveStartAvtivity" android:screenOrientation="1" android:theme="@android:01030007" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:launchMode="2" android:name="com.vct.redbean.LiveWatchActivity" android:screenOrientation="1" android:theme="@android:01030007">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="redbean.live_phone" android:scheme="hdj">
+</data>
+</intent-filter>
+</activity>
+<activity android:launchMode="1" android:name="com.vct.redbean.LiveOverActivity" android:screenOrientation="1" android:theme="@7F0A0134">
+</activity>
+<activity android:name="com.vct.redbean.LiveRechargeActivity" android:screenOrientation="1" android:theme="@7F0A0134">
+</activity>
+<activity android:name="com.vct.redbean.LiveAddGoodsActivity" android:screenOrientation="1" android:theme="@7F0A00DE">
+</activity>
+<activity android:name="com.vct.redbean.LiveAmendGoodsActivity" android:screenOrientation="1" android:theme="@7F0A00DE">
+</activity>
+<activity android:name="com.vct.redbean.LiveManageListActivity" android:screenOrientation="1" android:theme="@7F0A0134">
+</activity>
+<activity android:name="com.vct.redbean.CommitOrderActivity" android:screenOrientation="1" android:theme="@7F0A0134" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:name="com.vct.redbean.BuyerOrderCommentActivity" android:screenOrientation="1" android:theme="@7F0A0134">
+</activity>
+<activity android:name="com.vct.redbean.LogisticalActivity" android:screenOrientation="1" android:theme="@7F0A0134">
+</activity>
+<activity android:name="com.vct.redbean.BuyerOrderListActivity" android:screenOrientation="1" android:theme="@7F0A0134">
+</activity>
+<activity android:name="com.vct.redbean.BuyerRefundOrderListActivity" android:screenOrientation="1" android:theme="@7F0A0134">
+</activity>
+<activity android:name="com.vct.redbean.BuyerOrderDetailsActivity" android:screenOrientation="1" android:theme="@7F0A0139">
+</activity>
+<activity android:name="com.vct.redbean.BuyerRefundDetailsActivity" android:screenOrientation="1" android:theme="@7F0A0134">
+</activity>
+<activity android:name="com.vct.redbean.SellerOrderListActivity" android:screenOrientation="1" android:theme="@7F0A0134">
+</activity>
+<activity android:name="com.vct.redbean.SellerOrderDetailsActivity" android:screenOrientation="1" android:theme="@7F0A0139">
+</activity>
+<activity android:name="com.vct.redbean.SellerRefundDetailsActivity" android:screenOrientation="1" android:theme="@7F0A0134">
+</activity>
+<activity android:name="com.vct.redbean.StockOrderDetailsActivity" android:screenOrientation="1" android:theme="@7F0A0139">
+</activity>
+<activity android:name="com.vct.redbean.StockRefundDetailsActivity" android:screenOrientation="1" android:theme="@7F0A0134">
+</activity>
+<activity android:name="com.vct.redbean.AgencyOrderDetailsActivity" android:screenOrientation="1" android:theme="@7F0A0139">
+</activity>
+<activity android:name="com.vct.redbean.ApplyRefundActivity" android:screenOrientation="1" android:theme="@7F0A0139">
+</activity>
+<activity android:name="com.vct.redbean.OrderRefundAppealActivity" android:screenOrientation="1" android:theme="@7F0A0134">
+</activity>
+<activity android:name="com.vct.redbean.RefundActivity" android:screenOrientation="1" android:theme="@7F0A0134" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:name="com.vct.redbean.ChooseRefundActivity" android:screenOrientation="1" android:theme="@7F0A0134">
+</activity>
+<activity android:name="com.vct.redbean.LogisticsCompanyActivity" android:screenOrientation="1" android:theme="@7F0A0134">
+</activity>
+<activity android:name="com.vct.redbean.CommonShoppingCartActivity" android:screenOrientation="1" android:theme="@7F0A0134">
+</activity>
+<activity android:configChanges="0x000000E0" android:exported="false" android:name="com.alipay.sdk.app.H5PayActivity" android:screenOrientation="3">
+</activity>
+<activity android:configChanges="0x000000E0" android:exported="false" android:name="com.alipay.sdk.auth.AuthActivity" android:screenOrientation="3">
+</activity>
+<activity android:name="com.vct.redbean.PaymentTypeActivity" android:screenOrientation="1" android:theme="@7F0A0134">
+</activity>
+<activity android:name="com.vct.redbean.UserVidiconActivity" android:screenOrientation="1" android:theme="@7F0A0134">
+</activity>
+<activity android:name="com.vct.redbean.CameraAddTypeActivity" android:screenOrientation="1" android:theme="@7F0A0134">
+</activity>
+<activity android:name="com.vct.redbean.CameraAddVRActivity" android:screenOrientation="1" android:theme="@7F0A0134">
+</activity>
+<activity android:name="com.vct.redbean.CameraAddPanoramaTypeActivity" android:screenOrientation="1" android:theme="@7F0A0134">
+</activity>
+<activity android:name="com.vct.redbean.CameraConfirmationScanActivity" android:screenOrientation="1" android:theme="@7F0A0134">
+</activity>
+<activity android:name="com.vct.redbean.CameraConnectWifiActivity" android:screenOrientation="1" android:theme="@7F0A0134">
+</activity>
+<activity android:launchMode="1" android:name="com.vct.redbean.CameraRadarSearchActivity" android:screenOrientation="1" android:theme="@7F0A0134">
+</activity>
+<activity android:launchMode="1" android:name="com.vct.redbean.CameraScanFailedActivity" android:screenOrientation="1" android:theme="@7F0A0134">
+</activity>
+<activity android:name="com.vct.redbean.CameraInputPasswordActivity" android:screenOrientation="1" android:theme="@7F0A0134">
+</activity>
+<activity android:name="com.vct.redbean.CameraInputNameActivity" android:screenOrientation="1" android:theme="@7F0A0134">
+</activity>
+<activity android:name="com.vct.redbean.VidiconEditActivity" android:screenOrientation="1" android:theme="@7F0A0134">
+</activity>
+<activity android:name="com.vct.redbean.CameraPushActivity" android:screenOrientation="1" android:theme="@7F0A0134">
+</activity>
+<activity android:name="com.vct.redbean.CameraSettingSecretActivity" android:screenOrientation="1" android:theme="@7F0A0134">
+</activity>
+<activity android:name="com.vct.redbean.CameraUpdateNewPasswordActivity" android:screenOrientation="1" android:theme="@7F0A0134">
+</activity>
+<activity android:name="com.vct.redbean.ChangeVidiconPasswordActivity" android:screenOrientation="1" android:theme="@7F0A0134">
+</activity>
+<activity android:name="com.vct.redbean.CameraSearchActivity" android:screenOrientation="1" android:theme="@7F0A0134">
+</activity>
+<activity android:name="com.vct.redbean.VRSettingActivity" android:screenOrientation="1" android:theme="@7F0A0134">
+</activity>
+<activity android:configChanges="0x00000480" android:name="com.vct.redbean.VRPlayActivity" android:screenOrientation="1" android:theme="@android:01030007">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="redbean.live_vr360" android:scheme="hdj">
+</data>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x00000480" android:name="com.vct.redbean.PanoramaPlayActivity" android:screenOrientation="1" android:theme="@android:01030007">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="redbean.live_panorama" android:scheme="hdj">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.vct.redbean.WeChatPublicNumberActivity" android:screenOrientation="1" android:theme="@7F0A0134">
+</activity>
+<activity android:name="com.vct.redbean.WeChatPublicNumberReviewedActivity" android:screenOrientation="1" android:theme="@7F0A0134">
+</activity>
+<activity android:name="com.vct.redbean.WeChatPublicNumberAdoptActivity" android:screenOrientation="1" android:theme="@7F0A0134">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.vct.redbean.WBEntryActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:name="com.vct.redbean.SharePopActivity" android:screenOrientation="1" android:theme="@7F0A00EE">
+</activity>
+<activity android:name="com.vct.redbean.UserPrivateChatActivity" android:screenOrientation="1" android:theme="@7F0A0134">
+</activity>
+<activity android:name="com.vct.redbean.ChatMessageActivity" android:screenOrientation="1" android:theme="@7F0A0134" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:name="com.vct.redbean.RedbeanRankActivity" android:screenOrientation="1" android:theme="@7F0A0134">
+</activity>
+<activity android:name="com.vct.redbean.UserWalletActivity" android:screenOrientation="1" android:theme="@7F0A0134">
+</activity>
+<activity android:name="com.vct.redbean.WalletWithdrawActivity" android:screenOrientation="1" android:theme="@7F0A0134">
+</activity>
+<activity android:name="com.vct.redbean.WalletRecordActivity" android:screenOrientation="1" android:theme="@7F0A0134">
+</activity>
+<activity android:name="com.vct.redbean.UserReserveReleaseActivity" android:screenOrientation="1" android:theme="@7F0A0134">
+</activity>
+<activity android:name="com.vct.redbean.UserReserveListActivity" android:screenOrientation="1" android:theme="@7F0A0134">
+</activity>
+<activity android:name="com.vct.redbean.WebActivity" android:screenOrientation="1" android:theme="@7F0A0134">
+</activity>
+<service android:name="com.vct.model.UpdateService">
+</service>
+<activity android:name="com.vct.redbean.HomeActivity4" android:screenOrientation="1" android:theme="@7F0A0134">
+</activity>
+<activity android:name="com.vct.redbean.HomeFocusActivity" android:screenOrientation="1" android:theme="@7F0A0134">
+</activity>
+<activity android:name="com.vct.redbean.HomePreviewActivity" android:screenOrientation="1" android:theme="@7F0A0134">
+</activity>
+<activity android:name="com.vct.redbean.HomeSearchActivity" android:screenOrientation="1" android:theme="@7F0A0134">
+</activity>
+<activity android:name="com.vct.redbean.HomeClassifyShopActivity" android:screenOrientation="1" android:theme="@7F0A0134">
+</activity>
+<activity android:name="com.vct.redbean.HomePanoramaShopActivity" android:screenOrientation="1" android:theme="@7F0A0134">
+</activity>
+<activity android:name="com.vct.redbean.HomeSMNoticeActivity" android:screenOrientation="1" android:theme="@7F0A0134">
+</activity>
+<activity android:name="com.vct.redbean.PlaybackActivity" android:screenOrientation="1" android:theme="@android:01030007">
+</activity>
+<activity android:name="com.vct.redbean.PlaybackListActivity" android:screenOrientation="1" android:theme="@7F0A0134">
+</activity>
+<activity android:name="com.vct.redbean.VideoPlayActivity" android:screenOrientation="1" android:theme="@7F0A0134">
+</activity>
+<activity android:name="com.vct.redbean.StockSearchActivity" android:screenOrientation="1" android:theme="@7F0A0134">
+</activity>
+<activity android:name="com.vct.redbean.StockProductDetailsActivity" android:screenOrientation="1" android:theme="@7F0A0134">
+</activity>
+<activity android:name="com.vct.redbean.FreightCountActivity" android:screenOrientation="1" android:theme="@7F0A0134">
+</activity>
+<activity android:name="com.vct.redbean.StockProductJoinLiveActivity" android:screenOrientation="1" android:theme="@7F0A0134">
+</activity>
+<activity android:name="com.vct.redbean.TranspondActivity" android:screenOrientation="1" android:theme="@7F0A0134">
+</activity>
+<activity android:name="com.vct.redbean.StockOrderActivity" android:screenOrientation="1" android:theme="@7F0A0134">
+</activity>
+<activity android:name="com.vct.redbean.StockShopActivity" android:screenOrientation="1" android:theme="@7F0A0134">
+</activity>
+<activity android:name="com.vct.redbean.StockMainActivity" android:screenOrientation="1" android:theme="@7F0A0134">
+</activity>
+<activity android:name="com.vct.redbean.StockCommitOrderActivity" android:screenOrientation="1" android:theme="@7F0A0134">
+</activity>
+<activity android:name="com.vct.redbean.StockRedProductActivity" android:screenOrientation="1" android:theme="@7F0A0134">
+</activity>
+<activity android:name="com.vct.redbean.StockRedShopActivity" android:screenOrientation="1" android:theme="@7F0A0134">
+</activity>
+<activity android:name="com.vct.redbean.FrescoActivity" android:screenOrientation="1" android:theme="@7F0A019E">
+</activity>
+<activity android:name="com.vct.redbean.CeshiActivity" android:screenOrientation="1" android:theme="@7F0A0134">
+</activity>
+<activity android:name="com.vct.ui.imagesSelector.activity.ImageSelectorActivity" android:screenOrientation="1" android:theme="@7F0A0134">
+</activity>
+<activity android:name="com.vct.ui.imagesSelector.activity.PreviewActivity" android:screenOrientation="1" android:theme="@7F0A0134">
+</activity>
+<activity android:name="com.vct.redbean.InvitationActivity" android:screenOrientation="1" android:theme="@7F0A0134">
+</activity>
+<activity android:name="com.vct.redbean.RefundDepositActivity" android:screenOrientation="1" android:theme="@7F0A0134" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.vct.redbean.BankCardListActivity" android:screenOrientation="1" android:theme="@7F0A0134">
+</activity>
+<activity android:name="com.vct.redbean.AddBankCardActivity" android:screenOrientation="1" android:theme="@7F0A0134">
+</activity>
+<activity android:name="com.vct.redbean.SetPayPasswordActivity" android:screenOrientation="1" android:theme="@7F0A0134">
+</activity>
+<activity android:name="com.vct.redbean.TradeDetailActivity" android:screenOrientation="1" android:theme="@7F0A0134">
+</activity>
+<activity android:name="com.vct.redbean.WithdrawalActivity" android:screenOrientation="1" android:theme="@7F0A0134">
+</activity>
+<activity android:name="com.vct.redbean.PaySettingActivity" android:screenOrientation="1" android:theme="@7F0A0134">
+</activity>
+<activity android:name="com.vct.redbean.BankCardInfoActivity" android:screenOrientation="1" android:theme="@7F0A0134">
+</activity>
+<service android:exported="false" android:name="com.vct.model.XUtilsGetPatchService">
+</service>
+<activity android:name="com.vct.redbean.FriendCircleDetailActivity" android:screenOrientation="1" android:theme="@7F0A0134" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.vct.redbean.ReviewsFriendCircleActivity" android:screenOrientation="1" android:theme="@7F0A0134" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.vct.redbean.MyFriendCircleActivity" android:screenOrientation="1" android:theme="@7F0A0134">
+</activity>
+<service android:exported="false" android:name="com.vct.tinker.service.MyResultService">
+</service>
+<service android:exported="false" android:name="com.tencent.tinker.lib.service.TinkerPatchService" android:process=":patch">
+</service>
+<service android:exported="false" android:name="com.tencent.tinker.lib.service.TinkerPatchService$InnerService" android:process=":patch">
+</service>
+<service android:exported="false" android:name="com.tencent.tinker.lib.service.DefaultTinkerResultService">
+</service>
+<activity android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$STDStub_00">
+</activity>
+<activity android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$STDStub_01">
+</activity>
+<activity android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$STDStub_02">
+</activity>
+<activity android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$STDStub_03">
+</activity>
+<activity android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$STDStub_04">
+</activity>
+<activity android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$STDStub_05">
+</activity>
+<activity android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$STDStub_06">
+</activity>
+<activity android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$STDStub_07">
+</activity>
+<activity android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$STDStub_08">
+</activity>
+<activity android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$STDStub_09">
+</activity>
+<activity android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$STDStub_00_T" android:theme="@android:0103000F">
+</activity>
+<activity android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$STDStub_01_T" android:theme="@android:0103000F">
+</activity>
+<activity android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$STDStub_02_T" android:theme="@android:0103000F">
+</activity>
+<activity android:launchMode="1" android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SGTStub_00">
+</activity>
+<activity android:launchMode="1" android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SGTStub_01">
+</activity>
+<activity android:launchMode="1" android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SGTStub_02">
+</activity>
+<activity android:launchMode="1" android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SGTStub_03">
+</activity>
+<activity android:launchMode="1" android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SGTStub_04">
+</activity>
+<activity android:launchMode="1" android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SGTStub_05">
+</activity>
+<activity android:launchMode="1" android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SGTStub_06">
+</activity>
+<activity android:launchMode="1" android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SGTStub_07">
+</activity>
+<activity android:launchMode="1" android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SGTStub_08">
+</activity>
+<activity android:launchMode="1" android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SGTStub_09">
+</activity>
+<activity android:launchMode="1" android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SGTStub_00_T" android:theme="@android:0103000F">
+</activity>
+<activity android:launchMode="1" android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SGTStub_01_T" android:theme="@android:0103000F">
+</activity>
+<activity android:launchMode="1" android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SGTStub_02_T" android:theme="@android:0103000F">
+</activity>
+<activity android:launchMode="2" android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SGTKStub_00">
+</activity>
+<activity android:launchMode="2" android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SGTKStub_01">
+</activity>
+<activity android:launchMode="2" android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SGTKStub_02">
+</activity>
+<activity android:launchMode="2" android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SGTKStub_03">
+</activity>
+<activity android:launchMode="2" android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SGTKStub_04">
+</activity>
+<activity android:launchMode="2" android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SGTKStub_05">
+</activity>
+<activity android:launchMode="2" android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SGTKStub_06">
+</activity>
+<activity android:launchMode="2" android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SGTKStub_07">
+</activity>
+<activity android:launchMode="2" android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SGTKStub_08">
+</activity>
+<activity android:launchMode="2" android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SGTKStub_09">
+</activity>
+<activity android:launchMode="2" android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SGTKStub_00_T" android:theme="@android:0103000F">
+</activity>
+<activity android:launchMode="2" android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SGTKStub_01_T" android:theme="@android:0103000F">
+</activity>
+<activity android:launchMode="2" android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SGTKStub_02_T" android:theme="@android:0103000F">
+</activity>
+<activity android:launchMode="3" android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SIStub_00">
+</activity>
+<activity android:launchMode="3" android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SIStub_01">
+</activity>
+<activity android:launchMode="3" android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SIStub_02">
+</activity>
+<activity android:launchMode="3" android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SIStub_03">
+</activity>
+<activity android:launchMode="3" android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SIStub_04">
+</activity>
+<activity android:launchMode="3" android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SIStub_05">
+</activity>
+<activity android:launchMode="3" android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SIStub_06">
+</activity>
+<activity android:launchMode="3" android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SIStub_07">
+</activity>
+<activity android:launchMode="3" android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SIStub_08">
+</activity>
+<activity android:launchMode="3" android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SIStub_09">
+</activity>
+<activity android:launchMode="3" android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SIStub_00_T" android:theme="@android:0103000F">
+</activity>
+<activity android:launchMode="3" android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SIStub_01_T" android:theme="@android:0103000F">
+</activity>
+<activity android:launchMode="3" android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SIStub_02_T" android:theme="@android:0103000F">
+</activity>
+<meta-data android:name="tinker_version" android:value="1.9.0">
+</meta-data>
+<meta-data android:name="TINKER_ID" android:value="tinker_id_2.4.1">
+</meta-data>
+</application>
+</manifest>

@@ -1,0 +1,536 @@
+<?xml version="1.0" ?><manifest android:compileSdkVersion="29" android:compileSdkVersionCodename="10" android:versionCode="4000001" android:versionName="4.0.1" package="com.yxzq.stock" platformBuildVersionCode="29" platformBuildVersionName="10" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="21" android:targetSdkVersion="28">
+</uses-sdk>
+<uses-permission android:name="android.permission.READ_LOGS">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.NFC">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.RECORD_AUDIO">
+</uses-permission>
+<supports-screens android:anyDensity="true" android:largeScreens="true" android:normalScreens="true" android:resizeable="true" android:smallScreens="true">
+</supports-screens>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.CALL_PHONE">
+</uses-permission>
+<uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES">
+</uses-permission>
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW">
+</uses-permission>
+<uses-permission android:name="android.permission.FOREGROUND_SERVICE">
+</uses-permission>
+<uses-permission android:name="android.permission.RECORD_VIDEO">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<permission android:name="com.yxzq.stock.permission.MIPUSH_RECEIVE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="com.yxzq.stock.permission.MIPUSH_RECEIVE">
+</uses-permission>
+<uses-permission android:name="com.meizu.flyme.push.permission.RECEIVE">
+</uses-permission>
+<permission android:name="com.yxzq.stock.push.permission.MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="com.yxzq.stock.push.permission.MESSAGE">
+</uses-permission>
+<uses-permission android:name="com.meizu.c2dm.permission.RECEIVE">
+</uses-permission>
+<permission android:name="com.yxzq.stock.permission.C2D_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="com.yxzq.stock.permission.C2D_MESSAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.FLASHLIGHT">
+</uses-permission>
+<application android:allowBackup="false" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:hardwareAccelerated="true" android:icon="@7F0E001A" android:label="@7F110075" android:largeHeap="true" android:name="com.stub.StubApp" android:persistent="true" android:roundIcon="@7F0E001C" android:supportsRtl="true" android:theme="@7F12000C" android:usesCleartextTraffic="true">
+<uses-library android:name="org.apache.http.legacy" android:required="false">
+</uses-library>
+<meta-data android:name="yxstock_build_mode" android:value="release">
+</meta-data>
+<meta-data android:name="yxstock_build_time" android:value="2020-04-03 10:58:20">
+</meta-data>
+<meta-data android:name="app_conn_env_default" android:value="prd">
+</meta-data>
+<meta-data android:name="yxstock_channel_value" android:value="vivo">
+</meta-data>
+<provider android:authorities="com.yxzq.stock.provider" android:exported="false" android:grantUriPermissions="true" android:name="androidx.core.content.FileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F140000">
+</meta-data>
+</provider>
+<activity android:configChanges="0x000000A0" android:label="@7F110075" android:launchMode="1" android:name="com.yxzq.stock.enter.LauncherActivity" android:screenOrientation="1" android:theme="@7F1200EE">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:name="com.yxzq.stock.enter.LauncherAdActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="Main" android:launchMode="2" android:name="com.yxzq.stock.enter.MainActivity" android:screenOrientation="1" android:theme="@7F12000C">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F110075" android:launchMode="3" android:name="com.yxzq.stock.enter.SchemeActivity" android:theme="@7F120123">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="yx.stock.app" android:scheme="yxstock">
+</data>
+<data android:host="yx.stock.push" android:scheme="yxpush">
+</data>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004A0" android:label="个ⵠ⨀佪�" android:name="com.yxzq.stock.module.quote.stockquote.land.StockQuoteLandActivity" android:screenOrientation="0" android:theme="@7F12000D">
+</activity>
+<activity android:label="关�" android:name="com.yxzq.stock.module.user.AboutActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="用户登录" android:launchMode="2" android:name="com.yxzq.stock.module.user.LoginActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="用户公-手机入" android:name="com.yxzq.stock.module.user.RegisterPhoneActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="置ś�" android:name="com.yxzq.stock.module.user.ResetPasswordPasswordActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="置ś⵸䬀㩢�" android:name="com.yxzq.stock.module.user.ResetPasswordPhoneActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="个䑎�" android:name="com.yxzq.stock.module.user.UserInfoActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="㥏㕥祦" android:name="com.yxzq.stock.module.user.UpdateNicknameActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000024">
+</activity>
+<activity android:label="୧㑷偙" android:name="com.yxzq.stock.module.user.AvatarViewActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="置登录ś�" android:name="com.yxzq.stock.module.user.SetLoginPwdActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="意�" android:name="com.yxzq.stock.module.user.FeedbackActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="㜦孢全" android:name="com.yxzq.stock.module.user.AccountSafeActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="㥏筥啶孟码" android:name="com.yxzq.stock.module.user.ModifyLoginPasswordActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="㥏乥易ś�" android:name="com.yxzq.stock.module.user.ModifyTradePwdActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="置ፎ学码" android:name="com.yxzq.stock.module.user.ResetTradePwdActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="公㜦ⵢ嬀码入" android:name="com.yxzq.stock.module.user.RegisterPasswordActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="机㝧筢啶ⵟ笀入" android:name="com.yxzq.stock.module.user.OrgLoginEmailActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="机㝧筢啶ⵟ嬀码入" android:name="com.yxzq.stock.module.user.OrgLoginPwdActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="机㝧潢活�" android:name="com.yxzq.stock.module.user.OrgActivateEmailActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:label="机㝧敢备登录-�" android:name="com.yxzq.stock.module.user.OgrNewDeviceVerifyEmailActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="机㝧湢乿易ś⵸笀" android:name="com.yxzq.stock.module.user.TradePwdEmailActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="匦切换" android:name="com.yxzq.stock.module.user.ChangeUserActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="ⵄ欀周" android:name="com.yxzq.stock.module.information.WeekNewsActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="ⵄ欀�" android:name="com.yxzq.stock.module.information.DailyReadActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="ᘉ�" android:name="com.yxzq.stock.module.quote.optional.OptStockEditActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="个畠-佺�" android:name="com.yxzq.stock.module.quote.stockquote.StockQuoteActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="票�" android:name="com.yxzq.stock.module.quote.stockquote.StockWarningActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="票ⵣᄀ癢" android:launchMode="2" android:name="com.yxzq.stock.module.quote.stockquote.MyWarningActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="K湾�" android:name="com.yxzq.stock.module.quote.stockquote.KLineSettingActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="⠚睵攀戀甀�" android:name="com.yxzq.stock.module.web.CommonWebViewActivity" android:screenOrientation="1" android:theme="@7F12000C">
+</activity>
+<activity android:configChanges="0x000000A0" android:label="⠚牵攀昀爀攀猀栀 眀攀戀甀�" android:name="com.yxzq.stock.module.web.CommonRefreshWebViewActivity" android:screenOrientation="1" android:theme="@7F12000C">
+</activity>
+<activity android:configChanges="0x000000A0" android:label="恄Web扵" android:name="com.yxzq.stock.module.web.InfoDetailActivity" android:screenOrientation="1" android:theme="@7F12000C">
+</activity>
+<activity android:configChanges="0x000000A0" android:label="开户扵" android:name="com.yxzq.stock.module.web.OpenAccountActivity" android:screenOrientation="1" android:theme="@7F12000C">
+</activity>
+<activity android:configChanges="0x000000A0" android:label="畬�" android:name="com.yxzq.stock.module.web.ConversionStockActivity" android:screenOrientation="1" android:theme="@7F12000C">
+</activity>
+<activity android:configChanges="0x000000A0" android:label="啬畟�" android:name="com.yxzq.stock.module.web.ConversionStockLogActivity" android:screenOrientation="1" android:theme="@7F12000C">
+</activity>
+<activity android:label="؉繒编" android:name="com.yxzq.stock.module.quote.optional.OptStockGroupEditActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="票搜索" android:name="com.yxzq.stock.module.quote.search.SearchActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000005">
+</activity>
+<activity android:label="分噎片" android:launchMode="2" android:name="com.yxzq.stock.module.information.ShareImageActivity" android:screenOrientation="1" android:theme="@7F12000D">
+</activity>
+<activity android:label="䝖佲�" android:name="com.yxzq.stock.module.user.PhotoViewActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="ᜉ桒横屏" android:name="com.yxzq.stock.module.quote.optional.OptStockListLandActivity" android:screenOrientation="0" android:theme="@7F12000D">
+</activity>
+<activity android:label="PDF显示" android:name="com.yxzq.stock.base.PdfActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="潭ⵠ彎" android:name="com.yxzq.stock.module.user.MessageCenterActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="在孾服" android:name="com.yxzq.stock.module.user.OnlineServiceActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="置" android:name="com.yxzq.stock.module.user.SettingsActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="湶�" android:name="com.yxzq.stock.module.user.SkinSettingActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="我㙶�" android:name="com.yxzq.stock.module.user.MineCollectActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="潭᩠湷�" android:name="com.yxzq.stock.module.user.MessageSettingActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="㥏䭥㩢卧码" android:name="com.yxzq.stock.module.user.ModifyPhoneActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="入䭥㩢卧" android:name="com.yxzq.stock.module.user.NewPhoneActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="孾手机" android:name="com.yxzq.stock.module.user.BindPhoneActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="孾手机入码答啶孟码" android:name="com.yxzq.stock.module.user.BindPhonePwdActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="扦筣" android:name="com.yxzq.stock.module.user.ReplaceEmailActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="�" android:name="com.yxzq.stock.module.user.TradePwdIdentifyActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="置ፎ学码手机" android:name="com.yxzq.stock.module.user.TradePwdPhoneActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="ⵓĀ䭸㩢�" android:name="com.yxzq.stock.module.user.VerifyPhoneActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="孾手机ⵓⰀॻ敎登录后�" android:name="com.yxzq.stock.module.user.BindPhoneAfterThirdLoginActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="个獰汑" android:name="com.yxzq.stock.module.quote.stockquote.StockNewsActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="罰坧�" android:name="com.yxzq.stock.module.quote.market.HotPlateRankActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="票䱣-横屏" android:name="com.yxzq.stock.module.quote.market.StockRankListLandActivity" android:screenOrientation="0" android:theme="@7F12000D">
+</activity>
+<activity android:label="票䱣" android:name="com.yxzq.stock.module.quote.market.StockRankListActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="ፎ୦啎�" android:name="com.yxzq.stock.module.trade.order.TradeOrderActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="㥏୥啎�" android:name="com.yxzq.stock.module.trade.ModifyOrderActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="ፎ摦作" android:name="com.yxzq.stock.module.trade.hold.AllOperationActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="单录" android:name="com.yxzq.stock.module.trade.RecordActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="单�" android:name="com.yxzq.stock.module.trade.OrderDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="全条啎�" android:name="com.yxzq.stock.module.trade.AllConditionalRecordActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="ⵥ彎" android:name="com.yxzq.stock.module.quote.market.NewStockCenterActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="畠" android:name="com.yxzq.stock.module.quote.market.IPOSubscribeDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="�" android:name="com.yxzq.stock.module.quote.market.NewStockSubscribeActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="䕖椭㩣�" android:name="com.yxzq.stock.module.quote.market.EcmRiskTipActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:label="อ繦" android:name="com.yxzq.stock.module.quote.market.NewStockSubscribeRecordDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="唭�" android:launchMode="2" android:name="com.yxzq.stock.module.quote.market.NewStockSubscribeRecordActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="䕖�" android:name="com.yxzq.stock.module.quote.market.UsEcmActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="噿渭�" android:name="com.yxzq.stock.module.quote.market.UsEcmConfirmActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:label="ħ兞扑�" android:name="com.yxzq.stock.module.trade.exchange.CurrencyExchangeActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="卓录" android:name="com.yxzq.stock.module.trade.exchange.HistoryRecordActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="䱿塠明" android:name="com.yxzq.stock.module.web.UsQuoteStatementActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="㭯筭啶�" android:name="com.yxzq.stock.module.user.IdentifyActivateLoginActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="第三筥啶繟䭛㩢潧活" android:name="com.yxzq.stock.module.user.ThirtyLoginActivateActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="䡥Ⱳᕧ孟�" android:name="com.yxzq.stock.enter.GuideActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="所属地区" android:name="com.yxzq.stock.module.user.AreaListActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:label="癶畼�" android:name="com.yxzq.stock.module.monitor.MonitorElfActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="我捶�" android:name="com.yxzq.stock.module.monitor.MyMonitorPushActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="ţ置" android:name="com.yxzq.stock.module.monitor.MonitorPushSettingActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="䱿塠明" android:name="com.yxzq.stock.module.user.UsQuoteActivity" android:screenOrientation="1">
+</activity>
+<receiver android:exported="true" android:name="com.yxzq.stock.module.push.XGPushReceiver">
+<intent-filter>
+<action android:name="com.tencent.android.tpush.action.PUSH_MESSAGE">
+</action>
+<action android:name="com.tencent.android.tpush.action.FEEDBACK">
+</action>
+</intent-filter>
+</receiver>
+<activity android:label="甃�" android:name="com.yxzq.stock.module.debug.DebugActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="webview甃�" android:name="com.yxzq.stock.module.debug.DebugWebViewActivity" android:screenOrientation="1" android:theme="@7F12000C">
+</activity>
+<activity android:label="web甃�" android:name="com.yxzq.stock.module.debug.WebTestActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="web甃ᙢ�" android:name="com.yxzq.stock.module.debug.WebTestEditActivity" android:screenOrientation="1">
+</activity>
+<service android:name="com.yxzq.stock.module.update.CheckUpdateService">
+</service>
+<service android:name="com.yx.basic.utils.log.LogUploadService">
+</service>
+<activity android:name="com.yxzq.stock.module.update.view.UpdateDialogActivity" android:theme="@7F1202CE">
+</activity>
+<activity android:name="com.yxzq.stock.module.quote.optional.HotStockActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.yxzq.stock.module.quote.search.PictureToLoadStockActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.yxzq.stock.module.quote.search.AlbumActivity" android:screenOrientation="1">
+</activity>
+<activity android:hardwareAccelerated="false" android:name="com.yxzq.stock.module.quote.search.GalleryActivity" android:screenOrientation="1">
+</activity>
+<activity android:hardwareAccelerated="false" android:name="com.yxzq.stock.module.quote.search.PictureReviewActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="2" android:name="com.yxzq.stock.module.quote.warrant.WarrantActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:name="com.yxzq.stock.module.quote.warrant.WarrantStockSearchActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="2" android:name="com.yxzq.stock.module.quote.warrant.InlineWarrantActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.yxzq.stock.module.trade.BondDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.yxzq.stock.module.quote.stockquote.TickDealActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="Kݾݣ湨�" android:name="com.yxzq.stock.module.quote.stockquote.TechSettingsActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.yxzq.stock.module.quote.stockquote.EconomicActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="繾商持�" android:name="com.yxzq.stock.module.quote.stockquote.EconomicDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="♄户畠�" android:name="com.yxzq.stock.module.trade.hold.MarginAccountDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F110075" android:name="com.megvii.idcardlib.activity.IDCardDetectActivity" android:screenOrientation="1" android:theme="@android:010301E1">
+</activity>
+<activity android:configChanges="0x000000E0" android:exported="false" android:name="com.alipay.sdk.app.H5PayActivity" android:screenOrientation="3">
+</activity>
+<activity android:configChanges="0x000004E0" android:exported="false" android:name="com.alipay.sdk.app.H5AuthActivity" android:screenOrientation="3">
+</activity>
+<activity android:configChanges="0x000004E0" android:exported="true" android:launchMode="3" android:name="com.alipay.sdk.app.PayResultActivity" android:theme="@android:01030010">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="true" android:launchMode="2" android:name="com.alipay.sdk.app.AlipayResultActivity" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.megvii.meglive_sdk.detect.fmp.FmpLivenessActivity" android:screenOrientation="1" android:theme="@7F1202E7">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.megvii.meglive_sdk.detect.action.ActionLivenessActivity" android:screenOrientation="1" android:theme="@7F1202E7">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.megvii.meglive_sdk.detect.color.FmpColorfulActivity" android:screenOrientation="1" android:theme="@7F1202E7">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.megvii.meglive_sdk.detect.guide.GrantActivity" android:screenOrientation="1" android:theme="@android:0103000D">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.megvii.meglive_sdk.detect.agreement.UserAgreementActivity" android:theme="@android:0103000D">
+</activity>
+<activity android:exported="false" android:name="com.tencent.android.tpush.XGPushActivity" android:theme="@android:0103000F">
+</activity>
+<receiver android:name="com.tencent.android.tpush.XGPushReceiver" android:process=":xg_service_v4">
+<intent-filter android:priority="0x7FFFFFFF">
+<action android:name="com.tencent.android.tpush.action.SDK">
+</action>
+<action android:name="com.tencent.android.tpush.action.INTERNAL_PUSH_MESSAGE">
+</action>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+<action android:name="android.intent.action.USER_PRESENT">
+</action>
+<action android:name="android.bluetooth.adapter.action.STATE_CHANGED">
+</action>
+<action android:name="android.intent.action.ACTION_POWER_CONNECTED">
+</action>
+<action android:name="android.intent.action.ACTION_POWER_DISCONNECTED">
+</action>
+</intent-filter>
+<intent-filter android:priority="0x7FFFFFFF">
+<action android:name="android.intent.action.MEDIA_UNMOUNTED">
+</action>
+<action android:name="android.intent.action.MEDIA_REMOVED">
+</action>
+<action android:name="android.intent.action.MEDIA_CHECKING">
+</action>
+<action android:name="android.intent.action.MEDIA_EJECT">
+</action>
+<data android:scheme="file">
+</data>
+</intent-filter>
+</receiver>
+<service android:exported="true" android:name="com.tencent.android.tpush.rpc.XGRemoteService">
+<intent-filter>
+<action android:name="com.yxzq.stock.PUSH_ACTION">
+</action>
+</intent-filter>
+</service>
+<service android:exported="true" android:name="com.tencent.android.tpush.service.XGPushServiceV4" android:persistent="true" android:process=":xg_service_v4">
+</service>
+<provider android:authorities="com.yxzq.stock.AUTH_XGPUSH" android:exported="true" android:name="com.tencent.android.tpush.XGPushProvider">
+</provider>
+<provider android:authorities="com.yxzq.stock.TPUSH_PROVIDER" android:exported="false" android:name="com.tencent.android.tpush.SettingsContentProvider">
+</provider>
+<meta-data android:name="XG_V2_ACCESS_ID" android:value="2100318248">
+</meta-data>
+<meta-data android:name="XG_V2_ACCESS_KEY" android:value="A679MC2NXH1L">
+</meta-data>
+<provider android:authorities="com.yxzq.stock.TENCENT.MID.V4" android:exported="true" android:name="com.tencent.mid.api.MidProvider">
+</provider>
+<service android:enabled="true" android:name="com.xiaomi.push.service.XMPushService" android:process=":pushservice">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.xiaomi.push.service.XMJobService" android:permission="android.permission.BIND_JOB_SERVICE" android:process=":pushservice">
+</service>
+<service android:enabled="true" android:exported="true" android:name="com.xiaomi.mipush.sdk.PushMessageHandler">
+</service>
+<service android:enabled="true" android:name="com.xiaomi.mipush.sdk.MessageHandleService">
+</service>
+<receiver android:exported="true" android:name="com.xiaomi.push.service.receivers.NetworkStatusReceiver">
+<intent-filter>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</receiver>
+<receiver android:exported="false" android:name="com.xiaomi.push.service.receivers.PingReceiver" android:process=":pushservice">
+<intent-filter>
+<action android:name="com.xiaomi.push.PING_TIMER">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:exported="true" android:name="com.tencent.android.mipush.XMPushMessageReceiver">
+<intent-filter>
+<action android:name="com.xiaomi.mipush.RECEIVE_MESSAGE">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="com.xiaomi.mipush.MESSAGE_ARRIVED">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="com.xiaomi.mipush.ERROR">
+</action>
+</intent-filter>
+</receiver>
+<meta-data android:name="com.huawei.hms.client.appid" android:value="100739885">
+</meta-data>
+<activity android:configChanges="0x40002484" android:excludeFromRecents="true" android:exported="false" android:hardwareAccelerated="true" android:name="com.huawei.hms.activity.BridgeActivity" android:theme="@android:0103000F">
+<meta-data android:name="hwc-theme" android:value="androidhwext:style/Theme.Emui.Translucent">
+</meta-data>
+</activity>
+<provider android:authorities="com.yxzq.stock.hms.update.provider" android:exported="false" android:grantUriPermissions="true" android:name="com.huawei.hms.update.provider.UpdateProvider">
+</provider>
+<receiver android:name="com.tencent.android.hwpush.HWPushMessageReceiver">
+<intent-filter>
+<action android:name="com.huawei.android.push.intent.REGISTRATION">
+</action>
+<action android:name="com.huawei.android.push.intent.RECEIVE">
+</action>
+<action android:name="com.huawei.android.push.intent.CLICK">
+</action>
+<action android:name="com.huawei.intent.action.PUSH_STATE">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name="com.huawei.hms.support.api.push.PushEventReceiver">
+<intent-filter>
+<action android:name="com.huawei.intent.action.PUSH">
+</action>
+</intent-filter>
+</receiver>
+<service android:exported="true" android:name="com.meizu.cloud.pushsdk.NotificationService">
+</service>
+<receiver android:name="com.meizu.cloud.pushsdk.SystemReceiver">
+<intent-filter>
+<action android:name="com.meizu.cloud.pushservice.action.PUSH_SERVICE_START">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</receiver>
+<receiver android:name="com.tencent.android.mzpush.MZPushMessageReceiver">
+<intent-filter>
+<action android:name="com.meizu.flyme.push.intent.MESSAGE">
+</action>
+<action android:name="com.meizu.flyme.push.intent.REGISTER.FEEDBACK">
+</action>
+<action android:name="com.meizu.flyme.push.intent.UNREGISTER.FEEDBACK">
+</action>
+<action android:name="com.meizu.c2dm.intent.REGISTRATION">
+</action>
+<action android:name="com.meizu.c2dm.intent.RECEIVE">
+</action>
+<category android:name="com.yxzq.stock">
+</category>
+</intent-filter>
+</receiver>
+<meta-data android:name="com.bumptech.glide.integration.okhttp3.OkHttpGlideModule" android:value="GlideModule">
+</meta-data>
+<provider android:authorities="com.yxzq.stock.lifecycle-process" android:exported="false" android:multiprocess="true" android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer">
+</provider>
+<provider android:authorities="com.yxzq.stock.SensorsDataContentProvider" android:enabled="true" android:exported="false" android:name="com.sensorsdata.analytics.android.sdk.data.SensorsDataContentProvider">
+</provider>
+<meta-data android:name="com.sensorsdata.analytics.android.MainProcessName" android:value="com.yxzq.stock">
+</meta-data>
+<activity android:name="com.tencent.qcloud.logutils.LogActivity">
+</activity>
+<provider android:authorities="com.yxzq.stock.com.mob.MobProvider" android:exported="false" android:multiprocess="true" android:name="com.mob.MobProvider">
+</provider>
+<meta-data android:name="Mob-AppKey" android:value="289b32947c9ce">
+</meta-data>
+<meta-data android:name="Mob-AppSecret" android:value="02834103ee9cc9a7250ef2bce8ba53f1">
+</meta-data>
+<activity android:configChanges="0x000004A0" android:name="com.mob.tools.MobUIShell" android:theme="@android:01030010" android:windowSoftInputMode="0x00000012">
+<intent-filter>
+<action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:launchMode="2" android:name="cn.sharesdk.tencent.qq.ReceiveActivity" android:noHistory="true">
+<intent-filter>
+<data android:scheme="tencent101515933">
+</data>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+</intent-filter>
+</activity>
+<activity android:launchMode="2" android:name="com.tencent.tauth.AuthActivity" android:noHistory="true">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.tencent.connect.common.AssistActivity" android:screenOrientation="3" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x000004A0" android:exported="false" android:name="cn.sharesdk.wechat.utils.WechatHandlerActivity" android:theme="@android:01030010">
+</activity>
+<activity-alias android:exported="true" android:name="com.yxzq.stock.wxapi.WXEntryActivity" android:targetActivity="cn.sharesdk.wechat.utils.WechatHandlerActivity" android:theme="@android:01030010">
+</activity-alias>
+<activity android:configChanges="0x000004A0" android:exported="false" android:name="cn.sharesdk.alipay.utils.AlipayHandlerActivity">
+</activity>
+<activity-alias android:exported="true" android:name="com.yxzq.stock.apshare.ShareEntryActivity" android:targetActivity="cn.sharesdk.alipay.utils.AlipayHandlerActivity">
+</activity-alias>
+<activity android:configChanges="0x000004A0" android:exported="false" android:name="cn.sharesdk.dingding.utils.DingdingHandlerActivity">
+</activity>
+<activity-alias android:exported="true" android:name="com.yxzq.stock.ddshare.DDShareActivity" android:targetActivity="cn.sharesdk.dingding.utils.DingdingHandlerActivity">
+</activity-alias>
+</application>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+</manifest>

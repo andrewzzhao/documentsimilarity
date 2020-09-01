@@ -1,0 +1,350 @@
+<?xml version="1.0" ?><manifest android:compileSdkVersion="28" android:compileSdkVersionCodename="9" android:versionCode="580" android:versionName="4.6.0.580" package="com.gibli.android.datausage" platformBuildVersionCode="28" platformBuildVersionName="9" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="16" android:targetSdkVersion="28">
+</uses-sdk>
+<uses-permission android:name="android.permission.FOREGROUND_SERVICE">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.PACKAGE_USAGE_STATS">
+</uses-permission>
+<uses-feature android:name="android.hardware.touchscreen" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.software.leanback" android:required="false">
+</uses-feature>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE">
+</uses-permission>
+<application android:allowBackup="true" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:banner="@7F0F0000" android:icon="@7F0F0001" android:label="@7F120030" android:largeHeap="true" android:name="com.gibli.android.datausage.DataUsageApplication" android:networkSecurityConfig="@7F150001" android:supportsRtl="true" android:theme="@7F13000E">
+<meta-data android:name="io.fabric.ApiKey" android:value="95ab75e7fb3fc77e5ad64125daff3af900532883">
+</meta-data>
+<meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@7F1200D0">
+</meta-data>
+<activity android:name="com.gibli.android.datausage.activity.OverviewActivity" android:taskAffinity="android.task.datausage" android:theme="@7F13000E">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.MANAGE_NETWORK_USAGE">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="mobiledatausageapp.com" android:pathPrefix="/data_usage" android:scheme="http">
+</data>
+</intent-filter>
+</activity>
+<activity android:exported="true" android:name="com.gibli.android.datausage.activity.SampleUsageActivity">
+</activity>
+<activity android:label="@7F120030" android:name="com.gibli.android.datausage.activity.TvActivity">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LEANBACK_LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:label="@7F12002A" android:name="com.gibli.android.datausage.activity.settings.SettingsActivity" android:parentActivityName="com.gibli.android.datausage.activity.OverviewActivity" android:theme="@7F130011">
+</activity>
+<activity android:label="@7F12016F" android:name="com.gibli.android.datausage.activity.SearchActivity" android:parentActivityName="com.gibli.android.datausage.activity.OverviewActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:label="@7F120076" android:name="com.gibli.android.datausage.activity.compression.BlockedAppsActivity" android:parentActivityName="com.gibli.android.datausage.activity.OverviewActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:label="@7F12012D" android:name="com.gibli.android.datausage.activity.compression.CompressionActivity" android:parentActivityName="com.gibli.android.datausage.activity.OverviewActivity">
+</activity>
+<activity android:label="@7F120132" android:name="com.gibli.android.datausage.activity.security.EnableVpnSecurityActivity" android:parentActivityName="com.gibli.android.datausage.activity.OverviewActivity">
+</activity>
+<activity android:label="@7F12012D" android:name="com.gibli.android.datausage.activity.compression.CompressionStatsActivity" android:parentActivityName="com.gibli.android.datausage.activity.compression.CompressionActivity">
+</activity>
+<activity android:configChanges="0x00000480" android:label="@7F120197" android:name="com.gibli.android.datausage.activity.settings.ViewSyncsActivity" android:parentActivityName="com.gibli.android.datausage.activity.settings.SettingsActivity">
+</activity>
+<activity android:configChanges="0x00000480" android:label="@7F12019A" android:name="com.gibli.android.datausage.activity.settings.ViewUploadsActivity" android:parentActivityName="com.gibli.android.datausage.activity.settings.SettingsActivity">
+</activity>
+<activity android:label="@7F120032" android:name="com.gibli.android.datausage.activity.AppUsageActivity" android:parentActivityName="com.gibli.android.datausage.activity.OverviewActivity" android:theme="@7F130012">
+</activity>
+<activity android:label="@7F1200B0" android:name="com.gibli.android.datausage.activity.DataSavingTipsActivity">
+</activity>
+<activity android:label="@7F120032" android:name="com.gibli.android.datausage.activity.SampleAppUsageActivity" android:parentActivityName="com.gibli.android.datausage.activity.SampleUsageActivity" android:theme="@7F130012">
+</activity>
+<activity android:exported="true" android:name="com.gibli.android.datausage.activity.IntroActivity" android:theme="@7F1300D9" android:windowSoftInputMode="0x00000022">
+</activity>
+<service android:exported="false" android:name="com.gibli.android.datausage.service.work.DeviceSyncWorker">
+<intent-filter>
+<action android:name="com.firebase.jobdispatcher.ACTION_EXECUTE">
+</action>
+</intent-filter>
+</service>
+<service android:exported="false" android:name="com.gibli.android.datausage.service.work.UploadWorker">
+<intent-filter>
+<action android:name="com.firebase.jobdispatcher.ACTION_EXECUTE">
+</action>
+</intent-filter>
+</service>
+<service android:name="com.gibli.android.datausage.widget.UsageWidgetService" android:permission="android.permission.BIND_REMOTEVIEWS">
+</service>
+<service android:name="com.gibli.android.datausage.widget.TotalUsedWidgetService" android:permission="android.permission.BIND_REMOTEVIEWS">
+</service>
+<service android:exported="true" android:name="com.gibli.android.datausage.service.NetworkChangeTaskService" android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE">
+<intent-filter>
+<action android:name="com.google.android.gms.gcm.ACTION_TASK_READY">
+</action>
+</intent-filter>
+</service>
+<service android:name="com.gibli.android.datausage.service.push.MessageHandlerService">
+<intent-filter>
+<action android:name="com.google.firebase.MESSAGING_EVENT">
+</action>
+</intent-filter>
+</service>
+<service android:name="com.gibli.android.datausage.service.push.InstaceIdUpdateService">
+<intent-filter>
+<action android:name="com.google.firebase.INSTANCE_ID_EVENT">
+</action>
+</intent-filter>
+</service>
+<receiver android:name="com.gibli.android.datausage.receiver.BootReceiver">
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+<action android:name="android.intent.action.QUICKBOOT_POWERON">
+</action>
+<action android:name="android.intent.action.MY_PACKAGE_REPLACED">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:label="App Data Usage" android:name="com.gibli.android.datausage.widget.UsageWidgetProvider">
+<intent-filter>
+<action android:name="android.appwidget.action.APPWIDGET_UPDATE">
+</action>
+</intent-filter>
+<meta-data android:name="android.appwidget.provider" android:resource="@7F150004">
+</meta-data>
+</receiver>
+<receiver android:label="Total Usage Monitor" android:name="com.gibli.android.datausage.widget.TotalUsedWidgetProvider">
+<intent-filter>
+<action android:name="android.appwidget.action.APPWIDGET_UPDATE">
+</action>
+</intent-filter>
+<meta-data android:name="android.appwidget.provider" android:resource="@7F150003">
+</meta-data>
+</receiver>
+<activity android:launchMode="3" android:name="com.gibli.vpn.EnableVpnActivity" android:theme="@7F130255">
+</activity>
+<activity android:launchMode="3" android:name="com.gibli.vpn.DisableVpnActivity" android:theme="@7F130255">
+</activity>
+<activity android:launchMode="3" android:name="com.gibli.vpn.EnableUltraDataSavingActivity" android:theme="@7F130255">
+</activity>
+<activity android:launchMode="3" android:name="com.gibli.vpn.DisableUltraDataSavingActivity" android:theme="@7F130255">
+</activity>
+<activity android:launchMode="3" android:name="com.gibli.vpn.pause.PauseVpnActivity" android:theme="@7F13024A">
+</activity>
+<service android:name="com.gibli.vpn.benchmark.BenchmarkSuiteService">
+</service>
+<service android:name="com.gibli.vpn.benchmark.VpnStartSetupService">
+</service>
+<service android:name="com.gibli.vpn.GibliVpnService" android:permission="android.permission.BIND_VPN_SERVICE">
+<intent-filter>
+<action android:name="android.net.VpnService">
+</action>
+</intent-filter>
+</service>
+<service android:exported="false" android:name="com.gibli.vpn.benchmark.BenchmarkSchedulerService">
+<intent-filter>
+<action android:name="com.firebase.jobdispatcher.ACTION_EXECUTE">
+</action>
+</intent-filter>
+</service>
+<service android:enabled="true" android:exported="true" android:icon="@7F080106" android:label="@7F1201AF" android:name="com.gibli.vpn.VpnQuickSettingsTile" android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+<intent-filter>
+<action android:name="android.service.quicksettings.action.QS_TILE">
+</action>
+</intent-filter>
+</service>
+<service android:enabled="true" android:exported="true" android:icon="@7F080106" android:label="@7F1201AE" android:name="com.gibli.vpn.pause.PauseQuickSettingsTile" android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+<intent-filter>
+<action android:name="android.service.quicksettings.action.QS_TILE">
+</action>
+</intent-filter>
+</service>
+<service android:enabled="true" android:exported="true" android:icon="@7F080108" android:label="@7F1201B4" android:name="com.gibli.vpn.UltraDataSaverQuickSettingsTile" android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+<intent-filter>
+<action android:name="android.service.quicksettings.action.QS_TILE">
+</action>
+</intent-filter>
+</service>
+<service android:name="com.gibli.vpn.widget.VpnEnableWidgetService" android:permission="android.permission.BIND_REMOTEVIEWS">
+</service>
+<service android:name="com.gibli.vpn.pause.VpnPauseWidgetService" android:permission="android.permission.BIND_REMOTEVIEWS">
+</service>
+<service android:name="com.gibli.vpn.widget.VpnUltraDataSaverWidgetService" android:permission="android.permission.BIND_REMOTEVIEWS">
+</service>
+<receiver android:label="Enable VPN" android:name="com.gibli.vpn.widget.VpnEnableWidgetProvider">
+<intent-filter>
+<action android:name="android.appwidget.action.APPWIDGET_UPDATE">
+</action>
+</intent-filter>
+<meta-data android:name="android.appwidget.provider" android:resource="@7F150006">
+</meta-data>
+</receiver>
+<receiver android:label="Pause VPN" android:name="com.gibli.vpn.pause.VpnPauseWidgetProvider">
+<intent-filter>
+<action android:name="android.appwidget.action.APPWIDGET_UPDATE">
+</action>
+</intent-filter>
+<meta-data android:name="android.appwidget.provider" android:resource="@7F150006">
+</meta-data>
+</receiver>
+<receiver android:label="Enable Ultra Data Saver" android:name="com.gibli.vpn.widget.VpnUltraDataSaverWidgetProvider">
+<intent-filter>
+<action android:name="android.appwidget.action.APPWIDGET_UPDATE">
+</action>
+</intent-filter>
+<meta-data android:name="android.appwidget.provider" android:resource="@7F150006">
+</meta-data>
+</receiver>
+<activity android:name="com.gibli.onboarding.OnboardingActivity" android:theme="@7F13024B">
+</activity>
+<activity android:configChanges="0x000005B0" android:name="com.facebook.FacebookActivity" android:theme="@7F130237">
+</activity>
+<activity android:name="com.facebook.CustomTabMainActivity">
+</activity>
+<activity android:name="com.facebook.CustomTabActivity">
+</activity>
+<service android:exported="true" android:name="com.firebase.jobdispatcher.GooglePlayReceiver" android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE">
+<intent-filter>
+<action android:name="com.google.android.gms.gcm.ACTION_TASK_READY">
+</action>
+</intent-filter>
+</service>
+<service android:exported="true" android:name="com.google.firebase.messaging.FirebaseMessagingService">
+<intent-filter android:priority="-500">
+<action android:name="com.google.firebase.MESSAGING_EVENT">
+</action>
+</intent-filter>
+</service>
+<service android:exported="false" android:name="com.google.firebase.components.ComponentDiscoveryService">
+<meta-data android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar" android:value="com.google.firebase.components.ComponentRegistrar">
+</meta-data>
+<meta-data android:name="com.google.firebase.components:com.google.firebase.iid.Registrar" android:value="com.google.firebase.components.ComponentRegistrar">
+</meta-data>
+</service>
+<receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementReceiver">
+</receiver>
+<receiver android:enabled="true" android:exported="true" android:name="com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver" android:permission="android.permission.INSTALL_PACKAGES">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementService">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementJobService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<receiver android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+</intent-filter>
+</receiver>
+<service android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdService">
+<intent-filter android:priority="-500">
+<action android:name="com.google.firebase.INSTANCE_ID_EVENT">
+</action>
+</intent-filter>
+</service>
+<activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:01030010">
+</activity>
+<provider android:authorities="com.gibli.android.datausage.firebaseinitprovider" android:exported="false" android:initOrder="100" android:name="com.google.firebase.provider.FirebaseInitProvider">
+</provider>
+<meta-data android:name="com.google.android.gms.version" android:value="@7F0B0009">
+</meta-data>
+<provider android:authorities="com.gibli.android.datausage.workmanager-init" android:directBootAware="false" android:exported="false" android:multiprocess="true" android:name="androidx.work.impl.WorkManagerInitializer">
+</provider>
+<service android:directBootAware="false" android:enabled="@7F050006" android:exported="false" android:name="androidx.work.impl.background.systemalarm.SystemAlarmService">
+</service>
+<service android:directBootAware="false" android:enabled="@7F050007" android:exported="true" android:name="androidx.work.impl.background.systemjob.SystemJobService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<receiver android:directBootAware="false" android:enabled="true" android:exported="false" android:name="androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver">
+</receiver>
+<receiver android:directBootAware="false" android:enabled="false" android:exported="false" android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryChargingProxy">
+<intent-filter>
+<action android:name="android.intent.action.ACTION_POWER_CONNECTED">
+</action>
+<action android:name="android.intent.action.ACTION_POWER_DISCONNECTED">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:directBootAware="false" android:enabled="false" android:exported="false" android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryNotLowProxy">
+<intent-filter>
+<action android:name="android.intent.action.BATTERY_OKAY">
+</action>
+<action android:name="android.intent.action.BATTERY_LOW">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:directBootAware="false" android:enabled="false" android:exported="false" android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$StorageNotLowProxy">
+<intent-filter>
+<action android:name="android.intent.action.DEVICE_STORAGE_LOW">
+</action>
+<action android:name="android.intent.action.DEVICE_STORAGE_OK">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:directBootAware="false" android:enabled="false" android:exported="false" android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$NetworkStateProxy">
+<intent-filter>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:directBootAware="false" android:enabled="false" android:exported="false" android:name="androidx.work.impl.background.systemalarm.RescheduleReceiver">
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+<action android:name="android.intent.action.TIME_SET">
+</action>
+<action android:name="android.intent.action.TIMEZONE_CHANGED">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:directBootAware="false" android:enabled="@7F050006" android:exported="false" android:name="androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver">
+<intent-filter>
+<action android:name="androidx.work.impl.background.systemalarm.UpdateProxies">
+</action>
+</intent-filter>
+</receiver>
+<provider android:authorities="com.gibli.android.datausage.MarketingInitProvider" android:exported="false" android:name="com.facebook.marketing.internal.MarketingInitProvider">
+</provider>
+<provider android:authorities="com.gibli.android.datausage.FacebookInitProvider" android:exported="false" android:name="com.facebook.internal.FacebookInitProvider">
+</provider>
+<receiver android:exported="false" android:name="com.facebook.CurrentAccessTokenExpirationBroadcastReceiver">
+<intent-filter>
+<action android:name="com.facebook.sdk.ACTION_CURRENT_ACCESS_TOKEN_CHANGED">
+</action>
+</intent-filter>
+</receiver>
+<provider android:authorities="com.gibli.android.datausage.lifecycle-process" android:exported="false" android:multiprocess="true" android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer">
+</provider>
+</application>
+</manifest>

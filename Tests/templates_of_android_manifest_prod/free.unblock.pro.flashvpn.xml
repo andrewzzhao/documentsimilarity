@@ -1,0 +1,208 @@
+<?xml version="1.0" ?><manifest android:versionCode="171" android:versionName="2.3" package="free.unblock.pro.flashvpn" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="15" android:targetSdkVersion="27">
+</uses-sdk>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_SUPERUSER">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_LOGS">
+</uses-permission>
+<uses-permission android:name="com.android.vending.CHECK_LICENSE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_LOGS">
+</uses-permission>
+<uses-feature android:name="android.hardware.location.gps" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.location" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.touchscreen" android:required="false">
+</uses-feature>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE">
+</uses-permission>
+<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE">
+</uses-permission>
+<application android:allowBackup="true" android:hardwareAccelerated="true" android:icon="@7F0D0003" android:label="@7F0F004B" android:name="free.unblock.vpnpro.xSocksApplication" android:networkSecurityConfig="@7F120001" android:supportsRtl="true" android:theme="@7F10000F">
+<meta-data android:name="TD_APP_ID" android:value="C9FF1FF6F4F9471E8F1D8F47935811E0">
+</meta-data>
+<meta-data android:name="TD_CHANNEL_ID" android:value="GooglePlay">
+</meta-data>
+<activity android:name="free.unblock.vpnpro.ui.WelcomeActivity">
+</activity>
+<activity android:name="free.unblock.vpnpro.ui.NewStartActivity" android:theme="@7F10000C">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:label="@7F0F004B" android:launchMode="2" android:name="free.unblock.vpnpro.ui.HomeActivity" android:theme="@7F10000E">
+</activity>
+<activity android:name="free.unblock.vpnpro.ui.VPNServerList" android:theme="@7F100015">
+</activity>
+<activity android:name="free.unblock.vpnpro.ui.VPNBrowserServerList" android:theme="@7F100015">
+</activity>
+<activity android:name="free.unblock.vpnpro.ui.VIPActivity" android:theme="@7F100015">
+</activity>
+<activity android:name="free.unblock.vpnpro.ui.VIPSubscribeActivity" android:theme="@7F100015">
+</activity>
+<activity android:name="free.unblock.vpnpro.ui.GOVIPSubscribeActivity" android:theme="@7F100015">
+</activity>
+<activity android:name="free.unblock.vpnpro.ad.OtherIntActivity" android:theme="@7F100015">
+</activity>
+<service android:enabled="true" android:exported="false" android:label="@7F0F004B" android:name="free.unblock.vpnpro.service.xSocksVpnService" android:permission="android.permission.BIND_VPN_SERVICE" android:process=":vpnservice">
+<intent-filter>
+<action android:name="android.net.VpnService">
+</action>
+</intent-filter>
+</service>
+<service android:name="free.unblock.vpnpro.service.VipService">
+<intent-filter>
+<action android:name="free.unblock.vpnpro.aidl.IVipService">
+</action>
+</intent-filter>
+</service>
+<activity android:name="free.unblock.vpnpro.ui.VPNServerAcitviy">
+</activity>
+<receiver android:enabled="true" android:exported="true" android:name="free.unblock.vpnpro.ad.CampaignTrackingReceiver">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+<meta-data android:name="TD_APP_ID" android:value="C9FF1FF6F4F9471E8F1D8F47935811E0">
+</meta-data>
+<meta-data android:name="TD_CHANNEL_ID" android:value="GooglePlay">
+</meta-data>
+<activity android:label="@7F0F023C" android:name="free.unblock.vpnpro.ui.SettingsActivity">
+</activity>
+<activity android:exported="true" android:name="free.unblock.vpnpro.ui.VIPGotActivity" android:theme="@7F100011">
+</activity>
+<activity android:name="free.unblock.vpnpro.ui.CoinsActivity" android:theme="@7F100011">
+</activity>
+<activity android:name="free.unblock.vpnpro.ui.RewardedFreeVipConnectTimeActivity" android:theme="@7F100011">
+</activity>
+<activity android:exported="true" android:launchMode="2" android:name="free.unblock.vpnpro.ui.InviteFriendsGotActivity" android:theme="@7F100011">
+</activity>
+<activity android:launchMode="1" android:name="free.unblock.vpnpro.ui.ExpireActivity" android:theme="@7F100012">
+</activity>
+<activity android:name="free.unblock.vpnpro.ui.AddAppActivity">
+</activity>
+<activity android:name="free.unblock.vpnpro.ui.ShowAlertDialogActivity" android:theme="@7F100012">
+</activity>
+<service android:name="free.unblock.vpnpro.InitializeService">
+</service>
+<receiver android:enabled="true" android:exported="true" android:name="free.unblock.vpnpro.receiver.CampaignTrackingReceiver">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name="free.unblock.vpnpro.receiver.AppInstallReceiver">
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_ADDED">
+</action>
+<action android:name="android.intent.action.PACKAGE_REPLACED">
+</action>
+<action android:name="android.intent.action.PACKAGE_REMOVED">
+</action>
+<data android:scheme="package">
+</data>
+</intent-filter>
+</receiver>
+<activity android:name="free.unblock.vpnpro.ui.InviteActivity">
+</activity>
+<meta-data android:name="com.facebook.sdk.ApplicationId" android:value="fb1579962005640911">
+</meta-data>
+<meta-data android:name="com.facebook.sdk.ApplicationName" android:value="@7F0F004B">
+</meta-data>
+<activity android:name="free.unblock.vpnpro.ui.FreeVipActivity">
+</activity>
+<meta-data android:name="io.fabric.ApiKey" android:value="130e8073cc3fe63d0165b1d3cc165c6d6fdd65aa">
+</meta-data>
+<receiver android:exported="true" android:name="ly.count.android.sdk.ReferrerReceiver">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+<meta-data android:name="com.google.android.gms.ads.APPLICATION_ID" android:value="ca-app-pub-2014229591944582~4877932217">
+</meta-data>
+<service android:exported="false" android:name="com.google.firebase.components.ComponentDiscoveryService">
+<meta-data android:name="com.google.firebase.components:com.google.firebase.remoteconfig.RemoteConfigRegistrar" android:value="com.google.firebase.components.ComponentRegistrar">
+</meta-data>
+<meta-data android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar" android:value="com.google.firebase.components.ComponentRegistrar">
+</meta-data>
+<meta-data android:name="com.google.firebase.components:com.google.firebase.abt.component.AbtRegistrar" android:value="com.google.firebase.components.ComponentRegistrar">
+</meta-data>
+<meta-data android:name="com.google.firebase.components:com.google.firebase.iid.Registrar" android:value="com.google.firebase.components.ComponentRegistrar">
+</meta-data>
+</service>
+<receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementReceiver">
+</receiver>
+<receiver android:enabled="true" android:exported="true" android:name="com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver" android:permission="android.permission.INSTALL_PACKAGES">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementService">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementJobService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<receiver android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+</intent-filter>
+</receiver>
+<service android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdService">
+<intent-filter android:priority="-500">
+<action android:name="com.google.firebase.INSTANCE_ID_EVENT">
+</action>
+</intent-filter>
+</service>
+<provider android:authorities="free.unblock.pro.flashvpn.firebaseinitprovider" android:exported="false" android:initOrder="100" android:name="com.google.firebase.provider.FirebaseInitProvider">
+</provider>
+<activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x00000FB0" android:exported="false" android:name="com.google.android.gms.ads.AdActivity" android:theme="@android:0103000F">
+</activity>
+<provider android:authorities="free.unblock.pro.flashvpn.mobileadsinitprovider" android:exported="false" android:initOrder="100" android:name="com.google.android.gms.ads.MobileAdsInitProvider">
+</provider>
+<meta-data android:name="com.google.android.gms.version" android:value="@7F0A0008">
+</meta-data>
+<activity android:configChanges="0x000004A0" android:name="com.facebook.ads.AudienceNetworkActivity">
+</activity>
+<activity android:configChanges="0x000005B0" android:name="com.android.billingclient.api.ProxyBillingActivity" android:theme="@android:01030010">
+</activity>
+<provider android:authorities="free.unblock.pro.flashvpn.crashlyticsinitprovider" android:exported="false" android:initOrder="100" android:name="com.crashlytics.android.CrashlyticsInitProvider">
+</provider>
+<activity android:configChanges="0x000004A0" android:launchMode="0" android:name="com.yanzhenjie.permission.PermissionActivity" android:theme="@7F100197" android:windowSoftInputMode="0x00000003">
+</activity>
+<meta-data android:name="android.support.VERSION" android:value="26.1.0">
+</meta-data>
+</application>
+</manifest>

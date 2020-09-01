@@ -1,0 +1,138 @@
+<?xml version="1.0" ?><manifest android:versionCode="20" android:versionName="1.51" package="llamaze.com.br.whattodraw" platformBuildVersionCode="25" platformBuildVersionName="7.1.1" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="15" android:targetSdkVersion="25">
+</uses-sdk>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="com.android.vending.BILLING">
+</uses-permission>
+<uses-permission android:name="android.permission.CLEAR_APP_CACHE">
+</uses-permission>
+<meta-data android:name="android.support.VERSION" android:value="25.3.1">
+</meta-data>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE">
+</uses-permission>
+<permission android:name="llamaze.com.br.whattodraw.permission.C2D_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="llamaze.com.br.whattodraw.permission.C2D_MESSAGE">
+</uses-permission>
+<application android:allowBackup="true" android:icon="@7F030000" android:label="@7F09004F" android:name="llamaze.com.br.whattodraw.MyApp" android:supportsRtl="true" android:theme="@7F0A005C">
+<activity android:clearTaskOnLaunch="true" android:label="@7F09004F" android:launchMode="2" android:name="llamaze.com.br.whattodraw.Activitys.SplashActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:label="@7F09004F" android:name="llamaze.com.br.whattodraw.Activitys.ChooseActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="android.intent.action.ChooseActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:label="@7F0900C5" android:name="llamaze.com.br.whattodraw.Activitys.ThemeActivity" android:parentActivityName="llamaze.com.br.whattodraw.Activitys.ChooseActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000004" android:label="@7F090044" android:launchMode="2" android:name="llamaze.com.br.whattodraw.Activitys.SettingsActivity" android:parentActivityName="llamaze.com.br.whattodraw.Activitys.ChooseActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F0900C1" android:name="llamaze.com.br.whattodraw.Activitys.AboutActivity" android:parentActivityName="llamaze.com.br.whattodraw.Activitys.SettingsActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F0900C4" android:name="llamaze.com.br.whattodraw.Activitys.SupportMeActivity" android:parentActivityName="llamaze.com.br.whattodraw.Activitys.ChooseActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F0900C3" android:name="llamaze.com.br.whattodraw.Activitys.FeedbackActivity" android:parentActivityName="llamaze.com.br.whattodraw.Activitys.ChooseActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F0900C2" android:name="llamaze.com.br.whattodraw.Activitys.BookmarkActivity" android:parentActivityName="llamaze.com.br.whattodraw.Activitys.ChooseActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000005B0" android:label="@7F09004F" android:name="com.facebook.FacebookActivity" android:theme="@7F0A01EC">
+</activity>
+<meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@7F0900EA">
+</meta-data>
+<meta-data android:name="com.google.android.gms.version" android:value="@7F0E0006">
+</meta-data>
+<meta-data android:name="com.google.firebase.messaging.default_notification_icon" android:resource="@7F0200BB">
+</meta-data>
+<meta-data android:name="android.max_aspect" android:value="2.100000">
+</meta-data>
+<service android:name="llamaze.com.br.whattodraw.Firebase.MyFirebaseMessagingService">
+<intent-filter>
+<action android:name="com.google.firebase.MESSAGING_EVENT">
+</action>
+</intent-filter>
+</service>
+<service android:name="llamaze.com.br.whattodraw.Firebase.MyFirebaseInstanceIDService">
+<intent-filter>
+<action android:name="com.google.firebase.INSTANCE_ID_EVENT">
+</action>
+</intent-filter>
+</service>
+<service android:exported="false" android:name="llamaze.com.br.whattodraw.Firebase.MyJobService">
+<intent-filter>
+<action android:name="com.firebase.jobdispatcher.ACTION_EXECUTE">
+</action>
+</intent-filter>
+</service>
+<service android:name="com.google.firebase.crash.internal.service.FirebaseCrashReceiverService" android:process=":background_crash">
+</service>
+<service android:name="com.google.firebase.crash.internal.service.FirebaseCrashSenderService" android:process=":background_crash">
+</service>
+<activity android:exported="true" android:name="com.google.android.gms.appinvite.PreviewActivity" android:theme="@7F0A0184">
+<intent-filter>
+<action android:name="com.google.android.gms.appinvite.ACTION_PREVIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:01030010">
+</activity>
+<service android:exported="true" android:name="com.google.firebase.messaging.FirebaseMessagingService">
+<intent-filter android:priority="-500">
+<action android:name="com.google.firebase.MESSAGING_EVENT">
+</action>
+</intent-filter>
+</service>
+<service android:exported="true" android:name="com.firebase.jobdispatcher.GooglePlayReceiver" android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE">
+<intent-filter>
+<action android:name="com.google.android.gms.gcm.ACTION_TASK_READY">
+</action>
+</intent-filter>
+</service>
+<activity android:exported="true" android:name="com.facebook.CustomTabActivity">
+</activity>
+<activity android:name="com.facebook.CustomTabMainActivity">
+</activity>
+<receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementReceiver">
+</receiver>
+<receiver android:enabled="true" android:name="com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver" android:permission="android.permission.INSTALL_PACKAGES">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementService">
+</service>
+<receiver android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+<category android:name="llamaze.com.br.whattodraw">
+</category>
+</intent-filter>
+</receiver>
+<receiver android:exported="false" android:name="com.google.firebase.iid.FirebaseInstanceIdInternalReceiver">
+</receiver>
+<service android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdService">
+<intent-filter android:priority="-500">
+<action android:name="com.google.firebase.INSTANCE_ID_EVENT">
+</action>
+</intent-filter>
+</service>
+<provider android:authorities="llamaze.com.br.whattodraw.firebaseinitprovider" android:exported="false" android:initOrder="100" android:name="com.google.firebase.provider.FirebaseInitProvider">
+</provider>
+</application>
+</manifest>

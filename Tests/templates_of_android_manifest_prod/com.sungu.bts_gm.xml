@@ -1,0 +1,308 @@
+<?xml version="1.0" ?><manifest android:versionCode="5" android:versionName="V1.0.5" package="com.sungu.bts_gm" platformBuildVersionCode="23" platformBuildVersionName="6.0-2166767" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="14" android:targetSdkVersion="23">
+</uses-sdk>
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW">
+</uses-permission>
+<permission android:name="com.sungu.bts_gm.permission.JPUSH_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="com.sungu.bts_gm.permission.JPUSH_MESSAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_USER_PRESENT">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="com.android.launcher.permission.READ_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<application android:allowBackup="true" android:icon="@7F030008" android:label="@7F060015" android:name="com.qihoo.util.StubApp2066503484" android:qihoo="activity" android:supportsRtl="true" android:theme="@android:01030006">
+<meta-data android:name="com.baidu.lbsapi.API_KEY" android:value="apsvMOcjohZ7kIoGxxpj7auTUAGgoztI">
+</meta-data>
+<service android:enabled="true" android:name="com.baidu.location.f" android:process=":remote">
+</service>
+<activity android:configChanges="0x000000A0" android:exported="false" android:name="cn.jpush.android.ui.PushActivity" android:theme="@android:01030006">
+<intent-filter>
+<action android:name="cn.jpush.android.ui.PushActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="com.sungu.bts_gm">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:name="com.qihoo.util.appupdate.AppUpdateActivity" android:theme="@android:0103000F">
+</activity>
+<service android:exported="false" android:name="com.qihoo.util.QhJobService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<activity android:excludeFromRecents="true" android:exported="false" android:launchMode="2" android:name="com.qihoo.util.CommonActivity" android:taskAffinity="com.sungu.bts_gm.util" android:theme="@android:0103005F">
+</activity>
+<service android:enabled="true" android:exported="true" android:name="com.qihoo.util.CommonService">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.qihoo.util.CommonService2">
+</service>
+<receiver android:enabled="true" android:exported="false" android:name="com.qihoo.util.CommonReceiver">
+</receiver>
+<provider android:authorities="com.sungu.bts_gm.COMMONPROVIDER" android:exported="true" android:name="com.qihoo.util.CommonProvider">
+</provider>
+<activity android:configChanges="0x000000A0" android:exported="false" android:launchMode="2" android:name="com.qihoo.ls.LsActivity" android:screenOrientation="1" android:theme="@android:01030060">
+</activity>
+<service android:exported="false" android:name="com.qihoo.ls.SoService">
+</service>
+<service android:enabled="true" android:exported="false" android:name="cn.jpush.android.service.DownloadService">
+</service>
+<service android:enabled="true" android:exported="false" android:name="cn.jpush.android.service.PushService">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.REGISTER">
+</action>
+<action android:name="cn.jpush.android.intent.REPORT">
+</action>
+<action android:name="cn.jpush.android.intent.PushService">
+</action>
+<action android:name="cn.jpush.android.intent.PUSH_TIME">
+</action>
+</intent-filter>
+</service>
+<service android:enabled="true" android:exported="true" android:name="cn.jpush.android.service.DaemonService">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.DaemonService">
+</action>
+<category android:name="com.sungu.bts_gm">
+</category>
+</intent-filter>
+</service>
+<receiver android:enabled="true" android:exported="false" android:name="cn.jpush.android.service.PushReceiver">
+<intent-filter android:priority="1000">
+<action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY">
+</action>
+<category android:name="com.sungu.bts_gm">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.USER_PRESENT">
+</action>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_ADDED">
+</action>
+<action android:name="android.intent.action.PACKAGE_REMOVED">
+</action>
+<data android:scheme="package">
+</data>
+</intent-filter>
+</receiver>
+<receiver android:exported="false" android:name="cn.jpush.android.service.AlarmReceiver">
+</receiver>
+<receiver android:enabled="true" android:exported="false" android:name="com.sungu.bts_gm.business.receivers.JPushBtsReceiver">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED">
+</action>
+<category android:name="com.sungu.bts_gm">
+</category>
+</intent-filter>
+</receiver>
+<meta-data android:name="JPUSH_CHANNEL" android:value="developer-default">
+</meta-data>
+<meta-data android:name="JPUSH_APPKEY" android:value="88543b92b9d92bfa41aa2d3a">
+</meta-data>
+<activity android:name="com.sungu.bts_gm.MainActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sungu.bts_gm.ui.form.LoginActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sungu.bts_gm.ui.form.PasswordChangeActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sungu.bts_gm.ui.form.EmployeeSigninActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sungu.bts_gm.ui.form.CustomerManagerActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sungu.bts_gm.ui.form.CustomerDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sungu.bts_gm.ui.form.CustomerAddActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sungu.bts_gm.ui.form.CustomerOperateActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sungu.bts_gm.ui.form.CustomerTurnYXActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sungu.bts_gm.ui.form.CustomerTurnDDActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sungu.bts_gm.ui.form.CustomerContractAddActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sungu.bts_gm.ui.form.CustomerPaymentActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sungu.bts_gm.ui.form.CustomerPaymentAddActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sungu.bts_gm.ui.form.AddressBookActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sungu.bts_gm.ui.form.EmployeeDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sungu.bts_gm.ui.form.MessageActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sungu.bts_gm.ui.form.SetActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sungu.bts_gm.ui.form.CustomerSelectActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sungu.bts_gm.ui.form.CustomerTrackOld" android:screenOrientation="1" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:name="com.sungu.bts_gm.ui.form.CustomerTrackAddActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sungu.bts_gm.ui.form.CustomerSolutionPriceAddActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sungu.bts_gm.ui.form.ProjectDispatchActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sungu.bts_gm.ui.form.ProjectDispatchPaiActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sungu.bts_gm.ui.form.WorkPlanActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sungu.bts_gm.ui.form.ProjectDispatch2PaiTemplateActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sungu.bts_gm.ui.form.WorkPlanStartDtActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sungu.bts_gm.ui.form.WorkPlanAddActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sungu.bts_gm.ui.form.WorkPlanStepDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sungu.bts_gm.ui.form.InspectionRecordActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sungu.bts_gm.ui.form.InspectionRecordDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sungu.bts_gm.ui.form.InspectionAddTypeActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sungu.bts_gm.ui.form.InspectionAddActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sungu.bts_gm.ui.form.InspectionAddRemarkActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name="com.sungu.bts_gm.ui.form.AcceptanceActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sungu.bts_gm.ui.form.AcceptanceDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sungu.bts_gm.ui.form.AcceptanceDatumActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sungu.bts_gm.ui.form.AuditActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sungu.bts_gm.ui.form.AuditListActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sungu.bts_gm.ui.form.AuditDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sungu.bts_gm.ui.form.ReportActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sungu.bts_gm.ui.form.ReportMySaleActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sungu.bts_gm.ui.form.ReportMyProjectActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sungu.bts_gm.ui.form.ReportContractActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sungu.bts_gm.ui.form.BossBoardActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F06002D" android:name="com.sungu.bts_gm.ui.form.BossboardSaleActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sungu.bts_gm.ui.form.BossboardComplainActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sungu.bts_gm.ui.form.BossboardProjectActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sungu.bts_gm.ui.form.BannerActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sungu.bts_gm.ui.form.NoticeActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sungu.bts_gm.ui.form.NoticeDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sungu.bts_gm.ui.form.ImageIconDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sungu.bts_gm.ui.form.GuideActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sungu.bts_gm.ui.form.StartActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:name="com.sungu.bts_gm.ui.form.AboutActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sungu.bts_gm.ui.form.FileShowActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sungu.bts_gm.ui.form.ImageDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sungu.bts_gm.ui.form.CustomerTrackActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sungu.bts_gm.ui.form.CustomerTrackDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sungu.bts_gm.ui.form.MessageNotifyActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sungu.bts_gm.ui.form.MessageNotifyDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sungu.bts_gm.ui.form.MessageNotifyAddActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sungu.bts_gm.ui.form.CustomerZYActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sungu.bts_gm.ui.form.CustomerContactAddActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sungu.bts_gm.ui.form.DistribSalemanActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sungu.bts_gm.ui.form.InspectionDoSomeThingActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sungu.bts_gm.ui.form.CustomerDetailSlideActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sungu.bts_gm.ui.form.QRCodeActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sungu.bts_gm.ui.form.CustomerManagerSpecialActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sungu.bts_gm.ui.form.ProjectDispatch2PaiActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sungu.bts_gm.ui.form.CustomerPaiActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sungu.bts_gm.ui.form.CustomerTurnActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sungu.bts_gm.ui.form.CustomerLoginActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sungu.bts_gm.ui.form.CustomerLoginAddActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sungu.bts_gm.ui.form.ProjectApplyDispatchPaiActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sungu.bts_gm.ui.form.ProjectDispatch2PaiSelectActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sungu.bts_gm.ui.form.Customer.Contract.ProductAddActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sungu.bts_gm.ui.form.DDZCustomerTitleActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sungu.bts_gm.ui.form.Customer.Contract.ProduceAddListActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sungu.bts_gm.ui.form.Customer.WorkPlan.WorkPlanStep2Activity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sungu.bts_gm.ui.form.ReportMySale2Activity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sungu.bts_gm.ui.form.Customer.DSProductActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sungu.bts_gm.ui.form.Customer.CompetitorMsgShowActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.ata.multiselectimage.MultiImageSelectorActivity">
+</activity>
+</application>
+</manifest>

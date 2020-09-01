@@ -1,0 +1,262 @@
+<?xml version="1.0" ?><manifest android:installLocation="0" android:versionCode="122" android:versionName="2.0.3.20171130" package="com.szunicom.sipua" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="5" android:targetSdkVersion="11">
+</uses-sdk>
+<supports-screens android:anyDensity="false" android:largeScreens="true" android:normalScreens="true" android:smallScreens="true">
+</supports-screens>
+<uses-feature android:name="android.hardware.bluetooth" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.location" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.location.gps" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.telephony" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.touchscreen" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.wifi" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.camera" android:required="false">
+</uses-feature>
+<application android:icon="@7F020078" android:label="@7F060000" android:name="com.baidu.protect.StubApplication">
+<activity android:configChanges="0x000000A0" android:label="@7F060000" android:launchMode="3" android:name="com.szunicom.sipua.ui.Sipdroid" android:screenOrientation="1">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:icon="@7F020064" android:label="@7F060001" android:name="com.szunicom.sipua.ui.PSTN">
+<intent-filter>
+<action android:name="android.intent.action.SENDTO">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:scheme="sms">
+</data>
+<data android:scheme="smsto">
+</data>
+</intent-filter>
+</activity>
+<activity android:label="@7F060000" android:name="com.szunicom.sipua.ui.SIP">
+<intent-filter>
+<action android:name="android.intent.action.SENDTO">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:scheme="sms">
+</data>
+<data android:scheme="smsto">
+</data>
+</intent-filter>
+</activity>
+<activity android:label="@7F060000" android:name="com.szunicom.sipua.ui.AutoAnswer">
+</activity>
+<activity android:label="@7F060000" android:name="com.szunicom.sipua.ui.ChangeAccount">
+</activity>
+<activity android:label="@7F060000" android:name="com.szunicom.sipua.ui.SIPUri" android:theme="@android:0103000B">
+<intent-filter>
+<action android:name="android.intent.action.CALL">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:scheme="sip">
+</data>
+<data android:scheme="sipdroid">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.SENDTO">
+</action>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="imto">
+</data>
+<data android:scheme="sip">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.CALL_PRIVILEGED">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:scheme="sip">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:mimeType="vnd.android.cursor.item/name">
+</data>
+</intent-filter>
+</activity>
+<activity android:excludeFromRecents="true" android:label="@7F060000" android:name="com.szunicom.sipua.ui.Activity2" android:taskAffinity="">
+</activity>
+<activity android:configChanges="0x000000A0" android:label="@7F060000" android:name="com.szunicom.sipua.ui.Settings">
+	android:excludeFromRecents=&quot;true&quot; android:taskAffinity=&quot;&quot;&gt;
+
+</activity>
+<activity android:label="@7F060000" android:name="org.sipdroid.codecs.Codecs$CodecSettings">
+</activity>
+<activity android:clearTaskOnLaunch="true" android:configChanges="0x000000A0" android:excludeFromRecents="true" android:label="@7F060074" android:name="com.szunicom.sipua.ui.VideoCamera" android:screenOrientation="0" android:taskAffinity="" android:theme="@android:0103000A">
+</activity>
+<activity android:excludeFromRecents="true" android:label="@7F060000" android:launchMode="3" android:name="com.szunicom.sipua.ui.InCallScreen" android:taskAffinity="">
+</activity>
+<receiver android:name="com.szunicom.sipua.ui.OneShotAlarm">
+</receiver>
+<receiver android:name="com.szunicom.sipua.ui.OneShotAlarm2">
+</receiver>
+<receiver android:name="com.szunicom.sipua.ui.LoopAlarm">
+</receiver>
+<receiver android:name="com.szunicom.sipua.ui.OwnWifi">
+</receiver>
+<receiver android:name="com.szunicom.sipua.ui.OneShotLocation">
+</receiver>
+<receiver android:name="com.szunicom.sipua.ui.LoopLocation">
+</receiver>
+<receiver android:name="com.szunicom.sipua.ui.Caller">
+<intent-filter android:priority="-1">
+<action android:name="android.intent.action.NEW_OUTGOING_CALL">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:enabled="true" android:name="com.szunicom.sipua.ui.Receiver">
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+<action android:name="android.intent.action.EXTERNAL_APPLICATIONS_AVAILABLE">
+</action>
+<action android:name="android.intent.action.EXTERNAL_APPLICATIONS_UNAVAILABLE">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_REPLACED">
+</action>
+<data android:scheme="package">
+</data>
+<data android:path="com.szunicom.sipua">
+</data>
+</intent-filter>
+</receiver>
+<receiver android:name="com.szunicom.sipua.ui.PhoneStart">
+<intent-filter>
+<action android:name="org.sipdroid.START_SIPDROID">
+</action>
+<action android:name="org.sipdroid.STOP_SIPDROID">
+</action>
+</intent-filter>
+</receiver>
+<service android:name="com.szunicom.sipua.ui.RegisterService">
+</service>
+<provider android:authorities="com.szunicom.sipua.protect.stubprovider" android:exported="false" android:initOrder="2147483647" android:name="com.baidu.protect.StubProvider">
+</provider>
+<provider android:authorities="com.szunicom.sipua.xshield.ac.provider" android:exported="true" android:name="com.baidu.xshield.XshieldProvider">
+</provider>
+<activity android:excludeFromRecents="true" android:exported="true" android:launchMode="0" android:name="com.baidu.xshield.XshieldActivity" android:theme="@android:0103000F">
+<intent-filter>
+<action android:name="com.baidu.action.Xshield.VIEW">
+</action>
+<category android:name="com.baidu.category.xshield">
+</category>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<receiver android:exported="false" android:name="com.baidu.xshield.XshieldReceiver">
+<intent-filter>
+<action android:name="com.baidu.action.Xshield.VIEW">
+</action>
+<category android:name="com.baidu.category.xshield">
+</category>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+<intent-filter android:priority="2147483647">
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+</intent-filter>
+</receiver>
+<service android:exported="false" android:name="com.baidu.xshield.XshieldService">
+<intent-filter>
+<action android:name="com.baidu.action.Xshield.VIEW">
+</action>
+<category android:name="com.baidu.category.xshield">
+</category>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</service>
+<service android:exported="false" android:name="com.baidu.xshield.XshieldJobService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+</application>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.RECORD_AUDIO">
+</uses-permission>
+<uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_CONTACTS">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_CONTACTS">
+</uses-permission>
+<uses-permission android:name="android.permission.CALL_PHONE">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.DISABLE_KEYGUARD">
+</uses-permission>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.BLUETOOTH">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="android.permission.BROADCAST_STICKY">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_CALL_LOG">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_CALL_LOG">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERACT_ACROSS_USERS_FULL">
+</uses-permission>
+</manifest>

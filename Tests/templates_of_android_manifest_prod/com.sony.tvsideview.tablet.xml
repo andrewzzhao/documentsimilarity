@@ -1,0 +1,228 @@
+<?xml version="1.0" ?><manifest android:versionCode="20130524" android:versionName="1.2.1" package="com.sony.tvsideview.tablet" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="13" android:targetSdkVersion="13">
+</uses-sdk>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="com.sony.remotecontrol.permission.API">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<permission android:description="@7F0A0011" android:label="@7F0A0010" android:name="com.sony.remotecontrol.permission.API" android:permissionGroup="android.permission-group.HARDWARE_CONTROLS" android:protectionLevel="1">
+</permission>
+<permission android:label="Provide UPnP device list" android:name="com.sony.tvsideview.ACCESS_UPNP_DEVICE_PROVIDER" android:protectionLevel="2">
+</permission>
+<permission android:label="Provide CDS information" android:name="com.sony.tvsideview.ACCESS_CDS_PROVIDER" android:protectionLevel="2">
+</permission>
+<application android:hardwareAccelerated="true" android:icon="@7F02025D" android:label="@7F0A0324" android:manageSpaceActivity="com.sony.sel.espresso.ui.DeleteCacheActivity" android:name="com.sony.tvsideview.TvSideView">
+<uses-library android:name="com.sony.remotecontrol.ir.v1" android:required="false">
+</uses-library>
+<uses-library android:name="com.sony.nfx.region" android:required="false">
+</uses-library>
+<activity android:configChanges="0x000002A0" android:label="@7F0A0324" android:name="com.sony.tvsideview.MainActivity" android:screenOrientation="0" android:theme="@android:0103006D" android:windowSoftInputMode="0x00000020">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.sony.tvsideview.DockActivity" android:screenOrientation="0">
+</activity>
+<activity android:configChanges="0x000002A0" android:logo="@00000000" android:name="com.sony.tvsideview.functions.LauncherActivity" android:screenOrientation="0" android:theme="@7F0C00CF" android:windowSoftInputMode="0x00000030">
+</activity>
+<activity android:configChanges="0x000002A0" android:name="com.sony.tvsideview.util.dialog.HelpDialogActivity" android:screenOrientation="0" android:theme="@android:0103006F">
+</activity>
+<activity android:configChanges="0x000002A0" android:name="com.sony.tvsideview.functions.RelatedActionDialogActivity" android:screenOrientation="0" android:theme="@android:0103006F">
+</activity>
+<activity android:configChanges="0x000002A0" android:name="com.sony.tvsideview.setting.ConnectBaseActivity" android:screenOrientation="0" android:theme="@7F0C00D3">
+</activity>
+<activity android:configChanges="0x000002A0" android:name="com.sony.tvsideview.setting.AddRegistrationBaseActivity" android:screenOrientation="0" android:theme="@7F0C00D3">
+</activity>
+<activity android:configChanges="0x000002A0" android:name="com.sony.tvsideview.setting.SettingsBaseActivity" android:screenOrientation="0" android:theme="@7F0C00D3">
+</activity>
+<activity android:configChanges="0x000002A0" android:name="com.sony.tvsideview.setting.DeviceSettingListActivity" android:screenOrientation="0" android:theme="@7F0C00D3">
+</activity>
+<activity android:configChanges="0x000002A0" android:name="com.sony.tvsideview.setting.ChannelSettingsActivity" android:screenOrientation="0" android:theme="@7F0C00D3">
+</activity>
+<activity android:configChanges="0x000002A0" android:name="com.sony.tvsideview.functions.search.CrossServiceSearchSettingsActivity" android:screenOrientation="0" android:theme="@7F0C00D3">
+</activity>
+<activity android:configChanges="0x000002A0" android:name="com.sony.tvsideview.setting.AboutActivity" android:screenOrientation="0" android:theme="@7F0C00D3">
+</activity>
+<activity android:configChanges="0x00000200" android:exported="false" android:name="com.sony.tvsideview.commonsettings.CommonSettingsActivity" android:screenOrientation="0" android:theme="@android:0103006E">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="com.sony.sel.espresso.IR_SETTINGS">
+</action>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.sony.tvsideview.functions.watchnow.DeviceSetupActivity" android:theme="@7F0C00CF">
+</activity>
+<activity android:exported="false" android:name="com.sony.tvsideview.commonsettings.ui.LicenseInfoActivity" android:screenOrientation="0" android:theme="@android:01030075">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.sony.tvsideview.functions.remote.RemoteActivity" android:theme="@7F0C00D3">
+</activity>
+<activity android:configChanges="0x000000A0" android:hardwareAccelerated="false" android:launchMode="1" android:name="com.sony.tvsideview.functions.remote.rdis.RdisKeyBoardActivity" android:screenOrientation="0" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:configChanges="0x400000F7" android:label="@7F0A01F5" android:name="com.sony.tvsideview.functions.gamepad.GamePadActivity" android:screenOrientation="0">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.sony.tvsideview.functions.WebLauncherActivity" android:theme="@android:0103006F">
+</activity>
+<receiver android:name="com.sony.tvsideview.widget.TvcWidgetProvider">
+<intent-filter>
+<action android:name="android.appwidget.action.APPWIDGET_UPDATE">
+</action>
+<action android:name="com.sony.tvsideview.tablet.UPDATE_WIDGET">
+</action>
+<action android:name="com.sony.tvsideview.common.epg.db.ACTION_UPDATE_EPG_REGION">
+</action>
+<action android:name="com.sony.tvsideview.common.recording.CHANGE_RECORDING_DATA">
+</action>
+<action android:name="android.intent.action.TIME_SET">
+</action>
+<action android:name="android.intent.action.TIMEZONE_CHANGED">
+</action>
+</intent-filter>
+<meta-data android:name="android.appwidget.provider" android:resource="@7F06001F">
+</meta-data>
+</receiver>
+<service android:exported="false" android:name="com.sony.tvsideview.widget.EpgWidgetService" android:permission="android.permission.BIND_REMOTEVIEWS">
+</service>
+<service android:exported="false" android:name="com.sony.tvsideview.widget.RecordingWidgetService" android:permission="android.permission.BIND_REMOTEVIEWS">
+</service>
+<service android:name="com.sony.tvsideview.functions.voicectrl.InitSequencer.DicDownloader">
+</service>
+<receiver android:name="com.sony.tvsideview.functions.voicectrl.InitSequencer.DicDownloader$TouchNotificationReceiver">
+</receiver>
+<service android:name="com.sony.tvsideview.common.recording.RecDataManagerService">
+</service>
+<provider android:authorities="com.sony.tvsideview.common.recording.db" android:name="com.sony.tvsideview.common.recording.db.RecDataContentProvider">
+</provider>
+<provider android:authorities="com.sony.tvsideview.huey.dlna.upnp" android:name="com.sony.huey.dlna.DmsProvider" android:permission="com.sony.tvsideview.ACCESS_UPNP_DEVICE_PROVIDER">
+</provider>
+<provider android:authorities="com.sony.tvsideview.huey.dlna.cds" android:name="com.sony.huey.dlna.DlnaCds" android:permission="com.sony.tvsideview.ACCESS_CDS_PROVIDER">
+</provider>
+<service android:authorities="com.sony.tvsideview.huey.dlna.upnp" android:exported="false" android:name="com.sony.huey.dlna.UpnpServiceCp">
+</service>
+<service android:exported="false" android:name="com.sony.tvsideview.common.infoserver.PlaybackOnInfoServerService">
+</service>
+<service android:name="com.sony.tvsideview.common.epg.service.EpgService">
+</service>
+<provider android:authorities="com.sony.tvsideview.common.epg.db" android:exported="false" android:name="com.sony.tvsideview.common.epg.db.EpgContentProvider">
+</provider>
+<receiver android:exported="false" android:name="com.sony.tvsideview.functions.epg.EpgBroadcastReceiver">
+<intent-filter>
+<action android:name="com.sony.tvsideview.epg.ACTION_UPDATE_CHANNELS">
+</action>
+</intent-filter>
+</receiver>
+<activity android:configChanges="0x00000200" android:launchMode="1" android:name="com.sony.tvsideview.functions.detail.DetailActivity" android:screenOrientation="0" android:theme="@7F0C003F">
+</activity>
+<activity android:configChanges="0x00000200" android:name="com.sony.tvsideview.functions.detail.DetailActivity2" android:screenOrientation="0" android:theme="@7F0C0040">
+</activity>
+<activity android:configChanges="0x000002A0" android:launchMode="1" android:name="com.sony.tvsideview.functions.search.detail.DetailInfoActivity" android:screenOrientation="0" android:theme="@7F0C003F">
+</activity>
+<activity android:configChanges="0x00000200" android:launchMode="1" android:name="com.sony.tvsideview.functions.trackid.TrackIdDetailInfoActivity" android:screenOrientation="0" android:theme="@7F0C003F">
+</activity>
+<activity android:configChanges="0x00000200" android:launchMode="1" android:name="com.sony.tvsideview.functions.recording.RecordingActivity" android:screenOrientation="0" android:theme="@7F0C003F">
+</activity>
+<activity android:configChanges="0x000002A0" android:name="com.sony.tvsideview.functions.epg.ManualMappingActivity" android:screenOrientation="0" android:theme="@7F0C00D3">
+</activity>
+<activity android:configChanges="0x000002A0" android:name="com.sony.tvsideview.functions.epg.ManualMappingTextSearchActivity" android:screenOrientation="0" android:theme="@7F0C00D3">
+</activity>
+<activity android:launchMode="1" android:name="com.sony.tvsideview.functions.apps.AppLaunchActivity" android:screenOrientation="0" android:theme="@7F0C003F">
+</activity>
+<service android:name="com.sony.tvsideview.functions.watchnow.service.WatchNowTvcService">
+</service>
+<activity android:configChanges="0x000002B0" android:label="@7F0A000F" android:launchMode="2" android:name="com.sony.sel.espresso.ui.HomeActivity" android:screenOrientation="0" android:theme="@7F0C000F">
+<intent-filter>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x00000200" android:exported="false" android:name="com.sony.sel.espresso.ui.PreferencesActivity" android:screenOrientation="0" android:theme="@android:0103006E">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="com.sony.sel.espresso.IR_SETTINGS">
+</action>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000002B0" android:exported="false" android:launchMode="1" android:name="com.sony.sel.espresso.setup.SetupActivity" android:screenOrientation="0" android:theme="@7F0C0011" android:windowSoftInputMode="0x00000030">
+</activity>
+<activity android:exported="false" android:name="com.sony.sel.espresso.setup.LinkActivity" android:screenOrientation="0">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:scheme="com.sony.tvsideview.tablet">
+</data>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:name="com.sony.sel.espresso.setup.LegalActivity" android:screenOrientation="0" android:theme="@android:01030075">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:scheme="com.sony.tvsideview.tablet.legal">
+</data>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000002B0" android:exported="false" android:name="com.sony.sel.espresso.setup.TranslucentSetupActivity" android:screenOrientation="0" android:theme="@7F0C0014" android:windowSoftInputMode="0x00000030">
+</activity>
+<activity android:exported="false" android:name="com.sony.sel.espresso.ui.DeleteCacheActivity" android:theme="@android:0103006F">
+<intent-filter>
+<action android:name="com.sony.DeleteUsageLog">
+</action>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:name="com.sony.sel.espresso.ui.WebViewActivity" android:theme="@android:01030075">
+</activity>
+<activity android:exported="false" android:name="com.sony.sel.espresso.ui.InstructionsActivity" android:screenOrientation="0" android:theme="@7F0C0013">
+</activity>
+<service android:enabled="true" android:exported="false" android:name="com.sony.sel.espresso.service.TVSEspressoService">
+<intent-filter>
+<action android:name="com.sony.sel.espresso.service.TVSEspressoService">
+</action>
+</intent-filter>
+</service>
+<provider android:authorities="com.sony.sel.espresso.tvsprovider" android:enabled="true" android:exported="false" android:name="com.sony.sel.espresso.tvsprovider.EspressoProvider">
+</provider>
+<receiver android:enabled="true" android:name="com.sony.sel.espresso.power.EspressoPowerBroadcastReciever">
+<intent-filter>
+<action android:name="android.intent.action.ACTION_POWER_CONNECTED">
+</action>
+<action android:name="android.intent.action.ACTION_POWER_DISCONNECTED">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:enabled="true" android:name="com.sony.sel.espresso.boot.EspressoBootBroadcastReciever">
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:enabled="true" android:name="com.sony.sel.espresso.alarm.EspressoAlarmBroadcastReciever">
+</receiver>
+<receiver android:enabled="true" android:name="com.sony.sel.espresso.wifi.EspressoWifiBroadcastReciever">
+<intent-filter>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+</receiver>
+<uses-library android:name="com.sony.remotecontrol.ir.v1" android:required="false">
+</uses-library>
+</application>
+</manifest>

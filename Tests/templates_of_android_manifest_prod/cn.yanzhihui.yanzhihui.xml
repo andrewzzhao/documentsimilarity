@@ -1,0 +1,601 @@
+<?xml version="1.0" ?><manifest android:versionCode="220" android:versionName="2.2.0" package="cn.yanzhihui.yanzhihui" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="19" android:targetSdkVersion="26">
+</uses-sdk>
+<permission android:name="cn.yanzhihui.yanzhihui.permission.JPUSH_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="cn.yanzhihui.yanzhihui.permission.JPUSH_MESSAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.CALL_PHONE">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_CONFIGURATION">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_CONTACTS">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.RECORD_AUDIO">
+</uses-permission>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_USER_PRESENT">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.FLASHLIGHT">
+</uses-permission>
+<uses-permission android:name="android.permission.RECORD_VIDEO">
+</uses-permission>
+<uses-feature android:name="android.hardware.camera">
+</uses-feature>
+<uses-feature android:name="android.hardware.camera.front">
+</uses-feature>
+<uses-feature android:name="android.hardware.camera.autofocus">
+</uses-feature>
+<uses-feature android:name="android.hardware.location.gps" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.location.network" android:required="false">
+</uses-feature>
+<uses-permission android:name="android.permission.READ_LOGS">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_MEDIA_STORAGE">
+</uses-permission>
+<application android:allowBackup="false" android:icon="@7F0D0006" android:label="@7F0F00C5" android:largeHeap="true" android:name="com.stub.StubApp" android:qihoo="activity" android:supportsRtl="true" android:theme="@7F10000A">
+/&gt;
+<provider android:authorities="cn.yanzhihui.yanzhihui.fileprovider" android:exported="false" android:grantUriPermissions="true" android:name="android.support.v4.content.FileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F120000">
+</meta-data>
+</provider>
+<meta-data android:name="com.taobao.android.hotfix.IDSECRET" android:value="@7F0F0000">
+</meta-data>
+<meta-data android:name="com.taobao.android.hotfix.APPSECRET" android:value="@7F0F0002">
+</meta-data>
+<meta-data android:name="com.taobao.android.hotfix.RSASECRET" android:value="@7F0F0001">
+</meta-data>
+<activity android:configChanges="0x000004A0" android:name="cn.yanzhihui.yanzhihui.activity.LauncherActivity" android:theme="@7F100148">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="yzh">
+</data>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="cn.yanzhihui.yanzhihui.activity.user.GuideLoginActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="cn.yanzhihui.yanzhihui.activity.user.LoginActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="cn.yanzhihui.yanzhihui.activity.user.RegisterActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="cn.yanzhihui.yanzhihui.activity.user.RegisterVerifyActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="cn.yanzhihui.yanzhihui.activity.user.ForgetPasswordActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="cn.yanzhihui.yanzhihui.activity.user.ForgetVerifyActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="cn.yanzhihui.yanzhihui.activity.user.UserDataActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="cn.yanzhihui.yanzhihui.activity.user.SettingActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="cn.yanzhihui.yanzhihui.activity.user.ModifiyPasswordActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="cn.yanzhihui.yanzhihui.activity.user.ModifyPasswordActivity_P1">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="cn.yanzhihui.yanzhihui.activity.user.ModifyPasswordActivity_P2">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="cn.yanzhihui.yanzhihui.activity.home.HomeActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="cn.yanzhihui.yanzhihui.activity.topic.SearchActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="cn.yanzhihui.yanzhihui.activity.topic.InviteZujuActivity" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="cn.yanzhihui.yanzhihui.activity.topic.FaceDetailActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="cn.yanzhihui.yanzhihui.activity.topic.TopicAddActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="cn.yanzhihui.yanzhihui.activity.topic.ImageVideoSelectorActivity" android:screenOrientation="4">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="cn.yanzhihui.yanzhihui.activity.video.VideoClipPreviewActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="cn.yanzhihui.yanzhihui.activity.video.VideoSetCoverActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="cn.yanzhihui.yanzhihui.activity.video.VideoAddActivity" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="cn.yanzhihui.yanzhihui.activity.video.VideoThemeChooseActivity" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="cn.yanzhihui.yanzhihui.activity.preferential.PreferentialDetailActivity" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="cn.yanzhihui.yanzhihui.activity.user.GiftCommentAddActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="cn.yanzhihui.yanzhihui.activity.preferential.ActListActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="cn.yanzhihui.yanzhihui.activity.preferential.ActDetailActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="cn.yanzhihui.yanzhihui.activity.user.MyActActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="cn.yanzhihui.yanzhihui.activity.user.MyPartyFragmentActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="cn.yanzhihui.yanzhihui.activity.preferential.PartyDetailsActivity" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="cn.yanzhihui.yanzhihui.activity.preferential.PartyAddActivity" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="cn.yanzhihui.yanzhihui.activity.preferential.ShopReceivedPaymentActivity" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="cn.yanzhihui.yanzhihui.activity.preferential.PartyEditActivity" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="cn.yanzhihui.yanzhihui.activity.preferential.PartyCommentActivity" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="cn.yanzhihui.yanzhihui.activity.user.MyExchangeActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="cn.yanzhihui.yanzhihui.activity.preferential.PreferentialImageActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="cn.yanzhihui.yanzhihui.activity.user.DetailWentActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="cn.yanzhihui.yanzhihui.activity.user.MyAttentionAndFansActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="cn.yanzhihui.yanzhihui.activity.user.MyAttentionFragmentActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="cn.yanzhihui.yanzhihui.activity.user.BlackNameActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="cn.yanzhihui.yanzhihui.activity.user.ReportActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="cn.yanzhihui.yanzhihui.activity.user.AboutUsActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="cn.yanzhihui.yanzhihui.activity.user.ServiceAgreementActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="cn.yanzhihui.yanzhihui.activity.user.EditPrivateActivity" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="cn.yanzhihui.yanzhihui.activity.user.UserDetailActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="cn.yanzhihui.yanzhihui.activity.user.EnticationTipsActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="cn.yanzhihui.yanzhihui.activity.user.MyHonorsActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="cn.yanzhihui.yanzhihui.activity.user.MyWalletActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="cn.yanzhihui.yanzhihui.activity.user.WalletBalanceActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="cn.yanzhihui.yanzhihui.activity.user.WalletBalanceBillListActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="cn.yanzhihui.yanzhihui.activity.user.WalletRechargeActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="cn.yanzhihui.yanzhihui.activity.user.WalletWithdrawActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="cn.yanzhihui.yanzhihui.activity.user.WalletBillListActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="cn.yanzhihui.yanzhihui.activity.user.WalletGoldenKeyActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="cn.yanzhihui.yanzhihui.activity.user.WalletRechargeOverActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="cn.yanzhihui.yanzhihui.activity.user.WalletBindMobileActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="cn.yanzhihui.yanzhihui.activity.user.WalletBindWechatActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="cn.yanzhihui.yanzhihui.activity.user.WalletGoldenKeyOverActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="cn.yanzhihui.yanzhihui.activity.user.CommissionActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="cn.yanzhihui.yanzhihui.activity.user.CommissionExplainActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="cn.yanzhihui.yanzhihui.activity.user.CommissionWithdrawActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="cn.yanzhihui.yanzhihui.activity.user.CommissionBillListActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="cn.yanzhihui.yanzhihui.activity.user.MyGoldkeyActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="cn.yanzhihui.yanzhihui.activity.user.MyGoldKeySendListActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="cn.yanzhihui.yanzhihui.activity.user.MyGoActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="cn.yanzhihui.yanzhihui.activity.user.MyDataActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="cn.yanzhihui.yanzhihui.activity.message.SystemMessageActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="cn.yanzhihui.yanzhihui.activity.message.SystemMessageGoActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="cn.yanzhihui.yanzhihui.activity.user.MessageFanJuActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="cn.yanzhihui.yanzhihui.widget.emchat.activity.ChatActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="cn.yanzhihui.yanzhihui.widget.emchat.activity.AlertDialog" android:theme="@7F1000C1">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="cn.yanzhihui.yanzhihui.widget.emchat.activity.ShowBigImage">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="cn.yanzhihui.yanzhihui.util.crop.CropActivity">
+</activity>
+<meta-data android:name="com.amap.api.v2.apikey" android:value="71ec8f8017f73d4e6b435606a41bcd38">
+</meta-data>
+<service android:name="com.amap.api.location.APSService">
+</service>
+<activity android:configChanges="0x000004A0" android:exported="true" android:label="@7F0F00C5" android:launchMode="2" android:name="cn.yanzhihui.yanzhihui.wxapi.WXEntryActivity" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="com.tencent.tauth.AuthActivity" android:noHistory="true">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="tencent1104852620">
+</data>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.tencent.connect.common.AssistActivity" android:theme="@android:01030010">
+</activity>
+<service android:name="cn.yanzhihui.yanzhihui.service.UpdateService">
+</service>
+<meta-data android:name="EASEMOB_APPKEY" android:value="yanzhihui#yanzhihui">
+</meta-data>
+<service android:name="com.easemob.chat.EMChatService" android:process=":EMChatService">
+</service>
+<meta-data android:name="UMENG_APPKEY" android:value="5615ca3be0f55a613a001186">
+</meta-data>
+<meta-data android:name="UMENG_CHANNEL" android:value="baidu">
+</meta-data>
+<service android:name="com.umeng.update.net.DownloadingService" android:process=":DownloadingService">
+</service>
+<activity android:name="com.umeng.update.UpdateDialogActivity" android:theme="@android:01030010">
+</activity>
+<meta-data android:name="JPUSH_APPKEY" android:value="802287df91ef8451009dc51c">
+</meta-data>
+<activity android:configChanges="0x000004A0" android:exported="false" android:launchMode="1" android:name="cn.jpush.android.ui.PushActivity" android:theme="@android:01030006">
+<intent-filter>
+<action android:name="cn.jpush.android.ui.PushActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="cn.yanzhihui.yanzhihui">
+</category>
+</intent-filter>
+</activity>
+<service android:enabled="true" android:exported="false" android:name="cn.jpush.android.service.DownloadService">
+</service>
+<service android:enabled="true" android:exported="false" android:name="cn.jpush.android.service.PushService">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.REGISTER">
+</action>
+<action android:name="cn.jpush.android.intent.REPORT">
+</action>
+<action android:name="cn.jpush.android.intent.PushService">
+</action>
+<action android:name="cn.jpush.android.intent.PUSH_TIME">
+</action>
+</intent-filter>
+</service>
+<service android:enabled="true" android:exported="true" android:name="cn.jpush.android.service.DaemonService">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.DaemonService">
+</action>
+<category android:name="cn.yanzhihui.yanzhihui">
+</category>
+</intent-filter>
+</service>
+<receiver android:enabled="true" android:exported="false" android:name="cn.jpush.android.service.PushReceiver">
+<intent-filter android:priority="1000">
+<action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY">
+</action>
+<category android:name="cn.yanzhihui.yanzhihui">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.USER_PRESENT">
+</action>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_ADDED">
+</action>
+<action android:name="android.intent.action.PACKAGE_REMOVED">
+</action>
+<data android:scheme="package">
+</data>
+</intent-filter>
+</receiver>
+<receiver android:exported="false" android:name="cn.jpush.android.service.AlarmReceiver">
+</receiver>
+<receiver android:enabled="true" android:exported="false" android:name="cn.yanzhihui.yanzhihui.util.push.MyReceiver">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.REGISTRATION">
+</action>
+<action android:name="cn.jpush.android.intent.UNREGISTRATION">
+</action>
+<action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED">
+</action>
+<action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED">
+</action>
+<action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED">
+</action>
+<action android:name="cn.jpush.android.intent.ACTION_RICHPUSH_CALLBACK">
+</action>
+<action android:name="cn.jpush.android.intent.CONNECTION">
+</action>
+<category android:name="cn.yanzhihui.yanzhihui">
+</category>
+</intent-filter>
+</receiver>
+<receiver android:name="cn.yanzhihui.yanzhihui.util.NetBroadcastReceiver">
+<intent-filter>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+</receiver>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="cn.yanzhihui.yanzhihui.activity.user.AcceptWhoActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="cn.yanzhihui.yanzhihui.activity.user.NoticeActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="cn.yanzhihui.yanzhihui.activity.topic.RankingActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="cn.yanzhihui.yanzhihui.activity.preferential.ConsigneeAddressAddActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="cn.yanzhihui.yanzhihui.activity.preferential.GiftDetailActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="cn.yanzhihui.yanzhihui.activity.preferential.GiftListActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F0F03AA" android:launchMode="1" android:name="cn.yanzhihui.yanzhihui.util.pay.PaySelectActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F0F03AA" android:launchMode="1" android:name="cn.yanzhihui.yanzhihui.util.pay.ActPaySelectActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="cn.yanzhihui.yanzhihui.activity.user.MyGiftActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:exported="true" android:launchMode="1" android:name="cn.yanzhihui.yanzhihui.wxapi.WXPayEntryActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F0F03A7" android:launchMode="1" android:name="cn.yanzhihui.yanzhihui.activity.preferential.GiftExchangeConfirmActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="cn.yanzhihui.yanzhihui.activity.user.MyReferralActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="cn.yanzhihui.yanzhihui.activity.user.MyReferralPeopleActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="cn.yanzhihui.yanzhihui.activity.topic.WebViewUtilActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="cn.yanzhihui.yanzhihui.activity.topic.NoScrollWebViewUtilActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="cn.yanzhihui.yanzhihui.widget.QRcode.ScanQCActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="cn.yanzhihui.yanzhihui.widget.QRcode.MipcaActivityCapture">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="cn.yanzhihui.yanzhihui.widget.QRcode.MipcaActivityCapture_1">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="cn.yanzhihui.yanzhihui.activity.preferential.ShopListActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="cn.yanzhihui.yanzhihui.activity.preferential.MessageDetailActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="cn.yanzhihui.yanzhihui.activity.topic.AllThemeListActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="cn.yanzhihui.yanzhihui.activity.video.AllVideoThemeListActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="cn.yanzhihui.yanzhihui.activity.topic.RankingFirstInActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="cn.yanzhihui.yanzhihui.activity.topic.SearchFragmentActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="cn.yanzhihui.yanzhihui.activity.user.NoticeSoundActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="cn.yanzhihui.yanzhihui.activity.user.BindingPhoneActivity">
+</activity>
+<activity android:name="cn.yanzhihui.yanzhihui.activity.user.UserComplaintActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="cn.yanzhihui.yanzhihui.activity.topic.ThemeDetailActivity" android:theme="@7F100009">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="cn.yanzhihui.yanzhihui.activity.user.MessageAttentionMeActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="cn.yanzhihui.yanzhihui.activity.topic.PhotoDetailActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="cn.yanzhihui.yanzhihui.activity.message.SystemMessageTopicLikeActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="cn.yanzhihui.yanzhihui.activity.message.SystemMessageTopicCommentActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="cn.yanzhihui.yanzhihui.activity.preferential.ActEnrolledSuccessActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="cn.yanzhihui.yanzhihui.activity.preferential.GiftCommentActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="cn.yanzhihui.yanzhihui.activity.preferential.ConsigneeAddressListActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="cn.yanzhihui.yanzhihui.activity.user.MyVideoPhotoFragmentActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="cn.yanzhihui.yanzhihui.activity.preferential.RedBagRankingListFragmentActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="cn.yanzhihui.yanzhihui.activity.preferential.GiftBuyConfirmActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="cn.yanzhihui.yanzhihui.activity.preferential.ConsigneeAddressEditActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="cn.yanzhihui.yanzhihui.util.pay.PayOverActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="cn.yanzhihui.yanzhihui.activity.preferential.GiftShowActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="cn.yanzhihui.yanzhihui.activity.topic.H5ShareUtilActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="cn.yanzhihui.yanzhihui.activity.preferential.FaceRedBagActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="cn.yanzhihui.yanzhihui.activity.preferential.RedBagRulesActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="cn.yanzhihui.yanzhihui.activity.preferential.MyRedBagRecordActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="cn.yanzhihui.yanzhihui.activity.preferential.ShopReceivedPaymentRecordActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="cn.yanzhihui.yanzhihui.activity.preferential.FaceRedBagDetailActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="cn.yanzhihui.yanzhihui.activity.topic.TopicThemeChooseActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="cn.yanzhihui.yanzhihui.activity.preferential.RemarkActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="cn.yanzhihui.yanzhihui.activity.preferential.ActOrderPayConfirmActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="cn.yanzhihui.yanzhihui.activity.preferential.ActTopUserActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="cn.yanzhihui.yanzhihui.activity.preferential.AMapLocationActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="cn.yanzhihui.yanzhihui.activity.user.MessageOtherActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="cn.yanzhihui.yanzhihui.activity.user.MessageGoldKeyActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="cn.yanzhihui.yanzhihui.activity.preferential.OtherMessageDetailActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="cn.yanzhihui.yanzhihui.activity.message.IMListActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="cn.yanzhihui.yanzhihui.activity.user.ResetPasswordActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="cn.yanzhihui.yanzhihui.activity.user.AccountBindingActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="cn.yanzhihui.yanzhihui.activity.user.RetrievePassActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F0F03AB" android:launchMode="1" android:name="cn.yanzhihui.yanzhihui.activity.topic.ShowLocalBigImage">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="cn.yanzhihui.yanzhihui.activity.preferential.EatShowActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="cn.yanzhihui.yanzhihui.activity.user.WantAndGoneActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="cn.yanzhihui.yanzhihui.activity.preferential.PreferentialDetailActivityFromParty">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="cn.yanzhihui.yanzhihui.activity.preferential.PreferentialDetailActivityFromSign">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="cn.yanzhihui.yanzhihui.activity.preferential.ShopListBySearchActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="cn.yanzhihui.yanzhihui.activity.preferential.FacePeopleBannerListActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="cn.yanzhihui.yanzhihui.activity.topic.FaceBestTalkActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="cn.yanzhihui.yanzhihui.activity.user.YanBaoDaoPeopleListActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="cn.yanzhihui.yanzhihui.activity.preferential.PartyPayResultActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="cn.yanzhihui.yanzhihui.activity.preferential.VoucherListActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="cn.yanzhihui.yanzhihui.activity.preferential.VoucherPayResultActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="cn.yanzhihui.yanzhihui.activity.preferential.VoucherOrderActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="cn.yanzhihui.yanzhihui.activity.preferential.VoucherUseActivity" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="cn.yanzhihui.yanzhihui.activity.user.VoucherAgreementActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="cn.yanzhihui.yanzhihui.activity.preferential.VoucherConsumeListActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="cn.yanzhihui.yanzhihui.activity.preferential.VoucherOrderListActivity">
+</activity>
+<activity android:name="cn.yanzhihui.yanzhihui.activity.user.PayPasswordSetActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:hardwareAccelerated="true" android:launchMode="1" android:name="cn.yanzhihui.yanzhihui.activity.video.ShortsVideoActivity" android:screenOrientation="1" android:theme="@7F100157" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="cn.yanzhihui.yanzhihui.activity.video.VideoListByThemeActivity">
+</activity>
+<activity android:name="cn.yanzhihui.yanzhihui.activity.user.SignInActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="cn.yanzhihui.yanzhihui.activity.topic.CameraActivity" android:screenOrientation="1" android:theme="@7F100007">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="cn.yanzhihui.yanzhihui.activity.topic.AlbumChooseActivity" android:screenOrientation="1" android:theme="@7F100000">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="cn.yanzhihui.yanzhihui.activity.user.MyReferralIntroduceActivtiy">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="cn.yanzhihui.yanzhihui.activity.user.PeopleIRecommendActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="cn.yanzhihui.yanzhihui.activity.user.AddMyReferrerActivity">
+</activity>
+<activity android:name="cn.yanzhihui.yanzhihui.activity.topic.RankActivity">
+</activity>
+<activity android:launchMode="1" android:name="cn.yanzhihui.yanzhihui.widget.videoedit.VideoEditActivity">
+</activity>
+<activity android:name="cn.yanzhihui.yanzhihui.activity.topic.CropImageActivity">
+</activity>
+<activity android:name="cn.yanzhihui.yanzhihui.activity.topic.EditImageActivity">
+</activity>
+<activity android:name="cn.yanzhihui.yanzhihui.activity.user.VerifyBingdingPhoneActivity">
+</activity>
+<activity android:name="cn.yanzhihui.yanzhihui.activity.user.ChangeBingdingPhoneActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.bugtags.library.BugtagsActivity" android:theme="@android:01030011">
+</activity>
+<service android:name="com.bugtags.library.BugtagsService">
+</service>
+<receiver android:name="com.bugtags.library.BugtagsReceiver">
+<intent-filter>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+</receiver>
+<meta-data android:name="android.support.VERSION" android:value="26.1.0">
+</meta-data>
+<activity android:name="com.soundcloud.android.crop.CropImageActivity">
+</activity>
+<activity android:name="com.luck.picture.lib.PictureSelectorActivity" android:screenOrientation="1" android:theme="@7F1001AE" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:name="com.luck.picture.lib.PictureBaseActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.luck.picture.lib.PicturePreviewActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.luck.picture.lib.PictureVideoPlayActivity" android:screenOrientation="4">
+</activity>
+<activity android:name="com.luck.picture.lib.PictureExternalPreviewActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.yalantis.ucrop.UCropActivity" android:screenOrientation="1" android:theme="@7F100146">
+</activity>
+<activity android:name="com.yalantis.ucrop.PictureMultiCuttingActivity" android:screenOrientation="1" android:theme="@7F100146">
+</activity>
+<activity android:name="com.luck.picture.lib.PicturePlayAudioActivity" android:screenOrientation="1" android:theme="@7F100146">
+</activity>
+<activity android:configChanges="0x00000480" android:label="@7F0F00C5" android:name="com.darsh.multipleimageselect.activities.AlbumSelectActivity" android:theme="@7F1000C0">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x00000480" android:label="@7F0F00C5" android:name="com.darsh.multipleimageselect.activities.ImageSelectActivity" android:theme="@7F1000C0">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000A0" android:exported="false" android:name="com.sina.weibo.sdk.web.WeiboSdkWebActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:configChanges="0x000000A0" android:launchMode="2" android:name="com.sina.weibo.sdk.share.WbShareTransActivity" android:theme="@android:01030010">
+<intent-filter>
+<action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000A0" android:launchMode="2" android:name="com.sina.weibo.sdk.share.WbShareToStoryActivity" android:theme="@android:01030010">
+<intent-filter>
+<action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_STORY">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<meta-data android:name="android.arch.lifecycle.VERSION" android:value="27.0.0-SNAPSHOT">
+</meta-data>
+</application>
+</manifest>

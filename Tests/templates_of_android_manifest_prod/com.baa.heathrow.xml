@@ -1,0 +1,368 @@
+<?xml version="1.0" ?><manifest android:compileSdkVersion="29" android:compileSdkVersionCodename="10" android:versionCode="2004000229" android:versionName="8.9" package="com.baa.heathrow" platformBuildVersionCode="2004000229" platformBuildVersionName="8.900000" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="23" android:targetSdkVersion="29">
+</uses-sdk>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.BLUETOOTH">
+</uses-permission>
+<uses-permission android:name="android.permission.BLUETOOTH_ADMIN">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-feature android:glEsVersion="0x00020000" android:required="true">
+</uses-feature>
+<uses-feature android:name="android.hardware.location.gps">
+</uses-feature>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE">
+</uses-permission>
+<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES">
+</uses-permission>
+<uses-permission android:name="com.example.googlemapapp.permission.MAPS_RECEIVE">
+</uses-permission>
+<uses-permission android:name="com.cursus.sky.cursus.permission.C2D_MESSAGE">
+</uses-permission>
+<uses-feature android:name="android.hardware.camera" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.camera.autofocus" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.camera.flash" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.screen.portrait">
+</uses-feature>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<application android:allowBackup="true" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:fullBackupContent="false" android:icon="@7F0F0000" android:label="@7F120054" android:logo="@7F0F0000" android:name="com.baa.heathrow.application.HeathrowApplication" android:networkSecurityConfig="@7F150001" android:roundIcon="@7F0F0001" android:supportsRtl="true" android:theme="@7F1301F7" android:usesCleartextTraffic="true">
+<meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="@7F120148">
+</meta-data>
+<meta-data android:name="com.google.android.gms.version" android:value="@7F0B000F">
+</meta-data>
+<meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@7F120125">
+</meta-data>
+<meta-data android:name="com.facebook.sdk.ApplicationName" android:value="@7F120054">
+</meta-data>
+<meta-data android:name="com.google.android.gms.vision.DEPENDENCIES" android:value="barcode">
+</meta-data>
+<uses-library android:name="org.apache.http.legacy" android:required="false">
+</uses-library>
+<activity android:name="com.baa.heathrow.splash.SplashActivity" android:screenOrientation="7" android:theme="@7F1301F6">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:name="com.baa.heathrow.home.container.HomeActivity" android:screenOrientation="7">
+</activity>
+<activity android:name="com.baa.heathrow.setting.SettingActivity" android:screenOrientation="7">
+</activity>
+<activity android:name="com.baa.heathrow.flight.detail.FlightDetailsActivity" android:screenOrientation="7">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:scheme="com.baa.heathrow.flightdetail">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.baa.heathrow.flight.search.FlightSearchActivity" android:screenOrientation="7">
+</activity>
+<activity android:name="com.baa.heathrow.WebViewActivity" android:screenOrientation="7">
+</activity>
+<activity android:excludeFromRecents="false" android:launchMode="2" android:name="com.baa.heathrow.WebViewSeparateTaskActivity" android:screenOrientation="7" android:taskAffinity="">
+</activity>
+<activity android:name="com.baa.heathrow.AirportGuideActivity" android:screenOrientation="7">
+</activity>
+<activity android:name="com.baa.heathrow.journey.TransportAndDirectionActivity" android:screenOrientation="7">
+</activity>
+<activity android:name="com.baa.heathrow.TrainTimeTableActivity" android:screenOrientation="7">
+</activity>
+<activity android:name="com.baa.heathrow.TripPlannerLocationActivity" android:screenOrientation="7">
+</activity>
+<activity android:name="com.baa.heathrow.journey.JourneyListActivity" android:screenOrientation="7">
+</activity>
+<activity android:name="com.baa.heathrow.journey.JourneyDetailsActivity" android:screenOrientation="7">
+</activity>
+<activity android:name="com.baa.heathrow.journey.privatejourney.PrivateJourneyListActivity" android:screenOrientation="7">
+</activity>
+<activity android:name="com.baa.heathrow.journey.privatejourney.PrivateJourneyActivity" android:screenOrientation="7">
+</activity>
+<activity android:name="com.baa.heathrow.CityGuideActivity" android:screenOrientation="7">
+</activity>
+<activity android:name="com.baa.heathrow.CityGuideListActivity" android:screenOrientation="7">
+</activity>
+<activity android:name="com.baa.heathrow.ContactListActivity" android:screenOrientation="7">
+</activity>
+<activity android:name="com.baa.heathrow.FacebookShareActivity" android:screenOrientation="7">
+</activity>
+<activity android:name="com.baa.heathrow.journey.JourneyMapActivity" android:screenOrientation="7">
+</activity>
+<activity android:name="com.baa.heathrow.journey.SaveJourneyCompleteActivity" android:screenOrientation="7">
+</activity>
+<activity android:name="com.baa.heathrow.journey.myjourney.MyJourneyListActivity" android:screenOrientation="7">
+</activity>
+<activity android:name="com.baa.heathrow.TaxiJourneyActivity" android:screenOrientation="7">
+</activity>
+<activity android:name="com.baa.heathrow.BuyPublicTransportTicketActivity" android:screenOrientation="7">
+</activity>
+<activity android:label="@7F12033B" android:name="com.baa.heathrow.RewardLoyaltyCardActivity">
+</activity>
+<activity android:label="@7F120165" android:name="com.baa.heathrow.reward.login.RewardSignInActivity" android:screenOrientation="7" android:theme="@7F1301F5">
+</activity>
+<activity android:label="@7F120173" android:name="com.baa.heathrow.RewardSignUpActivity" android:screenOrientation="7">
+</activity>
+<activity android:name="com.baa.heathrow.RewardStartUpActivity" android:screenOrientation="7">
+</activity>
+<activity android:name="com.baa.heathrow.barcode.BoardingPassScannerActivity" android:screenOrientation="7">
+</activity>
+<activity android:name="com.baa.heathrow.locuslab.LocusLabsMapActivity" android:screenOrientation="7">
+</activity>
+<activity android:name="com.baa.heathrow.ShopListingActivity" android:screenOrientation="7">
+</activity>
+<activity android:name="com.baa.heathrow.GrabPromotionActivity" android:theme="@7F1301FC">
+</activity>
+<activity android:name="com.baa.heathrow.flight.today.TodayFlightActivity" android:screenOrientation="7">
+</activity>
+<activity android:name="com.baa.heathrow.service.ServicesCategoriesActivity" android:screenOrientation="7">
+</activity>
+<activity android:launchMode="1" android:name="com.baa.heathrow.home.AirportAlertActivity" android:screenOrientation="7">
+</activity>
+<receiver android:exported="true" android:name="com.baa.heathrow.notification.GPBroadcastReceiver">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:exported="true" android:name="com.baa.heathrow.notification.DeleteNotificationReceiver">
+<intent-filter>
+<action android:name="com.baa.heathrow.NOTIFICATION_DELETED">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:exported="true" android:name="com.google.ads.conversiontracking.InstallReceiver">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+<service android:name="com.baa.heathrow.notification.FirebaseCloudMessagingService">
+<intent-filter>
+<action android:name="com.google.firebase.MESSAGING_EVENT">
+</action>
+</intent-filter>
+</service>
+<service android:name="com.baa.heathrow.notification.FirebaseInstanceIdService">
+<intent-filter>
+<action android:name="com.google.firebase.INSTANCE_ID_EVENT">
+</action>
+</intent-filter>
+</service>
+<service android:exported="false" android:name="com.baa.heathrow.notification.RegistrationJobIntentService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<service android:name="com.baa.heathrow.wearable.WearableService">
+<intent-filter>
+<action android:name="com.google.android.gms.wearable.MESSAGE_RECEIVED">
+</action>
+<action android:name="com.google.android.gms.wearable.DATA_CHANGED">
+</action>
+<data android:host="*" android:pathPrefix="@7F1202D5" android:scheme="wear">
+</data>
+<data android:host="*" android:pathPrefix="@7F1202D4" android:scheme="wear">
+</data>
+</intent-filter>
+</service>
+<service android:exported="false" android:name="com.baa.heathrow.wearable.FlightSyncService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<service android:name="com.baa.heathrow.geofence.GeoFenceTransitionsIntentService">
+</service>
+<service android:name="com.baa.heathrow.geofence.AirportGeoFenceIntentService">
+</service>
+<service android:name="com.baa.heathrow.adobe.AdobeGeolocationTrackService">
+</service>
+<service android:name="com.locuslabs.sdk.ibeacon.BeaconService">
+</service>
+<service android:name="com.locuslabs.sdk.ibeacon.service.IBeaconService">
+</service>
+<service android:name="com.locuslabs.sdk.ibeacon.IBeaconIntentProcessor">
+</service>
+<service android:exported="true" android:name="com.google.firebase.messaging.FirebaseMessagingService">
+<intent-filter android:priority="-500">
+<action android:name="com.google.firebase.MESSAGING_EVENT">
+</action>
+</intent-filter>
+</service>
+<service android:exported="false" android:name="com.google.firebase.components.ComponentDiscoveryService">
+<meta-data android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar" android:value="com.google.firebase.components.ComponentRegistrar">
+</meta-data>
+<meta-data android:name="com.google.firebase.components:com.google.firebase.iid.Registrar" android:value="com.google.firebase.components.ComponentRegistrar">
+</meta-data>
+</service>
+<receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementReceiver">
+</receiver>
+<receiver android:enabled="true" android:exported="true" android:name="com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver" android:permission="android.permission.INSTALL_PACKAGES">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementService">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementJobService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<receiver android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+</intent-filter>
+</receiver>
+<service android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdService">
+<intent-filter android:priority="-500">
+<action android:name="com.google.firebase.INSTANCE_ID_EVENT">
+</action>
+</intent-filter>
+</service>
+<activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:01030010">
+</activity>
+<service android:exported="false" android:name="com.evernote.android.job.v21.PlatformJobService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<service android:exported="false" android:name="com.evernote.android.job.v14.PlatformAlarmService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<service android:exported="false" android:name="com.evernote.android.job.v14.PlatformAlarmServiceExact">
+</service>
+<receiver android:exported="false" android:name="com.evernote.android.job.v14.PlatformAlarmReceiver">
+<intent-filter>
+<action android:name="com.evernote.android.job.v14.RUN_JOB">
+</action>
+<action android:name="net.vrallev.android.job.v14.RUN_JOB">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:exported="false" android:name="com.evernote.android.job.JobBootReceiver">
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+<action android:name="android.intent.action.QUICKBOOT_POWERON">
+</action>
+<action android:name="com.htc.intent.action.QUICKBOOT_POWERON">
+</action>
+<action android:name="android.intent.action.MY_PACKAGE_REPLACED">
+</action>
+</intent-filter>
+</receiver>
+<service android:exported="false" android:name="com.evernote.android.job.JobRescheduleService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<provider android:authorities="com.baa.heathrow.firebaseinitprovider" android:exported="false" android:initOrder="100" android:name="com.google.firebase.provider.FirebaseInitProvider">
+</provider>
+<activity android:configChanges="0x00000FB0" android:exported="false" android:name="com.google.android.gms.ads.AdActivity" android:theme="@android:0103000F">
+</activity>
+<meta-data android:name="com.indooratlas.android.sdk.API_KEY" android:value="7392fd1a-cf8d-428c-b99f-ce97392e49cb">
+</meta-data>
+<meta-data android:name="com.indooratlas.android.sdk.API_SECRET" android:value="FN3rmipDG0sNA8LcOtIRYiQEACk3Pmk8P1MvhYFpzc0D6uW3CG7QLKLLEdMiOwsDZP8Fd6hpwN7da1quOXhOWjRe7qI+Hy4tEsBGrWaOoNBoYTOwXi7tqF9olm9nuw==">
+</meta-data>
+<meta-data android:name="preloaded_fonts" android:resource="@7F03000A">
+</meta-data>
+<service android:description="@7F120181" android:exported="false" android:label="@7F120181" android:name="com.locuslabs.sdk.ibeacon.BeaconScannerJobService" android:permission="android.permission.BIND_JOB_SERVICE" android:persistent="true">
+</service>
+<provider android:authorities="com.baa.heathrow.crashlyticsinitprovider" android:exported="false" android:initOrder="90" android:name="com.crashlytics.android.CrashlyticsInitProvider">
+</provider>
+<activity android:name="com.cursus.sky.grabsdk.CursusMobileShoppingSortFragmentHolder" android:theme="@7F1301CD">
+</activity>
+<activity android:label="" android:name="com.cursus.sky.grabsdk.CursusCartUpsell" android:theme="@7F1301AF">
+</activity>
+<activity android:label="@7F1200BC" android:name="com.cursus.sky.grabsdk.CursusCart" android:theme="@7F1301CD">
+</activity>
+<activity android:name="com.cursus.sky.grabsdk.GrabGuestCheckoutActivity" android:theme="@7F1301CD" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:name="com.cursus.sky.grabsdk.GrabGuestBillingActivity" android:theme="@7F1301CD" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:name="com.cursus.sky.grabsdk.CursusEndUserLiscenceAgreement" android:theme="@7F1301CD">
+</activity>
+<activity android:name="com.cursus.sky.grabsdk.NoConnectionActivity" android:theme="@7F1301CD">
+</activity>
+<activity android:name="com.cursus.sky.grabsdk.CursusPartnerGrabUnavailable" android:theme="@7F1301CD">
+</activity>
+<activity android:name="com.cursus.sky.grabsdk.paymentMethods.CursusPaymentMain" android:theme="@7F1301CD">
+</activity>
+<activity android:name="com.cursus.sky.grabsdk.paymentMethods.CursusPaymentAddCard" android:theme="@7F1301CD">
+</activity>
+<activity android:name="com.cursus.sky.grabsdk.paymentMethods.CursusCheckoutPaymentMainActivity" android:theme="@7F1301CD">
+</activity>
+<activity android:name="com.cursus.sky.grabsdk.legal.CursusEULegalNoticeActivity" android:theme="@7F1301CD">
+</activity>
+<activity android:name="com.cursus.sky.grabsdk.confirmation.CursusPlaceOrderActivity" android:theme="@7F1301CB">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="io.card.payment.CardIOActivity" android:theme="@7F1301CD">
+</activity>
+<activity android:name="io.card.payment.DataEntryActivity" android:theme="@7F1301CD">
+</activity>
+<activity android:label="@7F120054" android:name="com.cursus.sky.grabsdk.CursusHomeActivity" android:theme="@7F1301CD">
+</activity>
+<activity android:label="Orders" android:name="com.cursus.sky.grabsdk.OrdersHistoryActivity" android:screenOrientation="1" android:theme="@7F1301CB">
+</activity>
+<activity android:label="Tipping" android:name="com.cursus.sky.grabsdk.CursusTippingActivity" android:screenOrientation="1" android:theme="@7F1301CB">
+</activity>
+<activity android:label="Rating" android:name="com.cursus.sky.grabsdk.CursusTippingRatingActivity" android:screenOrientation="1" android:theme="@7F1301CB">
+</activity>
+<activity android:label="@7F120368" android:launchMode="1" android:name="com.cursus.sky.grabsdk.AirportSelectorActivity" android:screenOrientation="1" android:theme="@7F1301CA">
+<intent-filter>
+<action android:name="android.intent.action.SEARCH">
+</action>
+</intent-filter>
+<meta-data android:name="android.app.searchable" android:resource="@7F150002">
+</meta-data>
+</activity>
+<activity android:label="@7F1200B6" android:name="com.cursus.sky.grabsdk.countryselector.CountrySelectorActivity" android:screenOrientation="1" android:theme="@7F1301CA">
+<intent-filter>
+<action android:name="android.intent.action.SEARCH">
+</action>
+</intent-filter>
+<meta-data android:name="android.app.searchable" android:resource="@7F150002">
+</meta-data>
+</activity>
+<activity android:name="com.cursus.sky.grabsdk.StoreClosedActivity" android:screenOrientation="1" android:theme="@7F1301CD">
+</activity>
+<activity android:label="" android:name="com.cursus.sky.grabsdk.StoreInventoryActivity" android:screenOrientation="1" android:theme="@7F1301CB">
+</activity>
+<activity android:label="" android:name="com.cursus.sky.grabsdk.RetailInventoryActivity" android:screenOrientation="1" android:theme="@7F1301CB">
+</activity>
+<activity android:label="" android:name="com.cursus.sky.grabsdk.StoreShoppingActivity" android:screenOrientation="1" android:theme="@7F1301CD">
+</activity>
+<activity android:label="" android:name="com.cursus.sky.grabsdk.RetailShoppingActivity" android:screenOrientation="1" android:theme="@7F1301CD">
+</activity>
+<service android:name="com.cursus.sky.grabsdk.GeofenceTransitionsIntentService">
+</service>
+<meta-data android:name="com.google.android.gms.wallet.api.enabled" android:value="false">
+</meta-data>
+<activity android:name="com.braintreepayments.api.AndroidPayActivity" android:theme="@7F130425">
+</activity>
+<activity android:name="com.braintreepayments.api.GooglePaymentActivity" android:theme="@7F130425">
+</activity>
+<activity android:name="com.braintreepayments.api.threedsecure.ThreeDSecureWebViewActivity">
+</activity>
+<service android:name="com.braintreepayments.api.internal.AnalyticsIntentService">
+</service>
+<provider android:authorities="com.baa.heathrow.leak-sentry-installer" android:exported="false" android:name="leakcanary.internal.AppWatcherInstaller">
+</provider>
+<provider android:authorities="com.baa.heathrow.lifecycle-process" android:exported="false" android:multiprocess="true" android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer">
+</provider>
+<meta-data android:name="com.google.android.wearable.beta.app" android:resource="@7F150000">
+</meta-data>
+</application>
+</manifest>

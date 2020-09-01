@@ -1,0 +1,154 @@
+<?xml version="1.0" ?><manifest android:versionCode="2166" android:versionName="1.0" package="es.usal.bisite.dealer_ebikemotion" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="18" android:targetSdkVersion="27">
+</uses-sdk>
+<uses-permission android:name="android.permission.BLUETOOTH">
+</uses-permission>
+<uses-permission android:name="android.permission.BLUETOOTH_ADMIN">
+</uses-permission>
+<uses-permission android:name="android.permission.BLUETOOTH_PRIVILEGED">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-feature android:name="android.hardware.bluetooth_le" android:required="true">
+</uses-feature>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE">
+</uses-permission>
+<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE">
+</uses-permission>
+<permission android:name="es.usal.bisite.dealer_ebikemotion.permission.C2D_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="es.usal.bisite.dealer_ebikemotion.permission.C2D_MESSAGE">
+</uses-permission>
+<uses-feature android:glEsVersion="0x00020000" android:required="true">
+</uses-feature>
+<uses-permission-sdk-23 android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission-sdk-23>
+<application android:allowBackup="true" android:icon="@7F0D0000" android:label="@7F0E00D3" android:name="es.usal.bisite.dealer_ebikemotion.application.BaseApplication" android:supportsRtl="true" android:theme="@7F0F0009">
+<meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@7F0E00D2">
+</meta-data>
+<meta-data android:name="com.facebook.sdk.ApplicationName" android:value="Ebikemotion-Dealer">
+</meta-data>
+<activity android:name="es.usal.bisite.dealer_ebikemotion.ui.activities.splashscreen.SplashScreenActivity" android:screenOrientation="1" android:theme="@7F0F012B">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:name="es.usal.bisite.dealer_ebikemotion.ui.activities.login.LoginActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="es.usal.bisite.dealer_ebikemotion.ui.activities.main.MainActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="es.usal.bisite.dealer_ebikemotion.ui.activities.stolenbike.StolenBikeActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="es.usal.bisite.dealer_ebikemotion.ui.activities.connectedbike.ConnectedBikeActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="es.usal.bisite.dealer_ebikemotion.ui.activities.engineeringmode.EngineeringActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="es.usal.bisite.dealer_ebikemotion.ui.activities.status.StatusActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="es.usal.bisite.dealer_ebikemotion.ui.activities.settings.SettingsActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="es.usal.bisite.dealer_ebikemotion.ui.activities.scanebike.ScanEbikeActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="es.usal.bisite.dealer_ebikemotion.ui.activities.devices.DevicesActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="es.usal.bisite.dealer_ebikemotion.ui.activities.devicedetail.DeviceDetailActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000030">
+</activity>
+<activity android:name="es.usal.bisite.dealer_ebikemotion.ui.activities.pdfactivity.PDFActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="es.usal.bisite.dealer_ebikemotion.ui.activities.CrashErrorActivity">
+<intent-filter>
+<action android:name="cat.ereza.customactivityoncrash.ERROR">
+</action>
+</intent-filter>
+</activity>
+<service android:name="es.usal.bisite.ebikemotion.ebm_commons.android_services.EbikeMotionServiceRx">
+</service>
+<meta-data android:name="io.fabric.ApiKey" android:value="15bad74cbf7abe1ee04b61a8c7437baa68542627">
+</meta-data>
+<activity android:configChanges="0x000005B0" android:name="com.facebook.FacebookActivity" android:theme="@7F0F0200">
+</activity>
+<activity android:name="com.facebook.CustomTabMainActivity">
+</activity>
+<activity android:name="com.karumi.dexter.DexterActivity" android:theme="@7F0F00B6">
+</activity>
+<service android:exported="true" android:name="com.google.firebase.messaging.FirebaseMessagingService">
+<intent-filter android:priority="-500">
+<action android:name="com.google.firebase.MESSAGING_EVENT">
+</action>
+</intent-filter>
+</service>
+<service android:name="com.google.firebase.components.ComponentDiscoveryService">
+<meta-data android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar" android:value="com.google.firebase.components.ComponentRegistrar">
+</meta-data>
+<meta-data android:name="com.google.firebase.components:com.google.firebase.iid.Registrar" android:value="com.google.firebase.components.ComponentRegistrar">
+</meta-data>
+</service>
+<receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementReceiver">
+</receiver>
+<receiver android:enabled="true" android:exported="true" android:name="com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver" android:permission="android.permission.INSTALL_PACKAGES">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementService">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementJobService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<receiver android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+<category android:name="es.usal.bisite.dealer_ebikemotion">
+</category>
+</intent-filter>
+</receiver>
+<service android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdService">
+<intent-filter android:priority="-500">
+<action android:name="com.google.firebase.INSTANCE_ID_EVENT">
+</action>
+</intent-filter>
+</service>
+<provider android:authorities="es.usal.bisite.dealer_ebikemotion.firebaseinitprovider" android:exported="false" android:initOrder="100" android:name="com.google.firebase.provider.FirebaseInitProvider">
+</provider>
+<activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:01030010">
+</activity>
+<meta-data android:name="com.google.android.gms.version" android:value="@7F0A0009">
+</meta-data>
+<activity android:launchMode="1" android:name="com.tbruyelle.rxpermissions.ShadowActivity" android:theme="@android:01030010">
+</activity>
+<provider android:authorities="es.usal.bisite.dealer_ebikemotion.FacebookInitProvider" android:exported="false" android:name="com.facebook.internal.FacebookInitProvider">
+</provider>
+<activity android:name="cat.ereza.customactivityoncrash.activity.DefaultErrorActivity" android:process=":error_activity" android:theme="@7F0F00B1">
+</activity>
+<activity android:name="net.hockeyapp.android.UpdateActivity">
+</activity>
+<activity android:name="net.hockeyapp.android.FeedbackActivity" android:windowSoftInputMode="0x00000014">
+</activity>
+<activity android:name="net.hockeyapp.android.PaintActivity">
+</activity>
+<activity android:name="net.hockeyapp.android.LoginActivity">
+</activity>
+<activity android:name="net.hockeyapp.android.ExpiryInfoActivity">
+</activity>
+</application>
+</manifest>

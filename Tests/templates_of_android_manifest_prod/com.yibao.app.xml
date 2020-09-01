@@ -1,0 +1,292 @@
+<?xml version="1.0" ?><manifest android:versionCode="2" android:versionName="1.2.0" package="com.yibao.app" platformBuildVersionCode="25" platformBuildVersionName="7.1.1" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-permission android:name="android.permission.READ_LOGS">
+</uses-permission>
+<uses-sdk android:minSdkVersion="17" android:targetSdkVersion="25">
+</uses-sdk>
+<permission android:name="com.yibao.app.permission.JPUSH_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="com.yibao.app.permission.JPUSH_MESSAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_USER_PRESENT">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CALL_PHONE">
+</uses-permission>
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-permission android:name="com.google.android.apps.photos.permission.GOOGLE_PHOTOS">
+</uses-permission>
+<uses-permission android:name="android.permission.RECORD_AUDIO">
+</uses-permission>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<supports-screens android:anyDensity="true" android:largeScreens="true" android:normalScreens="true" android:resizeable="true" android:smallScreens="true" android:xlargeScreens="true">
+</supports-screens>
+<application android:allowBackup="true" android:icon="@7F02010A" android:label="@7F080085" android:name="com.tencent.StubShell.TxAppEntry" android:supportsRtl="true" android:theme="@7F0A00AB">
+<meta-data android:name="TxAppEntry" android:value="com.yibao.app.MyApplication">
+</meta-data>
+<activity android:exported="false" android:name="cn.jpush.android.ui.PopWinActivity" android:theme="@7F0A00DF">
+</activity>
+<activity android:configChanges="0x000000A0" android:exported="false" android:name="cn.jpush.android.ui.PushActivity" android:theme="@android:01030006">
+<intent-filter>
+<action android:name="cn.jpush.android.ui.PushActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="com.yibao.app">
+</category>
+</intent-filter>
+</activity>
+<service android:enabled="true" android:exported="false" android:name="cn.jpush.android.service.DownloadService">
+</service>
+<service android:enabled="true" android:exported="false" android:name="cn.jpush.android.service.PushService" android:process=":mult">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.REGISTER">
+</action>
+<action android:name="cn.jpush.android.intent.REPORT">
+</action>
+<action android:name="cn.jpush.android.intent.PushService">
+</action>
+<action android:name="cn.jpush.android.intent.PUSH_TIME">
+</action>
+</intent-filter>
+</service>
+<receiver android:enabled="true" android:exported="false" android:name="cn.jpush.android.service.PushReceiver" android:process=":pushcore">
+<intent-filter android:priority="1000">
+<action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY">
+</action>
+<category android:name="com.yibao.app">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.USER_PRESENT">
+</action>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_ADDED">
+</action>
+<action android:name="android.intent.action.PACKAGE_REMOVED">
+</action>
+<data android:scheme="package">
+</data>
+</intent-filter>
+</receiver>
+<receiver android:exported="false" android:name="cn.jpush.android.service.AlarmReceiver">
+</receiver>
+<receiver android:enabled="true" android:exported="false" android:name="com.yibao.app.utils.MyReceiver">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.REGISTRATION">
+</action>
+<action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED">
+</action>
+<action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED">
+</action>
+<action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED">
+</action>
+<action android:name="cn.jpush.android.intent.CONNECTION">
+</action>
+<category android:name="com.yibao.app">
+</category>
+</intent-filter>
+</receiver>
+<meta-data android:name="JPUSH_CHANNEL" android:value="developer-default">
+</meta-data>
+<meta-data android:name="JPUSH_APPKEY" android:value="7cde364086ae6ba8fe6fcef8">
+</meta-data>
+<meta-data android:name="design_width" android:value="750">
+</meta-data>
+<meta-data android:name="design_height" android:value="1134">
+</meta-data>
+<meta-data android:name="UMENG_APPKEY" android:value="58a124b79f06fd6d83001054">
+</meta-data>
+<meta-data android:name="UMENG_CHANNEL" android:value="yingyongbao">
+</meta-data>
+<activity android:configChanges="0x000000E0" android:exported="false" android:name="com.alipay.sdk.app.H5PayActivity" android:screenOrientation="3">
+</activity>
+<activity android:configChanges="0x000000E0" android:exported="false" android:name="com.alipay.sdk.auth.AuthActivity" android:screenOrientation="3">
+</activity>
+<activity android:configChanges="0x000004A0" android:exported="true" android:name="com.yibao.app.wxapi.WXEntryActivity" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<activity android:launchMode="2" android:name="com.tencent.tauth.AuthActivity" android:noHistory="true">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="tencent1105910309">
+</data>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.tencent.connect.common.AssistActivity" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<activity android:name="com.yibao.app.activity.WelcomeActivity" android:screenOrientation="1" android:theme="@7F0A018E">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:name="com.yibao.app.home.activity.HomeActivity" android:screenOrientation="1" android:theme="@7F0A00DC">
+</activity>
+<activity android:name="com.yibao.app.register.RegisterActivity" android:screenOrientation="1" android:theme="@7F0A00DD">
+</activity>
+<activity android:name="com.yibao.app.login.LoginActivity" android:screenOrientation="1" android:theme="@7F0A00DD">
+</activity>
+<activity android:name="com.yibao.app.password.activity.ForgetPwdActivity" android:screenOrientation="1" android:theme="@7F0A00DD">
+</activity>
+<activity android:name="com.yibao.app.password.activity.ChangePwdActivity" android:theme="@7F0A00DD">
+</activity>
+<activity android:name="com.yibao.app.mine.activity.SetActivity" android:theme="@7F0A00DD">
+</activity>
+<activity android:name="com.yibao.app.home.activity.SearchActivity" android:theme="@7F0A00DD">
+</activity>
+<activity android:name="com.yibao.app.home.activity.InsuranceListActivity" android:theme="@7F0A00DE">
+</activity>
+<activity android:name="com.yibao.app.mine.activity.ServiceActivity" android:theme="@7F0A00DD">
+</activity>
+<activity android:name="com.yibao.app.mine.activity.ServiceDetailActivity" android:theme="@7F0A00DD">
+</activity>
+<activity android:name="com.yibao.app.mine.activity.MyFooterActivity" android:theme="@7F0A00DD">
+</activity>
+<activity android:name="com.yibao.app.mine.activity.MyCollectionActivity" android:theme="@7F0A00DD">
+</activity>
+<activity android:name="com.yibao.app.mine.activity.ContactListActivity" android:theme="@7F0A00DD">
+</activity>
+<activity android:name="com.yibao.app.mine.activity.ContactEditActivity" android:theme="@7F0A00DD">
+</activity>
+<activity android:name="com.yibao.app.mine.activity.ContactDetailActivity" android:theme="@7F0A00DD">
+</activity>
+<activity android:name="com.yibao.app.mine.activity.MyEvaluationActivity" android:theme="@7F0A00DD">
+</activity>
+<activity android:name="com.yibao.app.mine.activity.MyOrderListActivity" android:theme="@7F0A00DD">
+</activity>
+<activity android:name="com.yibao.app.mine.activity.OrderDetailActivity" android:theme="@7F0A00DD">
+</activity>
+<activity android:name="com.yibao.app.mine.activity.SendEvaluationActivity" android:theme="@7F0A00DD">
+</activity>
+<activity android:name="com.yibao.app.mine.activity.EvaluationResultActivity" android:theme="@7F0A00DD">
+</activity>
+<activity android:name="com.yibao.app.mine.activity.CheckPolicyActivity" android:theme="@7F0A00DD">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.yibao.app.home.activity.ProductDetailActivity" android:theme="@7F0A00DE">
+</activity>
+<activity android:name="com.yibao.app.mine.activity.ApplyClaimsActivity" android:theme="@7F0A00DD">
+</activity>
+<activity android:name="com.yibao.app.test.TestActivity3" android:theme="@7F0A00DD">
+</activity>
+<activity android:name="com.yibao.app.mine.activity.PayResultActivity" android:theme="@7F0A00DD">
+</activity>
+<activity android:name="com.yibao.app.find.activity.NewsDetailActivity" android:theme="@7F0A00DD">
+</activity>
+<activity android:name="com.yibao.app.home.activity.SelectInsuranceActivity" android:theme="@7F0A00DD">
+</activity>
+<activity android:name="com.yibao.app.mine.activity.MyMsgListActivity" android:theme="@7F0A00DD">
+</activity>
+<activity android:name="com.yibao.app.mine.activity.MsgListActivity" android:theme="@7F0A00DD">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.yibao.app.home.activity.HomeBannerDetailActivity" android:theme="@7F0A00DD">
+</activity>
+<activity android:name="com.yibao.app.mine.activity.AgreementActivity" android:theme="@7F0A00DD">
+</activity>
+<activity android:name="com.yibao.app.test.Test4Activity" android:theme="@7F0A00DE">
+</activity>
+<activity android:name="com.yibao.app.test.Test5Activity" android:theme="@7F0A00DE">
+</activity>
+<activity android:name="com.yibao.app.activity.WebViewDetailActivity" android:theme="@7F0A00DD">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.yibao.app.mine.activity.NewPersonInfoActivity" android:screenOrientation="1" android:theme="@7F0A00DD">
+</activity>
+<activity android:name="com.yibao.app.login.ThirdBindPhoneActivity" android:theme="@7F0A00DD">
+</activity>
+<activity android:name="com.yibao.app.login.ThirdSetPwdActivity" android:theme="@7F0A00DD">
+</activity>
+<activity android:name="com.yibao.app.mine.activity.UnbindAccountActivity" android:theme="@7F0A00DD">
+</activity>
+<activity android:exported="true" android:launchMode="1" android:name="com.yibao.app.wxapi.WXPayEntryActivity">
+</activity>
+<activity android:alwaysRetainTaskState="true" android:configChanges="0x000004A0" android:exported="false" android:launchMode="2" android:name="com.tencent.smtt.sdk.VideoActivity">
+<intent-filter>
+<action android:name="com.tencent.smtt.tbs.video.PLAY">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.xiaochao.lcrapiddeveloplibrary.Video.JCFullScreenActivity" android:screenOrientation="0">
+</activity>
+<activity android:excludeFromRecents="true" android:name="com.xiaochao.lcrapiddeveloplibrary.Exception.core.RecoveryActivity" android:noHistory="true" android:process=":recover" android:screenOrientation="1" android:theme="@7F0A00E3">
+</activity>
+<service android:enabled="true" android:exported="false" android:name="com.xiaochao.lcrapiddeveloplibrary.Exception.core.RecoveryService" android:process=":recover">
+</service>
+<service android:enabled="true" android:exported="true" android:name="cn.jpush.android.service.DaemonService">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.DaemonService">
+</action>
+<category android:name="com.yibao.app">
+</category>
+</intent-filter>
+</service>
+<activity android:configChanges="0x000000A0" android:launchMode="1" android:name="com.sobot.chat.activity.SobotChatActivity" android:screenOrientation="1" android:theme="@7F0A0194" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:configChanges="0x000000A0" android:hardwareAccelerated="false" android:name="com.sobot.chat.activity.SobotPhotoActivity" android:screenOrientation="1" android:theme="@7F0A0194">
+</activity>
+<activity android:name="com.sobot.chat.activity.WebViewActivity" android:screenOrientation="1" android:theme="@7F0A0194" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.sobot.chat.activity.DCRCActivity" android:screenOrientation="1" android:theme="@7F0A019D" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.sobot.chat.activity.SobotSkillGroupActivity" android:theme="@7F0A019E">
+</activity>
+<activity android:name="com.sobot.chat.activity.SobotPostMsgActivity" android:screenOrientation="1" android:theme="@7F0A0194" android:windowSoftInputMode="0x00000010">
+</activity>
+<service android:exported="true" android:label="SobotChatTCPServer" android:name="com.sobot.chat.socket.channel.SobotTCPServer" android:process=":sobotChatPush">
+</service>
+<service android:exported="true" android:label="SobotAssistService" android:name="com.sobot.chat.socket.channel.SobotTCPServer$AssistService" android:process=":sobotChatPush">
+</service>
+<service android:name="com.sobot.chat.server.SobotSessionServer">
+</service>
+<activity android:name="com.yuyh.library.imgsel.ImgSelActivity" android:theme="@7F0A0041">
+</activity>
+<meta-data android:name="APP_ID" android:value="com.yibao.app">
+</meta-data>
+<provider android:authorities="com.yibao.app.provider" android:exported="false" android:grantUriPermissions="true" android:name="android.support.v4.content.FileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F070000">
+</meta-data>
+</provider>
+</application>
+</manifest>

@@ -1,0 +1,282 @@
+<?xml version="1.0" ?><manifest android:versionCode="1" android:versionName="1.0" package="com.cnwir.cliented01878622e03f61" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="12" android:targetSdkVersion="17">
+</uses-sdk>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_GPS">
+</uses-permission>
+<permission android:name="android.permission.BAIDU_LOCATION_SERVICE">
+</permission>
+<uses-permission android:name="android.permission.BROADCAST_STICKY">
+</uses-permission>
+<uses-permission android:name="android.permission.CALL_PHONE">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_CONTACTS">
+</uses-permission>
+<uses-permission android:name="android.permission.RECORD_AUDIO">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-permission android:name="com.android.launcher.permission.READ_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.USE_CREDENTIALS">
+</uses-permission>
+<uses-permission android:name="android.permission.MANAGE_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS">
+</uses-permission>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-feature android:name="android.hardware.camera">
+</uses-feature>
+<uses-feature android:name="android.hardware.camera.autofocus">
+</uses-feature>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.FLASHLIGHT">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.BROADCAST_STICKY">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_DOWNLOAD_MANAGER">
+</uses-permission>
+<uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION">
+</uses-permission>
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW">
+</uses-permission>
+<uses-permission android:name="android.permission.DISABLE_KEYGUARD">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<application android:allowBackup="true" android:icon="@7F020046" android:label="@7F0C0003" android:name="com.cnwir.cliented01878622e03f61.view.DemoApplication">
+<service android:enabled="true" android:name="com.baidu.location.f" android:process=":remote">
+</service>
+<activity android:name=".ui.WelcomeActivity" android:screenOrientation="1" android:theme="@android:01030006">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000A0" android:exported="true" android:launchMode="2" android:name=".pushmsg.CustomActivity" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:name=".pushmsg.PushMessageActivity" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:name=".pushmsg.PushMessageDetailActivity" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000000A0" android:label="MediaViewActivity" android:name="com.baidu.android.pushservice.richmedia.MediaViewActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:label="MediaListActivity" android:launchMode="2" android:name="com.baidu.android.pushservice.richmedia.MediaListActivity" android:screenOrientation="1">
+</activity>
+<service android:name=".pushmsg.PushRegisterService">
+</service>
+<receiver android:name=".pushmsg.PushMessageReceiver">
+<intent-filter>
+<action android:name="com.baidu.android.pushservice.action.MESSAGE">
+</action>
+<action android:name="com.baidu.android.pushservice.action.RECEIVE">
+</action>
+<action android:name="com.baidu.android.pushservice.action.notification.CLICK">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name="com.baidu.android.pushservice.PushServiceReceiver" android:process=":bdservice_v1">
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+<action android:name="com.baidu.android.pushservice.action.notification.SHOW">
+</action>
+<action android:name="com.baidu.android.pushservice.action.media.CLICK">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name="com.baidu.android.pushservice.RegistrationReceiver" android:process=":bdservice_v1">
+<intent-filter>
+<action android:name="com.baidu.android.pushservice.action.METHOD">
+</action>
+<action android:name="com.baidu.android.pushservice.action.BIND_SYNC">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_REMOVED">
+</action>
+<data android:scheme="package">
+</data>
+</intent-filter>
+</receiver>
+<service android:exported="true" android:name="com.baidu.android.pushservice.PushService" android:process=":bdservice_v1">
+</service>
+<meta-data android:name="api_key" android:value="l8ztMfAgs306d2GStLGxMwL9">
+</meta-data>
+<activity android:name=".ui.MiLaucherActivity" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:launchMode="2" android:name=".ui.MiLaucherActivity1" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:launchMode="2" android:name=".ui.MiLaucherActivity2" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:launchMode="2" android:name=".ui.MiLaucherActivity3" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:launchMode="2" android:name=".ui.MiLaucherActivity4" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:launchMode="2" android:name=".ui.MiLaucherActivity5" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:launchMode="2" android:name=".ui.MiLaucherActivity6" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:launchMode="2" android:name=".ui.MiLaucherActivity7" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:name=".ui.MiLaucherActivity6_Main" android:screenOrientation="1">
+</activity>
+<activity android:name=".ui.MessageDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:name=".ui.ProServer" android:screenOrientation="1">
+</activity>
+<activity android:hardwareAccelerated="false" android:name=".ui.Website" android:screenOrientation="1">
+</activity>
+<activity android:name=".ui.MoreActivity" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:hardwareAccelerated="false" android:name=".ui.AboutActivity" android:screenOrientation="1">
+</activity>
+<activity android:name=".ui.PictureActivity" android:screenOrientation="1">
+</activity>
+<activity android:name=".ui.Picture_one" android:screenOrientation="1">
+</activity>
+<activity android:name=".ui.Picture_two" android:screenOrientation="1">
+</activity>
+<activity android:name=".ui.Picture_three" android:screenOrientation="1">
+</activity>
+<activity android:name=".ui.FeedBackActivity" android:screenOrientation="1">
+</activity>
+<activity android:name=".ui.Picture_twoDetail" android:screenOrientation="1">
+</activity>
+<activity android:name=".ui.Picture_three_detail" android:screenOrientation="1">
+</activity>
+<activity android:name=".ui.Map">
+</activity>
+<activity android:hardwareAccelerated="false" android:name=".ui.WebViewActivity" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:name="com.cnwir.cliented01878622e03f61.view.LocationOverlayDemo" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:name=".ui.NewsActivity" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:name=".ui.MenuActivity" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:name=".ui.ProductActivity" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:name=".ui.LoginActivity" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:name=".ui.RegistActivity" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:name=".ui.ChangePwdActivity" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:name=".ui.YhActivity" android:screenOrientation="1">
+</activity>
+<activity android:name=".ui.VideoActivity" android:screenOrientation="1">
+</activity>
+<activity android:name=".ui.VideoPlayActivity" android:screenOrientation="0">
+</activity>
+<activity android:configChanges="0x000000A0" android:name=".ui.MapSiteActivity" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:launchMode="2" android:name=".ui.YhDetail" android:screenOrientation="1">
+</activity>
+<activity android:name=".ui.EnquiryActivity">
+</activity>
+<activity android:launchMode="2" android:name=".ui.BranchActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="2" android:name=".ui.BranchDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="2" android:name=".ui.ChatActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="2" android:name=".ui.News12Activity" android:screenOrientation="1">
+</activity>
+<activity android:hardwareAccelerated="false" android:launchMode="2" android:name=".ui.News12DetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="2" android:name=".ui.News13Activity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="2" android:name=".ui.News14Activity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="2" android:name=".ui.ActMessageActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="2" android:name=".ui.CenterMessage" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="2" android:name=".ui.AboutOurActivity" android:screenOrientation="1">
+</activity>
+</application>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.CALL_PHONE">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_LOGS">
+</uses-permission>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-feature android:name="android.hardware.camera">
+</uses-feature>
+<uses-feature android:name="android.hardware.camera.autofocus">
+</uses-feature>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.FLASHLIGHT">
+</uses-permission>
+</manifest>

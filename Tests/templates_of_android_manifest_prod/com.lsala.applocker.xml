@@ -1,0 +1,118 @@
+<?xml version="1.0" ?><manifest android:versionCode="6" android:versionName="1.3.2" package="com.lsala.applocker" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="15" android:targetSdkVersion="22">
+</uses-sdk>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.PACKAGE_USAGE_STATS">
+</uses-permission>
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-permission android:name="android.permission.BIND_DEVICE_ADMIN">
+</uses-permission>
+<uses-permission android:name="android.permission.BROADCAST_PACKAGE_REMOVED">
+</uses-permission>
+<application android:allowBackup="true" android:icon="@7F0C0000" android:label="@7F0D0028" android:manageSpaceActivity="com.lsala.applocker.module.splash.SplashActivity" android:name="com.lsala.applocker.LockApplication" android:supportsRtl="true" android:theme="@7F0E0006">
+<activity android:name="com.lsala.applocker.module.splash.SplashActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:name="com.yalantis.ucrop.UCropActivity" android:screenOrientation="1" android:theme="@7F0E0131">
+</activity>
+<activity android:name="com.lsala.applocker.module.wallpaper.WallpaperDisplayScreenActivity" android:screenOrientation="1">
+</activity>
+<activity android:excludeFromRecents="true" android:name="com.lsala.applocker.module.wallpaper.WallpaperFragment" android:screenOrientation="1">
+</activity>
+<activity android:name="com.lsala.applocker.module.pattern.CreatePatternActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.lsala.applocker.module.pin.CreatePinActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00002004" android:name="com.lsala.applocker.module.main.MainActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.lsala.applocker.module.pattern.PatternSelfUnlockActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.lsala.applocker.module.pin.PinSelfUnlockActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F0D0075" android:name="com.lsala.applocker.module.theme.ThemeChooserActivity" android:screenOrientation="1">
+</activity>
+<activity android:excludeFromRecents="true" android:launchMode="2" android:name="com.lsala.applocker.module.pattern.PatternUnlockActivity" android:noHistory="true" android:screenOrientation="1">
+</activity>
+<activity android:excludeFromRecents="true" android:launchMode="2" android:name="com.lsala.applocker.module.pin.PinUnlockActivity" android:noHistory="true" android:screenOrientation="1">
+</activity>
+<activity android:name="com.lsala.applocker.module.theme.ThemePreviewActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.lsala.applocker.module.pattern.ChangePatternActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F0D0070" android:name="com.lsala.applocker.module.setting.LockSettingActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.lsala.applocker.module.splash.PermissionDialogActivity" android:screenOrientation="1" android:theme="@7F0E00B0">
+</activity>
+<activity android:excludeFromRecents="true" android:launchMode="2" android:name="com.lsala.applocker.module.splash.NewAppInstallLocker" android:noHistory="true" android:screenOrientation="1" android:theme="@7F0E00B1">
+</activity>
+<service android:name="com.lsala.applocker.service.LoadAppListService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<service android:name="com.lsala.applocker.service.LockService">
+</service>
+<receiver android:name="com.lsala.applocker.receiver.BootBroadcastReceiver">
+<intent-filter android:priority="999">
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+<action android:name="android.intent.action.QUICKBOOT_POWERON">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:description="@7F0D0020" android:label="@7F0D0028" android:name="com.lsala.applocker.module.main.MainActivity$DeviceAdmin" android:permission="android.permission.BIND_DEVICE_ADMIN">
+<meta-data android:name="android.app.device_admin" android:resource="@7F100000">
+</meta-data>
+<intent-filter>
+<action android:name="android.app.action.DEVICE_ADMIN_ENABLED">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name="com.lsala.applocker.receiver.PackageUpdateReceiver">
+<intent-filter android:priority="999">
+<action android:name="android.intent.action.MY_PACKAGE_REPLACED">
+</action>
+</intent-filter>
+<intent-filter android:priority="999">
+<action android:name="android.intent.action.PACKAGE_ADDED">
+</action>
+<action android:name="android.intent.action.PACKAGE_FULLY_REMOVED">
+</action>
+<data android:scheme="package">
+</data>
+</intent-filter>
+</receiver>
+<meta-data android:name="android.support.VERSION" android:value="26.1.0">
+</meta-data>
+<activity android:configChanges="0x00000FB0" android:exported="false" android:name="com.google.android.gms.ads.AdActivity" android:theme="@android:0103000F">
+</activity>
+<meta-data android:name="com.google.android.gms.version" android:value="@7F090007">
+</meta-data>
+<meta-data android:name="android.arch.lifecycle.VERSION" android:value="27.0.0-SNAPSHOT">
+</meta-data>
+</application>
+</manifest>

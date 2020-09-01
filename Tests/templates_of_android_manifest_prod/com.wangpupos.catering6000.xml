@@ -1,0 +1,182 @@
+<?xml version="1.0" ?><manifest android:installLocation="0" android:versionCode="77" android:versionName="3.4.3" package="com.wangpupos.catering6000" platformBuildVersionCode="25" platformBuildVersionName="7.1.1" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="15" android:targetSdkVersion="22">
+</uses-sdk>
+<uses-permission android:name="android.permission.RECORD_AUDIO">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.BLUETOOTH">
+</uses-permission>
+<uses-permission android:name="android.permission.BLUETOOTH_ADMIN">
+</uses-permission>
+<uses-permission android:name="android.permission.USB_PERMISSION">
+</uses-permission>
+<uses-feature android:name="android.hardware.usb.host">
+</uses-feature>
+<uses-permission android:name="android.intent.action.MEDIA_UNMOUNTED">
+</uses-permission>
+<uses-permission android:name="android.permission.HARDWARE_TEST">
+</uses-permission>
+<uses-permission android:name="android.permission.DEVICE_POWER">
+</uses-permission>
+<uses-permission android:name="android.permission.REBOOT">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW">
+</uses-permission>
+<uses-permission android:name="android.permission.SYSTEM_OVERLAY_WINDOW">
+</uses-permission>
+<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-permission android:name="getui.permission.GetuiService.com.wangpupos.catering6000">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_LOGS">
+</uses-permission>
+<permission android:name="getui.permission.GetuiService.com.wangpupos.catering6000" android:protectionLevel="0x00000000">
+</permission>
+<meta-data android:name="android.support.VERSION" android:value="25.3.1">
+</meta-data>
+<application android:allowBackup="true" android:hardwareAccelerated="false" android:icon="@7F030048" android:label="@7F09004A" android:name="com.stub.StubApp" android:qihoo="activity" android:supportsRtl="true" android:theme="@7F0B00B2">
+<activity android:name="com.wangpupos.catering6000.ui.home.view.activity.LauncherActivity" android:screenOrientation="0" android:theme="@android:01030007">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="true" android:launchMode="2" android:name="com.wangpupos.catering6000.ui.home.view.activity.MainActivity" android:screenOrientation="0" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:launchMode="2" android:name="com.wangpupos.catering6000.ui.home.view.activity.LoginActivity" android:screenOrientation="0" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:name="com.wangpupos.catering6000.ui.test.TestActivity">
+</activity>
+<service android:name="com.wangpupos.catering6000.service.PayQueryService">
+</service>
+<service android:name="com.wangpupos.catering6000.service.PrinterSevice">
+</service>
+<service android:enabled="true" android:exported="true" android:label="GpPrintService" android:name="com.gprinter.service.GpPrintService" android:process=":remote">
+<intent-filter>
+<action android:name="com.gprinter.aidl.GpPrintService">
+</action>
+</intent-filter>
+</service>
+<meta-data android:name="design_width" android:value="1920">
+</meta-data>
+<meta-data android:name="design_height" android:value="1080">
+</meta-data>
+<meta-data android:name="PUSH_APPID" android:value="PfwyokPmS09ilYcSL62RW9">
+</meta-data>
+<meta-data android:name="PUSH_APPKEY" android:value="7MMcJ6DFCM83X0CqCa4ds3">
+</meta-data>
+<meta-data android:name="PUSH_APPSECRET" android:value="9weNa54ctoAMZojtYpZYt4">
+</meta-data>
+<meta-data android:name="PUSH_GROUPID" android:value="">
+</meta-data>
+<meta-data android:name="UMENG_APPKEY" android:value="558bb74567e58e0b4b001182">
+</meta-data>
+<meta-data android:name="UMENG_CHANNEL" android:value="360">
+</meta-data>
+<receiver android:exported="false" android:name="com.wangpupos.catering6000.peripheral.getui.PushGuanSixReceiver">
+<intent-filter>
+<action android:name="com.igexin.sdk.action.PfwyokPmS09ilYcSL62RW9">
+</action>
+</intent-filter>
+</receiver>
+<service android:exported="true" android:label="NotificationCenter" android:name="com.igexin.sdk.PushService" android:process=":pushservice">
+</service>
+<receiver android:name="com.igexin.sdk.PushReceiver">
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+<action android:name="android.intent.action.USER_PRESENT">
+</action>
+<action android:name="com.igexin.sdk.action.refreshls">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="com.igexin.sdk.action.pushmanager">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.MEDIA_MOUNTED">
+</action>
+<action android:name="android.intent.action.ACTION_POWER_CONNECTED">
+</action>
+<action android:name="android.intent.action.ACTION_POWER_DISCONNECTED">
+</action>
+</intent-filter>
+</receiver>
+<activity android:excludeFromRecents="true" android:exported="false" android:name="com.igexin.sdk.PushActivity" android:process=":pushservice" android:taskAffinity="com.igexin.sdk.PushActivityTask" android:theme="@android:01030010">
+</activity>
+<service android:name="com.igexin.download.DownloadService" android:process=":pushservice">
+</service>
+<receiver android:name="com.igexin.download.DownloadReceiver">
+<intent-filter>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+</receiver>
+<provider android:authorities="downloads.com.wangpupos.catering6000" android:name="com.igexin.download.DownloadProvider" android:process=":pushservice">
+</provider>
+<activity android:configChanges="0x000000B0" android:excludeFromRecents="true" android:exported="false" android:name="com.igexin.getuiext.activity.GetuiExtActivity" android:process=":pushservice" android:taskAffinity="android.task.myServicetask" android:theme="@android:01030010">
+</activity>
+<receiver android:exported="false" android:name="com.igexin.getuiext.service.PayloadReceiver">
+<intent-filter>
+<action android:name="com.igexin.sdk.action.7fjUl2Z3LH6xYy7NQK4ni4">
+</action>
+<action android:name="com.igexin.sdk.action.PfwyokPmS09ilYcSL62RW9">
+</action>
+</intent-filter>
+</receiver>
+<service android:name="com.igexin.getuiext.service.GetuiExtService" android:process=":pushservice">
+</service>
+<service android:name="com.wangpupos.catering6000.service.UploadDataService">
+</service>
+<service android:name="com.wangpupos.catering6000.service.PhonePushService">
+</service>
+<service android:name="com.wangpupos.catering6000.service.PullOrderService">
+</service>
+<receiver android:name="sunmi.ds.MsgReceiver">
+<intent-filter>
+<action android:name="com.sunmi.hcservice">
+</action>
+<action android:name="com.sunmi.hcservice.status">
+</action>
+</intent-filter>
+</receiver>
+<meta-data android:name="SUNMI_APPKEY" android:value="DEFAULT">
+</meta-data>
+<activity android:configChanges="0x000000A0" android:name="com.videogo.main.EzvizWebViewActivity" android:screenOrientation="1" android:theme="@7F0B0195">
+</activity>
+<meta-data android:name="android.support.VERSION" android:value="26.0.2">
+</meta-data>
+</application>
+</manifest>

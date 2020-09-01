@@ -1,0 +1,174 @@
+<?xml version="1.0" ?><manifest android:versionCode="31099" android:versionName="0.31-pixel" package="com.xda.feed.pixel" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="21" android:targetSdkVersion="27">
+</uses-sdk>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE">
+</uses-permission>
+<permission android:name="com.xda.feed.pixel.permission.C2D_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="com.xda.feed.pixel.permission.C2D_MESSAGE">
+</uses-permission>
+<application android:allowBackup="false" android:debuggable="true" android:icon="@7F0D0000" android:label="@7F0F0033" android:largeHeap="true" android:name="com.xda.feed.FeedApplication" android:roundIcon="@7F0D0001" android:supportsRtl="true" android:theme="@7F10000B">
+<activity android:label="@7F0F0033" android:launchMode="2" android:name="com.xda.feed.FeedActivity" android:theme="@7F10000B">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:name="com.xda.feed.login.LoginActivity" android:theme="@7F10000B" android:windowSoftInputMode="0x00000021">
+</activity>
+<activity android:name="com.xda.feed.settings.SettingsActivity" android:theme="@7F10000B" android:windowSoftInputMode="0x00000010">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.NOTIFICATION_PREFERENCES">
+</category>
+</intent-filter>
+</activity>
+<activity android:name="com.xda.feed.about.AboutActivity" android:theme="@7F10000B" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.xda.feed.download_history.DownloadHistoryActivity" android:theme="@7F10000B" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.xda.feed.suggest.SuggestActivity" android:parentActivityName="com.xda.feed.FeedActivity" android:theme="@7F10000B" android:windowSoftInputMode="0x00000012">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".FeedActivity">
+</meta-data>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:host="feed-staging.xda-developers.com" android:pathPattern="/suggest/.*" android:scheme="https">
+</data>
+<data android:host="feed.xda-developers.com" android:pathPattern="/suggest/.*" android:scheme="https">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="com.xda.feed.SUGGEST">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity-alias android:enabled="false" android:icon="@7F0D0000" android:label="@7F0F0164" android:name="com.xda.feed.suggest.ShareSuggestActivity" android:parentActivityName=".FeedActivity" android:targetActivity="com.xda.feed.suggest.SuggestActivity" android:windowSoftInputMode="0x00000012">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".FeedActivity">
+</meta-data>
+<intent-filter>
+<action android:name="android.intent.action.SEND">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:mimeType="text/plain">
+</data>
+</intent-filter>
+</activity-alias>
+<activity android:enabled="false" android:icon="@7F080090" android:label="@7F0F005D" android:name="com.xda.feed.CopyTextActivity" android:theme="@android:01030055">
+<intent-filter>
+<action android:name="android.intent.action.SEND">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:mimeType="text/plain">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.xda.feed.ChromeCustomTabsActivity" android:theme="@android:01030055">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.xda.feed.gallery.GalleryActivity" android:theme="@7F1000BD">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.xda.feed.video.VideoPlayerActivity" android:theme="@7F100150">
+</activity>
+<service android:enabled="true" android:name="com.xda.feed.services.Downloader">
+</service>
+<service android:enabled="true" android:exported="true" android:name="com.xda.feed.services.UserJobService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<service android:enabled="true" android:exported="true" android:name="com.xda.feed.services.NotificationJobService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<service android:exported="false" android:name="com.xda.feed.services.FeedMessagingService">
+<intent-filter>
+<action android:name="com.google.firebase.MESSAGING_EVENT">
+</action>
+</intent-filter>
+</service>
+<service android:exported="false" android:name="com.xda.feed.services.FeedInstanceIdService">
+<intent-filter>
+<action android:name="com.google.firebase.INSTANCE_ID_EVENT">
+</action>
+</intent-filter>
+</service>
+<receiver android:exported="false" android:name="com.xda.feed.receivers.NotificationReceiver">
+<intent-filter>
+<action android:name="com.xda.feed.NOTIFICATION_DISMISSED">
+</action>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+</intent-filter>
+</receiver>
+<provider android:authorities="com.xda.feed.pixel.fileProvider" android:exported="false" android:grantUriPermissions="true" android:name="android.support.v4.content.FileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F120000">
+</meta-data>
+</provider>
+<meta-data android:name="io.fabric.ApiKey" android:value="d58f426e18354a629c9ca6bd5763f3ab8ec1a3cb">
+</meta-data>
+<activity android:name="com.jakewharton.processphoenix.ProcessPhoenix" android:process=":phoenix" android:theme="@android:01030010">
+</activity>
+<service android:exported="true" android:name="com.google.firebase.messaging.FirebaseMessagingService">
+<intent-filter android:priority="-500">
+<action android:name="com.google.firebase.MESSAGING_EVENT">
+</action>
+</intent-filter>
+</service>
+<activity android:excludeFromRecents="true" android:exported="false" android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity" android:theme="@android:01030010">
+</activity>
+<service android:exported="true" android:name="com.google.android.gms.auth.api.signin.RevocationBoundService" android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION">
+</service>
+<receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementReceiver">
+</receiver>
+<receiver android:enabled="true" android:exported="true" android:name="com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver" android:permission="android.permission.INSTALL_PACKAGES">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementService">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementJobService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<receiver android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+<category android:name="com.xda.feed.pixel">
+</category>
+</intent-filter>
+</receiver>
+<service android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdService">
+<intent-filter android:priority="-500">
+<action android:name="com.google.firebase.INSTANCE_ID_EVENT">
+</action>
+</intent-filter>
+</service>
+<provider android:authorities="com.xda.feed.pixel.firebaseinitprovider" android:exported="false" android:initOrder="100" android:name="com.google.firebase.provider.FirebaseInitProvider">
+</provider>
+<activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:01030010">
+</activity>
+<meta-data android:name="com.google.android.gms.version" android:value="@7F0A0009">
+</meta-data>
+<provider android:authorities="com.xda.feed.pixel.crashlyticsinitprovider" android:exported="false" android:initOrder="100" android:name="com.crashlytics.android.CrashlyticsInitProvider">
+</provider>
+</application>
+</manifest>

@@ -1,0 +1,82 @@
+<?xml version="1.0" ?><manifest android:compileSdkVersion="28" android:compileSdkVersionCodename="9" android:versionCode="19" android:versionName="4.711" package="com.app.bm.stone.peter.fingerprintpasscodeapplock" platformBuildVersionCode="28" platformBuildVersionName="9" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="15" android:targetSdkVersion="28">
+</uses-sdk>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.PACKAGE_USAGE_STATS">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.USE_FINGERPRINT">
+</uses-permission>
+<uses-permission android:name="android.permission.FOREGROUND_SERVICE">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<application android:allowBackup="false" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:icon="@7F0E0001" android:label="@7F100034" android:name="sparrow.peter.applockapplicationlocker.App" android:resizeableActivity="false" android:supportsRtl="true" android:theme="@7F110006">
+<activity android:name="sparrow.peter.applockapplicationlocker.EntryActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:name="sparrow.peter.applockapplicationlocker.ExitActivity">
+</activity>
+<activity android:exported="true" android:name="sparrow.peter.applockapplicationlocker.mvp.main.MainActivity" android:theme="@7F110006">
+</activity>
+<activity android:exported="true" android:name="sparrow.peter.applockapplicationlocker.lock.MySetPinActivity" android:screenOrientation="1">
+</activity>
+<activity android:excludeFromRecents="true" android:name="sparrow.peter.applockapplicationlocker.lock.UnlockPinActivity" android:screenOrientation="1">
+</activity>
+<activity android:exported="true" android:name="sparrow.peter.applockapplicationlocker.lock.MySetPatternActivity" android:screenOrientation="1">
+</activity>
+<activity android:excludeFromRecents="true" android:name="sparrow.peter.applockapplicationlocker.lock.UnlockPatternActivity" android:screenOrientation="1">
+</activity>
+<activity android:exported="true" android:name="sparrow.peter.applockapplicationlocker.settings.SettingsActivity" android:screenOrientation="1">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".mvp.main.MainActivity">
+</meta-data>
+</activity>
+<activity android:exported="true" android:name="sparrow.peter.applockapplicationlocker.mvp.views.activity.LockSettingsActivity" android:screenOrientation="1">
+</activity>
+<service android:name="sparrow.peter.applockapplicationlocker.services.LockService">
+</service>
+<receiver android:enabled="true" android:exported="true" android:name="sparrow.peter.applockapplicationlocker.services.BootReceiver">
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+</intent-filter>
+</receiver>
+<meta-data android:name="com.google.android.gms.version" android:value="@7F0A0009">
+</meta-data>
+<meta-data android:name="io.fabric.ApiKey" android:value="6efb74bf03cd287a3ec7810fe3aefe7346d804a2">
+</meta-data>
+<uses-library android:name="org.apache.http.legacy" android:required="false">
+</uses-library>
+<meta-data android:name="com.google.android.gms.ads.AD_MANAGER_APP" android:value="true">
+</meta-data>
+<meta-data android:name="com.google.android.gms.ads.sparrow.peter.applockapplicationlocker" android:value="ca-app-pub-9142698350221047~3594670016">
+</meta-data>
+<provider android:authorities="com.app.bm.stone.peter.fingerprintpasscodeapplock.crashlyticsinitprovider" android:exported="false" android:initOrder="90" android:name="com.crashlytics.android.CrashlyticsInitProvider">
+</provider>
+<receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.analytics.AnalyticsReceiver">
+</receiver>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.analytics.AnalyticsService">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.analytics.AnalyticsJobService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<activity android:configChanges="0x00000FB0" android:exported="false" android:name="com.google.android.gms.ads.AdActivity" android:theme="@android:0103000F">
+</activity>
+<provider android:authorities="com.app.bm.stone.peter.fingerprintpasscodeapplock.mobileadsinitprovider" android:exported="false" android:initOrder="100" android:name="com.google.android.gms.ads.MobileAdsInitProvider">
+</provider>
+<activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:01030010">
+</activity>
+</application>
+</manifest>

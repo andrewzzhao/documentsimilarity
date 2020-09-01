@@ -1,0 +1,112 @@
+<?xml version="1.0" ?><manifest android:versionCode="19" android:versionName="2.8" package="com.DParent" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="14" android:targetSdkVersion="27">
+</uses-sdk>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE">
+</uses-permission>
+<permission android:name="com.DParent.permission.C2D_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="com.DParent.permission.C2D_MESSAGE">
+</uses-permission>
+<application android:allowBackup="true" android:icon="@7F07007A" android:label="@7F0D004B" android:name="com.DParent.globals.Credentials" android:supportsRtl="true" android:theme="@7F0E0006">
+<activity android:name="com.DParent.activity.MainActivity">
+</activity>
+<activity android:name="com.DParent.activity.LoginActivity" android:screenOrientation="1" android:theme="@7F0E0008">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:name="com.DParent.activity.AttendanceDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.DParent.activity.DashBoardActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F0D0071" android:name="com.DParent.activity.ResultMainActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F0D0072" android:name="com.DParent.activity.SemesterWiseAttendanceActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F0D0074" android:name="com.DParent.activity.StudentProfileActivity" android:screenOrientation="1" android:theme="@7F0E0008">
+</activity>
+<activity android:name="com.DParent.activity.FeesPaidActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F0D006E" android:name="com.DParent.activity.GtuResultActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F0D0070" android:name="com.DParent.activity.MidSemResultActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F0D0073" android:name="com.DParent.activity.StudentFeesActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.DParent.activity.StudentFeesDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F0D006B" android:name="com.DParent.activity.ContactActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F0D0075" android:name="com.DParent.activity.TimeTableActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F0D0075" android:name="com.DParent.activity.TimeTableDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F0D006C" android:name="com.DParent.activity.DayAttendanceActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F0D006A" android:name="com.DParent.activity.NewsActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F0D006D" android:name="com.DParent.activity.DeveloperActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F0D0069" android:name="com.DParent.activity.AcademicCalendarActivity" android:screenOrientation="1">
+</activity>
+<meta-data android:name="io.fabric.ApiKey" android:value="ae5de019a851cee96696a4c7c019c214d1629e6c">
+</meta-data>
+<activity android:name="com.DParent.activity.WebviewActivity">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:name="com.DParent.activity.ImportantWebSiteActivity">
+</activity>
+<receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementReceiver">
+</receiver>
+<receiver android:enabled="true" android:exported="true" android:name="com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver" android:permission="android.permission.INSTALL_PACKAGES">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementService">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementJobService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<receiver android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+<category android:name="com.DParent">
+</category>
+</intent-filter>
+</receiver>
+<service android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdService">
+<intent-filter android:priority="-500">
+<action android:name="com.google.firebase.INSTANCE_ID_EVENT">
+</action>
+</intent-filter>
+</service>
+<provider android:authorities="com.DParent.firebaseinitprovider" android:exported="false" android:initOrder="100" android:name="com.google.firebase.provider.FirebaseInitProvider">
+</provider>
+<meta-data android:name="com.google.android.gms.version" android:value="@7F090007">
+</meta-data>
+<provider android:authorities="com.DParent.crashlyticsinitprovider" android:exported="false" android:initOrder="100" android:name="com.crashlytics.android.CrashlyticsInitProvider">
+</provider>
+</application>
+</manifest>

@@ -1,0 +1,420 @@
+<?xml version="1.0" ?><manifest android:versionCode="12" android:versionName="1.30" package="com.cxzb.Starlight" platformBuildVersionCode="23" platformBuildVersionName="6.0-2704002" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="15" android:targetSdkVersion="22">
+</uses-sdk>
+<permission android:name="com.cxzb.Starlight.permission.JPUSH_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-feature android:name="android.hardware.camera">
+</uses-feature>
+<uses-feature android:name="android.hardware.camera.autofocus">
+</uses-feature>
+<uses-feature android:name="android.hardware.camera.flash">
+</uses-feature>
+<uses-permission android:name="android.permission.FLASHLIGHT">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_CONTACTS">
+</uses-permission>
+<uses-permission android:name="com.android.browser.permission.READ_HISTORY_BOOKMARKS">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="com.cxzb.Starlight.permission.JPUSH_MESSAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.MANAGE_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS">
+</uses-permission>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-permission android:name="android.permission.BLUETOOTH">
+</uses-permission>
+<uses-permission android:name="android.permission.BLUETOOTH_ADMIN">
+</uses-permission>
+<uses-permission android:name="com.android.launcher.permission.READ_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.CALL_PHONE">
+</uses-permission>
+<supports-screens android:anyDensity="true" android:largeScreens="true" android:normalScreens="false" android:resizeable="true" android:smallScreens="true">
+</supports-screens>
+<uses-permission android:name="android.permission.RECORD_AUDIO">
+</uses-permission>
+<android:uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</android:uses-permission>
+<application android:allowBackup="true" android:debuggable="true" android:icon="@7F030000" android:label="@7F080045" android:largeHeap="true" android:name="com.stub.StubApp" android:qihoo="activity" android:supportsRtl="true" android:theme="@7F0B00E1" name="com.stub.StubApp">
+<service android:enabled="true" android:exported="false" android:name="cn.jpush.android.service.PushService">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.REGISTER">
+</action>
+<action android:name="cn.jpush.android.intent.REPORT">
+</action>
+<action android:name="cn.jpush.android.intent.PushService">
+</action>
+<action android:name="cn.jpush.android.intent.PUSH_TIME">
+</action>
+</intent-filter>
+</service>
+<service android:enabled="true" android:exported="true" android:name="cn.jpush.android.service.DaemonService">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.DaemonService">
+</action>
+<category android:name="com.cxzb.Starlight">
+</category>
+</intent-filter>
+</service>
+<receiver android:enabled="true" android:name="cn.jpush.android.service.PushReceiver">
+<intent-filter android:priority="1000">
+<action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY">
+</action>
+<category android:name="com.cxzb.Starlight">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.USER_PRESENT">
+</action>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_ADDED">
+</action>
+<action android:name="android.intent.action.PACKAGE_REMOVED">
+</action>
+<data android:scheme="package">
+</data>
+</intent-filter>
+</receiver>
+<activity android:configChanges="0x000000A0" android:exported="false" android:name="cn.jpush.android.ui.PushActivity">
+<intent-filter>
+<action android:name="cn.jpush.android.ui.PushActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="com.cxzb.Starlight">
+</category>
+</intent-filter>
+</activity>
+<service android:enabled="true" android:exported="false" android:name="cn.jpush.android.service.DownloadService">
+</service>
+<receiver android:name="cn.jpush.android.service.AlarmReceiver">
+</receiver>
+<receiver android:enabled="true" android:exported="false" android:name="common.Bean.MyReceiver">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.REGISTRATION">
+</action>
+<action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED">
+</action>
+<action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED">
+</action>
+<action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED">
+</action>
+<action android:name="cn.jpush.android.intent.ACTION_RICHPUSH_CALLBACK">
+</action>
+<action android:name="cn.jpush.android.intent.CONNECTION">
+</action>
+<category android:name="com.cxzb.Starlight">
+</category>
+</intent-filter>
+</receiver>
+<meta-data android:name="JPUSH_CHANNEL" android:value="developer-default">
+</meta-data>
+<meta-data android:name="JPUSH_APPKEY" android:value="5119c7bb1db10240d3e7c89c">
+</meta-data>
+<meta-data android:name="com.baidu.lbsapi.API_KEY" android:value="6Mz1qt8Ha8wCtSLqqio88DL63AVrOwCq">
+</meta-data>
+<activity android:configChanges="0x000004A0" android:name="com.mob.tools.MobUIShell" android:screenOrientation="1" android:theme="@android:01030010" android:windowSoftInputMode="0x00000012">
+<intent-filter>
+<data android:scheme="tencent100371282">
+</data>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004A0" android:exported="true" android:name="com.cxzb.Starlight.wxapi.WXEntryActivity" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<activity android:launchMode="2" android:name="common.ui.MainActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name="common.ui.Welcomepage" android:screenOrientation="1" android:theme="@7F0B00E2">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="my.com" android:scheme="m">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:name="module.home_page.ui.Login_register" android:screenOrientation="1">
+</activity>
+<activity android:name="module.home_page.ui.thirdparty_Login" android:screenOrientation="1">
+</activity>
+<activity android:name="module.home_page.ui.Register_page" android:screenOrientation="1">
+</activity>
+<activity android:name="module.home_page.ui.Recover_password" android:screenOrientation="1">
+</activity>
+<activity android:name="module.home_page.ui.Valuation_result_page" android:screenOrientation="1">
+</activity>
+<activity android:name="module.home_page.ui.order_reserve_page" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="2" android:name="module.home_page.ui.My_valuation_page" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:launchMode="2" android:name="module.home_page.ui.SaveAuHome" android:screenOrientation="1">
+</activity>
+<activity android:name="module.myself_page.ui.MyOrder_page" android:screenOrientation="1">
+</activity>
+<activity android:name="module.home_page.ui.Recover_password_in" android:screenOrientation="1">
+</activity>
+<activity android:name="module.home_page.ui.News_page_in" android:screenOrientation="1">
+</activity>
+<activity android:name="module.home_page.ui.choice_store_page" android:screenOrientation="1">
+</activity>
+<activity android:name="module.home_page.ui.order_reserve_result_page" android:screenOrientation="1">
+</activity>
+<activity android:name="module.home_page.ui.News_page" android:screenOrientation="1">
+</activity>
+<activity android:name="module.home_page.ui.Search_page" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name="module.myself_page.ui.evaluation_shops_page" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000480" android:name="com.zfdang.multiple_images_selector.ImagesSelectorActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000480" android:name="module.myself_page.ui.share_comments_page" android:screenOrientation="1">
+</activity>
+<activity android:name="module.store_page.ui.Store_detial" android:screenOrientation="1">
+</activity>
+<activity android:name="module.store_page.ui.Store_detail_image_watch" android:screenOrientation="1">
+</activity>
+<activity android:name="module.home_page.ui.PriceMovements" android:screenOrientation="1">
+</activity>
+<activity android:name="module.home_page.ui.PriceMovements_web" android:screenOrientation="1">
+</activity>
+<activity android:name="module.home_page.ui.user_rules_page" android:screenOrientation="1">
+</activity>
+<activity android:name="module.home_page.ui.Cloudofjewelry_page" android:screenOrientation="1">
+</activity>
+<activity android:name="module.home_page.ui.cloudofJewelay_storedetial_page" android:screenOrientation="1">
+</activity>
+<activity android:name="module.home_page.ui.cloud_jewelry_detial_page" android:screenOrientation="1">
+</activity>
+<activity android:name="module.home_page.ui.cloud_jewelry_order_page" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="2" android:name="module.home_page.ui.qualitytest_page" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="2" android:name="module.home_page.ui.DayAddGoldTypeShiMiao" android:screenOrientation="1">
+</activity>
+<activity android:name="module.TEXT.Testclass" android:screenOrientation="1">
+</activity>
+<service android:enabled="true" android:name="com.baidu.location.f" android:process=":remote">
+</service>
+<activity android:name="module.home_page.ui.KLineChartActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="module.home_page.ui.HorizontalKLineChartActivity" android:screenOrientation="0">
+</activity>
+<activity android:launchMode="2" android:name="module.home_page.ui.DayAddGoldenActivity">
+</activity>
+<activity android:name="module.home_page.ui.DayHelpActivity">
+</activity>
+<activity android:name="module.home_page.ui.HistoryPriceActivit">
+</activity>
+<activity android:name="module.home_page.ui.BuyInActivity">
+</activity>
+<activity android:name="module.home_page.ui.SaleOutActivity">
+</activity>
+<activity android:name="module.store_page.ui.StoreSearchActivity">
+</activity>
+<activity android:name="module.home_page.ui.CertificationActivity">
+</activity>
+<activity android:name="module.myself_page.ui.TransactionPasswordActivity">
+</activity>
+<activity android:name="module.home_page.ui.BindCardActivity">
+</activity>
+<activity android:name="module.home_page.ui.PayActivity">
+</activity>
+<activity android:name="module.myself_page.ui.ResetPwdActivity">
+</activity>
+<activity android:name="module.home_page.ui.ResultDetailActivity">
+</activity>
+<activity android:name="module.home_page.ui.RegularMoneyActivity">
+</activity>
+<activity android:name="module.home_page.ui.RegularMoneyTwoActivity">
+</activity>
+<activity android:name="module.myself_page.ui.MyAccountActivity">
+</activity>
+<activity android:name="module.myself_page.ui.TransactionRecordActivity">
+</activity>
+<activity android:name="module.myself_page.ui.SettingActivity">
+</activity>
+<activity android:name="module.myself_page.ui.SuggestionFeedbackActivity">
+</activity>
+<activity android:name="module.myself_page.ui.AboutUsActivity">
+</activity>
+<activity android:name="module.myself_page.ui.ContactServiceActivity">
+</activity>
+<activity android:name="module.myself_page.ui.ChangePhoneActivity">
+</activity>
+<activity android:name="module.myself_page.ui.ChangePwdActivity">
+</activity>
+<activity android:name="module.myself_page.ui.LoginWayActivity">
+</activity>
+<activity android:name="module.myself_page.ui.CertificationTipActivity">
+</activity>
+<activity android:name="module.myself_page.ui.MyCreditCardActivity">
+</activity>
+<activity android:name="module.myself_page.ui.UserProtocolActivity">
+</activity>
+<activity android:name="module.home_page.ui.cloud_jewelry_detial_page_select">
+</activity>
+<activity android:name="module.home_page.ui.CloudJewelryShoppingCar">
+</activity>
+<activity android:name="module.home_page.ui.CloudLiJigoumai">
+</activity>
+<activity android:name="module.home_page.ui.CloudXuanzedizhi">
+</activity>
+<activity android:name="module.home_page.ui.CloudXuanzemendian">
+</activity>
+<activity android:name="module.home_page.ui.CloudGuanlidizhi">
+</activity>
+<activity android:name="module.home_page.ui.CloudGenggaidizhi">
+</activity>
+<activity android:name="module.home_page.ui.DayAddGoldHelpDetailActivity">
+</activity>
+<activity android:name="module.home_page.ui.DayAddGoldCurrentActivity">
+</activity>
+<activity android:name="module.home_page.ui.DayGoldBuyInActivity">
+</activity>
+<activity android:name="module.home_page.ui.DayAddGoldNewCustomerActivity">
+</activity>
+<activity android:name="module.home_page.ui.DayAddGoldRegualrActivity">
+</activity>
+<activity android:name="module.home_page.ui.DayAddGoldActiviActivity">
+</activity>
+<activity android:name="module.home_page.ui.TransferActivity">
+</activity>
+<activity android:name="module.home_page.ui.SaveAuYuyue">
+</activity>
+<activity android:name="module.home_page.ui.SavaAuCunjinjilu">
+</activity>
+<activity android:name="module.home_page.ui.SavaAuYuyueXiangqing">
+</activity>
+<activity android:name="module.home_page.ui.SavaAuChanpinXiangqing">
+</activity>
+<activity android:name="module.home_page.ui.LiveActivity">
+</activity>
+<activity android:name="module.home_page.ui.SavaAuTijin">
+</activity>
+<activity android:name="module.home_page.ui.SavaAuTijinQueRen">
+</activity>
+<activity android:name="module.home_page.ui.SavaAuTijinXiangqing">
+</activity>
+<activity android:name="module.myself_page.ui.OfficerActivity">
+</activity>
+<activity android:name="module.myself_page.ui.TransactionChangePwdActivity">
+</activity>
+<activity android:name="module.home_page.ui.CloudMyOrder">
+</activity>
+<activity android:name="module.home_page.ui.CloudMyOrderDetails">
+</activity>
+<activity android:name="module.myself_page.ui.SettingLoginPwdActivity">
+</activity>
+<activity android:name="module.home_page.ui.SalePayActivity">
+</activity>
+<activity android:name="module.home_page.ui.valuation_result_page_yuyuexiangqing">
+</activity>
+<activity android:name="module.home_page.zxing.CommonScanActivity">
+</activity>
+<activity android:name="module.home_page.ui.TipsActivity">
+</activity>
+<activity android:name="module.home_page.ui.InvitePersonActivity">
+</activity>
+<activity android:name="module.home_page.ui.StoreMoreActivity">
+</activity>
+<activity android:name="module.home_page.ui.PersonActivity">
+</activity>
+<activity android:name="module.myself_page.ui.MyOrderActivity">
+</activity>
+<activity android:name="module.myself_page.ui.MyAccountDingqi">
+</activity>
+<activity android:name="module.home_page.ui.TiaoKuanWeb">
+</activity>
+<activity android:name="module.home_page.ui.JieQianHomeActivity">
+</activity>
+<activity android:name="module.home_page.ui.JieQianXiangQIngActivity">
+</activity>
+<activity android:name="module.myself_page.ui.MyOrderActivityS">
+</activity>
+<activity android:name="module.myself_page.ui.JieQianMyOrder">
+</activity>
+<activity android:name="module.home_page.ui.JieQianXiangQIngActivityS">
+</activity>
+<activity android:name="module.home_page.ui.JieQianHuanKuanActivity">
+</activity>
+<activity android:configChanges="0x000000A0" android:launchMode="1" android:name="com.meiqia.meiqiasdk.activity.MQConversationActivity" android:screenOrientation="1" android:theme="@7F0B00D4" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:configChanges="0x000000A0" android:launchMode="1" android:name="com.meiqia.meiqiasdk.activity.MQPhotoPreviewActivity" android:screenOrientation="1" android:theme="@7F0B00D4" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000000A0" android:launchMode="1" android:name="com.meiqia.meiqiasdk.activity.MQPhotoPickerActivity" android:screenOrientation="1" android:theme="@7F0B00D4" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000000A0" android:launchMode="1" android:name="com.meiqia.meiqiasdk.activity.MQPhotoPickerPreviewActivity" android:screenOrientation="1" android:theme="@7F0B00D4" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000000A0" android:launchMode="1" android:name="com.meiqia.meiqiasdk.activity.MQMessageFormActivity" android:screenOrientation="1" android:theme="@7F0B00D4" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:configChanges="0x000000A0" android:launchMode="1" android:name="com.meiqia.meiqiasdk.activity.MQWebViewActivity" android:screenOrientation="1" android:theme="@7F0B00D4" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:configChanges="0x000000A0" android:launchMode="1" android:name="com.meiqia.meiqiasdk.activity.MQInquiryFormActivity" android:screenOrientation="1" android:theme="@7F0B00D4" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:configChanges="0x000000A0" android:launchMode="1" android:name="com.meiqia.meiqiasdk.activity.MQCollectInfoActivity" android:screenOrientation="1" android:theme="@7F0B00D4" android:windowSoftInputMode="0x00000012">
+</activity>
+<service android:name="com.meiqia.core.MeiQiaService">
+</service>
+</application>
+</manifest>

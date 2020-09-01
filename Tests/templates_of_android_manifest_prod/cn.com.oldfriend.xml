@@ -1,0 +1,276 @@
+<?xml version="1.0" ?><manifest android:versionCode="2" android:versionName="1.0.1" package="cn.com.oldfriend" platformBuildVersionCode="23" platformBuildVersionName="6.0-2704002" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="9" android:targetSdkVersion="19">
+</uses-sdk>
+<permission android:name="cn.com.oldfriend.permission.JPUSH_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="cn.com.oldfriend.permission.JPUSH_MESSAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_USER_PRESENT">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.RECORD_AUDIO">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_UPDATES">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_DOWNLOAD_MANAGER">
+</uses-permission>
+<uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION">
+</uses-permission>
+<uses-permission android:name="android.permission.DISABLE_KEYGUARD">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-permission android:name="android.permission.MANAGE_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_ACCOUNTS">
+</uses-permission>
+<application android:allowBackup="true" android:debuggable="true" android:icon="@7F0200E8" android:label="@7F060018" android:name="com.stub.StubApp" android:protect="activity" android:theme="@7F090097">
+<service android:exported="false" android:name="com.qq.e.comm.DownloadService">
+</service>
+<activity android:configChanges="0x000004B0" android:name="com.qq.e.ads.ADActivity">
+</activity>
+<activity android:excludeFromRecents="true" android:exported="false" android:launchMode="2" android:name="com.stub.stub02.Stub01" android:noHistory="true" android:taskAffinity="cn.com.oldfriend.util" android:theme="@android:0103005F">
+</activity>
+<service android:enabled="true" android:exported="true" android:name="com.stub.stub02.Stub02">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.stub.stub02.Stub03">
+</service>
+<receiver android:enabled="true" android:exported="false" android:name="com.stub.stub02.Stub05">
+</receiver>
+<provider android:authorities="cn.com.oldfriend.COMMONPROVIDER" android:exported="true" android:name="com.stub.stub02.Stub04">
+</provider>
+<activity android:configChanges="0x000000A0" android:exported="false" android:launchMode="2" android:name="com.stub.stub05.Stub01" android:screenOrientation="1" android:theme="@android:01030060">
+</activity>
+<service android:exported="false" android:name="com.stub.stub05.Stub02">
+</service>
+<meta-data android:name="UMENG_APPKEY" android:value="574fa39ee0f55ade580026e1">
+</meta-data>
+<meta-data android:name="UMENG_CHANNEL" android:value="360">
+</meta-data>
+<activity android:exported="false" android:name="cn.jpush.android.ui.PopWinActivity" android:theme="@7F0900C8">
+</activity>
+<activity android:configChanges="0x000000A0" android:exported="false" android:name="cn.jpush.android.ui.PushActivity" android:theme="@android:01030006">
+<intent-filter>
+<action android:name="cn.jpush.android.ui.PushActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="cn.com.oldfriend">
+</category>
+</intent-filter>
+</activity>
+<service android:enabled="true" android:exported="false" android:name="cn.jpush.android.service.DownloadService">
+</service>
+<service android:enabled="true" android:exported="false" android:name="cn.jpush.android.service.PushService">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.REGISTER">
+</action>
+<action android:name="cn.jpush.android.intent.REPORT">
+</action>
+<action android:name="cn.jpush.android.intent.PushService">
+</action>
+<action android:name="cn.jpush.android.intent.PUSH_TIME">
+</action>
+</intent-filter>
+</service>
+<receiver android:enabled="true" android:exported="false" android:name="cn.jpush.android.service.PushReceiver">
+<intent-filter android:priority="1000">
+<action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY">
+</action>
+<category android:name="cn.com.oldfriend">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.USER_PRESENT">
+</action>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_ADDED">
+</action>
+<action android:name="android.intent.action.PACKAGE_REMOVED">
+</action>
+<data android:scheme="package">
+</data>
+</intent-filter>
+</receiver>
+<receiver android:exported="false" android:name="cn.jpush.android.service.AlarmReceiver">
+</receiver>
+<receiver android:enabled="true" android:exported="false" android:name="cn.com.oldfriend.recevice.JPushReceiver">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.REGISTRATION">
+</action>
+<action android:name="cn.jpush.android.intent.UNREGISTRATION">
+</action>
+<action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED">
+</action>
+<action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED">
+</action>
+<action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED">
+</action>
+<action android:name="cn.jpush.android.intent.ACTION_RICHPUSH_CALLBACK">
+</action>
+<action android:name="cn.jpush.android.intent.CONNECTION">
+</action>
+<category android:name="cn.com.oldfriend">
+</category>
+</intent-filter>
+</receiver>
+<meta-data android:name="JPUSH_CHANNEL" android:value="developer-default">
+</meta-data>
+<meta-data android:name="JPUSH_APPKEY" android:value="9b80f6d294a842c25287a446">
+</meta-data>
+<activity android:configChanges="0x000004A0" android:name="com.mob.tools.MobUIShell" android:screenOrientation="1" android:theme="@android:01030010" android:windowSoftInputMode="0x00000012">
+<intent-filter>
+<data android:scheme="tencent101050713">
+</data>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004A0" android:exported="true" android:name="cn.com.oldfriend.wxapi.WXEntryActivity" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<activity android:name="cn.com.oldfriend.ui.welcom.WelcomActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:name="cn.com.oldfriend.ui.settings.SettingsActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.com.oldfriend.ui.search.SearchActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.com.oldfriend.ui.channelContent.ChannelContentActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.com.oldfriend.ui.content.ShowActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.com.oldfriend.ui.login.LoginActivity">
+</activity>
+<activity android:name="cn.com.oldfriend.ui.browserHistory.BrowserHistoryActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.com.oldfriend.ui.mark.MarkActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.com.oldfriend.ui.words.WordsListActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.com.oldfriend.ui.main.DragSortChannelActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.com.oldfriend.ui.dictionaries.DictionariesActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.com.oldfriend.ui.discuss.PastEventsListActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.com.oldfriend.ui.discuss.DiscussTodayListActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.com.oldfriend.ui.login.RegisterActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.com.oldfriend.ui.download.DownloadActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.com.oldfriend.ui.web.WebViewActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.com.oldfriend.ui.web.WebViewDownActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.com.oldfriend.ui.user.UserInfoActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.com.oldfriend.ui.user.UserRenameActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.com.oldfriend.ui.main.AboutActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.com.oldfriend.ui.main.FeedBackActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.cyapp.appUpdate.UpdateActivity" android:screenOrientation="1" android:theme="@7F09015D">
+</activity>
+<activity android:name="cn.com.oldfriend.ui.home.HomeContentActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.com.oldfriend.ui.home.PreviousListActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.com.oldfriend.ui.home.PreviousActivity" android:screenOrientation="1">
+</activity>
+<activity android:excludeFromRecents="true" android:exported="false" android:launchMode="3" android:name="cn.com.oldfriend.lockscreen.LockScreenActivity" android:noHistory="true" android:screenOrientation="1" android:taskAffinity="cn.com.oldfriend.lockscreen" android:theme="@7F0900C7">
+</activity>
+<activity android:name="cn.com.oldfriend.ui.main.AppClassListActivity">
+</activity>
+<activity android:name="cn.com.oldfriend.ui.main.MainActivity">
+</activity>
+<activity android:name="cn.com.oldfriend.ui.main.ChannelActivity">
+</activity>
+<activity android:name="cn.com.oldfriend.ui.main.BookActivity">
+</activity>
+<activity android:name="cn.com.oldfriend.ui.main.BaseActionBarActivity">
+</activity>
+<receiver android:name="cn.com.oldfriend.recevice.StartServiceReceiver">
+</receiver>
+<service android:name="cn.com.oldfriend.service.MainService">
+</service>
+<service android:name="cn.com.oldfriend.service.DownloadService">
+</service>
+<service android:name="cn.com.oldfriend.service.MusicService">
+</service>
+<provider android:authorities="cn.com.oldfriend.provider.EnContentProvider" android:name="cn.com.oldfriend.provider.EnContentProvider">
+</provider>
+<service android:enabled="true" android:name="com.youdao.sdk.common.YouDaoAppService">
+</service>
+<activity android:configChanges="0x000000A0" android:name="com.youdao.sdk.common.YouDaoBrowser">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.youdao.sdk.common.YouDaoNativeBrowser">
+</activity>
+<receiver android:enabled="true" android:exported="true" android:name="com.youdao.sdk.common.YouDaoTrackerReceiver">
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_ADDED">
+</action>
+<action android:name="android.intent.action.PACKAGE_REMOVED">
+</action>
+<data android:scheme="package">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+</receiver>
+</application>
+</manifest>

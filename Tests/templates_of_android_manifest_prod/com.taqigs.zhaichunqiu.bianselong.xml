@@ -1,0 +1,286 @@
+<?xml version="1.0" ?><manifest android:versionCode="6" android:versionName="1.0.6" package="com.taqigs.zhaichunqiu.bianselong" platformBuildVersionCode="24" platformBuildVersionName="7.000000" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:maxSdkVersion="24" android:minSdkVersion="11" android:targetSdkVersion="21">
+</uses-sdk>
+<uses-configuration android:reqHardKeyboard="true" android:reqTouchScreen="3">
+</uses-configuration>
+<uses-configuration android:reqHardKeyboard="true" android:reqTouchScreen="2">
+</uses-configuration>
+<supports-screens android:normalScreens="false" android:smallScreens="false">
+</supports-screens>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="com.android.launcher.permission.READ_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.CALL_PHONE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-feature android:name="android.hardware.camera">
+</uses-feature>
+<uses-feature android:name="android.hardware.camera.autofocus">
+</uses-feature>
+<uses-permission android:name="android.permission.FLASHLIGHT">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_LOGS">
+</uses-permission>
+<uses-permission android:name="android.permission.SET_DEBUG_APP">
+</uses-permission>
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="android.permission.USE_CREDENTIALS">
+</uses-permission>
+<uses-permission android:name="android.permission.MANAGE_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.BLUETOOTH">
+</uses-permission>
+<uses-permission android:name="android.permission.BLUETOOTH_ADMIN">
+</uses-permission>
+<uses-permission android:name="getui.permission.GetuiService.com.taqigs.zhaichunqiu.bianselong">
+</uses-permission>
+<permission android:name="getui.permission.GetuiService.com.taqigs.zhaichunqiu.bianselong" android:protectionLevel="0x00000000">
+</permission>
+<application android:allowBackup="true" android:hardwareAccelerated="true" android:icon="@7F030022" android:label="@7F070023" android:largeHeap="true" android:name="com.qihoo.util.StubApp1038175373" android:qihoo="activity" android:supportsRtl="true" android:theme="@7F090093">
+<meta-data android:name="PUSH_APPID" android:value="pWN3TOwzWx55w9zUocoMXA">
+</meta-data>
+<meta-data android:name="PUSH_APPKEY" android:value="jzy9OF3aPrAdEfakaSZ0X">
+</meta-data>
+<meta-data android:name="PUSH_APPSECRET" android:value="mz80KbuEgY5qhQPeJcPfT">
+</meta-data>
+<service android:exported="true" android:label="NotificationCenter" android:name="com.igexin.sdk.PushService" android:process=":pushservice">
+<intent-filter>
+<action android:name="com.igexin.sdk.action.service.message">
+</action>
+</intent-filter>
+</service>
+<receiver android:name="com.igexin.sdk.PushReceiver">
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+<action android:name="android.intent.action.USER_PRESENT">
+</action>
+<action android:name="com.igexin.sdk.action.refreshls">
+</action>
+<action android:name="android.intent.action.MEDIA_MOUNTED">
+</action>
+<action android:name="android.intent.action.ACTION_POWER_CONNECTED">
+</action>
+<action android:name="android.intent.action.ACTION_POWER_DISCONNECTED">
+</action>
+</intent-filter>
+</receiver>
+<activity android:excludeFromRecents="true" android:exported="false" android:name="com.igexin.sdk.PushActivity" android:process=":pushservice" android:taskAffinity="com.igexin.sdk.PushActivityTask" android:theme="@android:01030010">
+</activity>
+<activity android:exported="false" android:name="com.qihoo.util.appupdate.AppUpdateActivity" android:theme="@android:0103000F">
+</activity>
+<service android:enabled="false" android:exported="false" android:name="com.qihoo.util.QhJobService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<activity android:excludeFromRecents="true" android:exported="false" android:launchMode="2" android:name="com.qihoo.util.CommonActivity" android:taskAffinity="com.taqigs.zhaichunqiu.bianselong.util" android:theme="@android:0103005F">
+</activity>
+<service android:enabled="true" android:exported="true" android:name="com.qihoo.util.CommonService">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.qihoo.util.CommonService2">
+</service>
+<receiver android:enabled="true" android:exported="false" android:name="com.qihoo.util.CommonReceiver">
+</receiver>
+<provider android:authorities="com.taqigs.zhaichunqiu.bianselong.COMMONPROVIDER" android:exported="true" android:name="com.qihoo.util.CommonProvider">
+</provider>
+<activity android:configChanges="0x000000A0" android:exported="false" android:launchMode="2" android:name="com.qihoo.ls.LsActivity" android:screenOrientation="1" android:theme="@android:01030060">
+</activity>
+<service android:exported="false" android:name="com.qihoo.ls.SoService">
+</service>
+<activity android:excludeFromRecents="true" android:exported="true" android:name="com.igexin.sdk.GActivity" android:process=":pushservice" android:taskAffinity="com.igexin.sdk.PushActivityTask" android:theme="@android:01030010">
+</activity>
+<service android:name="com.igexin.download.DownloadService" android:process=":pushservice">
+</service>
+<receiver android:name="com.igexin.download.DownloadReceiver">
+<intent-filter>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+</receiver>
+<provider android:authorities="downloads.com.taqigs.zhaichunqiu.bianselong" android:exported="true" android:name="com.igexin.download.DownloadProvider" android:process=":pushservice">
+</provider>
+<service android:name="com.taqigs.zhaichunqiu.bianselong.push.AppIntentService">
+</service>
+<service android:exported="true" android:label="PushService" android:name="com.taqigs.zhaichunqiu.bianselong.push.AppPushService" android:process=":pushservice">
+</service>
+<receiver android:name="com.taqigs.android.utils.network.MyBaseReceiver">
+<intent-filter>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+</receiver>
+<service android:enabled="true" android:name="com.baidu.location.f" android:process=":remote">
+</service>
+<meta-data android:name="com.baidu.lbsapi.API_KEY" android:value="TGTYljQitgZba7BRw7iTV08ejhGwTeBg">
+</meta-data>
+<meta-data android:name="QBSDKAppKey" android:value="i6w8YH7rO9jyPS27USjYQ9XM">
+</meta-data>
+<activity android:name="com.taqigs.zhaichunqiu.bianselong.AdActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:launchMode="0" android:name="com.qihoo.util.StartActivity" android:noHistory="true" android:screenOrientation="1">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<service android:enabled="true" android:exported="false" android:name="com.qihoo.util.UpdateService">
+</service>
+<activity android:name="com.taqigs.zhaichunqiu.bianselong.LoginActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.taqigs.zhaichunqiu.bianselong.MainActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.taqigs.zhaichunqiu.bianselong.production.ProductGroupListActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.taqigs.zhaichunqiu.bianselong.production.ProductGroupDetailAvtivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.taqigs.android.utils.control.ImageZoomActivity" android:screenOrientation="4">
+</activity>
+<activity android:name="com.taqigs.zhaichunqiu.bianselong.dealer.DealerMapActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.taqigs.zhaichunqiu.bianselong.FindPwdActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.taqigs.zhaichunqiu.bianselong.person.ChangePwdActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.taqigs.zhaichunqiu.bianselong.shoppingcart.ShoppingCartListActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.taqigs.zhaichunqiu.bianselong.dealer.ProjectCaseListActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.taqigs.android.utils.control.localbum.ui.LocalAlbum" android:screenOrientation="1">
+</activity>
+<activity android:name="com.taqigs.android.utils.control.localbum.ui.LocalAlbumDetail" android:screenOrientation="1">
+</activity>
+<activity android:name="com.taqigs.zhaichunqiu.bianselong.person.PersonalInfoActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.taqigs.zhaichunqiu.bianselong.person.PersonalFeedbackActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.taqigs.zhaichunqiu.bianselong.person.AddressInfoActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.taqigs.zhaichunqiu.bianselong.person.AddressEditActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.taqigs.zhaichunqiu.bianselong.mycase.MyCaseListActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.taqigs.zcq.views.notice.MessageDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.taqigs.zcq.views.notice.EditMessageBaseActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.taqigs.zhaichunqiu.bianselong.person.AddressLookUpActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.taqigs.zhaichunqiu.bianselong.mycase.CaseEditorActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.taqigs.zhaichunqiu.bianselong.person.ProductGroupCollectActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.taqigs.zhaichunqiu.bianselong.person.SignCenterActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.taqigs.zcq.views.web.WebActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.taqigs.zhaichunqiu.bianselong.search.SearchActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.taqigs.zhaichunqiu.bianselong.person.SafetyCenterActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.taqigs.zhaichunqiu.bianselong.notice.NoticeTabActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.taqigs.zhaichunqiu.bianselong.shoppingcart.SubmitShoppingCarActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.taqigs.zhaichunqiu.bianselong.order.AllOrderListActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.taqigs.zhaichunqiu.bianselong.order.OrderDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.taqigs.android.utils.control.qrcode.CaptureActivity" android:screenOrientation="1">
+</activity>
+<activity android:hardwareAccelerated="true" android:name="com.taqigs.zcq.views.dealer.PanoramaActivity" android:screenOrientation="6" android:theme="@7F0900CA">
+</activity>
+<activity android:launchMode="2" android:name="com.taqigs.zhaichunqiu.bianselong.diy.DiyMainActivity" android:screenOrientation="6" android:theme="@7F0900CA">
+</activity>
+<activity android:configChanges="0x000004A0" android:exported="true" android:name="com.taqigs.android.utils.wxapi.WXEntryActivity" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<activity android:launchMode="2" android:name="com.umeng.qq.tencent.AuthActivity" android:noHistory="true">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="tencent100424468">
+</data>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.umeng.qq.tencent.AssistActivity" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<activity android:excludeFromRecents="true" android:name="com.umeng.socialize.editorpage.ShareActivity" android:theme="@7F09011C">
+</activity>
+<meta-data android:name="UMENG_APPKEY" android:value="59225f66c62dca1e1700099c">
+</meta-data>
+<activity android:name="com.taqigs.zhaichunqiu.bianselong.mycase.MyCaseEditorActivity">
+</activity>
+<activity android:name="com.taqigs.zhaichunqiu.bianselong.workorder.WorkOrderActivity">
+</activity>
+<activity android:name="com.taqigs.zhaichunqiu.bianselong.workorder.WorkOrderAddActivity">
+</activity>
+<activity android:name="com.taqigs.zhaichunqiu.bianselong.workorder.WorkOrderDetailActivity">
+</activity>
+<activity android:name="com.taqigs.zhaichunqiu.bianselong.workorder.WorkCommunicationActivity">
+</activity>
+<activity android:name="com.taqigs.zcq.views.workorder.WorkOrderCategoryActivity">
+</activity>
+<activity android:name="com.taqigs.zhaichunqiu.bianselong.RechargeableActivity">
+</activity>
+<activity android:name="com.taqigs.zhaichunqiu.bianselong.information.InformationListActivity">
+</activity>
+<activity android:name="com.taqigs.zhaichunqiu.bianselong.information.InformationOneImageListActivity">
+</activity>
+<activity android:name="com.taqigs.zhaichunqiu.bianselong.information.InformationNewsListActivity">
+</activity>
+</application>
+</manifest>

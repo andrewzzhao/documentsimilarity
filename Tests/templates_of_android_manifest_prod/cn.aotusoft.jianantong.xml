@@ -1,0 +1,228 @@
+<?xml version="1.0" ?><manifest android:versionCode="5" android:versionName="1.1.2" package="cn.aotusoft.jianantong" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="13" android:targetSdkVersion="18">
+</uses-sdk>
+<instrumentation android:name="android.test.InstrumentationTestRunner" android:targetPackage="cn.aotusoft.jianantong">
+</instrumentation>
+<uses-permission android:name="android.permission.DISABLE_KEYGUARD">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="getui.permission.GetuiService.cn.aotusoft.jianantong">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_CONTACTS">
+</uses-permission>
+<uses-permission android:name="android.permission.RECORD_AUDIO">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="android.permission.USE_CREDENTIALS">
+</uses-permission>
+<uses-permission android:name="android.permission.MANAGE_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="com.android.launcher.permission.READ_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.BROADCAST_STICKY">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW">
+</uses-permission>
+<uses-permission android:name="android.permission.BAIDU_LOCATION_SERVICE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_LOGS">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-permission android:name="android.permission.CALL_PHONE">
+</uses-permission>
+<uses-permission android:name="android.permission.SEND_SMS">
+</uses-permission>
+<uses-permission android:name="jianantong.permission.SENDMAIL">
+</uses-permission>
+<permission android:name="jianantong.permission.SENDMAIL" android:protectionLevel="0x00000000">
+</permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-feature android:name="android.hardware.camera">
+</uses-feature>
+<uses-feature android:name="android.hardware.camera.autofocus">
+</uses-feature>
+<uses-permission android:name="android.permission.FLASHLIGHT">
+</uses-permission>
+<permission android:name="getui.permission.GetuiService.cn.aotusoft.jianantong" android:protectionLevel="0x00000000">
+</permission>
+<application android:allowBackup="true" android:configChanges="0x000004E0" android:icon="@7F02009F" android:label="@7F080000" android:name="com.stub.StubApp" android:qihoo="activity" android:screenOrientation="1" android:theme="@7F090001">
+<uses-library android:name="android.test.runner">
+</uses-library>
+<meta-data android:name="com.baidu.lbsapi.API_KEY" android:value="rs0Vm6OwrU5L2VrMpff6MbdBhOQpmuEQ">
+</meta-data>
+<meta-data android:name="PUSH_APPID" android:value="zqSWz3by1AANktsGP3SKj1">
+</meta-data>
+<meta-data android:name="PUSH_APPKEY" android:value="uyrt0zEO2l64UZH1xgfdy4">
+</meta-data>
+<meta-data android:name="PUSH_APPSECRET" android:value="dOWroGqVi9A48Gx4CAXgq9">
+</meta-data>
+<meta-data android:name="PUSH_GROUPID" android:value="">
+</meta-data>
+<receiver android:exported="false" android:name="com.getui.push.GetuiPushReceiver">
+<intent-filter>
+<action android:name="com.igexin.sdk.action.zqSWz3by1AANktsGP3SKj1">
+</action>
+</intent-filter>
+</receiver>
+<service android:exported="true" android:label="NotificationCenter" android:name="com.igexin.sdk.PushService" android:process=":pushservice">
+<intent-filter>
+<action android:name="com.igexin.sdk.action.service.message">
+</action>
+</intent-filter>
+</service>
+<service android:exported="true" android:label="NotificationCenterUser" android:name="com.igexin.sdk.PushServiceUser">
+</service>
+<receiver android:name="com.igexin.sdk.PushReceiver">
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+<action android:name="android.intent.action.USER_PRESENT">
+</action>
+<action android:name="com.igexin.sdk.action.refreshls">
+</action>
+<action android:name="android.intent.action.MEDIA_MOUNTED">
+</action>
+<action android:name="android.intent.action.ACTION_POWER_CONNECTED">
+</action>
+<action android:name="android.intent.action.ACTION_POWER_DISCONNECTED">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:exported="false" android:name="com.igexin.sdk.PushManagerReceiver">
+<intent-filter>
+<action android:name="com.igexin.sdk.action.pushmanager">
+</action>
+</intent-filter>
+</receiver>
+<activity android:excludeFromRecents="true" android:exported="false" android:name="com.igexin.sdk.PushActivity" android:process=":pushservice" android:taskAffinity="com.igexin.sdk.PushActivityTask" android:theme="@android:01030010">
+</activity>
+<service android:name="com.igexin.download.DownloadService" android:process=":pushservice">
+</service>
+<receiver android:name="com.igexin.download.DownloadReceiver">
+<intent-filter>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+</receiver>
+<provider android:authorities="downloads.cn.aotusoft.jianantong" android:exported="true" android:name="com.igexin.download.DownloadProvider" android:process=":pushservice">
+</provider>
+<activity android:configChanges="0x000004E0" android:icon="@7F02009F" android:name="cn.aotusoft.jianantong.GuideActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004E0" android:icon="@7F02009F" android:name="cn.aotusoft.jianantong.WelcomeActivity" android:screenOrientation="1" android:theme="@7F090004">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004E0" android:icon="@7F02009F" android:launchMode="1" android:name="cn.aotusoft.jianantong.MainActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:configChanges="0x000004E0" android:icon="@7F02009F" android:name="cn.aotusoft.jianantong.fragment.manager.AlibFragmentAcitvity" android:screenOrientation="1" android:theme="@android:010300F0" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:configChanges="0x000004E0" android:icon="@7F02009F" android:name="cn.aotusoft.jianantong.fragment.LoginFragment" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004E0" android:icon="@7F02009F" android:name="cn.aotusoft.jianantong.fragment.ResetPwFragment" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004E0" android:icon="@7F02009F" android:name=".fragment.PublicWebViewActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004E0" android:label="䝖ॲ�" android:name="com.photoselector.ui.PhotoSelectorActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004E0" android:label="䝖�" android:name="com.photoselector.ui.PhotoPreviewActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004E0" android:name="cn.aotusoft.jianantong.fragment.ImageLoaderActivity" android:screenOrientation="1">
+</activity>
+<service android:name="cn.aotusoft.jianantong.http.download.DownLoadService">
+</service>
+<service android:enabled="true" android:name="com.baidu.location.f" android:process=":remote">
+</service>
+<service android:enabled="true" android:name="cn.aotusoft.jianantong.utils.NetworkStateChangeListenService">
+</service>
+<receiver android:name=".utils.NetworkChangeReceiver">
+<intent-filter>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+</receiver>
+<activity android:configChanges="0x000004E0" android:icon="@7F02009F" android:name="cn.aotusoft.jianantong.helper.alert.AlertDialogActivity" android:screenOrientation="1" android:theme="@android:01030071">
+</activity>
+<receiver android:exported="true" android:name="cn.aotusoft.jianantong.helper.alert.AlarmReceiver" android:permission="jianantong.permission.SENDMAIL" android:process=":remote">
+<intent-filter>
+<action android:name="android.intent.action.ALARMRECEIVER">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:exported="true" android:name="cn.aotusoft.jianantong.helper.alert.BootReceiver" android:process=":remote">
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+<category android:name="android.intent.category.HOME">
+</category>
+</intent-filter>
+</receiver>
+<receiver android:exported="true" android:name="cn.aotusoft.jianantong.dialog.ForceOfflineReceiver" android:permission="jianantong.permission.SENDMAIL">
+<intent-filter>
+<action android:name="cn.aotusoft.jianantong.dialog.ForceOfflineReceiver">
+</action>
+</intent-filter>
+</receiver>
+<service android:name="cn.aotusoft.jianantong.helper.FileManagerService">
+<intent-filter>
+<action android:name="com.android.service.FILE_SEARCH_START">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</service>
+</application>
+<PreferenceScreen>
+<intent android:action="android.intent.action.MAIN" android:targetClass="com.android.settings.WirelessSettings" android:targetPackage="com.android.settings">
+</intent>
+</PreferenceScreen>
+</manifest>

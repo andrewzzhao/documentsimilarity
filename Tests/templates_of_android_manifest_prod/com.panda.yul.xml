@@ -1,0 +1,526 @@
+<?xml version="1.0" ?><manifest android:installLocation="0" android:versionCode="10" android:versionName="1.0.1" package="com.panda.yul" platformBuildVersionCode="26" platformBuildVersionName="8.0.0" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="15" android:targetSdkVersion="26">
+</uses-sdk>
+<uses-feature android:name="android.hardware.camera" android:required="true">
+</uses-feature>
+<uses-feature android:name="android.hardware.camera.autofocus" android:required="true">
+</uses-feature>
+<uses-feature android:name="android.hardware.camera.flash" android:required="true">
+</uses-feature>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_CONTACTS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_CALL_LOG">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_LOGS">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-permission android:name="android.permission.FLASHLIGHT">
+</uses-permission>
+<uses-permission android:name="android.permission.RECORD_AUDIO">
+</uses-permission>
+<uses-permission android:name="android.permission.BROADCAST_STICKY">
+</uses-permission>
+<uses-permission android:name="android.permission.MANAGE_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_CONFIGURATION">
+</uses-permission>
+<uses-permission android:name="android.permission.BATTERY_STATS">
+</uses-permission>
+<uses-permission android:name="android.permission.BLUETOOTH">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_UPDATES">
+</uses-permission>
+<uses-permission android:name="android.permission.CALL_PHONE">
+</uses-permission>
+<uses-permission android:name="com.meizu.flyme.push.permission.RECEIVE">
+</uses-permission>
+<uses-permission android:name="com.meizu.c2dm.permission.RECEIVE">
+</uses-permission>
+<uses-permission android:name="com.panda.yul.push.permission.MESSAGE">
+</uses-permission>
+<uses-permission android:name="com.panda.yul.permission.C2D_MESSAGE">
+</uses-permission>
+<permission android:name="com.panda.yul.push.permission.MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<permission android:name="com.panda.yul.permission.C2D_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="android.permission.BROADCAST_PACKAGE_ADDED">
+</uses-permission>
+<uses-permission android:name="android.permission.BROADCAST_PACKAGE_CHANGED">
+</uses-permission>
+<uses-permission android:name="android.permission.BROADCAST_PACKAGE_INSTALL">
+</uses-permission>
+<uses-permission android:name="android.permission.BROADCAST_PACKAGE_REPLACED">
+</uses-permission>
+<uses-permission android:name="android.permission.RESTART_PACKAGES">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="com.panda.yul.permission.MIPUSH_RECEIVE">
+</uses-permission>
+<permission android:name="com.panda.yul.permission.MIPUSH_RECEIVE" android:protectionLevel="0x00000003">
+</permission>
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW">
+</uses-permission>
+<uses-permission android:name="getui.permission.GetuiService.com.panda.yul">
+</uses-permission>
+<permission android:name="getui.permission.GetuiService.com.panda.yul" android:protectionLevel="0x00000000">
+</permission>
+<application android:allowBackup="false" android:hardwareAccelerated="true" android:icon="@7F030061" android:label="@7F090073" android:largeHeap="true" android:name="com.stub.StubApp" android:supportsRtl="true" android:theme="@7F0B00B9" android:usesCleartextTraffic="true">
+<provider android:authorities="com.panda.yul.file" android:exported="false" android:grantUriPermissions="true" android:name="android.support.v4.content.FileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F070000">
+</meta-data>
+</provider>
+<meta-data android:name="android.notch_support" android:value="true">
+</meta-data>
+<activity android:name="com.panda.yul.activity.WelcomeActivity">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:name="com.panda.yul.activity.StartActivity">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="main" android:scheme="pandayul">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.panda.yul.activity.GuideActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="2" android:name="com.panda.yul.activity.MainActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:launchMode="2" android:name="com.panda.yul.activity.LoginActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name="com.panda.yul.activity.ArchivesActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.panda.yul.activity.WebActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:name="com.panda.yul.activity.LivenessModelActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.panda.yul.activity.LivenessTakeFaceActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.oliveapp.liveness.sample.idcard_captor.SampleIdcardCaptorActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.megvii.idcardlib.SimpleIDCardScanActivity" android:screenOrientation="0" android:theme="@android:0103000E">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.megvii.idcardlib.IDCardScanActivity" android:screenOrientation="0" android:theme="@android:0103000E">
+</activity>
+<activity android:name="com.panda.yul.activity.BankORCResultActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.turui.bank.ocr.CaptureActivity" android:screenOrientation="0" android:theme="@android:01030007" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.ui.card.TRCardScan" android:screenOrientation="0">
+<intent-filter>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:name="com.megvii.livenesslib.LivenessActivity" android:screenOrientation="1">
+</activity>
+<meta-data android:name="KING_BUILD_VERSION" android:value="1">
+</meta-data>
+<meta-data android:name="UMENG_APPKEY" android:value="5acb37b2a40fa31f05000100">
+</meta-data>
+<meta-data android:name="UMENG_CHANNEL" android:value="s2001010103440105">
+</meta-data>
+<meta-data android:name="com.amap.api.v2.apikey" android:value="68bfe3df3b343a9457c196954bbbae2e">
+</meta-data>
+<service android:name="com.amap.api.location.APSService">
+</service>
+<meta-data android:name="DATABASE" android:value="Pandayul.db">
+</meta-data>
+<meta-data android:name="VERSION" android:value="2">
+</meta-data>
+<meta-data android:name="QUERY_LOG" android:value="false">
+</meta-data>
+<meta-data android:name="DOMAIN_PACKAGE_NAME" android:value="com.panda.yul.dao">
+</meta-data>
+<receiver android:name="com.panda.yul.receiver.NetReceiver">
+</receiver>
+<receiver android:name="com.panda.yul.receiver.NotificationClickReceiver">
+<intent-filter>
+<action android:name="notification_cancelled">
+</action>
+<action android:name="notification_clicked">
+</action>
+</intent-filter>
+</receiver>
+<activity android:configChanges="0x000004A0" android:name="com.mob.tools.MobUIShell" android:screenOrientation="1" android:theme="@android:01030010" android:windowSoftInputMode="0x00000012">
+<intent-filter>
+<data android:scheme="tencent1106929928">
+</data>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004A0" android:exported="true" android:name="com.panda.yul.wxapi.WXEntryActivity" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<service android:exported="true" android:label="PushService" android:name="com.panda.yul.service.getui.PushService" android:process=":pushservice">
+</service>
+<service android:name="com.panda.yul.service.getui.PushReceiveService">
+</service>
+<activity android:excludeFromRecents="true" android:exported="true" android:name="com.panda.yul.activity.SinaifGTLookActivity" android:process=":pushservice" android:taskAffinity="com.igexin.sdk.PushActivityTask" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x000004A4" android:name="com.tencent.bugly.beta.ui.BetaActivity" android:theme="@android:0103000F">
+</activity>
+<service android:enabled="true" android:exported="true" android:name="com.panda.yul.service.H5UpdateService">
+</service>
+<activity android:name="com.panda.yul.activity.DemoActivity">
+</activity>
+<service android:enabled="true" android:exported="true" android:name="com.panda.yul.service.CommonService">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.panda.yul.localpush.AlarmService">
+<intent-filter>
+<action android:name="TIMER_ACTION">
+</action>
+</intent-filter>
+</service>
+<receiver android:name="com.panda.yul.localpush.LocalNotificationClickReceiver">
+<intent-filter>
+<action android:name="local_notification_clicked">
+</action>
+</intent-filter>
+</receiver>
+<service android:name="com.panda.yul.keeplive.LiveNotifyService" android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE">
+<intent-filter>
+<action android:name="android.service.notification.NotificationListenerService">
+</action>
+</intent-filter>
+</service>
+<service android:name="com.panda.yul.keeplive.GuardService" android:process=":alive">
+</service>
+<service android:name="com.panda.yul.keeplive.JobWakeUpService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<service android:name="com.panda.yul.keeplive.LiveService">
+</service>
+<service android:name="com.panda.statissdk.service.UploadService">
+</service>
+<activity android:name="com.panda.photopicker.PhotoPickerActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.panda.photopicker.PhotoPagerActivity" android:screenOrientation="1">
+</activity>
+<service android:name="com.panda.device.DeviceService">
+</service>
+<uses-library android:name="android.test.runner">
+</uses-library>
+<meta-data android:name="android.support.VERSION" android:value="26.1.0">
+</meta-data>
+<activity android:label="FICUS_TEST_124" android:name="com.oliveapp.face.idcardcaptorsdk.IDCardCaptorTestAsync.TestActivity">
+</activity>
+<activity android:label="FICUS_TEST_123" android:name="com.oliveapp.face.livenessdetectorsdk.SessionManagerAsync.TestActivity">
+</activity>
+<activity android:label="FICUS_TEST_123" android:name="com.oliveapp.face.livenessdetectionviewsdk.TestActivity">
+</activity>
+<provider android:authorities="com.panda.yul.fileProvider" android:exported="false" android:grantUriPermissions="true" android:name="com.tencent.bugly.beta.utils.BuglyFileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F070003">
+</meta-data>
+</provider>
+<service android:exported="false" android:name="com.tencent.bugly.beta.tinker.TinkerResultService">
+</service>
+<service android:exported="false" android:name="com.tencent.tinker.lib.service.TinkerPatchService$IntentServiceRunner" android:process=":patch">
+</service>
+<service android:exported="false" android:name="com.tencent.tinker.lib.service.TinkerPatchService$IntentServiceRunner$InnerService" android:process=":patch">
+</service>
+<service android:exported="false" android:name="com.tencent.tinker.lib.service.TinkerPatchService$JobServiceRunner" android:permission="android.permission.BIND_JOB_SERVICE" android:process=":patch">
+</service>
+<service android:exported="false" android:name="com.tencent.tinker.lib.service.DefaultTinkerResultService">
+</service>
+<activity android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$STDStub_00">
+</activity>
+<activity android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$STDStub_01">
+</activity>
+<activity android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$STDStub_02">
+</activity>
+<activity android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$STDStub_03">
+</activity>
+<activity android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$STDStub_04">
+</activity>
+<activity android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$STDStub_05">
+</activity>
+<activity android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$STDStub_06">
+</activity>
+<activity android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$STDStub_07">
+</activity>
+<activity android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$STDStub_08">
+</activity>
+<activity android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$STDStub_09">
+</activity>
+<activity android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$STDStub_00_T" android:theme="@android:0103000F">
+</activity>
+<activity android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$STDStub_01_T" android:theme="@android:0103000F">
+</activity>
+<activity android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$STDStub_02_T" android:theme="@android:0103000F">
+</activity>
+<activity android:launchMode="1" android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SGTStub_00">
+</activity>
+<activity android:launchMode="1" android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SGTStub_01">
+</activity>
+<activity android:launchMode="1" android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SGTStub_02">
+</activity>
+<activity android:launchMode="1" android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SGTStub_03">
+</activity>
+<activity android:launchMode="1" android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SGTStub_04">
+</activity>
+<activity android:launchMode="1" android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SGTStub_05">
+</activity>
+<activity android:launchMode="1" android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SGTStub_06">
+</activity>
+<activity android:launchMode="1" android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SGTStub_07">
+</activity>
+<activity android:launchMode="1" android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SGTStub_08">
+</activity>
+<activity android:launchMode="1" android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SGTStub_09">
+</activity>
+<activity android:launchMode="1" android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SGTStub_00_T" android:theme="@android:0103000F">
+</activity>
+<activity android:launchMode="1" android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SGTStub_01_T" android:theme="@android:0103000F">
+</activity>
+<activity android:launchMode="1" android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SGTStub_02_T" android:theme="@android:0103000F">
+</activity>
+<activity android:launchMode="2" android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SGTKStub_00">
+</activity>
+<activity android:launchMode="2" android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SGTKStub_01">
+</activity>
+<activity android:launchMode="2" android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SGTKStub_02">
+</activity>
+<activity android:launchMode="2" android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SGTKStub_03">
+</activity>
+<activity android:launchMode="2" android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SGTKStub_04">
+</activity>
+<activity android:launchMode="2" android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SGTKStub_05">
+</activity>
+<activity android:launchMode="2" android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SGTKStub_06">
+</activity>
+<activity android:launchMode="2" android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SGTKStub_07">
+</activity>
+<activity android:launchMode="2" android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SGTKStub_08">
+</activity>
+<activity android:launchMode="2" android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SGTKStub_09">
+</activity>
+<activity android:launchMode="2" android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SGTKStub_00_T" android:theme="@android:0103000F">
+</activity>
+<activity android:launchMode="2" android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SGTKStub_01_T" android:theme="@android:0103000F">
+</activity>
+<activity android:launchMode="2" android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SGTKStub_02_T" android:theme="@android:0103000F">
+</activity>
+<activity android:launchMode="3" android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SIStub_00">
+</activity>
+<activity android:launchMode="3" android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SIStub_01">
+</activity>
+<activity android:launchMode="3" android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SIStub_02">
+</activity>
+<activity android:launchMode="3" android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SIStub_03">
+</activity>
+<activity android:launchMode="3" android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SIStub_04">
+</activity>
+<activity android:launchMode="3" android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SIStub_05">
+</activity>
+<activity android:launchMode="3" android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SIStub_06">
+</activity>
+<activity android:launchMode="3" android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SIStub_07">
+</activity>
+<activity android:launchMode="3" android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SIStub_08">
+</activity>
+<activity android:launchMode="3" android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SIStub_09">
+</activity>
+<activity android:launchMode="3" android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SIStub_00_T" android:theme="@android:0103000F">
+</activity>
+<activity android:launchMode="3" android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SIStub_01_T" android:theme="@android:0103000F">
+</activity>
+<activity android:launchMode="3" android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SIStub_02_T" android:theme="@android:0103000F">
+</activity>
+<meta-data android:name="tinker_version" android:value="1.9.9">
+</meta-data>
+<meta-data android:name="android.arch.lifecycle.VERSION" android:value="27.0.0-SNAPSHOT">
+</meta-data>
+<meta-data android:name="com.huawei.hms.client.appid" android:value="100378367">
+</meta-data>
+<activity android:configChanges="0x40002484" android:excludeFromRecents="true" android:exported="false" android:hardwareAccelerated="true" android:name="com.huawei.android.hms.agent.common.HMSAgentActivity" android:process=":pushservice" android:theme="@android:0103000F">
+<meta-data android:name="hwc-theme" android:value="androidhwext:style/Theme.Emui.Translucent">
+</meta-data>
+</activity>
+<activity android:configChanges="0x40002484" android:excludeFromRecents="true" android:exported="false" android:hardwareAccelerated="true" android:name="com.huawei.hms.activity.BridgeActivity" android:process=":pushservice" android:theme="@android:0103000F">
+<meta-data android:name="hwc-theme" android:value="androidhwext:style/Theme.Emui.Translucent">
+</meta-data>
+</activity>
+<provider android:authorities="com.panda.yul.hms.update.provider" android:exported="false" android:grantUriPermissions="true" android:name="com.huawei.hms.update.provider.UpdateProvider" android:process=":pushservice">
+</provider>
+<receiver android:exported="false" android:name="com.igexin.sdk.HmsPushReceiver" android:process=":pushservice">
+<intent-filter>
+<action android:name="com.huawei.android.push.intent.REGISTRATION">
+</action>
+<action android:name="com.huawei.android.push.intent.RECEIVE">
+</action>
+<action android:name="com.huawei.android.push.intent.CLICK">
+</action>
+<action android:name="com.huawei.intent.action.PUSH_STATE">
+</action>
+</intent-filter>
+<meta-data android:name="CS_cloud_ablitity" android:value="successRateAnalytics">
+</meta-data>
+</receiver>
+<receiver android:name="com.huawei.hms.support.api.push.PushEventReceiver" android:process=":pushservice">
+<intent-filter>
+<action android:name="com.huawei.intent.action.PUSH">
+</action>
+</intent-filter>
+</receiver>
+<meta-data android:name="MEIZUPUSH_APPID" android:value="MZ_117014">
+</meta-data>
+<meta-data android:name="MEIZUPUSH_APPKEY" android:value="MZ_e8eaaa2ca3b247a3858927ec2e138b00">
+</meta-data>
+<service android:exported="true" android:name="com.meizu.cloud.pushsdk.NotificationService" android:process=":pushservice">
+</service>
+<receiver android:name="com.meizu.cloud.pushsdk.SystemReceiver" android:process=":pushservice">
+<intent-filter>
+<action android:name="com.meizu.cloud.pushservice.action.PUSH_SERVICE_START">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</receiver>
+<receiver android:name="com.igexin.sdk.FlymePushReceiver" android:process=":pushservice">
+<intent-filter>
+<action android:name="com.meizu.flyme.push.intent.MESSAGE">
+</action>
+<action android:name="com.meizu.flyme.push.intent.REGISTER.FEEDBACK">
+</action>
+<action android:name="com.meizu.flyme.push.intent.UNREGISTER.FEEDBACK">
+</action>
+<action android:name="com.meizu.c2dm.intent.REGISTRATION">
+</action>
+<action android:name="com.meizu.c2dm.intent.RECEIVE">
+</action>
+<category android:name="com.panda.yul">
+</category>
+</intent-filter>
+</receiver>
+<meta-data android:name="MIPUSH_APPID" android:value="XM_2882303761517848759">
+</meta-data>
+<meta-data android:name="MIPUSH_APPKEY" android:value="XM_5551784866759">
+</meta-data>
+<service android:enabled="true" android:exported="true" android:name="com.xiaomi.mipush.sdk.PushMessageHandler" android:process=":pushservice">
+</service>
+<service android:enabled="true" android:name="com.xiaomi.mipush.sdk.MessageHandleService" android:process=":pushservice">
+</service>
+<receiver android:exported="true" android:name="com.igexin.sdk.MiuiPushReceiver" android:process=":pushservice">
+<intent-filter>
+<action android:name="com.xiaomi.mipush.RECEIVE_MESSAGE">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="com.xiaomi.mipush.MESSAGE_ARRIVED">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="com.xiaomi.mipush.ERROR">
+</action>
+</intent-filter>
+</receiver>
+<meta-data android:name="PUSH_APPID" android:value="Y2QnULKk4Q7s9dZR7UI395">
+</meta-data>
+<meta-data android:name="PUSH_APPKEY" android:value="24lFAzubFo6ShZqpSoyX88">
+</meta-data>
+<meta-data android:name="PUSH_APPSECRET" android:value="YeJfCrKA1c6zQ1WyiPe721">
+</meta-data>
+<service android:exported="true" android:label="NotificationCenter" android:name="com.igexin.sdk.PushService" android:process=":pushservice">
+<intent-filter>
+<action android:name="com.igexin.sdk.action.service.message">
+</action>
+</intent-filter>
+</service>
+<receiver android:name="com.igexin.sdk.PushReceiver">
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+<action android:name="android.intent.action.USER_PRESENT">
+</action>
+<action android:name="com.igexin.sdk.action.refreshls">
+</action>
+<action android:name="android.intent.action.MEDIA_MOUNTED">
+</action>
+<action android:name="android.intent.action.ACTION_POWER_CONNECTED">
+</action>
+<action android:name="android.intent.action.ACTION_POWER_DISCONNECTED">
+</action>
+</intent-filter>
+</receiver>
+<activity android:excludeFromRecents="true" android:exported="false" android:name="com.igexin.sdk.PushActivity" android:process=":pushservice" android:taskAffinity="com.igexin.sdk.PushActivityTask" android:theme="@android:01030010">
+</activity>
+<activity android:excludeFromRecents="true" android:exported="true" android:name="com.igexin.sdk.GActivity" android:process=":pushservice" android:taskAffinity="com.igexin.sdk.PushActivityTask" android:theme="@android:01030010">
+</activity>
+<provider android:authorities="com.panda.yul.SensorsDataContentProvider" android:enabled="true" android:exported="false" android:name="com.sensorsdata.analytics.android.sdk.data.SensorsDataContentProvider">
+</provider>
+<meta-data android:name="com.sensorsdata.analytics.android.MainProcessName" android:value="com.panda.yul">
+</meta-data>
+<activity android:name="com.getui.gs.ias.activity.PageActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="0" android:name="com.getui.gs.ias.floatwindow.FloatActivity" android:windowSoftInputMode="0x00000003">
+</activity>
+<meta-data android:name="GS_APPID" android:value="Y2QnULKk4Q7s9dZR7UI395">
+</meta-data>
+<meta-data android:name="GT_INSTALL_CHANNEL" android:value="">
+</meta-data>
+<service android:label="CoreService" android:name="com.getui.gtc.GtcService">
+<intent-filter>
+<action android:name="com.getui.gtc.sdk.service.action">
+</action>
+</intent-filter>
+</service>
+<meta-data android:name="TINKER_ID" android:value="S2001010103433954Release-1.0.1.10_0904-11-11-15">
+</meta-data>
+<meta-data android:name="BUGLY_CHANNEL" android:value="s2001010103433954">
+</meta-data>
+</application>
+</manifest>

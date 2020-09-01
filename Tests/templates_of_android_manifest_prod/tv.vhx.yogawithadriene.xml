@@ -1,0 +1,192 @@
+<?xml version="1.0" ?><manifest android:versionCode="11014" android:versionName="3.9.3" package="tv.vhx.yogawithadriene" platformBuildVersionCode="25" platformBuildVersionName="7.1.1" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="18" android:targetSdkVersion="25">
+</uses-sdk>
+<uses-permission android:name="android.permission.CHANGE_CONFIGURATION">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:maxSdkVersion="22" android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION">
+</uses-permission>
+<uses-permission android:name="android.permission.PREVENT_POWER_KEY">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERACT_ACROSS_USERS_FULL">
+</uses-permission>
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW">
+</uses-permission>
+<uses-permission android:name="com.android.vending.BILLING">
+</uses-permission>
+<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE">
+</uses-permission>
+<permission android:name="tv.vhx.yogawithadriene.C2D_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<permission android:name="tv.vhx.yogawithadriene.SYSTEM_ALERT_WINDOW" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="tv.vhx.yogawithadriene.C2D_MESSAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<meta-data android:name="android.support.VERSION" android:value="25.3.1">
+</meta-data>
+<application android:allowBackup="true" android:banner="@7F0202CF" android:fullBackupContent="false" android:icon="@7F030000" android:label="@7F0B00E5" android:largeHeap="true" android:name="tv.vhx.VHXApplication" android:supportsRtl="true" android:theme="@7F0D0100">
+<meta-data android:name="AA_DB_NAME" android:value="vhx.db">
+</meta-data>
+<meta-data android:name="AA_MODELS" android:value="@7F0B012A">
+</meta-data>
+<meta-data android:name="AA_DB_VERSION" android:value="11">
+</meta-data>
+<meta-data android:name="io.fabric.ApiKey" android:value="e40313c9c4c68a14de087000a44183993fe6c019">
+</meta-data>
+<meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@7F0B0150">
+</meta-data>
+<meta-data android:name="io.branch.sdk.BranchKey" android:value="@7F0B0101">
+</meta-data>
+<meta-data android:name="com.vimeo.player.chromecast.EXPANDED_CONTROLLER_ACTIVITY" android:value="tv.vhx.util.chromecast.CastExpandedControllerActivity">
+</meta-data>
+<meta-data android:name="com.vimeo.player.chromecast.NOTIFICATION_ICON" android:value="@7F020118">
+</meta-data>
+<receiver android:name="tv.vhx.util.download.DownloadBroadcastReceiver">
+<intent-filter>
+<action android:name="android.intent.action.DOWNLOAD_COMPLETE">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name="tv.vhx.util.GcmBroadcastReceiver">
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+<category android:name="tv.vhx">
+</category>
+</intent-filter>
+</receiver>
+<receiver android:exported="true" android:name="io.branch.referral.InstallListener">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+<service android:name="tv.vhx.util.GcmIntentService">
+</service>
+<service android:name="tv.vhx.video.playback.VHXPlayerService">
+</service>
+<activity android:configChanges="0x00000410" android:name="tv.vhx.LauncherActivity">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="@7F0B0199">
+</data>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x00000410" android:name="tv.vhx.LoginActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F0B01A5" android:launchMode="2" android:name="tv.vhx.settings.SettingsActivity" android:screenOrientation="1" android:theme="@7F0D00F4">
+</activity>
+<activity android:label="@7F0B0193" android:name="tv.vhx.settings.PrivacyPolicyActivity">
+</activity>
+<activity android:label="@7F0B0106" android:name="tv.vhx.settings.ChangePasswordActivity" android:screenOrientation="1" android:theme="@7F0D00F4">
+</activity>
+<activity android:configChanges="0x00000DB0" android:launchMode="2" android:name="tv.vhx.tablet.HomeTabletActivity" android:theme="@7F0D0108" android:windowSoftInputMode="0x00000010">
+<intent-filter>
+<action android:name="android.intent.action.SEARCH">
+</action>
+</intent-filter>
+<meta-data android:name="android.app.searchable" android:resource="@7F090001">
+</meta-data>
+<meta-data android:name="android.app.default_searchable" android:value=".HomeTabletActivity">
+</meta-data>
+</activity>
+<activity android:configChanges="0x00000490" android:name="tv.vhx.tablet.LoginTabletActivity" android:screenOrientation="10">
+</activity>
+<activity android:configChanges="0x00000DB0" android:launchMode="2" android:name="tv.vhx.browse.HomeActivity" android:screenOrientation="1" android:theme="@7F0D0108" android:windowSoftInputMode="0x00000010">
+<intent-filter>
+<action android:name="android.intent.action.SEARCH">
+</action>
+</intent-filter>
+<meta-data android:name="android.app.searchable" android:resource="@7F090001">
+</meta-data>
+<meta-data android:name="android.app.default_searchable" android:value=".HomeActivity">
+</meta-data>
+</activity>
+<activity android:name="tv.vhx.util.chromecast.CastExpandedControllerActivity">
+</activity>
+<activity android:icon="@7F020054" android:label="@7F0B00E5" android:logo="@7F020054" android:name="tv.vhx.tv.TVBrowseActivity" android:screenOrientation="0" android:theme="@7F0D0099">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LEANBACK_LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="true" android:name="tv.vhx.tv.VideoDetailsActivity" android:screenOrientation="0" android:theme="@7F0D009A">
+<intent-filter>
+<action android:name="android.intent.action.SEARCH">
+</action>
+</intent-filter>
+</activity>
+<activity android:exported="true" android:name="tv.vhx.tv.VerticalGridActivity" android:parentActivityName="tv.vhx.tv.TVBrowseActivity" android:screenOrientation="0" android:theme="@7F0D009B">
+</activity>
+<activity android:exported="true" android:name="tv.vhx.tv.InAppGateActivity" android:parentActivityName="tv.vhx.tv.VideoDetailsActivity" android:screenOrientation="0">
+</activity>
+<activity android:exported="true" android:name="tv.vhx.tv.CollectionDetailsActivity" android:screenOrientation="0" android:theme="@7F0D009A">
+</activity>
+<activity android:name="tv.vhx.tv.GlobalSearchSelectActivity">
+<intent-filter>
+<action android:name="android.intent.action.SEARCH">
+</action>
+</intent-filter>
+<meta-data android:name="android.app.searchable" android:resource="@7F090002">
+</meta-data>
+</activity>
+<activity android:name="tv.vhx.tv.TVSearchActivity" android:screenOrientation="0" android:theme="@7F0D0099">
+</activity>
+<activity android:name="tv.vhx.tv.player.PlaybackOverlayActivity" android:screenOrientation="0" android:theme="@7F0D004C">
+</activity>
+<activity android:name="tv.vhx.tv.ActivationActivity" android:screenOrientation="0">
+</activity>
+<provider android:authorities="@7F0B00F3" android:exported="true" android:name="tv.vhx.util.VideoContentProvider" android:syncable="true">
+</provider>
+<activity android:name="tv.vhx.tv.player.TvSubtitlePickerActivity" android:screenOrientation="0" android:theme="@7F0D004C">
+</activity>
+<meta-data android:name="android.support.VERSION" android:value="25.4.0">
+</meta-data>
+<activity android:configChanges="0x000005B0" android:name="com.facebook.FacebookActivity" android:theme="@7F0D02F5">
+</activity>
+<activity android:name="com.facebook.CustomTabMainActivity">
+</activity>
+<provider android:authorities="tv.vhx.yogawithadriene.FacebookInitProvider" android:exported="false" android:name="com.facebook.internal.FacebookInitProvider">
+</provider>
+<service android:name="com.appboy.services.AppboyDataSyncService">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.kaltura.dtg.clear.DefaultDownloadService">
+</service>
+<meta-data android:name="com.google.android.gms.cast.framework.OPTIONS_PROVIDER_CLASS_NAME" android:value="com.vimeo.player.chromecast.CastOptionsProvider">
+</meta-data>
+<activity android:configChanges="0x00000FB0" android:name="com.google.android.gms.ads.AdActivity" android:theme="@android:0103000F">
+</activity>
+<activity android:name="com.google.android.gms.ads.purchase.InAppPurchaseActivity" android:theme="@7F0D026C">
+</activity>
+<receiver android:name="com.google.android.gms.cast.framework.media.MediaIntentReceiver">
+</receiver>
+<service android:name="com.google.android.gms.cast.framework.media.MediaNotificationService">
+</service>
+<service android:name="com.google.android.gms.cast.framework.ReconnectionService">
+</service>
+<activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:01030010">
+</activity>
+<meta-data android:name="com.google.android.gms.version" android:value="@7F0E0016">
+</meta-data>
+</application>
+</manifest>

@@ -1,0 +1,128 @@
+<?xml version="1.0" ?><manifest android:versionCode="3" android:versionName="1.1.1" package="com.teamdinc.teamdapp" platformBuildVersionCode="21" platformBuildVersionName="5.0.1-1624448" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="14" android:targetSdkVersion="20">
+</uses-sdk>
+<permission android:name="com.teamdinc.teamdapp.permission.MAPS_RECEIVE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="com.teamdinc.teamdapp.permission.MAPS_RECEIVE">
+</uses-permission>
+<uses-permission android:name="android.permission.CALL_PHONE">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="android.permission.USE_CREDENTIALS">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<permission android:name="com.teamdinc.teamdapp.permission.C2D_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="com.teamdinc.teamdapp.permission.C2D_MESSAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_LOGS">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="com.teamdinc.teamdapp.permission.C2D_MESSAGE">
+</uses-permission>
+<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE">
+</uses-permission>
+<uses-feature android:glEsVersion="0x00020000" android:required="true">
+</uses-feature>
+<application android:allowBackup="true" android:icon="@7F02012D" android:label="@7F070039" android:largeHeap="true" android:name="com.teamdinc.teamdapp.TeamD" android:theme="@7F0A0006">
+<activity android:name="com.teamdinc.teamdapp.activities.ActivitySplash" android:screenOrientation="1">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<receiver android:name="com.google.android.gcm.GCMBroadcastReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+<action android:name="com.google.android.c2dm.intent.REGISTRATION">
+</action>
+<category android:name="com.teamdinc.teamdapp">
+</category>
+</intent-filter>
+</receiver>
+<service android:name="com.teamdinc.teamdapp.GCMIntentService">
+</service>
+<activity android:name="com.teamdinc.teamdapp.activities.ActivitySignUp" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name="com.teamdinc.teamdapp.activities.ActivityLogin" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<uses-library android:name="com.google.android.maps">
+</uses-library>
+<meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="AIzaSyDyHHOnzVLYY_ECLON1OTDtdJQeFbkNZmw">
+</meta-data>
+<meta-data android:name="com.google.android.gms.version" android:value="@7F080000">
+</meta-data>
+<meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@7F07003C">
+</meta-data>
+<activity android:configChanges="0x000004A0" android:name="com.facebook.LoginActivity" android:screenOrientation="1" android:theme="@android:01030007">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.ansca.corona.facebook.FacebookFragmentActivity" android:screenOrientation="1" android:theme="@android:01030007">
+</activity>
+<activity android:name="com.teamdinc.teamdapp.activities.ActivityBio" android:screenOrientation="1" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.teamdinc.teamdapp.activities.ActivityGetTeamD" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:name="com.teamdinc.teamdapp.activities.ActivityHome" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:name="com.teamdinc.teamdapp.activities.ActivityCalendar" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:name="com.teamdinc.teamdapp.activities.ActivityCreateEvent" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:name="com.teamdinc.teamdapp.activities.ActivityChangePassword" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:name="com.teamdinc.teamdapp.activities.ActivityCreateGroup" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:name="com.teamdinc.teamdapp.activities.ActivitySupport" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x00000420" android:name="com.teamdinc.teamdapp.activities.ActivityEventDetail" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:name="com.teamdinc.teamdapp.activities.ActivityFriends" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:name="com.teamdinc.teamdapp.activities.ActivityPlayers" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:name="com.teamdinc.teamdapp.activity.twitter.TwitterMainActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:configChanges="0x00000420" android:name="com.teamdinc.teamdapp.activity.facebook.FacebookMainActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:name="com.teamdinc.teamdapp.activities.SearchPlacesActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:name="com.teamdinc.teamdapp.activities.GetLocationActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:name="com.teamdinc.teamdapp.activities.ActivityUpcomingEvent" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:name="com.teamdinc.teamdapp.activities.ActivityEventHistory" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:name="com.teamdinc.teamdapp.activities.ActivityInvites" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:name="com.teamdinc.teamdapp.activities.NotificationActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.teamdinc.teamdapp.utils.MultiPhotoSelectActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:name="com.teamdinc.teamdapp.activities.ActivityOneToOneChat" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:name="com.teamdinc.teamdapp.activities.ActivityPlayersProfile" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:name="com.teamdinc.teamdapp.activities.ActivityEditGroup" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<service android:name="com.teamdinc.teamdapp.services.UploadProfilePicIntentService">
+</service>
+</application>
+</manifest>

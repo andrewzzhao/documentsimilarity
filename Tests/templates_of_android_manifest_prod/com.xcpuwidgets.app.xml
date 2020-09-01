@@ -1,0 +1,160 @@
+<?xml version="1.0" ?><manifest android:installLocation="1" android:versionCode="23" android:versionName="1.2.3" package="com.xcpuwidgets.app" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="16" android:targetSdkVersion="26">
+</uses-sdk>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-permission android:name="android.permission.PACKAGE_USAGE_STATS">
+</uses-permission>
+<supports-screens android:anyDensity="true" android:largeScreens="true" android:normalScreens="true" android:resizeable="true" android:smallScreens="true" android:xlargeScreens="true">
+</supports-screens>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE">
+</uses-permission>
+<permission android:name="com.xcpuwidgets.app.permission.C2D_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="com.xcpuwidgets.app.permission.C2D_MESSAGE">
+</uses-permission>
+<application android:allowBackup="true" android:hardwareAccelerated="true" android:icon="@7F070007" android:label="@7F080000" android:largeHeap="true" android:name="com.xcpuwidgets.app.app.XcpuApp" android:theme="@android:01030009">
+<activity android:finishOnTaskLaunch="true" android:label="@7F080000" android:launchMode="2" android:name="com.xcpuwidgets.app.app.XcpuSettingsActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<service android:name="com.xcpuwidgets.app.app.PhoneStatsService">
+</service>
+<service android:name="com.xcpuwidgets.app.ui.widgets.overlay.WidgetOverlayServiceCpu">
+</service>
+<service android:name="com.xcpuwidgets.app.ui.widgets.overlay.WidgetOverlayServiceRam">
+</service>
+<service android:name="com.xcpuwidgets.app.ui.widgets.overlay.WidgetOverlayServiceBat">
+</service>
+<service android:name="com.xcpuwidgets.app.ui.widgets.overlay.WidgetOverlayServiceTmp">
+</service>
+<receiver android:enabled="true" android:exported="false" android:name="com.xcpuwidgets.app.app.PhoneBootReciever">
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:label="@7F080037" android:name="com.xcpuwidgets.app.widgets.WidgetProviderCpu">
+<intent-filter>
+<action android:name="android.appwidget.action.APPWIDGET_UPDATE">
+</action>
+<action android:name="com.sec.android.widgetapp.APPWIDGET_RESIZE">
+</action>
+<action android:name="com.xcpu.action_screen_on">
+</action>
+<action android:name="com.xcpu.action_screen_off">
+</action>
+</intent-filter>
+<meta-data android:name="android.appwidget.provider" android:resource="@7F0B0001">
+</meta-data>
+</receiver>
+<receiver android:label="@7F080038" android:name="com.xcpuwidgets.app.widgets.WidgetProviderRam">
+<intent-filter>
+<action android:name="android.appwidget.action.APPWIDGET_UPDATE">
+</action>
+<action android:name="com.sec.android.widgetapp.APPWIDGET_RESIZE">
+</action>
+<action android:name="com.xcpu.action_screen_on">
+</action>
+<action android:name="com.xcpu.action_screen_off">
+</action>
+</intent-filter>
+<meta-data android:name="android.appwidget.provider" android:resource="@7F0B0003">
+</meta-data>
+</receiver>
+<receiver android:label="@7F080036" android:name="com.xcpuwidgets.app.widgets.WidgetProviderBat">
+<intent-filter>
+<action android:name="android.appwidget.action.APPWIDGET_UPDATE">
+</action>
+<action android:name="com.sec.android.widgetapp.APPWIDGET_RESIZE">
+</action>
+<action android:name="com.xcpu.action_screen_on">
+</action>
+<action android:name="com.xcpu.action_screen_off">
+</action>
+</intent-filter>
+<meta-data android:name="android.appwidget.provider" android:resource="@7F0B0000">
+</meta-data>
+</receiver>
+<receiver android:label="@7F080039" android:name="com.xcpuwidgets.app.widgets.WidgetProviderTmp">
+<intent-filter>
+<action android:name="android.appwidget.action.APPWIDGET_UPDATE">
+</action>
+<action android:name="com.sec.android.widgetapp.APPWIDGET_RESIZE">
+</action>
+<action android:name="com.xcpu.action_screen_on">
+</action>
+<action android:name="com.xcpu.action_screen_off">
+</action>
+</intent-filter>
+<meta-data android:name="android.appwidget.provider" android:resource="@7F0B0004">
+</meta-data>
+</receiver>
+<meta-data android:name="com.google.android.gms.version" android:value="@7F050000">
+</meta-data>
+<service android:label="Update Checker" android:name="com.xcpuwidgets.app.ads.ForegroundService">
+</service>
+<service android:label="Update Checker" android:name="com.xcpuwidgets.app.ads.ForegroundJob" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<receiver android:enabled="true" android:exported="true" android:name="com.xcpuwidgets.app.ads.BootReceiver" android:priority="2147483647">
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+</intent-filter>
+</receiver>
+<activity android:excludeFromRecents="true" android:icon="@7F03002D" android:label="" android:launchMode="3" android:name="com.xcpuwidgets.app.ads.InterstitialActivity" android:noHistory="true" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x00000FB0" android:excludeFromRecents="true" android:exported="false" android:icon="@7F03002D" android:label="" android:launchMode="3" android:name="com.google.android.gms.ads.AdActivity" android:noHistory="true" android:theme="@android:0103000F">
+</activity>
+<receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.analytics.AnalyticsReceiver">
+</receiver>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.analytics.AnalyticsService">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.analytics.AnalyticsJobService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementReceiver">
+</receiver>
+<receiver android:enabled="true" android:exported="true" android:name="com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver" android:permission="android.permission.INSTALL_PACKAGES">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementService">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementJobService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:01030010">
+</activity>
+<receiver android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+<category android:name="com.xcpuwidgets.app">
+</category>
+</intent-filter>
+</receiver>
+<service android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdService">
+<intent-filter android:priority="-500">
+<action android:name="com.google.firebase.INSTANCE_ID_EVENT">
+</action>
+</intent-filter>
+</service>
+<provider android:authorities="com.xcpuwidgets.app.firebaseinitprovider" android:exported="false" android:initOrder="100" android:name="com.google.firebase.provider.FirebaseInitProvider">
+</provider>
+</application>
+</manifest>

@@ -1,0 +1,256 @@
+<?xml version="1.0" ?><manifest android:versionCode="6" android:versionName="1.0.5" package="com.next.appzone.internet.speedmeter.speedtest4g.lite" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="15" android:targetSdkVersion="26">
+</uses-sdk>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.PACKAGE_USAGE_STATS">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="com.android.vending.BILLING">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<permission android:description="@7F0E0024" android:label="@7F0E0026" android:name="com.next.appzone.internet.speedmeter.speedtest4g.lite.permission.ADMIN" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="com.next.appzone.internet.speedmeter.speedtest4g.lite.permission.ADMIN">
+</uses-permission>
+<uses-feature android:name="android.hardware.wifi" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.telephony" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.software.app_widgets" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.touchscreen" android:required="false">
+</uses-feature>
+<permission android:name="com.next.appzone.internet.speedmeter.speedtest4g.lite.permission.C2D_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="com.next.appzone.internet.speedmeter.speedtest4g.lite.permission.C2D_MESSAGE">
+</uses-permission>
+<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE">
+</uses-permission>
+<uses-permission android:name="com.sec.android.provider.badge.permission.READ">
+</uses-permission>
+<uses-permission android:name="com.sec.android.provider.badge.permission.WRITE">
+</uses-permission>
+<uses-permission android:name="com.htc.launcher.permission.READ_SETTINGS">
+</uses-permission>
+<uses-permission android:name="com.htc.launcher.permission.UPDATE_SHORTCUT">
+</uses-permission>
+<uses-permission android:name="com.sonyericsson.home.permission.BROADCAST_BADGE">
+</uses-permission>
+<uses-permission android:name="com.sonymobile.home.permission.PROVIDER_INSERT_BADGE">
+</uses-permission>
+<uses-permission android:name="com.anddoes.launcher.permission.UPDATE_COUNT">
+</uses-permission>
+<uses-permission android:name="com.majeur.launcher.permission.UPDATE_BADGE">
+</uses-permission>
+<uses-permission android:name="com.huawei.android.launcher.permission.CHANGE_BADGE">
+</uses-permission>
+<uses-permission android:name="com.huawei.android.launcher.permission.READ_SETTINGS">
+</uses-permission>
+<uses-permission android:name="com.huawei.android.launcher.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_APP_BADGE">
+</uses-permission>
+<uses-permission android:name="com.oppo.launcher.permission.READ_SETTINGS">
+</uses-permission>
+<uses-permission android:name="com.oppo.launcher.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="me.everything.badger.permission.BADGE_COUNT_READ">
+</uses-permission>
+<uses-permission android:name="me.everything.badger.permission.BADGE_COUNT_WRITE">
+</uses-permission>
+<application android:allowBackup="false" android:appCategory="7" android:icon="@7F080086" android:label="@7F0E0026" android:largeHeap="true" android:name="com.next.appzone.internet.speedmeter.speedtest4g.lite.App" android:roundIcon="@7F080087" android:supportsRtl="true" android:theme="@7F0F0006">
+<meta-data android:name="io.fabric.ApiKey" android:value="c135510d263d60b84a42e0db9ccd07097e05df54">
+</meta-data>
+<activity android:name="com.next.appzone.internet.speedmeter.speedtest4g.lite.ui.activity.SplashActivity" android:theme="@7F0F0008">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="cat.ereza.customactivityoncrash.ERROR">
+</action>
+</intent-filter>
+</activity>
+<activity android:launchMode="1" android:name="com.next.appzone.internet.speedmeter.speedtest4g.lite.ui.activity.MainActivity" android:theme="@7F0F0009">
+</activity>
+<service android:enabled="true" android:exported="true" android:name="com.next.appzone.internet.speedmeter.speedtest4g.lite.service.UpdateService" android:process=":remote">
+</service>
+<receiver android:enabled="true" android:exported="true" android:name="com.next.appzone.internet.speedmeter.speedtest4g.lite.reciver.BootReceiver">
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+<action android:name="android.intent.action.SCREEN_ON">
+</action>
+<action android:name="android.intent.action.DATE_CHANGED">
+</action>
+</intent-filter>
+</receiver>
+<activity android:name="com.next.appzone.internet.speedmeter.speedtest4g.lite.ui.activity.SettingActivity" android:theme="@7F0F0009">
+</activity>
+<activity android:configChanges="0x00000480" android:label="@7F0E0026" android:launchMode="1" android:name="com.next.appzone.apps.ui.activity.ActivityMain" android:resizeableActivity="true" android:theme="@7F0F0009">
+<intent-filter>
+<action android:name="android.intent.action.MANAGE_NETWORK_USAGE">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<service android:exported="true" android:name="service.DaemonService" android:process=":daemon">
+</service>
+<service android:enabled="true" android:label="@7F0E0026" android:name="com.next.appzone.apps.service.ServiceSinkhole" android:permission="android.permission.BIND_VPN_SERVICE" android:process=":remote">
+<intent-filter>
+<action android:name="android.net.VpnService">
+</action>
+</intent-filter>
+</service>
+<service android:label="@7F0E0026" android:name="com.next.appzone.apps.service.ServiceExternal">
+<intent-filter>
+<action android:name="com.next.appzone.internet.speedmeter.speedtest4g.lite.DOWNLOAD_HOSTS_FILE">
+</action>
+</intent-filter>
+</service>
+<service android:icon="@7F080087" android:label="@7F0E0026" android:name="com.next.appzone.apps.service.ServiceTileMain" android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+<intent-filter>
+<action android:name="android.service.quicksettings.action.QS_TILE">
+</action>
+</intent-filter>
+</service>
+<service android:icon="@7F08007F" android:label="@7F0E00EF" android:name="com.next.appzone.apps.service.ServiceTileGraph" android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+<intent-filter>
+<action android:name="android.service.quicksettings.action.QS_TILE">
+</action>
+</intent-filter>
+</service>
+<service android:icon="@7F080083" android:label="@7F0E00CC" android:name="com.next.appzone.apps.service.ServiceTileFilter" android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+<intent-filter>
+<action android:name="android.service.quicksettings.action.QS_TILE">
+</action>
+</intent-filter>
+</service>
+<service android:icon="@7F080089" android:label="@7F0E00D5" android:name="com.next.appzone.apps.service.ServiceTileLockdown" android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+<intent-filter>
+<action android:name="android.service.quicksettings.action.QS_TILE">
+</action>
+</intent-filter>
+</service>
+<receiver android:label="@7F0E0026" android:name="com.next.appzone.apps.reciver.ReceiverAutostart">
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+<action android:name="android.intent.action.MY_PACKAGE_REPLACED">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name="com.next.appzone.apps.reciver.ReceiverPackageRemoved">
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_FULLY_REMOVED">
+</action>
+<data android:scheme="package">
+</data>
+</intent-filter>
+</receiver>
+<receiver android:label="@7F0E0026" android:name="com.next.appzone.apps.widget.WidgetAdmin" android:permission="com.next.appzone.internet.speedmeter.speedtest4g.lite.permission.ADMIN">
+<intent-filter>
+<action android:name="com.next.appzone.internet.speedmeter.speedtest4g.lite.ON">
+</action>
+<action android:name="com.next.appzone.internet.speedmeter.speedtest4g.lite.OFF">
+</action>
+<action android:name="com.next.appzone.internet.speedmeter.speedtest4g.lite.LOCKDOWN_ON">
+</action>
+<action android:name="com.next.appzone.internet.speedmeter.speedtest4g.lite.LOCKDOWN_OFF">
+</action>
+</intent-filter>
+</receiver>
+<meta-data android:name="android.support.VERSION" android:value="26.1.0">
+</meta-data>
+<activity android:configChanges="0x00000FB0" android:exported="false" android:name="com.google.android.gms.ads.AdActivity" android:theme="@android:0103000F">
+</activity>
+<meta-data android:name="com.google.android.gms.version" android:value="@7F0A0007">
+</meta-data>
+<meta-data android:name="onesignal_app_id" android:value="2e18b0b4-b40d-4aae-a525-bbaa642e8180">
+</meta-data>
+<meta-data android:name="onesignal_google_project_number" android:value="str:REMOTE">
+</meta-data>
+<receiver android:name="com.onesignal.GcmBroadcastReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+<intent-filter android:priority="999">
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+<category android:name="com.next.appzone.internet.speedmeter.speedtest4g.lite">
+</category>
+</intent-filter>
+</receiver>
+<receiver android:name="com.onesignal.NotificationOpenedReceiver">
+</receiver>
+<service android:name="com.onesignal.GcmIntentService">
+</service>
+<service android:name="com.onesignal.GcmIntentJobService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<service android:name="com.onesignal.RestoreJobService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<service android:name="com.onesignal.RestoreKickoffJobService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<service android:name="com.onesignal.SyncService" android:stopWithTask="true">
+</service>
+<service android:name="com.onesignal.SyncJobService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<activity android:name="com.onesignal.PermissionsActivity" android:theme="@android:01030010">
+</activity>
+<service android:name="com.onesignal.NotificationRestoreService">
+</service>
+<receiver android:name="com.onesignal.BootUpReceiver">
+<intent-filter>
+<action android:name="android.intent.action.ACTION_BOOT_COMPLETED">
+</action>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+<action android:name="android.intent.action.QUICKBOOT_POWERON">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name="com.onesignal.UpgradeReceiver">
+<intent-filter>
+<action android:name="android.intent.action.MY_PACKAGE_REPLACED">
+</action>
+</intent-filter>
+</receiver>
+<provider android:authorities="com.next.appzone.internet.speedmeter.speedtest4g.lite.crashlyticsinitprovider" android:exported="false" android:initOrder="100" android:name="com.crashlytics.android.CrashlyticsInitProvider">
+</provider>
+<service android:exported="true" android:name="com.google.firebase.messaging.FirebaseMessagingService">
+<intent-filter android:priority="-500">
+<action android:name="com.google.firebase.MESSAGING_EVENT">
+</action>
+</intent-filter>
+</service>
+<receiver android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+<category android:name="com.next.appzone.internet.speedmeter.speedtest4g.lite">
+</category>
+</intent-filter>
+</receiver>
+<service android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdService">
+<intent-filter android:priority="-500">
+<action android:name="com.google.firebase.INSTANCE_ID_EVENT">
+</action>
+</intent-filter>
+</service>
+<provider android:authorities="com.next.appzone.internet.speedmeter.speedtest4g.lite.firebaseinitprovider" android:exported="false" android:initOrder="100" android:name="com.google.firebase.provider.FirebaseInitProvider">
+</provider>
+</application>
+</manifest>

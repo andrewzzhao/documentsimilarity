@@ -1,0 +1,554 @@
+<?xml version="1.0" ?><manifest android:installLocation="0" android:versionCode="6" android:versionName="2.4.0" package="cn.com.zoenet.fjfymnyypub" platformBuildVersionCode="25" platformBuildVersionName="7.1.1" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="14" android:targetSdkVersion="22">
+</uses-sdk>
+<uses-feature android:name="android.hardware.bluetooth_le" android:required="false">
+</uses-feature>
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.MANAGE_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PROFILE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_LOGS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.RECORD_AUDIO">
+</uses-permission>
+<uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-permission android:name="android.permission.BLUETOOTH">
+</uses-permission>
+<uses-permission android:name="android.permission.BLUETOOTH_ADMIN">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_CONTACTS">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.DISABLE_KEYGUARD">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_USER_PRESENT">
+</uses-permission>
+<uses-permission android:name="android.permission.RESTART_PACKAGES">
+</uses-permission>
+<uses-permission android:name="android.permission.BROADCAST_STICKY">
+</uses-permission>
+<uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-permission android:name="android.permission.BATTERY_STATS">
+</uses-permission>
+<uses-permission android:name="android.permission.CALL_PHONE">
+</uses-permission>
+ // 㙣⁥匀䐀䬀 洀息广䍤偧‌Ⰰॻ敎 APP 散救،⁜挀渀⸀挀漀洀⸀稀漀攀渀攀琀⸀椀樀栀攀愀氀琀栀 昀换为癝包名
+
+<uses-permission android:name="cn.com.zoenet.ijhealth.permission.RECEIVE_MSG">
+</uses-permission>
+ // 杙६噧伀䤀倀刀乓敟ੵ�
+<uses-permission android:name="cn.com.zoenet.ijhealth.permission.INCOMING_CALL">
+</uses-permission>
+<permission android:name="cn.com.zoenet.ijhealth.permission.RECEIVE_MSG" android:protectionLevel="0x00000002">
+</permission>
+<permission android:name="cn.com.zoenet.ijhealth.permission.INCOMING_CALL" android:protectionLevel="0x00000002">
+</permission>
+<meta-data android:name="android.support.VERSION" android:value="25.3.1">
+</meta-data>
+<application android:allowBackup="false" android:icon="@7F03000C" android:label="@7F09003F" android:name="com.tencent.StubShell.TxAppEntry" android:supportsRtl="true" android:theme="@7F0B00AC">
+<meta-data android:name="TxAppEntry" android:value="cn.com.zoenet.ijhealth.IJApplication">
+</meta-data>
+<meta-data android:name="com.netease.nim.appKey" android:value="1716afb1e8e4d2e782709359a56357f9">
+</meta-data>
+<meta-data android:name="com.baidu.lbsapi.API_KEY" android:value="@7F090016">
+</meta-data>
+<meta-data android:name="com.netease.cosine.target" android:value="">
+</meta-data>
+<meta-data android:name="com.netease.cosine.target.receiver" android:value="com.netease.nimlib.service.NimReceiver">
+</meta-data>
+<meta-data android:name="XG_V2_ACCESS_ID" android:value="@7F090025">
+</meta-data>
+<meta-data android:name="XG_V2_ACCESS_KEY" android:value="@7F090026">
+</meta-data>
+<meta-data android:name="RONG_CLOUD_APP_KEY" android:value="@7F090023">
+</meta-data>
+<service android:exported="true" android:name="io.rong.imlib.ipc.RongService" android:process=":ipc">
+</service>
+<service android:exported="true" android:name="io.rong.imlib.ReConnectService">
+</service>
+<receiver android:exported="true" android:name="io.rong.imlib.ConnectChangeReceiver">
+</receiver>
+<receiver android:name="io.rong.imlib.HeartbeatReceiver" android:process=":ipc">
+</receiver>
+ //android:process=&quot;:push&quot; 筟
+
+<service android:enabled="true" android:name="com.yuntongxun.ecsdk.ECClientService" android:process=":push">
+</service>
+ //app kill䭣๎罔摞㙣浥息
+
+<receiver android:exported="false" android:name="cn.com.zoenet.ijhealth.thirdparty.yuntongxun.YuntxNotifyReceiver">
+<intent-filter>
+ // 㙣灥甀猀栀洀息
+                // action匹᥍筒瀀愀挀欀愀最攀一愀洀攀 ⬀ ∀⸀愀挀琀椀漀渀∀ ⬀ ∀刀&quot;}
+
+<action android:name="cn.com.zoenet.ijhealth.action.VOIP_CALL">
+</action>
+<action android:name="cn.com.zoenet.ijhealth.action.MESSAGE">
+</action>
+<action android:name="cn.com.zoenet.ijhealth.action.NOTIFICATION_CLICK">
+</action>
+<action android:name="cn.com.zoenet.ijhealth.action.PERSON_VERSION">
+</action>
+</intent-filter>
+</receiver>
+ // ⡞ѵٙ୴幺഻剧
+
+<service android:name="cn.com.zoenet.ijhealth.thirdparty.yuntongxun.YuntxNotifyReceiver$NotifyService">
+</service>
+ // ୎⑎祎为SDK乎罣摞
+
+<receiver android:name="com.yuntongxun.ecsdk.booter.CCPReceivers$AlarmReceiver" android:process=":push">
+</receiver>
+ // v5.1.9r剘湍ॿ੹�
+<receiver android:exported="false" android:name="com.yuntongxun.ecsdk.booter.Alarm" android:process=":push">
+</receiver>
+ // SDK网㥾卥广੤�
+<receiver android:name="com.yuntongxun.ecsdk.booter.CCPReceivers$ConnectionReceiver" android:process=":push">
+<intent-filter>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+</receiver>
+<service android:exported="false" android:name="io.rong.push.core.PushRegistrationService">
+</service>
+<service android:exported="true" android:name="io.rong.push.core.MessageHandleService">
+</service>
+<service android:exported="true" android:name="io.rong.push.PushService" android:process="io.rong.push">
+</service>
+<receiver android:name="io.rong.push.PushReceiver" android:process="io.rong.push">
+<intent-filter>
+<action android:name="io.rong.push.intent.action.HEART_BEAT">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.USER_PRESENT">
+</action>
+<action android:name="android.intent.action.ACTION_POWER_CONNECTED">
+</action>
+<action android:name="android.intent.action.ACTION_POWER_DISCONNECTED">
+</action>
+</intent-filter>
+</receiver>
+<activity android:name="cn.com.zoenet.ijhealth.view.main.IndexActivity" android:screenOrientation="1" android:theme="@7F0B00AA">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:name="cn.com.zoenet.ijhealth.view.main.IndexGuideActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000023">
+</activity>
+<activity android:launchMode="2" android:name="cn.com.zoenet.ijhealth.view.main.MainActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000023">
+</activity>
+<activity android:launchMode="2" android:name="cn.com.zoenet.ijhealth.view.main.LoginActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name="cn.com.zoenet.ijhealth.view.main.BrowserActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.com.zoenet.ijhealth.view.main.PhoneVerificationActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.com.zoenet.ijhealth.view.main.PasswordAlterActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="cn.com.zoenet.ijhealth.view.main.RegistActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000004">
+</activity>
+<activity android:name="cn.com.zoenet.ijhealth.view.home.MoreMenuActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.com.zoenet.ijhealth.view.home.HospitalListActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000023">
+</activity>
+<activity android:name="cn.com.zoenet.ijhealth.view.home.WeizhanActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.com.zoenet.ijhealth.view.home.CityListActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="cn.com.zoenet.ijhealth.view.home.SearchActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000023">
+</activity>
+<activity android:name="cn.com.zoenet.ijhealth.view.home.selfmonitor.HealthSelfMonitorActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.com.zoenet.ijhealth.view.home.selfmonitor.GlucoseHistroyActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.com.zoenet.ijhealth.view.home.selfmonitor.BloodPressureHistoryActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.com.zoenet.ijhealth.view.information.HealthInfoActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.com.zoenet.ijhealth.view.me.FamilySignedActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="cn.com.zoenet.ijhealth.view.me.JXQrCodeActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="cn.com.zoenet.ijhealth.view.me.familysign.FamilySignedMasterActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="cn.com.zoenet.ijhealth.view.me.familysign.FamilySignedNoMasterActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="cn.com.zoenet.ijhealth.view.me.familysign.SignedCommunityActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="cn.com.zoenet.ijhealth.view.me.familysign.SignedDoctorsActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="cn.com.zoenet.ijhealth.view.me.familysign.SignedDoctorDetailActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="cn.com.zoenet.ijhealth.view.me.familysign.SignedApplySuccessActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="cn.com.zoenet.ijhealth.view.me.familysign.SignedReadAgreementActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="cn.com.zoenet.ijhealth.view.me.ApplyListActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="cn.com.zoenet.ijhealth.view.me.UserInfoActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="cn.com.zoenet.ijhealth.view.me.UserSetActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="cn.com.zoenet.ijhealth.view.me.UserInfoMsgSettingActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="cn.com.zoenet.ijhealth.view.me.UserPasswordSafeActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="cn.com.zoenet.ijhealth.view.me.AboutUsActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="cn.com.zoenet.ijhealth.view.me.DimensinalCodeActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="cn.com.zoenet.ijhealth.view.me.UserLocationMapActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="cn.com.zoenet.ijhealth.view.me.UserAttentionActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="cn.com.zoenet.ijhealth.view.me.UserInfoProtocolActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="cn.com.zoenet.ijhealth.view.me.healthyequipment.HealthyEquipmentActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="cn.com.zoenet.ijhealth.view.me.healthyequipment.HealthyEquipmentDetailActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="cn.com.zoenet.ijhealth.view.me.healthyequipment.HealthyEquipmentListActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="cn.com.zoenet.ijhealth.view.me.RecordListActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000023">
+</activity>
+<activity android:name="cn.com.zoenet.ijhealth.view.me.familysign.DoctorDetailActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000023">
+</activity>
+<activity android:name="cn.com.zoenet.ijhealth.view.me.medicaltreatment.NewDoctorDetailActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000023">
+</activity>
+<activity android:name="cn.com.zoenet.ijhealth.view.me.medicaltreatment.ConcernedDoctorActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.com.zoenet.ijhealth.view.me.medicaltreatment.MedicalTreatmentDetailActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000023">
+</activity>
+<activity android:name="cn.com.zoenet.ijhealth.view.me.medicaltreatment.CrmListActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000023">
+</activity>
+<activity android:name="cn.com.zoenet.ijhealth.view.me.medicaltreatment.TreatmentHistoryListActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000023">
+</activity>
+<activity android:name="cn.com.zoenet.ijhealth.view.msg.MsgRemindActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="cn.com.zoenet.ijhealth.view.msg.remind.MsgDangerousValuesActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="cn.com.zoenet.ijhealth.view.msg.remind.MsgFollowUpActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="cn.com.zoenet.ijhealth.view.msg.remind.MsgHealthActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="cn.com.zoenet.ijhealth.view.msg.remind.MsgTaskActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="cn.com.zoenet.ijhealth.view.msg.remind.MsgReservationActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="cn.com.zoenet.ijhealth.view.msg.MsgNoticeActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="cn.com.zoenet.ijhealth.view.msg.news.InformationActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000023">
+</activity>
+<activity android:name="cn.com.zoenet.ijhealth.view.msg.news.DetailsActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000023">
+</activity>
+<activity android:name="cn.com.zoenet.ijhealth.view.msg.MsgPlacardActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="cn.com.zoenet.ijhealth.view.msg.remind.MsgSignActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="cn.com.zoenet.ijhealth.view.msg.remind.MsgReportCardActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="cn.com.zoenet.ijhealth.view.msg.FollowUpActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="cn.com.zoenet.ijhealth.view.consulation.DeptListActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.com.zoenet.ijhealth.view.consulation.DeptSearchActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000004">
+</activity>
+<activity android:name="cn.com.zoenet.ijhealth.view.consulation.NewDeptListActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000023">
+</activity>
+<activity android:name="cn.com.zoenet.ijhealth.view.consulation.NewOrgListActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000023">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="cn.com.zoenet.ijhealth.view.consulation.OnlineConsulationActivity" android:protectionLevel="0x00000002" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="cn.com.zoenet.ijhealth.view.consulation.OnlineConsultationDoctorsActivity" android:protectionLevel="0x00000002" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:name="cn.com.zoenet.ijhealth.view.consulation.ConsulationFindActivity">
+</activity>
+<activity android:name="cn.com.zoenet.ijhealth.view.msg.consulation.MsgConsulationActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="cn.com.zoenet.ijhealth.view.discovery.DoctorListActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000023">
+</activity>
+<activity android:name="cn.com.zoenet.ijhealth.view.fetalheart.BlueDeviceActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.com.zoenet.ijhealth.view.fetalheart.FhrMonitorActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.com.zoenet.ijhealth.view.fetalheart.RecordingActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.com.zoenet.ijhealth.view.skindept.me.MyCollectionActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.com.zoenet.ijhealth.view.skindept.me.ProductFeaturesActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.com.zoenet.ijhealth.view.skindept.me.MyScoreDescription" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.com.zoenet.ijhealth.view.skindept.NewsDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.com.zoenet.ijhealth.view.skindept.home.ChatDetailsActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.com.zoenet.ijhealth.view.skindept.casediscuss.NewCaseActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="cn.com.zoenet.ijhealth.view.skindept.casediscuss.CaseDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.com.zoenet.ijhealth.view.skindept.casediscuss.SearchCaseActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000004">
+</activity>
+<activity android:name="cn.com.zoenet.ijhealth.view.skindept.home.NewsSearchActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000004">
+</activity>
+<activity android:name="cn.com.zoenet.ijhealth.view.skindept.home.ModifyGroupActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.com.zoenet.ijhealth.view.skindept.AllCommentActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="2" android:name="cn.com.zoenet.ijhealth.view.skindept.VerifyRealNameActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000023">
+</activity>
+<activity android:name="cn.com.zoenet.ijhealth.view.skindept.home.GroupMembersActivity" android:windowSoftInputMode="0x00000023">
+</activity>
+<activity android:name="cn.com.zoenet.ijhealth.view.skindept.ChooseHospitalActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.com.zoenet.ijhealth.view.skindept.me.BaseInfoActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.com.zoenet.ijhealth.thirdparty.zxing.activity.CaptureActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000023">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="cn.com.zoenet.ijhealth.thirdparty.yuntongxun.chat.ChatActivity" android:protectionLevel="0x00000002" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:name="cn.com.zoenet.ijhealth.thirdparty.yuntongxun.chat.GroupChatActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.com.zoenet.ijhealth.thirdparty.yuntongxun.chat.PicturePriviewActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.com.zoenet.ijhealth.thirdparty.yuntongxun.chat.AlbumActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.com.zoenet.ijhealth.thirdparty.yuntongxun.chat.SelectPictureActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.com.zoenet.ijhealth.view.me.HelpActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.com.zoenet.ijhealth.view.me.QuestionDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.com.zoenet.ijhealth.view.me.RelatedListActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="3" android:name="cn.com.zoenet.ijhealth.thirdparty.nimvideo.avchat.activity.AVChatActivity" android:screenOrientation="1" android:theme="@7F0B00AC" android:windowSoftInputMode="0x00000003">
+</activity>
+<service android:enabled="true" android:name="com.baidu.location.f" android:process=":remote">
+</service>
+<activity android:configChanges="0x000004A0" android:name="com.mob.tools.MobUIShell" android:screenOrientation="1" android:theme="@android:01030010" android:windowSoftInputMode="0x00000012">
+<intent-filter>
+<data android:scheme="tencent1105155137">
+</data>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004A0" android:exported="true" android:name="cn.com.zoenet.ijhealth.wxapi.WXEntryActivity" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<activity android:exported="true" android:name="com.tencent.android.tpush.XGPushActivity" android:theme="@android:0103000F">
+<intent-filter>
+<action android:name="android.intent.action">
+</action>
+</intent-filter>
+</activity>
+<receiver android:name="com.tencent.android.tpush.XGPushReceiver" android:process=":xg_service_v2">
+<intent-filter android:priority="0x7FFFFFFF">
+<action android:name="com.tencent.android.tpush.action.SDK">
+</action>
+<action android:name="com.tencent.android.tpush.action.INTERNAL_PUSH_MESSAGE">
+</action>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+<action android:name="android.intent.action.USER_PRESENT">
+</action>
+<action android:name="android.bluetooth.adapter.action.STATE_CHANGED">
+</action>
+<action android:name="android.intent.action.ACTION_POWER_CONNECTED">
+</action>
+<action android:name="android.intent.action.ACTION_POWER_DISCONNECTED">
+</action>
+</intent-filter>
+<intent-filter android:priority="0x7FFFFFFF">
+<action android:name="android.intent.action.MEDIA_UNMOUNTED">
+</action>
+<action android:name="android.intent.action.MEDIA_REMOVED">
+</action>
+<action android:name="android.intent.action.MEDIA_CHECKING">
+</action>
+<action android:name="android.intent.action.MEDIA_EJECT">
+</action>
+<data android:scheme="file">
+</data>
+</intent-filter>
+</receiver>
+<service android:exported="true" android:name="com.tencent.android.tpush.service.XGPushService" android:persistent="true" android:process=":xg_service_v2" android:protectionLevel="0x00000002">
+</service>
+<service android:exported="true" android:name="com.tencent.android.tpush.rpc.XGRemoteService">
+<intent-filter>
+<action android:name="cn.com.zoenet.fjfymnyypub.PUSH_ACTION">
+</action>
+</intent-filter>
+</service>
+<receiver android:name="cn.com.zoenet.ijhealth.thirdparty.xgpush.MessageReceiver">
+<intent-filter>
+<action android:name="com.tencent.android.tpush.action.PUSH_MESSAGE">
+</action>
+<action android:name="com.tencent.android.tpush.action.FEEDBACK">
+</action>
+</intent-filter>
+</receiver>
+<service android:name="com.netease.nimlib.service.NimService" android:process=":core">
+</service>
+<service android:name="com.netease.nimlib.service.NimService$Aux" android:process=":core">
+</service>
+<receiver android:exported="false" android:name="com.netease.nimlib.service.NimReceiver" android:process=":core">
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name="com.netease.nimlib.service.ResponseReceiver">
+</receiver>
+<receiver android:enabled="true" android:exported="false" android:name="com.netease.nimlib.receiver.RTSBroadcastReceiver">
+<intent-filter>
+<action android:name="cn.com.zoenet.fjfymnyypub.ACTION.RECEIVE_RTS_NOTIFICATION">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name="com.netease.nimlib.receiver.IncomingCallReceiver">
+<intent-filter>
+<action android:name="android.intent.action.PHONE_STATE">
+</action>
+</intent-filter>
+</receiver>
+<service android:enabled="true" android:exported="false" android:name="com.jumper.coreservice.BluetoothService">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.jumper.coreservice.BaseBluetoothService">
+</service>
+<activity android:name="cn.com.zoenet.ijhealth.view.home.FuYouNewsListActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.com.zoenet.ijhealth.view.home.FuYouNewsDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.com.zoenet.ijhealth.view.Report.ReportImmediatelyActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.com.zoenet.ijhealth.view.Report.FillMsgActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000004">
+</activity>
+<activity android:name="cn.com.zoenet.ijhealth.view.Report.MyDoctorActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.com.zoenet.ijhealth.view.HealthServices.BloodPressureInputActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.com.zoenet.ijhealth.view.HealthServices.HealthIndicatorActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.com.zoenet.ijhealth.view.HealthServices.BloodPressureIndicatorActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.com.zoenet.ijhealth.view.HealthServices.GlucoseIndicatorActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.com.zoenet.ijhealth.view.HealthServices.GlucoseInputActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.com.zoenet.ijhealth.view.HealthServices.EquipmentListActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.com.zoenet.ijhealth.view.HealthServices.BindEquipmentActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.com.zoenet.ijhealth.view.HealthServices.EquipmentItemActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.com.zoenet.ijhealth.view.HealthServices.WeightIndicatorActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.com.zoenet.ijhealth.view.HealthServices.WeightSetActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.com.zoenet.ijhealth.view.HealthServices.BodyTempIndicatorActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.com.zoenet.ijhealth.view.HealthServices.BodyTemperatureSetActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.com.zoenet.ijhealth.view.home.HomeGuideActivity" android:screenOrientation="1" android:theme="@7F0B01DB">
+</activity>
+<activity android:launchMode="2" android:name="com.karumi.dexter.DexterActivity" android:theme="@7F0B014D">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.netease.nim.uikit.session.activity.P2PMessageActivity" android:screenOrientation="1" android:theme="@7F0B00AE" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.netease.nim.uikit.session.activity.TeamMessageActivity" android:screenOrientation="1" android:theme="@7F0B00AE" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.netease.nim.uikit.team.activity.NormalTeamInfoActivity" android:screenOrientation="1" android:theme="@7F0B00AE" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.netease.nim.uikit.team.activity.AdvancedTeamInfoActivity" android:screenOrientation="1" android:theme="@7F0B00AE" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.netease.nim.uikit.team.activity.AdvancedTeamMemberActivity" android:screenOrientation="1" android:theme="@7F0B00AE" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.netease.nim.uikit.team.activity.AdvancedTeamAnnounceActivity" android:screenOrientation="1" android:theme="@7F0B00AE" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.netease.nim.uikit.team.activity.AdvancedTeamMemberInfoActivity" android:screenOrientation="1" android:theme="@7F0B00AE" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.netease.nim.uikit.team.activity.AdvancedTeamNicknameActivity" android:screenOrientation="1" android:theme="@7F0B00AE" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.netease.nim.uikit.team.activity.AdvancedTeamCreateAnnounceActivity" android:screenOrientation="1" android:theme="@7F0B00AE" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.netease.nim.uikit.team.activity.TeamPropertySettingActivity" android:screenOrientation="1" android:theme="@7F0B00AE" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:configChanges="0x000000A0" android:label="@7F090085" android:name="com.netease.nim.uikit.contact_selector.activity.ContactSelectActivity" android:screenOrientation="1" android:theme="@7F0B00AE" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name="com.netease.nim.uikit.common.media.picker.activity.PickImageActivity" android:screenOrientation="1" android:theme="@7F0B00AE">
+</activity>
+<activity android:name="com.netease.nim.uikit.common.media.picker.activity.CropImageActivity" android:screenOrientation="1" android:theme="@7F0B00AE">
+</activity>
+<activity android:name="com.netease.nim.uikit.common.media.picker.activity.PickerAlbumActivity" android:screenOrientation="1" android:theme="@7F0B00AE">
+</activity>
+<activity android:name="com.netease.nim.uikit.common.media.picker.activity.PickerAlbumPreviewActivity" android:screenOrientation="1" android:theme="@7F0B00AE">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.netease.nim.uikit.common.media.picker.activity.PreviewImageFromLocalActivity" android:screenOrientation="1" android:theme="@7F0B00AE" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:configChanges="0x000000A0" android:label="@7F0900D1" android:name="com.netease.nim.uikit.common.media.picker.activity.PreviewImageFromCameraActivity" android:screenOrientation="1" android:theme="@7F0B00AE" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.netease.nim.uikit.session.activity.CaptureVideoActivity" android:screenOrientation="1" android:theme="@7F0B00AE" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F090250" android:name="com.netease.nim.uikit.session.activity.WatchVideoActivity" android:theme="@7F0B00DF">
+</activity>
+<activity android:configChanges="0x00000020" android:name="com.netease.nim.uikit.session.activity.WatchMessagePictureActivity" android:theme="@7F0B00AE">
+</activity>
+</application>
+</manifest>

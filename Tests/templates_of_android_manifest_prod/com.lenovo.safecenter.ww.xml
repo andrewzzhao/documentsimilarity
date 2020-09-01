@@ -1,0 +1,810 @@
+<?xml version="1.0" ?><manifest android:screenOrientation="1" android:versionCode="4004903" android:versionName="V4.5.0.4903" package="com.lenovo.safecenter.ww" xmlns:android="http://schemas.android.com/apk/res/android">
+<permission android:name="com.lenovo.safecenter.permission.RemoteHealthCheck" android:protectionLevel="0x00000002">
+</permission>
+<supports-screens android:anyDensity="true" android:largeScreens="true" android:normalScreens="true" android:smallScreens="true" android:xlargeScreens="true">
+</supports-screens>
+<uses-sdk android:minSdkVersion="11" android:targetSdkVersion="19">
+</uses-sdk>
+<application android:allowClearUserData="false" android:debuggable="false" android:icon="@7F0201E6" android:installLocation="1" android:label="@7F0D0002" android:name=".SafeCenterApplication" android:supportsRtl="true" android:theme="@android:0103000D">
+<meta-data android:name="lenovo:customReaperServer" android:value="http://osfsr.lenovomm.com">
+</meta-data>
+<meta-data android:name="SUS_APPKEY" android:value="QAE6XYWM3XUJ">
+</meta-data>
+<meta-data android:name="SUS_CHANNEL" android:value="Release_ROW">
+</meta-data>
+<meta-data android:name="lenovo:applicationToken" android:value="TANMBMVHQ9Y8">
+</meta-data>
+<meta-data android:name="lenovo:channel" android:value="Phone_Prebuilt_ROW">
+</meta-data>
+<uses-library android:name="android.test.runner">
+</uses-library>
+<activity android:name=".activity.DailyDataUsageActivity" android:screenOrientation="1" android:theme="@7F0E0026">
+</activity>
+<activity android:name=".activity.TrafficActivity" android:screenOrientation="1" android:theme="@7F0E0026">
+<intent-filter>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:name=".activity.AccelerateActivity" android:screenOrientation="1" android:theme="@7F0E0026">
+</activity>
+<activity android:label="@7F0D0002" android:name=".MainTab.SplashActivity" android:screenOrientation="1" android:theme="@7F0E0026">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:launchMode="2" android:name=".MainTab.LeSafeMainActivity" android:screenOrientation="1" android:theme="@7F0E0026">
+<intent-filter>
+<action android:name="com.lenovo.safecenter.mainTab">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:name=".MainTab.VersionUpdateDIalogActivity" android:screenOrientation="1" android:theme="@7F0E0008">
+</activity>
+<activity android:launchMode="2" android:name=".MainTab.FirstUsePasswordSettingActivity" android:screenOrientation="1" android:theme="@7F0E0026" android:windowSoftInputMode="0x00000014">
+</activity>
+<activity android:name=".MainTab.UpdateVersionActivity" android:screenOrientation="1" android:theme="@7F0E0026">
+<intent-filter>
+<action android:name="com.lenovo.safecenter.updateAndPassword">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:launchMode="2" android:name=".MainTab.SettingsAboutActivity" android:screenOrientation="1" android:theme="@7F0E0026">
+</activity>
+<activity android:launchMode="2" android:name=".healthcheck.HealthCheckupActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="2" android:name=".appsManager.AppsManager" android:screenOrientation="1" android:theme="@7F0E0026">
+</activity>
+<activity android:launchMode="2" android:name=".appsManager.PermissionControlNew" android:screenOrientation="1" android:theme="@7F0E0026">
+</activity>
+<activity android:finishOnTaskLaunch="true" android:launchMode="2" android:name=".antitheft.AgainstTheftSet" android:screenOrientation="1" android:theme="@7F0E0026">
+<intent-filter>
+<action android:name="com.lenovo.safecenter.AgainstTheftSet">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:launchMode="2" android:name=".appsManager.ApplicationList" android:screenOrientation="1" android:theme="@7F0E0026">
+</activity>
+<activity android:launchMode="2" android:name=".appsManager.MessageBlackList" android:screenOrientation="1" android:theme="@7F0E0026">
+</activity>
+<activity android:launchMode="2" android:name=".usermode.ChildModeActivity" android:noHistory="true" android:screenOrientation="1" android:theme="@7F0E0026">
+<intent-filter>
+<action android:name="com.lenovo.safecenter.view.ForbiddenApplication">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:launchMode="2" android:name=".usermode.GuestModeSet" android:noHistory="true" android:screenOrientation="1" android:theme="@7F0E0026">
+<intent-filter>
+<action android:name="com.lenovo.safecenter.view.GuestModeSet">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:launchMode="2" android:name=".appsManager.DisplayLog" android:screenOrientation="1" android:theme="@7F0E0026">
+</activity>
+<activity android:name=".appsManager.CheckDisplayLog" android:screenOrientation="1" android:theme="@7F0E004F">
+</activity>
+<activity android:name=".antitheft.NotiSMSActivity" android:screenOrientation="1" android:theme="@7F0E0008">
+</activity>
+<activity android:name=".appsManager.AntiTappingActivity" android:screenOrientation="1" android:theme="@7F0E0008">
+</activity>
+<activity android:configChanges="0x000000A0" android:launchMode="3" android:name=".appsManager.DialogActivity" android:screenOrientation="1" android:theme="@7F0E0008">
+<intent-filter>
+<action android:name="com.lenovo.safecenter.view.DialogActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:name=".appsManager.AppPermManager" android:screenOrientation="1" android:theme="@7F0E0026">
+</activity>
+<activity android:name=".safemode.WhiteSms" android:screenOrientation="1">
+</activity>
+<activity android:name=".safemode.ErrorWhiteSms" android:screenOrientation="1">
+</activity>
+<activity android:name=".safemode.WhiteCall" android:screenOrientation="1">
+</activity>
+<activity android:name=".safemode.ManWhiteSms" android:screenOrientation="1" android:theme="@7F0E004F">
+</activity>
+<activity android:name=".safemode.WhiteSmsShowByNumber" android:screenOrientation="1" android:theme="@7F0E0026">
+</activity>
+<activity android:name=".safemode.WhiteContract" android:screenOrientation="1" android:theme="@7F0E0026">
+</activity>
+<activity android:name=".safemode.ErrorWhiteContract" android:screenOrientation="1">
+</activity>
+<activity android:name=".safemode.AddContract" android:screenOrientation="1" android:theme="@7F0E0026">
+</activity>
+<activity android:name=".safemode.ErrorAddContract" android:screenOrientation="1" android:theme="@7F0E0026">
+</activity>
+<activity android:name=".safemode.ContractSetting" android:screenOrientation="1" android:theme="@7F0E0026" android:windowSoftInputMode="0x00000024">
+</activity>
+<activity android:name=".safemode.HandActivity" android:noHistory="true" android:screenOrientation="1" android:theme="@7F0E004F">
+</activity>
+<activity android:launchMode="2" android:name=".MainTab.CallNotifyActivity" android:screenOrientation="1" android:theme="@7F0E0008">
+</activity>
+<activity android:launchMode="2" android:name=".MainTab.SMSNotifyActivity" android:screenOrientation="1" android:theme="@7F0E0008">
+</activity>
+<activity android:excludeFromRecents="true" android:exported="false" android:launchMode="3" android:name=".usermode.SafePaymentDialogActivity" android:screenOrientation="1" android:theme="@7F0E0008">
+<intent-filter>
+<action android:name="com.lenovo.safecenter.view.LaboratoryActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:name=".usermode.SafePaymentActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.lenovo.safecenter.SafePaymentActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:name=".antitheft.AgainstTheftSafePhoneSetActivity" android:noHistory="true" android:screenOrientation="1" android:theme="@7F0E0026">
+</activity>
+<activity android:name=".antitheft.AgainstTheftSafeMailSetActivity" android:noHistory="true" android:screenOrientation="1">
+</activity>
+<activity android:name=".antitheft.AgainstTheftPromptActivity" android:noHistory="true" android:screenOrientation="1" android:theme="@7F0E0026">
+</activity>
+<activity android:configChanges="0x000000A0" android:label="@7F0D022C" android:name=".lenovoAntiSpam.MainActivity" android:screenOrientation="1" android:theme="@7F0E004F">
+<intent-filter>
+<action android:name="com.lenovo.safecenter.main">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000A0" android:name=".lenovoAntiSpam.views.NightPreActivity" android:screenOrientation="1" android:theme="@7F0E004F">
+</activity>
+<activity android:configChanges="0x000000A0" android:name=".lenovoAntiSpam.views.ManLocalBlackActivity" android:screenOrientation="1" android:theme="@7F0E0026">
+</activity>
+<activity android:configChanges="0x000000A0" android:name=".lenovoAntiSpam.views.HandBlackActivity" android:screenOrientation="1" android:theme="@7F0E0026">
+</activity>
+<activity android:configChanges="0x000000A0" android:name=".lenovoAntiSpam.views.ManLocalBlackAddActivity" android:screenOrientation="1" android:theme="@7F0E0026">
+</activity>
+<activity android:configChanges="0x000000A0" android:name=".lenovoAntiSpam.views.ManLocalBlackAddContract" android:screenOrientation="1" android:theme="@7F0E0026">
+</activity>
+<activity android:configChanges="0x000000A0" android:name=".lenovoAntiSpam.views.ManLocalWhiteActivity" android:screenOrientation="1" android:theme="@7F0E0026">
+</activity>
+<activity android:configChanges="0x000000A0" android:name=".lenovoAntiSpam.views.ManAddWhiteContract" android:screenOrientation="1" android:theme="@7F0E0026">
+</activity>
+<activity android:launchMode="2" android:name="com.lenovo.safecenter.ww.lenovoAntiSpam.newview.AntiSpanActivity" android:screenOrientation="1" android:theme="@7F0E0026">
+</activity>
+<activity android:name=".lenovoAntiSpam.newview.SignActivity" android:screenOrientation="1" android:theme="@7F0E0026">
+</activity>
+<activity android:name=".lenovoAntiSpam.newview.HarassSet" android:screenOrientation="1" android:theme="@7F0E0026">
+</activity>
+<activity android:excludeFromRecents="true" android:name=".safemode.SofeModeMain" android:screenOrientation="1" android:theme="@7F0E0026">
+<intent-filter>
+<action android:name="com.lenovo.safecenter.privatezone">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<service android:name=".broadcast.SafePaymenUninstallService">
+</service>
+<activity android:name="com.lenovo.lps.sus.control.SUSPromptActivity" android:theme="@android:0103000F">
+</activity>
+<activity android:name="com.lenovo.lps.sus.control.SUSCustdefNotificationActivity" android:theme="@7F0E0008">
+</activity>
+<activity android:name="com.lenovo.lps.sus.control.SUSNotificationActivity" android:theme="@android:0103000F">
+</activity>
+<receiver android:name="com.lenovo.lps.sus.control.SUSReceiver">
+<intent-filter>
+<action android:name="com.lenovo.lps.sus.ACTION_UPDATE">
+</action>
+</intent-filter>
+</receiver>
+<activity android:launchMode="2" android:name=".net.TrafficDailog" android:screenOrientation="1" android:theme="@7F0E0008">
+</activity>
+<activity android:launchMode="2" android:name=".net.TrafficShowDataDailog" android:screenOrientation="1" android:theme="@7F0E0008">
+</activity>
+<activity android:launchMode="2" android:name=".net.LowLevelNetFilter" android:screenOrientation="1" android:theme="@7F0E0026">
+</activity>
+<activity android:launchMode="2" android:name=".net.NetFilter" android:screenOrientation="1" android:theme="@7F0E0026">
+</activity>
+<activity android:launchMode="2" android:name=".appsManager.SmsSettingsActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="2" android:name=".net.TrafficStatistics" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.lenovo.safecenter.net.traffic">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:launchMode="2" android:name=".net.doublemode.TrafficStatisticsDoubleMode" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="2" android:name=".net.doublemode.NetSetting" android:screenOrientation="1" android:theme="@7F0E0026">
+<intent-filter>
+<action android:name="com.lenovo.safecenter.net.setting">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:launchMode="2" android:name=".MainTab.HelpActivity" android:screenOrientation="1" android:theme="@7F0E0026">
+</activity>
+<activity android:name=".appsManager.SettingsActivity" android:screenOrientation="1" android:theme="@7F0E0026">
+</activity>
+<activity android:name=".MainTab.labUpdateDialogActivity" android:screenOrientation="1" android:theme="@7F0E0008">
+</activity>
+<activity android:name=".lenovoAntiSpam.newview.FirstSignActivity" android:screenOrientation="1" android:theme="@7F0E0008">
+</activity>
+<activity android:launchMode="3" android:name=".lenovoAntiSpam.newview.FirstHarssActivity" android:screenOrientation="1" android:theme="@7F0E0008">
+</activity>
+<activity android:name=".lenovoAntiSpam.newview.ShowConfirm" android:screenOrientation="1" android:theme="@7F0E0008">
+</activity>
+<activity android:name=".lenovoAntiSpam.views.SpamConfirm" android:screenOrientation="1" android:theme="@7F0E0008">
+</activity>
+<activity android:name=".usermode.AppUninstall" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.lenovo.safecenter.appuninstall">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<receiver android:name=".antitheft.BootBroadcast">
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+<action android:name="android.intent.action.SIM_STATE_CHANGED">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name=".antitheft.NoticeBroadcast">
+<intent-filter>
+<action android:name="android.intent.action.LOCALE_CHANGED">
+</action>
+<action android:name="lenovo.use.permission.denied">
+</action>
+<action android:name="com.safecenter.broadcast.openChildMode">
+</action>
+<action android:name="com.safecenter.broadcast.openPrivacyMode">
+</action>
+<action android:name="com.safecenter.broadcast.openGuestMode">
+</action>
+<action android:name="com.lenovo.safecenter.view.DialogActivity">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name=".broadcast.AppBroadcast">
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_ADDED">
+</action>
+<action android:name="android.intent.action.PACKAGE_REMOVED">
+</action>
+<action android:name="android.intent.action.PACKAGE_REPLACED">
+</action>
+<data android:scheme="package">
+</data>
+</intent-filter>
+</receiver>
+<receiver android:name=".broadcast.HarassLogBroadcast">
+<intent-filter>
+<action android:name="ACTION_BLACK_MESSAGE">
+</action>
+<action android:name="ACTION_BLACK_PHONE">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name=".broadcast.SmsBroadcast">
+<intent-filter>
+<action android:name="lenovo.backgroud.sendsms">
+</action>
+<action android:name="SENT_SMS_ACTION">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name=".support.SMSCheckReceiver">
+<intent-filter android:priority="2147483647">
+<action android:name="android.provider.Telephony.LESAFE_SMS_RECEIVED">
+</action>
+<action android:name="android.provider.Telephony.SMS_RECEIVED">
+</action>
+<action android:name="android.provider.Telephony.SMS_RECEIVED_ON_SIM">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</receiver>
+<receiver android:name=".support.OutPhoneReceiver">
+<intent-filter>
+<action android:name="android.intent.action.NEW_OUTGOING_CALL">
+</action>
+<action android:name="android.intent.action.USER_PRESENT">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name=".support.CheckInterChangeReceiver">
+<intent-filter>
+<action android:name="com.lenovo.antispam.blackperson.change">
+</action>
+<action android:name="com.lenovo.antispam.whiteperson.change">
+</action>
+<action android:name="com.lenovo.antispam.netperson.change">
+</action>
+<action android:name="com.lenovo.securityperson.change">
+</action>
+<action android:name="com.lenovo.antispam.blackperson.provider.change">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name=".utils.updateLab.UpdateLabReceiver">
+<intent-filter>
+<action android:name="com.lenovo.antispam.blackupdateresult">
+</action>
+<action android:name="com.lenovo.antispam.blackqueryresult">
+</action>
+<action android:name="com.lenovo.antispam.sysupdateresult">
+</action>
+<action android:name="com.lenovo.antispam.sysqueryresult">
+</action>
+<action android:name="com.lenovo.safecenter.Broadcast.updateLab">
+</action>
+<action android:name="com.lenovo.antispam.signcallupdateresult">
+</action>
+<action android:name="com.lenovo.antispam.signcallqueryresult">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name=".utils.updateLab.WifiConnectedReceiver">
+<intent-filter>
+<action android:name="android.net.wifi.STATE_CHANGE">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name=".broadcast.UpdateTrafficReceiver">
+<intent-filter>
+<action android:name="com.lenovo.safecenter.updatetrafficbar.broadcast">
+</action>
+<action android:name="com.lenovo.safecenter.init.trafficbar">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name=".net.support.BootBroadcast" android:permission="android.permission.RECEIVE_BOOT_COMPLETED">
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+<action android:name="android.intent.action.ACTION_SHUTDOWN">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_ADDED">
+</action>
+<action android:name="android.intent.action.PACKAGE_REMOVED">
+</action>
+<data android:scheme="package">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+<action android:name="com.lenovo.safecenter.traffic.correction">
+</action>
+<action android:name="android.intent.action.AIRPLANE_MODE">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name=".support.MMSReceiver">
+<intent-filter android:priority="2147483647">
+<action android:name="android.provider.Telephony.WAP_PUSH_RECEIVED">
+</action>
+<data android:mimeType="application/vnd.wap.mms-message">
+</data>
+</intent-filter>
+</receiver>
+<service android:name=".broadcast.AlarmService" android:process=":remote">
+<intent-filter>
+<action android:name="com.lenovo.antitheft.ALARM">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</service>
+<service android:name=".broadcast.sendMsgService" android:process=":remote">
+<intent-filter>
+<action android:name="com.lenovo.antitheft.SENDMESSAGE">
+</action>
+</intent-filter>
+</service>
+<service android:name=".broadcast.SendSmsService">
+</service>
+<service android:exported="false" android:name=".support.SecurityService">
+</service>
+<service android:name=".support.SafeCenterService">
+</service>
+<service android:name=".lenovoAntiSpam.support.DownSysService">
+<intent-filter>
+<action android:name="com.lenovo.antispam.sysupdate">
+</action>
+<action android:name="com.lenovo.antispam.sysquery">
+</action>
+</intent-filter>
+</service>
+<service android:name=".lenovoAntiSpam.support.DownNetBlackService">
+<intent-filter>
+<action android:name="com.lenovo.antispam.netblackupdate">
+</action>
+<action android:name="com.lenovo.antispam.netblackquery">
+</action>
+</intent-filter>
+</service>
+<service android:name=".lenovoAntiSpam.support.DownSignCallService">
+<intent-filter>
+<action android:name="com.lenovo.antispam.signcallquery">
+</action>
+<action android:name="com.lenovo.antispam.signcallupdate">
+</action>
+</intent-filter>
+</service>
+<service android:name=".lenovoAntiSpam.support.UpdateService">
+</service>
+<service android:name=".lenovoAntiSpam.support.PhoneListenService">
+</service>
+<service android:name=".broadcast.LaboratoryInstallJudgeService">
+</service>
+<service android:name=".broadcast.SafePaymentInstallJudgeService">
+</service>
+<service android:name=".broadcast.FormatSDService">
+</service>
+<service android:name=".broadcast.LockScreenService">
+<intent-filter>
+<action android:name="com.lenovo.safecenter.lockscreenservice">
+</action>
+</intent-filter>
+</service>
+<service android:name=".net.support.InitializeService">
+<intent-filter>
+<action android:name="com.lenovo.safecenter.traffic.service.RTC">
+</action>
+<action android:name="com.lenovo.safecenter.deletetraffic.service.RTC">
+</action>
+<action android:name="com.lenovo.safecenter.updatetrafficbar.service.RTC">
+</action>
+<action android:name="com.lenovo.safecenter.correct.traffic.SIM.service.RTC">
+</action>
+<action android:name="com.lenovo.safecenter.correct.traffic.SIM2.service.RTC">
+</action>
+<action android:name="com.lenovo.safecenter.notice.traffic.ui.service.RTC">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</service>
+<service android:name=".broadcast.CheckPermissionService">
+</service>
+<service android:name="com.lenovo.safecenter.aidl.killvirus.RemoteScanVirusService" android:process=":remote">
+<intent-filter>
+<action android:name="com.lenovo.safecenter.aidl.killvirus.RemoteScanVirus">
+</action>
+</intent-filter>
+</service>
+<service android:name="com.lenovo.safecenter.aidl.healthcheck.RemoteHealthCheckService" android:permission="com.lenovo.safecenter.permission.RemoteHealthCheck" android:process=":remote">
+<intent-filter>
+<action android:name="com.lenovo.safecenter.aidl.healthcheck.RemoteHealthCheck">
+</action>
+</intent-filter>
+</service>
+<provider android:authorities="com.lenovo.safecenter.AppsPermission" android:exported="true" android:name=".providers.AppsPermissionProvider">
+</provider>
+<provider android:authorities="com.lenovo.safecenter.HarassProvider" android:exported="true" android:name=".providers.HarssLogProvider">
+</provider>
+<provider android:authorities="com.lenovo.safecenter.whiteperson" android:exported="true" android:name=".providers.WhitePersonProvider">
+</provider>
+<provider android:authorities="com.lenovo.safecenter.netBlackProvider" android:exported="true" android:name=".lenovoAntiSpam.provider.NetBlackProvider">
+</provider>
+<provider android:authorities="com.lenovo.safecenter.LocalBlackProvider" android:exported="true" android:name=".lenovoAntiSpam.provider.LocalBlackProvider">
+</provider>
+<provider android:authorities="com.lenovo.safecenter.WhitePersonProvider" android:exported="true" android:name=".lenovoAntiSpam.provider.WhitePersonProvider">
+</provider>
+<activity android:configChanges="0x000000A0" android:launchMode="2" android:name="com.lenovo.performancecenter.performance.TaskManagerActivity" android:screenOrientation="1" android:theme="@7F0E0026">
+</activity>
+<activity android:configChanges="0x000000A0" android:launchMode="2" android:name="com.lenovo.performancecenter.performance.BootSpeedActivity" android:screenOrientation="1" android:theme="@7F0E0026">
+</activity>
+<activity android:configChanges="0x000000A0" android:launchMode="2" android:name="com.lenovo.performancecenter.performance.PerfWhitelistActivity" android:screenOrientation="1" android:theme="@7F0E0026">
+</activity>
+<activity android:configChanges="0x000000A0" android:launchMode="2" android:name="com.lenovo.performancecenter.performance.ClearCacheActivity" android:screenOrientation="1" android:theme="@7F0E0026">
+</activity>
+<activity android:configChanges="0x000000A0" android:launchMode="2" android:name="com.lenovo.performancecenter.performance.PhoneAccelerateActivity" android:screenOrientation="1" android:theme="@7F0E004F">
+</activity>
+<receiver android:name="com.lenovo.performancecenter.service.object.KillAllPackageReceiver">
+<intent-filter>
+<action android:name="com.lenovo.safecenter.PERFORMANCE_KILL_ALL_PROCESSES">
+</action>
+<action android:name="com.lenovo.safecenter.PERFORMANCE_KILL_SINGLE_PROCESS">
+</action>
+<action android:name="com.lenovo.safecenter.widget.RECORD_KILL_EVENT">
+</action>
+</intent-filter>
+</receiver>
+<service android:name="com.lenovo.performancecenter.framework.CustomerWhiteListService">
+<intent-filter>
+<action android:name="com.lenovo.performancecenter.framework.CustomerWhiteListService">
+</action>
+</intent-filter>
+</service>
+<receiver android:name="com.lenovo.performancecenter.framework.LeemCenterReceiver">
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+<action android:name="com.lenovo.safecenter.activityswitch">
+</action>
+</intent-filter>
+</receiver>
+<activity android:excludeFromRecents="true" android:icon="@7F02028F" android:label="@7F0D0836" android:launchMode="3" android:name=".shortcut.CleanAcitivty" android:theme="@7F0E004E">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+</intent-filter>
+</activity>
+<service android:name=".shortcut.CleanViewService">
+</service>
+<provider android:authorities="com.lenovo.safecenter.password" android:exported="true" android:name=".providers.password">
+</provider>
+<activity android:configChanges="0x000000A0" android:name=".MainTab.AppDownloadActivity" android:screenOrientation="1">
+</activity>
+<activity android:name=".notificationintercept.NotificationTabActivity" android:screenOrientation="1">
+</activity>
+<activity android:name=".notificationintercept.NotificationRecordActivity" android:screenOrientation="1">
+</activity>
+<activity android:name=".notificationintercept.AdManager" android:screenOrientation="1">
+</activity>
+<receiver android:name=".broadcast.KillAppBroadcast">
+<intent-filter>
+<action android:name="com.lenovo.safecenter.clearapp">
+</action>
+<data android:scheme="package">
+</data>
+</intent-filter>
+</receiver>
+<receiver android:name=".mmsutils.PushReceiver" android:permission="android.permission.BROADCAST_WAP_PUSH">
+<intent-filter android:priority="2147483647">
+<action android:name="android.provider.Telephony.WAP_PUSH_RECEIVED">
+</action>
+<data android:mimeType="application/vnd.wap.mms-message">
+</data>
+<data android:mimeType="application/vnd.wap.slc">
+</data>
+<data android:mimeType="application/vnd.wap.sic">
+</data>
+</intent-filter>
+</receiver>
+<activity android:name=".MainTab.QuestionAndAnswer" android:screenOrientation="1">
+</activity>
+<activity android:name=".lenovoAntiSpam.newview.NumberArea" android:screenOrientation="1" android:theme="@7F0E004F">
+</activity>
+<activity android:name="com.lenovo.safecenter.ww.systeminfo.ui.activity.CommonNumberActivity" android:screenOrientation="1" android:theme="@7F0E004F">
+</activity>
+<activity android:name="com.lenovo.safecenter.ww.systeminfo.ui.activity.SystemExamActivity" android:screenOrientation="1" android:theme="@7F0E004F">
+</activity>
+<activity android:name="com.lenovo.safecenter.ww.systeminfo.ui.activity.ScreenTestActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.lenovo.safecenter.ww.systeminfo.ui.activity.DailyTools" android:screenOrientation="1" android:theme="@7F0E004F">
+</activity>
+<activity android:launchMode="3" android:name=".floatwindow.view.FloatwindowCache" android:theme="@7F0E001E">
+</activity>
+<activity android:name=".MainTab.AppLockMustUpdateDialogActivity" android:screenOrientation="1" android:theme="@7F0E0008">
+</activity>
+<activity android:name=".usermode.RootIntroduction">
+</activity>
+<service android:name=".utils.update.LeSafeDownLoadApk">
+</service>
+<receiver android:name=".usermode.SafeHomePageBroadcast">
+<intent-filter>
+<action android:name="com.lenovo.safecenter.activityswitch">
+</action>
+</intent-filter>
+</receiver>
+<activity android:name=".lenovoAntiSpam.newview.WhiteABlackMain" android:screenOrientation="1" android:theme="@7F0E0026">
+<intent-filter>
+<action android:name="com.lenovo.safecenter.manblack">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="com.lenovo.safecenter.manwhite">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:name=".safemode.EditSettingActivity" android:noHistory="true" android:screenOrientation="1" android:theme="@7F0E0026">
+</activity>
+<provider android:authorities="com.lenovo.performancecenter.provider.querywhitelist" android:exported="true" android:name="com.lenovo.performancecenter.db.WhitelistProvider" android:process="com.lenovo.safecenter.whitelist">
+</provider>
+</application>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERACT_ACROSS_USERS">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERACT_ACROSS_USERS_FULL">
+</uses-permission>
+<uses-permission android:name="android.permission.MANAGE_USERS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_CONTACTS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_SMS">
+</uses-permission>
+<uses-permission android:name="android.permission.CALL_PHONE">
+</uses-permission>
+<uses-permission android:name="android.permission.SEND_SMS">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_SMS">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_MMS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_CALENDAR">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_CALENDAR">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_CONTACTS">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SMS">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES">
+</uses-permission>
+<uses-permission android:name="android.permission.BROADCAST_PACKAGE_REMOVED">
+</uses-permission>
+<uses-permission android:name="android.permission.RESTART_PACKAGES">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="com.android.browser.permission.READ_HISTORY_BOOKMARKS">
+</uses-permission>
+<uses-permission android:name="com.android.browser.permission.WRITE_HISTORY_BOOKMARKS">
+</uses-permission>
+<uses-permission android:name="android.permission.FORCE_STOP_PACKAGES">
+</uses-permission>
+<uses-permission android:name="android.permission.PACKAGE_USAGE_STATS">
+</uses-permission>
+<uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.MODIFY_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-permission android:name="android.permission.STATUS_BAR_SERVICE">
+</uses-permission>
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_NETWORK_USAGE_HISTORY">
+</uses-permission>
+<uses-permission android:name="android.permission.DELETE_PACKAGES">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_PACKAGE_SIZE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_LOGS">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-permission android:name="android.permission.MOUNT_FORMAT_FILESYSTEMS">
+</uses-permission>
+<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS">
+</uses-permission>
+<uses-permission android:name="android.permission.BROADCAST_WAP_PUSH">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_WAP_PUSH">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.BATTERY_STATUS">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.BLUETOOTH_ADMIN">
+</uses-permission>
+<uses-permission android:name="android.permission.BLUETOOTH">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.FORCE_STOP_PACKAGES">
+</uses-permission>
+<uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.DEVICE_POWER">
+</uses-permission>
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW">
+</uses-permission>
+<uses-permission android:name="android.permission.DELETE_CACHE_FILES">
+</uses-permission>
+<uses-permission android:name="android.permission.BROADCAST_PACKAGE_REMOVED">
+</uses-permission>
+<uses-permission android:name="android.permission.RESTART_PACKAGES">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.PACKAGE_USAGE_STATS">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.MODIFY_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS">
+</uses-permission>
+<uses-permission android:name="android.permission.STATUS_BAR_SERVICE">
+</uses-permission>
+<uses-permission android:name="android.permission.SET_ACTIVITY_WATCHER">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_MEDIA_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.MASTER_CLEAR">
+</uses-permission>
+<uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT">
+</uses-permission>
+<uses-permission android:name="com.android.launcher.permission.UNINSTALL_SHORTCUT">
+</uses-permission>
+<uses-permission android:name="com.android.launcher.permission.READ_SETTINGS">
+</uses-permission>
+<uses-permission android:name="com.lenovo.launcher.permission.READ_SETTINGS">
+</uses-permission>
+<uses-permission android:name="com.lenovo.launcher.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.MOVE_PACKAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.CLEAR_APP_CACHE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_SATAE">
+</uses-permission>
+<uses-permission android:name="android.permission.BATTERY_STATUS">
+</uses-permission>
+<uses-permission android:name="android.permission.BLUETOOTH">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_CALL_LOG">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_CALL_LOG">
+</uses-permission>
+<uses-permission android:name="com.lenovo.launcher.permission.READ_SETTINGS">
+</uses-permission>
+<uses-permission android:name="com.lenovo.launcher.permission.WRITE_SETTINGS">
+</uses-permission>
+<instrumentation android:label="test my app" android:name="android.test.InstrumentationTestRunner" android:targetPackage="com.lenovo.safecenter.ww">
+</instrumentation>
+</manifest>

@@ -1,0 +1,354 @@
+<?xml version="1.0" ?><manifest android:compileSdkVersion="29" android:compileSdkVersionCodename="R" android:installLocation="0" android:versionCode="65000462" android:versionName="6.5.0.RC04.292618770" package="com.google.android.apps.translate" platformBuildVersionCode="29" platformBuildVersionName="R" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="21" android:targetSdkVersion="28">
+</uses-sdk>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.BLUETOOTH">
+</uses-permission>
+<uses-permission-sdk-23 android:name="android.permission.BLUETOOTH_ADMIN">
+</uses-permission-sdk-23>
+<uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.RECORD_AUDIO">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.FOREGROUND_SERVICE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="android.permission.USE_CREDENTIALS">
+</uses-permission>
+<uses-permission android:name="android.permission.MANAGE_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-permission android:name="android.permission.NFC">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_PACKAGE_SIZE">
+</uses-permission>
+<uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES">
+</uses-permission>
+<uses-feature android:name="android.hardware.camera" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.screen.portrait" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.bluetooth" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.wifi" android:required="false">
+</uses-feature>
+<application android:allowBackup="true" android:backupAgent="com.google.android.apps.translate.util.GTBackupAgent" android:fullBackupOnly="false" android:hardwareAccelerated="true" android:icon="@7F0F0000" android:label="@7F120031" android:name="com.google.android.apps.translate.TranslateApplication" android:supportsRtl="true" android:theme="@7F13000F" android:usesCleartextTraffic="true">
+<meta-data android:name="com.google.android.gms.version" android:value="@7F0B0014">
+</meta-data>
+<meta-data android:name="com.google.android.backup.api_key" android:value="AEdPqrEAAAAICyB4vp_AvCcGfr-AWm44pvEvMBOmKD4qCEAhsw">
+</meta-data>
+<meta-data android:name="com.google.android.gms.phenotype.registration.xml" android:resource="@7F150000">
+</meta-data>
+<uses-library android:name="org.apache.http.legacy" android:required="false">
+</uses-library>
+<activity android:configChanges="0x00000DA0" android:documentLaunchMode="3" android:exported="true" android:label="@7F120031" android:name="com.google.android.apps.translate.TranslateActivity" android:recreateOnConfigChanges="0x00000003" android:theme="@7F130010" android:windowSoftInputMode="0x00000030">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="translate.google.com" android:path="/" android:scheme="http">
+</data>
+<data android:host="translate.google.com" android:path="/" android:scheme="https">
+</data>
+<data android:host="translate.google.com" android:path="/m" android:scheme="http">
+</data>
+<data android:host="translate.google.com" android:path="/m" android:scheme="https">
+</data>
+<data android:host="translate.google.com" android:path="/m/translate" android:scheme="http">
+</data>
+<data android:host="translate.google.com" android:path="/m/translate" android:scheme="https">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<action android:name="android.nfc.action.NDEF_DISCOVERED">
+</action>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:host="*" android:pathPrefix="/open" android:scheme="googletranslate">
+</data>
+<data android:host="*" android:pathPrefix="/with_inputmethod" android:scheme="googletranslate">
+</data>
+<data android:host="*" android:pathPrefix="/configure" android:scheme="googletranslate">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.SEND">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:mimeType="text/plain">
+</data>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x00000DB0" android:name="com.google.android.apps.translate.inputs.KeyboardHandwritingActivity" android:parentActivityName="com.google.android.apps.translate.TranslateActivity" android:theme="@7F130139">
+</activity>
+<activity android:configChanges="0x00000DB0" android:name="com.google.android.apps.translate.inputs.VoiceInputActivity" android:parentActivityName="com.google.android.apps.translate.TranslateActivity" android:theme="@7F13030B">
+</activity>
+<activity android:configChanges="0x00000D30" android:exported="false" android:launchMode="2" android:name="com.google.android.apps.translate.inputs.ContinuousTranslateActivity" android:parentActivityName="com.google.android.apps.translate.TranslateActivity" android:screenOrientation="13" android:theme="@7F13030B">
+</activity>
+<activity android:exported="false" android:label="@7F120349" android:name="com.google.android.apps.translate.inputs.ContinuousTranslateTranscriptActivity" android:parentActivityName="com.google.android.apps.translate.TranslateActivity">
+</activity>
+<service android:exported="false" android:name="com.google.android.apps.translate.inputs.ContinuousTranslateService">
+</service>
+<activity android:configChanges="0x00000D30" android:exported="false" android:launchMode="2" android:name="com.google.android.apps.translate.inputs.SavedContinuousTranslateActivity" android:parentActivityName="com.google.android.apps.translate.inputs.ContinuousTranslateTranscriptActivity" android:screenOrientation="10" android:theme="@7F13030B">
+</activity>
+<activity android:exported="false" android:label="@7F1201AA" android:name="com.google.android.apps.translate.inputs.ConversationIntroActivity" android:theme="@7F13030A">
+</activity>
+<activity android:configChanges="0x00000580" android:hardwareAccelerated="true" android:immersive="true" android:label="@7F120156" android:name="com.google.android.apps.translate.inputs.OpticsInputActivity" android:parentActivityName="com.google.android.apps.translate.TranslateActivity" android:theme="@7F13015E">
+</activity>
+<activity android:label="@7F1201D8" android:name="com.google.android.apps.translate.inputs.PhrasebookActivity" android:parentActivityName="com.google.android.apps.translate.TranslateActivity">
+</activity>
+<activity android:label="@7F12018C" android:name="com.google.android.apps.translate.inputs.FlashcardActivity" android:parentActivityName="com.google.android.apps.translate.inputs.PhrasebookActivity" android:screenOrientation="1">
+</activity>
+<activity android:excludeFromRecents="true" android:exported="false" android:name="com.google.android.apps.translate.OnboardingActivity" android:theme="@7F13012A">
+</activity>
+<activity android:exported="false" android:name="com.google.android.apps.translate.RestorePackagesActivity" android:theme="@7F13012A">
+</activity>
+<activity android:name="com.google.android.apps.translate.languagepicker.LanguagePickerActivity" android:parentActivityName="com.google.android.apps.translate.TranslateActivity" android:theme="@7F13013D">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.google.android.apps.translate.TranslateActivity">
+</meta-data>
+</activity>
+<activity android:exported="false" android:name="com.google.android.apps.translate.optics.OpticsOnboardingActivity" android:parentActivityName="com.google.android.apps.translate.TranslateActivity" android:theme="@7F13015F">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.google.android.apps.translate.TranslateActivity">
+</meta-data>
+</activity>
+<activity android:excludeFromRecents="true" android:exported="false" android:name="com.google.userfeedback.android.api.UserFeedbackActivity" android:theme="@android:0103000B" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:excludeFromRecents="true" android:exported="false" android:name="com.google.userfeedback.android.api.PreviewActivity" android:theme="@android:0103000B">
+</activity>
+<activity android:excludeFromRecents="true" android:exported="false" android:name="com.google.userfeedback.android.api.ShowTextActivity" android:theme="@android:0103000B">
+</activity>
+<activity android:excludeFromRecents="true" android:exported="false" android:name="com.google.userfeedback.android.api.ShowStringListActivity" android:theme="@android:0103000B">
+</activity>
+<service android:exported="false" android:name="com.google.userfeedback.android.api.SendUserFeedbackService">
+</service>
+<activity android:exported="true" android:label="@7F120475" android:name="com.google.android.libraries.social.licenses.LicenseMenuActivity" android:theme="@7F130247">
+</activity>
+<activity android:excludeFromRecents="true" android:exported="false" android:name="com.google.android.apps.translate.help.HelpActivity">
+</activity>
+<service android:exported="false" android:name="com.google.android.apps.translate.phrasebook.PhraseSyncService">
+</service>
+<activity android:exported="false" android:label="@7F120305" android:name="com.google.android.apps.translate.pref.SettingsActivity" android:parentActivityName="com.google.android.apps.translate.TranslateActivity">
+</activity>
+<activity android:label="@7F1201BD" android:name="com.google.android.apps.translate.offline.OfflineManagerActivity" android:parentActivityName="com.google.android.apps.translate.TranslateActivity">
+</activity>
+<activity android:excludeFromRecents="true" android:exported="false" android:name="com.google.android.apps.translate.offline.OfflineDialogActivity" android:theme="@7F13012A">
+</activity>
+<receiver android:exported="true" android:name="com.google.android.apps.translate.offline.OfflineDownloadReceiver">
+<intent-filter>
+<action android:name="android.intent.action.DOWNLOAD_NOTIFICATION_CLICKED">
+</action>
+<action android:name="android.intent.action.DOWNLOAD_COMPLETE">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:exported="true" android:name="com.google.android.apps.translate.TranslateAPIReceiver">
+<intent-filter>
+<action android:name="android.intent.action.EDIT">
+</action>
+<data android:host="*" android:path="/lang_pair" android:scheme="googletranslate">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="*" android:path="/support_for_lang" android:scheme="googletranslate">
+</data>
+</intent-filter>
+</receiver>
+<receiver android:exported="true" android:name="com.google.android.apps.translate.StorageReceiver">
+<intent-filter>
+<action android:name="android.intent.action.MEDIA_MOUNTED">
+</action>
+<action android:name="android.intent.action.MEDIA_UNMOUNTED">
+</action>
+<action android:name="android.intent.action.MEDIA_BAD_REMOVAL">
+</action>
+<action android:name="android.intent.action.MEDIA_EJECT">
+</action>
+<action android:name="android.intent.action.MEDIA_REMOVED">
+</action>
+<action android:name="android.intent.action.MEDIA_SHARED">
+</action>
+<action android:name="android.intent.action.MEDIA_UNMOUNTABLE">
+</action>
+<data android:scheme="file">
+</data>
+</intent-filter>
+</receiver>
+<activity android:exported="true" android:name="com.google.android.apps.translate.LauncherShortcuts" android:theme="@7F1301C4">
+<intent-filter>
+<action android:name="android.intent.action.CREATE_SHORTCUT">
+</action>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:label="@7F120553" android:name="com.google.android.apps.translate.wordy.WordyWelcomeActivity" android:screenOrientation="7">
+</activity>
+<receiver android:name="com.google.android.apps.translate.wordy.WordyAlarmReceiver">
+</receiver>
+<activity android:exported="false" android:label="@7F120171" android:name="com.google.android.apps.translate.copydrop.CopyDropWelcomeActivity" android:screenOrientation="7">
+</activity>
+<service android:enabled="true" android:name="com.google.android.apps.translate.copydrop.CopyDropService" android:process=":copydrop">
+</service>
+<activity android:excludeFromRecents="true" android:exported="true" android:label="@7F12014D" android:name="com.google.android.apps.translate.copydrop.CopyDropActivity" android:process=":copydrop" android:taskAffinity=".copydrop" android:theme="@7F130128">
+</activity>
+<activity android:excludeFromRecents="true" android:label="@7F120171" android:name="com.google.android.apps.translate.copydrop.CopyDropInAppActivity" android:theme="@7F130128">
+</activity>
+<activity android:excludeFromRecents="true" android:exported="true" android:label="@7F12014D" android:name="com.google.android.apps.translate.copydrop.CopyDropContextMenuActivity" android:taskAffinity=".copydrop" android:theme="@7F130128">
+<intent-filter>
+<action android:name="android.intent.action.TRANSLATE">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.PROCESS_TEXT">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:mimeType="text/plain">
+</data>
+</intent-filter>
+</activity>
+<activity android:exported="true" android:multiprocess="false" android:name="com.google.android.apps.translate.copydrop.GetOfflineSpecActivity" android:theme="@android:01030010">
+</activity>
+<receiver android:name="com.google.android.apps.translate.RebootReceiver">
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.MY_PACKAGE_REPLACED">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name="com.google.android.apps.translate.NotificationDismissReceiver">
+<intent-filter>
+<action android:name="copydrop_action_dismiss">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="wordy_action_dismiss">
+</action>
+</intent-filter>
+</receiver>
+<provider android:authorities="com.google.android.libraries.translate.provider.multiprocessprofile" android:exported="false" android:label="@7F120031" android:name="com.google.android.libraries.translate.settings.MultiprocessProfile">
+</provider>
+<provider android:authorities="com.google.android.apps.translate.offline.fileprovider" android:exported="false" android:grantUriPermissions="true" android:name="com.google.android.apps.translate.util.SafeFileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F150001">
+</meta-data>
+</provider>
+<receiver android:name="com.google.android.apps.translate.phenotype.PhenotypeBroadcastReceiver">
+<intent-filter>
+<action android:name="com.google.android.gms.phenotype.UPDATE">
+</action>
+</intent-filter>
+</receiver>
+<service android:exported="true" android:name="com.google.android.apps.translate.inputs.BistoAudioInputService">
+<intent-filter>
+<action android:name="com.google.android.apps.translate.action.BIND_CONVERSATION_MODE">
+</action>
+</intent-filter>
+</service>
+<receiver android:enabled="false" android:exported="true" android:name="com.google.android.apps.translate.inputs.BistoBroadcastReceiver">
+<intent-filter>
+<action android:name="com.google.android.apps.gsa.shared.bisto.action.SDK_REQUEST">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:exported="true" android:name="com.google.android.apps.translate.inputs.BistoBackgroundSessionReceiver">
+<intent-filter>
+<action android:name="com.google.android.apps.gsa.shared.bisto.action.SDK_BACKGROUND_ACTION">
+</action>
+</intent-filter>
+</receiver>
+<service android:exported="true" android:name="com.google.android.apps.translate.inputs.BistoSessionService">
+<intent-filter>
+<action android:name="com.google.android.apps.gsa.shared.bisto.action.BIND_BISTO_SESSION">
+</action>
+</intent-filter>
+</service>
+<activity android:excludeFromRecents="true" android:exported="false" android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity" android:theme="@android:01030010">
+</activity>
+<service android:exported="true" android:name="com.google.android.gms.auth.api.signin.RevocationBoundService" android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION">
+</service>
+<activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:01030010">
+</activity>
+<activity android:excludeFromRecents="true" android:exported="false" android:name="com.google.android.libraries.hats20.SurveyPromptActivity" android:theme="@7F130133" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:exported="false" android:name="com.google.android.libraries.hats20.ShowSurveyActivity" android:theme="@7F130306">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<receiver android:exported="true" android:name="com.google.android.libraries.internal.growth.growthkit.inject.GrowthKitBootCompletedBroadcastReceiver">
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+<action android:name="android.intent.action.QUICKBOOT_POWERON">
+</action>
+<action android:name="android.intent.action.MY_PACKAGE_REPLACED">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:exported="true" android:name="com.google.android.libraries.internal.growth.growthkit.internal.debug.TestingToolsBroadcastReceiver">
+<intent-filter>
+<action android:name="com.google.android.libraries.internal.growth.growthkit.ADD_PROMO">
+</action>
+<action android:name="com.google.android.libraries.internal.growth.growthkit.ADD_PREVIEW_PROMO">
+</action>
+<action android:name="com.google.android.libraries.internal.growth.growthkit.LOG_DEBUG_DATA">
+</action>
+<action android:name="com.google.android.libraries.internal.growth.growthkit.SYNC">
+</action>
+<action android:name="com.google.android.libraries.internal.growth.growthkit.CLEAR_COUNTERS">
+</action>
+<action android:name="com.google.android.libraries.internal.growth.growthkit.FETCH_PROMOTIONS">
+</action>
+<action android:name="com.google.android.libraries.internal.growth.growthkit.FETCH_EVAL_RESULTS">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:exported="true" android:name="com.google.android.libraries.internal.growth.growthkit.internal.experiments.impl.PhenotypeBroadcastReceiver">
+<intent-filter>
+<action android:name="com.google.android.gms.phenotype.UPDATE">
+</action>
+</intent-filter>
+</receiver>
+<service android:exported="false" android:name="com.google.android.libraries.internal.growth.growthkit.internal.jobs.impl.MigratedGrowthKitJobService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<service android:exported="false" android:name="com.google.android.libraries.internal.growth.growthkit.internal.jobs.impl.GrowthKitBelowLollipopJobService">
+</service>
+<activity android:exported="false" android:label="@7F120475" android:name="com.google.android.libraries.social.licenses.LicenseActivity" android:theme="@7F130247">
+</activity>
+<provider android:authorities="com.google.android.apps.translate.lifecycle-process" android:exported="false" android:multiprocess="true" android:name="android.arch.lifecycle.ProcessLifecycleOwnerInitializer">
+</provider>
+</application>
+</manifest>

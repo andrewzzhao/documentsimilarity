@@ -1,0 +1,246 @@
+<?xml version="1.0" ?><manifest android:versionCode="122" android:versionName="1.2.2" package="com.suixingpay.posapp" platformBuildVersionCode="23" platformBuildVersionName="6.0-2704002" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="16" android:targetSdkVersion="22">
+</uses-sdk>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_CONFIGURATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS">
+</uses-permission>
+<uses-permission android:name="android.permission.MOUNT_FORMAT_FILESYSTEMS">
+</uses-permission>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-feature android:name="android.hardware.camera">
+</uses-feature>
+<uses-feature android:name="android.hardware.camera.autofocus">
+</uses-feature>
+<uses-feature android:name="android.hardware.camera.flash">
+</uses-feature>
+<permission android:name="com.suixingpay.posapp.permission.JPUSH_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="com.suixingpay.posapp.permission.JPUSH_MESSAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_USER_PRESENT">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE">
+</uses-permission>
+<uses-permission android:name="android.permission.FLASHLIGHT">
+</uses-permission>
+<meta-data android:name="android.support.VERSION" android:value="25.3.1">
+</meta-data>
+<application android:allowBackup="true" android:icon="@7F030000" android:label="@7F08009C" android:name="com.suixingpay.posapp.MainApplication" android:theme="@7F0A0090">
+<activity android:configChanges="0x000004B0" android:label="@7F08009C" android:name="com.suixingpay.posapp.MainActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000010">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:name="cn.cloudwalk.libproject.LiveResultActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.cloudwalk.libproject.LiveActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.cloudwalk.libproject.LiveStartActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.cloudwalk.libproject.BestFaceActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.facebook.react.devsupport.DevSettingsActivity">
+</activity>
+<meta-data android:name="JPUSH_CHANNEL" android:value="posapp_android_enterprise">
+</meta-data>
+<meta-data android:name="JPUSH_APPKEY" android:value="1259e882efcd8abb4c51daf3">
+</meta-data>
+<meta-data android:name="com.amap.api.v2.apikey" android:value="087ea0c9de7af3d18e27a42167c62870">
+</meta-data>
+<service android:name="com.amap.api.location.APSService">
+</service>
+<service android:enabled="true" android:exported="false" android:name="cn.jpush.android.service.PushService">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.REGISTER">
+</action>
+<action android:name="cn.jpush.android.intent.REPORT">
+</action>
+<action android:name="cn.jpush.android.intent.PushService">
+</action>
+<action android:name="cn.jpush.android.intent.PUSH_TIME">
+</action>
+</intent-filter>
+</service>
+<provider android:authorities="com.suixingpay.posapp.DataProvider" android:exported="true" android:name="cn.jpush.android.service.DataProvider">
+</provider>
+<receiver android:enabled="true" android:exported="false" android:name="cn.jpush.android.service.PushReceiver">
+<intent-filter android:priority="1000">
+<action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY">
+</action>
+<category android:name="com.suixingpay.posapp">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.USER_PRESENT">
+</action>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_ADDED">
+</action>
+<action android:name="android.intent.action.PACKAGE_REMOVED">
+</action>
+<data android:scheme="package">
+</data>
+</intent-filter>
+</receiver>
+<receiver android:name="cn.jpush.android.service.AlarmReceiver">
+</receiver>
+<activity android:configChanges="0x000000A0" android:exported="false" android:name="cn.jpush.android.ui.PushActivity" android:theme="@android:01030006">
+<intent-filter>
+<action android:name="cn.jpush.android.ui.PushActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="com.suixingpay.posapp">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:name="cn.jpush.android.ui.PopWinActivity" android:theme="@7F0A00C7">
+</activity>
+<service android:enabled="true" android:exported="false" android:name="cn.jpush.android.service.DownloadService">
+</service>
+<service android:enabled="true" android:exported="true" android:name="cn.jpush.android.service.DaemonService">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.DaemonService">
+</action>
+<category android:name="com.suixingpay.posapp">
+</category>
+</intent-filter>
+</service>
+<receiver android:enabled="true" android:name="cn.jpush.reactnativejpush.JPushModule$JPushReceiver">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.REGISTRATION">
+</action>
+<action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED">
+</action>
+<action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED">
+</action>
+<action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED">
+</action>
+<action android:name="cn.jpush.android.intent.ACTION_RICHPUSH_CALLBACK">
+</action>
+<action android:name="cn.jpush.android.intent.CONNECTION">
+</action>
+<category android:name="com.suixingpay.posapp">
+</category>
+</intent-filter>
+</receiver>
+<receiver android:name="cn.jpush.reactnativejpush.JPushModule$MyJPushMessageReceiver">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.RECEIVE_MESSAGE">
+</action>
+<category android:name="com.suixingpay.posapp">
+</category>
+</intent-filter>
+</receiver>
+<provider android:authorities="com.suixingpay.posapp.provider" android:exported="false" android:grantUriPermissions="true" android:name="android.support.v4.content.FileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F060002">
+</meta-data>
+</provider>
+<activity android:name="com.yalantis.ucrop.UCropActivity" android:screenOrientation="1" android:theme="@7F0A010D">
+</activity>
+<receiver android:enabled="true" android:exported="true" android:name="com.learnium.RNDeviceInfo.RNDeviceReceiver">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+<activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:01030010">
+</activity>
+<meta-data android:name="com.google.android.gms.version" android:value="@7F0E0003">
+</meta-data>
+<activity android:configChanges="0x000004A0" android:launchMode="0" android:name="com.yanzhenjie.permission.PermissionActivity" android:theme="@7F0A016B" android:windowSoftInputMode="0x00000003">
+</activity>
+<meta-data android:name="android.max_aspect" android:value="2.100000">
+</meta-data>
+<activity android:exported="false" android:name="com.kernal.passportreader.sdk.MainActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="kernal.idcard.MainActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.kernal.passportreader.sdk.CameraActivity" android:screenOrientation="0">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.kernal.passportreader.sdk.ScanIDCardCameraActivity" android:screenOrientation="0">
+</activity>
+<activity android:exported="false" android:name="com.kernal.passportreader.sdk.ShowResultActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+<intent-filter>
+<action android:name="kernal.idcard.ShowResultActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:name="com.kernal.passport.sdk.utils.PermissionActivity" android:screenOrientation="1">
+</activity>
+<service android:enabled="true" android:exported="false" android:name="kernal.idcard.android.AuthService">
+<intent-filter>
+<action android:name="kernal.idcard.authService">
+</action>
+</intent-filter>
+</service>
+<service android:enabled="true" android:exported="false" android:name="kernal.idcard.android.RecogService">
+<intent-filter>
+<action android:name="kernal.idcard.recogService">
+</action>
+</intent-filter>
+</service>
+<service android:enabled="true" android:exported="false" android:name="kernal.idcard.android.TimeService">
+<intent-filter>
+<action android:name="kernal.idcard.TimeService">
+</action>
+</intent-filter>
+</service>
+<receiver android:name="kernal.idcard.android.DataChangeReceiver">
+</receiver>
+<activity android:configChanges="0x000000A0" android:exported="false" android:name="kernal.idcard.android.IDCardBean" android:screenOrientation="0">
+<intent-filter>
+<action android:name="kernal.idcard">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+</application>
+</manifest>

@@ -1,0 +1,388 @@
+<?xml version="1.0" ?><manifest android:versionCode="230" android:versionName="3.0.12" package="com.thirdframestudios.android.expensoor" platformBuildVersionCode="26" platformBuildVersionName="8.0.0" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="15" android:targetSdkVersion="26">
+</uses-sdk>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_SYNC_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_SYNC_STATS">
+</uses-permission>
+<uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERACT_ACROSS_USERS_FULL">
+</uses-permission>
+<uses-permission android:name="com.android.vending.BILLING">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-permission android:name="android.permission.USE_FINGERPRINT">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<permission android:name="com.thirdframestudios.android.expensoor.permission.C2D_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="com.thirdframestudios.android.expensoor.permission.C2D_MESSAGE">
+</uses-permission>
+<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-feature android:glEsVersion="0x00020000" android:required="true">
+</uses-feature>
+<uses-feature android:name="android.hardware.touchscreen" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.location.gps">
+</uses-feature>
+<application android:allowBackup="false" android:hardwareAccelerated="true" android:icon="@7F030000" android:label="@7F090086" android:name="com.thirdframestudios.android.expensoor.App" android:theme="@7F0C003A">
+<uses-library android:name="com.sec.android.app.multiwindow" android:required="false">
+</uses-library>
+<meta-data android:name="com.sec.android.support.multiwindow" android:value="true">
+</meta-data>
+<meta-data android:name="com.sec.android.multiwindow.DEFAULT_SIZE_W" android:value="480dp">
+</meta-data>
+<meta-data android:name="com.sec.android.multiwindow.DEFAULT_SIZE_H" android:value="800dp">
+</meta-data>
+<meta-data android:name="com.sec.android.multiwindow.MINIMUM_SIZE_W" android:value="320dp">
+</meta-data>
+<meta-data android:name="com.sec.android.multiwindow.MINIMUM_SIZE_H" android:value="480dp">
+</meta-data>
+<meta-data android:name="android.max_aspect" android:value="2.100000">
+</meta-data>
+<service android:name="com.thirdframestudios.android.expensoor.sync.AuthenticatorService">
+<intent-filter>
+<action android:name="android.accounts.AccountAuthenticator">
+</action>
+</intent-filter>
+<meta-data android:name="android.accounts.AccountAuthenticator" android:resource="@7F070000">
+</meta-data>
+</service>
+<service android:exported="true" android:name="com.thirdframestudios.android.expensoor.sync.SyncService">
+<intent-filter>
+<action android:name="android.content.SyncAdapter">
+</action>
+</intent-filter>
+<meta-data android:name="android.content.SyncAdapter" android:resource="@7F070005">
+</meta-data>
+</service>
+<provider android:authorities="com.thirdframestudios.android.expensoor.provider" android:exported="false" android:name="com.thirdframestudios.android.expensoor.db.ToshlProvider" android:syncable="true">
+</provider>
+<provider android:authorities="com.thirdframestudios.android.expensoor.cache_directory_provider" android:exported="false" android:grantUriPermissions="true" android:name="android.support.v4.content.FileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F070001">
+</meta-data>
+</provider>
+<activity android:label="@7F090086" android:name="com.thirdframestudios.android.expensoor.Expensoor" android:screenOrientation="1" android:theme="@7F0C01F2">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+<category android:name="android.intent.category.MULTIWINDOW_LAUNCHER">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="toshl">
+</data>
+</intent-filter>
+<meta-data android:name="android.app.shortcuts" android:resource="@7F070003">
+</meta-data>
+</activity>
+<activity android:label="@7F090086" android:name="com.thirdframestudios.android.expensoor.activities.welcome.WelcomeActivity" android:screenOrientation="1" android:theme="@7F0C003E">
+</activity>
+<activity android:label="@7F090337" android:name="com.thirdframestudios.android.expensoor.activities.welcome.SignUpActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F09032D" android:name="com.thirdframestudios.android.expensoor.activities.welcome.LogInActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090086" android:name="com.thirdframestudios.android.expensoor.activities.welcome.MigrationActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090086" android:name="com.thirdframestudios.android.expensoor.activities.welcome.TutorialGreetingActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090086" android:name="com.thirdframestudios.android.expensoor.activities.welcome.TutorialMonthlyOverviewActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090086" android:name="com.thirdframestudios.android.expensoor.activities.welcome.ForgotPasswordActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090086" android:name="com.thirdframestudios.android.expensoor.activities.sync.SyncActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="" android:name="com.thirdframestudios.android.expensoor.activities.entry.edit.AddEntryActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+</intent-filter>
+</activity>
+<activity android:label="" android:name="com.thirdframestudios.android.expensoor.activities.budget.edit.EditBudgetActivity" android:screenOrientation="1" android:theme="@7F0C003B">
+</activity>
+<activity android:label="" android:name="com.thirdframestudios.android.expensoor.activities.budget.details.BudgetHistoryActivity" android:screenOrientation="1" android:theme="@7F0C003B">
+</activity>
+<activity android:label="@7F090086" android:name="com.thirdframestudios.android.expensoor.activities.MainActivity" android:screenOrientation="1" android:theme="@7F0C00CC">
+</activity>
+<activity android:label="@7F090086" android:name="com.thirdframestudios.android.expensoor.activities.budget.details.BudgetDetailsActivity" android:screenOrientation="1" android:theme="@7F0C003B">
+</activity>
+<activity android:label="@7F090086" android:name="com.thirdframestudios.android.expensoor.activities.budget.details.IncludedExpensesActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090086" android:name="com.thirdframestudios.android.expensoor.activities.entry.EntryDetailsActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090086" android:name="com.thirdframestudios.android.expensoor.activities.entry.review.EntriesReviewActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090086" android:name="com.thirdframestudios.android.expensoor.activities.SelectCurrencyActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090086" android:name="com.thirdframestudios.android.expensoor.activities.AddTagActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090086" android:name="com.thirdframestudios.android.expensoor.activities.AddCategoryActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090086" android:name="com.thirdframestudios.android.expensoor.activities.account.AccountAddActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090086" android:name="com.thirdframestudios.android.expensoor.activities.account.delete.AccountDeleteActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090086" android:name="com.thirdframestudios.android.expensoor.activities.account.delete.move.AccountMoveDataActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090086" android:name="com.thirdframestudios.android.expensoor.activities.account.delete.force.AccountForceDeleteActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090086" android:name="com.thirdframestudios.android.expensoor.activities.KeypadActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090086" android:name="com.thirdframestudios.android.expensoor.activities.settings.SettingsActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090086" android:name="com.thirdframestudios.android.expensoor.activities.settings.NotificationsActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090086" android:name="com.thirdframestudios.android.expensoor.activities.UserProfileActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090086" android:name="com.thirdframestudios.android.expensoor.activities.upgradepro.LearnMoreActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090086" android:name="com.thirdframestudios.android.expensoor.activities.upgradepro.FreeUpgradeToProActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090086" android:name="com.thirdframestudios.android.expensoor.activities.upgradepro.mvp.PurchaseToshlActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090086" android:name="com.thirdframestudios.android.expensoor.activities.settings.EditCategoriesTagsActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090086" android:name="com.thirdframestudios.android.expensoor.activities.settings.SortTagsActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090086" android:name="com.thirdframestudios.android.expensoor.activities.settings.PasscodeActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090086" android:name="com.thirdframestudios.android.expensoor.activities.settings.CurrencySettingsActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090086" android:name="com.thirdframestudios.android.expensoor.activities.settings.MainCurrencySettingsActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090086" android:name="com.thirdframestudios.android.expensoor.activities.location.ExpensesByLocationActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090086" android:name="com.thirdframestudios.android.expensoor.activities.account.AccountAddTypeActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090086" android:name="com.thirdframestudios.android.expensoor.bank.mvp.connection.create.login.BankLoginActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090086" android:name="com.thirdframestudios.android.expensoor.bank.mvp.connection.create.login.success.BankLoginSuccessActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090086" android:name="com.thirdframestudios.android.expensoor.bank.mvp.connection.edit.BankConnectionEditActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090086" android:name="com.thirdframestudios.android.expensoor.bank.mvp.institution.list.BankInstitutionsActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090086" android:name="com.thirdframestudios.android.expensoor.bank.mvp.institution.search.BankInstitutionsSearchActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090086" android:name="com.thirdframestudios.android.expensoor.activities.entry.edit.location.SelectLocationActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090086" android:name="com.thirdframestudios.android.expensoor.signup.otp.auth.OtpActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090086" android:name="com.thirdframestudios.android.expensoor.signup.otp.recovery.OtpRecoveryActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.thirdframestudios.android.expensoor.activities.ConfigureShortcutWidgetActivity" android:screenOrientation="1" android:theme="@7F0C01F2">
+<intent-filter>
+<action android:name="android.intent.action.CREATE_SHORTCUT">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:name="com.thirdframestudios.android.expensoor.activities.ConfigureSmallWidgetActivity" android:screenOrientation="1" android:theme="@7F0C01F2">
+<intent-filter>
+<action android:name="android.appwidget.action.APPWIDGET_CONFIGURE">
+</action>
+</intent-filter>
+</activity>
+<activity android:name="com.thirdframestudios.android.expensoor.activities.ConfigureLargeWidgetActivity" android:screenOrientation="1" android:theme="@7F0C01F2">
+<intent-filter>
+<action android:name="android.appwidget.action.APPWIDGET_CONFIGURE">
+</action>
+</intent-filter>
+</activity>
+<activity android:name="com.thirdframestudios.android.expensoor.AndroidDatabaseManager" android:theme="@7F0C0153">
+</activity>
+<receiver android:enabled="true" android:name="com.thirdframestudios.android.expensoor.ReminderReceiver">
+</receiver>
+<receiver android:name="com.thirdframestudios.android.expensoor.OnBootReceiver">
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+</intent-filter>
+</receiver>
+<meta-data android:name="com.google.android.gms.version" android:value="@7F0E0009">
+</meta-data>
+<receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.analytics.AnalyticsReceiver">
+<intent-filter>
+<action android:name="com.google.android.gms.analytics.ANALYTICS_DISPATCH">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name="com.thirdframestudios.android.expensoor.widgets.homescreen.SmallWidget">
+<intent-filter>
+<action android:name="android.appwidget.action.APPWIDGET_UPDATE">
+</action>
+</intent-filter>
+<meta-data android:name="android.appwidget.provider" android:resource="@7F070004">
+</meta-data>
+</receiver>
+<receiver android:name="com.thirdframestudios.android.expensoor.widgets.homescreen.LargeWidget">
+<intent-filter>
+<action android:name="android.appwidget.action.APPWIDGET_UPDATE">
+</action>
+</intent-filter>
+<meta-data android:name="android.appwidget.provider" android:resource="@7F070002">
+</meta-data>
+</receiver>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.analytics.AnalyticsService">
+</service>
+<service android:name="com.batch.android.BatchPushService">
+</service>
+<receiver android:name="com.batch.android.BatchPushReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+<category android:name="com.thirdframestudios.android.expensoor">
+</category>
+</intent-filter>
+</receiver>
+<service android:exported="true" android:name="com.batch.android.BatchPushInstanceIDService">
+<intent-filter>
+<action android:name="com.google.android.gms.iid.InstanceID">
+</action>
+</intent-filter>
+</service>
+<service android:name="com.thirdframestudios.android.expensoor.notifications.NotificationMessagingService">
+<intent-filter>
+<action android:name="com.google.firebase.MESSAGING_EVENT">
+</action>
+</intent-filter>
+</service>
+<service android:name="com.thirdframestudios.android.expensoor.notifications.NotificationInstanceIdService">
+<intent-filter>
+<action android:name="com.google.firebase.INSTANCE_ID_EVENT">
+</action>
+</intent-filter>
+</service>
+<meta-data android:name="com.google.firebase.messaging.default_notification_icon" android:resource="@7F020126">
+</meta-data>
+<meta-data android:name="com.google.firebase.messaging.default_notification_color" android:resource="@7F0F00EE">
+</meta-data>
+<meta-data android:name="com.facebook.sdk.AutoLogAppEventsEnabled" android:value="false">
+</meta-data>
+<meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@7F090409">
+</meta-data>
+<meta-data android:name="com.google.android.gms.version" android:value="@7F0E0009">
+</meta-data>
+<meta-data android:name="com.google.android.geo.API_KEY" android:value="@7F09040C">
+</meta-data>
+<meta-data android:name="io.fabric.ApiKey" android:value="6a068e622d8559b77c14945ccab72ebb449bb2cc">
+</meta-data>
+<activity android:configChanges="0x00000480" android:excludeFromRecents="true" android:exported="false" android:name="com.twitter.sdk.android.core.identity.OAuthActivity">
+</activity>
+<activity android:configChanges="0x00000480" android:excludeFromRecents="true" android:exported="false" android:icon="@7F020184" android:label="@7F090436" android:name="com.twitter.sdk.android.core.identity.ShareEmailActivity">
+</activity>
+<meta-data android:name="android.support.VERSION" android:value="26.0.2">
+</meta-data>
+<activity android:configChanges="0x00000FB0" android:exported="false" android:name="com.google.android.gms.ads.AdActivity" android:theme="@android:0103000F">
+</activity>
+<activity android:excludeFromRecents="true" android:exported="false" android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity" android:theme="@android:01030010">
+</activity>
+<service android:exported="true" android:name="com.google.android.gms.auth.api.signin.RevocationBoundService" android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.analytics.AnalyticsJobService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:01030010">
+</activity>
+<service android:exported="true" android:name="com.google.firebase.messaging.FirebaseMessagingService">
+<intent-filter android:priority="-500">
+<action android:name="com.google.firebase.MESSAGING_EVENT">
+</action>
+</intent-filter>
+</service>
+<activity android:configChanges="0x000005B0" android:name="com.facebook.FacebookActivity" android:theme="@7F0C0248">
+</activity>
+<activity android:name="com.facebook.CustomTabMainActivity">
+</activity>
+<provider android:authorities="com.thirdframestudios.android.expensoor.FacebookInitProvider" android:exported="false" android:name="com.facebook.internal.FacebookInitProvider">
+</provider>
+<activity android:name="com.evernote.client.android.EvernoteOAuthActivity">
+</activity>
+<activity android:name="com.evernote.client.android.login.EvernoteLoginActivity">
+</activity>
+<activity android:exported="false" android:name="com.batch.android.MessagingActivity" android:theme="@7F0C0247">
+</activity>
+<activity android:exported="false" android:name="com.batch.android.BatchActionActivity" android:theme="@7F0C0245">
+</activity>
+<service android:exported="false" android:name="com.batch.android.BatchActionService">
+</service>
+<service android:name="com.batch.android.BatchPushJobService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<receiver android:name="com.batch.android.ProvidersChangedBroadcastReceiver">
+<intent-filter>
+<action android:name="android.location.PROVIDERS_CHANGED">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name="com.batch.android.BootCompletedBroadcastReceiver">
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name="com.batch.android.AlarmNotificationBroadcastReceiver">
+</receiver>
+<service android:name="com.batch.android.GeofenceTransitionsIntentService">
+</service>
+<service android:name="com.batch.android.BeaconIntentService">
+</service>
+<activity android:configChanges="0x000005B0" android:name="com.android.billingclient.api.ProxyBillingActivity" android:theme="@android:01030010">
+</activity>
+<receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementReceiver">
+</receiver>
+<receiver android:enabled="true" android:exported="true" android:name="com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver" android:permission="android.permission.INSTALL_PACKAGES">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementService">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementJobService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<receiver android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+<category android:name="com.thirdframestudios.android.expensoor">
+</category>
+</intent-filter>
+</receiver>
+<service android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdService">
+<intent-filter android:priority="-500">
+<action android:name="com.google.firebase.INSTANCE_ID_EVENT">
+</action>
+</intent-filter>
+</service>
+<provider android:authorities="com.thirdframestudios.android.expensoor.firebaseinitprovider" android:exported="false" android:initOrder="100" android:name="com.google.firebase.provider.FirebaseInitProvider">
+</provider>
+<meta-data android:name="com.android.vending.derived.apk.id" android:value="1">
+</meta-data>
+</application>
+</manifest>

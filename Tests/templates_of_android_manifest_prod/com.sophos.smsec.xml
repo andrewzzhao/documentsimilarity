@@ -1,0 +1,824 @@
+<?xml version="1.0" ?><manifest android:compileSdkVersion="28" android:compileSdkVersionCodename="9" android:installLocation="1" android:sharedUserId="com.sophos.mobile" android:sharedUserLabel="@7F1006E9" android:versionCode="3225" android:versionName="9.5.3225" package="com.sophos.smsec" platformBuildVersionCode="28" platformBuildVersionName="9" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="21" android:targetSdkVersion="28">
+</uses-sdk>
+<permission android:description="@7F10073B" android:label="@7F10073C" android:name="com.sophos.smsec.PERMISSION" android:protectionLevel="0x00000002">
+</permission>
+<permission android:description="@7F10073B" android:label="@7F10073C" android:name="baidu.push.permission.WRITE_PUSHINFOPROVIDER.com.sophos.smsec" android:protectionLevel="0x00000000">
+</permission>
+<uses-feature android:name="android.hardware.telephony" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.location" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.location.gps" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.location.network" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.touchscreen" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.bluetooth" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.nfc" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.wifi" android:required="false">
+</uses-feature>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="com.sophos.smsec.PERMISSION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-permission android:name="android.permission.PACKAGE_USAGE_STATS">
+</uses-permission>
+<uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS">
+</uses-permission>
+<uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT">
+</uses-permission>
+<uses-permission android:name="com.android.launcher.permission.UNINSTALL_SHORTCUT">
+</uses-permission>
+<uses-permission android:name="android.permission.REQUEST_DELETE_PACKAGES">
+</uses-permission>
+<uses-permission android:name="baidu.push.permission.WRITE_PUSHINFOPROVIDER.com.sophos.smsec">
+</uses-permission>
+<uses-permission android:name="com.sophos.mobilecontrol.client.android.permission.SENDMESSAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_ACCOUNTS">
+</uses-permission>
+<permission android:name="com.sophos.mobilecontrol.client.android.permission.SEND_COMMAND" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE">
+</uses-permission>
+<uses-permission android:name="com.sophos.mobilecontrol.client.android.permission.SEND_COMMAND">
+</uses-permission>
+<uses-permission android:maxSdkVersion="22" android:name="android.permission.MANAGE_ACCOUNTS">
+</uses-permission>
+<uses-permission android:maxSdkVersion="22" android:name="android.permission.USE_CREDENTIALS">
+</uses-permission>
+<uses-permission android:name="android.permission.NFC">
+</uses-permission>
+<uses-permission android:name="com.android.browser.permission.READ_HISTORY_BOOKMARKS">
+</uses-permission>
+<uses-permission android:name="com.android.browser.permission.WRITE_HISTORY_BOOKMARKS">
+</uses-permission>
+<uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES">
+</uses-permission>
+<uses-permission android:name="android.permission.USE_FINGERPRINT">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="com.sophos.appprotectionmonitor.PERMISSION">
+</uses-permission>
+<uses-permission android:name="android.permission.FOREGROUND_SERVICE">
+</uses-permission>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-feature android:name="android.hardware.camera" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.camera.any" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.camera.front" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.camera.autofocus" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.camera.flash" android:required="false">
+</uses-feature>
+<uses-permission android:name="com.sophos.smsdkex.permission.SYNC">
+</uses-permission>
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW">
+</uses-permission>
+<uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE">
+</uses-permission>
+<application android:allowBackup="false" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:description="@7F100730" android:icon="@7F0E0000" android:label="@7F100731" android:largeHeap="true" android:name="com.sophos.smsec.ui.SMSecApplication" android:networkSecurityConfig="@7F14000A" android:resizeableActivity="false" android:roundIcon="@7F0E0002" android:supportsRtl="false" android:theme="@7F1100D1">
+<meta-data android:name="android.max_aspect" android:value="2.100000">
+</meta-data>
+<meta-data android:name="android.content.APP_RESTRICTIONS" android:resource="@7F140002">
+</meta-data>
+<meta-data android:name="firebase_analytics_collection_enabled" android:value="false">
+</meta-data>
+<activity android:label="@7F10073A" android:launchMode="2" android:name="com.sophos.smsec.ui.DroidGuardMainActivity" android:taskAffinity="" android:theme="@7F1100D4">
+<intent-filter android:label="@7F10073A">
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="smc">
+</data>
+<data android:pathPrefix="/enroll/">
+</data>
+<data android:host="*">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="smc">
+</data>
+<data android:pathPrefix="/client-api/">
+</data>
+<data android:host="*">
+</data>
+</intent-filter>
+</activity>
+<activity android:excludeFromRecents="true" android:name="com.sophos.smsec.ui.KPViewerActivity">
+</activity>
+<activity android:excludeFromRecents="true" android:name="com.sophos.smsec.navigation.KPShortcutActivity">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+</intent-filter>
+</activity>
+<activity android:excludeFromRecents="true" android:name="com.sophos.smsec.ui.NewKeyFileActivity">
+</activity>
+<activity android:enabled="false" android:excludeFromRecents="true" android:label="@7F10031F" android:name="com.sophos.smsec.ui.KPReceiveActivity" android:noHistory="true">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<action android:name="android.intent.action.SEND">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="*" android:pathPattern=".*\.kdbx">
+</data>
+<data android:host="*" android:pathPattern=".*\..*\.kdbx">
+</data>
+<data android:host="*" android:pathPattern=".*\..*\..*\.kdbx">
+</data>
+<data android:host="*" android:pathPattern=".*\..*\..*\..*\.kdbx">
+</data>
+<data android:host="*" android:pathPattern=".*\..*\..*\..*\..*\.kdbx">
+</data>
+<data android:host="*" android:pathPattern=".*\..*\..*\..*\..*\..*\.kdbx">
+</data>
+<data android:host="*" android:pathPattern=".*\..*\..*\..*\..*\..*\..*\.kdbx">
+</data>
+<data android:host="*" android:pathPattern=".*\..*\..*\..*\..*\..*\..*\..*\.kdbx">
+</data>
+<data android:host="*" android:pathPattern=".*\..*\..*\..*\..*\..*\..*\..*\..*\.kdbx">
+</data>
+<data android:host="*" android:pathPattern=".*\..*\..*\..*\..*\..*\..*\..*\..*\..*\.kdbx">
+</data>
+<data android:host="*" android:pathPattern=".*\..*\..*\..*\..*\..*\..*\..*\..*\..*\..*\.kdbx">
+</data>
+<data android:host="*" android:pathPattern=".*\..*\..*\..*\..*\..*\..*\..*\..*\..*\..*\..*\.kdbx">
+</data>
+<data android:host="*" android:pathPattern=".*\..*\..*\..*\..*\..*\..*\..*\..*\..*\..*\..*\..*\.kdbx">
+</data>
+<data android:host="*" android:pathPattern=".*\..*\..*\..*\..*\..*\..*\..*\..*\..*\..*\..*\..*\..*\.kdbx">
+</data>
+<data android:host="*" android:pathPattern=".*\..*\..*\..*\..*\..*\..*\..*\..*\..*\..*\..*\..*\..*\..*\.kdbx">
+</data>
+<data android:host="*" android:pathPattern=".*\..*\..*\..*\..*\..*\..*\..*\..*\..*\..*\..*\..*\..*\..*\..*\.kdbx">
+</data>
+<data android:host="*" android:pathPattern=".*\..*\..*\..*\..*\..*\..*\..*\..*\..*\..*\..*\..*\..*\..*\..*\..*\.kdbx">
+</data>
+<data android:host="*" android:pathPattern=".*\..*\..*\..*\..*\..*\..*\..*\..*\..*\..*\..*\..*\..*\..*\..*\..*\..*\.kdbx">
+</data>
+<data android:host="*" android:pathPattern=".*\..*\..*\..*\..*\..*\..*\..*\..*\..*\..*\..*\..*\..*\..*\..*\..*\..*\..*\.kdbx">
+</data>
+<data android:host="*" android:pathPattern=".*\..*\..*\..*\..*\..*\..*\..*\..*\..*\..*\..*\..*\..*\..*\..*\..*\..*\..*\..*\.kdbx">
+</data>
+<data android:mimeType="application/octet-stream">
+</data>
+<data android:mimeType="application/x-keepass">
+</data>
+<data android:mimeType="application/x-keepass2">
+</data>
+<data android:scheme="content">
+</data>
+<data android:scheme="file">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.sophos.smsec.ui.log.DroidLogActivity">
+</activity>
+<activity android:name="com.sophos.smsec.ui.StatisticsActivity">
+</activity>
+<activity android:name="com.sophos.smsec.ui.about.SmSecAboutActivity">
+</activity>
+<activity android:excludeFromRecents="true" android:name="com.sophos.smsec.ui.AppErrorActivity" android:theme="@7F1100CF">
+</activity>
+<activity android:name="com.sophos.smsec.ui.SMSecWelcomeActivity" android:theme="@7F1100DD">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.sophos.smsec.ui.ActivationMethodsActivity">
+</activity>
+<activity android:enabled="@7F050004" android:excludeFromRecents="true" android:label="@7F10037C" android:name="com.sophos.smsec.ui.linkchecker.LinkCheckerActivity" android:theme="@7F1100D0">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="http">
+</data>
+<data android:scheme="https">
+</data>
+</intent-filter>
+</activity>
+<activity android:label="@7F100374" android:name="com.sophos.smsec.ui.linkchecker.LinkCheckerConfigurationActivity">
+</activity>
+<receiver android:enabled="true" android:name="com.sophos.smsec.SmSecMsgReceiver" android:permission="com.sophos.smsec.PERMISSION">
+<intent-filter>
+<action android:name="com.sophos.smsec.msg.openDashBoard">
+</action>
+<action android:name="com.sophos.smsec.msg.appError">
+</action>
+<action android:name="com.sophos.smsec.action.EULA_ACCEPTED">
+</action>
+<action android:name="com.sophos.smsec.msg.lossAndTheftAction">
+</action>
+<action android:name="com.sophos.smsec.msg.stopAllScanActions">
+</action>
+<action android:name="com.sophos.smsec.msg.maliciousAppFound">
+</action>
+<action android:name="com.sophos.smsec.msg.ignoreApp">
+</action>
+<action android:name="com.sophos.smsec.msg.webFilteringModeChanged">
+</action>
+<action android:name="com.sophos.smsec.msg.initScanFinished">
+</action>
+<action android:name="com.sophos.smsec.msg.onInstallScanFinished">
+</action>
+<action android:name="com.sophos.smsec.msg.liveProtectChanged">
+</action>
+<action android:name="com.sophos.smsec.msg.allowListReset">
+</action>
+<action android:name="com.sophos.smsec.msg.requirementAction">
+</action>
+<action android:name="bc.database.ready">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:enabled="true" android:name="com.sophos.smsec.SmSecSystemBroadcastReceiver">
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+<action android:name="android.intent.action.USER_PRESENT">
+</action>
+<action android:name="android.intent.action.ACTION_POWER_CONNECTED">
+</action>
+<action android:name="android.intent.action.ACTION_POWER_DISCONNECTED">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_ADDED">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:scheme="package">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_REMOVED">
+</action>
+<data android:scheme="package">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.MY_PACKAGE_REPLACED">
+</action>
+</intent-filter>
+</receiver>
+<provider android:authorities="com.sophos.smsec.kpsender.provider" android:exported="false" android:grantUriPermissions="true" android:name="com.sophos.smsec.KPSenderFileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F140007">
+</meta-data>
+</provider>
+<provider android:authorities="com.sophos.smsec.trace.fileprovider" android:exported="false" android:grantUriPermissions="true" android:name="com.sophos.smsec.core.smsectrace.LogFileProvider" android:permission="com.sophos.smsdkex.permission.SYNC">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F140008">
+</meta-data>
+</provider>
+<provider android:authorities="com.sophos.smsec.sdk.fileprovider" android:exported="false" android:grantUriPermissions="true" android:name="com.sophos.smsdkex.providers.SmSdkFileProvider" android:permission="com.sophos.smsdkex.permission.SYNC">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F14000D">
+</meta-data>
+</provider>
+<service android:name="com.sophos.smsec.ui.widget.AlertItemRemoteViewsService" android:permission="android.permission.BIND_REMOTEVIEWS">
+</service>
+<receiver android:enabled="true" android:name="com.sophos.smsec.ui.widget.WidgetProvider">
+<intent-filter>
+<action android:name="android.appwidget.action.APPWIDGET_UPDATE">
+</action>
+<action android:name="android.appwidget.action.APPWIDGET_ENABLED">
+</action>
+<action android:name="android.appwidget.action.APPWIDGET_DELETED">
+</action>
+<action android:name="android.appwidget.action.APPWIDGET_DISABLED">
+</action>
+</intent-filter>
+<meta-data android:name="android.appwidget.provider" android:resource="@7F140010">
+</meta-data>
+</receiver>
+<activity android:label="@7F100424" android:name="com.sophos.smsec.migration.BackupRestoreActivity" android:parentActivityName="com.sophos.smsec.ui.DroidGuardMainActivity">
+</activity>
+<receiver android:name="com.sophos.smsec.baidu.SMSecBaiduCloudPushReceiver">
+<intent-filter>
+<action android:name="com.baidu.android.pushservice.action.MESSAGE">
+</action>
+<action android:name="com.baidu.android.pushservice.action.RECEIVE">
+</action>
+<action android:name="com.baidu.android.pushservice.action.notification.CLICK">
+</action>
+</intent-filter>
+</receiver>
+<provider android:authorities="com.sophos.smsec.bdpush" android:exported="true" android:name="com.baidu.android.pushservice.PushInfoProvider" android:protectionLevel="0x00000002" android:writePermission="baidu.push.permission.WRITE_PUSHINFOPROVIDER.com.sophos.smsec">
+</provider>
+<activity android:clearTaskOnLaunch="true" android:exported="false" android:name="com.sophos.smsec.ui.QRScannerActivity" android:screenOrientation="10" android:stateNotNeeded="true" android:theme="@7F1100D1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:exported="false" android:name="com.sophos.smsec.ui.NetworkSecurityActivity" android:parentActivityName="com.sophos.smsec.ui.DroidGuardMainActivity">
+</activity>
+<activity android:exported="false" android:name="com.sophos.smsec.ui.AlertsActivity" android:parentActivityName="com.sophos.smsec.ui.DroidGuardMainActivity">
+</activity>
+<activity android:exported="false" android:name="com.sophos.smsec.ui.about.ThirdPartyLicencesActivity" android:parentActivityName="com.sophos.smsec.ui.about.SmSecAboutActivity">
+</activity>
+<activity android:exported="false" android:name="com.sophos.smsec.ui.AppSecurityActivity" android:parentActivityName="com.sophos.smsec.ui.DroidGuardMainActivity">
+</activity>
+<activity android:name="com.sophos.smsec.ui.SettingsActivity">
+</activity>
+<activity android:name="com.sophos.smsec.plugin.privacyadvisor.PrivacyAdvisorActivity">
+</activity>
+<activity android:name="com.sophos.smsec.plugin.privacyadvisor60.PrivacyAdvisorActivity60">
+</activity>
+<activity android:name="com.sophos.smsec.plugin.privacyadvisor60.PaApkDetailViewActivity">
+</activity>
+<activity android:name="com.sophos.smsec.plugin.privacyadvisor60.statistics.PermissionHistoryActivity">
+</activity>
+<service android:name="com.sophos.smsec.plugin.privacyadvisor60.history.PermissionHistoryUpdaterService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<receiver android:enabled="true" android:name="com.sophos.smsec.plugin.management.SmcManagementBroadCastReceiver" android:permission="com.sophos.smsec.PERMISSION">
+<intent-filter>
+<action android:name="com.sophos.smsec.action.management.get.setting">
+</action>
+<action android:name="com.sophos.smsec.action.management.set.setting">
+</action>
+<action android:name="com.sophos.smsec.action.management.trigger.scan">
+</action>
+<action android:name="com.sophos.smsec.action.management.deco">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:enabled="true" android:name="com.sophos.smsec.plugin.management.SettingsBroadCastReceiver2" android:permission="com.sophos.smsec.PERMISSION">
+<intent-filter>
+<action android:name="com.sophos.smsec.action.settings">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:enabled="true" android:name="com.sophos.smsec.plugin.management.SettingsBroadCastReceiver" android:permission="com.sophos.smsec.PERMISSION">
+<intent-filter>
+<action android:name="com.sophos.smsec.action.settings">
+</action>
+</intent-filter>
+</receiver>
+<activity android:name="com.sophos.smsec.cloud.ui.ActivationActivity" android:parentActivityName="com.sophos.smsec.ui.DroidGuardMainActivity">
+</activity>
+<activity android:name="com.sophos.smsec.cloud.ui.HomeActivationActivity" android:parentActivityName="com.sophos.smsec.ui.DroidGuardMainActivity">
+</activity>
+<activity android:excludeFromRecents="true" android:name="com.sophos.smsec.cloud.ui.CloudComErrorActivity" android:theme="@7F1100CF">
+</activity>
+<activity android:exported="false" android:finishOnTaskLaunch="true" android:name="com.sophos.smsec.cloud.msgbox.MessageBoxActivity" android:noHistory="true" android:theme="@7F1100D0">
+</activity>
+<activity android:name="com.sophos.smsec.cloud.ui.CloudSettingsActivity" android:parentActivityName="com.sophos.smsec.ui.DroidGuardMainActivity">
+</activity>
+<activity android:name="com.sophos.smsec.cloud.ui.ComplianceDetails" android:parentActivityName="com.sophos.smsec.cloud.ui.CloudSettingsActivity">
+</activity>
+<receiver android:exported="true" android:name="com.google.android.c2dm.C2DMBroadcastReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+<category android:name="com.sophos.mobilecontrol.client.android">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.REGISTRATION">
+</action>
+<category android:name="com.sophos.mobilecontrol.client.android">
+</category>
+</intent-filter>
+</receiver>
+<receiver android:exported="false" android:name="com.sophos.smsec.cloud.CloudEngine$WakeReceiver">
+<intent-filter>
+<action android:name="com.sophos.mobilecontrol.client.android.action.WAKE_ENGINE">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:exported="false" android:name="com.sophos.smsec.cloud.CloudEngine$CommandResultReceiver">
+<intent-filter>
+<action android:name="com.sophos.mobilecontrol.client.android.action.COMMAND_RESULT">
+</action>
+<action android:name="com.sophos.smsec.finish.PERSIST">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name="com.sophos.smsec.cloud.QuarantineStateReceiver" android:permission="com.sophos.smsec.PERMISSION">
+<intent-filter>
+<action android:name="com.sophos.smsec.action.SCANNER_QUARANTINE_ITEM_DELETED">
+</action>
+<action android:name="com.sophos.smsec.action.SCANNER_QUARANTINE_ITEM_ADDED">
+</action>
+<action android:name="com.sophos.smsec.action.MALICIOUS_SITE_BROWSED">
+</action>
+<action android:name="com.sophos.smsec.action.SCHEDULED_FINISHED">
+</action>
+<action android:name="com.sophos.smsec.msg.manualScanFinished">
+</action>
+<action android:name="com.sophos.smsec.action.SECURITY_ADVISOR_CHANGE_ACTION">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:enabled="true" android:exported="false" android:name="com.sophos.smsec.receiver.WifiSecurityStatusReceiver">
+</receiver>
+<service android:exported="true" android:name="com.sophos.smsec.cloud.activation.ActivationDataSyncService" android:permission="com.sophos.mobilecontrol.client.android.permission.SEND_COMMAND">
+<intent-filter>
+<action android:name="com.sophos.cloud.action.ACTIVATION">
+</action>
+</intent-filter>
+</service>
+<service android:name="com.sophos.smsec.receiver.C2DMReceiver">
+</service>
+<service android:exported="false" android:name="com.sophos.smsec.cloud.commands.CommandHandlerService">
+</service>
+<service android:exported="false" android:name="com.sophos.smsec.command.persist.PersistCommandService">
+</service>
+<service android:exported="true" android:name="com.sophos.smsec.cloud.SmcService" android:permission="com.sophos.mobilecontrol.client.android.permission.SEND_COMMAND">
+</service>
+<service android:label="Sync service" android:name="com.sophos.smsec.cloud.SmsecJobService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<service android:exported="false" android:name="com.sophos.smsec.cloud.commands.SafetyNetCommandHandler">
+</service>
+<service android:name="com.sophos.smsec.cloud.fcm.SMSecFcmMessageListenerService">
+<intent-filter>
+<action android:name="com.google.firebase.MESSAGING_EVENT">
+</action>
+</intent-filter>
+</service>
+<activity android:label="@7F1005FD" android:name="com.sophos.smsec.plugin.securityadvisor.SecurityAdvisorActivity">
+</activity>
+<activity android:name="com.sophos.smsec.plugin.securityadvisor.SaItemDetailFragment">
+</activity>
+<activity android:exported="false" android:name="com.sophos.smsec.ui.androidUpdate.AndroidUpdateActivity" android:parentActivityName="com.sophos.smsec.plugin.securityadvisor.SecurityAdvisorActivity">
+</activity>
+<service android:label="@7F100033" android:name="com.sophos.smsec.plugin.webfiltering.service.WebAccessibilityService" android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE" android:process=":aService_v1">
+<intent-filter>
+<action android:name="android.accessibilityservice.AccessibilityService">
+</action>
+</intent-filter>
+<meta-data android:name="android.accessibilityservice" android:resource="@7F140000">
+</meta-data>
+</service>
+<service android:name="com.sophos.smsec.plugin.webfiltering.service.WebFilteringService">
+</service>
+<activity android:name="com.sophos.smsec.plugin.webfiltering.ui.WebfilterSettingsActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:excludeFromRecents="true" android:name="com.sophos.smsec.plugin.webfiltering.ui.BrowserWarningActivity" android:theme="@7F1100CF">
+</activity>
+<activity android:name="com.sophos.smsec.plugin.appprotection.gui.AppProtectionSettingsActivity">
+</activity>
+<activity android:name="com.sophos.smsec.plugin.appprotection.gui.DeviceAdminActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:excludeFromRecents="true" android:name="com.sophos.smsec.plugin.appprotection.gui.blocking.AuthorizeActivity" android:resizeableActivity="false" android:taskAffinity="" android:theme="@7F1100CF">
+</activity>
+<activity android:configChanges="0x000004A0" android:excludeFromRecents="true" android:name="com.sophos.smsec.plugin.appprotection.gui.blocking.BlockActivity" android:resizeableActivity="false" android:taskAffinity="" android:theme="@7F1100CF">
+</activity>
+<activity android:excludeFromRecents="true" android:name="com.sophos.smsec.plugin.appprotection.gui.blocking.AuthorizeActivityPattern" android:resizeableActivity="false" android:taskAffinity="" android:theme="@7F1100CF">
+</activity>
+<activity android:configChanges="0x000004A0" android:excludeFromRecents="true" android:name="com.sophos.smsec.plugin.appprotection.gui.PasswordEnterDialogActivity" android:theme="@7F1100D0">
+</activity>
+<activity android:excludeFromRecents="true" android:launchMode="1" android:name="com.sophos.smsec.plugin.appprotection.gui.PatternSetActivity">
+</activity>
+<service android:exported="true" android:name="com.sophos.smsec.plugin.appprotection.monitor.MonitorService" android:permission="com.sophos.smsec.PERMISSION">
+</service>
+<provider android:authorities="com.sophos.smsec.app_recovery.provider" android:exported="false" android:grantUriPermissions="true" android:name="com.sophos.smsec.plugin.appprotection.AppProtectionRecoveryProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F140001">
+</meta-data>
+</provider>
+<activity android:name="com.sophos.otp.ui.AddOtpManuallyActivity">
+</activity>
+<activity android:name="com.sophos.otp.ui.EditOtpManuallyActivity">
+</activity>
+<activity android:name="com.sophos.otp.ui.OtpMainActivity">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+</intent-filter>
+</activity>
+<activity android:excludeFromRecents="true" android:label="@7F1003CB" android:name="com.sophos.smsec.plugin.scanner.ScanNotificationActivity" android:noHistory="true" android:parentActivityName="com.sophos.smsec.ui.AppSecurityActivity">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+</intent-filter>
+</activity>
+<activity android:label="@7F1003CB" android:name="com.sophos.smsec.plugin.scanner.ScanActivity" android:parentActivityName="com.sophos.smsec.ui.AppSecurityActivity">
+</activity>
+<activity android:enabled="false" android:label="@7F10079E" android:name="com.sophos.smsec.plugin.scanner.ViewActivity" android:noHistory="true">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:scheme="content">
+</data>
+<data android:scheme="file">
+</data>
+<data android:scheme="package">
+</data>
+<data android:mimeType="application/vnd.android.package-archive">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.SEND">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:scheme="content">
+</data>
+<data android:scheme="file">
+</data>
+<data android:scheme="package">
+</data>
+<data android:mimeType="application/vnd.android.package-archive">
+</data>
+</intent-filter>
+</activity>
+<service android:name="com.sophos.smsec.plugin.scanner.service.ScannerService">
+</service>
+<service android:name="com.sophos.smsec.plugin.scanner.quarantine.QuarantineFileObserverService">
+</service>
+<activity android:configChanges="0x000004A0" android:excludeFromRecents="true" android:launchMode="2" android:name="com.sophos.smsec.plugin.scanner.MaliciousAppInstalledActivity" android:noHistory="true" android:theme="@7F1100D0">
+</activity>
+<activity android:configChanges="0x000004A0" android:excludeFromRecents="true" android:launchMode="2" android:name="com.sophos.smsec.plugin.scanner.ThreatViewedNotInstalledActivity" android:noHistory="true" android:theme="@7F1100D0">
+</activity>
+<activity android:name="com.sophos.smsec.plugin.scanner.ApkDetailScanActivity">
+</activity>
+<activity android:name="com.sophos.smsec.plugin.scanner.gui.allowlist.AllowListActivity">
+</activity>
+<receiver android:enabled="true" android:name="com.sophos.smsec.plugin.scanner.quarantine.QuarantineBroadcastReceiver" android:permission="com.sophos.smsec.PERMISSION">
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_REMOVED">
+</action>
+<data android:scheme="package">
+</data>
+</intent-filter>
+</receiver>
+<receiver android:name="com.sophos.smsec.plugin.scanner.ThreatFoundNotification$AppRemovedListener">
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_REMOVED">
+</action>
+<data android:scheme="package">
+</data>
+</intent-filter>
+</receiver>
+<provider android:authorities="com.sophos.smsec.scanner.provider" android:exported="false" android:grantUriPermissions="true" android:name="com.sophos.smsec.plugin.scanner.service.ScanFileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F140005">
+</meta-data>
+</provider>
+<service android:name="com.sophos.smsec.core.updateengine.schedule.ScheduledUpdateService">
+</service>
+<receiver android:name="com.sophos.smsec.core.updateengine.schedule.NetworkChangedReceiver">
+<intent-filter>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+</receiver>
+<activity android:label="@7F100455" android:launchMode="1" android:name="com.sophos.nge.networksec.ui.NetworkSecurityActivity" android:parentActivityName="com.sophos.smsec.ui.DroidGuardMainActivity">
+</activity>
+<activity android:label="@7F10045E" android:name="com.sophos.nge.networksec.ui.NetworkSecurityNetworkDetailActivity" android:parentActivityName="com.sophos.nge.networksec.ui.NetworkSecurityActivity">
+</activity>
+<service android:exported="false" android:name="com.sophos.nge.networksec.cacertcheck.service.CACertCheckService" android:permission="com.sophos.smsec.PERMISSION">
+</service>
+<service android:exported="false" android:name="com.sophos.nge.networksec.arpdetection.service.ArpDetectionService" android:permission="com.sophos.smsec.PERMISSION">
+</service>
+<service android:exported="false" android:name="com.sophos.nge.networksec.NetworkSecService" android:permission="com.sophos.smsec.PERMISSION">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.sophos.nge.networksec.NgeDynamicEngineService" android:permission="com.sophos.smsec.PERMISSION">
+<intent-filter>
+<action android:name="com.sophos.nge.action.START_NGE_DYN">
+</action>
+<action android:name="com.sophos.nge.action.STOP_NGE_DYN">
+</action>
+<action android:name="com.sophos.nge.action.UPDATE">
+</action>
+</intent-filter>
+</service>
+<service android:label="Sync service" android:name="com.sophos.nge.networksec.arpdetection.service.ArpDetectionJobService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<receiver android:exported="false" android:name="com.sophos.nge.networksec.ui.NetworkSecurityNotificationActionBroadcastReceiver">
+<intent-filter>
+<action android:name=".networksec.ui.NetworkSecurityNotificationActionBroadcastReceiver.ACTION_DISCONNECT_WIFI">
+</action>
+<action android:name=".networksec.ui.NetworkSecurityNotificationActionBroadcastReceiver.ACTION_IGNORE_WIFI">
+</action>
+</intent-filter>
+</receiver>
+<activity android:label="@7F10023A" android:name="com.sophos.keepasseditor.KeepassCreateActivity">
+</activity>
+<service android:exported="true" android:name="com.sophos.appprotectengine.service.AppProtectService" android:permission="com.sophos.smsec.PERMISSION">
+</service>
+<receiver android:enabled="true" android:exported="true" android:name="com.sophos.appprotectengine.WatchDogWakeReceiver" android:permission="com.sophos.smsec.PERMISSION">
+<intent-filter>
+<action android:name="com.sophos.communication.action.wake">
+</action>
+</intent-filter>
+</receiver>
+<activity android:name="com.sophos.smsec.core.smsecresources.ui.ApkDetailViewActivity">
+</activity>
+<receiver android:enabled="true" android:exported="false" android:name="com.sophos.smsec.core.smsecresources.ui.NotificationHelper">
+<intent-filter>
+<action android:name="com.sophos.smsec.action.notification.deleted">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:description="@7F100270" android:name="com.sophos.smsec.core.enabledeviceadmin.SmsecDeviceAdminReceiver" android:permission="android.permission.BIND_DEVICE_ADMIN">
+<meta-data android:name="android.app.device_admin" android:resource="@7F140004">
+</meta-data>
+<intent-filter>
+<action android:name="android.app.action.DEVICE_ADMIN_ENABLED">
+</action>
+</intent-filter>
+</receiver>
+<activity android:clearTaskOnLaunch="true" android:exported="false" android:name="com.google.zxing.client.android.CaptureActivity" android:screenOrientation="10" android:stateNotNeeded="true" android:theme="@7F110195" android:windowSoftInputMode="0x00000003">
+<intent-filter>
+<action android:name="com.google.zxing.client.android.SCAN">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<service android:exported="true" android:name="com.sophos.smsdkex.core.PolicySyncService" android:permission="com.sophos.smsdkex.permission.SYNC">
+<intent-filter>
+<action android:name="com.sophos.smsdkex.action.SYNC">
+</action>
+</intent-filter>
+</service>
+<service android:exported="true" android:name="com.sophos.smsdkex.communication.smc.ActivationDataSyncService" android:permission="com.sophos.mobilecontrol.client.android.permission.SEND_COMMAND">
+<intent-filter>
+<action android:name="com.sophos.cloud.action.ACTIVATION">
+</action>
+</intent-filter>
+</service>
+<service android:enabled="false" android:exported="false" android:name="com.sophos.smsdkex.services.ScreenOffService">
+</service>
+<receiver android:enabled="true" android:exported="false" android:name="com.sophos.smsdkex.core.GracePeriodExpirationReceiver">
+<intent-filter>
+<action android:name="com.sophos.sdk.start_timer">
+</action>
+</intent-filter>
+</receiver>
+<meta-data android:name="com.google.android.gms.version" android:value="@7F0A000D">
+</meta-data>
+<meta-data android:name="firebase_crashlytics_collection_enabled" android:value="false">
+</meta-data>
+<service android:directBootAware="true" android:exported="false" android:name="com.google.firebase.components.ComponentDiscoveryService">
+<meta-data android:name="com.google.firebase.components:com.google.firebase.functions.FunctionsRegistrar" android:value="com.google.firebase.components.ComponentRegistrar">
+</meta-data>
+<meta-data android:name="com.google.firebase.components:com.google.firebase.remoteconfig.RemoteConfigRegistrar" android:value="com.google.firebase.components.ComponentRegistrar">
+</meta-data>
+<meta-data android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar" android:value="com.google.firebase.components.ComponentRegistrar">
+</meta-data>
+<meta-data android:name="com.google.firebase.components:com.google.firebase.iid.Registrar" android:value="com.google.firebase.components.ComponentRegistrar">
+</meta-data>
+<meta-data android:name="com.google.firebase.components:com.google.firebase.database.DatabaseRegistrar" android:value="com.google.firebase.components.ComponentRegistrar">
+</meta-data>
+<meta-data android:name="com.google.firebase.components:com.google.firebase.abt.component.AbtRegistrar" android:value="com.google.firebase.components.ComponentRegistrar">
+</meta-data>
+</service>
+<service android:exported="false" android:name="com.google.firebase.messaging.FirebaseMessagingService">
+<intent-filter android:priority="-500">
+<action android:name="com.google.firebase.MESSAGING_EVENT">
+</action>
+</intent-filter>
+</service>
+<receiver android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+</intent-filter>
+</receiver>
+<provider android:authorities="com.sophos.smsec.firebaseinitprovider" android:exported="false" android:initOrder="100" android:name="com.google.firebase.provider.FirebaseInitProvider">
+</provider>
+<activity android:excludeFromRecents="true" android:name="com.sophos.appprotectionmonitorlib.ui.Wait4SmsecActivity">
+</activity>
+<activity android:name="com.sophos.smsec.core.resources.apprequirements.RequirementWizardActivity">
+</activity>
+<activity android:excludeFromRecents="true" android:exported="false" android:label="@7F1002F3" android:launchMode="1" android:name="com.sophos.smsec.core.resources.ui.WebHelpActivity" android:noHistory="true">
+</activity>
+<receiver android:enabled="false" android:name="com.baidu.android.pushservice.PushServiceReceiver" android:process=":bdservice_v1">
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+<action android:name="com.baidu.android.pushservice.action.notification.SHOW">
+</action>
+<action android:name="com.baidu.android.pushservice.action.media.CLICK">
+</action>
+<action android:name="android.intent.action.MEDIA_MOUNTED">
+</action>
+<action android:name="android.intent.action.USER_PRESENT">
+</action>
+<action android:name="android.intent.action.ACTION_POWER_CONNECTED">
+</action>
+<action android:name="android.intent.action.ACTION_POWER_DISCONNECTED">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:enabled="false" android:name="com.baidu.android.pushservice.RegistrationReceiver" android:process=":bdservice_v1">
+<intent-filter>
+<action android:name="com.baidu.android.pushservice.action.METHOD">
+</action>
+<action android:name="com.baidu.android.pushservice.action.BIND_SYNC">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_REMOVED">
+</action>
+<action android:name="android.intent.action.PACKAGE_FULLY_REMOVED">
+</action>
+<data android:scheme="package">
+</data>
+</intent-filter>
+</receiver>
+<service android:enabled="false" android:exported="true" android:name="com.baidu.android.pushservice.PushService" android:process=":bdservice_v1">
+<intent-filter>
+<action android:name="com.baidu.android.pushservice.action.PUSH_SERVICE">
+</action>
+</intent-filter>
+</service>
+<service android:enabled="false" android:exported="true" android:name="com.baidu.android.pushservice.CommandService">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.sophos.baiducloudpush.BaiduCloudPushService">
+</service>
+<receiver android:enabled="true" android:exported="true" android:name="com.sophos.smsec.core.smsectrace.LogCollectReceiver" android:permission="com.sophos.smsdkex.permission.SYNC">
+<intent-filter>
+<action android:name="com.sophos.SYNC_COLLECT_LOG">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:enabled="true" android:exported="true" android:name="com.sophos.smsec.core.smsectrace.SendTraceMail$SendLogFilesBroadCastReceiver" android:permission="com.sophos.smsdkex.permission.SYNC">
+<intent-filter>
+<action android:name="com.sophos.SYNC_SEND_LOG">
+</action>
+</intent-filter>
+</receiver>
+<activity android:name="com.microsoft.aad.adal.AuthenticationActivity">
+</activity>
+<service android:exported="false" android:name="androidx.room.MultiInstanceInvalidationService">
+</service>
+<receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.analytics.AnalyticsReceiver">
+</receiver>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.analytics.AnalyticsService">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.analytics.AnalyticsJobService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:01030010">
+</activity>
+<receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementReceiver">
+</receiver>
+<receiver android:enabled="true" android:exported="true" android:name="com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver" android:permission="android.permission.INSTALL_PACKAGES">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementService">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementJobService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<activity android:configChanges="0x000004A0" android:name="com.microsoft.identity.common.internal.providers.oauth2.AuthorizationActivity">
+</activity>
+<provider android:authorities="com.sophos.smsec.lifecycle-process" android:exported="false" android:multiprocess="true" android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer">
+</provider>
+<provider android:authorities="com.sophos.smsec.crashlyticsinitprovider" android:exported="false" android:initOrder="90" android:name="com.crashlytics.android.CrashlyticsInitProvider">
+</provider>
+</application>
+</manifest>

@@ -1,0 +1,270 @@
+<?xml version="1.0" ?><manifest android:hardwareAccelerated="true" android:versionCode="10300" android:versionName="1.3.0" package="com.wadeeny.ondemand" platformBuildVersionCode="25" platformBuildVersionName="7.1.1" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="15" android:targetSdkVersion="25">
+</uses-sdk>
+<supports-screens android:anyDensity="true" android:largeScreens="true" android:normalScreens="true" android:resizeable="true" android:smallScreens="true" android:xlargeScreens="true">
+</supports-screens>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="com.amazon.device.messaging.permission.RECEIVE">
+</uses-permission>
+<permission android:name="com.wadeeny.ondemand.permission.RECEIVE_ADM_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="com.wadeeny.ondemand.permission.RECEIVE_ADM_MESSAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-feature android:glEsVersion="0x00020000" android:required="true">
+</uses-feature>
+<uses-feature android:name="android.hardware.location">
+</uses-feature>
+<uses-feature android:name="android.hardware.location.gps">
+</uses-feature>
+<uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="com.google.android.gms.permission.ACTIVITY_RECOGNITION">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE">
+</uses-permission>
+<meta-data android:name="android.support.VERSION" android:value="25.3.0">
+</meta-data>
+<permission android:name="com.wadeeny.ondemand.permission.C2D_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="com.wadeeny.ondemand.permission.C2D_MESSAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="com.sec.android.provider.badge.permission.READ">
+</uses-permission>
+<uses-permission android:name="com.sec.android.provider.badge.permission.WRITE">
+</uses-permission>
+<uses-permission android:name="com.htc.launcher.permission.READ_SETTINGS">
+</uses-permission>
+<uses-permission android:name="com.htc.launcher.permission.UPDATE_SHORTCUT">
+</uses-permission>
+<uses-permission android:name="com.sonyericsson.home.permission.BROADCAST_BADGE">
+</uses-permission>
+<uses-permission android:name="com.sonymobile.home.permission.PROVIDER_INSERT_BADGE">
+</uses-permission>
+<uses-permission android:name="com.anddoes.launcher.permission.UPDATE_COUNT">
+</uses-permission>
+<uses-permission android:name="com.majeur.launcher.permission.UPDATE_BADGE">
+</uses-permission>
+<uses-permission android:name="com.huawei.android.launcher.permission.CHANGE_BADGE">
+</uses-permission>
+<uses-permission android:name="com.huawei.android.launcher.permission.READ_SETTINGS">
+</uses-permission>
+<uses-permission android:name="com.huawei.android.launcher.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_APP_BADGE">
+</uses-permission>
+<uses-permission android:name="com.oppo.launcher.permission.READ_SETTINGS">
+</uses-permission>
+<uses-permission android:name="com.oppo.launcher.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="me.everything.badger.permission.BADGE_COUNT_READ">
+</uses-permission>
+<uses-permission android:name="me.everything.badger.permission.BADGE_COUNT_WRITE">
+</uses-permission>
+<application android:hardwareAccelerated="true" android:icon="@7F030000" android:label="@7F090097" android:largeHeap="true" android:supportsRtl="true">
+<activity android:configChanges="0x000004B4" android:label="@7F090096" android:launchMode="1" android:name="com.wadeeny.ondemand.MainActivity" android:screenOrientation="1" android:theme="@android:01030129" android:windowSoftInputMode="0x00000010">
+<intent-filter android:label="@7F0900A2">
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.analytics.AnalyticsReceiver">
+<intent-filter>
+<action android:name="com.google.android.gms.analytics.ANALYTICS_DISPATCH">
+</action>
+</intent-filter>
+</receiver>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.analytics.AnalyticsService">
+</service>
+<receiver android:enabled="true" android:exported="true" android:name="com.google.android.gms.analytics.CampaignTrackingReceiver">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.analytics.CampaignTrackingService">
+</service>
+<provider android:authorities="com.wadeeny.ondemand.sharing.provider" android:exported="false" android:grantUriPermissions="true" android:name="nl.xservices.plugins.FileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F070001">
+</meta-data>
+</provider>
+<meta-data android:name="io.fabric.ApiKey" android:value="039063917740f27b3345064d49ab885bff3bd43a">
+</meta-data>
+<amazon:enable-feature android:name="com.amazon.device.messaging" android:required="false" xmlns:amazon="http://schemas.amazon.com/apk/res/android">
+</amazon:enable-feature>
+<service android:exported="false" android:name="com.onesignal.ADMMessageHandler">
+</service>
+<receiver android:name="com.onesignal.ADMMessageHandler$Receiver" android:permission="com.amazon.device.messaging.permission.SEND">
+<intent-filter>
+<action android:name="com.amazon.device.messaging.intent.REGISTRATION">
+</action>
+<action android:name="com.amazon.device.messaging.intent.RECEIVE">
+</action>
+<category android:name="com.wadeeny.ondemand">
+</category>
+</intent-filter>
+</receiver>
+<meta-data android:name="com.transistorsoft.locationmanager.license" android:value="a9b3d3b0c636dd59c0ef432bbaa2b48ab00e4fc75779f550f41e4c5fa8ce7e52">
+</meta-data>
+<meta-data android:name="com.google.android.geo.API_KEY" android:value="AIzaSyBV1mV9iDNAAy-HqT0O6uVdZF-TfGxF5qY">
+</meta-data>
+<meta-data android:name="com.google.android.gms.version" android:value="@7F0C0007">
+</meta-data>
+<meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@7F09009C">
+</meta-data>
+<meta-data android:name="com.facebook.sdk.ApplicationName" android:value="@7F09009D">
+</meta-data>
+<activity android:configChanges="0x000005B0" android:label="@7F09009D" android:name="com.facebook.FacebookActivity" android:theme="@android:01030010">
+</activity>
+<service android:exported="false" android:name="io.intercom.android.sdk.IntercomIntentService">
+<intent-filter android:priority="999">
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+</intent-filter>
+</service>
+<receiver android:name="cordova.plugins.Diagnostic$LocationProviderChangedReceiver">
+<intent-filter>
+<action android:name="android.location.PROVIDERS_CHANGED">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name="cordova.plugins.Diagnostic$NFCStateChangedReceiver">
+<intent-filter>
+<action android:name="android.nfc.action.ADAPTER_STATE_CHANGED">
+</action>
+</intent-filter>
+</receiver>
+<service android:name="com.transistorsoft.locationmanager.BackgroundGeolocationService">
+</service>
+<service android:name="com.transistorsoft.locationmanager.LocationService">
+</service>
+<service android:name="com.transistorsoft.locationmanager.ActivityRecognitionService">
+</service>
+<service android:name="com.transistorsoft.locationmanager.geofence.GeofenceService">
+</service>
+<service android:name="com.transistorsoft.locationmanager.scheduler.ScheduleAlarmService">
+</service>
+<receiver android:name="com.transistorsoft.locationmanager.BootReceiver">
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.MY_PACKAGE_REPLACED">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:exported="true" android:name="com.google.android.gms.gcm.GcmReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+<action android:name="com.google.android.c2dm.intent.REGISTRATION">
+</action>
+<category android:name="io.intercom.intercomsdk.gcm">
+</category>
+</intent-filter>
+</receiver>
+<service android:exported="false" android:name="io.intercom.android.sdk.gcm.IntercomGcmListenerService">
+<intent-filter android:priority="-900">
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+</intent-filter>
+</service>
+<service android:exported="false" android:name="io.intercom.android.sdk.gcm.IntercomGcmRefreshService">
+<intent-filter>
+<action android:name="com.google.android.gms.iid.InstanceID">
+</action>
+</intent-filter>
+</service>
+<activity android:configChanges="0x00000480" android:exported="false" android:launchMode="1" android:name="io.intercom.android.sdk.activities.IntercomMessengerActivity" android:theme="@7F0B00DC" android:windowSoftInputMode="0x00000011">
+</activity>
+<activity android:configChanges="0x00000480" android:exported="false" android:name="io.intercom.android.sdk.lightbox.LightBoxActivity" android:theme="@7F0B00DA" android:windowSoftInputMode="0x00000011">
+</activity>
+<activity android:exported="false" android:launchMode="1" android:name="io.intercom.android.sdk.activities.IntercomArticleActivity" android:theme="@7F0B00D8" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:exported="false" android:launchMode="1" android:name="io.intercom.android.sdk.activities.IntercomHelpCenterActivity" android:theme="@7F0B00D8" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x00000480" android:exported="false" android:launchMode="3" android:name="io.intercom.android.sdk.activities.IntercomPostActivity" android:theme="@7F0B00DD" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x00000480" android:exported="false" android:launchMode="3" android:name="io.intercom.android.sdk.activities.IntercomNoteActivity" android:theme="@7F0B00DB" android:windowSoftInputMode="0x00000011">
+</activity>
+<receiver android:exported="false" android:name="io.intercom.android.sdk.push.IntercomPushBroadcastReceiver">
+<intent-filter>
+<action android:name="io.intercom.android.sdk.INTERCOM_PUSH_OPENED">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="io.intercom.android.sdk.INTERCOM_PUSH_DISMISSED">
+</action>
+</intent-filter>
+</receiver>
+<activity android:name="com.intercom.input.gallery.GalleryInputFullScreenActivity" android:theme="@7F0B019A">
+</activity>
+<activity android:configChanges="0x00001580" android:name="com.intercom.input.gallery.GalleryLightBoxActivity" android:theme="@7F0B019A">
+</activity>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.analytics.AnalyticsJobService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<meta-data android:name="onesignal_app_id" android:value="">
+</meta-data>
+<meta-data android:name="onesignal_google_project_number" android:value="str:REMOTE">
+</meta-data>
+<receiver android:name="com.onesignal.GcmBroadcastReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+<intent-filter android:priority="999">
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+<category android:name="com.wadeeny.ondemand">
+</category>
+</intent-filter>
+</receiver>
+<receiver android:name="com.onesignal.NotificationOpenedReceiver">
+</receiver>
+<service android:name="com.onesignal.GcmIntentService">
+</service>
+<service android:name="com.onesignal.GcmIntentJobService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<service android:name="com.onesignal.SyncService">
+</service>
+<activity android:name="com.onesignal.PermissionsActivity" android:theme="@android:01030010">
+</activity>
+<service android:name="com.onesignal.NotificationRestoreService">
+</service>
+<service android:name="com.onesignal.NotificationRestoreJobService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<receiver android:name="com.onesignal.BootUpReceiver">
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+<action android:name="android.intent.action.QUICKBOOT_POWERON">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name="com.onesignal.UpgradeReceiver">
+<intent-filter>
+<action android:name="android.intent.action.MY_PACKAGE_REPLACED">
+</action>
+</intent-filter>
+</receiver>
+<activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:01030010">
+</activity>
+<activity android:exported="true" android:name="com.facebook.CustomTabActivity">
+</activity>
+</application>
+</manifest>

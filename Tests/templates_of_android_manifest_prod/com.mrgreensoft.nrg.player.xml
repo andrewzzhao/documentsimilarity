@@ -1,0 +1,286 @@
+<?xml version="1.0" ?><manifest android:installLocation="1" android:versionCode="2298" android:versionName="2.3.9" package="com.mrgreensoft.nrg.player" platformBuildVersionCode="24" platformBuildVersionName="7.000000" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="14" android:targetSdkVersion="22">
+</uses-sdk>
+<permission android:name="com.mrgreensoft.nrg.player.permission.UNLOCK_REQUEST">
+</permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.DISABLE_KEYGUARD">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS">
+</uses-permission>
+<uses-permission android:name="com.mrgreensoft.nrg.player.permission.UNLOCK_REQUEST">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.BROADCAST_STICKY">
+</uses-permission>
+<uses-permission android:name="android.permission.BLUETOOTH">
+</uses-permission>
+<uses-permission android:name="com.android.vending.BILLING">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="com.sonyericsson.extras.liveware.aef.EXTENSION_PERMISSION">
+</uses-permission>
+<uses-feature android:name="android.hardware.bluetooth" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.camera" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.screen.portrait" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.wifi" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.location.network" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.location" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.location.GPS" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.FAKETOUCH" android:required="false">
+</uses-feature>
+<supports-screens android:anyDensity="true" android:largeScreens="true" android:normalScreens="true" android:resizeable="true" android:smallScreens="true" android:xlargeScreens="true">
+</supports-screens>
+<meta-data android:name="android.support.VERSION" android:value="25.3.1">
+</meta-data>
+<uses-permission android:name="com.android.vending.CHECK_LICENSE">
+</uses-permission>
+<application android:allowTaskReparenting="true" android:icon="@7F0200F4" android:label="@7F080201" android:name="com.mrgreensoft.nrg.player.NrgApplication" android:process=":nrgPlayer" android:theme="@7F0B01D2">
+<provider android:authorities="com.mrgreensoft.nrg.plyaer.db.MusicLibruary" android:exported="true" android:name="com.mrgreensoft.nrg.player.utils.db.MusicProvider">
+</provider>
+<activity android:label="@7F080201" android:launchMode="2" android:name="com.mrgreensoft.nrg.player.startup.StartActivity" android:noHistory="true" android:theme="@7F0B01D3">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<action android:name="android.intent.action.MUSIC_PLAYER">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+<category android:name="android.intent.category.APP_MUSIC">
+</category>
+<category android:name="android.intent.category.CATEGORY_APP_MUSIC">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.media.action.MEDIA_PLAY_FROM_SEARCH">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:scheme="content">
+</data>
+<data android:scheme="file">
+</data>
+<data android:mimeType="audio/*">
+</data>
+<data android:mimeType="application/ogg">
+</data>
+<data android:mimeType="application/x-ogg">
+</data>
+<data android:mimeType="application/itunes">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:scheme="content">
+</data>
+<data android:host="media">
+</data>
+<data android:mimeType="audio/*">
+</data>
+<data android:mimeType="application/ogg">
+</data>
+<data android:mimeType="application/x-ogg">
+</data>
+<data android:mimeType="application/itunes">
+</data>
+</intent-filter>
+<intent-filter android:priority="-1">
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="content">
+</data>
+<data android:mimeType="audio/*">
+</data>
+<data android:mimeType="application/ogg">
+</data>
+<data android:mimeType="application/x-ogg">
+</data>
+<data android:mimeType="application/itunes">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:mimeType="audio/mpeg" android:pathPattern=".*mp3" android:scheme="file">
+</data>
+</intent-filter>
+</activity>
+<activity android:exported="true" android:label="@7F080201" android:launchMode="2" android:name="com.mrgreensoft.nrg.player.activity.StartActivity" android:noHistory="true" android:theme="@7F0B01D3">
+</activity>
+<activity android:clearTaskOnLaunch="true" android:label="@7F080201" android:launchMode="2" android:name="com.mrgreensoft.nrg.player.playback.ui.main.view.PlaybackActivity" android:theme="@7F0B01D3">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F080201" android:name="com.mrgreensoft.nrg.player.library.tags.ui.EditTagsActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F0800E4" android:name="com.mrgreensoft.nrg.player.library.browser.playlist.browse.ui.PlaylistBrowserActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F080099" android:name="com.mrgreensoft.nrg.player.equalizer.ui.EqualizerActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F080107" android:name="com.mrgreensoft.nrg.player.settings.ui.activity.SettingsActivity" android:theme="@7F0B002C">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F080137" android:name="com.mrgreensoft.nrg.player.settings.ui.activity.SettingsBuyActivity" android:theme="@7F0B002C">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F080058" android:name="com.mrgreensoft.nrg.player.settings.theme.color.ui.SettingsColorsActivity" android:theme="@7F0B002C">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F080058" android:name="com.mrgreensoft.nrg.player.settings.theme.color.ui.ColorPickerActivity" android:screenOrientation="1" android:theme="@7F0B002C">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F0800A5" android:name="com.mrgreensoft.nrg.player.settings.ui.activity.SettingsHeadsetActivity" android:theme="@7F0B002C">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F08013F" android:name="com.mrgreensoft.nrg.player.settings.ui.activity.SettingsVolumeActivity" android:theme="@7F0B002C">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F0800FB" android:name="com.mrgreensoft.nrg.player.settings.ui.activity.SettingsScrobblingActivity" android:theme="@7F0B002C">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F08010A" android:name="com.mrgreensoft.nrg.player.settings.ui.activity.SettingsControlsActivity" android:theme="@7F0B002C">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F08010F" android:name="com.mrgreensoft.nrg.player.settings.nrgui.view.SettingsUiActivity" android:theme="@7F0B002C">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F080108" android:name="com.mrgreensoft.nrg.player.settings.ui.activity.SettingsAdvancedActivity" android:theme="@7F0B002C">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F0800D2" android:name="com.mrgreensoft.nrg.player.settings.ui.activity.SettingsMusicLibraryActivity" android:theme="@7F0B002C">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F080201" android:name="com.mrgreensoft.nrg.player.library.lyrics.view.ui.ViewLyricsActivity" android:theme="@android:01030010" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F080201" android:name="com.mrgreensoft.nrg.player.library.lyrics.edit.ui.EditLyricsActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.mrgreensoft.nrg.player.library.system.ui.GetWriteFilesPermissionActivity" android:theme="@android:0103000B">
+</activity>
+<activity android:allowTaskReparenting="true" android:configChanges="0x00000470" android:excludeFromRecents="true" android:label="@7F080201" android:launchMode="3" android:name="com.mrgreensoft.nrg.player.playback.ui.lockscreen.view.LockScreenActivity2_0" android:taskAffinity="nrg.locker" android:theme="@android:0103005E" android:windowNoTitle="true">
+<meta-data android:name="android.dock_home" android:value="true">
+</meta-data>
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F0800D0" android:name="com.mrgreensoft.nrg.player.library.browser.file.ui.ChooseMusicDirActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F080191" android:name="com.mrgreensoft.nrg.player.library.browser.playlist.export.ui.ChooseDirectoryActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F0800D2" android:name="com.mrgreensoft.nrg.player.library.browser.ui.MusicLibraryActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:configChanges="0x00000020" android:label="@7F080201" android:name="com.mrgreensoft.nrg.player.settings.about.ui.AboutActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F080201" android:name="com.mrgreensoft.nrg.player.settings.about.ui.VersionHistoryActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F080201" android:name="com.mrgreensoft.nrg.player.settings.about.ui.LicensesActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F080201" android:name="com.mrgreensoft.nrg.player.settings.about.ui.PrivacyPolicyActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F080201" android:name="com.mrgreensoft.nrg.player.settings.about.ui.CreditsActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F080201" android:name="com.mrgreensoft.nrg.player.settings.theme.crop.CropImageActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F080201" android:name="com.mrgreensoft.nrg.player.settings.theme.crop.MonitoredActivity">
+</activity>
+<service android:exported="false" android:name="com.mrgreensoft.nrg.player.playback.service.view.PlaybackService" android:process=":nrgPlayer">
+</service>
+<service android:exported="false" android:name="com.mrgreensoft.nrg.player.library.scanner.ScanMediaService" android:process=":nrgPlayer">
+</service>
+<service android:exported="false" android:name="com.mrgreensoft.nrg.player.library.scanner.ScanService" android:process=":nrgPlayer">
+</service>
+<receiver android:enabled="true" android:name="com.mrgreensoft.nrg.player.control.headset.MediaButtonIntentReceiver">
+<intent-filter android:priority="2147483647">
+<action android:name="android.intent.action.MEDIA_BUTTON">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name="com.mrgreensoft.nrg.player.library.scanner.NewMediaReceiver">
+<intent-filter>
+<action android:name="android.intent.action.MEDIA_SCANNER_FINISHED">
+</action>
+<data android:scheme="file">
+</data>
+</intent-filter>
+</receiver>
+<receiver android:label="@7F0802B4" android:name="com.mrgreensoft.nrg.player.control.widget.NrgPlayerWidgetProvider">
+<intent-filter>
+<action android:name="android.appwidget.action.APPWIDGET_UPDATE">
+</action>
+</intent-filter>
+<meta-data android:name="android.appwidget.provider" android:resource="@7F060000">
+</meta-data>
+</receiver>
+<receiver android:label="@7F0802B4" android:name="com.mrgreensoft.nrg.player.control.widget.NrgPlayerWidgetProvider4x3">
+<intent-filter>
+<action android:name="android.appwidget.action.APPWIDGET_UPDATE">
+</action>
+</intent-filter>
+<meta-data android:name="android.appwidget.provider" android:resource="@7F060002">
+</meta-data>
+</receiver>
+<receiver android:label="@7F0802B4" android:name="com.mrgreensoft.nrg.player.control.widget.NrgPlayerWidgetProvider4x2">
+<intent-filter>
+<action android:name="android.appwidget.action.APPWIDGET_UPDATE">
+</action>
+</intent-filter>
+<meta-data android:name="android.appwidget.provider" android:resource="@7F060001">
+</meta-data>
+</receiver>
+<receiver android:label="@7F0802B5" android:name="com.mrgreensoft.nrg.player.control.widget.NrgPlayerWidgetProviderLockscreen">
+<intent-filter>
+<action android:name="android.appwidget.action.APPWIDGET_UPDATE">
+</action>
+</intent-filter>
+<meta-data android:name="android.appwidget.provider" android:resource="@7F060003">
+</meta-data>
+</receiver>
+<service android:name="com.mrgreensoft.nrg.player.control.headset.RegistrationService">
+</service>
+<receiver android:name="com.mrgreensoft.nrg.player.control.headset.PlugReceiver">
+</receiver>
+<activity android:allowTaskReparenting="true" android:configChanges="0x000004F0" android:excludeFromRecents="true" android:label="@7F080201" android:launchMode="3" android:name="com.mrgreensoft.nrg.player.ads.ui.OfflineAdActivity" android:theme="@android:0103000F" android:windowNoTitle="true">
+</activity>
+<activity android:allowTaskReparenting="true" android:configChanges="0x000004F0" android:excludeFromRecents="true" android:label="@7F080201" android:name="com.mrgreensoft.nrg.player.ads.ui.AdActivity" android:theme="@android:0103005E" android:windowNoTitle="true">
+</activity>
+<activity android:allowTaskReparenting="true" android:configChanges="0x000004F0" android:excludeFromRecents="true" android:name="com.mrgreensoft.nrg.player.startup.UpdateSkinActivity" android:windowNoTitle="true">
+</activity>
+<meta-data android:name="io.fabric.ApiKey" android:value="31a0ad88312fe586bf7bfe6e1c17b7950139c0c3">
+</meta-data>
+<meta-data android:name="android.support.VERSION" android:value="26.1.0">
+</meta-data>
+<meta-data android:name="android.arch.lifecycle.VERSION" android:value="27.0.0-SNAPSHOT">
+</meta-data>
+<activity android:configChanges="0x000004A0" android:name="com.facebook.ads.AudienceNetworkActivity">
+</activity>
+<meta-data android:name="com.google.android.gms.version" android:value="@7F0D000B">
+</meta-data>
+<activity android:configChanges="0x00000FB0" android:exported="false" android:name="com.google.android.gms.ads.AdActivity" android:theme="@android:0103000F">
+</activity>
+<activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:01030010">
+</activity>
+</application>
+</manifest>

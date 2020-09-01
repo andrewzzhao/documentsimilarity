@@ -1,0 +1,366 @@
+<?xml version="1.0" ?><manifest android:versionCode="3021" android:versionName="3.0.2" package="com.mentornow" platformBuildVersionCode="24" platformBuildVersionName="7.000000" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="15" android:targetSdkVersion="24">
+</uses-sdk>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_LOGS">
+</uses-permission>
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW">
+</uses-permission>
+<uses-permission android:name="android.permission.RECORD_AUDIO">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_CONTACTS">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_CONTACTS">
+</uses-permission>
+<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS">
+</uses-permission>
+<application android:allowBackup="true" android:hardwareAccelerated="true" android:icon="@7F030005" android:label="@7F09001F" android:name="com.mentornow.app.android.AppApplication" android:supportsRtl="true" android:theme="@7F0B003A">
+<activity android:excludeFromRecents="true" android:name="com.umeng.socialize.editorpage.ShareActivity" android:theme="@7F0B0133">
+</activity>
+<activity android:configChanges="0x000004A0" android:exported="true" android:name="com.mentornow.app.android.wxapi.WXEntryActivity" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.mentornow.app.android.WBShareActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000A0" android:exported="false" android:name="com.sina.weibo.sdk.component.WeiboSdkBrowser" android:windowSoftInputMode="0x00000010">
+</activity>
+<service android:exported="false" android:name="com.sina.weibo.sdk.net.DownloadService">
+</service>
+<activity android:launchMode="2" android:name="com.tencent.tauth.AuthActivity" android:noHistory="true">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="tencent&amp;quot;1105183651&amp;quot;">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.tencent.connect.common.AssistActivity" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<activity android:alwaysRetainTaskState="true" android:launchMode="2" android:name="com.hokolinks.activity.HokoActivity" android:noHistory="true" android:theme="@android:01030010">
+<intent-filter>
+<data android:scheme="com.mentornow.app.android">
+</data>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+</intent-filter>
+</activity>
+<activity android:alwaysRetainTaskState="true" android:launchMode="2" android:name="com.hokolinks.activity.HokoAppLinksActivity" android:noHistory="true" android:theme="@android:01030010">
+<intent-filter android:autoVerify="true">
+<data android:host="ll.hoko.link" android:scheme="http">
+</data>
+<data android:host="ll.hoko.link" android:scheme="https">
+</data>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+</intent-filter>
+</activity>
+<receiver android:exported="true" android:name="com.hokolinks.deeplinking.DeferredDeeplinkingBroadcastReceiver">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name="com.tencent.android.tpush.XGPushReceiver" android:process=":xg_service_v2">
+<intent-filter android:priority="0x7FFFFFFF">
+<action android:name="com.tencent.android.tpush.action.SDK">
+</action>
+<action android:name="com.tencent.android.tpush.action.INTERNAL_PUSH_MESSAGE">
+</action>
+<action android:name="android.intent.action.USER_PRESENT">
+</action>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+<action android:name="android.bluetooth.adapter.action.STATE_CHANGED">
+</action>
+<action android:name="android.intent.action.ACTION_POWER_CONNECTED">
+</action>
+<action android:name="android.intent.action.ACTION_POWER_DISCONNECTED">
+</action>
+</intent-filter>
+</receiver>
+<activity android:exported="false" android:name="com.tencent.android.tpush.XGPushActivity">
+<intent-filter>
+<action android:name="android.intent.action">
+</action>
+</intent-filter>
+</activity>
+<service android:exported="true" android:name="com.tencent.android.tpush.service.XGPushService" android:persistent="true" android:process=":xg_service_v2">
+</service>
+<service android:exported="true" android:name="com.tencent.android.tpush.rpc.XGRemoteService">
+<intent-filter>
+<action android:name="com.mentornow.app.android.PUSH_ACTION">
+</action>
+</intent-filter>
+</service>
+<receiver android:name="com.mentornow.app.android.PushReceiver">
+<intent-filter>
+<action android:name="com.tencent.android.tpush.action.PUSH_MESSAGE">
+</action>
+<action android:name="com.tencent.android.tpush.action.FEEDBACK">
+</action>
+</intent-filter>
+</receiver>
+<meta-data android:name="XG_V2_ACCESS_ID" android:value="2100214829">
+</meta-data>
+<meta-data android:name="XG_V2_ACCESS_KEY" android:value="AZZ66I8W4T7K">
+</meta-data>
+<meta-data android:name="TD_APP_ID" android:value="C66511C38FE384F1B56FD35815EAD797">
+</meta-data>
+<meta-data android:name="TD_CHANNEL_ID" android:value="google">
+</meta-data>
+<meta-data android:name="BUGLY_APPID" android:value="1400008510">
+</meta-data>
+<meta-data android:name="UMENG_APPKEY" android:value="559783a867e58ea5bc006f6f">
+</meta-data>
+<service android:exported="false" android:name="com.tencent.qalsdk.service.QalService" android:process=":QALSERVICE">
+</service>
+<service android:exported="false" android:name="com.tencent.qalsdk.service.QalAssistService" android:process=":QALSERVICE">
+</service>
+<receiver android:exported="false" android:name="com.tencent.qalsdk.QALBroadcastReceiver">
+<intent-filter>
+<action android:name="com.tencent.qalsdk.broadcast.qal">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name="com.tencent.qalsdk.core.NetConnInfoCenter" android:process=":QALSERVICE">
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.TIME_SET">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.TIMEZONE_CHANGED">
+</action>
+</intent-filter>
+</receiver>
+<activity android:configChanges="0x000000E0" android:exported="false" android:name="com.alipay.sdk.app.H5PayActivity" android:screenOrientation="3">
+</activity>
+<activity android:configChanges="0x000000E0" android:exported="false" android:name="com.alipay.sdk.auth.AuthActivity" android:screenOrientation="3" android:theme="@7F0B0039">
+</activity>
+<activity android:launchMode="2" android:name="com.mentornow.app.android.ui.main.MainTabActivity" android:theme="@7F0B0039">
+</activity>
+<activity android:name="com.mentornow.app.android.ui.common.activity.WebViewActivity">
+</activity>
+<activity android:label="@7F090094" android:name="com.mentornow.app.android.ui.user.view.UserAuthActivity">
+</activity>
+<activity android:label="@7F09009A" android:name="com.mentornow.app.android.ui.order.view.MyOrderListActivity">
+</activity>
+<activity android:label="@7F0900B5" android:name="com.mentornow.app.android.ui.user.view.UserRegInputActivity">
+</activity>
+<activity android:label="@7F0900B5" android:name="com.mentornow.app.android.ui.user.view.UserRegCaptcheActivity">
+</activity>
+<activity android:label="@7F0900B8" android:name="com.mentornow.app.android.ui.settings.view.SettingsActivity">
+</activity>
+<activity android:label="@7F09014F" android:name="com.mentornow.app.android.ui.user.view.UserInfoActivity">
+</activity>
+<activity android:name="com.mentornow.app.android.ui.topic.view.TopicFilterListActivity">
+</activity>
+<activity android:name="com.mentornow.app.android.ui.packagedetail.view.PackageDetailActivity">
+</activity>
+<activity android:label="@7F09009E" android:name="com.mentornow.app.android.ui.order.view.OrderCreateActivity">
+</activity>
+<activity android:name="com.mentornow.app.android.ui.common.activity.InputActivity">
+</activity>
+<activity android:name="com.mentornow.app.android.ui.order.view.PayActivity">
+</activity>
+<activity android:label="@7F09001B" android:name="com.mentornow.app.android.ui.order.view.OrderDetailsActivity">
+</activity>
+<activity android:name="com.mentornow.app.android.ui.common.activity.ShowTextActivity">
+</activity>
+<activity android:label="@7F090086" android:name="com.mentornow.app.android.ui.user.view.UserGenderModifyActivity">
+</activity>
+<activity android:label="@7F090080" android:name="com.mentornow.app.android.ui.user.view.UserEducationModifyActivity">
+</activity>
+<activity android:name="com.mentornow.app.android.ui.order.view.coupon.CouponSelectListActivity" android:theme="@7F0B003A">
+</activity>
+<activity android:label="@7F090093" android:name="com.mentornow.app.android.ui.user.view.UserLocationModifyActivity">
+</activity>
+<activity android:name="com.mentornow.app.android.ui.user.view.YearModifyActivity">
+</activity>
+<activity android:label="@7F090060" android:name="com.mentornow.app.android.ui.advisorapply.view.AdvisorApplyActivity">
+</activity>
+<activity android:label="@7F090080" android:name="com.mentornow.app.android.ui.advisorapply.view.AdvisorModifyEducationActivity">
+</activity>
+<activity android:label="@7F09001A" android:name="com.mentornow.app.android.ui.order.view.OrderCancleActivity" android:theme="@7F0B003A">
+</activity>
+<activity android:name="com.mentornow.app.android.ui.advisorapply.view.AdvisorModifyYearActivity">
+</activity>
+<activity android:name="com.mentornow.app.android.ui.advisorapply.view.AdvisorTopicIntroduceActivity">
+</activity>
+<activity android:name="com.mentornow.app.android.ui.order.view.OtherTimeListActivity" android:theme="@android:01030010">
+</activity>
+<activity android:name="com.mentornow.app.android.ui.advisorapply.view.AdvisorTopicModifyActivity">
+</activity>
+<activity android:name="com.mentornow.app.android.ui.advisor.info.view.AdvisorInfoActivity">
+</activity>
+<activity android:name="com.mentornow.app.android.ui.advisor.info.view.AdvisorPropertyModifyActivity">
+</activity>
+<activity android:name="com.mentornow.app.android.ui.advisor.info.view.AdvisorIntroduceActivity">
+</activity>
+<activity android:name="com.mentornow.app.android.ui.advisor.info.view.AdvisorIntroduceModifyActiity">
+</activity>
+<activity android:name="com.mentornow.app.android.ui.user.view.UserpPropertyModifyActivity">
+</activity>
+<activity android:name="com.mentornow.app.android.ui.advisor.info.view.AdvisorLocationModifyActivity">
+</activity>
+<activity android:name="com.mentornow.app.android.ui.advisorapply.view.AdvisorApplyPropertyModifyActivity">
+</activity>
+<activity android:name="com.mentornow.app.android.ui.advisor.topic.view.MyTopicListActivity">
+</activity>
+<activity android:name="com.mentornow.app.android.ui.advisor.topic.view.TopicEditActivity">
+</activity>
+<activity android:name="com.mentornow.app.android.ui.advisor.topic.view.TopicPropertyModifyActivity">
+</activity>
+<activity android:name="com.mentornow.app.android.ui.advisor.topic.view.TopicPropertySelectActivity">
+</activity>
+<activity android:name="com.mentornow.app.android.ui.advisor.comment.view.TopicCommentActivity">
+</activity>
+<activity android:label="@7F090157" android:name="com.mentornow.app.android.ui.chat.ChatActivity" android:theme="@7F0B003A">
+</activity>
+<activity android:name="com.mentornow.app.android.ui.question.view.QuestionnaireEditActivity">
+</activity>
+<activity android:label="@7F090158" android:name="com.mentornow.app.android.ui.question.view.MyQuestionnaireActivity">
+</activity>
+<activity android:name="com.mentornow.app.android.ui.question.view.QuestionAddActivity">
+</activity>
+<activity android:name="com.mentornow.app.android.ui.question.view.QuestionInputActivity">
+</activity>
+<activity android:label="@7F090132" android:name="com.mentornow.app.android.ui.wallet.view.MyWalletActivity">
+</activity>
+<activity android:label="@7F090131" android:name="com.mentornow.app.android.ui.coupon.view.MyValidCouponActivity">
+</activity>
+<activity android:label="@7F09012C" android:name="com.mentornow.app.android.ui.wallet.view.WithdrawInfoActivity">
+</activity>
+<activity android:name="com.mentornow.app.android.ui.wallet.view.AccountInfoEditActivity">
+</activity>
+<activity android:name="com.mentornow.app.android.ui.wallet.view.AccountInputActivity">
+</activity>
+<activity android:label="@7F090155" android:name="com.mentornow.app.android.ui.wallet.view.BillDetailActivity">
+</activity>
+<activity android:label="@7F09013B" android:name="com.mentornow.app.android.ui.wallet.view.WithdrawRuleActivity">
+</activity>
+<activity android:label="@7F09001D" android:name="com.mentornow.app.android.ui.topic.view.TopicDetailsActivity">
+</activity>
+<activity android:label="@7F090118" android:name="com.mentornow.app.android.ui.coupon.view.MyInvalidCouponActivity">
+</activity>
+<activity android:label="@7F09014B" android:name="com.mentornow.app.android.ui.favoriteadvisor.view.MyFavoriteAdvisorActivity">
+</activity>
+<activity android:label="@7F090150" android:name="com.mentornow.app.android.ui.wallet.view.WithdrawActivity">
+</activity>
+<activity android:label="@7F090123" android:name="com.mentornow.app.android.ui.coupon.view.CouponExchangeActivity">
+</activity>
+<activity android:label="@7F090098" android:name="com.mentornow.app.android.ui.comment.view.activity.CommentDisplayActivity">
+</activity>
+<activity android:label="@7F090149" android:name="com.mentornow.app.android.ui.message.view.MessageCenterActivity">
+</activity>
+<activity android:label="@7F090019" android:name="com.mentornow.app.android.ui.settings.view.FeedbackActivity">
+</activity>
+<activity android:label="@7F090139" android:name="com.mentornow.app.android.ui.question.view.AdvisorFillQuestionActivity">
+</activity>
+<activity android:name="com.mentornow.app.android.ui.topic.view.TopicSearchActivity">
+</activity>
+<activity android:label="@7F09001C" android:name="com.mentornow.app.android.ui.topic.view.TopicSimpleListActivity">
+</activity>
+<activity android:name="com.mentornow.app.android.ui.message.view.MessageListActivity">
+</activity>
+<activity android:name="com.mentornow.app.android.ui.message.view.MessageDetailActivity">
+</activity>
+<activity android:name="com.mentornow.app.android.ui.wallet.view.AlipayActivity">
+</activity>
+<activity android:name="com.mentornow.app.android.ui.advisorapply.view.SingleImageDisplayActivity">
+</activity>
+<activity android:name="com.mentornow.app.android.ui.comment.view.activity.CommentActivity">
+</activity>
+<activity android:label="@7F090147" android:name="com.mentornow.app.android.ui.helpcenter.view.HelpCenterActivity">
+</activity>
+<activity android:name="com.mentornow.app.android.ui.helpcenter.view.HelpItemActivity">
+</activity>
+<activity android:launchMode="3" android:name="com.mentornow.app.android.ui.main.view.FirstInputUserActivity" android:theme="@7F0B00D5">
+</activity>
+<activity android:name="com.mentornow.app.android.ui.chat.view.AdviceCreateActivity">
+</activity>
+<activity android:name="com.mentornow.app.android.ui.chat.view.AdviceHistoryActivity">
+</activity>
+<activity android:label="@7F090143" android:name="com.mentornow.app.android.ui.advisorrecommend.view.AdvisorRecommandActivity">
+</activity>
+<activity android:name="com.mentornow.app.android.ui.direction.DirectionGuideActivity">
+</activity>
+<activity android:name="com.mentornow.app.android.ui.chat.view.AdviceReviewActivity">
+</activity>
+<activity android:hardwareAccelerated="true" android:name="com.mentornow.app.android.ui.common.activity.GuideActivity">
+</activity>
+<activity android:name="com.mentornow.app.android.ui.common.activity.splash.BaiduDefaultSplashActivity">
+</activity>
+<activity android:name="com.mentornow.app.android.ui.common.activity.splash.DefaultSplashActivity">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:label="@7F090142" android:name="com.mentornow.app.android.ui.advice.view.MyAdviceListActivity">
+</activity>
+<activity android:name="com.mentornow.app.android.ui.qa.QuestionAskActivity">
+</activity>
+<activity android:name="com.mentornow.app.android.ui.qa.view.AdviseQAActivity">
+</activity>
+<activity android:name="com.lzy.imagepicker.ui.ImageBaseActivity">
+</activity>
+<activity android:name="com.lzy.imagepicker.ui.ImageGridActivity" android:theme="@7F0B00D6">
+</activity>
+<activity android:name="com.lzy.imagepicker.ui.ImageCropActivity" android:theme="@7F0B00D6">
+</activity>
+<activity android:name="com.lzy.imagepicker.ui.ImagePreviewActivity" android:theme="@7F0B00D7">
+</activity>
+</application>
+</manifest>

@@ -1,0 +1,116 @@
+<?xml version="1.0" ?><manifest android:versionCode="4" android:versionName="4.0" package="com.yy.kaitian.cxl" platformBuildVersionCode="23" platformBuildVersionName="6.0-2704002" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-permission android:name="android.permission.READ_LOGS">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-sdk android:minSdkVersion="15" android:targetSdkVersion="22">
+</uses-sdk>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-feature android:name="android.hardware.sensor.accelerometer">
+</uses-feature>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<application android:allowBackup="true" android:icon="@7F030011" android:label="@7F07001B" android:name="com.tencent.StubShell.TxAppEntry" android:supportsRtl="true" android:theme="@7F0A008E">
+<meta-data android:name="TxAppEntry" android:value="com.yy.kaitian.cxl.ui.MyApplication">
+</meta-data>
+<activity android:name="com.yy.kaitian.cxl.ui.activity.StartActivity" android:windowSoftInputMode="0x00000012">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="com.yy.kaitian.cxl.ui.activity.LoginActivity" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="com.yy.kaitian.cxl.ui.activity.MainActivity" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name="com.yy.kaitian.cxl.ui.activity.DuiHuanShenHeActivity">
+</activity>
+<activity android:name="com.yy.kaitian.cxl.ui.activity.DuiHuanICListActivity">
+</activity>
+<activity android:name="com.yy.kaitian.cxl.ui.activity.TiXianSuccessActivity">
+</activity>
+<activity android:name="com.yy.kaitian.cxl.ui.activity.TiXianListActivity">
+</activity>
+<activity android:name="com.yy.kaitian.cxl.ui.activity.WebActivity">
+</activity>
+<service android:name="com.yy.kaitian.cxl.step.service.StepService" android:priority="1000" android:process=":process1">
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+<action android:name="android.intent.action.DATE_CHANGED">
+</action>
+<action android:name="android.intent.action.MEDIA_MOUNTED">
+</action>
+<action android:name="android.intent.action.USER_PRESENT">
+</action>
+<action android:name="android.intent.action.ACTION_TIME_TICK">
+</action>
+<action android:name="android.intent.action.ACTION_POWER_CONNECTED">
+</action>
+<action android:name="android.intent.action.ACTION_POWER_DISCONNECTED">
+</action>
+</intent-filter>
+</service>
+<receiver android:name="com.yy.kaitian.cxl.step.service.BootCompleteReceiver">
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name="com.yy.kaitian.cxl.step.receiver.Receiver1" android:process=":process1">
+</receiver>
+<service android:name="com.yy.kaitian.cxl.step.service.DaemonService" android:process=":process2">
+</service>
+<receiver android:name="com.yy.kaitian.cxl.step.receiver.Receiver2" android:process=":process2">
+</receiver>
+<activity android:name="com.yy.kaitian.cxl.ui.activity.me.TiXianActivity">
+</activity>
+<activity android:name="com.yy.kaitian.cxl.ui.activity.me.ZhuanZhangActivity">
+</activity>
+<activity android:name="com.yy.kaitian.cxl.ui.activity.me.ZhuanZhangSuccessActivity">
+</activity>
+<activity android:name="com.yy.kaitian.cxl.ui.activity.me.ZhuanZhangListActivity">
+</activity>
+<activity android:name="com.soundcloud.android.crop.CropImageActivity">
+</activity>
+<provider android:authorities="com.yy.kaitian.cxl.fileprovider" android:exported="false" android:grantUriPermissions="true" android:name="android.support.v4.content.FileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F060000">
+</meta-data>
+</provider>
+<activity android:configChanges="0x00000480" android:label="@7F07001B" android:name="com.darsh.multipleimageselect.activities.AlbumSelectActivity" android:theme="@7F0A00C6">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x00000480" android:label="@7F07001B" android:name="com.darsh.multipleimageselect.activities.ImageSelectActivity" android:theme="@7F0A00C6">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+</application>
+</manifest>

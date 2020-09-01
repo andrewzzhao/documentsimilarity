@@ -1,0 +1,496 @@
+<?xml version="1.0" ?><manifest android:versionCode="13" android:versionName="2.0.9" package="com.mocoo.artamoy" platformBuildVersionCode="23" platformBuildVersionName="6.0-2704002" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="14" android:targetSdkVersion="22">
+</uses-sdk>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.CALL_PHONE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.MANAGE_LOCATION_POLICY">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.MANAGE_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="android.permission.BLUETOOTH">
+</uses-permission>
+<uses-permission android:name="android.permission.BLUETOOTH_ADMIN">
+</uses-permission>
+<uses-permission android:name="android.permission.RECORD_AUDIO">
+</uses-permission>
+<uses-feature android:name="android.hardware.camera.autofocus">
+</uses-feature>
+<uses-feature android:glEsVersion="0x00020000" android:required="true">
+</uses-feature>
+<permission android:name="com.mocoo.artamoy.permission.JPUSH_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="com.mocoo.artamoy.permission.JPUSH_MESSAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_USER_PRESENT">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS">
+</uses-permission>
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS">
+</uses-permission>
+<application android:allowBackup="true" android:icon="@7F0200B7" android:label="@7F06002B" android:name="com.qihoo.util.StubApp1300987363" android:qihoo="activity" android:screenOrientation="1" android:supportsRtl="true" android:theme="@7F0A0101">
+<activity android:name="com.mocoo.artamoy.activity.SplashActivity">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="yishuxiamen.com" android:scheme="artamoy">
+</data>
+</intent-filter>
+</activity>
+<service android:enabled="false" android:exported="false" android:name="com.qihoo.util.QhJobService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<activity android:excludeFromRecents="true" android:exported="false" android:launchMode="2" android:name="com.qihoo.util.CommonActivity" android:taskAffinity="com.mocoo.artamoy.util" android:theme="@android:0103005F">
+</activity>
+<service android:enabled="true" android:exported="true" android:name="com.qihoo.util.CommonService">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.qihoo.util.CommonService2">
+</service>
+<receiver android:enabled="true" android:exported="false" android:name="com.qihoo.util.CommonReceiver">
+</receiver>
+<provider android:authorities="com.mocoo.artamoy.COMMONPROVIDER" android:exported="true" android:name="com.qihoo.util.CommonProvider">
+</provider>
+<activity android:configChanges="0x000000A0" android:exported="false" android:launchMode="2" android:name="com.qihoo.ls.LsActivity" android:screenOrientation="1" android:theme="@android:01030060">
+</activity>
+<service android:exported="false" android:name="com.qihoo.ls.SoService">
+</service>
+<activity android:exported="true" android:launchMode="1" android:name="com.mocoo.artamoy.activity.OrderPayActivity">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:scheme="wx7ab7aa7a733dfaba">
+</data>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004E0" android:exported="false" android:name="com.alipay.sdk.app.H5PayActivity" android:screenOrientation="3" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:exported="true" android:launchMode="1" android:name="com.mocoo.artamoy.wxapi.WXPayEntryActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.mob.tools.MobUIShell" android:screenOrientation="1" android:theme="@android:01030010" android:windowSoftInputMode="0x00000012">
+<intent-filter>
+<data android:scheme="tencent1105297094">
+</data>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004A0" android:exported="true" android:launchMode="1" android:name="com.mocoo.artamoy.wxapi.WXEntryActivity" android:screenOrientation="1" android:theme="@android:01030010">
+<intent-filter>
+ //救恑癏appid
+
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+<data android:scheme="wx7ab7aa7a733dfaba">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.mocoo.artamoy.activity.BrandingBusinessActivity">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.mocoo.artamoy.activity.SearchBrandingBusinessActivity" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:launchMode="2" android:name="com.tencent.tauth.AuthActivity" android:noHistory="true">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="tencent1105297094">
+</data>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.tencent.connect.common.AssistActivity" android:theme="@android:01030010">
+</activity>
+<activity android:exported="false" android:name="cn.jpush.android.ui.PopWinActivity" android:theme="@7F0A00C5">
+</activity>
+<activity android:configChanges="0x000000A0" android:exported="false" android:name="cn.jpush.android.ui.PushActivity" android:theme="@android:01030006">
+<intent-filter>
+<action android:name="cn.jpush.android.ui.PushActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="com.mocoo.artamoy">
+</category>
+</intent-filter>
+</activity>
+<service android:enabled="true" android:exported="false" android:name="cn.jpush.android.service.DownloadService">
+</service>
+<service android:name="cn.jpush.android.service.PushService" android:process=":mult">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.REGISTER">
+</action>
+<action android:name="cn.jpush.android.intent.REPORT">
+</action>
+<action android:name="cn.jpush.android.intent.PushService">
+</action>
+<action android:name="cn.jpush.android.intent.PUSH_TIME">
+</action>
+</intent-filter>
+</service>
+<service android:enabled="true" android:exported="true" android:name="cn.jpush.android.service.DaemonService">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.DaemonService">
+</action>
+<category android:name="com.mocoo.artamoy">
+</category>
+</intent-filter>
+</service>
+<receiver android:enabled="true" android:name="cn.jpush.android.service.PushReceiver">
+<intent-filter android:priority="1000">
+<action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY">
+</action>
+<category android:name="com.mocoo.artamoy">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.USER_PRESENT">
+</action>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_ADDED">
+</action>
+<action android:name="android.intent.action.PACKAGE_REMOVED">
+</action>
+<data android:scheme="package">
+</data>
+</intent-filter>
+</receiver>
+<receiver android:exported="false" android:name="cn.jpush.android.service.AlarmReceiver">
+</receiver>
+<receiver android:enabled="true" android:exported="false" android:name="com.mocoo.artamoy.receiver.MyReceiver">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.REGISTRATION">
+</action>
+<action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED">
+</action>
+<action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED">
+</action>
+<action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED">
+</action>
+<action android:name="cn.jpush.android.intent.CONNECTION">
+</action>
+<category android:name="com.mocoo.artamoy">
+</category>
+</intent-filter>
+</receiver>
+<meta-data android:name="JPUSH_CHANNEL" android:value="developer-default">
+</meta-data>
+<meta-data android:name="JPUSH_APPKEY" android:value="f93e124d61adaf9e492ced28">
+</meta-data>
+<activity android:name="com.qiniu.pili.droid.streaming.screen.ScreenCaptureRequestActivity" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.mocoo.artamoy.main.MainActivity" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:name="com.mocoo.artamoy.activity.EvaluationActivity" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:name="com.mocoo.artamoy.activity.CustomerActivity" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.mocoo.artamoy.activity.SearchActivity" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.mocoo.artamoy.activity.MoreAwardsActivity" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.mocoo.artamoy.activity.WithdrawActivity" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:name="com.mocoo.artamoy.activity.BindingPhoneActivity">
+</activity>
+<activity android:name="com.mocoo.artamoy.activity.MyOrderActivity">
+</activity>
+<activity android:name="com.mocoo.artamoy.activity.MyAuctionActivity">
+</activity>
+<activity android:name="com.mocoo.artamoy.activity.MyAccountActivity">
+</activity>
+<activity android:name="com.mocoo.artamoy.activity.SettingActivity">
+</activity>
+<activity android:name="com.mocoo.artamoy.activity.SetNickNameActivity">
+</activity>
+<activity android:name="com.mocoo.artamoy.activity.ShippingAddressActivity">
+</activity>
+<activity android:name="com.mocoo.artamoy.activity.AddShippingAddressActivity">
+</activity>
+<activity android:name="com.mocoo.artamoy.user.ChangePasswordActivity">
+</activity>
+<activity android:name="com.mocoo.artamoy.user.ChangeDealPasswordActivity">
+</activity>
+<activity android:name="com.mocoo.artamoy.user.ForgetDealPasswordActivity">
+</activity>
+<activity android:name="com.mocoo.artamoy.activity.ConfirmOrderActivity">
+</activity>
+<activity android:name="com.mocoo.artamoy.activity.RechargeActivity">
+</activity>
+<activity android:name="com.mocoo.artamoy.activity.CashDepositRegulationActivity">
+</activity>
+<activity android:name="com.mocoo.artamoy.activity.OrderDetailActivity">
+</activity>
+<activity android:name="com.mocoo.artamoy.activity.RemindActivity">
+</activity>
+<activity android:name="com.mocoo.artamoy.activity.LogisticsDetailActivity">
+</activity>
+<activity android:name="com.mocoo.artamoy.activity.ArticleDetailActivity">
+</activity>
+<activity android:name="com.mocoo.artamoy.activity.ArtistWorksDetailActivity">
+</activity>
+<activity android:name="com.mocoo.artamoy.activity.ArtistActivity">
+</activity>
+<activity android:name="com.mocoo.artamoy.activity.ShoppingCartActivity">
+</activity>
+<activity android:name="com.mocoo.artamoy.activity.ActivityOrderDetailActivity">
+</activity>
+<activity android:name="com.mocoo.artamoy.activity.ActivityContentActivity">
+</activity>
+<activity android:name="com.mocoo.artamoy.activity.ThinkChangeActivity">
+</activity>
+<activity android:name="com.mocoo.artamoy.activity.ClubActivity">
+</activity>
+<activity android:name="com.mocoo.artamoy.activity.CommentActivity">
+</activity>
+<activity android:name="com.mocoo.artamoy.activity.ApplyActivityActivity">
+</activity>
+<activity android:name="com.mocoo.artamoy.activity.WorksCommentActivity">
+</activity>
+<activity android:name="com.mocoo.artamoy.activity.ArtistCommentActivity">
+</activity>
+<activity android:name="com.mocoo.artamoy.activity.ArtistHomePageNewActivity">
+</activity>
+<activity android:name="com.mocoo.artamoy.activity.AuctionGoodsActivity">
+</activity>
+<activity android:name="com.mocoo.artamoy.activity.AuctionDoubtActivity">
+</activity>
+<activity android:name="com.mocoo.artamoy.activity.OneBuyOrderDetailActivity">
+</activity>
+<activity android:name="com.mocoo.artamoy.activity.AuctionOrderDetailActivity">
+</activity>
+<activity android:name="com.mocoo.artamoy.activity.HottestGambitActivity">
+</activity>
+<activity android:name="com.mocoo.artamoy.activity.ImageTextDetailActivity">
+</activity>
+<activity android:name="com.mocoo.artamoy.activity.LotteryResultActivity">
+</activity>
+<activity android:name="com.mocoo.artamoy.activity.ParticipationRecordActivity">
+</activity>
+<activity android:name="com.mocoo.artamoy.activity.OneYuanParticipationActivity">
+</activity>
+<activity android:name="com.mocoo.artamoy.activity.CommentThemeActivity">
+</activity>
+<activity android:name="com.mocoo.artamoy.activity.GuideActivity">
+</activity>
+<activity android:name="com.mocoo.artamoy.user.ForgetPasswordActivity">
+</activity>
+<activity android:name="com.mocoo.artamoy.activity.BannerActivity">
+</activity>
+<activity android:name="com.mocoo.artamoy.activity.MySettingActivity">
+</activity>
+<activity android:name="com.mocoo.artamoy.activity.FeedbackAndHelpActivity">
+</activity>
+<activity android:name="com.mocoo.artamoy.activity.AppActivity">
+</activity>
+<activity android:name="com.mocoo.artamoy.activity.PersonalCenterActivity">
+</activity>
+<activity android:name="com.mocoo.artamoy.activity.MySettingNewActivity">
+</activity>
+<activity android:name="com.mocoo.artamoy.activity.ShippingAddressNewActivity">
+</activity>
+<activity android:name="com.mocoo.artamoy.activity.AftermarketActivity">
+</activity>
+<activity android:name="com.mocoo.artamoy.activity.PassWordActivity">
+</activity>
+<activity android:name="com.mocoo.artamoy.activity.RefundActivity">
+</activity>
+<activity android:name="com.mocoo.artamoy.activity.ConfirmOrderNewActivity">
+</activity>
+<activity android:name="com.mocoo.artamoy.activity.MessageActivity">
+</activity>
+<activity android:name="com.mocoo.artamoy.activity.LogisticsActivity">
+</activity>
+<activity android:name="com.mocoo.artamoy.activity.LotActivity">
+</activity>
+<activity android:name="com.mocoo.artamoy.user.LoginNewActivity">
+</activity>
+<activity android:name="com.mocoo.artamoy.user.RegisterNewActivity">
+</activity>
+<activity android:name="com.mocoo.artamoy.activity.GoodsDetailNewActivity">
+</activity>
+<activity android:name="com.mocoo.artamoy.activity.ArtTaoNewActivity">
+</activity>
+<activity android:name="com.mocoo.artamoy.activity.SellersettledActivity">
+</activity>
+<activity android:name="com.mocoo.artamoy.activity.VerifiedActivity">
+</activity>
+<activity android:name="com.mocoo.artamoy.activity.BankverificationActivity">
+</activity>
+<activity android:name="com.mocoo.artamoy.activity.AuditActivity">
+</activity>
+<activity android:name="com.mocoo.artamoy.activity.AccountsecurityActivity">
+</activity>
+<activity android:name="com.mocoo.artamoy.activity.PrivacyActivity">
+</activity>
+<activity android:name="com.mocoo.artamoy.activity.GeneralActivity">
+</activity>
+<activity android:name="com.mocoo.artamoy.activity.AboutUsActivity">
+</activity>
+<activity android:name="com.mocoo.artamoy.activity.MyCollectNewActivity">
+</activity>
+<activity android:name="com.mocoo.artamoy.activity.AttentionActivity">
+</activity>
+<activity android:name="com.mocoo.artamoy.activity.MemberCentreActivity">
+</activity>
+<activity android:name="com.mocoo.artamoy.activity.AccountManagementActivity">
+</activity>
+<activity android:name="com.mocoo.artamoy.activity.BankCardActivity">
+</activity>
+<activity android:name="com.mocoo.artamoy.activity.AddBankcardActivity">
+</activity>
+<activity android:name="com.mocoo.artamoy.activity.WithdrawaActivity">
+</activity>
+<activity android:name="com.mocoo.artamoy.activity.BankcardmanagementActivity">
+</activity>
+<activity android:name="com.mocoo.artamoy.activity.CouponActivity">
+</activity>
+<activity android:name="com.mocoo.artamoy.activity.SpecialActivity">
+</activity>
+<activity android:name="com.mocoo.artamoy.activity.AuctionActivity">
+</activity>
+<activity android:name="com.mocoo.artamoy.activity.ShowActivity">
+</activity>
+<activity android:name="com.mocoo.artamoy.activity.ProductssideActivity">
+</activity>
+<activity android:name="com.mocoo.artamoy.activity.AuctionDetileActivity">
+</activity>
+<activity android:name="com.mocoo.artamoy.activity.AuctionSpecialActivity">
+</activity>
+<activity android:name="com.mocoo.artamoy.activity.PrincipalActivity">
+</activity>
+<activity android:name="com.mocoo.artamoy.activity.GalleryActivity">
+</activity>
+<activity android:name="com.mocoo.artamoy.activity.GalleryDetileActivity">
+</activity>
+<activity android:name="com.mocoo.artamoy.activity.MyartgalleryActivity">
+</activity>
+<activity android:name="com.mocoo.artamoy.activity.AddWorksActivity">
+</activity>
+<activity android:name="com.mocoo.artamoy.activity.WorksmanagerActivity">
+</activity>
+<activity android:name="com.mocoo.artamoy.activity.mySellersOrderActivity">
+</activity>
+<activity android:name="com.mocoo.artamoy.activity.ShipActivity">
+</activity>
+<activity android:name="com.mocoo.artamoy.activity.TicketsActivity">
+</activity>
+<activity android:name="com.mocoo.artamoy.activity.ApplicationLiveActivity">
+</activity>
+<activity android:name="com.mocoo.artamoy.activity.IWantToLiveActivity">
+</activity>
+<activity android:name="com.mocoo.artamoy.activity.LivePlayBackActivity">
+</activity>
+<activity android:name="com.mocoo.artamoy.activity.LiveEndActivity">
+</activity>
+<activity android:name="com.mocoo.artamoy.activity.StartLiveActivity">
+</activity>
+<activity android:name="com.mocoo.artamoy.activity.WatchLiveActivity">
+</activity>
+<activity android:name="com.mocoo.artamoy.activity.LogisticsquestionActivity">
+</activity>
+<activity android:name="com.mocoo.artamoy.activity.CommonProblemActivity">
+</activity>
+<activity android:name="com.mocoo.artamoy.activity.ViewImageActivity">
+</activity>
+<activity android:name="com.mocoo.artamoy.activity.MyEvaluationActivity">
+</activity>
+<activity android:name="com.mocoo.artamoy.activity.ModifyPhoneActivity">
+</activity>
+<activity android:name="com.mocoo.artamoy.activity.AwardActivity">
+</activity>
+<activity android:name="com.mocoo.artamoy.activity.AwardsArtistDetileActivity">
+</activity>
+<activity android:name="com.mocoo.artamoy.activity.AwardsGoodsDetileActivityActivity">
+</activity>
+<activity android:name="com.mocoo.artamoy.activity.AwardsArtInstitutionsActivityActivity">
+</activity>
+<activity android:name="com.mocoo.artamoy.activity.RankingActivity">
+</activity>
+<activity android:name="com.mocoo.artamoy.activity.RankingDetileActivity">
+</activity>
+<activity android:name="com.mocoo.artamoy.activity.MyLotOrderActivity">
+</activity>
+<activity android:name="com.mocoo.artamoy.activity.ArtistShopActivity">
+</activity>
+<activity android:name="com.mocoo.artamoy.activity.GalleryShopActivity">
+</activity>
+<activity android:name="com.mocoo.artamoy.activity.SearchArtGalleryActivity">
+</activity>
+<activity android:name="com.mocoo.artamoy.activity.RecommendActivity">
+</activity>
+<activity android:name="com.mocoo.artamoy.activity.AdvertisingActivity">
+</activity>
+<activity android:name="com.mocoo.artamoy.activity.SelectCouponActivity">
+</activity>
+<activity android:name="com.mocoo.artamoy.activity.CommissionExplanationActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.mocoo.artamoy.activity.AuditoriumActivity" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.mocoo.artamoy.activity.AuditoriumNewActivity" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.mocoo.artamoy.activity.AuditoriumNewPLActivity" android:windowSoftInputMode="0x00000020">
+</activity>
+</application>
+</manifest>

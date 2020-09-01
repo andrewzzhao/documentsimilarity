@@ -1,0 +1,64 @@
+<?xml version="1.0" ?><manifest android:versionCode="51" android:versionName="2.4.5" package="com.wabco_auto.inspection" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="16" android:targetSdkVersion="27">
+</uses-sdk>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.RECORD_AUDIO">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<application android:allowBackup="false" android:icon="@7F0C0000" android:label="@7F0D0045" android:name="com.wabco_auto.inspection.BaseApplication" android:supportsRtl="false" android:theme="@7F0E012E">
+<activity android:name="com.wabco_auto.inspection.ui.activity.InspectionOverviewActivity" android:parentActivityName="com.wabco_auto.inspection.ui.activity.InspectionStartupActivity" android:screenOrientation="7">
+</activity>
+<activity android:name="com.wabco_auto.inspection.ui.activity.InspectionItemListsActivity" android:parentActivityName="com.wabco_auto.inspection.ui.activity.InspectionOverviewActivity" android:screenOrientation="7">
+</activity>
+<activity android:name="com.wabco_auto.inspection.ui.activity.InspectionItemsActivity" android:parentActivityName="com.wabco_auto.inspection.ui.activity.InspectionItemListsActivity" android:screenOrientation="7">
+</activity>
+<activity android:name="com.wabco_auto.inspection.ui.activity.InspectionStartupActivity" android:screenOrientation="7">
+</activity>
+<activity android:name="com.wabco_auto.inspection.ui.activity.VehicleSettingsActivity" android:screenOrientation="7" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:name="com.wabco_auto.inspection.ui.activity.ArchiveActivity" android:screenOrientation="7">
+</activity>
+<activity android:name="com.wabco_auto.inspection.ui.activity.LoginActivity" android:screenOrientation="7" android:theme="@7F0E00C7">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="com.wabco-auto.inspection.action.START_INSPECTION">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:name="com.wabco_auto.inspection.ui.activity.InspectionEditConfigActivity" android:parentActivityName="com.wabco_auto.inspection.ui.activity.InspectionStartupActivity" android:screenOrientation="7">
+</activity>
+<activity android:name="com.wabco_auto.inspection.ui.activity.ImprintActivity" android:screenOrientation="7">
+</activity>
+<activity android:name="com.wabco_auto.inspection.ui.activity.DisclaimerActivity" android:screenOrientation="7">
+</activity>
+<activity android:name="com.wabco_auto.inspection.ui.activity.TutorialActivity" android:parentActivityName="com.wabco_auto.inspection.ui.activity.InspectionStartupActivity" android:screenOrientation="7">
+</activity>
+<activity android:name="com.wabco_auto.inspection.ui.activity.InspectionMetaActivity" android:parentActivityName="com.wabco_auto.inspection.ui.activity.InspectionOverviewActivity" android:screenOrientation="7">
+</activity>
+<provider android:authorities="com.wabco_auto.inspection.provider" android:exported="false" android:grantUriPermissions="true" android:name="android.support.v4.content.FileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F100000">
+</meta-data>
+</provider>
+<provider android:authorities="com.wabco_auto.inspection.dbflow" android:exported="false" android:name="com.raizlabs.android.dbflow.runtime.StubContentProvider">
+</provider>
+<meta-data android:name="io.fabric.ApiKey" android:value="d1c73d1f6b3eb640ae20d7fd3c50493e8fc0a03f">
+</meta-data>
+<activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:01030010">
+</activity>
+<meta-data android:name="com.google.android.gms.version" android:value="@7F090008">
+</meta-data>
+<provider android:authorities="com.wabco_auto.inspection.crashlyticsinitprovider" android:exported="false" android:initOrder="100" android:name="com.crashlytics.android.CrashlyticsInitProvider">
+</provider>
+</application>
+</manifest>

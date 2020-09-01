@@ -1,0 +1,106 @@
+<?xml version="1.0" ?><manifest android:versionCode="1011102100" android:versionName="1.11.2-100-4443508" package="com.google.android.leanbacklauncher" platformBuildVersionCode="25" platformBuildVersionName="7.1.1" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="21" android:targetSdkVersion="24">
+</uses-sdk>
+<uses-feature android:name="android.software.leanback" android:required="true">
+</uses-feature>
+<uses-feature android:name="android.hardware.touchscreen" android:required="false">
+</uses-feature>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NOTIFICATIONS">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERACT_ACROSS_USERS">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.MEDIA_CONTENT_CONTROL">
+</uses-permission>
+<uses-permission android:name="android.permission.SET_WALLPAPER">
+</uses-permission>
+<uses-permission android:name="android.permission.SET_WALLPAPER_HINTS">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="com.android.providers.tv.permission.READ_EPG_DATA">
+</uses-permission>
+<uses-permission android:name="android.permission.BIND_APPWIDGET">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.PACKAGE_USAGE_STATS">
+</uses-permission>
+<uses-permission android:name="com.google.android.leanbacklauncher.recommendations.permission.RECOMMENDATIONS">
+</uses-permission>
+<uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_PACKAGE_SIZE">
+</uses-permission>
+<permission android:name="com.google.android.leanbacklauncher.permission.MIGRATE_RECOMMENDATIONS_DATA" android:protectionLevel="0x00000002">
+</permission>
+<application android:allowBackup="true" android:icon="@7F020095" android:label="@7F0A0014" android:name="com.google.android.leanbacklauncher.LauncherApplication" android:requiredForAllUsers="true" android:supportsRtl="true" android:theme="@7F0C00D7">
+<meta-data android:name="com.google.android.gms.version" android:value="@7F0D0011">
+</meta-data>
+<meta-data android:name="com.google.android.leanbacklauncher.LauncherGlideModule" android:value="GlideModule">
+</meta-data>
+<activity android:clearTaskOnLaunch="true" android:configChanges="0x000000F0" android:excludeFromRecents="true" android:label="@7F0A0013" android:launchMode="2" android:name="com.google.android.leanbacklauncher.MainActivity" android:screenOrientation="0" android:stateNotNeeded="true" android:supportsRtl="true">
+<intent-filter android:priority="2">
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.HOME">
+</category>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x00000070" android:enabled="@7F0E0003" android:excludeFromRecents="true" android:label="@7F0A0080" android:name="com.google.android.leanbacklauncher.settings.HomeScreenSettingsActivity" android:theme="@7F0C0164">
+<intent-filter>
+<action android:name="com.google.android.leanbacklauncher.SETTINGS">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x00000070" android:enabled="@7F0E0002" android:excludeFromRecents="true" android:name="com.google.android.leanbacklauncher.settings.LegacyHomeScreenSettingsActivity" android:theme="@7F0C0163">
+<intent-filter>
+<action android:name="com.google.android.leanbacklauncher.SETTINGS">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<service android:label="@7F0A0064" android:name="com.google.android.leanbacklauncher.recommendations.NotificationsService" android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE">
+<intent-filter>
+<action android:name="android.service.notification.NotificationListenerService">
+</action>
+</intent-filter>
+</service>
+<service android:label="@7F0A0071" android:name="com.google.android.leanbacklauncher.recommendations.RecommendationsService">
+</service>
+<receiver android:name="com.google.android.leanbacklauncher.MediaButtonBroadcastReceiver">
+<intent-filter android:priority="2">
+<action android:name="android.intent.action.MEDIA_BUTTON">
+</action>
+</intent-filter>
+</receiver>
+<activity android:enabled="false" android:label="@7F0A0013" android:name="com.google.android.leanbacklauncher.DummyActivity" android:stateNotNeeded="true">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LEANBACK_LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<provider android:authorities="com.android.google.tvrecommendations.migration" android:exported="true" android:name="com.google.android.leanbacklauncher.migration.DbMigrationContentProvider" android:permission="com.google.android.leanbacklauncher.permission.MIGRATE_RECOMMENDATIONS_DATA">
+</provider>
+<receiver android:name="com.google.android.leanbacklauncher.wallpaper.WallpaperInstaller$WallpaperChangedReceiver">
+<intent-filter>
+<action android:name="android.intent.action.WALLPAPER_CHANGED">
+</action>
+</intent-filter>
+</receiver>
+<activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:01030010">
+</activity>
+</application>
+</manifest>

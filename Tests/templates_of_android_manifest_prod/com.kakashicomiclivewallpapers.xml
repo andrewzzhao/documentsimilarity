@@ -1,0 +1,42 @@
+<?xml version="1.0" ?><manifest android:versionCode="1" android:versionName="1.0" package="com.kakashicomiclivewallpapers" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="7" android:targetSdkVersion="15">
+</uses-sdk>
+<uses-feature android:name="android.software.live_wallpaper">
+</uses-feature>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS">
+</uses-permission>
+<uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT">
+</uses-permission>
+<application android:icon="@7F020002" android:label="@7F050000" android:theme="@7F060000">
+<service android:name="SasukeLiveWallpaperService" android:permission="android.permission.BIND_WALLPAPER">
+<intent-filter>
+<action android:name="android.service.wallpaper.WallpaperService">
+</action>
+</intent-filter>
+<meta-data android:name="android.service.wallpaper" android:resource="@7F040000">
+</meta-data>
+</service>
+<receiver android:name="com.Leadbolt.AdNotification">
+</receiver>
+<receiver android:name="BootReceiver">
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+</intent-filter>
+</receiver>
+</application>
+</manifest>

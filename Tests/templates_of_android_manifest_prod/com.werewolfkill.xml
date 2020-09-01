@@ -1,0 +1,276 @@
+<?xml version="1.0" ?><manifest android:versionCode="5" android:versionName="1.4" package="com.werewolfkill" platformBuildVersionCode="25" platformBuildVersionName="7.1.1" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="15" android:targetSdkVersion="22">
+</uses-sdk>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.RECORD_AUDIO">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-permission android:name="android.permission.USE_CREDENTIALS">
+</uses-permission>
+<uses-permission android:name="com.android.launcher.permission.READ_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.BROADCAST_STICKY">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_LOGS">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-permission android:name="android.permission.BODY_SENSORS">
+</uses-permission>
+<uses-feature android:name="android.hardware.camera">
+</uses-feature>
+<uses-feature android:name="android.hardware.camera.autofocus" android:required="false">
+</uses-feature>
+<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE">
+</uses-permission>
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW">
+</uses-permission>
+<uses-permission android:name="getui.permission.GetuiService.com.werewolfkill">
+</uses-permission>
+<permission android:name="getui.permission.GetuiService.com.werewolfkill" android:protectionLevel="0x00000000">
+</permission>
+<application android:allowBackup="true" android:icon="@7F030016" android:label="@7F08017B" android:name="com.stub.StubApp" android:qihoo="activity" android:roundIcon="@7F030016" android:supportsRtl="true" android:theme="@7F0A00AE">
+<service android:enabled="true" android:name="com.baidu.location.f" android:process=":remote">
+<intent-filter>
+<action android:name="com.baidu.location.service_v2.2">
+</action>
+</intent-filter>
+</service>
+<meta-data android:name="com.baidu.lbsapi.API_KEY" android:value="Ud6QaR63S74GpLRHtkyqUHHYxrduZwbN">
+</meta-data>
+<meta-data android:name="EASEMOB_APPKEY" android:value="1130170524115185#wolfgodcovenant">
+</meta-data>
+<service android:exported="true" android:name="com.hyphenate.chat.EMChatService">
+</service>
+<service android:exported="true" android:name="com.hyphenate.chat.EMJobService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<receiver android:name="com.hyphenate.chat.EMMonitorReceiver">
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_REMOVED">
+</action>
+<data android:scheme="package">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+<action android:name="android.intent.action.USER_PRESENT">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:exported="true" android:name="com.hyphenate.chat.EMGCMBroadcastReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+<category android:name="com.werewolfkill">
+</category>
+</intent-filter>
+</receiver>
+<service android:exported="false" android:name="com.hyphenate.chat.EMGCMListenerService">
+</service>
+<receiver android:exported="false" android:name="com.werewolfkill.receiver.GCMPushBroadCast">
+<intent-filter>
+<action android:name="com.hyphenate.sdk.push">
+</action>
+<category android:name="com.werewolfkill">
+</category>
+</intent-filter>
+</receiver>
+<activity android:launchMode="2" android:name="com.werewolfkill.MainActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:excludeFromRecents="true" android:launchMode="0" android:name="com.stub.plugin.Stub01" android:noHistory="true" android:taskAffinity="com.werewolfkill.affinity">
+</activity>
+<service android:enabled="true" android:exported="true" android:name="com.stub.plugin.Stub02">
+</service>
+<receiver android:enabled="true" android:exported="false" android:name="com.stub.plugin.Stub03">
+</receiver>
+<provider android:authorities="com.werewolfkill.COMMONPROVIDER" android:exported="true" android:name="com.stub.plugin.Stub04">
+</provider>
+<activity android:name="com.werewolfkill.SplashActivity" android:screenOrientation="1" android:theme="@7F0A00AD">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:name="com.werewolfkill.LoginActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.werewolfkill.Login2Activity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.werewolfkill.RegisterActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.werewolfkill.StartBespeakActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.werewolfkill.ChatActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="2" android:name="com.werewolfkill.WaitPayActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.werewolfkill.BesSelectShopActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.werewolfkill.FaceScoreEvaluateActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.werewolfkill.CeremoneyEvaluateActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.werewolfkill.SettingActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="2" android:name="com.werewolfkill.BesDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.werewolfkill.FriendsActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.hyphenate.easeui.ui.EaseShowBigImageActivity" android:screenOrientation="1" android:theme="@7F0A0024">
+</activity>
+<activity android:name="com.hyphenate.easeui.ui.EaseShowBigImageViewPagerActivity" android:screenOrientation="1" android:theme="@7F0A0024">
+</activity>
+<activity android:name="com.hyphenate.easeui.ui.EaseShowVideoActivity" android:screenOrientation="1" android:theme="@7F0A0024">
+</activity>
+<activity android:name="com.hyphenate.easeui.ui.EaseShowNormalFileActivity" android:screenOrientation="1" android:theme="@7F0A0024">
+</activity>
+<activity android:name="com.hyphenate.easeui.ui.EaseBaiduMapActivity" android:screenOrientation="1" android:theme="@7F0A0024">
+</activity>
+<activity android:name="com.werewolfkill.BesLocationBaiDuMapActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.werewolfkill.GameRuleActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.werewolfkill.EditPersonalActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.werewolfkill.SelectFriendsActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.werewolfkill.ChatDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.yalantis.ucrop.UCropActivity" android:screenOrientation="1" android:theme="@7F0A0134">
+</activity>
+<activity android:name="com.werewolfkill.SelectHomeTownActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.werewolfkill.SelectOccupationActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.werewolfkill.UpdateNickNameActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.werewolfkill.UpdatePasswordActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.werewolfkill.CardSettingActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.werewolfkill.ShowCardNumActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.werewolfkill.MyQRCodeActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.werewolfkill.EaseShowBigImageActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sunshine_inspector.zxing.android.CaptureActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.werewolfkill.FightingMsgActivity" android:screenOrientation="1">
+</activity>
+<activity android:exported="true" android:name="com.werewolfkill.wxapi.WXEntryActivity" android:screenOrientation="1" android:theme="@7F0A01A9">
+</activity>
+<activity android:exported="true" android:name="com.werewolfkill.wxapi.WXPayEntryActivity" android:screenOrientation="1" android:theme="@7F0A01A9">
+</activity>
+<activity android:name="com.werewolfkill.RankingsActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.werewolfkill.CooperationActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.werewolfkill.PlayerInfoActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.werewolfkill.CompletePersonalActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.werewolfkill.HelpActivity" android:screenOrientation="1">
+</activity>
+<service android:exported="true" android:label="PushService" android:name="com.werewolfkill.AppPushService" android:process=":pushservice">
+</service>
+<service android:name="com.werewolfkill.AppReceivePushService">
+</service>
+<activity android:name="com.werewolfkill.OrderActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.werewolfkill.ShopPhotoActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.werewolfkill.ShopActivity" android:screenOrientation="1">
+</activity>
+<activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:01030010">
+</activity>
+<meta-data android:name="com.google.android.gms.version" android:value="@7F0F0003">
+</meta-data>
+<provider android:authorities="com.werewolfkill.easyphotopicker.fileprovider" android:exported="false" android:grantUriPermissions="true" android:name="android.support.v4.content.FileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F060000">
+</meta-data>
+</provider>
+<meta-data android:name="PUSH_APPID" android:value="oJJvExaULZAVvPGOzNRMX2">
+</meta-data>
+<meta-data android:name="PUSH_APPKEY" android:value="L3cLYZyCZe6MKSj4zk44R6">
+</meta-data>
+<meta-data android:name="PUSH_APPSECRET" android:value="LDCDQtUgG7Ah09Z1zZ3TI3">
+</meta-data>
+<service android:exported="true" android:label="NotificationCenter" android:name="com.igexin.sdk.PushService" android:process=":pushservice">
+<intent-filter>
+<action android:name="com.igexin.sdk.action.service.message">
+</action>
+</intent-filter>
+</service>
+<receiver android:name="com.igexin.sdk.PushReceiver">
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+<action android:name="android.intent.action.USER_PRESENT">
+</action>
+<action android:name="com.igexin.sdk.action.refreshls">
+</action>
+<action android:name="android.intent.action.MEDIA_MOUNTED">
+</action>
+<action android:name="android.intent.action.ACTION_POWER_CONNECTED">
+</action>
+<action android:name="android.intent.action.ACTION_POWER_DISCONNECTED">
+</action>
+</intent-filter>
+</receiver>
+<activity android:excludeFromRecents="true" android:exported="false" android:name="com.igexin.sdk.PushActivity" android:process=":pushservice" android:taskAffinity="com.igexin.sdk.PushActivityTask" android:theme="@android:01030010">
+</activity>
+<activity android:excludeFromRecents="true" android:exported="true" android:name="com.igexin.sdk.GActivity" android:process=":pushservice" android:taskAffinity="com.igexin.sdk.PushActivityTask" android:theme="@android:01030010">
+</activity>
+<service android:name="com.igexin.download.DownloadService" android:process=":pushservice">
+</service>
+<receiver android:name="com.igexin.download.DownloadReceiver">
+<intent-filter>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+</receiver>
+<provider android:authorities="downloads.com.werewolfkill" android:exported="true" android:name="com.igexin.download.DownloadProvider" android:process=":pushservice">
+</provider>
+</application>
+</manifest>

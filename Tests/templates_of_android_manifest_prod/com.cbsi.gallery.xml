@@ -1,0 +1,86 @@
+<?xml version="1.0" ?><manifest android:versionCode="2" android:versionName="1.1" package="com.cbsi.gallery" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="12">
+</uses-sdk>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<application android:allowBackup="true" android:icon="@7F020012" android:label="@7F0A0003" android:name=".SummerApplication" android:theme="@android:0103000A">
+<activity android:name=".activity.WelcomeActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="com.cbsi.gallery" android:scheme="fn">
+</data>
+</intent-filter>
+</activity>
+<activity android:name=".activity.MainActivity" android:screenOrientation="1" android:theme="@android:01030009">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000A0" android:name=".activity.PhotoViewActivity" android:theme="@android:01030009">
+</activity>
+<activity android:configChanges="0x000000A0" android:name=".activity.WebViewActivity" android:theme="@android:01030009">
+</activity>
+<receiver android:name=".ConnectionChangeReceiver">
+<intent-filter>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+</receiver>
+<activity android:launchMode="2" android:name="com.tencent.tauth.AuthActivity" android:noHistory="true">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="tencent100424468">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.tencent.connect.common.AssistActivity" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x00000090" android:launchMode="2" android:name="com.umeng.socialize.view.ShareActivity" android:noHistory="true" android:theme="@7F090024" android:windowSoftInputMode="0x00000014">
+</activity>
+<activity android:configChanges="0x000004A0" android:exported="true" android:name=".wxapi.WXEntryActivity" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<activity android:name="com.umeng.update.UpdateDialogActivity" android:theme="@android:01030010">
+</activity>
+<service android:name="com.umeng.update.net.DownloadingService" android:process=":DownloadingService">
+</service>
+<activity android:name="com.umeng.fb.ConversationActivity" android:theme="@android:01030006">
+</activity>
+<meta-data android:name="UMENG_APPKEY" android:value="548fc17efd98c59e79000614">
+</meta-data>
+<meta-data android:name="UMENG_CHANNEL" android:value="M0002">
+</meta-data>
+</application>
+</manifest>

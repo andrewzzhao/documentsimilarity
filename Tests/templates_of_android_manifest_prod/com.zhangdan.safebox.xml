@@ -1,0 +1,92 @@
+<?xml version="1.0" ?><manifest android:versionCode="12" android:versionName="5.0.0" package="com.zhangdan.safebox" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="8" android:targetSdkVersion="16">
+</uses-sdk>
+<supports-screens android:anyDensity="true" android:largeScreens="true" android:normalScreens="true" android:resizeable="true" android:smallScreens="true">
+</supports-screens>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-feature android:name="android.hardware.camera" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.camera.autofocus" android:required="false">
+</uses-feature>
+<application android:allowBackup="true" android:icon="@7F02006E" android:label="@7F080004" android:name="com.zhangdan.safebox.SafeBoxApplication" android:theme="@7F09002D">
+<activity android:configChanges="0x000000A0" android:icon="@7F02006E" android:label="@7F080004" android:name="com.zhangdan.safebox.activitiy.splash.SplashActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="startapp" android:scheme="safebox">
+</data>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000A0" android:label="@7F080004" android:launchMode="2" android:name="com.zhangdan.safebox.activitiy.main.MainActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:launchMode="2" android:name=".activitiy.setting.GesturePwdActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.zhangdan.safebox.fragment.login.LoginActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.zhangdan.safebox.fragment.login.RegisterActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.zhangdan.safebox.fragment.login.RetrivePwdByMobileActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.zhangdan.safebox.fragment.login.RetrivePwdByEmailActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:hardwareAccelerated="true" android:name="io.card.payment.CardIOActivity">
+</activity>
+<activity android:name="io.card.payment.DataEntryActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.zhangdan.banka.activities.WebActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.zhangdan.safebox.activitiy.web.BaseWebActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.zhangdan.safebox.activitiy.update.UpdateActivity" android:theme="@android:01030010">
+</activity>
+<service android:name="com.zhangdan.safebox.service.DownloadApkService">
+</service>
+<provider android:authorities="com.zhangdan.safeboxnew" android:name="com.zhangdan.safebox.data.db.SafeBoxDataProvider" android:permission="com.zhangdan.safebox.access_db">
+</provider>
+<activity android:launchMode="2" android:name="com.tencent.tauth.AuthActivity" android:noHistory="true">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="tencent100732748">
+</data>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.tencent.connect.common.AssistActivity" android:theme="@android:01030010">
+</activity>
+<service android:exported="true" android:name="com.umeng.common.net.DownloadingService" android:process=":DownloadingService">
+</service>
+<activity android:name="com.umeng.update.UpdateDialogActivity" android:theme="@android:01030010">
+</activity>
+<meta-data android:name="UMENG_APPKEY" android:value="507e621f5270157ce500018f">
+</meta-data>
+<meta-data android:name="UMENG_CHANNEL" android:value="木">
+</meta-data>
+</application>
+</manifest>

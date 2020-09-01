@@ -1,0 +1,2712 @@
+<?xml version="1.0" ?><manifest android:compileSdkVersion="28" android:compileSdkVersionCodename="9" android:installLocation="0" android:versionCode="400439148" android:versionName="10.6.1" package="com.bunq.android" platformBuildVersionCode="400439148" platformBuildVersionName="10.6.1" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="21" android:targetSdkVersion="28">
+</uses-sdk>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.NFC">
+</uses-permission>
+<uses-feature android:name="android.hardware.nfc.hce" android:required="false">
+</uses-feature>
+<uses-permission android:name="android.permission.INSTALL_SHORTCUT">
+</uses-permission>
+<uses-permission android:name="android.permission.UNINSTALL_SHORTCUT">
+</uses-permission>
+<permission android:name="com.bunq.android.SINGLE_SIGN_ON" android:protectionLevel="0x00000002">
+</permission>
+<permission android:name="com.bunq.android.permission.C2D_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<permission android:name="com.bunq.android.permission.MAPS_RECEIVE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="com.bunq.slice.android.SINGLE_SIGN_ON">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="android.permission.MANAGE_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_CONTACTS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_SYNC_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.USE_CREDENTIALS">
+</uses-permission>
+<uses-permission android:name="android.permission.USE_FINGERPRINT">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_CONTACTS">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS">
+</uses-permission>
+<uses-permission android:name="com.bunq.android.permission.C2D_MESSAGE">
+</uses-permission>
+<uses-permission android:name="com.bunq.android.permission.MAPS_RECEIVE">
+</uses-permission>
+<uses-feature android:glEsVersion="0x00020000" android:required="true">
+</uses-feature>
+<uses-feature android:name="android.hardware.camera" android:required="true">
+</uses-feature>
+<uses-feature android:name="android.hardware.camera.autofocus" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.camera.front">
+</uses-feature>
+<uses-feature android:name="android.hardware.sensor.light" android:required="false">
+</uses-feature>
+<uses-permission android:name="android.permission.RECORD_AUDIO">
+</uses-permission>
+<uses-permission android:name="android.permission.FLASHLIGHT">
+</uses-permission>
+<uses-permission android:name="android.permission.PREVENT_POWER_KEY">
+</uses-permission>
+<compatible-screens>
+<screen android:screenDensity="480" android:screenSize="200">
+</screen>
+<screen android:screenDensity="480" android:screenSize="300">
+</screen>
+<screen android:screenDensity="480" android:screenSize="400">
+</screen>
+<screen android:screenDensity="480" android:screenSize="500">
+</screen>
+</compatible-screens>
+<application android:allowBackup="false" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:icon="@7F0F0000" android:label="@7F1200F9" android:largeHeap="true" android:name="com.bunq.android.BunqApplication" android:supportsRtl="false" android:theme="@7F13000A">
+<meta-data android:name="firebase_analytics_collectyion_deactivated" android:value="true">
+</meta-data>
+<meta-data android:name="google_analytics_adid_collection_enabled" android:value="false">
+</meta-data>
+<provider android:authorities="@7F120B27" android:exported="false" android:grantUriPermissions="true" android:name="androidx.core.content.FileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F150004">
+</meta-data>
+</provider>
+<service android:exported="true" android:name="com.bunq.android.hce.BunqHceService" android:permission="android.permission.BIND_NFC_SERVICE">
+<intent-filter>
+<action android:name="android.nfc.cardemulation.action.HOST_APDU_SERVICE">
+</action>
+</intent-filter>
+<meta-data android:name="android.nfc.cardemulation.host_apdu_service" android:resource="@7F150001">
+</meta-data>
+</service>
+<service android:exported="false" android:name="com.bunq.android.fcm.McbpBunqFcmListenerService">
+<intent-filter>
+<action android:name="com.google.firebase.MESSAGING_EVENT">
+</action>
+</intent-filter>
+</service>
+<activity android:label="@7F1200F9" android:launchMode="1" android:name="com.bunq.android.ui.activity.MainActivity" android:screenOrientation="1" android:theme="@7F13000A" android:windowSoftInputMode="0x00000033">
+<intent-filter>
+<action android:name="com.bunq.android.MAIN">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:label="@7F1210AE" android:name="com.bunq.android.ui.activity.WhitelistSettingsActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:label="@7F120F02" android:name="com.bunq.android.ui.activity.AcknowledgementsActivity" android:parentActivityName="com.bunq.android.ui.activity.SecuritySettingsActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="bunq">
+</data>
+<data android:host="x-bunq-app">
+</data>
+<data android:path="/acknowledgements">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.bunq.android.ui.activity.AddMonetaryAccountAliasActivity" android:parentActivityName="com.bunq.android.ui.activity.MonetaryAccountAliasActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000004">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.registration.AliasPhoneConfirmationDeeplinkActivity">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="bunq">
+</data>
+<data android:host="confirm">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.bunq.android.ui.activity.MonetaryAccountAliasEmailConfirmActivity" android:parentActivityName="com.bunq.android.ui.activity.AddMonetaryAccountAliasActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.AnnualOverviewExportActivity" android:parentActivityName="com.bunq.android.ui.activity.InvoicesActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F1207B6" android:name="com.bunq.android.ui.activity.AutoRefillActivity" android:parentActivityName="com.bunq.android.ui.activity.monetaryAccount.MonetaryAccountSettingsActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:launchMode="1" android:name="com.bunq.android.ui.activity.BunqmeRequestResponseDetailActivity" android:parentActivityName="com.bunq.android.ui.activity.MainActivity" android:screenOrientation="1">
+<intent-filter android:autoVerify="true">
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="x-bunq-app" android:path="/token-qr-bunqme-reassign-request" android:scheme="bunq">
+</data>
+<data android:host="go.bunq.com" android:path="/link/token-qr-bunqme-reassign-request" android:scheme="https">
+</data>
+</intent-filter>
+</activity>
+<activity android:launchMode="1" android:name="com.bunq.android.ui.activity.CardPinInputActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000015">
+</activity>
+<activity android:launchMode="1" android:name="com.bunq.android.ui.activity.CardPinConfirmActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000015">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.CardActivatedCheckpointActivity" android:screenOrientation="1" android:theme="@7F130041" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.ResubmitLegalDocumentActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:label="@7F120F0C" android:name="com.bunq.android.ui.activity.cards.CardAbuseInfoActivity" android:parentActivityName="com.bunq.android.ui.activity.MainActivity" android:screenOrientation="1" android:theme="@7F13000A" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:label="@7F120F0D" android:launchMode="1" android:name="com.bunq.android.ui.activity.cards.CardAllowedCountriesActivity" android:parentActivityName="com.bunq.android.ui.activity.MainActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.cards.CardCountryPossiblyUnsupportedActivity" android:parentActivityName="com.bunq.android.ui.activity.cards.CardAllowedCountriesActivity" android:screenOrientation="1" android:theme="@7F130026" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.cards.CardCreatedActivity" android:parentActivityName="com.bunq.android.ui.activity.cards.CardsOverviewActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.cards.CvcDetailActivity" android:parentActivityName="com.bunq.android.ui.activity.MainActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.cards.DelayedCardCreatedActivity" android:screenOrientation="1" android:theme="@7F130036" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:exported="false" android:label="@7F120F0E" android:launchMode="1" android:name="com.bunq.android.ui.activity.cards.MaestroCardDetailsActivity" android:parentActivityName="com.bunq.android.ui.activity.MainActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+<intent-filter>
+<action android:name="com.bunq.android.cards.CARD_DETAIL_MAESTRO">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:label="@7F120F0E" android:name="com.bunq.android.ui.activity.cards.OnlineCardDetailsActivity" android:parentActivityName="com.bunq.android.ui.activity.MainActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+<intent-filter>
+<action android:name="com.bunq.android.cards.CARD_DETAIL_MASTERCARD_VIRTUAL">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:label="@7F1202B8" android:name="com.bunq.android.ui.activity.cards.OnlineCardDetailsFullCardListActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.cards.online.OnlineCardActivationIntroActivity" android:screenOrientation="1" android:theme="@7F130041" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.cards.online.OnlineCardActivationLinkAccountIntroActivity" android:screenOrientation="1" android:theme="@7F13001D" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.cards.online.OnlineCardActivationLinkAccountChooserActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.cards.online.OnlineCardDeeplinkResultProcessActivity" android:screenOrientation="1" android:theme="@7F130041" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.cards.online.OnlineCardActivationSuccessfulActivity" android:screenOrientation="1" android:theme="@7F13001D" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:exported="false" android:label="@7F120F0E" android:launchMode="1" android:name="com.bunq.android.ui.activity.cards.MastercardCardDetailsActivity" android:parentActivityName="com.bunq.android.ui.activity.MainActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+<intent-filter>
+<action android:name="com.bunq.android.cards.CARD_DETAIL_MASTERCARD">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:label="@7F120F0E" android:launchMode="1" android:name="com.bunq.android.ui.activity.cards.MastercardMobileNfcCardDetailsActivity" android:parentActivityName="com.bunq.android.ui.activity.MainActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+<intent-filter>
+<action android:name="com.bunq.android.cards.CARD_DETAIL_MASTERCARD_MOBILE_NFC">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:label="@7F120620" android:launchMode="1" android:name="com.bunq.android.ui.activity.cards.HceCardDetailsActivity" android:parentActivityName="com.bunq.android.ui.activity.MainActivity" android:screenOrientation="1" android:theme="@7F13001A" android:windowSoftInputMode="0x00000003">
+<intent-filter>
+<action android:name="com.bunq.android.cards.CARD_DETAIL_HCE">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:label="@7F120F0F" android:name="com.bunq.android.ui.activity.cards.CardsOverviewActivity" android:parentActivityName="com.bunq.android.ui.activity.MainActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="bunq">
+</data>
+<data android:host="x-bunq-app">
+</data>
+<data android:path="/cards">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.bunq.android.ui.activity.cards.CardPinActivity" android:parentActivityName="com.bunq.android.ui.activity.MainActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000025">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.cards.CardPinConfirmationActivity" android:parentActivityName="com.bunq.android.ui.activity.cards.CardPinActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000025">
+</activity>
+<activity android:label="@7F120F0C" android:name="com.bunq.android.ui.activity.cards.CardUsageInfoActivity" android:parentActivityName="com.bunq.android.ui.activity.MainActivity" android:screenOrientation="1" android:theme="@7F13000A" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.ContactDetailListActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:label="@7F1204C4" android:name="com.bunq.android.ui.activity.community.DiscussionDetailActivity" android:parentActivityName="com.bunq.android.ui.activity.MainActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.community.DiscussionSearchActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:label="@7F120F76" android:name="com.bunq.android.ui.activity.community.DiscussionsFaqListActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:label="@7F120F66" android:name="com.bunq.android.ui.activity.community.DiscussionsKnowledgeActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.community.AskQuestionActivity" android:screenOrientation="1" android:theme="@7F130041" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.search.SearchThroughAttachmentsNoticeActivity" android:screenOrientation="1" android:theme="@7F130020" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.community.NewDiscussionActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000024">
+</activity>
+<activity android:label="@7F12089F" android:name="com.bunq.android.ui.activity.community.NewPostActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000015">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.community.TagDiscussionOverviewActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.community.UserDetailActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.CredentialPasswordIdRequestAcceptedActivity" android:screenOrientation="1" android:theme="@7F130041" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.CredentialPasswordIpRequestActivity" android:screenOrientation="1" android:theme="@7F130041" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.cards.DebitCardLimitActivity" android:screenOrientation="1">
+</activity>
+<activity android:exported="false" android:label="@7F12029D" android:name="com.bunq.android.ui.activity.cards.DebitCardSettingsActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:exported="false" android:label="@7F12029D" android:name="com.bunq.android.ui.activity.cards.HceCardSettingsActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:label="@7F12029D" android:name="com.bunq.android.ui.activity.cards.OnlineCardSettingsActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.cards.OnlineCardSettingsPersonalizeActivity" android:screenOrientation="1" android:theme="@7F130019" android:windowSoftInputMode="0x00000015">
+</activity>
+<activity android:label="@7F12029B" android:name="com.bunq.android.ui.activity.cards.CardSensitiveDetailsActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:label="@7F12029B" android:name="com.bunq.android.ui.activity.cards.OnlineCardSensitiveDetailsActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:label="@7F120F22" android:name="com.bunq.android.ui.activity.cards.NewCardActivity" android:parentActivityName="com.bunq.android.ui.activity.cards.CardsOverviewActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000010">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="bunq">
+</data>
+<data android:host="x-bunq-app">
+</data>
+<data android:path="/addcard">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="bunq">
+</data>
+<data android:host="x-bunq-app">
+</data>
+<data android:path="/card-order">
+</data>
+</intent-filter>
+</activity>
+<activity android:label="@7F120F22" android:name="com.bunq.android.ui.activity.cards.MastercardCardCostActivity" android:parentActivityName="com.bunq.android.ui.activity.cards.NewCardActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:label="@7F120F22" android:name="com.bunq.android.ui.activity.cards.MaestroCardCostActivity" android:parentActivityName="com.bunq.android.ui.activity.cards.NewCardActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:exported="false" android:label="@7F120F22" android:launchMode="1" android:name="com.bunq.android.ui.activity.cards.OrderCardIntroActivity" android:parentActivityName="com.bunq.android.ui.activity.MainActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+<intent-filter>
+<action android:name="com.bunq.android.cards.ORDER_CARD_INTRO">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:label="@7F120F22" android:name="com.bunq.android.ui.activity.cards.CardDifferencesActivity" android:parentActivityName="com.bunq.android.ui.activity.cards.OrderCardIntroActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:label="@7F120F1F" android:name="com.bunq.android.ui.activity.CloseMonetaryAccountActivity" android:parentActivityName="com.bunq.android.ui.activity.monetaryAccount.MonetaryAccountSettingsActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.registration.checkpoint.CheckpointActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:label="@7F120F09" android:name="com.bunq.android.ui.activity.registration.company.CompanyRegistrationAutoLogoutActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:label="@7F120A13" android:name="com.bunq.android.ui.activity.registration.person.superLightUpgrade.UserSuperLightUpgradePassphraseSetupActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000005">
+</activity>
+<activity android:label="@7F120A13" android:name="com.bunq.android.ui.activity.registration.person.superLightUpgrade.UserSuperLightUpgradePassphraseIntroActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.ContractedProductOverviewActivity" android:parentActivityName="com.bunq.android.ui.activity.InvoicesActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.directorMembership.DirectorMembershipCounterpartyPickerActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.directorMembership.DirectorMembershipConfirmActivity" android:screenOrientation="1" android:theme="@7F130023" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.directorMembership.DirectorMembershipFourFingerSetupActivity" android:screenOrientation="1" android:theme="@7F130041" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.event.BatchEventOverviewActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.event.BunqmeTabDetailActivity" android:parentActivityName="com.bunq.android.ui.activity.MainActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:label="@7F120208" android:name="com.bunq.android.ui.activity.event.BunqmeTabEntryDetailActivity" android:parentActivityName="com.bunq.android.ui.activity.MainActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:label="@7F120F19" android:name="com.bunq.android.ui.activity.event.CardPinChangeDetailActivity" android:parentActivityName="com.bunq.android.ui.activity.MainActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.event.CoOwnerInviteResponseEventActivity" android:parentActivityName="com.bunq.android.ui.activity.MainActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.event.DraftPaymentBatchDetailActivity" android:parentActivityName="com.bunq.android.ui.activity.MainActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.event.DraftPaymentSingleDetailActivity" android:parentActivityName="com.bunq.android.ui.activity.MainActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.event.DirectorMembershipEventDetailActivity" android:parentActivityName="com.bunq.android.ui.activity.MainActivity" android:screenOrientation="1" android:theme="@7F130041" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.event.ScheduledTopUpAutomaticDebitDetailActivity" android:parentActivityName="com.bunq.android.ui.activity.MainActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.DraftShareInviteBankCostActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.NewShareBankInquiryCostActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.newRegistration.company.CompanyRegistrationSearchCheckpointActivity" android:screenOrientation="1" android:theme="@7F130041" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.newRegistration.company.CompanyRegistrationDetailsCheckpointActivity" android:screenOrientation="1" android:theme="@7F130041" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.newRegistration.company.CompanyRegistrationIsThisYouActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.newRegistration.company.CompanyRegistrationEmailDoneCheckpointActivity" android:screenOrientation="1" android:theme="@7F130041" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.newRegistration.company.CompanyRegistrationFourFingerDoneCheckpointActivity" android:screenOrientation="1" android:theme="@7F130041" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:launchMode="1" android:name="com.bunq.android.ui.activity.newRegistration.company.CompanyRegistrationDeviceConfirmActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000015">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.newRegistration.CompanyRegistrationUboIntroActivity" android:screenOrientation="1" android:theme="@7F130021" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.newRegistration.company.CompanyRegistrationNextStepCheckpointActivity" android:screenOrientation="1" android:theme="@7F130041" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.newRegistration.company.CompanyRegistrationUboDoneCheckpointActivity" android:screenOrientation="1" android:theme="@7F130041" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:launchMode="1" android:name="com.bunq.android.ui.activity.newRegistration.company.CompanyRegistrationDirectorLoginActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000025">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.newRegistration.company.CompanyRegistrationLoginCodeSetCheckpointActivity" android:screenOrientation="1" android:theme="@7F130041" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.newRegistration.company.CompanyRegistrationPriceActivity" android:screenOrientation="1" android:theme="@7F130041" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.newRegistration.company.CompanyRegistrationPriceCheckpoint" android:screenOrientation="1" android:theme="@7F130023" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.newRegistration.person.PersonRegistrationNameInputActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000014">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.newRegistration.company.CompanyRegistrationNameInputActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000014">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.newRegistration.person.PersonRegistrationGenderActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.newRegistration.company.CompanyRegistrationGenderActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.newRegistration.person.PersonRegistrationDateActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.newRegistration.company.CompanyRegistrationDateActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.newRegistration.person.PersonRegistrationCheckpointWelcomeActivity" android:screenOrientation="1" android:theme="@7F130041" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.newRegistration.company.CompanyRegistrationCheckpointWelcomeActivity" android:screenOrientation="1" android:theme="@7F130041" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.newRegistration.person.PersonRegistrationPhoneInputActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000014">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.newRegistration.company.CompanyRegistrationPhoneInputActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000014">
+</activity>
+<activity android:launchMode="1" android:name="com.bunq.android.ui.activity.newRegistration.person.PersonRegistrationPhoneConfirmActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000014">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.newRegistration.person.PersonRegistrationLoginCodeSetCheckpointActivity" android:screenOrientation="1" android:theme="@7F130041" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:launchMode="1" android:name="com.bunq.android.ui.activity.newRegistration.company.CompanyRegistrationPhoneConfirmActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000014">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.newRegistration.UserCreatedCheckpointActivity" android:screenOrientation="1" android:theme="@7F130041" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.newRegistration.person.PersonRegistrationFinalizeActivity" android:screenOrientation="1" android:theme="@7F130041" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.newRegistration.company.CompanyRegistrationUserFinalizeActivity" android:screenOrientation="1" android:theme="@7F130041" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.newRegistration.FourFingerCreatedCheckpointActivity" android:screenOrientation="1" android:theme="@7F130041" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.newRegistration.PersonRegistrationSurpriseActivity" android:screenOrientation="1" android:theme="@7F130041" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.newRegistration.PersonRegistrationIssuerPickerActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.newRegistration.PersonRegistrationMerchantTransactionDoneCheckpointActivity" android:screenOrientation="1" android:theme="@7F130041">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.registration.person.PersonIdentificationDocumentInputActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000032">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.newRegistration.RegistrationDocumentInformationActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:launchMode="1" android:name="com.bunq.android.ui.activity.newRegistration.PersonRegistrationCardIntroActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.newRegistration.PersonRegistrationCardLocationPromptActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.newRegistration.PersonRegistrationCardLocationPickerActivity" android:screenOrientation="1" android:theme="@7F130041">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.newRegistration.PersonRegistrationCardManualAddressActivity" android:screenOrientation="1" android:theme="@7F13000F" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:launchMode="1" android:name="com.bunq.android.ui.activity.newRegistration.PersonRegistrationCardConfirmActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:launchMode="1" android:name="com.bunq.android.ui.activity.newRegistration.PersonRegistrationCardCustomizeActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.newRegistration.PersonRegistrationCardAddressCheckActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.newRegistration.PersonRegistrationCardAddressChangeAfterCheckActivity" android:screenOrientation="1" android:theme="@7F13000F" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.newRegistration.PersonRegistrationDocumentInfoDoneCheckpointActivity" android:screenOrientation="1" android:theme="@7F130041">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.newRegistration.PersonRegistrationDoneCheckpointActivity" android:screenOrientation="1" android:theme="@7F130041">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.newRegistration.PersonRegistrationPassphraseConfirmActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000015">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.newRegistration.PersonRegistrationPassphraseInputActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000015">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.newRegistration.joint.create.JointStartCreationRegistrationDetailsActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.newRegistration.joint.create.JointRegistrationParticipantsCountActivity" android:parentActivityName="com.bunq.android.ui.activity.SignupTypeChoiceActivity" android:screenOrientation="1" android:theme="@7F130041" android:windowSoftInputMode="0x00000033">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.newRegistration.joint.create.JointRegistrationPartnersListActivity" android:parentActivityName="com.bunq.android.ui.activity.newRegistration.joint.create.JointRegistrationParticipantsCountActivity" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.newRegistration.joint.create.JointRegistrationOnePartnerDetailsActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000014">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.newRegistration.joint.create.JointRegistrationMultiplePartnerDetailsActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000014">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.newRegistration.joint.create.JointRegistrationNameInputActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000014">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.newRegistration.joint.create.JointRegistrationDateActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.newRegistration.joint.create.JointRegistrationGenderActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.newRegistration.joint.create.JointRegistrationCheckpointWelcomeActivity" android:screenOrientation="1" android:theme="@7F130041" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.newRegistration.joint.create.JointRegistrationPhoneInputActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000004">
+</activity>
+<activity android:launchMode="1" android:name="com.bunq.android.ui.activity.newRegistration.joint.create.JointRegistrationPhoneConfirmActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000004">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.newRegistration.joint.create.JointRegistrationEmailActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000004">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.newRegistration.joint.create.JointRegistrationJointInviteWelcomeActivity" android:screenOrientation="1" android:theme="@7F130041" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.newRegistration.joint.create.JointRegistrationJointInviteDetailsActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.newRegistration.joint.create.JointRegistrationSecondCheckpointActivity" android:screenOrientation="1" android:theme="@7F130041" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.newRegistration.joint.create.JointRegistrationLoginCodeEntryActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000015">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.newRegistration.joint.create.JointRegistrationLoginCodeConfirmationActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000015">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.newRegistration.joint.create.JointRegistrationFinalizeActivity" android:screenOrientation="1" android:theme="@7F130041" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.newRegistration.joint.join.JointJoiningWelcomeInviteActivity" android:screenOrientation="1" android:theme="@7F130041" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.newRegistration.joint.join.PersonRegistrationJointInviteWelcomeActivity" android:screenOrientation="1" android:theme="@7F130041" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.newRegistration.joint.join.PersonRegistrationJointInviteDetailsActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.newRegistration.joint.join.JointStartJoiningRegistrationInviteDetailsActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.newRegistration.joint.create.JointRegistrationInfoActivity" android:screenOrientation="1" android:theme="@7F130041" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:launchMode="1" android:name="com.bunq.android.ui.activity.newRegistration.joint.JointGroupStatusRegistrationActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.event.JointInviteWelcomeEventActivity" android:screenOrientation="1" android:theme="@7F130041" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.event.JointInviteDetailsEventActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.JointSwitchInfoActivity" android:screenOrientation="1" android:theme="@7F130041" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.JointSwitchInfoDetailsActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:label="@7F120701" android:name="com.bunq.android.ui.activity.AddJointMembershipCounterUserPickerActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.event.EventLoadingActivity" android:parentActivityName="com.bunq.android.ui.activity.MainActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.event.FeatureDisplayEventDetailActivity" android:parentActivityName="com.bunq.android.ui.activity.MainActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.event.IdealRequestResponseEventDetailActivity" android:parentActivityName="com.bunq.android.ui.activity.MainActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.event.SofortRequestResponseEventDetailActivity" android:parentActivityName="com.bunq.android.ui.activity.MainActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:launchMode="1" android:name="com.bunq.android.ui.activity.event.PackGroupDetailActivity" android:parentActivityName="com.bunq.android.ui.activity.MainActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:launchMode="1" android:name="com.bunq.android.ui.activity.event.PackMembershipUserDetailActivity" android:parentActivityName="com.bunq.android.ui.activity.MainActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.event.PaymentBatchEventDetailActivity" android:parentActivityName="com.bunq.android.ui.activity.MainActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.event.PaymentEventDetailActivity" android:parentActivityName="com.bunq.android.ui.activity.MainActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.event.RequestInquiryEventDetailActivity" android:parentActivityName="com.bunq.android.ui.activity.MainActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.event.RequestResponseEventDetailActivity" android:parentActivityName="com.bunq.android.ui.activity.MainActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.event.InvoiceEventDetailActivity" android:parentActivityName="com.bunq.android.ui.activity.MainActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.event.RequestInquiryBatchEventDetailActivity" android:parentActivityName="com.bunq.android.ui.activity.MainActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:label="@7F120409" android:name="com.bunq.android.ui.activity.event.ShareInviteBankInquiryEventDetailActivity" android:parentActivityName="com.bunq.android.ui.activity.MainActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:label="@7F120DB9" android:name="com.bunq.android.ui.activity.event.ShareInviteBankResponseEventDetailActivity" android:parentActivityName="com.bunq.android.ui.activity.MainActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:label="@7F120409" android:name="com.bunq.android.ui.activity.event.ShareUpdateActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.event.IdealMerchantTransactionDetailActivity" android:parentActivityName="com.bunq.android.ui.activity.MainActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:label="@7F120487" android:name="com.bunq.android.ui.activity.MerchantTypeSwitchActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.event.SofortMerchantTransactionDetailActivity" android:parentActivityName="com.bunq.android.ui.activity.MainActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.event.MasterCardActionDetailActivity" android:parentActivityName="com.bunq.android.ui.activity.MainActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:label="@7F120787" android:name="com.bunq.android.ui.activity.cards.MasterCardSecureCodeDetailActivity" android:parentActivityName="com.bunq.android.ui.activity.MainActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:label="@7F12073F" android:name="com.bunq.android.ui.activity.event.MinorApprovalEventDetailActivity" android:parentActivityName="com.bunq.android.ui.activity.MainActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.event.ScheduledPaymentBatchDetailActivity" android:parentActivityName="com.bunq.android.ui.activity.MainActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.event.ScheduledPaymentBatchInstanceDetailActivity" android:parentActivityName="com.bunq.android.ui.activity.MainActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.event.ScheduledPaymentDetailActivity" android:parentActivityName="com.bunq.android.ui.activity.MainActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.event.ScheduledPaymentInstanceDetailActivity" android:parentActivityName="com.bunq.android.ui.activity.MainActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:label="@7F120487" android:name="com.bunq.android.ui.activity.SecuredMerchantTypeSwitchActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.event.TabResultEventDetailActivity" android:parentActivityName="com.bunq.android.ui.activity.MainActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:label="@7F120D2B" android:name="com.bunq.android.ui.activity.event.UnknownScheduledInstanceDetailActivity" android:parentActivityName="com.bunq.android.ui.activity.MainActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.event.UserRecoveryExpiryDetailActivity" android:parentActivityName="com.bunq.android.ui.activity.MainActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.event.ScheduledTopUpAutomaticDebitInstanceDetailActivity" android:parentActivityName="com.bunq.android.ui.activity.MainActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:label="@7F120F14" android:name="com.bunq.android.ui.activity.EventConversationActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.EventDetailActivity" android:parentActivityName="com.bunq.android.ui.activity.MainActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.JointGroupStatusActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:launchMode="1" android:name="com.bunq.android.ui.activity.merchantTransaction.MerchantTransactionRefillActivity" android:screenOrientation="1" android:theme="@7F130019" android:windowSoftInputMode="0x00000012">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="bunq">
+</data>
+<data android:host="x-bunq-app">
+</data>
+<data android:path="/ideal">
+</data>
+<data android:path="/sofort">
+</data>
+<data android:path="/topup">
+</data>
+<data android:path="/com.bunq.android/sofort-countries">
+</data>
+</intent-filter>
+<intent-filter android:autoVerify="true">
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="@7F121050" android:pathPrefix="@7F12106C" android:scheme="https">
+</data>
+</intent-filter>
+</activity>
+<activity android:launchMode="1" android:name="com.bunq.android.ui.activity.merchantTransaction.MerchantTransactionDebtCollectionActivity" android:screenOrientation="1" android:theme="@7F130019" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:label="@7F120A13" android:name="com.bunq.android.ui.activity.registration.person.lite.PersonRegistrationPassphraseSetupActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000015">
+</activity>
+<activity android:label="@7F120A13" android:name="com.bunq.android.ui.activity.registration.person.RegistrationPassphraseIntroActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:label="@7F120320" android:name="com.bunq.android.ui.activity.monetaryAccount.CoOwnerDetailActivity" android:parentActivityName="com.bunq.android.ui.activity.monetaryAccount.MonetaryAccountDetailActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:label="@7F120F1C" android:name="com.bunq.android.ui.activity.monetaryAccount.InactiveMonetaryAccountsActivity" android:parentActivityName="com.bunq.android.ui.activity.MainActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.monetaryAccount.SingleMonetaryAccountCreatePersonalizeActivity" android:screenOrientation="1" android:theme="@7F130019" android:windowSoftInputMode="0x00000014">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.monetaryAccount.SingleMonetaryAccountSupplementActivity" android:screenOrientation="1" android:theme="@7F13001D" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.monetaryAccount.GroupMonetaryAccountCreatePersonalizeActivity" android:screenOrientation="1" android:theme="@7F130019" android:windowSoftInputMode="0x00000014">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.monetaryAccount.GroupMonetaryAccountSupplementActivity" android:screenOrientation="1" android:theme="@7F13001D" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.monetaryAccount.GroupMonetaryAccountCostActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.monetaryAccount.GroupMonetaryAccountContactPickerActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.monetaryAccount.NewMonetaryAccountTypeActivity" android:screenOrientation="1" android:theme="@7F130041" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.monetaryAccount.SavingsMonetaryAccountGoalTypeActivity" android:screenOrientation="1" android:theme="@7F130028" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.monetaryAccount.SavingsMonetaryAccountChooseRecipientsActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.monetaryAccount.SavingsMonetaryAccountCreatePersonalizeActivity" android:screenOrientation="1" android:theme="@7F130019" android:windowSoftInputMode="0x00000014">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.monetaryAccount.SavingsMonetaryAccountCostActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.monetaryAccount.SavingsMonetaryAccountSupplementActivity" android:screenOrientation="1" android:theme="@7F13001D" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.monetaryAccount.SavingsMonetaryAccountGoalActivity" android:screenOrientation="1" android:theme="@7F130019" android:windowSoftInputMode="0x00000015">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.monetaryAccount.SavingsGoalEditActivity" android:parentActivityName="com.bunq.android.ui.activity.monetaryAccount.MonetaryAccountSettingsActivity" android:screenOrientation="1" android:theme="@7F130019" android:windowSoftInputMode="0x00000015">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.monetaryAccount.MonetaryAccountSavingsWithdrawNagActivity" android:screenOrientation="1" android:theme="@7F13001F" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.monetaryAccount.MonetaryAccountSavingsWithdrawPickerActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.monetaryAccount.MonetaryAccountSavingsWithdrawActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.monetaryAccount.SavingsMonetaryAccountAutoSaveAlreadyEnabledActivity" android:screenOrientation="1" android:theme="@7F130028" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.monetaryAccount.SavingsMonetaryAccountAutoSaveActivity" android:screenOrientation="1" android:theme="@7F130028" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.monetaryAccount.AutoSaveSettingsActivity" android:parentActivityName="com.bunq.android.ui.activity.monetaryAccount.MonetaryAccountSettingsActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:label="@7F120127" android:name="com.bunq.android.ui.activity.monetaryAccount.AutoSaveSettingsSaveFromActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.monetaryAccount.AutoSaveSettingsAlreadyEnabledActivity" android:screenOrientation="1" android:theme="@7F130028" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.monetaryAccount.AutoSaveAmountPickerActivity" android:screenOrientation="1" android:theme="@7F130041" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:label="@7F120F7C" android:name="com.bunq.android.ui.activity.InternalTopUpActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F1206C5" android:name="com.bunq.android.ui.activity.InviteUserIntroductionActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:label="@7F120F16" android:name="com.bunq.android.ui.activity.InviteUserContactPickerActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:label="@7F1206CD" android:name="com.bunq.android.ui.activity.InviteUserMessagePreviewActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:label="@7F1206C5" android:name="com.bunq.android.ui.activity.InviteUserCompletedActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.InviteUserEventDetailsActivity" android:screenOrientation="1" android:theme="@7F130020" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:label="@7F1206E5" android:launchMode="1" android:name="com.bunq.android.ui.activity.InvoicesActivity" android:parentActivityName="com.bunq.android.ui.activity.SubscriptionActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.merchantTransaction.IdealEntranceActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="bunq">
+</data>
+<data android:host="x-bunq-app">
+</data>
+<data android:path="/ideal-merchant-transaction">
+</data>
+</intent-filter>
+<intent-filter android:autoVerify="true">
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="https">
+</data>
+<data android:host="ideal.bunq.com">
+</data>
+<data android:path="/ideal-bounce">
+</data>
+</intent-filter>
+<intent-filter android:autoVerify="true">
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="https">
+</data>
+<data android:host="issuer-web.triage.bunq.net">
+</data>
+<data android:path="/ideal-bounce">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.bunq.android.ui.activity.merchantTransaction.MerchantTransactionValidationFailedActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.merchantTransaction.SecuredValidationProcessingActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.merchantTransaction.SofortEntranceActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="bunq">
+</data>
+<data android:host="x-bunq-app">
+</data>
+<data android:path="/sofort-merchant-transaction">
+</data>
+</intent-filter>
+</activity>
+<activity android:label="@7F120F7C" android:name="com.bunq.android.ui.activity.MerchantTransactionTopUpIntroActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name="com.bunq.android.ui.activity.monetaryAccount.MonetaryAccountDetailActivity" android:parentActivityName="com.bunq.android.ui.activity.MainActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F120F20" android:launchMode="1" android:name="com.bunq.android.ui.activity.monetaryAccount.MonetaryAccountSettingsActivity" android:parentActivityName="com.bunq.android.ui.activity.monetaryAccount.MonetaryAccountDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F1208AB" android:name="com.bunq.android.ui.activity.monetaryAccount.MonetaryAccountShareCreateActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.MonetaryAccountSettingsPersonalizeActivity" android:parentActivityName="com.bunq.android.ui.activity.monetaryAccount.MonetaryAccountSettingsActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000015">
+</activity>
+<activity android:label="@7F120F23" android:name="com.bunq.android.ui.activity.monetaryAccount.NewMonetaryAccountDetailsOnlyActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000015">
+</activity>
+<activity android:label="@7F120F23" android:name="com.bunq.android.ui.activity.monetaryAccount.NewMonetaryAccountDetailsWithShareActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000015">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.monetaryAccount.NewMonetaryAccountUserCompanyActivity" android:parentActivityName="com.bunq.android.ui.activity.MainActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.monetaryAccount.NewMonetaryAccountUserPersonActivity" android:parentActivityName="com.bunq.android.ui.activity.MainActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F120409" android:name="com.bunq.android.ui.activity.monetaryAccount.ShareInviteBanksOverviewActivity" android:parentActivityName="com.bunq.android.ui.activity.monetaryAccount.MonetaryAccountSettingsActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:launchMode="1" android:name="com.bunq.android.ui.activity.MonetaryAccountAliasActivity" android:parentActivityName="com.bunq.android.ui.activity.monetaryAccount.MonetaryAccountSettingsActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.MonetaryAccountAliasPhoneConfirmActivity" android:parentActivityName="com.bunq.android.ui.activity.AddMonetaryAccountAliasActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000004">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.monetaryAccount.SingleMonetaryAccountCostActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000033">
+</activity>
+<activity android:launchMode="1" android:name="com.bunq.android.ui.activity.MonetaryAccountDrainNeededActivity" android:parentActivityName="com.bunq.android.ui.activity.MainActivity" android:screenOrientation="1" android:theme="@7F13000C">
+</activity>
+<activity android:launchMode="1" android:name="com.bunq.android.ui.activity.MonetaryAccountFillNeededActivity" android:parentActivityName="com.bunq.android.ui.activity.MainActivity" android:screenOrientation="1" android:theme="@7F13000C">
+</activity>
+<activity android:label="@7F120F26" android:name="com.bunq.android.ui.activity.NotificationSettingsActivity" android:parentActivityName="com.bunq.android.ui.activity.SecuritySettingsActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F1210C0" android:launchMode="1" android:name="com.bunq.android.ui.activity.UserSettingZeroFxActivity" android:parentActivityName="com.bunq.android.ui.activity.SecuritySettingsActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F120064" android:launchMode="1" android:name="com.bunq.android.ui.activity.pack.AddPackMembershipConfirmActivity" android:parentActivityName="com.bunq.android.ui.activity.pack.AddPackMembershipCounterUserPickerActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:label="@7F120F16" android:launchMode="1" android:name="com.bunq.android.ui.activity.pack.AddPackMembershipCounterUserPickerActivity" android:parentActivityName="com.bunq.android.ui.activity.pack.AddPackMembershipIntroActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name="com.bunq.android.ui.activity.pack.AddPackMembershipIntroActivity" android:parentActivityName="com.bunq.android.ui.activity.SubscriptionActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:label="@7F120064" android:launchMode="1" android:name="com.bunq.android.ui.activity.pack.AddPackMembershipPreviewActivity" android:parentActivityName="com.bunq.android.ui.activity.pack.AddPackMembershipCounterUserPickerActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:label="@7F12089C" android:name="com.bunq.android.ui.activity.pack.NewPackGroupActivity" android:parentActivityName="com.bunq.android.ui.activity.SubscriptionActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:launchMode="1" android:name="com.bunq.android.ui.activity.PromotionDisplayDetailActivity" android:parentActivityName="com.bunq.android.ui.activity.MainActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="bunq">
+</data>
+<data android:host="x-bunq-app">
+</data>
+<data android:path="/token-qr-request-promotion">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="bunq">
+</data>
+<data android:host="x-bunq-app">
+</data>
+<data android:path="/token-qr-promotion">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.bunq.android.ui.activity.public_api.PublicApiCredentialCostActivity" android:parentActivityName="com.bunq.android.ui.activity.public_api.PublicApiCredentialOverviewActivity" android:screenOrientation="1" android:theme="@7F13000A" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.public_api.PublicApiCredentialDetailActivity" android:parentActivityName="com.bunq.android.ui.activity.public_api.PublicApiCredentialOverviewActivity" android:screenOrientation="1" android:theme="@7F13000A" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:launchMode="1" android:name="com.bunq.android.ui.activity.public_api.PublicApiCredentialOverviewActivity" android:parentActivityName="com.bunq.android.ui.activity.SecuritySettingsActivity" android:screenOrientation="1" android:theme="@7F13000A" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:launchMode="1" android:name="com.bunq.android.ui.activity.public_api.PublicApiCredentialWarningActivity" android:parentActivityName="com.bunq.android.ui.activity.public_api.PublicApiCredentialOverviewActivity" android:screenOrientation="1" android:theme="@7F130041">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.ScanActivity" android:parentActivityName="com.bunq.android.ui.activity.MainActivity" android:screenOrientation="1" android:theme="@7F130041">
+<intent-filter android:label="@7F1200F9">
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:host="bunq.com" android:pathPrefix="/h4x0r" android:scheme="https">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="bunq">
+</data>
+<data android:host="x-bunq-app">
+</data>
+<data android:path="/qr">
+</data>
+</intent-filter>
+</activity>
+<activity android:label="@7F1200F9" android:name="com.bunq.android.ui.activity.QrTokenOpenActivity" android:parentActivityName="com.bunq.android.ui.activity.MainActivity" android:screenOrientation="1" android:theme="@7F13002E">
+<intent-filter android:autoVerify="true" android:label="@7F1200F9">
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:host="qr.bunq.com" android:scheme="https">
+</data>
+</intent-filter>
+<intent-filter android:autoVerify="true">
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="x-bunq-app" android:path="/token-qr-request-ideal" android:scheme="bunq">
+</data>
+<data android:host="@7F121050" android:path="@7F121067" android:scheme="https">
+</data>
+</intent-filter>
+<intent-filter android:autoVerify="true">
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="x-bunq-app" android:path="/token-qr-request-sofort" android:scheme="bunq">
+</data>
+<data android:host="@7F121050" android:path="@7F121068" android:scheme="https">
+</data>
+</intent-filter>
+<intent-filter android:autoVerify="true">
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="x-bunq-app" android:path="/token-qr-tab" android:scheme="bunq">
+</data>
+<data android:host="@7F121050" android:path="@7F121069" android:scheme="https">
+</data>
+</intent-filter>
+<intent-filter android:autoVerify="true">
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="x-bunq-app" android:path="/token-qr-bunqme-tab-entry" android:scheme="bunq">
+</data>
+<data android:host="@7F121050" android:path="@7F121064" android:scheme="https">
+</data>
+</intent-filter>
+<intent-filter android:autoVerify="true">
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="x-bunq-app" android:path="/token-qr-bunqto-entry" android:scheme="bunq">
+</data>
+<data android:host="@7F121050" android:path="@7F121065" android:scheme="https">
+</data>
+</intent-filter>
+<intent-filter android:autoVerify="true">
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="x-bunq-app" android:path="/token-qr-user-web-authentication" android:scheme="bunq">
+</data>
+<data android:host="@7F121050" android:path="@7F12106A" android:scheme="https">
+</data>
+</intent-filter>
+<intent-filter android:autoVerify="true">
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="x-bunq-app" android:path="/token-qr-bunqme-fundraiser-profile-entry" android:scheme="bunq">
+</data>
+<data android:host="@7F121050" android:path="@7F121063" android:scheme="https">
+</data>
+</intent-filter>
+<intent-filter android:autoVerify="true">
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="x-bunq-app" android:path="/token-qr-mastercard-secure-code" android:scheme="bunq">
+</data>
+<data android:host="@7F121050" android:path="@7F12106B" android:scheme="https">
+</data>
+</intent-filter>
+<intent-filter android:autoVerify="true">
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="x-bunq-app" android:path="/token-qr-oauth-request" android:scheme="bunq">
+</data>
+<data android:host="@7F121050" android:path="@7F121066" android:scheme="https">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.bunq.android.ui.activity.RunningCostsActivity" android:parentActivityName="com.bunq.android.ui.activity.SubscriptionActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F120D20" android:name="com.bunq.android.ui.activity.ScheduleActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F120D34" android:name="com.bunq.android.ui.activity.ScheduledTasksActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F120D4E" android:name="com.bunq.android.ui.activity.SearchActivity" android:parentActivityName="com.bunq.android.ui.activity.MainActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:label="@7F120D69" android:name="com.bunq.android.ui.activity.search.SearchFilterAmountPickerActivity" android:parentActivityName="com.bunq.android.ui.activity.SearchActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:label="@7F120D6A" android:name="com.bunq.android.ui.activity.search.SearchFilterDatePickerActivity" android:parentActivityName="com.bunq.android.ui.activity.SearchActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:label="@7F120D6B" android:name="com.bunq.android.ui.activity.search.SearchFilterMonetaryAccountPickerActivity" android:parentActivityName="com.bunq.android.ui.activity.SearchActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:label="@7F120DB9" android:name="com.bunq.android.ui.activity.shares.DraftShareCreationActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:label="@7F120409" android:name="com.bunq.android.ui.activity.shares.NewShareBankInquiryBatchCreateActivity" android:parentActivityName="com.bunq.android.ui.activity.monetaryAccount.ShareInviteBanksOverviewActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.shares.NewShareCompanyIntroActivity" android:screenOrientation="1" android:theme="@7F130041" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.shares.NewShareCompanyMonetaryAccountChooserActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.shares.NewShareCompanyAccessTypeActivity" android:screenOrientation="1" android:theme="@7F130041" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:label="@7F120DAE" android:name="com.bunq.android.ui.activity.shares.ShareInviteBankDetailActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:label="@7F1208AB" android:name="com.bunq.android.ui.activity.shares.ShareSetupActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:label="@7F120F1A" android:name="com.bunq.android.ui.activity.StatementExportActivity" android:parentActivityName="com.bunq.android.ui.activity.monetaryAccount.MonetaryAccountSettingsActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.switchService.SwitchServiceIntroActivity" android:parentActivityName="com.bunq.android.ui.activity.switchService.SwitchServiceListActivity" android:screenOrientation="1" android:theme="@7F130022" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:label="@7F120E90" android:name="com.bunq.android.ui.activity.switchService.SwitchServiceDetailActivity" android:parentActivityName="com.bunq.android.ui.activity.MainActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:launchMode="1" android:name="com.bunq.android.ui.activity.switchService.SwitchServiceConfirmActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:label="@7F120EA5" android:launchMode="1" android:name="com.bunq.android.ui.activity.switchService.SwitchServiceListActivity" android:parentActivityName="com.bunq.android.ui.activity.MainActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.tab.CashRegisterQrTokenProcessingActivity" android:screenOrientation="1" android:theme="@7F130018" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:label="@7F120068" android:name="com.bunq.android.ui.activity.TabAddressActivity" android:parentActivityName="com.bunq.android.ui.activity.TabDetailActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:label="@7F120F35" android:name="com.bunq.android.ui.activity.TabDetailActivity" android:parentActivityName="com.bunq.android.ui.activity.MainActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F120F8B" android:name="com.bunq.android.ui.activity.TotalBalanceSettingsActivity" android:screenOrientation="1">
+</activity>
+<activity android:icon="@7F08043D" android:label="@7F120F24" android:launchMode="1" android:name="com.bunq.android.ui.activity.transaction.NewPaymentActivity" android:parentActivityName="com.bunq.android.ui.activity.MainActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000010">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="bunq">
+</data>
+<data android:host="x-bunq-app">
+</data>
+<data android:path="/payment">
+</data>
+</intent-filter>
+</activity>
+<activity android:icon="@7F08043D" android:label="@7F120F25" android:launchMode="1" android:name="com.bunq.android.ui.activity.transaction.NewRequestInquiryActivity" android:parentActivityName="com.bunq.android.ui.activity.MainActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000010">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="bunq">
+</data>
+<data android:host="x-bunq-app">
+</data>
+<data android:path="/request">
+</data>
+</intent-filter>
+</activity>
+<activity android:label="@7F120F36" android:name="com.bunq.android.ui.activity.TransactionHistoryActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:exported="false" android:name="com.bunq.android.ui.activity.WelcomeActivity" android:screenOrientation="1" android:theme="@7F13000A" android:windowSoftInputMode="0x00000003">
+<intent-filter>
+<action android:name="com.bunq.android.WELCOME">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:label="@7F12109B" android:name="com.bunq.android.ui.activity.WhitelistedSddsActivity" android:parentActivityName="com.bunq.android.ui.activity.MainActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:label="@7F12062F" android:launchMode="1" android:name="com.bunq.android.ui.activity.hce.enable.HceEnabledActivity" android:screenOrientation="1" android:theme="@7F13003B" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:label="@7F12062F" android:launchMode="1" android:name="com.bunq.android.ui.activity.hce.enable.HceEnableErrorActivity" android:screenOrientation="1" android:theme="@7F130036" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:label="@7F12062F" android:launchMode="1" android:name="com.bunq.android.ui.activity.hce.enable.HceEnableFingerprintActivity" android:screenOrientation="1" android:theme="@7F13001B" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:label="@7F12062F" android:launchMode="1" android:name="com.bunq.android.ui.activity.hce.enable.HceEnableIntroActivity" android:screenOrientation="1" android:theme="@7F13003C" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:label="@7F12062F" android:launchMode="1" android:name="com.bunq.android.ui.activity.hce.enable.HceEnablePinActivity" android:screenOrientation="1" android:theme="@7F13001A" android:windowSoftInputMode="0x00000015">
+</activity>
+<activity android:label="@7F12062F" android:launchMode="1" android:name="com.bunq.android.ui.activity.hce.enable.HceEnablePinConfirmActivity" android:screenOrientation="1" android:theme="@7F13001A" android:windowSoftInputMode="0x00000015">
+</activity>
+<activity android:label="@7F12062F" android:launchMode="1" android:name="com.bunq.android.ui.activity.hce.enable.HceEnableProgressActivity" android:screenOrientation="1" android:theme="@7F13001A" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:exported="false" android:label="@7F12062F" android:launchMode="1" android:name="com.bunq.android.ui.activity.hce.enable.HceEnableStarterActivity" android:screenOrientation="1" android:theme="@7F13001A" android:windowSoftInputMode="0x00000003">
+<intent-filter>
+<action android:name="com.bunq.android.hce.ENABLE">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:label="@7F12062F" android:launchMode="1" android:name="com.bunq.android.ui.activity.hce.HceChangePinActivity" android:screenOrientation="1" android:theme="@7F13001A" android:windowSoftInputMode="0x00000015">
+</activity>
+<activity android:label="@7F12062F" android:launchMode="1" android:name="com.bunq.android.ui.activity.hce.HceChangePinConfirmActivity" android:screenOrientation="1" android:theme="@7F13001A" android:windowSoftInputMode="0x00000015">
+</activity>
+<activity android:label="@7F12062F" android:launchMode="1" android:name="com.bunq.android.ui.activity.hce.HceChangePinFingerprintActivity" android:screenOrientation="1" android:theme="@7F13001B" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:label="@7F12062F" android:launchMode="1" android:name="com.bunq.android.ui.activity.hce.HceChangePinProgressActivity" android:screenOrientation="1" android:theme="@7F13001A" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:label="@7F12063D" android:launchMode="1" android:name="com.bunq.android.ui.activity.hce.HceMigratedActivity" android:screenOrientation="1" android:theme="@7F13003B" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:exported="false" android:label="@7F12063D" android:launchMode="1" android:name="com.bunq.android.ui.activity.hce.HceMigrationActivity" android:screenOrientation="1" android:theme="@7F13001B" android:windowSoftInputMode="0x00000003">
+<intent-filter>
+<action android:name="com.bunq.android.hce.MIGRATE">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:excludeFromRecents="true" android:label="@7F12065A" android:launchMode="2" android:name="com.bunq.android.ui.activity.hce.HceStatusActivity" android:screenOrientation="1" android:taskAffinity="" android:theme="@7F130041" android:windowSoftInputMode="0x00000012">
+<intent-filter>
+<action android:name="com.bunq.android.hce.PAY">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:label="@7F1200F9" android:launchMode="2" android:name="com.bunq.android.ui.activity.WebDeepLinksActivity" android:theme="@7F13000A">
+<intent-filter android:autoVerify="true" android:label="@7F1200F9">
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="http">
+</data>
+<data android:scheme="https">
+</data>
+<data android:host="@7F121050">
+</data>
+<data android:path="@7F12104C">
+</data>
+</intent-filter>
+<intent-filter android:autoVerify="true" android:label="@7F1200F9">
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="http">
+</data>
+<data android:scheme="https">
+</data>
+<data android:host="@7F121050">
+</data>
+<data android:path="@7F12104D">
+</data>
+</intent-filter>
+<intent-filter android:autoVerify="true" android:label="@7F1200F9">
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="http">
+</data>
+<data android:scheme="https">
+</data>
+<data android:host="@7F121050">
+</data>
+<data android:path="@7F121045">
+</data>
+</intent-filter>
+<intent-filter android:autoVerify="true" android:label="@7F1200F9">
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="http">
+</data>
+<data android:scheme="https">
+</data>
+<data android:host="@7F121050">
+</data>
+<data android:path="@7F121046">
+</data>
+</intent-filter>
+<intent-filter android:autoVerify="true" android:label="@7F1200F9">
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="http">
+</data>
+<data android:scheme="https">
+</data>
+<data android:host="@7F121050">
+</data>
+<data android:path="@7F121047">
+</data>
+</intent-filter>
+<intent-filter android:autoVerify="true" android:label="@7F1200F9">
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="http">
+</data>
+<data android:scheme="https">
+</data>
+<data android:host="@7F121050">
+</data>
+<data android:path="@7F121048">
+</data>
+</intent-filter>
+<intent-filter android:autoVerify="true" android:label="@7F1200F9">
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="http">
+</data>
+<data android:scheme="https">
+</data>
+<data android:host="@7F121050">
+</data>
+<data android:path="@7F121049">
+</data>
+</intent-filter>
+<intent-filter android:autoVerify="true" android:label="@7F1200F9">
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="http">
+</data>
+<data android:scheme="https">
+</data>
+<data android:host="@7F121050">
+</data>
+<data android:path="@7F12104F">
+</data>
+</intent-filter>
+<intent-filter android:autoVerify="true" android:label="@7F1200F9">
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="http">
+</data>
+<data android:scheme="https">
+</data>
+<data android:host="@7F121050">
+</data>
+<data android:path="@7F121061">
+</data>
+</intent-filter>
+<intent-filter android:autoVerify="true" android:label="@7F1200F9">
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="http">
+</data>
+<data android:scheme="https">
+</data>
+<data android:host="@7F121050">
+</data>
+<data android:path="@7F12105F">
+</data>
+</intent-filter>
+<intent-filter android:autoVerify="true" android:label="@7F1200F9">
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="http">
+</data>
+<data android:scheme="https">
+</data>
+<data android:host="@7F121050">
+</data>
+<data android:path="@7F12103E">
+</data>
+</intent-filter>
+<intent-filter android:autoVerify="true" android:label="@7F1200F9">
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="http">
+</data>
+<data android:scheme="https">
+</data>
+<data android:host="@7F121050">
+</data>
+<data android:path="@7F12103F">
+</data>
+</intent-filter>
+<intent-filter android:autoVerify="true" android:label="@7F1200F9">
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="http">
+</data>
+<data android:scheme="https">
+</data>
+<data android:host="@7F121050">
+</data>
+<data android:path="@7F121040">
+</data>
+</intent-filter>
+<intent-filter android:autoVerify="true" android:label="@7F1200F9">
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="http">
+</data>
+<data android:scheme="https">
+</data>
+<data android:host="@7F121050">
+</data>
+<data android:path="@7F121071">
+</data>
+</intent-filter>
+<intent-filter android:autoVerify="true" android:label="@7F1200F9">
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="http">
+</data>
+<data android:scheme="https">
+</data>
+<data android:host="@7F121050">
+</data>
+<data android:path="@7F12105E">
+</data>
+</intent-filter>
+<intent-filter android:autoVerify="true" android:label="@7F1200F9">
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="http">
+</data>
+<data android:scheme="https">
+</data>
+<data android:host="@7F121050">
+</data>
+<data android:path="@7F121043">
+</data>
+</intent-filter>
+<intent-filter android:autoVerify="true" android:label="@7F1200F9">
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="http">
+</data>
+<data android:scheme="https">
+</data>
+<data android:host="@7F121050">
+</data>
+<data android:path="@7F121042">
+</data>
+</intent-filter>
+<intent-filter android:autoVerify="true" android:label="@7F1200F9">
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="http">
+</data>
+<data android:scheme="https">
+</data>
+<data android:host="@7F121050">
+</data>
+<data android:path="@7F121058">
+</data>
+</intent-filter>
+<intent-filter android:autoVerify="true" android:label="@7F1200F9">
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="http">
+</data>
+<data android:scheme="https">
+</data>
+<data android:host="@7F121050">
+</data>
+<data android:path="@7F121059">
+</data>
+</intent-filter>
+<intent-filter android:autoVerify="true" android:label="@7F1200F9">
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="http">
+</data>
+<data android:scheme="https">
+</data>
+<data android:host="@7F121050">
+</data>
+<data android:path="@7F121057">
+</data>
+</intent-filter>
+<intent-filter android:autoVerify="true" android:label="@7F1200F9">
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="http">
+</data>
+<data android:scheme="https">
+</data>
+<data android:host="@7F121050">
+</data>
+<data android:path="@7F121060">
+</data>
+</intent-filter>
+<intent-filter android:autoVerify="true" android:label="@7F1200F9">
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="http">
+</data>
+<data android:scheme="https">
+</data>
+<data android:host="@7F121050">
+</data>
+<data android:path="@7F12105A">
+</data>
+</intent-filter>
+<intent-filter android:autoVerify="true" android:label="@7F1200F9">
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="http">
+</data>
+<data android:scheme="https">
+</data>
+<data android:host="@7F121050">
+</data>
+<data android:path="@7F121055">
+</data>
+</intent-filter>
+<intent-filter android:autoVerify="true" android:label="@7F1200F9">
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="http">
+</data>
+<data android:scheme="https">
+</data>
+<data android:host="@7F121050">
+</data>
+<data android:path="@7F121052">
+</data>
+</intent-filter>
+<intent-filter android:autoVerify="true" android:label="@7F1200F9">
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="http">
+</data>
+<data android:scheme="https">
+</data>
+<data android:host="@7F121050">
+</data>
+<data android:path="@7F12104E">
+</data>
+</intent-filter>
+<intent-filter android:autoVerify="true" android:label="@7F1200F9">
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="http">
+</data>
+<data android:scheme="https">
+</data>
+<data android:host="@7F121050">
+</data>
+<data android:path="@7F12106F">
+</data>
+</intent-filter>
+<intent-filter android:autoVerify="true" android:label="@7F1200F9">
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="http">
+</data>
+<data android:scheme="https">
+</data>
+<data android:host="@7F121050">
+</data>
+<data android:path="@7F121072">
+</data>
+</intent-filter>
+<intent-filter android:autoVerify="true" android:label="@7F1200F9">
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="http">
+</data>
+<data android:scheme="https">
+</data>
+<data android:host="@7F121050">
+</data>
+<data android:path="@7F121051">
+</data>
+</intent-filter>
+<intent-filter android:autoVerify="true" android:label="@7F1200F9">
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="http">
+</data>
+<data android:scheme="https">
+</data>
+<data android:host="@7F121050">
+</data>
+<data android:path="@7F121044">
+</data>
+</intent-filter>
+<intent-filter android:autoVerify="true" android:label="@7F1200F9">
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="http">
+</data>
+<data android:scheme="https">
+</data>
+<data android:host="@7F121050">
+</data>
+<data android:path="@7F121054">
+</data>
+</intent-filter>
+<intent-filter android:autoVerify="true" android:label="@7F1200F9">
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="http">
+</data>
+<data android:scheme="https">
+</data>
+<data android:host="@7F121050">
+</data>
+<data android:path="@7F121041">
+</data>
+</intent-filter>
+<intent-filter android:autoVerify="true" android:label="@7F1200F9">
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="http">
+</data>
+<data android:scheme="https">
+</data>
+<data android:host="@7F121050">
+</data>
+<data android:path="@7F12104A">
+</data>
+</intent-filter>
+<intent-filter android:autoVerify="true">
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="http">
+</data>
+<data android:scheme="https">
+</data>
+<data android:host="@7F121050">
+</data>
+<data android:path="@7F12105B">
+</data>
+</intent-filter>
+<intent-filter android:autoVerify="true">
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="http">
+</data>
+<data android:scheme="https">
+</data>
+<data android:host="@7F121050">
+</data>
+<data android:path="@7F12105C">
+</data>
+</intent-filter>
+<intent-filter android:autoVerify="true">
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="http">
+</data>
+<data android:scheme="https">
+</data>
+<data android:host="@7F121050">
+</data>
+<data android:path="@7F12105D">
+</data>
+</intent-filter>
+<intent-filter android:autoVerify="true">
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="http">
+</data>
+<data android:scheme="https">
+</data>
+<data android:host="@7F121050">
+</data>
+<data android:path="@7F12106D">
+</data>
+</intent-filter>
+<intent-filter android:autoVerify="true">
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="http">
+</data>
+<data android:scheme="https">
+</data>
+<data android:host="@7F121050">
+</data>
+<data android:path="@7F121053">
+</data>
+</intent-filter>
+<intent-filter android:autoVerify="true">
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="bunq">
+</data>
+<data android:host="x-bunq-app">
+</data>
+<data android:path="/knowledge">
+</data>
+</intent-filter>
+<intent-filter android:autoVerify="true" android:label="@7F1206B2">
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="x-bunq-app" android:pathPrefix="/together/topic" android:scheme="bunq">
+</data>
+<data android:host="@7F121050" android:pathPrefix="@7F121062" android:scheme="https">
+</data>
+</intent-filter>
+<intent-filter android:autoVerify="true">
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="x-bunq-app" android:pathPrefix="/upgrade" android:scheme="bunq">
+</data>
+<data android:host="@7F121050" android:pathPrefix="@7F121070" android:scheme="https">
+</data>
+</intent-filter>
+<intent-filter android:autoVerify="true">
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="x-bunq-app" android:pathPrefix="/connect" android:scheme="bunq">
+</data>
+<data android:host="@7F121050" android:pathPrefix="@7F12104B" android:scheme="https">
+</data>
+</intent-filter>
+<intent-filter android:autoVerify="true">
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="x-bunq-app" android:pathPrefix="/cards/activate/online" android:scheme="bunq">
+</data>
+<data android:host="@7F121050" android:pathPrefix="@7F121056" android:scheme="https">
+</data>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:launchMode="1" android:name="com.bunq.android.ui.activity.userexperience.UserExperienceMobileWalletPromptActivity" android:parentActivityName="com.bunq.android.ui.activity.MainActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+<intent-filter>
+<action android:name="com.bunq.android.ui.activity.userexperience.MOBILE_WALLET_PROMPT">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:label="@7F1205FD" android:launchMode="1" android:name="com.bunq.android.ui.activity.userexperience.getStarted.GetStartedUserExperienceActivity" android:parentActivityName="com.bunq.android.ui.activity.MainActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:launchMode="1" android:name="com.bunq.android.ui.activity.userexperience.getStarted.GetStartedAchievementDetailActivity" android:parentActivityName="com.bunq.android.ui.activity.MainActivity" android:screenOrientation="1" android:theme="@7F13000B" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:label="@7F120434" android:launchMode="1" android:name="com.bunq.android.ui.activity.userexperience.getStarted.CreateBunqmeProfileActivity" android:parentActivityName="com.bunq.android.ui.activity.userexperience.getStarted.GetStartedUserExperienceActivity" android:screenOrientation="1" android:theme="@7F130017" android:windowSoftInputMode="0x00000015">
+</activity>
+<activity android:label="@7F120442" android:launchMode="1" android:name="com.bunq.android.ui.activity.userexperience.getStarted.CreateMonetaryAccountsActivity" android:parentActivityName="com.bunq.android.ui.activity.userexperience.getStarted.GetStartedUserExperienceActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:label="@7F120AAC" android:launchMode="1" android:name="com.bunq.android.ui.activity.userexperience.getStarted.PersonalizeProfileAvatarActivity" android:parentActivityName="com.bunq.android.ui.activity.userexperience.getStarted.GetStartedUserExperienceActivity" android:screenOrientation="1" android:theme="@7F130017" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:label="@7F120AB0" android:launchMode="1" android:name="com.bunq.android.ui.activity.userexperience.getStarted.PersonalizeProfilePublicNickNameActivity" android:parentActivityName="com.bunq.android.ui.activity.userexperience.getStarted.PersonalizeProfileAvatarActivity" android:screenOrientation="1" android:theme="@7F130017" android:windowSoftInputMode="0x00000015">
+</activity>
+<activity android:launchMode="1" android:name="com.bunq.android.ui.activity.myMoney.MyMoneyIntroActivity" android:parentActivityName="com.bunq.android.ui.activity.MainActivity" android:screenOrientation="1" android:theme="@7F130041" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:launchMode="1" android:name="com.bunq.android.ui.activity.myMoney.MyMoneyActivity" android:parentActivityName="com.bunq.android.ui.activity.myMoney.MyMoneyIntroActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.myMoney.SuggestInvestmentIdeaActivity" android:parentActivityName="com.bunq.android.ui.activity.myMoney.MyMoneyActivity" android:screenOrientation="1" android:theme="@7F130041" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.myMoney.EuropeanCentralBankStoreActivity" android:parentActivityName="com.bunq.android.ui.activity.myMoney.MyMoneyActivity" android:screenOrientation="1" android:theme="@7F130041" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:launchMode="1" android:name="com.bunq.android.ui.activity.sepaPayment.ProcessFilePaymentActivity" android:screenOrientation="1" android:theme="@7F130041">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="*">
+</data>
+<data android:scheme="file">
+</data>
+<data android:scheme="content">
+</data>
+<data android:scheme="smb">
+</data>
+<data android:scheme="http">
+</data>
+<data android:scheme="https">
+</data>
+<data android:mimeType="application/xml">
+</data>
+<data android:mimeType="application/xhtml+xml">
+</data>
+<data android:mimeType="application/atom+xml">
+</data>
+<data android:mimeType="text/xml">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="file">
+</data>
+<data android:scheme="smb">
+</data>
+<data android:scheme="content">
+</data>
+<data android:scheme="http">
+</data>
+<data android:scheme="https">
+</data>
+<data android:mimeType="application/pdf">
+</data>
+<data android:mimeType="application/x-pdf">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="*">
+</data>
+<data android:scheme="file">
+</data>
+<data android:scheme="smb">
+</data>
+<data android:scheme="content">
+</data>
+<data android:scheme="http">
+</data>
+<data android:scheme="https">
+</data>
+<data android:mimeType="*/*">
+</data>
+<data android:pathPattern=".*\.pdf">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.bunq.android.ui.activity.sepaPayment.ErrorProcessImportPaymentActivity" android:parentActivityName="com.bunq.android.ui.activity.sepaPayment.ProcessFilePaymentActivity" android:screenOrientation="1" android:theme="@7F13002A">
+</activity>
+<activity android:label="@7F120A28" android:name="com.bunq.android.ui.activity.sepaPayment.ConfirmPaymentScreen" android:screenOrientation="1">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.sepaPayment.PaymentDetailListActivity" android:parentActivityName="com.bunq.android.ui.activity.sepaPayment.ConfirmPaymentScreen" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F120D1B" android:name="com.bunq.android.ui.activity.invoiceScanning.ScanInvoiceOcrConfirmActivity" android:screenOrientation="1" android:theme="@7F130035" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.invoiceScanning.GoogleCloudVisionNoticeActivity" android:screenOrientation="1" android:theme="@7F130023" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.invoiceScanning.ProcessInvoiceScanningActivity" android:screenOrientation="1" android:theme="@7F130041" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.event.TransferwisePaymentEventDetailActivity" android:parentActivityName="com.bunq.android.ui.activity.MainActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:label="@7F12086E" android:launchMode="1" android:name="com.bunq.android.ui.activity.foreignCurrencyPayment.NewForeignCurrencyPaymentAmountActivity" android:screenOrientation="1" android:theme="@7F130034" android:windowSoftInputMode="0x00000015">
+</activity>
+<activity android:launchMode="1" android:name="com.bunq.android.ui.activity.foreignCurrencyPayment.NewForeignCurrencyPaymentConfirmActivity" android:screenOrientation="1" android:theme="@7F130034" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:label="@7F120872" android:launchMode="1" android:name="com.bunq.android.ui.activity.foreignCurrencyPayment.NewForeignCurrencyPaymentCurrencyActivity" android:screenOrientation="1" android:theme="@7F130034" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:label="@7F120877" android:launchMode="1" android:name="com.bunq.android.ui.activity.foreignCurrencyPayment.NewForeignCurrencyPaymentRecipientPickerActivity" android:screenOrientation="1" android:theme="@7F130034" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:label="@7F12087A" android:launchMode="1" android:name="com.bunq.android.ui.activity.foreignCurrencyPayment.NewForeignCurrencyPaymentRecipientRequirementActivity" android:screenOrientation="1" android:theme="@7F130034" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:label="@7F12087B" android:launchMode="1" android:name="com.bunq.android.ui.activity.foreignCurrencyPayment.NewForeignCurrencyPaymentTransferRequirementActivity" android:screenOrientation="1" android:theme="@7F130034" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:launchMode="1" android:name="com.bunq.android.ui.activity.foreignCurrencyPayment.NewForeignCurrencyPaymentUserAccountActivity" android:screenOrientation="1" android:theme="@7F13002C" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:launchMode="1" android:name="com.bunq.android.ui.activity.foreignCurrencyPayment.NewForeignCurrencyPaymentUserIntroActivity" android:screenOrientation="1" android:theme="@7F130034" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:launchMode="2" android:name="com.bunq.android.ui.activity.foreignCurrencyPayment.NewForeignCurrencyPaymentUserOauthActivity" android:screenOrientation="1" android:theme="@7F130034" android:windowSoftInputMode="0x00000003">
+<intent-filter android:autoVerify="true" android:label="@7F1200F9">
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="http">
+</data>
+<data android:scheme="https">
+</data>
+<data android:host="@7F121050">
+</data>
+<data android:path="@7F12106E">
+</data>
+</intent-filter>
+<intent-filter android:label="@7F1200F9">
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="bunq">
+</data>
+<data android:host="x-bunq-app">
+</data>
+<data android:path="/transferwise/oauth">
+</data>
+</intent-filter>
+</activity>
+<activity android:launchMode="1" android:name="com.bunq.android.ui.activity.foreignCurrencyPayment.NewForeignCurrencyPaymentUserSignupActivity" android:screenOrientation="1" android:theme="@7F130034" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:launchMode="1" android:name="com.bunq.android.ui.activity.foreignCurrencyPayment.NewForeignCurrencyPaymentUserTermsActivity" android:screenOrientation="1" android:theme="@7F130034" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:launchMode="1" android:name="com.bunq.android.ui.activity.foreignCurrencyPayment.NewForeignCurrencyPaymentUserInfoCheckActivity" android:screenOrientation="1" android:theme="@7F130034" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:launchMode="1" android:name="com.bunq.android.ui.activity.monetaryAccount.NoMonetaryAccountActivity" android:screenOrientation="1" android:theme="@7F130041" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.IdealIssuerTransactionEntryActivity" android:screenOrientation="1" android:theme="@7F130041" android:windowSoftInputMode="0x00000003">
+<intent-filter android:autoVerify="true">
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="https">
+</data>
+<data android:host="issuer-web.triage.bunq.net">
+</data>
+<data android:path="/">
+</data>
+</intent-filter>
+<intent-filter android:autoVerify="true">
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="https">
+</data>
+<data android:host="ideal.bunq.com">
+</data>
+<data android:path="/">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.bunq.android.ui.activity.GooglePayAppToAppVerificationActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+<intent-filter>
+<action android:name="com.bunq.android.action.WALLET_TOKEN_ACTIVATE">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<receiver android:enabled="@7F050003" android:name="com.bunq.android.hce.HceAppWidgetProvider">
+<intent-filter>
+<action android:name="android.appwidget.action.APPWIDGET_UPDATE">
+</action>
+</intent-filter>
+<meta-data android:name="android.appwidget.provider" android:resource="@7F150005">
+</meta-data>
+</receiver>
+<uses-library android:name="org.apache.http.legacy" android:required="false">
+</uses-library>
+<meta-data android:name="com.google.android.gms.version" android:value="@7F0B0008">
+</meta-data>
+<meta-data android:name="com.google.android.gms.vision.DEPENDENCIES" android:value="barcode">
+</meta-data>
+<meta-data android:name="firebase_analytics_collection_deactivated" android:value="true">
+</meta-data>
+<activity android:launchMode="1" android:name="com.bunq.android.ui.activity.AchievementDetailActivity" android:screenOrientation="1" android:theme="@7F13000B" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.AchievementsOverviewActivity" android:screenOrientation="1" android:theme="@7F13000B" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:label="@7F120F05" android:name="com.bunq.android.ui.activity.AddGroupFavoriteActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F120F06" android:name="com.bunq.android.ui.activity.AddSingleFavoriteActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.registration.company.ubo.CreateUboActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.registration.company.ubo.UpdateUboActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.registration.company.ubo.AddUboDirectorActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.AddUserAliasActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000004">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.AliasConfirmationResendInformActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:label="@7F1204BF" android:name="com.bunq.android.ui.activity.registration.company.CompanyRegistrationDirectorVerificationActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.registration.company.CompanyPersonIdentificationDocumentInputActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:label="@7F1204BF" android:name="com.bunq.android.ui.activity.registration.company.recovery.CompanyRecoveryDirectorVerificationActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.registration.company.CompanyRegistrationDirectorVerificationLoginActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000005">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.registration.company.recovery.CompanyRecoveryDirectorVerificationLoginActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000005">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.registration.company.recovery.CompanyRecoveryTinInputActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.registration.company.recovery.CompanyIdentificationDocumentInputRecoveryActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.registration.company.CompanyRegistrationTinInputActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.registration.UserIdentityVerifyResubmitActivity" android:screenOrientation="1" android:theme="@7F130023" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.CompanyUpgradeCostActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.AliasUserPhoneConfirmationActivity" android:parentActivityName="com.bunq.android.ui.activity.AddUserAliasActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000004">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.AttachmentDetailActivity" android:theme="@7F13000A">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.AuthenticationMethodsActivity" android:parentActivityName="com.bunq.android.ui.activity.SecuritySettingsActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:label="@7F120F09" android:name="com.bunq.android.ui.activity.SettingsAutoLogoutActivity" android:parentActivityName="com.bunq.android.ui.activity.SecuritySettingsActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:label="@7F120F0B" android:name="com.bunq.android.ui.activity.BudgetsBunqLightActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.BunqToEntryProcessingActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.ChangeAddressInformationActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.secondarypin.SecondaryPinConfirmActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000005">
+</activity>
+<activity android:label="@7F120D85" android:launchMode="1" android:name="com.bunq.android.ui.activity.secondarypin.SecondaryPinDetailActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.secondarypin.SecondaryPinInputActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000005">
+</activity>
+<activity android:label="@7F120F13" android:name="com.bunq.android.ui.activity.secondarypin.SecondaryPinMonetaryAccountPickerActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.security.ChangePinActivity" android:parentActivityName="com.bunq.android.ui.activity.security.CurrentPinActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000015">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.security.ChangePinConfirmationActivity" android:parentActivityName="com.bunq.android.ui.activity.security.ChangePinActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000015">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.tinRecovery.TinRecoveryPromptActivity" android:screenOrientation="1" android:theme="@7F130041" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.tinRecovery.TinRecoveryOtherPromptActivity" android:screenOrientation="1" android:theme="@7F130020" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.tinRecovery.TinRecoveryIntroActivity" android:screenOrientation="1" android:theme="@7F130041" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.tinRecovery.TinFlowPromptActivity" android:screenOrientation="1" android:theme="@7F130041" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.tinRecovery.TinFlowStarterActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.TinInputActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.MandatoryCountriesTinExemptionsActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.tinRecovery.TinFlowOtherPromptActivity" android:screenOrientation="1" android:theme="@7F130020" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.registration.company.recovery.CompanyRecoveryDetailsInputActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000013">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.registration.company.recovery.CompanyRecoverySearchActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.registration.company.CompanyRegistrationDetailsInputActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:label="@7F1205CC" android:name="com.bunq.android.ui.activity.registration.company.CompanyRegistrationFourFingerActivity" android:screenOrientation="1" android:theme="@7F130041" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.registration.company.CompanyRegistrationSearchActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.registration.company.DirectorVerifictationCheckpointActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:label="@7F12041A" android:name="com.bunq.android.ui.activity.ContactDetailsActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:launchMode="1" android:name="com.bunq.android.ui.activity.CommunicationOptInActivity" android:screenOrientation="1" android:theme="@7F130023" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:launchMode="1" android:name="com.bunq.android.ui.activity.CompanyDirectorOverviewActivity" android:parentActivityName="com.bunq.android.ui.activity.SecuritySettingsActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.CounterMonetaryAccountChooserActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F120F16" android:name="com.bunq.android.ui.activity.CounterMonetaryAccountPickerActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F120F16" android:name="com.bunq.android.ui.activity.CounterUserPickerActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.DeviceDeactivatedActivity" android:noHistory="true" android:screenOrientation="1">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.security.CurrentPinActivity" android:parentActivityName="com.bunq.android.ui.activity.SecuritySettingsActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000015">
+</activity>
+<activity android:launchMode="1" android:name="com.bunq.android.ui.activity.DebtCollectionActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:label="@7F1201D4" android:name="com.bunq.android.ui.activity.event.BunqmeFundraiserPayActivity" android:parentActivityName="com.bunq.android.ui.activity.MainActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.event.DebtCollectionPaidEventDetailActivity" android:parentActivityName="com.bunq.android.ui.activity.MainActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.event.SavingsAutoSaveResultDetailActivity" android:parentActivityName="com.bunq.android.ui.activity.MainActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.event.SavingsAutoSaveEntryEventDetailActivity" android:parentActivityName="com.bunq.android.ui.activity.MainActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.DebtCollectionMerchantTransactionProcessingActivity" android:screenOrientation="1" android:theme="@7F130041" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:label="@7F120F13" android:name="com.bunq.android.ui.activity.DebtCollectionMonetaryAccountSettleActivity" android:parentActivityName="com.bunq.android.ui.activity.DebtCollectionActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.DeviceOverviewActivity" android:parentActivityName="com.bunq.android.ui.activity.SecuritySettingsActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.subscriptionDowngrade.DowngradeSubscriptionActivity" android:screenOrientation="1" android:theme="@7F130042" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:label="@7F1204E7" android:name="com.bunq.android.ui.activity.subscriptionDowngrade.DowngradeSubscriptionFeedbackActivity" android:screenOrientation="1" android:theme="@7F130037" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:label="@7F1204E7" android:name="com.bunq.android.ui.activity.subscriptionDowngrade.DowngradeToLimitedFeedbackActivity" android:screenOrientation="1" android:theme="@7F130037" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.subscriptionDowngrade.DowngradeSubscriptionLoaderActivity" android:screenOrientation="1" android:theme="@7F130041" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.subscriptionDowngrade.DowngradeToLimitedSubscriptionLoaderActivity" android:screenOrientation="1" android:theme="@7F130041" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.EntranceActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="bunq">
+</data>
+<data android:host="x-bunq-app">
+</data>
+<data android:path="/signup-email-confirmation">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.bunq.android.ui.activity.FaceMigrationAdditionalAuthenticationActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.FourFingerIntroActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.merchantTransaction.MerchantTransactionValidationResetActivity" android:parentActivityName="com.bunq.android.ui.activity.SecuritySettingsActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.merchantTransaction.MerchantTransactionValidationInstallationResetActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.merchantTransaction.MerchantTransactionValidationRecoveryActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:launchMode="3" android:name="com.bunq.android.ui.activity.event.FeatureAnnouncementActivity" android:parentActivityName="com.bunq.android.ui.activity.MainActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.event.BunqmeFundraiserEventDetailActivity" android:parentActivityName="com.bunq.android.ui.activity.MainActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.fundraiser.BunqmeFundraiserNameActivity" android:parentActivityName="com.bunq.android.ui.activity.MainActivity" android:screenOrientation="1" android:theme="@7F130036" android:windowSoftInputMode="0x00000015">
+</activity>
+<activity android:label="@7F1201C9" android:name="com.bunq.android.ui.activity.fundraiser.BunqmeFundraiserProfileActivity" android:parentActivityName="com.bunq.android.ui.activity.MainActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:label="@7F1201D6" android:name="com.bunq.android.ui.activity.fundraiser.BunqmeFundraiserThemeActivity" android:parentActivityName="com.bunq.android.ui.activity.fundraiser.BunqmeFundraiserProfileActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000014">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.registration.device.DeviceRegistrationAdditionalResetMerchantTransactionProcessingActivity" android:screenOrientation="1" android:theme="@7F130041" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.registration.device.DeviceRegistrationPhoneNumberActivity" android:parentActivityName="com.bunq.android.ui.activity.WelcomeActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:launchMode="1" android:name="com.bunq.android.ui.activity.registration.device.DeviceRegistrationPhoneNumberConfirmationActivity" android:parentActivityName="com.bunq.android.ui.activity.registration.device.DeviceRegistrationPhoneNumberActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.registration.device.DeviceRegistrationPhoneQrConfirmationActivity" android:parentActivityName="com.bunq.android.ui.activity.registration.device.DeviceRegistrationPhoneNumberActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F1200F9" android:name="com.bunq.android.ui.activity.AddUserLoginActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000015">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.MerchantTransactionValidationProcessingActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.MerchantTransactionRefillProcessingActivity" android:screenOrientation="1" android:theme="@7F130041">
+</activity>
+<activity android:label="@7F1200F9" android:launchMode="1" android:name="com.bunq.android.ui.activity.RememberedUserLoginActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000024">
+</activity>
+<activity android:label="@7F1200F9" android:launchMode="1" android:name="com.bunq.android.ui.activity.MaintenanceBlockActivity" android:noHistory="true" android:screenOrientation="1" android:theme="@7F130017">
+</activity>
+<activity android:label="@7F120F13" android:name="com.bunq.android.ui.activity.MonetaryAccountChooserActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.RegistrationOcrScanActivity" android:screenOrientation="0" android:theme="@7F13002D">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.OutdatedVersionActivity" android:screenOrientation="1" android:theme="@7F13002D">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.PassphraseCreatedActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.PassphraseIntroActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.PassphraseResetInformActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.PassphraseResetIntroActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.PassphraseResetActivity" android:parentActivityName="com.bunq.android.ui.activity.SecuritySettingsActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000015">
+</activity>
+<activity android:excludeFromRecents="true" android:launchMode="3" android:name="com.bunq.android.ui.activity.ProblemReportActivity" android:theme="@7F13003A" android:windowSoftInputMode="0x00000015">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.PromotionInstanceActivity" android:parentActivityName="com.bunq.android.ui.activity.MainActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:label="@7F120F34" android:launchMode="1" android:name="com.bunq.android.ui.activity.RememberedUsersActivity" android:parentActivityName="com.bunq.android.ui.activity.RememberedUserLoginActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000033">
+</activity>
+<activity android:label="@7F120F34" android:name="com.bunq.android.ui.activity.SwitchAccountActivity" android:parentActivityName="com.bunq.android.ui.activity.MainActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000033">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.registration.person.recovery.UserPersonRecoveryHubActivity" android:parentActivityName="com.bunq.android.ui.activity.SupportActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000033">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.registration.person.recovery.UserLightRecoveryHubActivity" android:parentActivityName="com.bunq.android.ui.activity.SupportActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000033">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.registration.person.recovery.LightRecoveryMerchantTransactionProcessingActivity" android:screenOrientation="1" android:theme="@7F130041" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.registration.person.recovery.PersonRecoveryMerchantTransactionProcessingActivity" android:screenOrientation="1" android:theme="@7F130041" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.registration.minor.PersonRegistrationApprovalParentActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:label="@7F120F09" android:name="com.bunq.android.ui.activity.registration.person.PersonRegistrationAutoLogoutActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.registration.minor.PersonRegistrationAwaitingParentActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.registration.person.PersonRegistrationDeviceConfirmationActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000015">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.registration.person.PersonRegistrationDeviceQrConfirmationActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name="com.bunq.android.ui.activity.newRegistration.person.PersonRegistrationEmailActivity" android:parentActivityName="com.bunq.android.ui.activity.registration.person.PersonRegistrationPhoneNumberActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000014">
+</activity>
+<activity android:launchMode="1" android:name="com.bunq.android.ui.activity.newRegistration.company.CompanyRegistrationEmailActivity" android:parentActivityName="com.bunq.android.ui.activity.registration.person.PersonRegistrationPhoneNumberActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000014">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.newRegistration.company.CompanyRegistrationAccountIntendedActivitiesActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.newRegistration.company.CompanyRegistrationExtraInfoActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.newRegistration.company.CompanyVolumeTransactionMonthlyPickerActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.newRegistration.company.CompanyChamberOfCommerceActivityDescriptionPickerActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.newRegistration.company.CompanyIntendedActivitiesOtherActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000015">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.newRegistration.person.PersonRegistrationRegistrationLoginCodeEntryActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000015">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.newRegistration.person.PersonRegistrationRegistrationLoginCodeConfirmationActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000015">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.newRegistration.company.CompanyRegistrationRegistrationLoginCodeEntryActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000015">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.newRegistration.company.CompanyRegistrationRegistrationLoginCodeConfirmationActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000015">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.newRegistration.person.PersonRegistrationSecondCheckpointActivity" android:screenOrientation="1" android:theme="@7F130041" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.newRegistration.PersonRegistrationCheckpointIdentificationActivity" android:screenOrientation="1" android:theme="@7F130041" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.newRegistration.PersonRegistrationLastStepActivity" android:screenOrientation="1" android:theme="@7F130041" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.newRegistration.CompanyRegistrationCheckpointIdentificationActivity" android:screenOrientation="1" android:theme="@7F130041" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.newRegistration.company.CompanyRegistrationFourthCheckpointActivity" android:screenOrientation="1" android:theme="@7F130041" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.registration.person.full.PersonRegistrationFullAccountNeededActivity" android:screenOrientation="1" android:theme="@7F130038" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:label="@7F120F28" android:name="com.bunq.android.ui.activity.registration.person.full.PersonRegistrationFullPersonalDetailsInputActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.registration.person.PersonRegistrationPendingMerchantTransactionActivity" android:parentActivityName="com.bunq.android.ui.activity.registration.person.PersonRegistrationPendingCounterIbanActivity" android:screenOrientation="1" android:theme="@7F130041" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.registration.person.lite.PersonRegistrationFourFingerActivity" android:parentActivityName="com.bunq.android.ui.activity.registration.person.PersonRegistrationPersonalDetailsInputActivity" android:screenOrientation="1" android:theme="@7F130041" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.EnableFingerprintLoginActivity" android:screenOrientation="1" android:theme="@7F130021" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.registration.minor.PersonRegistrationParentEmailChangeActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000005">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.registration.minor.PersonRegistrationParentEmailRegisterActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000005">
+</activity>
+<activity android:label="@7F120427" android:name="com.bunq.android.ui.activity.registration.person.PersonRegistrationPendingCounterIbanActivity" android:screenOrientation="1" android:theme="@7F130041" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.registration.person.PersonRegistrationPendingReviewActivity" android:screenOrientation="1" android:theme="@7F130041" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.registration.person.recovery.flow.RecoveryFlowInitializingActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000030">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.registration.person.recovery.RecoveryTinInputFlowActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.registration.person.recovery.flow.IdentificationDocumentInputRecoveryFlowActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.registration.person.full.PersonRegistrationAddressInfoActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.registration.person.recovery.PersonRecoveryTinInputActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.registration.person.full.PersonRegistrationTinInputActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.registration.company.recovery.CompanyRecoveryHubActivity" android:parentActivityName="com.bunq.android.ui.activity.SupportActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.PopupNotificationLoadingActivity" android:parentActivityName="com.bunq.android.ui.activity.MainActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.security.ResetPinActivity" android:parentActivityName="com.bunq.android.ui.activity.security.ResetPinAliasActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000015">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.security.ResetPinConfirmationActivity" android:parentActivityName="com.bunq.android.ui.activity.security.ResetPinActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000015">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.MerchantTransactionInstallationProcessingActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.security.ResetPinAliasActivity" android:parentActivityName="com.bunq.android.ui.activity.RememberedUserLoginActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.security.ResetPinAliasEmailConfirmationActivity" android:parentActivityName="com.bunq.android.ui.activity.security.ResetPinAliasActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.security.ResetPinAliasPhoneConfirmationActivity" android:parentActivityName="com.bunq.android.ui.activity.security.ResetPinAliasActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:icon="@7F080364" android:label="@7F120F2F" android:name="com.bunq.android.ui.activity.SecuredCameraCaptureActivity" android:theme="@7F13002D">
+</activity>
+<activity android:label="@7F120F30" android:launchMode="1" android:name="com.bunq.android.ui.activity.SecuritySettingsActivity" android:parentActivityName="com.bunq.android.ui.activity.MainActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.AboutUsActivity" android:parentActivityName="com.bunq.android.ui.activity.MainActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.SignupInformationWarningActivity" android:screenOrientation="1" android:theme="@7F130041" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:label="@7F120DF1" android:name="com.bunq.android.ui.activity.SignupTypeChoiceActivity" android:screenOrientation="1" android:theme="@7F130041" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.SplashActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:label="@7F1200F9" android:name="com.bunq.android.ui.activity.SplashScreenActivity" android:screenOrientation="1" android:theme="@7F13003E" android:windowSoftInputMode="0x00000010">
+<intent-filter android:label="@7F1200F9">
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:launchMode="1" android:name="com.bunq.android.ui.activity.SubscriptionActivity" android:parentActivityName="com.bunq.android.ui.activity.MainActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.SubscriptionUpgradeCardPremiumFlowActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.SubscriptionUpgradeCardNoFlowActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:label="@7F120F33" android:launchMode="1" android:name="com.bunq.android.ui.activity.SupportActivity" android:parentActivityName="com.bunq.android.ui.activity.MainActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000010">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="bunq">
+</data>
+<data android:host="x-bunq-app">
+</data>
+<data android:path="/support">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="bunq">
+</data>
+<data android:host="x-bunq-app">
+</data>
+<data android:path="/com.bunq.android/support">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.bunq.android.ui.activity.SwitchUserDetailActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:label="@7F120F38" android:name="com.bunq.android.ui.activity.EditProfileActivity" android:parentActivityName="com.bunq.android.ui.activity.MainActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".ui.activity.MainActivity">
+</meta-data>
+</activity>
+<activity android:label="@7F1205CC" android:name="com.bunq.android.ui.activity.registration.person.superLightUpgrade.UserSuperLightUpgradeFourFingerActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.registration.person.superLightUpgrade.UserSuperLightUpgradePersonalInfoActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.registration.person.superLightUpgrade.UserSuperLightUpgradePinActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000015">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.registration.person.superLightUpgrade.UserSuperLightUpgradePinConfirmationActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000015">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.VerifyEmailActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000015">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.UserAliasEmailConfirmationActivity" android:parentActivityName="com.bunq.android.ui.activity.VerifyEmailActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:label="@7F120E43" android:name="com.bunq.android.ui.activity.UserLightSubscriptionSelectionActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.registration.person.full.PersonRegistrationPendingIdentificationDocumentActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.registration.company.CompanyRegistrationPendingIdentificationDocumentActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:label="@7F120CA0" android:name="com.bunq.android.ui.activity.registration.person.recovery.IdentificationDocumentInputRecoveryActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:name="com.bunq.android.biometrics.FourFingerActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.FourFingerResetInformActivity" android:parentActivityName="com.bunq.android.ui.activity.SecuritySettingsActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.FourFingerResetStatusActivity" android:screenOrientation="1" android:theme="@7F130041" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.FourFingerTutorialActivity" android:screenOrientation="1" android:theme="@7F130041" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.registration.company.ubo.CompanyRegistrationUbosActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.InstallationFourFingerResetInformActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.PopupPaywallActivity" android:screenOrientation="1" android:theme="@7F130041" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.UserSuperLightWelcomeActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.device.MultiDeviceAllowOtherActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:label="@7F12083B" android:launchMode="1" android:name="com.bunq.android.ui.activity.device.MultiDeviceLimitReachedActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<receiver android:exported="true" android:name="com.adjust.sdk.AdjustReferrerReceiver" android:permission="android.permission.INSTALL_PACKAGES">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+<service android:exported="true" android:name="com.bunq.android.security.SingleSignOnService" android:permission="com.bunq.android.SINGLE_SIGN_ON">
+</service>
+<service android:exported="true" android:name="com.bunq.android.fcm.FcmRegistrationService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<service android:exported="false" android:name="com.bunq.android.authenticator.BunqAuthenticatorService">
+<intent-filter>
+<action android:name="android.accounts.AccountAuthenticator">
+</action>
+</intent-filter>
+<meta-data android:name="android.accounts.AccountAuthenticator" android:resource="@7F150002">
+</meta-data>
+</service>
+<meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="AIzaSyCN6neKUyvmfqmct7gpzohPXaWQNOq7REs">
+</meta-data>
+<activity android:name="com.bunq.android.ui.activity.registration.MerchantTransactionSignupInfoActivity" android:parentActivityName="com.bunq.android.ui.activity.registration.person.PersonRegistrationPendingCounterIbanActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.monetaryAccount.AutomaticTopUpEditActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.monetaryAccount.AutomaticTopUpActivity" android:screenOrientation="1" android:theme="@7F130043" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.userexperience.UserExperienceTopUpBankActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:launchMode="1" android:name="com.bunq.android.ui.activity.merchantTransaction.TopUpDoneActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.EventFourFingerIntroActivity" android:parentActivityName="com.bunq.android.ui.activity.MainActivity" android:screenOrientation="1" android:theme="@7F130041" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.monetaryAccount.ScheduledTopUpAutomaticLoaderActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:launchMode="1" android:name="com.bunq.android.ui.activity.premiumtrial.PremiumTrialAcceptActivity" android:parentActivityName="com.bunq.android.ui.activity.MainActivity" android:screenOrientation="1" android:theme="@7F13001B" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:launchMode="1" android:name="com.bunq.android.ui.activity.premiumtrial.PremiumTrialRejectActivity" android:parentActivityName="com.bunq.android.ui.activity.premiumtrial.PremiumTrialAcceptActivity" android:screenOrientation="1" android:theme="@7F13003B" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:launchMode="1" android:name="com.bunq.android.ui.activity.event.PremiumTrialDetailActivity" android:parentActivityName="com.bunq.android.ui.activity.MainActivity" android:screenOrientation="1" android:theme="@7F13001B" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.ReactivationUserLabelLoginCheckActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.reactivation.NiceToSeeYouAgainCheckpointActivity" android:screenOrientation="1" android:theme="@7F130041" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.reactivation.ReactivationLoginActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000015">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.reactivation.DeviceDeactivationPromptActivity" android:screenOrientation="1" android:theme="@7F130041" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.reactivation.WelcomeBackCheckpointActivity" android:screenOrientation="1" android:theme="@7F130041" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.reactivation.ReactivationPinConfirmActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000015">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.reactivation.ReactivationDoneCheckpointActivity" android:screenOrientation="1" android:theme="@7F130041" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.reactivation.FourFingerFailedCheckpointActivity" android:screenOrientation="1" android:theme="@7F130041" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.reactivation.ReactivationDocumentInputActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.reactivation.ReactivationOcrScanActivity" android:screenOrientation="0" android:theme="@7F13002D" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.reactivation.ReactivationDocumentInformationActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.reactivation.ReactivationWaitingSupportActivity" android:screenOrientation="1" android:theme="@7F130041" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.reactivation.ReactivationNewPinActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000015">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.reactivation.ReactivationFourFingerActivity" android:screenOrientation="1" android:theme="@7F130041" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.reactivation.ReactivationNewLoginConfirmActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000015">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.reactivation.ReactivationNewLoginActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000015">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.DopamineActivity" android:screenOrientation="1" android:theme="@7F130041" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.newRegistration.RegistrationAddressNoCardPromptActivity" android:screenOrientation="1" android:theme="@7F130026" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.event.AliasUserEventDetailActivity" android:parentActivityName="com.bunq.android.ui.activity.MainActivity" android:screenOrientation="1" android:theme="@7F13001D" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.UpgradeYourSecurityActivity" android:screenOrientation="1" android:theme="@7F130026" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.event.UserAccountSecureCompletedActivity" android:screenOrientation="1" android:theme="@7F13001F" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.PermissionIntroductionActivity" android:screenOrientation="1" android:theme="@7F130041" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.BunqMorePremiumUpgradeCardPromptActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:label="@7F120842" android:name="com.bunq.android.ui.activity.MyConnectionsOverviewActivity" android:parentActivityName="com.bunq.android.ui.activity.SecuritySettingsActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.event.OauthRequestDetailActivity" android:parentActivityName="com.bunq.android.ui.activity.MainActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:launchMode="1" android:name="com.bunq.android.ui.activity.DevelopersActivity" android:parentActivityName="com.bunq.android.ui.activity.SecuritySettingsActivity" android:screenOrientation="1" android:theme="@7F130041" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:launchMode="1" android:name="com.bunq.android.ui.activity.OauthOverviewActivity" android:parentActivityName="com.bunq.android.ui.activity.DevelopersActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.AddOauthCallbackUrlActivity" android:parentActivityName="com.bunq.android.ui.activity.OauthOverviewActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000015">
+</activity>
+<activity android:configChanges="0x00000200" android:label="@7F120462" android:name="com.bunq.android.ui.activity.DarkModeSettingsActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.newRegistration.company.CompanyRegistrationCompanyInfoCheckpointActivity" android:screenOrientation="1" android:theme="@7F13001E" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.newRegistration.company.CompanyRegistrationFinalCheckpointActivity" android:screenOrientation="1" android:theme="@7F130041" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.PremiumLimitedPayWallActivity" android:screenOrientation="1" android:theme="@7F130041" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.paywall.OnlineCardAdditionalCardPayWallActivity" android:screenOrientation="1" android:theme="@7F130023" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.PremiumLimitedInviteIntroActivity" android:parentActivityName="com.bunq.android.ui.activity.MainActivity" android:screenOrientation="1" android:theme="@7F130041">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.InviteUserAvailableFetchActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.ReferralInviteIntroActivity" android:screenOrientation="1" android:theme="@7F130041" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.event.RewardRecipientEventDetailActivity" android:parentActivityName="com.bunq.android.ui.activity.MainActivity" android:screenOrientation="1" android:theme="@7F130020" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.event.RewardSenderEventDetailActivity" android:parentActivityName="com.bunq.android.ui.activity.MainActivity" android:screenOrientation="1" android:theme="@7F130020" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.automaticTopUpWithIban.AutomaticTopUpWithIbanInputActivity" android:screenOrientation="1" android:theme="@7F130019" android:windowSoftInputMode="0x00000015">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.automaticTopUpWithIban.AutomaticTopUpWithIbanExtraSafeActivity" android:screenOrientation="1" android:theme="@7F130041" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.automaticTopUpWithIban.AutomaticTopUpWithIbanVerifyActivity" android:screenOrientation="1" android:theme="@7F130041" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.ibanVerification.IbanVerificationActivity" android:screenOrientation="1" android:theme="@7F130019" android:windowSoftInputMode="0x00000013">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.automaticTopUpWithIban.EnableAutomaticTopUpWithIbanActivity" android:screenOrientation="1" android:theme="@7F130023" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.newRegistration.company.CompanyRegistrationMinorActivity" android:screenOrientation="1" android:theme="@7F130026" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.newRegistration.OnfidoProcessingActivity" android:screenOrientation="1" android:theme="@7F130041" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.newRegistration.OnfidoDocumentSelectionActivity" android:screenOrientation="1" android:theme="@7F130041" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.subscriptionDowngrade.DowngradeToLimitedSubscriptionActivity" android:screenOrientation="1" android:theme="@7F130041" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.newRegistration.company.CompanyAccountRejectedIntendedActivityActivity" android:screenOrientation="1" android:theme="@7F130041" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.newRegistration.company.CompanyRegistrationAccountIntendedActivityElaborateActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000015">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.UnsupportedAndroidVersionWarningActivity" android:screenOrientation="1" android:theme="@7F130041" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.newRegistration.RegistrationProofOfResidenceIntroActivity" android:screenOrientation="1" android:theme="@7F13001F" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.AddressDocumentCameraActivity" android:screenOrientation="1" android:theme="@7F130041" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.newRegistration.RegistrationOneLastThingCheckpointActivity" android:screenOrientation="1" android:theme="@7F130041" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.newRegistration.company.ChamberOfCommerceRegistrationPromptActivity" android:screenOrientation="1" android:theme="@7F13001F" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.newRegistration.company.RegistrationCompanyBlockedUnsupportedLegalFormActivity" android:screenOrientation="1" android:theme="@7F130019" android:windowSoftInputMode="0x00000015">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.newRegistration.RegistrationApprovalPendingActivity" android:screenOrientation="1" android:theme="@7F130041" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.switchService.SwitchServiceIbanInputActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000015">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.newRegistration.company.CompanyRegistrationLegalFormPickerActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.switchService.SwitchServiceMonetaryAccountPickerActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.AdjustFetchingActivity" android:screenOrientation="1" android:theme="@7F13003E" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.ReferralPersonaliseLinkActivity" android:screenOrientation="1" android:theme="@7F130019" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.CardNotArrivedIntroActivity" android:screenOrientation="1" android:theme="@7F130023" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.CardNotArrivedAddressCheckActivity" android:screenOrientation="1" android:theme="@7F130041" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.CardNotArrivedAddressUpdateActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.myMoney.EuropeanCentralBankPermissionActivity" android:screenOrientation="1" android:theme="@7F130041" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.myMoney.GovernmentBondPermissionActivity" android:screenOrientation="1" android:theme="@7F130041" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.event.InterestPayoutEventDetailActivity" android:parentActivityName="com.bunq.android.ui.activity.MainActivity" android:screenOrientation="1" android:theme="@7F130025" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.secondarypin.SecondaryPinLocalUserPickerActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.secondarypin.SecondaryPinLoginActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000015">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.secondarypin.SecondaryPinLinkAccountActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:label="@7F120507" android:name="com.bunq.android.ui.activity.monetaryAccount.DualPinLinkOverviewActivity" android:parentActivityName="com.bunq.android.ui.activity.monetaryAccount.MonetaryAccountDetailActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:label="@7F120507" android:name="com.bunq.android.ui.activity.DualPinLinkDetailActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.secondarypin.SecondaryPinLinkNoAccountsActivity" android:screenOrientation="1" android:theme="@7F13001F" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.GooglePayProvisionActivity" android:screenOrientation="1" android:theme="@7F130041" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.secondarypin.SecondaryPinIntroActivity" android:screenOrientation="1" android:theme="@7F130026" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.companyActivities.CompanyRecoveryExtraInfoActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.CompanyActivitiesRecoveryFlowStarterActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.companyActivities.CompanyRecoveryAccountIntendedActivitiesActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.companyActivities.CompanyRecoveryAccountIntendedActivityElaborateActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000015">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.fundraiser.BunqmeFundraiserOverviewActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.fundraiser.BunqmeFundraiserCreatedActivity" android:screenOrientation="1" android:theme="@7F13001D" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.cards.MasterCardOrderWarningActivity" android:screenOrientation="1" android:theme="@7F13001F" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:launchMode="1" android:name="com.bunq.android.ui.activity.UpgradeTypeChoiceActivity" android:screenOrientation="1" android:theme="@7F130041" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.paywalls.JointUpgradeAllToPremiumPaywallActivity" android:screenOrientation="1" android:theme="@7F130041" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.paywalls.JointCardsPaywallActivity" android:screenOrientation="1" android:theme="@7F130041" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.paywalls.JointExtraAccountPaywallActivity" android:screenOrientation="1" android:theme="@7F130041" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.JointCloseAccountsActivity" android:screenOrientation="1" android:theme="@7F130041" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.JointCardOrderStartActivity" android:screenOrientation="1" android:theme="@7F130041" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.JointGroupStatusSubscriptionActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.bunq.android.ui.activity.SwitchSubscriptionLoaderActivity" android:screenOrientation="1" android:theme="@7F130041" android:windowSoftInputMode="0x00000003">
+</activity>
+<receiver android:exported="true" android:name="com.bunq.android.data.CountryMemoryCache$LocaleChangedBroadcastReceiver">
+<intent-filter>
+<action android:name="android.intent.action.LOCALE_CHANGED">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:exported="true" android:name="com.bunq.android.util.SmsCodeBroadcastReceiver">
+<intent-filter>
+<action android:name="com.google.android.gms.auth.api.phone.SMS_RETRIEVED">
+</action>
+</intent-filter>
+</receiver>
+<meta-data android:name="com.google.firebase.ml.vision.DEPENDENCIES" android:value="face">
+</meta-data>
+<activity android:label="" android:name="com.onfido.android.sdk.capture.ui.camera.CaptureActivity" android:screenOrientation="7" android:theme="@7F13013D">
+</activity>
+<activity android:label="" android:name="com.onfido.android.sdk.capture.ui.OnfidoActivity" android:screenOrientation="7" android:theme="@7F130138">
+</activity>
+<receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.analytics.AnalyticsReceiver">
+</receiver>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.analytics.AnalyticsService">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.analytics.AnalyticsJobService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<service android:exported="true" android:name="com.google.firebase.messaging.FirebaseMessagingService">
+<intent-filter android:priority="-500">
+<action android:name="com.google.firebase.MESSAGING_EVENT">
+</action>
+</intent-filter>
+</service>
+<service android:exported="false" android:name="com.google.firebase.components.ComponentDiscoveryService">
+<meta-data android:name="com.google.firebase.components:com.google.firebase.iid.Registrar" android:value="com.google.firebase.components.ComponentRegistrar">
+</meta-data>
+</service>
+<receiver android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+</intent-filter>
+</receiver>
+<service android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdService">
+<intent-filter android:priority="-500">
+<action android:name="com.google.firebase.INSTANCE_ID_EVENT">
+</action>
+</intent-filter>
+</service>
+<activity android:label="BiometricsAggregate" android:name="com.veridiumid.sdk.activities.BiometricsAggregateActivity" android:screenOrientation="1">
+</activity>
+<activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:01030010">
+</activity>
+<provider android:authorities="com.bunq.android.firebaseinitprovider" android:exported="false" android:initOrder="100" android:name="com.google.firebase.provider.FirebaseInitProvider">
+</provider>
+</application>
+</manifest>

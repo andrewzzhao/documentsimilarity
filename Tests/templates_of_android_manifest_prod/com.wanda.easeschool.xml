@@ -1,0 +1,381 @@
+<?xml version="1.0" ?><manifest android:versionCode="6" android:versionName="1.7.0" package="com.wanda.easeschool" platformBuildVersionCode="23" platformBuildVersionName="6.0-2704002" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-permission android:name="android.permission.READ_LOGS">
+</uses-permission>
+<uses-sdk android:minSdkVersion="14" android:targetSdkVersion="23">
+</uses-sdk>
+<permission android:name="com.wanda.easeschool.permission.JPUSH_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="com.wanda.easeschool.permission.JPUSH_MESSAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_USER_PRESENT">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.RECORD_AUDIO">
+</uses-permission>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="android.permission.USE_CREDENTIALS">
+</uses-permission>
+<uses-permission android:name="android.permission.MANAGE_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="com.android.launcher.permission.READ_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.BROADCAST_STICKY">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE">
+</uses-permission>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-feature android:name="android.hardware.camera">
+</uses-feature>
+<uses-feature android:name="android.hardware.camera.autofocus">
+</uses-feature>
+<permission android:name="com.hyphenate.chatuidemo.permission.C2D_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="com.hyphenate.chatuidemo.permission.C2D_MESSAGE">
+</uses-permission>
+<permission android:name="com.hyphenate.chatuidemo.permission.MIPUSH_RECEIVE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="com.hyphenate.chatuidemo.permission.MIPUSH_RECEIVE">
+</uses-permission>
+<application android:allowBackup="true" android:icon="@7F020143" android:label="@7F050188" android:largeHeap="true" android:name="com.tencent.StubShell.TxAppEntry" android:theme="@7F08001E">
+<meta-data android:name="TxAppEntry" android:value="com.wanda.easeschool.chat.MyApplication">
+</meta-data>
+<service android:enabled="true" android:exported="false" android:name="cn.jpush.android.service.PushService">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.REGISTER">
+</action>
+<action android:name="cn.jpush.android.intent.REPORT">
+</action>
+<action android:name="cn.jpush.android.intent.PushService">
+</action>
+<action android:name="cn.jpush.android.intent.PUSH_TIME">
+</action>
+</intent-filter>
+</service>
+<service android:enabled="true" android:exported="true" android:name="cn.jpush.android.service.DaemonService">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.DaemonService">
+</action>
+<category android:name="com.wanda.easeschool">
+</category>
+</intent-filter>
+</service>
+<receiver android:enabled="true" android:name="cn.jpush.android.service.PushReceiver">
+<intent-filter android:priority="1000">
+<action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY">
+</action>
+<category android:name="com.wanda.easeschool">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.USER_PRESENT">
+</action>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_ADDED">
+</action>
+<action android:name="android.intent.action.PACKAGE_REMOVED">
+</action>
+<data android:scheme="package">
+</data>
+</intent-filter>
+</receiver>
+<activity android:configChanges="0x000000A0" android:exported="false" android:name="cn.jpush.android.ui.PushActivity">
+<intent-filter>
+<action android:name="cn.jpush.android.ui.PushActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="com.wanda.easeschool">
+</category>
+</intent-filter>
+</activity>
+<service android:enabled="true" android:exported="false" android:name="cn.jpush.android.service.DownloadService">
+</service>
+<receiver android:name="cn.jpush.android.service.AlarmReceiver">
+</receiver>
+<receiver android:enabled="true" android:name="com.wanda.easeschool.Receiver">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.REGISTRATION">
+</action>
+<action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED">
+</action>
+<action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED">
+</action>
+<action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED">
+</action>
+<action android:name="cn.jpush.android.intent.CONNECTION">
+</action>
+<category android:name="com.wanda.easeschool">
+</category>
+</intent-filter>
+</receiver>
+<meta-data android:name="JPUSH_CHANNEL" android:value="developer-default">
+</meta-data>
+<meta-data android:name="JPUSH_APPKEY" android:value="85c8d2bd7e18b02ca6ae6d2c">
+</meta-data>
+<activity android:name="com.wanda.easeschool.ui.SetMyNameActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.wanda.easeschool.ui.NoticeListActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.wanda.easeschool.ui.SystemMessageListActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.wanda.easeschool.ui.AboutZhongKeRuiHaoActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.wanda.easeschool.ui.UpdateZhongKeRuiHaoActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.wanda.easeschool.ui.systemMessageDetailActivity" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:name="com.wanda.easeschool.ui.AppShareActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.wanda.easeschool.ui.StudentNoticeDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.wanda.easeschool.ui.StudentNocticeMessageActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.wanda.easeschool.ui.TeacherNoticeDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.wanda.easeschool.ui.StudentHomeWorkMessageActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.wanda.easeschool.ui.NotHandHomeWorkActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.wanda.easeschool.ui.StudentHomeworkDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.wanda.easeschool.zbar.CaptureActivity" android:screenOrientation="1" android:theme="@android:01030009" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.wanda.easeschool.ui.StudentMessageAllActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.wanda.easeschool.ui.MineAppShareActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.wanda.easeschool.ui.MineStudentAppShareActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.wanda.easeschool.ui.IntegralStoreActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.wanda.easeschool.ui.IntegralRuleActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.wanda.easeschool.ui.MineQiandaoActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.wanda.easeschool.ui.MineFeedBackActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.wanda.easeschool.ui.MineProtocolActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.wanda.easeschool.ui.ClassErweimaActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.wanda.easeschool.ui.TeacherUrlActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.wanda.easeschool.ui.StudentUrlActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.wanda.easeschool.ui.ReplacePhoneActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="2" android:name="com.wanda.easeschool.ui.AccountSettingActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.wanda.easeschool.ui.StudentZuoYeBangActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.wanda.easeschool.ui.StudentListActivty" android:screenOrientation="1">
+</activity>
+<activity android:name="com.wanda.easeschool.ui.AboutAndUpdateActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.wanda.easeschool.ui.TeacherListActivty" android:screenOrientation="1">
+</activity>
+<activity android:name="com.wanda.easeschool.ui.ClassManageActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.wanda.easeschool.ui.MineSettingsActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="2" android:name="com.wanda.easeschool.ui.MainActivity" android:screenOrientation="1" android:theme="@7F08001E">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="your scheme">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.wanda.easeschool.ui.RegisterActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.wanda.easeschool.ui.UpdatePwdActivity" android:screenOrientation="1" android:theme="@7F08001E">
+</activity>
+<activity android:name="com.wanda.easeschool.ui.StartPageActivity" android:theme="@7F08001E">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:name="com.wanda.easeschool.ui.SpalshActivity" android:screenOrientation="1" android:theme="@7F08001E">
+</activity>
+<activity android:launchMode="2" android:name="com.wanda.easeschool.ui.LoginActivity" android:screenOrientation="1" android:theme="@7F08001E">
+</activity>
+<activity android:name="com.wanda.easeschool.ui.UserProfileActivity" android:screenOrientation="1" android:theme="@7F08001E">
+</activity>
+<activity android:launchMode="2" android:name="com.wanda.easeschool.chat.ui.ChatActivity" android:screenOrientation="1" android:theme="@7F08001E" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.wanda.easeschool.chat.ui.ChatContextMenuActivity" android:screenOrientation="1" android:theme="@7F0800C4">
+</activity>
+<activity android:name="com.wanda.easeschool.chat.ui.ChatEditGroupNameActivity" android:screenOrientation="1" android:theme="@7F08001E" android:windowSoftInputMode="0x00000004">
+</activity>
+<activity android:name="com.wanda.easeschool.chat.ui.ChatExitGroupDialogActivity" android:screenOrientation="1" android:theme="@7F0800C5">
+</activity>
+<activity android:name="com.wanda.easeschool.chat.ui.ChatForwardMessageActivity" android:screenOrientation="1" android:theme="@7F08001E" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:name="com.wanda.easeschool.chat.ui.ChatGroupDetailsActivity" android:screenOrientation="1" android:theme="@7F08001E">
+</activity>
+<activity android:name="com.wanda.easeschool.chat.ui.ChatGroupPickContactsActivity" android:screenOrientation="1" android:theme="@7F08001E" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:name="com.wanda.easeschool.chat.ui.ChatPickContactNoCheckboxActivity" android:screenOrientation="1" android:theme="@7F08001E" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:name="com.wanda.easeschool.chat.ui.ChatRecordActivity" android:screenOrientation="1" android:theme="@7F08001E" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.wanda.easeschool.chat.ui.ChatRecordVideoActivity" android:screenOrientation="1" android:theme="@7F08001E" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="cn.finalteam.galleryfinal.PhotoSelectActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.finalteam.galleryfinal.PhotoEditActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.finalteam.galleryfinal.PhotoPreviewActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.finalteam.galleryfinal.widget.crop.MonitoredActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.finalteam.galleryfinal.widget.crop.CropImageActivity" android:screenOrientation="1">
+</activity>
+<receiver android:name="com.wanda.easeschool.receiver.StartServiceReceiver">
+<intent-filter android:priority="1000">
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+<action android:name="android.intent.action.QUICKBOOT_POWERON">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</receiver>
+<receiver android:exported="true" android:name="com.hyphenate.chat.EMGCMBroadcastReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+<category android:name="com.hyphenate.chatuidemo">
+</category>
+</intent-filter>
+</receiver>
+<service android:exported="false" android:name="com.hyphenate.chat.EMGCMListenerService">
+</service>
+<receiver android:exported="false" android:name="com.wanda.easeschool.receiver.GCMPushBroadCast">
+<intent-filter>
+<action android:name="com.hyphenate.sdk.push">
+</action>
+<category android:name="com.hyphenate.chatuidemo">
+</category>
+</intent-filter>
+</receiver>
+<activity android:name="com.hyphenate.easeui.ui.EaseBaiduMapActivity" android:screenOrientation="1" android:theme="@7F08001E">
+</activity>
+<activity android:name="com.hyphenate.easeui.ui.EaseShowBigImageActivity" android:screenOrientation="1" android:theme="@7F08001E">
+</activity>
+<activity android:name="com.hyphenate.easeui.ui.EaseShowNormalFileActivity" android:screenOrientation="1" android:theme="@7F08001E">
+</activity>
+<activity android:name="com.hyphenate.easeui.ui.EaseShowVideoActivity" android:screenOrientation="1" android:theme="@7F08001E" android:windowSoftInputMode="0x00000003">
+</activity>
+<meta-data android:name="EASEMOB_APPKEY" android:value="wonder-bj#etong">
+</meta-data>
+<service android:exported="true" android:name="com.hyphenate.chat.EMChatService" android:permission="oem.permission.SENDMAIL">
+</service>
+<receiver android:name="com.hyphenate.chat.EMMonitorReceiver">
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_REMOVED">
+</action>
+<data android:scheme="package">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+<action android:name="android.intent.action.USER_PRESENT">
+</action>
+</intent-filter>
+</receiver>
+<service android:enabled="true" android:name="com.baidu.location.f" android:process=":remote">
+</service>
+<meta-data android:name="com.baidu.lbsapi.API_KEY" android:value="3ecea51f560650b1ed8a4b99808f52e8">
+</meta-data>
+<service android:name="com.umeng.update.net.DownloadingService" android:process=":DownloadingService">
+</service>
+<activity android:name="com.umeng.update.UpdateDialogActivity" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<meta-data android:name="UMENG_APPKEY" android:value="56aefe07e0f55a250d001a7c">
+</meta-data>
+<meta-data android:name="UMENG_CHANNEL" android:value="hyphenate">
+</meta-data>
+<meta-data android:name="com.openinstall.APP_KEY" android:value="your AppKey">
+</meta-data>
+
+、
+
+<meta-data android:name="xiaoetongstudent" android:value="baidu">
+</meta-data>
+</application>
+</manifest>

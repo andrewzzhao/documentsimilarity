@@ -1,0 +1,306 @@
+<?xml version="1.0" ?><manifest android:versionCode="110" android:versionName="1.1.0" package="mamikeji.liaowa" platformBuildVersionCode="25" platformBuildVersionName="7.1.1" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="17" android:targetSdkVersion="22">
+</uses-sdk>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-feature android:name="android.hardware.camera">
+</uses-feature>
+<uses-permission android:name="android.permission.RECEIVE_SMS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_SMS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<permission android:name="mamikeji.liaowa.permission.JPUSH_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="mamikeji.liaowa.permission.JPUSH_MESSAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_USER_PRESENT">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS">
+</uses-permission>
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS">
+</uses-permission>
+<uses-feature android:name="android.hardware.camera.autofocus">
+</uses-feature>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_LOGS">
+</uses-permission>
+<uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION">
+</uses-permission>
+<meta-data android:name="android.support.VERSION" android:value="25.3.1">
+</meta-data>
+<application android:allowBackup="true" android:hardwareAccelerated="true" android:icon="@7F030000" android:label="@7F08003A" android:name="com.stub.StubApp" android:qihoo="activity" android:supportsRtl="true" android:theme="@7F0A00AC">
+<service android:enabled="true" android:exported="false" android:name="cn.jpush.android.service.PushService">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.REGISTER">
+</action>
+<action android:name="cn.jpush.android.intent.REPORT">
+</action>
+<action android:name="cn.jpush.android.intent.PushService">
+</action>
+<action android:name="cn.jpush.android.intent.PUSH_TIME">
+</action>
+</intent-filter>
+</service>
+<service android:enabled="true" android:exported="true" android:name="cn.jpush.android.service.DaemonService">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.DaemonService">
+</action>
+<category android:name="mamikeji.liaowa">
+</category>
+</intent-filter>
+</service>
+<activity android:configChanges="0x000000A0" android:exported="false" android:name="cn.jpush.android.ui.PushActivity" android:theme="@android:01030006">
+<intent-filter>
+<action android:name="cn.jpush.android.ui.PushActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="mamikeji.liaowa">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000A0" android:exported="false" android:name="cn.jpush.android.ui.PopWinActivity" android:theme="@7F0A00DE">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="mamikeji.liaowa">
+</category>
+</intent-filter>
+</activity>
+<service android:enabled="true" android:exported="false" android:name="cn.jpush.android.service.DownloadService">
+</service>
+<meta-data android:name="JPUSH_CHANNEL" android:value="developer-default">
+</meta-data>
+<receiver android:enabled="true" android:exported="false" android:name="cn.jpush.android.service.PushReceiver">
+<intent-filter android:priority="1000">
+<action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY">
+</action>
+<category android:name="mamikeji.liaowa">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.USER_PRESENT">
+</action>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_ADDED">
+</action>
+<action android:name="android.intent.action.PACKAGE_REMOVED">
+</action>
+<data android:scheme="package">
+</data>
+</intent-filter>
+</receiver>
+<receiver android:exported="false" android:name="cn.jpush.android.service.AlarmReceiver">
+</receiver>
+<receiver android:enabled="true" android:exported="false" android:name="mamikeji.liaowa.receiver.MyReceiver">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.REGISTRATION">
+</action>
+<action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED">
+</action>
+<action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED">
+</action>
+<action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED">
+</action>
+<action android:name="cn.jpush.android.intent.CONNECTION">
+</action>
+<category android:name="mamikeji.liaowa">
+</category>
+</intent-filter>
+</receiver>
+<meta-data android:name="JPUSH_APPKEY" android:value="8f616d8067e352fea08f7340">
+</meta-data>
+<activity android:configChanges="0x000004A0" android:exported="true" android:name="mamikeji.liaowa.wxapi.WXEntryActivity" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<activity android:launchMode="2" android:name="com.umeng.qq.tencent.AuthActivity" android:noHistory="true">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="tencent100424468">
+</data>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.umeng.qq.tencent.AssistActivity" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<meta-data android:name="UMENG_APPKEY" android:value="59a63317734be45b420004c2">
+</meta-data>
+<meta-data android:name="UMENG_CHANNEL" android:value="vivo">
+</meta-data>
+<receiver android:name="mamikeji.liaowa.widget.clock.MyAlarmReceiver">
+</receiver>
+<receiver android:name="mamikeji.liaowa.widget.clock.SnoozeReceiver">
+</receiver>
+<activity android:launchMode="2" android:name="mamikeji.liaowa.widget.clock.activity.PlayAlarmActivity">
+</activity>
+<service android:name="mamikeji.liaowa.widget.clock.AlarmService">
+</service>
+<receiver android:name="mamikeji.liaowa.widget.clock.AlarmService$RebootReceiver">
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+</intent-filter>
+</receiver>
+<activity android:name="mamikeji.liaowa.ui.activity.FaceActivity" android:screenOrientation="1" android:theme="@7F0A00E2">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:name="mamikeji.liaowa.ui.activity.WelcomeActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="mamikeji.liaowa.ui.activity.LoginActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000080" android:name="mamikeji.liaowa.ui.activity.MainActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="mamikeji.liaowa.ui.activity.AddWaActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="mamikeji.liaowa.ui.activity.FistActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="mamikeji.liaowa.ui.activity.WaMsgActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="mamikeji.liaowa.ui.activity.right.setting.SetActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="mamikeji.liaowa.ui.activity.right.setting.Set_NewMSGActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="mamikeji.liaowa.ui.activity.right.setting.Set_AboutActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="mamikeji.liaowa.ui.activity.right.UserFeedbackActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="mamikeji.liaowa.ui.activity.right.UserMSGActicity" android:screenOrientation="1">
+</activity>
+<activity android:name="mamikeji.liaowa.ui.activity.right.UserCollectionActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="mamikeji.liaowa.ui.activity.clock.EditClockActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="mamikeji.liaowa.ui.activity.notice.UserNoticeActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="mamikeji.liaowa.ui.activity.diary.UserDiaryActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="mamikeji.liaowa.ui.activity.right.UserEventActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="mamikeji.liaowa.ui.activity.right.TimeDateActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="mamikeji.liaowa.ui.activity.right.update.UpdateUserNameActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="mamikeji.liaowa.ui.activity.right.update.UpdateUserJieshaoActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="mamikeji.liaowa.ui.activity.article.DayRecommendActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="2" android:name="mamikeji.liaowa.ui.activity.article.Article_ListActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="mamikeji.liaowa.ui.activity.circle.BabyMomCircleActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="mamikeji.liaowa.ui.activity.circle.CircleDetailsActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:name="mamikeji.liaowa.ui.activity.article.Article_DetailsActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:name="mamikeji.liaowa.ui.activity.right.BabyMSGActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="mamikeji.liaowa.ui.activity.right.UpdateWaMSGActiity" android:screenOrientation="1">
+</activity>
+<activity android:name="mamikeji.liaowa.ui.activity.right.EventDetailsActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="mamikeji.liaowa.ui.activity.circle.PublishCircleActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000480" android:name="mamikeji.liaowa.widget.selectorImage.MultiImageSelectorActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="mamikeji.liaowa.ui.activity.clock.ClockTypeActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="mamikeji.liaowa.ui.activity.clock.ClockListActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="mamikeji.liaowa.ui.activity.clock.ClockDateActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="mamikeji.liaowa.ui.activity.diary.EveryDayDiaryActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="mamikeji.liaowa.ui.activity.diary.PublishDiaryActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="mamikeji.liaowa.ui.activity.circle.PreviewCircleImgActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="mamikeji.liaowa.ui.activity.circle.PreviewViewPagerActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="2" android:name="mamikeji.liaowa.ui.activity.article.ArticleTypeActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="mamikeji.liaowa.ui.activity.right.update.UpdateUserCodeActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="mamikeji.liaowa.ui.activity.circle.CircleReportActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="mamikeji.liaowa.ui.activity.right.update.UpdateWaJieshaoActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="mamikeji.liaowa.ui.activity.right.update.UpdateWaNameActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="mamikeji.liaowa.ui.activity.circle.MyCircleActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="mamikeji.liaowa.ui.activity.right.setting.Set_WebActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="mamikeji.liaowa.ui.activity.notice.Notice_ReplyActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="mamikeji.liaowa.ui.activity.notice.Notice_EventActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="mamikeji.liaowa.ui.activity.notice.Notice_CommentActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="mamikeji.liaowa.ui.activity.notice.Notice_FabulousActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="mamikeji.liaowa.ui.activity.notice.Notice_SystemActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="2" android:name="mamikeji.liaowa.ui.activity.circle.FriendMSGActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="2" android:name="mamikeji.liaowa.ui.activity.right.UserFollowActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="mamikeji.liaowa.ui.activity.right.BabyDetailsActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="mamikeji.liaowa.ui.activity.AppErrorActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="mamikeji.liaowa.ui.activity.right.CodeActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="mamikeji.liaowa.widget.zxing.activity.CaptureActivity" android:screenOrientation="1" android:theme="@7F0A000B">
+</activity>
+<activity android:name="mamikeji.liaowa.ui.activity.right.UserIdentityActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="mamikeji.liaowa.ui.activity.forum.ForumMSGActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="mamikeji.liaowa.ui.activity.forum.MyForumActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="mamikeji.liaowa.ui.activity.forum.PublishForumActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="mamikeji.liaowa.ui.activity.circle.CircleTypeActivity" android:screenOrientation="1">
+</activity>
+</application>
+</manifest>

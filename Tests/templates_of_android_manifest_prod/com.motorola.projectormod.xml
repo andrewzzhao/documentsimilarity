@@ -1,0 +1,120 @@
+<?xml version="1.0" ?><manifest android:versionCode="200003" android:versionName="02.00.003" package="com.motorola.projectormod" platformBuildVersionCode="24" platformBuildVersionName="7.000000" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="23" android:targetSdkVersion="24">
+</uses-sdk>
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW">
+</uses-permission>
+<uses-permission android:name="com.motorola.permission.SYSTEM_WINDOW_ALL_USERS">
+</uses-permission>
+<uses-permission android:name="com.motorola.mod.permission.MOD_ACCESS_INFO">
+</uses-permission>
+<uses-permission android:name="com.motorola.mod.permission.RAW_PROTOCOL">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERACT_ACROSS_USERS">
+</uses-permission>
+<uses-permission android:name="android.permission.MANAGE_USERS">
+</uses-permission>
+<uses-permission android:name="com.motorola.permission.ACCESS_CHECKIN">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-feature android:name="com.motorola.hardware.mods">
+</uses-feature>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.MANAGE_ACTIVITY_STACKS">
+</uses-permission>
+<uses-permission android:name="android.permission.STOP_APP_SWITCHES">
+</uses-permission>
+<uses-permission android:name="com.motorola.mod.permission.MOD_INTERNAL">
+</uses-permission>
+<uses-permission android:name="com.motorola.actions.provider.permission.READ_MODES">
+</uses-permission>
+<uses-permission android:name="com.motorola.audiomonitor.permission.SETTINGS">
+</uses-permission>
+<application android:icon="@7F020058" android:label="@7F07001B" android:name="com.motorola.projectormod.app.ProjectorApp" android:supportsRtl="true" android:theme="@7F090038">
+<activity android:label="@7F07001B" android:launchMode="1" android:name="com.motorola.projectormod.app.ModuleActivity" android:resizeableActivity="false">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+</intent-filter>
+</activity>
+<activity android:excludeFromRecents="true" android:exported="false" android:label="@7F07001B" android:name="com.motorola.projectormod.app.PermissionDialogActivity" android:resizeableActivity="false" android:theme="@7F090091">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+</intent-filter>
+</activity>
+<activity android:excludeFromRecents="true" android:exported="false" android:label="@7F07001B" android:name="com.motorola.projectormod.app.ProjectorQSActivity" android:resizeableActivity="false" android:theme="@android:01030233">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004A0" android:excludeFromRecents="true" android:exported="true" android:label="@7F07004B" android:name="com.motorola.projectormod.intro.IntroActivity" android:resizeableActivity="false" android:screenOrientation="0" android:theme="@7F090082">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<action android:name="com.motorola.modservice.settings.SHOW_INTRO">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<service android:directBootAware="true" android:exported="false" android:name="com.motorola.projectormod.service.ModuleService">
+</service>
+<receiver android:directBootAware="true" android:name="com.motorola.projectormod.service.ModuleReceiver" android:permission="com.motorola.mod.permission.MOD_INTERNAL">
+<intent-filter>
+<action android:name="com.motorola.mod.action.MOD_ENUMERATION_DONE">
+</action>
+<action android:name="com.motorola.mod.action.MOD_ATTACH">
+</action>
+<action android:name="com.motorola.mod.action.MOD_DETACH">
+</action>
+<action android:name="com.motorola.mod.action.display.ON">
+</action>
+<action android:name="com.motorola.mod.action.display.OFF">
+</action>
+<action android:name="com.motorola.mod.action.turn.ON">
+</action>
+<action android:name="com.motorola.mod.action.turn.OFF">
+</action>
+<action android:name="com.motorola.mod.action.set_brightness">
+</action>
+<action android:name="com.motorola.mod.action.ACTION_SETTING">
+</action>
+<action android:name="com.motorola.mod.action.INTRO_ACTIVITY">
+</action>
+<action android:name="com.motorola.mod.action.ACTION_TEST_APP">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name="com.motorola.projectormod.service.UpdateReceiver">
+<intent-filter>
+<action android:name="android.intent.action.MY_PACKAGE_REPLACED">
+</action>
+</intent-filter>
+</receiver>
+<service android:directBootAware="true" android:exported="false" android:name="com.motorola.projectormod.checkin.CheckinService">
+</service>
+<service android:icon="@7F020060" android:label="@7F070049" android:name="com.motorola.projectormod.app.ProjectorQSTile" android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+<intent-filter>
+<action android:name="android.service.quicksettings.action.QS_TILE">
+</action>
+</intent-filter>
+</service>
+<activity android:excludeFromRecents="true" android:exported="false" android:name="com.motorola.projectormod.splash.SplashActivity">
+</activity>
+<activity android:excludeFromRecents="true" android:name="com.motorola.projectormod.app.SettingsLauncher" android:theme="@7F0900CC">
+<intent-filter>
+<action android:name="android.service.quicksettings.action.QS_TILE_PREFERENCES">
+</action>
+</intent-filter>
+</activity>
+<activity android:excludeFromRecents="true" android:exported="false" android:name="com.motorola.projectormod.intro.SetupVoiceActivity" android:screenOrientation="0">
+</activity>
+<meta-data android:name="com.motorola.mod.version" android:value="@7F0E0007">
+</meta-data>
+<meta-data android:name="android.max_aspect" android:value="2.100000">
+</meta-data>
+</application>
+</manifest>

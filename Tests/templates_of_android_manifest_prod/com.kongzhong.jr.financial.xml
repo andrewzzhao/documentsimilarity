@@ -1,0 +1,296 @@
+<?xml version="1.0" ?><manifest android:versionCode="36" android:versionName="1.5.8" package="com.kongzhong.jr.financial" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="16" android:targetSdkVersion="25">
+</uses-sdk>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<permission android:name="com.kongzhong.jr.financial.permission.JPUSH_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="com.kongzhong.jr.financial.permission.JPUSH_MESSAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_USER_PRESENT">
+</uses-permission>
+<uses-permission android:name="android.permission.USE_FINGERPRINT">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE">
+</uses-permission>
+<permission android:name="com.kongzhong.jr.financial.permission.C2D_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="com.kongzhong.jr.financial.permission.C2D_MESSAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.MANAGE_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_NETWORK_STATE">
+</uses-permission>
+<meta-data android:name="android.support.VERSION" android:value="25.3.1">
+</meta-data>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-permission android:name="android.permission.RECORD_AUDIO">
+</uses-permission>
+<application android:allowBackup="true" android:hardwareAccelerated="true" android:icon="@7F0C0007" android:label="@7F0E002E" android:name="com.kongzhong.jr.financial.App" android:supportsRtl="true" android:theme="@7F0F0009">
+<activity android:launchMode="1" android:name="com.kongzhong.jr.financial.app.main.MainActivity" android:windowSoftInputMode="0x00000030">
+</activity>
+<activity android:name="com.kongzhong.jr.financial.app.webpage.WebViewActivity">
+</activity>
+<activity android:name="com.kongzhong.jr.financial.app.StartUpActivity" android:theme="@7F0F000B">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<meta-data android:name="io.fabric.ApiKey" android:value="a2305ab295c3762ef8c882232b4387230698defc">
+</meta-data>
+<service android:enabled="true" android:exported="false" android:name="cn.jpush.android.service.PushService" android:process=":pushcore">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.REGISTER">
+</action>
+<action android:name="cn.jpush.android.intent.REPORT">
+</action>
+<action android:name="cn.jpush.android.intent.PushService">
+</action>
+<action android:name="cn.jpush.android.intent.PUSH_TIME">
+</action>
+</intent-filter>
+</service>
+<provider android:authorities="com.kongzhong.jr.financial.DataProvider" android:exported="false" android:name="cn.jpush.android.service.DataProvider">
+</provider>
+<service android:enabled="true" android:exported="true" android:name="cn.jpush.android.service.DaemonService">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.DaemonService">
+</action>
+<category android:name="com.kongzhong.jr.financial">
+</category>
+</intent-filter>
+</service>
+<provider android:authorities="com.kongzhong.jr.financial.DownloadProvider" android:exported="true" android:name="cn.jpush.android.service.DownloadProvider">
+</provider>
+<receiver android:enabled="true" android:exported="false" android:name="cn.jpush.android.service.PushReceiver">
+<intent-filter android:priority="1000">
+<action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY">
+</action>
+<category android:name="com.kongzhong.jr.financial">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.USER_PRESENT">
+</action>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_ADDED">
+</action>
+<action android:name="android.intent.action.PACKAGE_REMOVED">
+</action>
+<data android:scheme="package">
+</data>
+</intent-filter>
+</receiver>
+<activity android:configChanges="0x000000A0" android:exported="false" android:name="cn.jpush.android.ui.PushActivity" android:theme="@android:01030006">
+<intent-filter>
+<action android:name="cn.jpush.android.ui.PushActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="com.kongzhong.jr.financial">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000A0" android:exported="false" android:name="cn.jpush.android.ui.PopWinActivity" android:theme="@7F0F00C6">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="com.kongzhong.jr.financial">
+</category>
+</intent-filter>
+</activity>
+<service android:enabled="true" android:exported="false" android:name="cn.jpush.android.service.DownloadService">
+</service>
+<receiver android:exported="false" android:name="cn.jpush.android.service.AlarmReceiver">
+</receiver>
+<receiver android:enabled="true" android:name="com.kongzhong.jr.financial.app.JpushReceiver">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.REGISTRATION">
+</action>
+<action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED">
+</action>
+<action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED">
+</action>
+<action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED">
+</action>
+<action android:name="cn.jpush.android.intent.CONNECTION">
+</action>
+<category android:name="com.kongzhong.jr.financial">
+</category>
+</intent-filter>
+</receiver>
+<meta-data android:name="JPUSH_CHANNEL" android:value="default">
+</meta-data>
+<meta-data android:name="JPUSH_APPKEY" android:value="7d95fb3220db874a275e3da4">
+</meta-data>
+<service android:name="com.talkingdata.sdk.TDAntiCheatingService">
+<intent-filter>
+<action android:name="com.talkingdata.sdk.TDAntiCheatingService">
+</action>
+</intent-filter>
+</service>
+<activity android:name="com.kongzhong.jr.financial.app.NavigationActivity">
+</activity>
+<activity android:exported="true" android:launchMode="1" android:name="com.kongzhong.jr.financial.app.KZLoginActivity" android:theme="@7F0F01AD">
+</activity>
+<activity android:exported="true" android:name="com.kongzhong.jr.financial.app.SettingActivity">
+</activity>
+<activity android:name="com.kongzhong.jr.financial.patternlock.BasePatternActivity">
+</activity>
+<activity android:exported="true" android:name="com.kongzhong.jr.financial.patternlock.SetPatternActivity">
+</activity>
+<activity android:exported="true" android:name="com.kongzhong.jr.financial.patternlock.ConfirmPatternActivity">
+</activity>
+<activity android:name="com.kongzhong.jr.financial.fingerprint.ConfirmFingerprintActivity">
+</activity>
+<activity android:exported="true" android:name="com.kongzhong.jr.financial.login.LoginActivity" android:windowSoftInputMode="0x00000023">
+</activity>
+<activity android:exported="true" android:name="com.kongzhong.jr.financial.login.CodeActivity">
+</activity>
+<activity android:exported="true" android:name="com.kongzhong.jr.financial.login.PwdSetActivity">
+</activity>
+<activity android:exported="true" android:name="com.kongzhong.jr.financial.app.mine.RepaymentCalendarActivity">
+</activity>
+<activity android:exported="true" android:name="com.kongzhong.jr.financial.debug.TestViewActivity">
+</activity>
+<activity android:exported="true" android:name="com.kongzhong.jr.financial.app.mine.MsgActivity">
+</activity>
+<activity android:exported="true" android:name="com.kongzhong.jr.financial.login.AdvertisingActivity">
+</activity>
+<activity android:exported="true" android:name="com.kongzhong.jr.financial.app.invest.ProjectDetailActivity">
+</activity>
+<activity android:name="com.kongzhong.jr.financial.app.invest.CalculatorActivity" android:theme="@7F0F01B2" android:windowSoftInputMode="0x00000014">
+</activity>
+<activity android:exported="true" android:name="com.kongzhong.jr.financial.app.invest.InvestActivity">
+</activity>
+<activity android:exported="true" android:name="com.kongzhong.jr.financial.app.invest.BigeInvestListActivity">
+</activity>
+<activity android:name="com.kongzhong.jr.financial.app.mine.MyInvestListActivity">
+</activity>
+<activity android:name="com.kongzhong.jr.financial.login.RegisterActivity" android:windowSoftInputMode="0x00000023">
+</activity>
+<activity android:name="com.kongzhong.jr.financial.app.invest.ProjectRollDetailActivity">
+</activity>
+<activity android:name="com.kongzhong.jr.financial.app.invest.InvestRollActivity">
+</activity>
+<receiver android:enabled="true" android:name="com.google.android.gms.analytics.AnalyticsReceiver">
+<intent-filter>
+<action android:name="com.google.android.gms.analytics.ANALYTICS_DISPATCH">
+</action>
+</intent-filter>
+</receiver>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.analytics.AnalyticsService">
+</service>
+<activity android:name="com.kongzhong.jrlogon.activity.KZSDKLogonActivity" android:screenOrientation="1" android:theme="@7F0F0000">
+</activity>
+<activity android:name="com.kongzhong.jrlogon.activity.KZSDKRegisterActivity" android:screenOrientation="1" android:theme="@7F0F0000">
+</activity>
+<activity android:name="com.kongzhong.jrlogon.activity.WebViewActivity" android:screenOrientation="1" android:theme="@7F0F0000">
+</activity>
+<activity android:exported="true" android:label="@7F0E0107" android:name="com.kongzhong.jr.base.ViewActivity">
+</activity>
+<activity android:name="com.alo7.android.update.UpdateDialogActivity" android:theme="@android:01030010">
+</activity>
+<provider android:authorities="com.alo7.android.update.fileprovider" android:exported="false" android:grantUriPermissions="true" android:name="android.support.v4.content.FileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F110002">
+</meta-data>
+</provider>
+<receiver android:enabled="true" android:name="com.google.android.gms.measurement.AppMeasurementReceiver">
+<intent-filter>
+<action android:name="com.google.android.gms.measurement.UPLOAD">
+</action>
+</intent-filter>
+</receiver>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementService">
+</service>
+<activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:01030010">
+</activity>
+<receiver android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+<action android:name="com.google.android.c2dm.intent.REGISTRATION">
+</action>
+<category android:name="com.kongzhong.jr.financial">
+</category>
+</intent-filter>
+</receiver>
+<receiver android:exported="false" android:name="com.google.firebase.iid.FirebaseInstanceIdInternalReceiver">
+</receiver>
+<service android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdService">
+<intent-filter android:priority="-500">
+<action android:name="com.google.firebase.INSTANCE_ID_EVENT">
+</action>
+</intent-filter>
+</service>
+<provider android:authorities="com.kongzhong.jr.financial.firebaseinitprovider" android:exported="false" android:initOrder="100" android:name="com.google.firebase.provider.FirebaseInitProvider">
+</provider>
+<meta-data android:name="com.google.android.gms.version" android:value="@7F0A0007">
+</meta-data>
+<activity android:configChanges="0x000004A0" android:exported="true" android:name="com.kongzhong.jr.wxapi.WXEntryActivity" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.mob.tools.MobUIShell" android:screenOrientation="1" android:theme="@android:01030010" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:launchMode="2" android:name="cn.sharesdk.tencent.qq.ReceiveActivity" android:noHistory="true">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="tencent1106017355">
+</data>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000A0" android:launchMode="1" android:name="com.alibaba.sdk.android.feedback.windvane.CustomHybirdActivity" android:screenOrientation="1" android:theme="@7F0F01A9" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:configChanges="0x000000A0" android:launchMode="1" android:name="com.alibaba.sdk.android.feedback.impl.ErrorPageActivity" android:screenOrientation="1" android:theme="@7F0F01A9">
+</activity>
+<service android:name="com.alibaba.mtl.appmonitor.AppMonitorService">
+</service>
+<provider android:authorities="com.kongzhong.jr.financial.alifb_fileprovider" android:exported="false" android:grantUriPermissions="true" android:name="com.alibaba.sdk.android.feedback.util.FBFileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F110000">
+</meta-data>
+</provider>
+</application>
+</manifest>

@@ -1,0 +1,678 @@
+<?xml version="1.0" ?><manifest android:compileSdkVersion="28" android:compileSdkVersionCodename="9" android:versionCode="66" android:versionName="2.2" package="com.af.shuga" platformBuildVersionCode="28" platformBuildVersionName="9" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="21" android:targetSdkVersion="28">
+</uses-sdk>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-permission android:name="android.permission.RECORD_AUDIO">
+</uses-permission>
+<uses-permission android:name="android.permission.BLUETOOTH">
+</uses-permission>
+<uses-permission android:name="android.permission.BLUETOOTH_ADMIN">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_CONFIGURATION">
+</uses-permission>
+<uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.DISABLE_KEYGUARD">
+</uses-permission>
+<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_CONTACTS">
+</uses-permission>
+<uses-feature android:name="android.hardware.camera">
+</uses-feature>
+<uses-feature android:name="android.hardware.camera.autofocus">
+</uses-feature>
+<uses-permission android:name="android.permission.BROADCAST_STICKY">
+</uses-permission>
+<uses-feature android:glEsVersion="0x00020000" android:required="true">
+</uses-feature>
+<uses-permission android:name="android.permission.FOREGROUND_SERVICE">
+</uses-permission>
+<uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES">
+</uses-permission>
+<uses-permission android:name="com.google.android.providers.gsf.permission.WRITE_GSERVICES">
+</uses-permission>
+<uses-permission android:name="com.google.android.providers.gsf.permission.MANAGE_USERS">
+</uses-permission>
+<permission android:name="com.af.shuga.permission.RECEIVE_MSG" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="com.af.shuga.permission.RECEIVE_MSG">
+</uses-permission>
+<uses-permission android:name="com.meizu.c2dm.permission.RECEIVE">
+</uses-permission>
+<permission android:name="com.af.shuga.permission.C2D_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="com.af.shuga.permission.C2D_MESSAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_MEDIA_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-permission android:name="android.permission.REORDER_TASKS">
+</uses-permission>
+<uses-permission android:name="com.huawei.android.launcher.permission.CHANGE_BADGE">
+</uses-permission>
+<uses-permission android:name="com.huawei.android.launcher.permission.READ_SETTINGS">
+</uses-permission>
+<uses-permission android:name="com.huawei.android.launcher.permission.WRITE_SETTINGS">
+</uses-permission>
+<meta-data android:name="tran_http_version" android:value="1.0.53.01">
+</meta-data>
+<meta-data android:name="tran_athena_version" android:value="1.2.19.10">
+</meta-data>
+<meta-data android:name="tran_coreutil_version" android:value="1.0.61.03">
+</meta-data>
+<meta-data android:name="tran_json_version" android:value="1.0.5.01">
+</meta-data>
+<uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE">
+</uses-permission>
+<application android:allowBackup="true" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:icon="@7F0E00D0" android:label="@7F1100D8" android:name="com.af.shuga.SugaApplication" android:supportsRtl="true" android:theme="@7F12003F" android:usesCleartextTraffic="true">
+<meta-data android:name="android.webkit.WebView.EnableSafeBrowsing" android:value="true">
+</meta-data>
+<service android:name="com.netease.nimlib.service.NimService" android:process=":core">
+</service>
+<service android:name="com.netease.nimlib.service.NimService$Aux" android:process=":core">
+</service>
+<service android:exported="true" android:name="com.netease.nimlib.job.NIMJobService" android:permission="android.permission.BIND_JOB_SERVICE" android:process=":core">
+</service>
+<receiver android:exported="false" android:name="com.netease.nimlib.service.NimReceiver" android:process=":core">
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+</receiver>
+<service android:name="com.netease.nimlib.service.ResponseService">
+</service>
+<provider android:authorities="com.af.shuga.ipc.provider" android:exported="false" android:name="com.netease.nimlib.ipc.NIMContentProvider" android:process=":core">
+</provider>
+<service android:name="com.netease.nimlib.mixpush.fcm.FCMTokenService">
+<intent-filter>
+<action android:name="com.google.firebase.INSTANCE_ID_EVENT">
+</action>
+</intent-filter>
+</service>
+<meta-data android:name="com.google.firebase.messaging.default_notification_icon" android:resource="@7F0801D0">
+</meta-data>
+<meta-data android:name="com.google.firebase.messaging.default_notification_color" android:resource="@7F060189">
+</meta-data>
+<meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@7F1101BF">
+</meta-data>
+<activity android:configChanges="0x000005B0" android:label="@7F1100D8" android:name="com.facebook.FacebookActivity" android:theme="@7F12031C">
+</activity>
+<activity android:exported="true" android:name="com.facebook.CustomTabActivity">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="@7F1101C1">
+</data>
+</intent-filter>
+</activity>
+<meta-data android:name="com.facebook.accountkit.ApplicationName" android:value="@7F1100D8">
+</meta-data>
+<meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@7F1101BF">
+</meta-data>
+<meta-data android:name="com.facebook.accountkit.ClientToken" android:value="@7F110000">
+</meta-data>
+<activity android:label="@7F11011C" android:launchMode="1" android:name="com.facebook.accountkit.ui.AccountKitActivity" android:theme="@7F1201DD" android:windowSoftInputMode="0x00000010">
+</activity>
+<meta-data android:name="io.branch.sdk.BranchKey" android:value="key_live_lnNPu2yUAFpR335bfgSv8ecautoMVwM8">
+</meta-data>
+<meta-data android:name="io.branch.sdk.BranchKey.test" android:value="key_test_hlxrWC5Zx16DkYmWu4AHiimdqugRYMr">
+</meta-data>
+<meta-data android:name="io.branch.sdk.TestMode" android:value="false">
+</meta-data>
+<activity android:configChanges="0x000000A0" android:name="com.af.shuga.SplashActivity" android:screenOrientation="1" android:theme="@7F120042">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+<intent-filter>
+<data android:scheme="growing.2c6075f816bd3672">
+</data>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+<intent-filter>
+<data android:host="open" android:scheme="scheme://com.af.shuga">
+</data>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.af.shuga.login.LocationActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.af.shuga.home.HomeActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.af.shuga.home.HomeActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000A0" android:launchMode="1" android:name="com.af.shuga.login.view.LoginActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.af.shuga.login.view.FeedBackActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.af.shuga.login.view.ComplainActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.af.shuga.login.view.CreateProfileActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.af.shuga.conversation.view.PhoneContactActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.af.shuga.near.view.MatchGoingActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.af.shuga.near.view.ConnectingActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.af.shuga.room.view.CreatRoomActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.af.shuga.room.view.RoomDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.af.shuga.room.view.schedule.ActivityScheduleActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.af.shuga.room.view.quiz.QuizActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.af.shuga.room.view.quiz.QuizLeaderBoardActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.af.shuga.personal.view.PersonalInfoActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.af.shuga.multistory.view.StoryInfoActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.af.shuga.multistory.view.StoryEditActivity" android:screenOrientation="1" android:theme="@7F120041" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:configChanges="0x000000A0" android:launchMode="2" android:name="com.af.shuga.personal.view.PersonalSettingActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.af.shuga.personal.view.PersonalIntegralActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.af.shuga.personal.view.RewardRegisteredUserActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.af.shuga.personal.view.RewardRegisteredUserForNigeriaActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.af.shuga.personal.view.QRCodeActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.af.shuga.personal.view.BlackListActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.af.shuga.conversation.view.SeachAddActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.af.shuga.personal.view.PersonalEditActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.af.shuga.bottle.BottleListActivity" android:screenOrientation="1" android:theme="@7F120128">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.af.shuga.conversation.view.FollowerAndViewActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.af.shuga.multistory.notify.NotifyStoryViewActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.af.shuga.room.view.SearchActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.af.shuga.room.view.MembersActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.af.shuga.bottle.BottleActivity" android:screenOrientation="1" android:theme="@7F120128">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.af.shuga.bottle.ShowBottleActivity" android:theme="@7F12012F">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.af.shuga.bottle.CreateBottleActivity" android:screenOrientation="1" android:theme="@7F120128">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.af.shuga.login.view.CustomerActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.af.shuga.cooper.view.NewsListActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:hardwareAccelerated="true" android:name="com.af.shuga.cooper.view.NewsWebViewActivity" android:theme="@7F120128">
+</activity>
+<activity android:configChanges="0x000000A0" android:excludeFromRecents="true" android:exported="true" android:launchMode="3" android:name="com.af.shuga.cooper.view.DirectShareHandlerActivity" android:screenOrientation="1" android:taskAffinity="com.af.shuga.cooper.view.DirectShareHandlerActivity">
+<meta-data android:name="default-state" android:value="false">
+</meta-data>
+<intent-filter android:label="Chat">
+<action android:name="android.intent.action.SEND">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.SEND_MULTIPLE">
+</action>
+<data android:mimeType="image/*">
+</data>
+<data android:mimeType="video/*">
+</data>
+</intent-filter>
+<meta-data android:name="android.service.chooser.chooser_target_service" android:value="androidx.sharetarget.ChooserTargetServiceCompat">
+</meta-data>
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.af.shuga.conversation.view.MineGroupListActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.af.shuga.login.view.PhoneLoginActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000005">
+</activity>
+<activity android:name="com.af.shuga.login.NetIssueActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000005">
+</activity>
+<activity android:name="com.af.shuga.login.view.PhoneVerifyActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.af.shuga.personal.view.account.AccountFeedBackActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.af.shuga.personal.view.account.AccountDeleteActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.af.shuga.personal.view.account.AccountAttentionActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.af.shuga.personal.view.account.AccountMenuActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.af.shuga.personal.view.account.AccountStepHintActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.af.shuga.near.view.InviteFriendsActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.af.shuga.near.view.InviteFriendsForNigeriaActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.af.shuga.near.view.WithdrawActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.af.shuga.near.view.WithdrawForNigeriaActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.af.shuga.near.view.InviteFriendsHistoryActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.af.shuga.near.view.InviteFriendsHistoryForNigeriaActivity" android:screenOrientation="1">
+</activity>
+<receiver android:exported="true" android:name="com.netease.nimlib.mixpush.mi.MiPushReceiver">
+<intent-filter android:priority="0x7FFFFFFF">
+<action android:name="com.xiaomi.mipush.RECEIVE_MESSAGE">
+</action>
+<action android:name="com.xiaomi.mipush.MESSAGE_ARRIVED">
+</action>
+<action android:name="com.xiaomi.mipush.ERROR">
+</action>
+</intent-filter>
+</receiver>
+<activity android:configChanges="0x000000A0" android:name="com.af.shuga.personal.view.exchange.ExchangePreviewActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.af.shuga.personal.view.exchange.ExchangePreviewForNigeriaActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.af.shuga.personal.view.exchange.ExchangeRecordActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.af.shuga.personal.view.exchange.ExchangeRecordForNigeriaActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.af.shuga.personal.view.exchange.RewardRegisterPreviewActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.af.shuga.personal.view.exchange.RewardRegisterPreviewForNigeriaActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:launchMode="1" android:name="com.af.shuga.storys.view.StoryCreateEditForMe" android:screenOrientation="1" android:windowSoftInputMode="0x00000010">
+<intent-filter>
+<action android:name="com.af.shuga.story.editview">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000A0" android:excludeFromRecents="true" android:exported="true" android:launchMode="2" android:name="com.af.shuga.storys.view.StoryCreatePreviewForMe" android:screenOrientation="1" android:taskAffinity="com.af.shuga.storys.view.StoryCreatePreviewForMe">
+<meta-data android:name="enable-stage" android:value="enable-cold-pretos">
+</meta-data>
+<intent-filter>
+<action android:name="com.af.shuga.story.preview">
+</action>
+</intent-filter>
+<intent-filter android:label="Stories">
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.SEND">
+</action>
+<data android:mimeType="image/*">
+</data>
+<data android:mimeType="video/*">
+</data>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.af.shuga.personal.view.StoryPreviewActivity" android:screenOrientation="1">
+</activity>
+<service android:name="com.af.shuga.push.MyFirebaseMessagingService">
+<intent-filter>
+<action android:name="com.google.firebase.MESSAGING_EVENT">
+</action>
+</intent-filter>
+</service>
+<activity android:launchMode="2" android:name="com.af.shuga.deeplink.DeepLinkActivity" android:theme="@android:01030055">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="dl" android:scheme="mochat">
+</data>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.af.shuga.room.view.AnswerRoomActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:launchMode="2" android:name="com.af.shuga.audioroom.activity.AudienceActivity" android:screenOrientation="1" android:theme="@7F120134" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:configChanges="0x000000A0" android:launchMode="2" android:name="com.af.shuga.audioroom.activity.AudioLiveActivity" android:screenOrientation="1" android:theme="@7F120134" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.af.shuga.audioroom.activity.AudioRoomCreateActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.af.shuga.audioroom.activity.LiveEndActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.af.shuga.audioroom.activity.EndForAudienceActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.af.shuga.audioroom.activity.AudioRoomEidtActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.af.shuga.audioroom.activity.InviteMemberToMicActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.af.shuga.audioroom.activity.AudioRoomListActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.af.shuga.audioroom.activity.AudioRoomReportActivity" android:screenOrientation="1">
+</activity>
+<activity android:excludeFromRecents="true" android:exported="true" android:name="com.transsion.pushui.activity.TransparentActivity" android:noHistory="true" android:taskAffinity="com.transsion.pushui" android:theme="@android:01030010">
+</activity>
+<activity android:name="com.transsion.pushui.activity.PushActivity">
+<intent-filter>
+<action android:name="tpush.intent.action.TPUSH">
+</action>
+</intent-filter>
+</activity>
+<receiver android:name="com.transsion.push.broadcast.FCMMessageReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+<intent-filter android:priority="999">
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+<action android:name="com.google.android.c2dm.intent.REGISTRATION">
+</action>
+<category android:name="com.af.shuga">
+</category>
+</intent-filter>
+</receiver>
+<receiver android:name="com.transsion.push.broadcast.TimerBroadcastReceiver">
+<intent-filter>
+<action android:name="tpush.intent.action.PUSH_ALARM">
+</action>
+</intent-filter>
+</receiver>
+<service android:exported="true" android:name="com.transsion.push.service.JobHandleService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<service android:exported="true" android:name="com.transsion.push.service.PushJobIntentService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<service android:name="com.transsion.push.service.PushIntentService">
+</service>
+<meta-data android:name="tran_push_version" android:value="1.1.3.04">
+</meta-data>
+<meta-data android:name="tpush_app_id" android:value="82a5fa57076d42ecb8c1eebfbf5bead4">
+</meta-data>
+<meta-data android:name="tpush_app_key" android:value="1ef14446e44a48b9b0508d39e1cef0bd">
+</meta-data>
+<meta-data android:name="com.netease.nim.uikit.support.glide.NIMGlideModule" android:value="GlideModule">
+</meta-data>
+<activity android:configChanges="0x000000A0" android:name="com.netease.nim.uikit.business.session.activity.P2PMessageActivity" android:screenOrientation="1" android:theme="@7F120134" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.netease.nim.uikit.business.session.activity.TeamMessageActivity" android:screenOrientation="1" android:theme="@7F120134" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.netease.nim.uikit.business.team.activity.NormalTeamInfoActivity" android:screenOrientation="1" android:theme="@7F120041" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.netease.nim.uikit.business.team.activity.AdvancedTeamInfoActivity" android:screenOrientation="1" android:theme="@7F120041" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.netease.nim.uikit.business.team.activity.AdvancedTeamMemberActivity" android:screenOrientation="1" android:theme="@7F120041" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.netease.nim.uikit.business.team.activity.AdvancedTeamAnnounceActivity" android:screenOrientation="1" android:theme="@7F120041" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.netease.nim.uikit.business.team.activity.AdvancedTeamMemberInfoActivity" android:screenOrientation="1" android:theme="@7F120041" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.netease.nim.uikit.business.team.activity.AdvancedTeamNicknameActivity" android:screenOrientation="1" android:theme="@7F120041" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.netease.nim.uikit.business.team.activity.AdvancedTeamCreateAnnounceActivity" android:screenOrientation="1" android:theme="@7F120041" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.netease.nim.uikit.business.team.activity.TeamPropertySettingActivity" android:screenOrientation="1" android:theme="@7F120041" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:configChanges="0x000000A0" android:label="@7F110193" android:name="com.netease.nim.uikit.business.contact.selector.activity.ContactSelectActivity" android:screenOrientation="1" android:theme="@7F120041" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name="com.netease.nim.uikit.business.ait.selector.AitContactSelectorActivity" android:screenOrientation="1" android:theme="@7F120041">
+</activity>
+<activity android:name="com.netease.nim.uikit.common.media.picker.activity.PickImageActivity" android:screenOrientation="1" android:theme="@7F120041">
+</activity>
+<activity android:name="com.netease.nim.uikit.common.media.picker.activity.CropImageActivity" android:screenOrientation="1" android:theme="@7F120041">
+</activity>
+<activity android:name="com.netease.nim.uikit.common.media.picker.activity.PickerAlbumActivity" android:screenOrientation="1" android:theme="@7F120041">
+</activity>
+<activity android:name="com.netease.nim.uikit.common.media.picker.activity.PickerAlbumPreviewActivity" android:screenOrientation="1" android:theme="@7F120041">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.netease.nim.uikit.common.media.picker.activity.PreviewImageFromLocalActivity" android:screenOrientation="1" android:theme="@7F120041" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:configChanges="0x000000A0" android:label="@7F1101F0" android:name="com.netease.nim.uikit.common.media.picker.activity.PreviewImageFromCameraActivity" android:screenOrientation="1" android:theme="@7F120041" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.netease.nim.uikit.business.session.activity.CaptureVideoActivity" android:screenOrientation="1" android:theme="@7F120041" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F1103EC" android:name="com.netease.nim.uikit.business.session.activity.WatchVideoActivity" android:theme="@7F12012E">
+</activity>
+<activity android:configChanges="0x00000020" android:name="com.netease.nim.uikit.business.session.activity.WatchMessagePictureActivity" android:theme="@7F12012E">
+</activity>
+<activity android:configChanges="0x00000020" android:name="com.netease.nim.uikit.business.session.activity.WatchPicAndVideoMenuActivity" android:theme="@7F12012E">
+</activity>
+<provider android:authorities="com.af.shuga.generic.file.provider" android:exported="false" android:grantUriPermissions="true" android:name="com.netease.nim.uikit.common.media.model.GenericFileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F140006">
+</meta-data>
+</provider>
+<activity android:configChanges="0x00000480" android:name="com.netease.nim.uikit.common.media.imagepicker.ui.ImageGridActivity" android:screenOrientation="1" android:theme="@7F120137">
+</activity>
+<activity android:configChanges="0x00000480" android:hardwareAccelerated="false" android:name="com.netease.nim.uikit.common.media.imagepicker.ui.ImageCropActivity" android:screenOrientation="1" android:theme="@7F120136">
+</activity>
+<activity android:configChanges="0x00000480" android:name="com.netease.nim.uikit.common.media.imagepicker.ui.ImagePreviewActivity" android:theme="@7F120136">
+</activity>
+<activity android:configChanges="0x00000480" android:name="com.netease.nim.uikit.common.media.imagepicker.ui.ImagePreviewRetakeActivity" android:theme="@7F120136">
+</activity>
+<activity android:configChanges="0x00000480" android:name="com.netease.nim.uikit.common.media.imagepicker.ui.ImageTakeActivity" android:screenOrientation="1" android:theme="@7F120136">
+</activity>
+<activity android:configChanges="0x00000480" android:name="com.netease.nim.uikit.common.media.imagepicker.video.GLVideoActivity" android:screenOrientation="1" android:theme="@7F120260">
+</activity>
+<activity android:configChanges="0x00000480" android:name="com.netease.nim.uikit.common.media.imagepicker.video.GLVideoConfirmActivity" android:screenOrientation="1" android:theme="@7F120260">
+</activity>
+<activity android:name="com.netease.nim.uikit.common.media.imagepicker.camera.CaptureActivity" android:screenOrientation="1" android:theme="@7F1201F2">
+</activity>
+<activity android:name="com.netease.nim.uikit.common.media.imagepicker.ui.snap.WatchSnapChatPictureActivity" android:screenOrientation="1" android:theme="@7F120041">
+</activity>
+<activity android:launchMode="3" android:name="com.netease.nim.avchatkit.activity.AVChatActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:launchMode="3" android:name="com.netease.nim.avchatkit.teamavchat.activity.TeamAVChatActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.netease.nim.avchatkit.activity.AVChatSettingsActivity" android:screenOrientation="1">
+</activity>
+<receiver android:name="com.netease.nim.avchatkit.receiver.IncomingCallReceiver">
+<intent-filter>
+<action android:name="android.intent.action.PHONE_STATE">
+</action>
+</intent-filter>
+</receiver>
+<activity android:name="com.xys.libzxing.zxing.activity.CaptureActivity" android:screenOrientation="1" android:theme="@7F120128">
+</activity>
+<meta-data android:name="com.rahuljanagouda.statusstories.glideProgressBar.OkHttpProgressGlideModule" android:value="GlideModule">
+</meta-data>
+<activity android:configChanges="0x00000480" android:name="com.yanzhenjie.album.app.album.AlbumActivity" android:theme="@7F120025" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x00000480" android:name="com.yanzhenjie.album.app.album.GalleryActivity" android:theme="@7F120025" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x00000480" android:name="com.yanzhenjie.album.app.album.NullActivity" android:theme="@7F120025" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x00000480" android:name="com.yanzhenjie.album.app.gallery.GalleryActivity" android:theme="@7F120025" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x00000480" android:name="com.yanzhenjie.album.app.gallery.GalleryAlbumActivity" android:theme="@7F120025" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x00000480" android:name="com.yanzhenjie.album.app.camera.CameraActivity" android:theme="@7F120026" android:windowSoftInputMode="0x00000003">
+</activity>
+<provider android:authorities="com.af.shuga.app.file.provider" android:exported="false" android:grantUriPermissions="true" android:multiprocess="true" android:name="com.yanzhenjie.album.provider.CameraFileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F140000">
+</meta-data>
+</provider>
+<activity android:name="com.luck.compress.lib.PictureEditAudioActivity">
+</activity>
+<activity android:name="com.luck.compress.lib.CameraActivity" android:screenOrientation="1">
+</activity>
+<meta-data android:name="design_width_in_dp" android:value="360">
+</meta-data>
+<meta-data android:name="design_height_in_dp" android:value="750">
+</meta-data>
+<activity android:name="com.shuga.baselib.base.SimpleWebViewActivity">
+</activity>
+<provider android:authorities="com.af.shuga.provider" android:exported="false" android:grantUriPermissions="true" android:name="androidx.core.content.FileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F140002">
+</meta-data>
+</provider>
+<activity android:configChanges="0x000004A0" android:launchMode="0" android:name="com.shuga.baselib.widget.floatwindow.FloatActivity" android:theme="@7F120334" android:windowSoftInputMode="0x00000003">
+</activity>
+<service android:enabled="true" android:exported="false" android:name="net.gotev.uploadservice.UploadService">
+</service>
+<activity android:exported="true" android:name="com.facebook.accountkit.ui.AccountKitEmailRedirectActivity" android:noHistory="true">
+</activity>
+<provider android:authorities="com.af.shuga.AccountKitInitialization" android:exported="false" android:name="com.facebook.accountkit.internal.AccountKitInitProvider">
+</provider>
+<activity android:excludeFromRecents="true" android:exported="false" android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity" android:theme="@android:01030010">
+</activity>
+<service android:exported="true" android:name="com.google.android.gms.auth.api.signin.RevocationBoundService" android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION">
+</service>
+<service android:exported="false" android:name="com.google.firebase.messaging.FirebaseMessagingService">
+<intent-filter android:priority="-500">
+<action android:name="com.google.firebase.MESSAGING_EVENT">
+</action>
+</intent-filter>
+</service>
+<service android:exported="false" android:name="com.google.firebase.components.ComponentDiscoveryService">
+<meta-data android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar" android:value="com.google.firebase.components.ComponentRegistrar">
+</meta-data>
+<meta-data android:name="com.google.firebase.components:com.google.firebase.iid.Registrar" android:value="com.google.firebase.components.ComponentRegistrar">
+</meta-data>
+</service>
+<receiver android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+</intent-filter>
+</receiver>
+<activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:01030010">
+</activity>
+<provider android:authorities="com.af.shuga.provider" android:exported="false" android:grantUriPermissions="true" android:name="com.luck.picture.lib.PictureFileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F140002">
+</meta-data>
+</provider>
+<activity android:name="com.luck.picture.lib.PictureSelectorActivity" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:name="com.luck.picture.lib.PicturePreviewActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.luck.picture.lib.PictureVideoPlayActivity" android:screenOrientation="4">
+</activity>
+<activity android:name="com.luck.picture.lib.PictureExternalPreviewActivity">
+</activity>
+<activity android:name="com.yalantis.ucrop.UCropActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.yalantis.ucrop.PictureMultiCuttingActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.luck.picture.lib.PicturePlayAudioActivity" android:screenOrientation="1">
+</activity>
+<service android:name="com.tencent.mars.sample.wrapper.service.MarsServiceNative" android:process=":marsservice">
+</service>
+<receiver android:name="com.fanjun.keeplive.receiver.NotificationClickReceiver">
+</receiver>
+<activity android:excludeFromRecents="true" android:launchMode="3" android:name="com.fanjun.keeplive.activity.OnePixelActivity" android:theme="@7F120333">
+</activity>
+<service android:name="com.fanjun.keeplive.service.LocalService">
+</service>
+<service android:name="com.fanjun.keeplive.service.HideForegroundService">
+</service>
+<service android:name="com.fanjun.keeplive.service.JobHandlerService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<service android:name="com.fanjun.keeplive.service.RemoteService" android:process=":remote">
+</service>
+<activity android:name="com.facebook.CustomTabMainActivity">
+</activity>
+<meta-data android:name="trans_crypto_sdk_version" android:value="1.0.8.02">
+</meta-data>
+<meta-data android:name="com.bumptech.glide.integration.okhttp3.OkHttpGlideModule" android:value="GlideModule">
+</meta-data>
+<activity android:configChanges="0x000004B0" android:label="@7F1103CD" android:name="com.amazonaws.mobile.auth.userpools.ForceChangePasswordActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004B0" android:label="@7F1103CE" android:name="com.amazonaws.mobile.auth.userpools.ForgotPasswordActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004B0" android:label="@7F1103D1" android:name="com.amazonaws.mobile.auth.userpools.SignUpActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004B0" android:label="@7F1103CF" android:name="com.amazonaws.mobile.auth.userpools.MFAActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004B0" android:label="@7F1103D2" android:name="com.amazonaws.mobile.auth.userpools.SignUpConfirmActivity" android:screenOrientation="1">
+</activity>
+<provider android:authorities="com.af.shuga.autosize-init-provider" android:exported="false" android:multiprocess="true" android:name="me.jessyan.autosize.InitProvider">
+</provider>
+<provider android:authorities="com.af.shuga.GrowingIOSettingsProvider" android:name="com.growingio.android.sdk.collection.GrowingIOSettingsProvider">
+</provider>
+<provider android:authorities="com.af.shuga.FacebookInitProvider" android:exported="false" android:name="com.facebook.internal.FacebookInitProvider">
+</provider>
+<receiver android:exported="false" android:name="com.facebook.CurrentAccessTokenExpirationBroadcastReceiver">
+<intent-filter>
+<action android:name="com.facebook.sdk.ACTION_CURRENT_ACCESS_TOKEN_CHANGED">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:exported="true" android:name="com.facebook.CampaignTrackingReceiver" android:permission="android.permission.INSTALL_PACKAGES">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+<provider android:authorities="com.af.shuga.firebaseinitprovider" android:exported="false" android:initOrder="100" android:name="com.google.firebase.provider.FirebaseInitProvider">
+</provider>
+<activity android:configChanges="0x00000FB0" android:exported="false" android:name="com.google.android.gms.ads.AdActivity" android:theme="@android:0103000F">
+</activity>
+<receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementReceiver">
+</receiver>
+<receiver android:enabled="true" android:exported="true" android:name="com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver" android:permission="android.permission.INSTALL_PACKAGES">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementService">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementJobService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<meta-data android:name="com.google.android.gms.version" android:value="@7F0A0008">
+</meta-data>
+<provider android:authorities="com.af.shuga.lifecycle-process" android:exported="false" android:multiprocess="true" android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer">
+</provider>
+</application>
+</manifest>

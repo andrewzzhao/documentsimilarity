@@ -1,0 +1,36 @@
+<?xml version="1.0" ?><manifest android:versionCode="2" android:versionName="1.1" package="com.the7art.xmaseveclock" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="2" android:targetSdkVersion="4">
+</uses-sdk>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<supports-screens>
+</supports-screens>
+<application android:description="@7F070001" android:icon="@7F02000B" android:label="@7F070000">
+<receiver android:name="XmasEveClockWidgetProvider">
+<intent-filter>
+<action android:name="android.appwidget.action.APPWIDGET_UPDATE">
+</action>
+</intent-filter>
+<meta-data android:name="android.appwidget.provider" android:resource="@7F050000">
+</meta-data>
+</receiver>
+<activity android:label="@7F070000" android:name=".Info">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.INFO">
+</category>
+</intent-filter>
+</activity>
+<activity android:label="@7F070003" android:name=".ClockSelectActivity">
+<intent-filter>
+<action android:name="android.appwidget.action.APPWIDGET_CONFIGURE">
+</action>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000B0" android:name="com.google.ads.AdActivity">
+</activity>
+</application>
+</manifest>

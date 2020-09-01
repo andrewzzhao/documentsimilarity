@@ -1,0 +1,210 @@
+<?xml version="1.0" ?><manifest android:versionCode="151" android:versionName="2.0.02.30" package="com.netqin.mobileguard" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-permission android:name="android.permission.BLUETOOTH">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="android.permission.BLUETOOTH_ADMIN">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.RESTART_PACKAGES">
+</uses-permission>
+<uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT">
+</uses-permission>
+<uses-permission android:name="android.permission.MODIFY_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.BATTERY_STATS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_PACKAGE_SIZE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_SYNC_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.FORCE_STOP_PACKAGES">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<application android:allowTaskReparenting="true" android:icon="@7F020054" android:label="@7F070001" android:name=".MobileGuardApplication" android:taskAffinity="com.netqin.mobileguard">
+<activity android:configChanges="0x000000A0" android:name=".ui.SplashScreen" android:screenOrientation="1" android:theme="@android:01030006">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000A0" android:launchMode="2" android:name=".ui.slidepanel.SlidePanel" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000000A0" android:name=".taskmanager.TaskList" android:screenOrientation="1">
+</activity>
+<service android:name=".service.TaskManagerService">
+<intent-filter>
+<action android:name="com.netqin.task_scan">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="com.netqin.task_kill">
+</action>
+</intent-filter>
+</service>
+<service android:name=".service.CommonService">
+<intent-filter>
+<action android:name="com.netqin.mobileguard.download_new_version">
+</action>
+</intent-filter>
+</service>
+<receiver android:name=".service.CommonReceiver">
+<intent-filter>
+<action android:name="com.netqin.mobileguard.action_show_toast">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+<action android:name="android.bluetooth.adapter.action.STATE_CHANGED">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.MOBILEDATA_MODE">
+</action>
+</intent-filter>
+</receiver>
+<activity android:configChanges="0x000000A0" android:launchMode="2" android:name=".networkmanager.NetMeterActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name=".filemanager.FileManager" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000000A0" android:name=".networkmanager.SettingPreferences" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:excludeFromRecents="true" android:launchMode="3" android:name=".taskmanager.DialogActivity" android:screenOrientation="1" android:taskAffinity="com.netqin.mobileguard.widget.dialog" android:theme="@android:0103000F">
+</activity>
+<activity android:configChanges="0x000000A0" android:excludeFromRecents="true" android:launchMode="3" android:name=".app.widget.BrightnessDialog" android:screenOrientation="1" android:theme="@android:0103000F">
+</activity>
+<activity android:configChanges="0x000000A0" android:excludeFromRecents="true" android:launchMode="3" android:name=".networkmanager.TrafficTipDialog" android:screenOrientation="1" android:theme="@android:0103000F">
+</activity>
+<activity android:configChanges="0x000000A0" android:excludeFromRecents="true" android:launchMode="3" android:name=".ui.AntivirusDialog" android:screenOrientation="1" android:theme="@android:0103000F">
+</activity>
+<activity android:configChanges="0x000000A0" android:excludeFromRecents="true" android:launchMode="3" android:name=".ui.BannerDialog" android:screenOrientation="1" android:theme="@android:0103000F">
+</activity>
+<activity android:name=".ui.LicenseAgreement" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000000A0" android:name=".ui.Help" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name=".ui.License" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000000A0" android:name=".ui.OnekeySettingsPreference" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name=".packagemanager.PackageExList" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000000A0" android:name=".DevConfigPreference" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name=".ui.WhiteList" android:screenOrientation="1">
+</activity>
+<service android:name=".service.BoosterService">
+</service>
+<receiver android:name=".service.OnAlarmReceiver">
+</receiver>
+<receiver android:label="@7F070002" android:name=".app.widget.SettingsAppWidgetProvider">
+<intent-filter>
+<action android:name="android.appwidget.action.APPWIDGET_UPDATE">
+</action>
+<action android:name="android.net.wifi.WIFI_STATE_CHANGED">
+</action>
+<action android:name="android.net.conn.BACKGROUND_DATA_SETTING_CHANGED">
+</action>
+<action android:name="android.bluetooth.adapter.action.STATE_CHANGED">
+</action>
+<action android:name="android.intent.action.AIRPLANE_MODE">
+</action>
+<action android:name="android.intent.action.SERVICE_STATE">
+</action>
+<action android:name="android.net.wifi.STATE_CHANGE">
+</action>
+<action android:name="android.intent.action.INIT_WIFI_SETTINGS">
+</action>
+<action android:name="com.netqin.gprs_changed">
+</action>
+<action android:name="com.netqin.mobileguard.onekey_action">
+</action>
+<action android:name="com.netqin.mobileguard.battery_change">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.MOBILEDATA_MODE">
+</action>
+</intent-filter>
+<meta-data android:name="android.appwidget.provider" android:resource="@7F050000">
+</meta-data>
+</receiver>
+<receiver android:label="@7F070003" android:name=".app.widget.SettingsAppWidgetProvider$WidgetMine">
+<meta-data android:name="android.appwidget.provider" android:resource="@7F050001">
+</meta-data>
+<intent-filter>
+<action android:name="android.appwidget.action.APPWIDGET_UPDATE">
+</action>
+<action android:name="com.netqin.mobileguard.onekey_action">
+</action>
+</intent-filter>
+</receiver>
+<activity android:name=".batterymode.BatteryModeEditActivity" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:name="com.netqin.mobileguard.promotion.ProductIntroduce" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:launchMode="2" android:name="com.netqin.mobileguard.promotion.PrivacySpaceDownload" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:launchMode="2" android:name="com.netqin.mobileguard.promotion.MobileSecurityDownload" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:name="com.netqin.mobileguard.promotion.UnknownResDialog" android:screenOrientation="1" android:theme="@android:0103000B" android:windowSoftInputMode="0x00000030">
+</activity>
+<activity android:name=".batterymode.AppBatteryUse" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:name=".batterymode.BatteryScreenTimeout" android:screenOrientation="1" android:theme="@android:0103000B">
+</activity>
+<activity android:name=".ui.WizardActivity" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:name=".ui.CommonDialogActivity" android:screenOrientation="1" android:theme="@7F0C0019">
+</activity>
+<activity android:name=".batterymode.LightnessChangeActivity" android:screenOrientation="1" android:theme="@7F0C0019">
+</activity>
+<activity android:configChanges="0x00000FB0" android:name="com.google.ads.AdActivity">
+</activity>
+<activity android:configChanges="0x00000CB0" android:name="com.inmobi.androidsdk.IMBrowserActivity">
+</activity>
+<activity android:configChanges="0x000000B0" android:name="com.millennialmedia.android.MMActivity" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x000000B0" android:name="com.millennialmedia.android.VideoPlayer">
+</activity>
+</application>
+<uses-sdk android:minSdkVersion="7">
+</uses-sdk>
+</manifest>

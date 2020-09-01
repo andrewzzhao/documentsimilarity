@@ -1,0 +1,196 @@
+<?xml version="1.0" ?><manifest android:installLocation="0" android:versionCode="25020134" android:versionName="25.0.0.134" package="com.adobe.air" platformBuildVersionCode="24" platformBuildVersionName="7.000000" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="14" android:targetSdkVersion="24">
+</uses-sdk>
+<uses-feature android:name="android.hardware.touchscreen" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.wifi" android:required="false">
+</uses-feature>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.BROADCAST_STICKY">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<application android:icon="@7F020123" android:label="Adobe AIR" android:largeHeap="true" android:name="com.adobe.app.AppManager" android:theme="@7F100014">
+<activity android:configChanges="0x000004A0" android:icon="@7F020123" android:label="Adobe AIR" android:name=".AdobeAIRMainActivity" android:noHistory="true" android:screenOrientation="1" android:theme="@android:01030007">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004A0" android:label="Adobe AIR" android:name=".AdobeAIR" android:screenOrientation="1" android:theme="@7F10001A">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F0F0073" android:launchMode="2" android:name="com.adobe.air.wand.WandActivity" android:theme="@android:01030007">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<receiver android:label="NetworkConnection" android:name="com.adobe.air.wand.ConnectionChangeReceiver">
+<intent-filter>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+</receiver>
+<activity android:configChanges="0x000004A0" android:name=".GamePreviewAppEntry" android:screenOrientation="-1" android:theme="@android:01030007" android:windowSoftInputMode="0x00000012">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="gamepreview">
+</data>
+</intent-filter>
+<meta-data android:name="namespaceVersion" android:value="15.000000">
+</meta-data>
+<meta-data android:name="initialcontent" android:value="GamePreview.swf">
+</meta-data>
+<meta-data android:name="aspectRatio" android:value="any">
+</meta-data>
+<meta-data android:name="autoOrients" android:value="true">
+</meta-data>
+</activity>
+<activity android:configChanges="0x000004A0" android:name=".AIRUpdateDialog">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="AIRUpdateDialog">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x00000480" android:name=".RemoteDebuggerListenerDialog">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="RemoteDebuggerListenerDialog">
+</category>
+</intent-filter>
+</activity>
+<service android:exported="true" android:name=".AIRService">
+<intent-filter>
+<action android:name="com.adobe.air.AIRServiceAction">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="com.adobe.air.DownloadConfig">
+</action>
+</intent-filter>
+</service>
+<receiver android:name=".AndroidGcmBroadcastReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+<category android:name="com.adobe.air">
+</category>
+</intent-filter>
+</receiver>
+<service android:name=".AndroidGcmIntentService">
+</service>
+<service android:exported="true" android:name=".AndroidGcmRegistrationService">
+<intent-filter>
+<action android:name="com.adobe.air.AndroidGcmRegistrationService">
+</action>
+</intent-filter>
+</service>
+<service android:exported="false" android:name=".ShakeListenerService" android:stopWithTask="true">
+</service>
+<meta-data android:name="com.google.android.gms.version" android:value="@7F0E002C">
+</meta-data>
+<activity android:name=".StaticPageActivity" android:screenOrientation="1" android:theme="@7F100014" android:windowSoftInputMode="0x00000010">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:label="@7F0F0060" android:name="com.adobe.mobile_playpanel.GameDetailsActivity" android:screenOrientation="1" android:theme="@7F100015">
+<intent-filter>
+<action android:name="COM.ADOBE.GAME_DETAIL.ACTION">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:label="@7F0F0060" android:name="com.adobe.mobile_playpanel.AddCommentsActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F0F0060" android:name="com.adobe.mobile_playpanel.ShowLoginActivity" android:screenOrientation="1" android:theme="@android:01030007">
+<intent-filter>
+<action android:name="COM.ADOBE.LOGIN_ACTIVITY.ACTION">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<receiver android:exported="true" android:name="com.adobe.mobile_playpanel.NotificationBroadcastReceiver">
+</receiver>
+<receiver android:exported="true" android:name="com.adobe.mobile_playpanel.PollBroadcastReceiver">
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+</intent-filter>
+</receiver>
+<activity android:name="com.adobe.mobile_playpanel.SearchGamesActivity" android:screenOrientation="1" android:theme="@7F100014" android:windowSoftInputMode="0x00000005">
+</activity>
+<service android:name="com.google.android.gms.analytics.CampaignTrackingService">
+</service>
+<receiver android:exported="true" android:name="com.google.android.gms.analytics.CampaignTrackingReceiver">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:enabled="@7F0A0001" android:exported="true" android:icon="@7F02008A" android:label="@7F0F0053" android:name="com.adobe.mobile_playpanel.appwidget.MyGamesWidgetProvider">
+<intent-filter>
+<action android:name="android.appwidget.action.APPWIDGET_UPDATE">
+</action>
+</intent-filter>
+<meta-data android:name="android.appwidget.provider" android:resource="@7F080001">
+</meta-data>
+</receiver>
+<service android:name="com.adobe.mobile_playpanel.appwidget.MyGamesWidgetService" android:permission="android.permission.BIND_REMOTEVIEWS">
+</service>
+<activity android:exported="true" android:launchMode="3" android:name="com.adobe.mobile_playpanel.appwidget.MyGamesWidgetClickHandlerActivity" android:theme="@7F100015">
+</activity>
+<activity android:name="com.adobe.mobile_playpanel.adclients.PartnerAdsWebBrowserActivity" android:theme="@7F100015">
+</activity>
+<receiver android:enabled="@7F0A0001" android:exported="true" android:icon="@7F02008A" android:label="@7F0F0054" android:name="com.adobe.mobile_playpanel.appwidget.FeaturedGamesWidgetProvider">
+<intent-filter>
+<action android:name="android.appwidget.action.APPWIDGET_UPDATE">
+</action>
+</intent-filter>
+<meta-data android:name="android.appwidget.provider" android:resource="@7F080000">
+</meta-data>
+</receiver>
+<service android:name="com.adobe.mobile_playpanel.appwidget.FeaturedGamesWidgetService" android:permission="android.permission.BIND_REMOTEVIEWS">
+</service>
+<activity android:exported="true" android:launchMode="3" android:name="com.adobe.mobile_playpanel.appwidget.FeaturedGamesWidgetClickInstallHandler" android:theme="@7F100015">
+</activity>
+</application>
+</manifest>

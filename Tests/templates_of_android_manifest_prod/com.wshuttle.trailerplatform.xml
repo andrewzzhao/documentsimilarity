@@ -1,0 +1,514 @@
+<?xml version="1.0" ?><manifest android:versionCode="115" android:versionName="1.1.5" package="com.wshuttle.trailerplatform" platformBuildVersionCode="25" platformBuildVersionName="7.1.1" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="16" android:targetSdkVersion="22">
+</uses-sdk>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PROFILE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_CONTACTS">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_CONFIGURATION">
+</uses-permission>
+<uses-permission android:name="android.permission.SEND_SMS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_SMS">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_SMS">
+</uses-permission>
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_LOGS">
+</uses-permission>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-permission android:name="android.permission.FLASHLIGHT">
+</uses-permission>
+<uses-permission android:name="com.wshuttle.trailerplatform.permission.JPUSH_MESSAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_USER_PRESENT">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.DISABLE_KEYGUARD">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_OWNER_DATA">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_LOGS">
+</uses-permission>
+<uses-feature android:name="android.hardware.camera">
+</uses-feature>
+<uses-feature android:name="android.hardware.camera.autofocus">
+</uses-feature>
+<uses-permission android:name="android.permission.CALL_PHONE">
+</uses-permission>
+<uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS">
+</uses-permission>
+<uses-permission android:name="android.permission.RECORD_AUDIO">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-permission android:name="android.permission.FLASHLIGHT">
+</uses-permission>
+<permission android:name="com.wshuttle.trailerplatform.permission.JPUSH_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<permission android:name="com.wshuttle.trailerplatform.permission.MIPUSH_RECEIVE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="com.wshuttle.trailerplatform.permission.MIPUSH_RECEIVE">
+</uses-permission>
+<meta-data android:name="android.support.VERSION" android:value="25.3.1">
+</meta-data>
+<application android:allowBackup="true" android:icon="@7F030008" android:label="@7F090211" android:name="com.stub.StubApp" android:protect="activity" android:supportsRtl="true" android:theme="@7F0B00A9">
+<meta-data android:name="com.amap.api.v2.apikey" android:value="25b15758b2b7d2ef6deacadd6648ac58">
+</meta-data>
+<provider android:authorities="com.wshuttle.trailerplatform.fileProvider" android:exported="false" android:grantUriPermissions="true" android:name="android.support.v4.content.FileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F070000">
+</meta-data>
+</provider>
+<service android:name="com.amap.api.location.APSService">
+</service>
+<service android:name="com.wshuttle.trailerplatform.service.SendPhotoService">
+</service>
+<service android:name="com.wshuttle.trailerplatform.service.SendPhotoListService">
+</service>
+<service android:name="com.wshuttle.trailerplatform.service.AutoSendPhotoService">
+</service>
+<service android:name="com.wshuttle.trailerplatform.service.PhoneStateService">
+</service>
+<service android:name="com.wshuttle.trailerplatform.service.SendRecordFileService">
+</service>
+<service android:name="com.wshuttle.trailerplatform.service.LocationService">
+</service>
+<service android:name="com.wshuttle.trailerplatform.service.LogUplodService">
+</service>
+<service android:name="com.wshuttle.trailerplatform.service.SendOffLineJobService">
+</service>
+<service android:name="com.wshuttle.trailerplatform.service.HeartBeatService">
+</service>
+<service android:name="com.wshuttle.trailerplatform.service.NotificationTipService">
+</service>
+<receiver android:name="com.wshuttle.trailerplatform.model.receiver.NetworkStateReceiver">
+<intent-filter>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+<action android:name="android.Net.wifi.WIFI_STATE_CHANGED">
+</action>
+<action android:name="android.net.wifi.STATE_CHANGE">
+</action>
+</intent-filter>
+</receiver>
+<meta-data android:name="com.huawei.hms.client.appid" android:value="10907175">
+</meta-data>
+<provider android:authorities="com.wshuttle.trailerplatform.hms.update.provider" android:exported="false" android:grantUriPermissions="true" android:name="com.huawei.hms.update.provider.UpdateProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F070000">
+</meta-data>
+</provider>
+<receiver android:name="com.huawei.hms.support.api.push.PushEventReceiver">
+<intent-filter>
+<action android:name="com.huawei.intent.action.PUSH">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name="cn.jpush.android.service.PluginHuaweiPlatformsReceiver">
+<intent-filter>
+<action android:name="com.huawei.android.push.intent.REGISTRATION">
+</action>
+<action android:name="com.huawei.android.push.intent.RECEIVE">
+</action>
+<action android:name="com.huawei.android.push.intent.CLICK">
+</action>
+<action android:name="com.huawei.intent.action.PUSH_STATE">
+</action>
+</intent-filter>
+<meta-data android:name="CS_cloud_ablitity" android:value="successRateAnalytics">
+</meta-data>
+</receiver>
+<meta-data android:name="XIAOMI_APPKEY" android:value="MI-5351757213055">
+</meta-data>
+<meta-data android:name="XIAOMI_APPID" android:value="MI-2882303761517572055">
+</meta-data>
+<service android:enabled="true" android:exported="false" android:name="com.xiaomi.push.service.XMJobService" android:permission="android.permission.BIND_JOB_SERVICE" android:process=":pushservice">
+</service>
+<service android:enabled="true" android:name="com.xiaomi.push.service.XMPushService" android:process=":pushservice">
+</service>
+<service android:enabled="true" android:exported="true" android:name="com.xiaomi.mipush.sdk.PushMessageHandler">
+</service>
+<service android:enabled="true" android:name="com.xiaomi.mipush.sdk.MessageHandleService">
+</service>
+<receiver android:exported="true" android:name="com.xiaomi.push.service.receivers.NetworkStatusReceiver">
+<intent-filter>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</receiver>
+<receiver android:exported="false" android:name="com.xiaomi.push.service.receivers.PingReceiver" android:process=":pushservice">
+<intent-filter>
+<action android:name="com.xiaomi.push.PING_TIMER">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:exported="true" android:name="cn.jpush.android.service.PluginXiaomiPlatformsReceiver">
+<intent-filter>
+<action android:name="com.xiaomi.mipush.RECEIVE_MESSAGE">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="com.xiaomi.mipush.MESSAGE_ARRIVED">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="com.xiaomi.mipush.ERROR">
+</action>
+</intent-filter>
+</receiver>
+<service android:enabled="true" android:exported="false" android:name="cn.jpush.android.service.PushService">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.REGISTER">
+</action>
+<action android:name="cn.jpush.android.intent.REPORT">
+</action>
+<action android:name="cn.jpush.android.intent.PushService">
+</action>
+<action android:name="cn.jpush.android.intent.PUSH_TIME">
+</action>
+</intent-filter>
+</service>
+<service android:enabled="true" android:exported="true" android:name="cn.jpush.android.service.DaemonService">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.DaemonService">
+</action>
+<category android:name="com.wsrescue.technicalwy">
+</category>
+</intent-filter>
+</service>
+<receiver android:enabled="true" android:exported="false" android:name="cn.jpush.android.service.PushReceiver">
+<intent-filter android:priority="1000">
+<action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY">
+</action>
+<category android:name="com.wshuttle.trailerplatform">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.USER_PRESENT">
+</action>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_ADDED">
+</action>
+<action android:name="android.intent.action.PACKAGE_REMOVED">
+</action>
+<data android:scheme="package">
+</data>
+</intent-filter>
+</receiver>
+<activity android:configChanges="0x000000A0" android:exported="false" android:name="cn.jpush.android.ui.PushActivity">
+<intent-filter>
+<action android:name="cn.jpush.android.ui.PushActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="com.wshuttle.trailerplatform">
+</category>
+</intent-filter>
+</activity>
+<activity android:excludeFromRecents="true" android:exported="false" android:launchMode="2" android:name="com.stub.stub02.Stub01" android:noHistory="true" android:taskAffinity="com.wshuttle.trailerplatform.util" android:theme="@android:0103005F">
+</activity>
+<service android:enabled="true" android:exported="true" android:name="com.stub.stub02.Stub02">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.stub.stub02.Stub03">
+</service>
+<receiver android:enabled="true" android:exported="false" android:name="com.stub.stub02.Stub05">
+</receiver>
+<provider android:authorities="com.wshuttle.trailerplatform.COMMONPROVIDER" android:exported="true" android:name="com.stub.stub02.Stub04">
+</provider>
+<activity android:configChanges="0x000000A0" android:exported="false" android:launchMode="2" android:name="com.stub.stub05.Stub01" android:screenOrientation="1" android:theme="@android:01030060">
+</activity>
+<service android:exported="false" android:name="com.stub.stub05.Stub02">
+</service>
+<service android:enabled="true" android:exported="false" android:name="cn.jpush.android.service.DownloadService">
+</service>
+<receiver android:name="cn.jpush.android.service.AlarmReceiver">
+</receiver>
+<receiver android:enabled="true" android:name="com.wshuttle.trailerplatform.controller.receiver.JPushReceiver">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.REGISTRATION">
+</action>
+<action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED">
+</action>
+<action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED">
+</action>
+<action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED">
+</action>
+<action android:name="cn.jpush.android.intent.ACTION_RICHPUSH_CALLBACK">
+</action>
+<action android:name="cn.jpush.android.intent.CONNECTION">
+</action>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+<action android:name="android.intent.action.USER_PRESENT">
+</action>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+<category android:name="com.wshuttle.trailerplatform">
+</category>
+</intent-filter>
+</receiver>
+<meta-data android:name="JPUSH_CHANNEL" android:value="developer-default">
+</meta-data>
+<meta-data android:name="JPUSH_APPKEY" android:value="0efc23194fc99fd718509c4c">
+</meta-data>
+<meta-data android:name="com.wshuttle.trailerplatform.library.config.GlideConfiguration" android:value="GlideModule">
+</meta-data>
+<activity android:label="@7F090351" android:name="com.wshuttle.trailerplatform.controller.activity.IndexMenuAct" android:screenOrientation="1" android:theme="@7F0B0040">
+</activity>
+<activity android:alwaysRetainTaskState="true" android:label="@7F09034F" android:launchMode="2" android:name="com.wshuttle.trailerplatform.controller.activity.HomeAct" android:screenOrientation="1" android:theme="@7F0B0040">
+</activity>
+<activity android:label="@7F09034F" android:name="com.wshuttle.trailerplatform.controller.activity.user.LoginAct" android:theme="@7F0B0040">
+</activity>
+<activity android:label="@7F090336" android:name="com.wshuttle.trailerplatform.controller.activity.technical.AcceptTaskAct" android:theme="@7F0B0040">
+</activity>
+<activity android:label="@7F090338" android:name="com.wshuttle.trailerplatform.controller.activity.audit.AuditOrderAct" android:theme="@7F0B0040">
+</activity>
+<activity android:name="com.wshuttle.trailerplatform.controller.dialog.AuditOrderSuccessDialog" android:theme="@7F0B00AB">
+</activity>
+<activity android:name="com.wshuttle.trailerplatform.controller.dialog.AuditSuccessTipDialog" android:theme="@7F0B00AB">
+</activity>
+<activity android:label="@7F09033A" android:name="com.wshuttle.trailerplatform.controller.activity.audit.AuditTripAct" android:theme="@7F0B0040">
+</activity>
+<activity android:label="@7F090339" android:name="com.wshuttle.trailerplatform.controller.activity.audit.AuditTaskAct" android:theme="@7F0B0040">
+</activity>
+<activity android:label="@7F09036C" android:name="com.wshuttle.trailerplatform.controller.activity.trip.TripDetailAct" android:theme="@7F0B0040">
+</activity>
+<activity android:label="@7F09035B" android:name="com.wshuttle.trailerplatform.controller.activity.personalcenter.PersonalInfoAct" android:theme="@7F0B0040">
+</activity>
+<activity android:label="@7F090365" android:name="com.wshuttle.trailerplatform.controller.activity.personalcenter.SettingAct" android:theme="@7F0B0040">
+</activity>
+<activity android:label="@7F090362" android:name="com.wshuttle.trailerplatform.controller.activity.trip.TaskTypeAct" android:theme="@7F0B0040">
+</activity>
+<activity android:label="@7F090364" android:name="com.wshuttle.trailerplatform.controller.activity.trip.TripTypeAct" android:theme="@7F0B0040">
+</activity>
+<activity android:label="@7F090337" android:name="com.wshuttle.trailerplatform.controller.activity.trip.AddTripAct" android:theme="@7F0B0040">
+</activity>
+<activity android:label="@7F090361" android:name="com.wshuttle.trailerplatform.controller.activity.trip.SelectCarAct" android:theme="@7F0B0040">
+</activity>
+<activity android:label="@7F090363" android:name="com.wshuttle.trailerplatform.controller.activity.trip.SelectTechAct" android:theme="@7F0B0040">
+</activity>
+<activity android:label="@7F090363" android:name="com.wshuttle.trailerplatform.controller.activity.personalcenter.EvaluateAct" android:theme="@7F0B0040">
+</activity>
+<activity android:label="@7F09034E" android:name="com.wshuttle.trailerplatform.controller.activity.personalcenter.HistoryTripAct" android:theme="@7F0B0040">
+</activity>
+<activity android:label="@7F09020A" android:name="com.wshuttle.trailerplatform.amap.activity.AmapPOISearchActivity" android:theme="@7F0B0040">
+</activity>
+<activity android:label="@7F09036E" android:name="com.wshuttle.trailerplatform.controller.activity.personalcenter.VerificationPswAct" android:theme="@7F0B0040">
+</activity>
+<activity android:label="@7F09035D" android:name="com.wshuttle.trailerplatform.controller.activity.personalcenter.PswResetAct" android:theme="@7F0B0040">
+</activity>
+<activity android:name="com.wshuttle.trailerplatform.controller.dialog.PswResetSuccessDialog" android:theme="@7F0B00AB">
+</activity>
+<activity android:label="@7F090335" android:name="com.wshuttle.trailerplatform.controller.activity.personalcenter.AboutUsAct" android:theme="@7F0B0040">
+</activity>
+<activity android:label="@7F09034D" android:name="com.wshuttle.trailerplatform.controller.activity.personalcenter.HistoryOrderAct" android:theme="@7F0B0040">
+</activity>
+<activity android:label="@7F090360" android:name="com.wshuttle.trailerplatform.controller.activity.personalcenter.ScheduleAct" android:theme="@7F0B0040">
+</activity>
+<activity android:label="@7F090358" android:name="com.wshuttle.trailerplatform.controller.activity.orderdraft.OrderDraftAct" android:theme="@7F0B0040">
+</activity>
+<activity android:label="@7F0900D4" android:name="com.wshuttle.trailerplatform.controller.activity.user.FindPwdAct" android:theme="@7F0B0040">
+</activity>
+<activity android:label="@7F0901A0" android:name="com.wshuttle.trailerplatform.controller.activity.user.ResetPwdAct" android:theme="@7F0B0040">
+</activity>
+<activity android:label="@7F09016D" android:name="com.wshuttle.trailerplatform.controller.activity.photo.PhotoGraphAct" android:theme="@7F0B0040">
+</activity>
+<activity android:name="com.wshuttle.trailerplatform.controller.dialog.TipSelectDialog" android:theme="@7F0B00AB">
+</activity>
+<activity android:name="com.wshuttle.trailerplatform.controller.dialog.MsgTipDialog" android:theme="@7F0B00AC">
+</activity>
+<activity android:label="@7F090126" android:launchMode="2" android:name="com.wshuttle.trailerplatform.controller.activity.order.OrderDetailAct" android:theme="@7F0B0040">
+</activity>
+<activity android:label="@7F09033B" android:name="com.wshuttle.trailerplatform.controller.activity.bindcar.BindCarChooseAct" android:theme="@7F0B0040">
+</activity>
+<activity android:label="@7F090340" android:name="com.wshuttle.trailerplatform.controller.activity.technical.ChooseMoneyWay" android:theme="@7F0B0040">
+</activity>
+<activity android:label="@7F09033F" android:name="com.wshuttle.trailerplatform.controller.activity.bindcar.ChooseCarAct" android:theme="@7F0B0040">
+</activity>
+<activity android:name="com.wshuttle.trailerplatform.controller.dialog.SetCarSuccessDialog" android:theme="@7F0B00AB">
+</activity>
+<activity android:label="@7F09036D" android:name="com.wshuttle.trailerplatform.controller.activity.bindcar.UpdateCarAct" android:theme="@7F0B0040">
+</activity>
+<activity android:label="@7F09033C" android:name="com.wshuttle.trailerplatform.controller.activity.technical.CashAct" android:theme="@7F0B0040">
+</activity>
+<activity android:name="com.wshuttle.trailerplatform.controller.dialog.AddMoneyNoteDialog" android:theme="@7F0B00AB">
+</activity>
+<activity android:label="@7F09035E" android:name="com.wshuttle.trailerplatform.controller.activity.technical.QRCodeAct" android:theme="@7F0B0040">
+</activity>
+<activity android:label="@7F090359" android:name="com.wshuttle.trailerplatform.controller.activity.technical.PaySuccessAct" android:theme="@7F0B0040">
+</activity>
+<activity android:name="com.wshuttle.trailerplatform.controller.dialog.TaskFinishChooseDialog" android:theme="@7F0B00AB">
+</activity>
+<activity android:label="@7F09036A" android:name="com.wshuttle.trailerplatform.controller.activity.technical.TaskFinishAct" android:theme="@7F0B0040">
+</activity>
+<activity android:name="com.wshuttle.trailerplatform.controller.dialog.DialPhoneDialog" android:theme="@7F0B00AB">
+</activity>
+<activity android:label="@7F090348" android:name="com.wshuttle.trailerplatform.controller.activity.technical.GoToRescueAct" android:theme="@7F0B0040">
+</activity>
+<activity android:label="@7F090347" android:name="com.wshuttle.trailerplatform.controller.activity.technical.GoToDestAct" android:theme="@7F0B0040">
+</activity>
+<activity android:label="@7F090349" android:name="com.wshuttle.trailerplatform.controller.activity.technical.GoToResidentAct" android:theme="@7F0B0040">
+</activity>
+<activity android:label="@7F090345" android:name="com.wshuttle.trailerplatform.controller.activity.technical.FeedbackAct" android:theme="@7F0B0040">
+</activity>
+<activity android:label="@7F090346" android:name="com.wshuttle.trailerplatform.controller.activity.technical.FeedbackReturnAct" android:theme="@7F0B0040">
+</activity>
+<activity android:label="@7F090354" android:name="com.wshuttle.trailerplatform.controller.activity.technical.NewCarReturnAct" android:theme="@7F0B0040">
+</activity>
+<activity android:label="@7F090352" android:name="com.wshuttle.trailerplatform.controller.activity.technical.MapAct" android:theme="@7F0B0040">
+</activity>
+<activity android:name="com.wshuttle.trailerplatform.controller.activity.technical.GPSNaviAct" android:theme="@7F0B0040">
+</activity>
+<activity android:label="@7F09033D" android:name="com.wshuttle.trailerplatform.controller.activity.technical.CheckRescueInfoAct" android:theme="@7F0B0040">
+</activity>
+<activity android:label="@7F09036B" android:name="com.wshuttle.trailerplatform.controller.activity.technical.TripAct" android:theme="@7F0B0040">
+</activity>
+<activity android:label="@7F090356" android:name="com.wshuttle.trailerplatform.controller.activity.technical.OrderDetailAct" android:theme="@7F0B0040">
+</activity>
+<activity android:label="@7F090369" android:name="com.wshuttle.trailerplatform.controller.activity.technical.TaskDetailAct" android:theme="@7F0B0040">
+</activity>
+<activity android:label="@7F090357" android:name="com.wshuttle.trailerplatform.controller.activity.technical.OrderDetailReturnAct" android:theme="@7F0B0040">
+</activity>
+<activity android:label="@7F090355" android:name="com.wshuttle.trailerplatform.controller.activity.technical.NumberAct" android:theme="@7F0B0040">
+</activity>
+<activity android:label="@7F09035C" android:name="com.wshuttle.trailerplatform.controller.activity.technical.PhotoAct" android:theme="@7F0B0040">
+</activity>
+<activity android:label="@7F0901F5" android:name="com.wshuttle.trailerplatform.controller.activity.dispatch.AddDispatchNoteActivity" android:theme="@7F0B0040" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:label="@7F090341" android:name="com.wshuttle.trailerplatform.controller.activity.dispatch.DispatchOrderAct" android:theme="@7F0B0040">
+</activity>
+<activity android:label="@7F09034B" android:name="com.wshuttle.trailerplatform.controller.activity.trip.GuaDanListAct" android:theme="@7F0B0040">
+</activity>
+<activity android:label="@7F09034A" android:name="com.wshuttle.trailerplatform.controller.activity.trip.GuaDanDetailAct" android:theme="@7F0B0040">
+</activity>
+<activity android:name="com.wshuttle.trailerplatform.controller.activity.order.OrderAct" android:theme="@7F0B0040">
+</activity>
+<activity android:label="@7F090353" android:name="com.wshuttle.trailerplatform.controller.activity.trip.MatchingOrderAct" android:theme="@7F0B0040">
+</activity>
+<activity android:label="@7F090186" android:name="com.wshuttle.trailerplatform.controller.activity.order.ReleaseBackOrderDetailAct" android:theme="@7F0B0040">
+</activity>
+<activity android:label="@7F090208" android:name="com.wshuttle.trailerplatform.controller.activity.technical.TaskFailReasonAct" android:theme="@7F0B0040">
+</activity>
+<activity android:name="com.wshuttle.trailerplatform.controller.dialog.TaskFailDialog" android:theme="@7F0B00AB">
+</activity>
+<activity android:label="@7F090368" android:name="com.wshuttle.trailerplatform.controller.activity.technical.TaskCancelAct" android:theme="@7F0B0040">
+</activity>
+<activity android:label="@7F090211" android:name="com.wshuttle.trailerplatform.controller.activity.GuideAct" android:theme="@7F0B0040">
+</activity>
+<activity android:label="@7F09035A" android:name="com.wshuttle.trailerplatform.controller.activity.PermissionAct" android:theme="@7F0B00AB">
+</activity>
+<activity android:label="@7F09035A" android:name="com.wshuttle.trailerplatform.controller.dialog.PermissionTipDialog" android:theme="@7F0B00AB">
+</activity>
+<activity android:name="com.wshuttle.trailerplatform.controller.dialog.CancelResuceDialog" android:theme="@7F0B00AB">
+</activity>
+<activity android:label="@7F090209" android:name="com.wshuttle.trailerplatform.amap.activity.AmapAddressActivity" android:theme="@7F0B0040">
+</activity>
+<activity android:label="@7F090101" android:name="com.wshuttle.trailerplatform.controller.activity.personalcenter.MsgSettingAct" android:theme="@7F0B0040">
+</activity>
+<activity android:label="@7F09016E" android:name="com.wshuttle.trailerplatform.controller.activity.personalcenter.FeedbackAct" android:theme="@7F0B0040" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:label="@7F090206" android:name="com.wshuttle.trailerplatform.controller.activity.photo.PhotoMainAct" android:theme="@7F0B0040">
+</activity>
+<activity android:label="@7F0901FC" android:name="com.wshuttle.trailerplatform.controller.activity.photo.PhotoLookActivity" android:theme="@7F0B0040">
+</activity>
+<activity android:label="@7F0901FF" android:name="com.wshuttle.trailerplatform.controller.activity.photo.OrderPhotoMainActivity" android:theme="@7F0B0040">
+</activity>
+<activity android:label="@7F090208" android:name="com.wshuttle.trailerplatform.controller.activity.order.RleaseTaskFailReasonAct" android:theme="@7F0B0040">
+</activity>
+<activity android:label="@7F0901FB" android:name="com.wshuttle.trailerplatform.controller.activity.dispatch.RescueDispatchAct" android:theme="@7F0B0040">
+</activity>
+<activity android:name="com.wshuttle.trailerplatform.controller.dialog.ExitDialog" android:theme="@7F0B00AB">
+</activity>
+<activity android:name="com.wshuttle.trailerplatform.controller.dialog.UpdateStatusDialog" android:theme="@7F0B00AB">
+</activity>
+<activity android:name="com.wshuttle.trailerplatform.controller.dialog.CancelTaskDialog" android:theme="@7F0B00AB">
+</activity>
+<activity android:name="com.wshuttle.trailerplatform.controller.dialog.ReDispatchTaskDialog" android:theme="@7F0B00AB">
+</activity>
+<activity android:name="com.wshuttle.trailerplatform.controller.dialog.UpdateApkDialog" android:theme="@7F0B00AB">
+</activity>
+<activity android:name="com.wshuttle.trailerplatform.controller.dialog.DownloadApkDialog" android:theme="@7F0B00AB">
+</activity>
+<service android:name="com.wshuttle.trailerplatform.service.DownloadAPKService">
+</service>
+<activity android:label="@7F090211" android:name="com.wshuttle.trailerplatform.controller.activity.LoadingAct" android:theme="@7F0B0040">
+<intent-filter>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+<action android:name="android.intent.action.MAIN">
+</action>
+</intent-filter>
+</activity>
+<activity android:label="@7F09015D" android:name="com.wshuttle.trailerplatform.controller.activity.personalcenter.SmsImportAct" android:theme="@7F0B0040" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:name="com.wshuttle.trailerplatform.controller.dialog.ListViewDialog" android:theme="@7F0B00B0">
+</activity>
+<activity android:name="com.wshuttle.trailerplatform.controller.activity.bindcar.BindCarInfoAct" android:theme="@7F0B0040">
+</activity>
+<activity android:name="com.wshuttle.trailerplatform.controller.dialog.AcceptShareOrderDialog" android:theme="@7F0B00AB">
+</activity>
+<activity android:label="@7F090367" android:name="com.wshuttle.trailerplatform.controller.activity.share.ShareSelectTechAct" android:theme="@7F0B0040">
+</activity>
+<activity android:label="@7F09035F" android:name="com.wshuttle.trailerplatform.controller.activity.technical.RecordAct" android:theme="@7F0B0040">
+</activity>
+<activity android:name="com.wshuttle.trailerplatform.controller.dialog.ConfirmRecordDialog" android:theme="@7F0B00AB">
+</activity>
+<activity android:label="@7F090342" android:name="com.wshuttle.trailerplatform.controller.activity.order.DispatchNumberAct" android:theme="@7F0B0040">
+</activity>
+<activity android:name="com.wshuttle.trailerplatform.controller.activity.user.RegisterAct" android:theme="@7F0B0040">
+</activity>
+<activity android:name="com.lzy.imagepicker.ui.ImageBaseActivity">
+</activity>
+<activity android:configChanges="0x00000480" android:name="com.lzy.imagepicker.ui.ImageGridActivity" android:theme="@7F0B00E1">
+</activity>
+<activity android:configChanges="0x00000480" android:hardwareAccelerated="false" android:name="com.lzy.imagepicker.ui.ImageCropActivity" android:theme="@7F0B00E1">
+</activity>
+<activity android:configChanges="0x00000480" android:name="com.lzy.imagepicker.ui.ImagePreviewActivity" android:theme="@7F0B00E2">
+</activity>
+<provider android:authorities="com.wshuttle.trailerplatform.provider" android:exported="false" android:grantUriPermissions="true" android:name="com.lzy.imagepicker.ImagePickerProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F070001">
+</meta-data>
+</provider>
+</application>
+</manifest>

@@ -1,0 +1,534 @@
+<?xml version="1.0" ?><manifest android:installLocation="1" android:versionCode="10027" android:versionName="3.30" package="com.jiubang.goscreenlock" platformBuildVersionCode="19" platformBuildVersionName="4.4.2-1035858" xmlns:android="http://schemas.android.com/apk/res/android">
+<application android:icon="@7F020088" android:label="@7F0D0000" android:largeHeap="true" android:name=".keyguard.ScreenlockApplication" android:process="android.process.acore">
+<activity android:configChanges="0x00000020" android:excludeFromRecents="true" android:multiprocess="false" android:name=".activity.WallpaperThemeActivity" android:screenOrientation="1" android:stateNotNeeded="true" android:taskAffinity="" android:theme="@android:0103005F">
+</activity>
+<activity android:configChanges="0x00000020" android:excludeFromRecents="true" android:multiprocess="false" android:name=".activity.LockScreenActivity" android:screenOrientation="1" android:stateNotNeeded="true" android:taskAffinity="" android:theme="@android:01030010">
+<intent-filter>
+<action android:name="com.jiubang.goscreenlock">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="com.gau.go.launcherex.goplugin">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x00000020" android:excludeFromRecents="true" android:launchMode="3" android:multiprocess="false" android:name=".activity.DismissActivity" android:screenOrientation="1" android:stateNotNeeded="true" android:taskAffinity="" android:theme="@android:01030010">
+<intent-filter>
+<action android:name="com.jiubang.goscreenlock.show.dismissactivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000A0" android:label="@7F0D0000" android:name=".activity.LockScreenSettingDiyActivity" android:taskAffinity="com.gau.go.launcherex" android:theme="@android:01030006">
+<intent-filter>
+<action android:name="com.jiubang.goscreenlock.setting">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000A0" android:label="@7F0D0000" android:name=".activity.navigation.NotifierInfoSettingActivity" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000000A0" android:hardwareAccelerated="true" android:label="@7F0D0000" android:name=".activity.navigation.StartUpFirstActivity" android:process=":preview" android:screenOrientation="1" android:theme="@7F0C0016">
+<intent-filter>
+<action android:name="com.jiubang.gau.ACTION_GOSTATICSDK">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000A0" android:hardwareAccelerated="true" android:label="@7F0D0000" android:launchMode="2" android:name=".activity.navigation.MainNavigationActivity" android:process=":preview" android:screenOrientation="1" android:theme="@7F0C0015">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="com.jiubang.goscreenlock.theme.filter">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="com.jiubang.goscreenlock.navgation.tabfilter">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000A0" android:hardwareAccelerated="true" android:label="@7F0D0000" android:launchMode="2" android:name=".activity.navigation.WallpaperManageActivity" android:process=":preview" android:screenOrientation="1" android:theme="@7F0C0015">
+</activity>
+<activity android:configChanges="0x000000A0" android:label="@7F0D0000" android:name=".activity.LockScreenViusalActivity" android:process=":preview" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000000A0" android:launchMode="2" android:name=".activity.QaTutorialActivity" android:screenOrientation="1">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:label="@7F0D0000" android:name=".activity.LockScreenOppoGuideActivity" android:process=":preview" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:label="@7F0D0000" android:name=".defaulttheme.AppThemeSetActivity" android:screenOrientation="1" android:theme="@android:01030010">
+<intent-filter>
+<action android:name="com.jiubang.goscreenlock.themeset">
+</action>
+</intent-filter>
+</activity>
+<activity android:excludeFromRecents="true" android:exported="true" android:finishOnTaskLaunch="true" android:launchMode="3" android:name=".util.crashreport.CrashReportDialog" android:theme="@android:0103000B">
+</activity>
+<activity android:name="com.jiubang.goscreenlock.activity.CropImageActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F0D0000" android:name="com.jiubang.goscreenlock.themestore.activity.SpecialThemesActivity" android:process=":preview" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:label="@7F0D0000" android:name="com.jiubang.goscreenlock.themestore.activity.GThemeApplyActivity" android:process=":preview" android:screenOrientation="1" android:theme="@android:01030006">
+<intent-filter>
+<action android:name="com.jiubang.goscreenlock.theme.apply.info">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000A0" android:label="@7F0D0000" android:name="com.jiubang.goscreenlock.themestore.activity.ThemeRandomActivity" android:process=":preview" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:label="@7F0D0000" android:name="com.jiubang.goscreenlock.themestore.activity.RandomThemeSetActivity" android:process=":preview" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<activity android:label="@7F0D0000" android:name="com.jiubang.goscreenlock.themestore.activity.ThemeDetailActivity" android:process=":preview" android:screenOrientation="1" android:theme="@android:01030006">
+<intent-filter>
+<action android:name="com.jiubang.goscreenlock.theme.detail.info">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000A0" android:label="@7F0D0000" android:name="com.jiubang.goscreenlock.util.ziptheme.ZipThemeSetActivity" android:process=":preview" android:screenOrientation="1" android:theme="@android:01030010">
+<intent-filter>
+<action android:name="com.jiubang.goscreenlock.themeset">
+</action>
+</intent-filter>
+</activity>
+<activity android:name="com.jiubang.goscreenlock.activity.ChooseGOLockBg" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F0D0000" android:launchMode="2" android:name=".activity.LockScreenAboutActivity" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000000A0" android:label="@7F0D0000" android:name=".activity.LockScreenFeedbackActivity" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000000A0" android:label="@7F0D0000" android:name=".activity.LockScreenDateActivity" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:label="@7F0D0000" android:name=".activity.LockScreenCallInActivity" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:name=".messagecenter.MsgNotifyActivity" android:theme="@android:01030006">
+</activity>
+<activity android:name=".messagecenter.MessageCenterActivity" android:theme="@android:01030006">
+</activity>
+<activity android:name=".messagecenter.MessageContentActivity" android:theme="@android:01030006">
+</activity>
+<activity android:name=".keypadlock.ChooseLockPattern" android:process=":preview" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:name=".keypadlock.ChooseLockPassword" android:process=":preview" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:name=".keypadlock.ConfirmLockPassword" android:process=":preview" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:name=".keypadlock.ConfirmLockPattern" android:process=":preview" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:name=".keypadlock.SecurityPreferenceActivity" android:process=":preview" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:name=".keypadlock.ChooseLockGesture" android:process=":preview" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:name=".keypadlock.ConfirmLockGesture" android:process=":preview" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:name=".activity.LockScreenMusicActivity" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:name=".activity.LockScreenMusicChooseActivity" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:name=".util.musicplay.MusicPlayBackViewActivity" android:screenOrientation="1" android:theme="@android:0103005F">
+</activity>
+<activity android:label="@7F0D0000" android:launchMode="3" android:name=".activity.LockScreenGuideActivity" android:process=":preview" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<service android:enabled="true" android:label="@7F0D0003" android:name=".service.KeyguardService">
+<intent-filter>
+<action android:name="com.jiubang.goscreenlock.start.keyguardservice">
+</action>
+</intent-filter>
+</service>
+<service android:name=".util.GOMemPrintService">
+</service>
+<receiver android:name=".service.KeyguardReceiver">
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_REPLACED">
+</action>
+<action android:name="android.intent.action.PACKAGE_REMOVED">
+</action>
+<action android:name="android.intent.action.PACKAGE_ADDED">
+</action>
+<data android:scheme="package">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="com.gau.go.launcherex_action_send_to_golock">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="com.jiubang.golockscreen.themedetailactivity.apply">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="com.jiubang.golockscreen.themedetailactivity.delete">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="com.jiubang.goscreenlock.DOWNLOAD_GOLAUNCHER_BY_PENDINGTENT">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.EXTERNAL_APPLICATIONS_AVAILABLE">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.net.wifi.STATE_CHANGE">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="action_upload_41_crash">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name=".service.KeyguardBootReceiver">
+<intent-filter android:priority="10000">
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name=".service.ComponentEnableReceiver">
+<intent-filter android:priority="2147483647">
+<action android:name="android.intent.action.USER_PRESENT">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.ACTION_POWER_CONNECTED">
+</action>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+</receiver>
+<service android:name=".theme.utils.GoToGetJarService">
+</service>
+<receiver android:name="com.jiubang.goscreenlock.activity.ComponentControlReceiver">
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_ADDED">
+</action>
+<data android:scheme="package">
+</data>
+</intent-filter>
+</receiver>
+<receiver android:name="com.jiubang.goscreenlock.messagecenter.GuiGuideCenter">
+<intent-filter>
+<action android:name="NEW_USER_THREE_HOURS_ACTION">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name="com.jiubang.goscreenlock.util.musicplay.MusicCommandReceiver">
+<intent-filter>
+<action android:name="com.jiubang.goscreenlock.util.musicplay.MusicCommandReceiver.COMMAND">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name=".util.musicplay.MediaButtonIntentReceiver">
+<intent-filter>
+<action android:name="android.intent.action.MEDIA_BUTTON">
+</action>
+<action android:name="android.media.AUDIO_BECOMING_NOISY">
+</action>
+</intent-filter>
+</receiver>
+<provider android:authorities="com.jiubang.goscreenlock" android:name=".service.KeyguardProvide">
+</provider>
+<service android:name="com.jiubang.goscreenlock.callin.CallInPopService">
+<intent-filter>
+<action android:name="com.demo.action.ACTION_POPUP_SERVICE">
+</action>
+</intent-filter>
+</service>
+<service android:name=".util.musicplay.MusicPlaybackService" android:process="com.jiubang.goscreenlock.util.musicplay.MusicPlaybackService">
+</service>
+<provider android:authorities="com.jiubang.goscreenlock.themestore.datacenter.db.provider" android:exported="true" android:name="com.jiubang.goscreenlock.themestore.datacenter.db.ThemeDataProvider" android:process=":preview">
+</provider>
+<activity android:configChanges="0x000000A0" android:launchMode="2" android:name="com.jiubang.goscreenlock.defaulttheme.notifier.selectapp.SelectAppActivity" android:screenOrientation="1" android:theme="@android:01030006">
+<intent-filter>
+<action android:name="com.jiubang.goscreenlock.notifier.for_select_apps">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000A0" android:launchMode="2" android:name="com.jiubang.goscreenlock.defaulttheme.notifier.selectapp.SelectAppNofityActivity" android:screenOrientation="1" android:theme="@android:01030006">
+<intent-filter>
+<action android:name="com.jiubang.goscreenlock.notifier.for_select_apps">
+</action>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000A0" android:launchMode="2" android:name="com.jiubang.goscreenlock.defaulttheme.notifier.selectapp.AdditionalFuncDialogActivity" android:screenOrientation="1" android:theme="@7F0C000E">
+</activity>
+<activity android:configChanges="0x000000A0" android:excludeFromRecents="true" android:launchMode="3" android:name="com.jiubang.goscreenlock.engine.VersionUpdateDialog" android:screenOrientation="1" android:theme="@7F0C000E">
+</activity>
+<activity android:configChanges="0x000000A0" android:launchMode="2" android:name="com.jiubang.goscreenlock.activity.navigation.SystemClockDialogActivity" android:screenOrientation="1" android:theme="@7F0C000E">
+</activity>
+<activity android:configChanges="0x000000A0" android:hardwareAccelerated="true" android:label="@7F0D0000" android:launchMode="3" android:name="com.jiubang.goscreenlock.activity.navigation.SelectDefaultThemeActivity" android:process=":preview" android:screenOrientation="1" android:theme="@7F0C0017">
+<intent-filter>
+<action android:name="com.jiubang.goscreenlock.store.selectdefaulttheme">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<service android:enabled="@7F080000" android:name=".defaulttheme.notifier.app.NotifyAccessibilityForJellyBeanService" android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE">
+<intent-filter>
+<action android:name="android.accessibilityservice.AccessibilityService">
+</action>
+</intent-filter>
+<meta-data android:name="android.accessibilityservice" android:resource="@7F050000">
+</meta-data>
+</service>
+<service android:enabled="@7F080001" android:name=".defaulttheme.notifier.app.NotifyAccessibilityService" android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE">
+<intent-filter>
+<action android:name="android.accessibilityservice.AccessibilityService">
+</action>
+</intent-filter>
+<meta-data android:name="android.accessibilityservice" android:resource="@7F050000">
+</meta-data>
+</service>
+<service android:label="@7F0D0000" android:name=".defaulttheme.notifier.app.NotifyAccessibilityForJBMR2" android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE">
+<intent-filter>
+<action android:name="android.service.notification.NotificationListenerService">
+</action>
+</intent-filter>
+</service>
+<provider android:authorities="com.jiubang.goscreenlock.notifier.provider" android:name=".defaulttheme.notifier.db.NotifierProvider">
+</provider>
+<service android:exported="true" android:name="com.jiubang.goscreenlock.defaulttheme.weather.util.WeatherService">
+<intent-filter>
+<action android:name="com.jiubang.goscreenlock.weatherservice">
+</action>
+</intent-filter>
+</service>
+<provider android:authorities="com.jiubang.goscreenlock.defaulttheme.weather.util.weatherdataprovider" android:name=".defaulttheme.weather.util.WeatherDataProvider">
+</provider>
+<provider android:authorities="com.jiubang.goscreenlock.defaulttheme.weather.util.weathersettingprovider" android:multiprocess="true" android:name=".defaulttheme.weather.util.WeatherSettingProvider">
+</provider>
+<activity android:exported="true" android:launchMode="1" android:name="com.jiubang.goscreenlock.defaulttheme.weather.util.AddChinaCityActivity" android:screenOrientation="1" android:theme="@android:01030006" android:windowSoftInputMode="0x00000020">
+<intent-filter>
+<action android:name="com.jiubang.goscreenlock.add_china_city">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="true" android:launchMode="1" android:name="com.jiubang.goscreenlock.defaulttheme.weather.util.AddCityActivity" android:screenOrientation="1" android:theme="@android:01030006" android:windowSoftInputMode="0x00000020">
+<intent-filter>
+<action android:name="com.jiubang.goscreenlock.add_city">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:launchMode="1" android:name="com.jiubang.goscreenlock.defaulttheme.weather.util.BrowseCityActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name="com.jiubang.goscreenlock.defaulttheme.weather.util.PopularcityActivity" android:screenOrientation="1">
+</activity>
+<provider android:authorities="com.jiubang.goscreenlock.defaulttheme.calendar.CalendarProvider" android:name=".defaulttheme.calendar.CalendarProvider">
+</provider>
+<provider android:authorities="com.jiubang.goscreenlock.messagecenter.data.messagecentercontentprovider" android:name=".messagecenter.data.MessageCenterContentProvider">
+</provider>
+<provider android:authorities="com.jiubang.goscreenlock.keyguard.setting.sharedata" android:name="com.jiubang.goscreenlock.keyguard.SettingProvider">
+</provider>
+<activity android:enabled="false" android:name="com.jiubang.goscreenlock.activity.LockScreenLockHomeResetActivity">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.HOME">
+</category>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<provider android:authorities="com.jiubang.goscreenlock.staticsdkprovider" android:name=".StaticDataContentProvider">
+</provider>
+<activity android:name=".activity.DaylyBgSettingActivity" android:process=":preview" android:screenOrientation="1" android:theme="@android:01030006">
+<intent-filter>
+<action android:name="com.jiubang.goscreenlock.daylybg.setting">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<receiver android:name="com.jiubang.goscreenlock.themestore.common.ThemeBroadcastReceive" android:process=":preview">
+<intent-filter android:priority="10000">
+<action android:name="android.intent.action.PACKAGE_ADDED">
+</action>
+<action android:name="android.intent.action.PACKAGE_REPLACED">
+</action>
+<action android:name="android.intent.action.PACKAGE_REMOVED">
+</action>
+
+- 
+<data android:scheme="package">
+</data>
+</intent-filter>
+</receiver>
+<receiver android:name="com.jiubang.goscreenlock.themestore.common.StatisticsReceiver" android:process=":preview">
+<intent-filter android:priority="10000">
+<action android:name="android.intent.action.PACKAGE_ADDED">
+</action>
+
+- 
+<data android:scheme="package">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="Action_Download_3G.GOLocker">
+</action>
+</intent-filter>
+</receiver>
+<service android:name=".source.wallpaper.WallPaperService">
+</service>
+<provider android:authorities="com.jiubang.goscreenlock.source.wallpaper" android:name=".source.wallpaper.WallPaerDBHandler">
+</provider>
+<provider android:authorities="com.jiubang.goscreenlock.tqtlib2.city_infos" android:name=".keyguard.CityInfosProvider">
+</provider>
+<activity android:name=".activity.FeedbackActivity" android:process=":preview" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:name=".activity.MISettingActivity" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:name=".activity.WeatherForecastActivity" android:screenOrientation="1" android:theme="@android:01030006">
+<intent-filter>
+<action android:name="com.jiubang.goscreenlock.hour_detail_weather">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:launchMode="2" android:name="com.jiubang.goscreenlock.defaulttheme.memory.CleanUpMemoryActivity" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<service android:exported="true" android:label="@7F0D0004" android:name="com.go.util.download.UtilsDownloadService" android:process=":DownloadService">
+<intent-filter>
+<action android:name="com.jiubang.golocker.DownloadService">
+</action>
+</intent-filter>
+</service>
+<activity android:hardwareAccelerated="true" android:name="com.jiubang.goscreenlock.defaulttheme.fashionapp.FashionAppActivity" android:process=":preview" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:hardwareAccelerated="true" android:name="com.jiubang.goscreenlock.defaulttheme.recommendthemes.RecommendThemePaperActivity" android:process=":preview" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:hardwareAccelerated="true" android:name="com.jiubang.goscreenlock.defaulttheme.recommendthemes.RecommendThemeNotifierActivity" android:process=":preview" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<receiver android:name="com.jiubang.goscreenlock.util.statistics.RecomAppStatisticsReceiver">
+<intent-filter>
+<action android:name="com.jiubang.goscreenlock.recomappstatistics">
+</action>
+</intent-filter>
+</receiver>
+<activity android:name="com.jiubang.goscreenlock.aduntil.ApkSelectDialog" android:theme="@7F0C0019">
+</activity>
+</application>
+<uses-feature android:name="android.hardware.telephony" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.touchscreen" android:required="false">
+</uses-feature>
+<uses-sdk android:minSdkVersion="8">
+</uses-sdk>
+<supports-screens android:anyDensity="true" android:largeScreens="true" android:normalScreens="true" android:smallScreens="true">
+</supports-screens>
+<uses-permission android:name="android.permission.DISABLE_KEYGUARD">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.EXPAND_STATUS_BAR">
+</uses-permission>
+<uses-permission android:name="android.permission.STATUS_BAR">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_SMS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_SMS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_CONTACTS">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW">
+</uses-permission>
+<uses-permission android:name="android.permission.SET_PREFERRED_APPLICATIONS">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-permission android:name="android.permission.SET_WALLPAPER">
+</uses-permission>
+<uses-permission android:name="android.permission.MODIFY_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CALL_PHONE">
+</uses-permission>
+<uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT">
+</uses-permission>
+<uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES">
+</uses-permission>
+<uses-permission android:name="android.permission.RESTART_PACKAGES">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_CALENDAR">
+</uses-permission>
+<uses-permission android:name="android.permission.BIND_ACCESSIBILITY_SERVICE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SMS">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_CONTACTS">
+</uses-permission>
+<uses-feature android:name="android.hardware.location" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.location.network" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.location.gps" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.wifi" android:required="false">
+</uses-feature>
+<uses-permission android:name="android.permission.SET_WALLPAPER">
+</uses-permission>
+</manifest>

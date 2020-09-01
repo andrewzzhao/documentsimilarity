@@ -1,0 +1,182 @@
+<?xml version="1.0" ?><manifest android:versionCode="8" android:versionName="1.08" package="com.cpplus.camera" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="14" android:targetSdkVersion="26">
+</uses-sdk>
+<permission android:name="com.cpplus.camera.permission.C2D_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<permission android:name="com.cpplus.camera.permission.JPUSH_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name=".permission.JPUSH_MESSAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_USER_PRESENT">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.RECORD_AUDIO">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-permission android:name="android.permission.FLASHLIGHT">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="com.cpplus.camera.permission.C2D_MESSAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.REORDER_TASKS">
+</uses-permission>
+<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE">
+</uses-permission>
+<uses-permission android:name="android.permission.DISABLE_KEYGUARD">
+</uses-permission>
+<uses-feature android:name="android.hardware.camera" android:required="true">
+</uses-feature>
+<uses-feature android:name="android.hardware.camera.autofocus" android:required="true">
+</uses-feature>
+<uses-permission android:name="com.cpplus.camera.permission.JPUSH_MESSAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS">
+</uses-permission>
+<application android:allowBackup="true" android:clearTaskOnLaunch="true" android:hardwareAccelerated="false" android:icon="@7F070093" android:label="@7F0C0038" android:largeHeap="true" android:name="com.cpplus.camera.CppApplication" android:theme="@android:01030009">
+<service android:enabled="true" android:exported="false" android:name="cn.jpush.android.service.PushService" android:process=":pushcore">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.REGISTER">
+</action>
+<action android:name="cn.jpush.android.intent.REPORT">
+</action>
+<action android:name="cn.jpush.android.intent.PushService">
+</action>
+<action android:name="cn.jpush.android.intent.PUSH_TIME">
+</action>
+</intent-filter>
+</service>
+<provider android:authorities="com.cpplus.camera.DownloadProvider" android:exported="true" android:name="cn.jpush.android.service.DownloadProvider">
+</provider>
+<receiver android:enabled="true" android:exported="false" android:name="cn.jpush.android.service.PushReceiver">
+<intent-filter android:priority="1000">
+<action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY">
+</action>
+<category android:name="com.cpplus.camera">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.USER_PRESENT">
+</action>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_ADDED">
+</action>
+<action android:name="android.intent.action.PACKAGE_REMOVED">
+</action>
+<data android:scheme="package">
+</data>
+</intent-filter>
+</receiver>
+<activity android:configChanges="0x000000A0" android:exported="false" android:name="cn.jpush.android.ui.PushActivity" android:theme="@android:01030006">
+<intent-filter>
+<action android:name="cn.jpush.android.ui.PushActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="com.cpplus.camera">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000A0" android:exported="false" android:name="cn.jpush.android.ui.PopWinActivity" android:theme="@7F0D00A6">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="com.cpplus.camera">
+</category>
+</intent-filter>
+</activity>
+<service android:enabled="true" android:exported="false" android:name="cn.jpush.android.service.DownloadService">
+</service>
+<receiver android:exported="false" android:name="cn.jpush.android.service.AlarmReceiver">
+</receiver>
+<meta-data android:name="JPUSH_CHANNEL" android:value="developer-default">
+</meta-data>
+<meta-data android:name="JPUSH_APPKEY" android:value="433765702b181d8c01a68adf">
+</meta-data>
+<activity android:name="com.cpplus.camera.ui.SplashActivity">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="com.cpplus.camera.ui.LoginActivity" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="com.cpplus.camera.ui.RegisterActivity" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="com.cpplus.camera.ui.ResetPasswordActivity" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="com.cpplus.camera.ui.ResetPasswordValidationActivity" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="com.cpplus.camera.ui.ResetPasswordResultActivity" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="com.cpplus.camera.ui.HomeActivity">
+</activity>
+<activity android:clearTaskOnLaunch="true" android:configChanges="0x000000A0" android:name="com.demo.selfqrcode.CaptureActivity" android:screenOrientation="1" android:stateNotNeeded="true" android:theme="@android:01030007" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="com.cpplus.camera.ui.APPVersionActivity" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="com.cpplus.camera.ui.TrafficManageActivity" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="com.cpplus.camera.ui.ResetPasswordModeActivity" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="com.cpplus.camera.ui.IncomingCallActivity" android:windowSoftInputMode="0x00000002">
+</activity>
+<receiver android:enabled="true" android:name="com.google.android.gcm.GCMBroadcastReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+<action android:name="com.google.android.c2dm.intent.REGISTRATION">
+</action>
+<category android:name="com.cpplus.camera">
+</category>
+</intent-filter>
+</receiver>
+<service android:enabled="true" android:name="com.cpplus.camera.GCMIntentService">
+</service>
+<service android:enabled="true" android:exported="true" android:name="cn.jpush.android.service.DaemonService">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.DaemonService">
+</action>
+<category android:name="com.cpplus.camera">
+</category>
+</intent-filter>
+</service>
+<provider android:authorities="com.cpplus.camera.DataProvider" android:exported="false" android:name="cn.jpush.android.service.DataProvider">
+</provider>
+</application>
+</manifest>

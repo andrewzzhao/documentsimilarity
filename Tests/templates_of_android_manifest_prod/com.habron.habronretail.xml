@@ -1,0 +1,494 @@
+<?xml version="1.0" ?><manifest android:installLocation="1" android:versionCode="85" android:versionName="2.0.33" package="com.habron.habronretail" platformBuildVersionCode="28" platformBuildVersionName="9" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="16" android:targetSdkVersion="28">
+</uses-sdk>
+<uses-feature android:name="android.hardware.camera" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.camera2" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.camera.autofocus" android:required="false">
+</uses-feature>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CALL_PHONE">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CONNECTIVITY_CHANGE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_SMS">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_SMS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_CONTACTS">
+</uses-permission>
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW">
+</uses-permission>
+<uses-permission android:name="android.permission.CLEAR_APP_CACHE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.SET_TIME">
+</uses-permission>
+<uses-feature android:name="android.hardware.location.gps">
+</uses-feature>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.RECORD_AUDIO">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_CALL_LOG">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PROFILE">
+</uses-permission>
+<uses-permission android:name="android.permission.FLASHLIGHT">
+</uses-permission>
+<uses-feature android:name="android.hardware.camera.front" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.camera.flash" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.screen.landscape" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.wifi" android:required="false">
+</uses-feature>
+<supports-screens android:anyDensity="true" android:largeScreens="true" android:normalScreens="true" android:smallScreens="true" android:xlargeScreens="true">
+</supports-screens>
+<permission android:name="com.habron.habronretail.permission.C2D_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="com.habron.habronretail.permission.C2D_MESSAGE">
+</uses-permission>
+<uses-feature android:glEsVersion="0x00020000" android:required="true">
+</uses-feature>
+<application android:allowBackup="false" android:enabled="true" android:icon="@7F020130" android:label="@7F0B014F" android:largeHeap="true" android:name="com.habron.habronretail.utils.RetailAppApplication" android:supportsRtl="true" android:theme="@7F0E00BE">
+<provider android:authorities="com.habron.habronretail.fileprovider" android:exported="false" android:grantUriPermissions="true" android:name="android.support.v4.content.FileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F080000">
+</meta-data>
+</provider>
+<receiver android:enabled="true" android:name="com.google.android.gms.analytics.AnalyticsReceiver">
+<intent-filter>
+<action android:name="com.google.android.gms.analytics.ANALYTICS_DISPATCH">
+</action>
+</intent-filter>
+</receiver>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.analytics.AnalyticsService">
+</service>
+<receiver android:exported="true" android:name="com.google.android.gms.analytics.CampaignTrackingReceiver">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+<service android:name="com.google.android.gms.analytics.CampaignTrackingService">
+</service>
+<activity android:excludeFromRecents="true" android:label="@7F0B014F" android:name="com.habron.habronretail.activity.LoginActivity" android:theme="@7F0E00C0" android:windowSoftInputMode="0x00000030">
+</activity>
+<activity android:label="@7F0B014F" android:name="com.habron.habronretail.activity.HabronFirstPermissionActivity" android:theme="@7F0E00C0">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:label="@7F0B0376" android:name="com.habron.habronretail.activity.RegistrationMainActivity" android:theme="@7F0E00C0">
+</activity>
+<activity android:configChanges="0x000004B0" android:label="@7F0B013B" android:name="com.habron.habronretail.activity.VerifyOtpActivity" android:theme="@7F0E00C0" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:configChanges="0x000004B0" android:label="@7F0B0101" android:name="com.habron.habronretail.activity.ComplaintActivity" android:theme="@7F0E00C0">
+</activity>
+<activity android:configChanges="0x000004B0" android:label="@7F0B0139" android:name="com.habron.habronretail.activity.UploadMyShopPhotosActivity" android:theme="@7F0E00C0">
+</activity>
+<activity android:configChanges="0x000004B0" android:label="@7F0B0135" android:name="com.habron.habronretail.activity.TrainingVideosActivity" android:theme="@7F0E00C0">
+</activity>
+<activity android:configChanges="0x000004B0" android:hardwareAccelerated="true" android:label="@7F0B013C" android:name="com.habron.habronretail.activity.PlayVideoActivity" android:theme="@7F0E00C0">
+</activity>
+<activity android:label="@7F0B014F" android:name="com.habron.habronretail.activity.MenuActivity" android:theme="@7F0E00C0">
+</activity>
+<activity android:configChanges="0x000004B0" android:label="@7F0B0353" android:name="com.habron.habronretail.activity.VendorListActivity" android:theme="@7F0E00C0">
+</activity>
+<activity android:configChanges="0x000004B0" android:name="com.habron.habronretail.activity.PurchaseOrderActivity" android:theme="@7F0E00C0" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:configChanges="0x000004B0" android:name="com.habron.habronretail.activity.PurchaseItemActivity" android:theme="@7F0E00C0" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:configChanges="0x000004B0" android:label="@7F0B011A" android:name="com.habron.habronretail.activity.settings.ProductSettingActivity" android:theme="@7F0E00C0">
+</activity>
+<activity android:label="@7F0B00FF" android:name="com.habron.habronretail.activity.settings.ChangePasswordActivity" android:theme="@7F0E00C0">
+</activity>
+<activity android:configChanges="0x000004B0" android:label="@7F0B012A" android:name="com.habron.habronretail.activity.settings.SettingMenuActivity" android:theme="@7F0E00C0">
+</activity>
+<activity android:configChanges="0x000004B0" android:label="@7F0B0109" android:name="com.habron.habronretail.activity.EditExpensesActivity" android:theme="@7F0E00C0">
+</activity>
+<activity android:configChanges="0x000004B0" android:label="@7F0B0107" android:name="com.habron.habronretail.activity.EditPurchaseItemActivity" android:theme="@7F0E00C0">
+</activity>
+<activity android:configChanges="0x000004B0" android:label="@7F0B0109" android:name="com.habron.habronretail.activity.EditNonTourExpensesActivity" android:theme="@7F0E00C0">
+</activity>
+<activity android:configChanges="0x000004B0" android:name="com.habron.habronretail.activity.ExpensesListActivity" android:theme="@7F0E00C0" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:configChanges="0x000004B0" android:name="com.habron.habronretail.activity.PaymentListActivity" android:theme="@7F0E00C0" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:configChanges="0x000004B0" android:label="@7F0B0132" android:name="com.habron.habronretail.activity.TourActivity" android:theme="@7F0E00C0" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:configChanges="0x000004B0" android:label="@7F0B011F" android:name="com.habron.habronretail.activity.RealTimeBarCodingActivity" android:theme="@7F0E00C0" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:configChanges="0x000004B0" android:label="@7F0B00FD" android:name="com.habron.habronretail.activity.BiltyEntryActivity" android:theme="@7F0E00C0" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:configChanges="0x000004B0" android:label="@7F0B0113" android:name="com.habron.habronretail.activity.MyShopProductViewActivity" android:theme="@7F0E00C0">
+</activity>
+<activity android:configChanges="0x000004B0" android:label="@7F0B00FC" android:name="com.habron.habronretail.activity.BillImageActivity" android:theme="@7F0E00C0" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:configChanges="0x000004B0" android:label="@7F0B0112" android:name="com.habron.habronretail.activity.MyShopProductListDisplayActivity" android:theme="@7F0E00C0">
+</activity>
+<activity android:configChanges="0x000004B0" android:label="@7F0B012B" android:name="com.habron.habronretail.activity.settings.SoundAndNotificationActivity" android:theme="@7F0E00C0">
+</activity>
+<activity android:configChanges="0x000004B0" android:label="@7F0B011D" android:name="com.habron.habronretail.activity.settings.PurchaseReturnSettingActivity" android:theme="@7F0E00C0">
+</activity>
+<activity android:label="@7F0B00FE" android:name="com.habron.habronretail.activity.ChangeInfActivity" android:theme="@7F0E00C0">
+</activity>
+<activity android:label="@7F0B00F8" android:name="com.habron.habronretail.activity.settings.AccountActivity" android:theme="@7F0E00C0">
+</activity>
+<activity android:label="@7F0B00F7" android:name="com.habron.habronretail.activity.settings.AboutActivity" android:theme="@7F0E00C0">
+</activity>
+<activity android:label="@7F0B0137" android:name="com.habron.habronretail.activity.settings.UnRegisterActivity" android:theme="@7F0E00C0">
+</activity>
+<activity android:label="@7F0B0108" android:name="com.habron.habronretail.activity.settings.EditProfileActivity" android:theme="@7F0E00C0">
+</activity>
+<activity android:configChanges="0x000004B0" android:label="@7F0B0130" android:name="com.habron.habronretail.activity.settings.SyncLogSettingActivity" android:theme="@7F0E00C0">
+</activity>
+<activity android:configChanges="0x000004B0" android:label="@7F0B0125" android:name="com.habron.habronretail.activity.report.ReportsMenuActivity" android:theme="@7F0E00C0">
+</activity>
+<activity android:configChanges="0x000004B0" android:label="@7F0B00FB" android:name="com.habron.habronretail.activity.BarcodeProductDetailsActivity" android:theme="@7F0E00C0">
+</activity>
+<activity android:configChanges="0x000004B0" android:label="@7F0B0104" android:name="com.habron.habronretail.activity.DirectStockCheckActivity" android:theme="@7F0E00C0">
+</activity>
+<activity android:configChanges="0x000004B0" android:label="@7F0B0138" android:name="com.habron.habronretail.activity.UpdateBarcodeRatesActivity" android:theme="@7F0E00C0">
+</activity>
+<activity android:configChanges="0x000004B0" android:label="@7F0B0118" android:name="com.habron.habronretail.activity.report.OrderReportActivity" android:theme="@7F0E00C0">
+</activity>
+<activity android:configChanges="0x000004B0" android:label="@7F0B0118" android:name="com.habron.habronretail.activity.report.ShowOrderReportActivity" android:theme="@7F0E00C0">
+</activity>
+<activity android:configChanges="0x000004B0" android:label="@7F0B013D" android:name="com.habron.habronretail.activity.ViewExpensesActivity" android:theme="@7F0E00C0">
+</activity>
+<activity android:configChanges="0x000004B0" android:label="@7F0B013E" android:name="com.habron.habronretail.activity.ViewNonTourExpensesActivity" android:theme="@7F0E00C0">
+</activity>
+<activity android:configChanges="0x000004B0" android:label="@7F0B0107" android:name="com.habron.habronretail.activity.EditPurchaseOrderActivity" android:theme="@7F0E00C0">
+</activity>
+<activity android:configChanges="0x000004B0" android:label="@7F0B0127" android:name="com.habron.habronretail.activity.SaleBillActivity" android:theme="@7F0E00C0">
+</activity>
+<activity android:configChanges="0x000004B0" android:label="@7F0B0127" android:name="com.habron.habronretail.activity.settings.SalesBillSettingActivity" android:theme="@7F0E00C0">
+</activity>
+<activity android:configChanges="0x000004B0" android:label="@7F0B0115" android:name="com.habron.habronretail.activity.report.OfflineReportMenuActivity" android:theme="@7F0E00C0">
+</activity>
+<activity android:configChanges="0x000004B0" android:label="@7F0B0106" android:name="com.habron.habronretail.activity.report.OfflineReportsDownloadActivity" android:theme="@7F0E00C0">
+</activity>
+<activity android:configChanges="0x000004B0" android:label="@7F0B0134" android:name="com.habron.habronretail.activity.ViewTourActivity" android:theme="@7F0E00C0">
+</activity>
+<activity android:configChanges="0x000004B0" android:label="@7F0B0133" android:name="com.habron.habronretail.activity.EditTourActivity" android:theme="@7F0E00C0">
+</activity>
+<activity android:configChanges="0x000004B0" android:label="@7F0B0116" android:name="com.habron.habronretail.activity.report.OnlineReportsActivity" android:theme="@7F0E00C0">
+</activity>
+<activity android:configChanges="0x000004B0" android:label="@7F0B0128" android:name="com.habron.habronretail.activity.report.SaleReportActivity" android:theme="@7F0E00C0">
+</activity>
+<activity android:configChanges="0x000004B0" android:label="@7F0B0128" android:name="com.habron.habronretail.activity.report.SaleOfflineReportActivity" android:theme="@7F0E00C0">
+</activity>
+<activity android:configChanges="0x000004B0" android:label="@7F0B010C" android:name="com.habron.habronretail.activity.report.InvoicesActivity" android:theme="@7F0E00C0">
+</activity>
+<activity android:configChanges="0x000004B0" android:label="@7F0B0129" android:name="com.habron.habronretail.activity.report.SalesmanCommissionReportActivity" android:theme="@7F0E00C0">
+</activity>
+<activity android:configChanges="0x000004B0" android:label="@7F0B0129" android:name="com.habron.habronretail.activity.report.TablayoutCommissionReport" android:theme="@7F0E00C0">
+</activity>
+<activity android:configChanges="0x000004B0" android:label="@7F0B0102" android:name="com.habron.habronretail.activity.report.DayBookReportActivity" android:theme="@7F0E00C0">
+</activity>
+<activity android:configChanges="0x000004B0" android:label="@7F0B0136" android:name="com.habron.habronretail.activity.report.TrialBalanceAndBalanceSheetActivity" android:theme="@7F0E00C0">
+</activity>
+<activity android:configChanges="0x000004B0" android:label="@7F0B0117" android:name="com.habron.habronretail.activity.report.OperatorWiseDayBookActivity" android:theme="@7F0E00C0">
+</activity>
+<activity android:configChanges="0x000004B0" android:label="@7F0B0102" android:name="com.habron.habronretail.activity.report.DayBookOfflineReportActivity" android:theme="@7F0E00C0">
+</activity>
+<activity android:configChanges="0x000004B0" android:label="@7F0B011C" android:name="com.habron.habronretail.activity.report.PurchaseRegisterReportActivity" android:theme="@7F0E00C0">
+</activity>
+<activity android:configChanges="0x000004B0" android:label="@7F0B011C" android:name="com.habron.habronretail.activity.report.PurchaseRegisterOfflineReportActivity" android:theme="@7F0E00C0">
+</activity>
+<activity android:configChanges="0x000004B0" android:label="@7F0B0129" android:name="com.habron.habronretail.activity.report.SalesmanCommissionOfflineReportActivity" android:theme="@7F0E00C0">
+</activity>
+<activity android:configChanges="0x000004B0" android:label="@7F0B00FA" android:name="com.habron.habronretail.activity.report.AccountLedgerReportActivity" android:theme="@7F0E00C0">
+</activity>
+<activity android:configChanges="0x000004B0" android:label="@7F0B012D" android:name="com.habron.habronretail.activity.report.SupplierAccountLedgerReportActivity" android:theme="@7F0E00C0">
+</activity>
+<activity android:configChanges="0x000004B0" android:label="@7F0B00FA" android:name="com.habron.habronretail.activity.report.AccountLedgerReportOfflineActivity" android:theme="@7F0E00C0">
+</activity>
+<activity android:configChanges="0x000004B0" android:label="@7F0B013A" android:name="com.habron.habronretail.activity.report.VendorWiseBillWiseSalesAndStockActivity" android:theme="@7F0E00C0">
+</activity>
+<activity android:configChanges="0x000004B0" android:label="@7F0B013A" android:name="com.habron.habronretail.activity.report.VendorWiseBillWiseSalesAndStockOfflineActivity" android:theme="@7F0E00C0">
+</activity>
+<activity android:configChanges="0x000004B0" android:label="@7F0B0103" android:name="com.habron.habronretail.activity.report.DetailStockReportActivity" android:theme="@7F0E00C0">
+</activity>
+<activity android:configChanges="0x000004B0" android:label="@7F0B0103" android:name="com.habron.habronretail.activity.report.DetailStockStyle2ReportActivity" android:theme="@7F0E00C0">
+</activity>
+<activity android:configChanges="0x000004B0" android:label="@7F0B0111" android:name="com.habron.habronretail.activity.MyShopFilterActivity" android:theme="@7F0E00C0">
+</activity>
+<activity android:configChanges="0x000004B0" android:label="@7F0B0114" android:name="com.habron.habronretail.activity.MySupplierFilterActivity" android:theme="@7F0E00C0">
+</activity>
+<activity android:configChanges="0x000004B0" android:label="@7F0B012C" android:name="com.habron.habronretail.activity.MySupplierProductListDisplayActivity" android:theme="@7F0E00C0">
+</activity>
+<activity android:configChanges="0x000004B0" android:label="@7F0B0141" android:name="com.habron.habronretail.activity.WishListActivity" android:theme="@7F0E00C0">
+</activity>
+<activity android:configChanges="0x000004B0" android:label="@7F0B012F" android:name="com.habron.habronretail.activity.WishListSupplierActivity" android:theme="@7F0E00C0">
+</activity>
+<activity android:configChanges="0x000004B0" android:label="@7F0B0113" android:name="com.habron.habronretail.activity.MySupplierProductViewActivity" android:theme="@7F0E00C0">
+</activity>
+<activity android:configChanges="0x000004B0" android:label="@7F0B0114" android:name="com.habron.habronretail.activity.MySupplierActivity" android:theme="@7F0E00C0">
+</activity>
+<activity android:configChanges="0x000004B0" android:label="@7F0B013F" android:name="com.habron.habronretail.activity.ViewPaymentActivity" android:theme="@7F0E00C0">
+</activity>
+<activity android:configChanges="0x000004B0" android:label="@7F0B0140" android:name="com.habron.habronretail.activity.ViewReceiptActivity" android:theme="@7F0E00C0">
+</activity>
+<activity android:configChanges="0x000004B0" android:name="com.habron.habronretail.activity.ReceiptListActivity" android:theme="@7F0E00C0" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:configChanges="0x000004B0" android:label="@7F0B0103" android:name="com.habron.habronretail.activity.report.DetailStockReportOfflineActivity" android:theme="@7F0E00C0">
+</activity>
+<activity android:configChanges="0x000004B0" android:label="@7F0B011D" android:name="com.habron.habronretail.activity.RealTimePurchaseReturnActivity" android:theme="@7F0E00C0">
+</activity>
+<activity android:configChanges="0x000004B0" android:label="@7F0B012E" android:name="com.habron.habronretail.activity.SupplierVerificationActivity" android:theme="@7F0E00C0">
+</activity>
+<activity android:name="com.habron.habronretail.utils.cropprofileimage.CropResultActivity" android:theme="@7F0E00C0">
+</activity>
+<activity android:configChanges="0x000004B0" android:label="@7F0B011E" android:name="com.habron.habronretail.activity.report.PurchaseVatReportActivity" android:theme="@7F0E00C0">
+</activity>
+<activity android:configChanges="0x000004B0" android:label="@7F0B010F" android:name="com.habron.habronretail.activity.report.MembershipWiseSaleReportActivity" android:theme="@7F0E00C0">
+</activity>
+<activity android:configChanges="0x000004B0" android:label="@7F0B010B" android:name="com.habron.habronretail.activity.report.FirmWiseSaleReportActivity" android:theme="@7F0E00C0">
+</activity>
+<activity android:configChanges="0x000004B0" android:label="@7F0B0131" android:name="com.habron.habronretail.activity.report.TodaysAttendanceReportActivity" android:theme="@7F0E00C0">
+</activity>
+<activity android:configChanges="0x000004B0" android:label="@7F0B010E" android:name="com.habron.habronretail.activity.report.IssueToTailorReportActivity" android:theme="@7F0E00C0">
+</activity>
+<activity android:configChanges="0x000004B0" android:label="@7F0B010D" android:name="com.habron.habronretail.activity.report.IssueToKarigerReportActivity" android:theme="@7F0E00C0">
+</activity>
+<activity android:configChanges="0x000004B0" android:label="@7F0B010D" android:name="com.habron.habronretail.activity.report.IssueToKarigerOfflineReportActivity" android:theme="@7F0E00C0">
+</activity>
+<activity android:configChanges="0x000004B0" android:label="@7F0B0123" android:name="com.habron.habronretail.activity.report.ReceivedFromTailorReportActivity" android:theme="@7F0E00C0">
+</activity>
+<activity android:configChanges="0x000004B0" android:label="@7F0B0122" android:name="com.habron.habronretail.activity.report.ReceivedFromKarigerReportActivity" android:theme="@7F0E00C0">
+</activity>
+<activity android:configChanges="0x000004B0" android:label="@7F0B011B" android:name="com.habron.habronretail.activity.report.ProfitReportActivity" android:theme="@7F0E00C0">
+</activity>
+<activity android:configChanges="0x000004B0" android:label="@7F0B011B" android:name="com.habron.habronretail.activity.report.OfflineProfitReportActivity" android:theme="@7F0E00C0">
+</activity>
+<activity android:configChanges="0x000004B0" android:label="@7F0B010E" android:name="com.habron.habronretail.activity.report.IssueToTailorOfflineReportActivity" android:theme="@7F0E00C0">
+</activity>
+<activity android:configChanges="0x000004B0" android:label="@7F0B0123" android:name="com.habron.habronretail.activity.report.ReceivedFromTailorOfflineReportActivity" android:theme="@7F0E00C0">
+</activity>
+<activity android:configChanges="0x000004B0" android:label="@7F0B0122" android:name="com.habron.habronretail.activity.report.ReceivedFromKarigerOfflineReportActivity" android:theme="@7F0E00C0">
+</activity>
+<activity android:configChanges="0x000004B0" android:label="@7F0B010A" android:name="com.habron.habronretail.activity.report.ExportStockToOtherBranchReportActivity" android:theme="@7F0E00C0">
+</activity>
+<activity android:configChanges="0x000004B0" android:label="@7F0B010A" android:name="com.habron.habronretail.activity.report.ExportStockToOtherBranchOfflineReportActivity" android:theme="@7F0E00C0">
+</activity>
+<activity android:configChanges="0x000004B0" android:label="@7F0B010B" android:name="com.habron.habronretail.activity.report.FirmWiseSaleOfflineReportActivity" android:theme="@7F0E00C0">
+</activity>
+<activity android:configChanges="0x000004B0" android:label="@7F0B010F" android:name="com.habron.habronretail.activity.report.MembershipWiseSaleOfflineReportActivity" android:theme="@7F0E00C0">
+</activity>
+<receiver android:enabled="true" android:name="com.habron.habronretail.services.ConnectivityReceiver">
+<intent-filter>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+</receiver>
+<service android:name="com.habron.habronretail.services.GetDsrtsTktService">
+</service>
+<service android:name="com.habron.habronretail.services.DeleteProductService">
+</service>
+<service android:name="com.habron.habronretail.services.CheckStatusService">
+</service>
+<service android:name="com.habron.habronretail.services.SupplierVisitService">
+</service>
+<service android:name="com.habron.habronretail.services.ExpensesAddService">
+</service>
+<service android:name="com.habron.habronretail.services.DeleteExpensesService">
+</service>
+<service android:name="com.habron.habronretail.services.CheckStatusExpensesService">
+</service>
+<service android:enabled="true" android:name="com.habron.habronretail.services.NotificationService">
+</service>
+<service android:enabled="true" android:name="com.habron.habronretail.services.SendBackupService">
+</service>
+<service android:name="com.habron.habronretail.services.GetMenuService">
+</service>
+<service android:name="com.habron.habronretail.services.GetMstTransactionTableService">
+</service>
+<service android:name="com.habron.habronretail.services.CheckRegistrationService">
+</service>
+<service android:name="com.habron.habronretail.services.PurchaseOrderSyncService">
+</service>
+<service android:name="com.habron.habronretail.services.GpsBackgroundService">
+</service>
+<service android:name="com.habron.habronretail.services.TrackAppMenuService">
+</service>
+<service android:name="com.habron.habronretail.services.ShowHudService">
+</service>
+<service android:name="com.habron.habronretail.services.NotificationOnScreenService">
+</service>
+<service android:name="com.habron.habronretail.services.GetGifImagesService">
+</service>
+<service android:name="com.habron.habronretail.services.GetUserCurrentLocationService">
+</service>
+<service android:name="com.habron.habronretail.services.RecordingService">
+</service>
+<service android:name="com.habron.habronretail.services.SynAllRecordService">
+</service>
+<service android:name="com.habron.habronretail.services.CheckComplaintStatusService">
+</service>
+<receiver android:enabled="true" android:exported="true" android:name="com.habron.habronretail.utils.SmsReceiver">
+<intent-filter android:priority="2147483647">
+<action android:name="android.provider.Telephony.SMS_RECEIVED">
+</action>
+</intent-filter>
+</receiver>
+<meta-data android:name="com.facebook.accountkit.ApplicationName" android:value="@7F0B014F">
+</meta-data>
+<meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@7F0B0224">
+</meta-data>
+<meta-data android:name="com.facebook.accountkit.ClientToken" android:value="@7F0B00E9">
+</meta-data>
+<meta-data android:name="com.facebook.accountkit.FacebookAppEventsEnabled" android:value="false">
+</meta-data>
+<activity android:configChanges="0x000005B0" android:label="@7F0B014F" android:name="com.facebook.FacebookActivity" android:theme="@7F0E01E8">
+</activity>
+<activity android:exported="true" android:name="com.facebook.CustomTabActivity">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="@7F0B0225">
+</data>
+</intent-filter>
+</activity>
+<activity android:label="@7F0B003C" android:launchMode="1" android:name="com.facebook.accountkit.ui.AccountKitActivity" android:theme="@7F0E00C0" android:windowSoftInputMode="0x00000010">
+</activity>
+<provider android:authorities="com.facebook.app.FacebookContentProvider397721590597311" android:exported="true" android:name="com.facebook.FacebookContentProvider">
+</provider>
+<meta-data android:name="com.google.android.geo.API_KEY" android:value="AIzaSyCJSIj78XIS09W4rM3pm-llh0aNB_bB8ww">
+</meta-data>
+<activity android:clearTaskOnLaunch="true" android:name="com.google.zxing.client.android.CaptureActivity" android:screenOrientation="6" android:stateNotNeeded="true" android:theme="@7F0E01F6" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:label="@7F0B00C3" android:name="com.google.zxing.client.android.HelpActivity" android:screenOrientation="2" android:stateNotNeeded="true">
+</activity>
+<activity android:name="com.google.zxing.client.android.encode.EncodeActivity" android:screenOrientation="2">
+</activity>
+<activity android:clearTaskOnLaunch="true" android:configChanges="0x000000A0" android:name="com.google.zxing.client.androidlegacy.CaptureActivity" android:screenOrientation="0" android:stateNotNeeded="true" android:theme="@android:01030007" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.google.zxing.client.androidlegacy.HelpActivity" android:screenOrientation="2">
+</activity>
+<activity android:name="com.google.zxing.client.androidlegacy.encode.EncodeActivity" android:screenOrientation="2">
+</activity>
+<activity android:exported="true" android:name="com.google.android.gms.appinvite.PreviewActivity" android:theme="@7F0E0170">
+<intent-filter>
+<action android:name="com.google.android.gms.appinvite.ACTION_PREVIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:excludeFromRecents="true" android:exported="false" android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity" android:theme="@android:01030010">
+</activity>
+<service android:exported="true" android:name="com.google.android.gms.auth.api.signin.RevocationBoundService" android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION">
+</service>
+<receiver android:name="com.google.android.gms.cast.framework.media.MediaIntentReceiver">
+</receiver>
+<service android:name="com.google.android.gms.cast.framework.media.MediaNotificationService">
+</service>
+<service android:name="com.google.android.gms.cast.framework.ReconnectionService">
+</service>
+<service android:exported="true" android:name="com.google.firebase.messaging.FirebaseMessagingService">
+<intent-filter android:priority="-500">
+<action android:name="com.google.firebase.MESSAGING_EVENT">
+</action>
+</intent-filter>
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.tagmanager.TagManagerService">
+</service>
+<activity android:exported="true" android:name="com.google.android.gms.tagmanager.TagManagerPreviewActivity" android:noHistory="true">
+<intent-filter>
+<data android:scheme="tagmanager.c.com.habron.habronretail">
+</data>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+</intent-filter>
+</activity>
+<receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementReceiver">
+</receiver>
+<receiver android:enabled="true" android:exported="true" android:name="com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver" android:permission="android.permission.INSTALL_PACKAGES">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementService">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementJobService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<receiver android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+<category android:name="com.habron.habronretail">
+</category>
+</intent-filter>
+</receiver>
+<receiver android:exported="false" android:name="com.google.firebase.iid.FirebaseInstanceIdInternalReceiver">
+</receiver>
+<service android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdService">
+<intent-filter android:priority="-500">
+<action android:name="com.google.firebase.INSTANCE_ID_EVENT">
+</action>
+</intent-filter>
+</service>
+<provider android:authorities="com.habron.habronretail.firebaseinitprovider" android:exported="false" android:initOrder="100" android:name="com.google.firebase.provider.FirebaseInitProvider">
+</provider>
+<activity android:name="com.facebook.CustomTabMainActivity">
+</activity>
+<provider android:authorities="com.habron.habronretail.FacebookInitProvider" android:exported="false" android:name="com.facebook.internal.FacebookInitProvider">
+</provider>
+<activity android:configChanges="0x000004A0" android:name="com.facebook.ads.AudienceNetworkActivity">
+</activity>
+<activity android:configChanges="0x00000FB0" android:name="com.google.android.gms.ads.AdActivity" android:theme="@android:0103000F">
+</activity>
+<activity android:exported="true" android:name="com.facebook.accountkit.ui.AccountKitEmailRedirectActivity" android:noHistory="true">
+</activity>
+<provider android:authorities="com.habron.habronretail.AccountKitInitialization" android:exported="false" android:name="com.facebook.accountkit.internal.AccountKitInitProvider">
+</provider>
+<activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:01030010">
+</activity>
+<meta-data android:name="com.google.android.gms.version" android:value="@7F0D000A">
+</meta-data>
+</application>
+</manifest>

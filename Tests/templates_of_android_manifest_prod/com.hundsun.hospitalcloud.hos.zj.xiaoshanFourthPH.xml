@@ -1,0 +1,1334 @@
+<?xml version="1.0" ?><manifest android:versionCode="6" android:versionName="2.2.6" package="com.hundsun.hospitalcloud.hos.zj.xiaoshanFourthPH" platformBuildVersionCode="22" platformBuildVersionName="5.1.1-1819727" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="14" android:targetSdkVersion="22">
+</uses-sdk>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-permission android:name="android.permission.FLASHLIGHT">
+</uses-permission>
+<uses-feature android:name="android.hardware.camera">
+</uses-feature>
+<uses-feature android:name="android.hardware.camera.autofocus">
+</uses-feature>
+<uses-feature android:name="android.hardware.camera.flash">
+</uses-feature>
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW">
+</uses-permission>
+<uses-permission android:name="android.permission.SYSTEM_OVERLAY_WINDOW">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_LOGS">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-permission android:name="android.permission.SET_DEBUG_APP">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="android.permission.USE_CREDENTIALS">
+</uses-permission>
+<uses-permission android:name="android.permission.MANAGE_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="com.android.launcher.permission.READ_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.BROADCAST_STICKY">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCES_MOCK_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_GPS">
+</uses-permission>
+<application android:allowBackup="false" android:icon="@7F02006B" android:label="@7F070033" android:name="com.hundsun.base.application.HundsunApplication" android:screenOrientation="1" android:theme="@7F080021">
+<service android:enabled="true" android:exported="false" android:name="com.hundsun.bridge.service.AnalyticsUploadService">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.hundsun.main.v1.service.SplashService">
+<intent-filter>
+<action android:name="com.hundsun.hospitalcloud.hos.zj.xiaoshanFourthPH.main.v1.SplashService">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.hundsun.message.v1.service.NotificationService">
+<intent-filter>
+<action android:name="com.hundsun.hospitalcloud.hos.zj.xiaoshanFourthPH.push.v1.NotificationService">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.hundsun.security.v1.service.GestureService">
+<intent-filter>
+<action android:name="com.hundsun.hospitalcloud.hos.zj.xiaoshanFourthPH.security.v1.GestureService">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</service>
+<receiver android:enabled="true" android:exported="false" android:name="com.hundsun.base.receiver.ToastReceiver">
+<intent-filter>
+<action android:name="com.hundsun.hospitalcloud.hos.zj.xiaoshanFourthPH.toast">
+</action>
+</intent-filter>
+</receiver>
+<activity android:exported="true" android:name="com.hundsun.main.v1.activity.SplashActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:name="com.hundsun.main.v1.activity.WelcomeActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.hundsun.hospitalcloud.hos.zj.xiaoshanFourthPH.main.v1.WelcomeActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="true" android:label="@7F070033" android:launchMode="1" android:name="com.hundsun.main.v2.activity.MainActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.hundsun.hospitalcloud.hos.zj.xiaoshanFourthPH.main.v1.MainActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:name="com.hundsun.main.v1.activity.ModuleMoreActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.hundsun.hospitalcloud.hos.zj.xiaoshanFourthPH.main.v1.ModuleMoreActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:launchMode="1" android:name="com.hundsun.main.v1.activity.ImageVerifyActivity" android:screenOrientation="1" android:theme="@7F0800A9">
+<intent-filter>
+<action android:name="com.hundsun.hospitalcloud.hos.zj.xiaoshanFourthPH.main.v1.ImageVerifyActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:label="@7F070173" android:launchMode="1" android:name="com.hundsun.main.v1.activity.QrScanningActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.hundsun.hospitalcloud.hos.zj.xiaoshanFourthPH.main.v1.QrScanningActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:name="com.hundsun.article.v1.activity.BannerAdvertActvity" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+<intent-filter>
+<action android:name="com.hundsun.hospitalcloud.hos.zj.xiaoshanFourthPH.article.v1.BannerAdvertActvity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:name="com.hundsun.article.v1.activity.ModuleAdvertActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+<intent-filter>
+<action android:name="com.hundsun.hospitalcloud.hos.zj.xiaoshanFourthPH.article.v1.ModuleAdvertActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:label="@7F070180" android:name="com.hundsun.menu.v1.activity.ShareActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.hundsun.hospitalcloud.hos.zj.xiaoshanFourthPH.menu.v1.ShareActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:label="@7F07017A" android:name="com.hundsun.menu.v1.activity.FeedbackActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000020">
+<intent-filter>
+<action android:name="com.hundsun.hospitalcloud.hos.zj.xiaoshanFourthPH.menu.v1.FeedbackActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:label="@7F07017C" android:name="com.hundsun.menu.v1.activity.HelpActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.hundsun.hospitalcloud.hos.zj.xiaoshanFourthPH.menu.v1.HelpActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:label="@7F070176" android:name="com.hundsun.menu.v1.activity.AboutActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.hundsun.hospitalcloud.hos.zj.xiaoshanFourthPH.menu.v1.AboutActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:label="@7F070177" android:name="com.hundsun.menu.v1.activity.DebugSettingActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000020">
+<intent-filter>
+<action android:name="com.hundsun.hospitalcloud.hos.zj.xiaoshanFourthPH.menu.v1.DebugSettingActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:label="@7F070181" android:name="com.hundsun.menu.v1.activity.StatementActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.hundsun.hospitalcloud.hos.zj.xiaoshanFourthPH.menu.v1.StatementActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:label="@7F0704EA" android:launchMode="1" android:name="com.hundsun.user.v1.activity.UserLoginActivity" android:screenOrientation="1" android:theme="@7F0800CA" android:windowSoftInputMode="0x00000024">
+<intent-filter>
+<action android:name="com.hundsun.hospitalcloud.hos.zj.xiaoshanFourthPH.user.v1.UserLoginActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:label="@7F07052B" android:name="com.hundsun.user.v1.activity.UserRegisterActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000024">
+<intent-filter>
+<action android:name="com.hundsun.hospitalcloud.hos.zj.xiaoshanFourthPH.user.v1.UserRegisterActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:label="@7F07052C" android:name="com.hundsun.user.v1.activity.UserRegisterProtocolActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.hundsun.hospitalcloud.hos.zj.xiaoshanFourthPH.user.v1.UserRegisterProtocolActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:label="@7F0704B2" android:name="com.hundsun.user.v1.activity.UserForgetPswActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000024">
+<intent-filter>
+<action android:name="com.hundsun.hospitalcloud.hos.zj.xiaoshanFourthPH.user.v1.UserForgetPswActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:label="@7F0704B1" android:name="com.hundsun.user.v1.activity.UserForgetPatientActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000024">
+<intent-filter>
+<action android:name="com.hundsun.hospitalcloud.hos.zj.xiaoshanFourthPH.user.v1.UserForgetPatientActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:label="@7F0704AD" android:name="com.hundsun.user.v1.activity.UserForgetModifyPswActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000024">
+<intent-filter>
+<action android:name="com.hundsun.hospitalcloud.hos.zj.xiaoshanFourthPH.user.v1.UserForgetModifyPswActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:label="@7F0704DD" android:name="com.hundsun.user.v1.activity.UserInfoActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.hundsun.hospitalcloud.hos.zj.xiaoshanFourthPH.user.v1.UserInfoActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:name="com.hundsun.user.v1.activity.UserInfoModifyActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000024">
+<intent-filter>
+<action android:name="com.hundsun.hospitalcloud.hos.zj.xiaoshanFourthPH.user.v1.UserInfoModifyActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:name="com.hundsun.user.v1.activity.UserInfoSexSelectActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.hundsun.hospitalcloud.hos.zj.xiaoshanFourthPH.user.v1.UserInfoSexSelectActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:label="@7F070532" android:name="com.hundsun.user.v1.activity.UserSettingActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.hundsun.hospitalcloud.hos.zj.xiaoshanFourthPH.user.v1.UserSettingActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:label="@7F07050A" android:name="com.hundsun.user.v1.activity.UserPhoneModifyAuthActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000024">
+<intent-filter>
+<action android:name="com.hundsun.hospitalcloud.hos.zj.xiaoshanFourthPH.user.v1.UserPhoneModifyAuthActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:label="@7F07050A" android:name="com.hundsun.user.v1.activity.UserPhoneModifyCheckActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000024">
+<intent-filter>
+<action android:name="com.hundsun.hospitalcloud.hos.zj.xiaoshanFourthPH.user.v1.UserPhoneModifyCheckActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:label="@7F07050A" android:name="com.hundsun.user.v1.activity.UserPhoneModifyChangeActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000024">
+<intent-filter>
+<action android:name="com.hundsun.hospitalcloud.hos.zj.xiaoshanFourthPH.user.v1.UserPhoneModifyChangeActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:label="@7F0701A8" android:name="com.hundsun.doctor.v1.activity.MyDocListActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.hundsun.hospitalcloud.hos.zj.xiaoshanFourthPH.user.v1.MyDocListActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:label="@7F0701A4" android:name="com.hundsun.wiki.v1.activity.MyWikiListActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.hundsun.hospitalcloud.hos.zj.xiaoshanFourthPH.user.v1.MyWikiListActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:label="@7F0701A9" android:name="com.hundsun.register.v1.activity.MyRegListActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.hundsun.hospitalcloud.hos.zj.xiaoshanFourthPH.user.v1.MyRegListActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:label="@7F0702BB" android:name="com.hundsun.patient.v1.activity.PatientListActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.hundsun.hospitalcloud.hos.zj.xiaoshanFourthPH.patient.v1.PatientListActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:label="@7F0702AF" android:name="com.hundsun.patient.v1.activity.PatientAddActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000024">
+<intent-filter>
+<action android:name="com.hundsun.hospitalcloud.hos.zj.xiaoshanFourthPH.patient.v1.PatientAddActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:label="@7F0702B1" android:name="com.hundsun.patient.v1.activity.PatientCardAddActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.hundsun.hospitalcloud.hos.zj.xiaoshanFourthPH.patient.v1.PatientCardAddActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:label="@7F0702B0" android:name="com.hundsun.patient.v1.activity.PatientCardAddHelpActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.hundsun.hospitalcloud.hos.zj.xiaoshanFourthPH.patient.v1.PatientCardAddHelpActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:label="@7F0702B2" android:name="com.hundsun.patient.v1.activity.PatientAuthenticateActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.hundsun.hospitalcloud.hos.zj.xiaoshanFourthPH.patient.v1.PatientAuthenticateActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:label="@7F0702B7" android:name="com.hundsun.patient.v1.activity.PatientDetailActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.hundsun.hospitalcloud.hos.zj.xiaoshanFourthPH.patient.v1.PatientDetailActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:label="@7F0702B6" android:name="com.hundsun.patient.v1.activity.PatientIdCardModifyActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.hundsun.hospitalcloud.hos.zj.xiaoshanFourthPH.patient.v1.PatientIdCardModifyActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:label="@7F0702BC" android:name="com.hundsun.patient.v1.activity.PatientPhoneModifyActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.hundsun.hospitalcloud.hos.zj.xiaoshanFourthPH.patient.v1.PatientPhoneModifyActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:label="@7F0702BD" android:name="com.hundsun.patient.v1.activity.PatientRelationListActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.hundsun.hospitalcloud.hos.zj.xiaoshanFourthPH.patient.v1.PatientRelationListActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:label="@7F0702B3" android:name="com.hundsun.patient.v1.activity.PatientCardDetailActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.hundsun.hospitalcloud.hos.zj.xiaoshanFourthPH.patient.v1.PatientCardDetailActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:label="@7F0702BA" android:name="com.hundsun.patient.v1.activity.PatientListForSelectActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.hundsun.hospitalcloud.hos.zj.xiaoshanFourthPH.patient.v1.PatientListForSelectActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:name="com.hundsun.message.v1.activity.MessageListActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.hundsun.hospitalcloud.hos.zj.xiaoshanFourthPH.message.v1.MessageListActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:label="@7F070413" android:name="com.hundsun.security.v1.activity.SecurityMainActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.hundsun.hospitalcloud.hos.zj.xiaoshanFourthPH.security.v1.SecurityMainActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:label="@7F070419" android:name="com.hundsun.security.v1.activity.SecurityPswActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000024">
+<intent-filter>
+<action android:name="com.hundsun.hospitalcloud.hos.zj.xiaoshanFourthPH.security.v1.SecurityPswActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:label="@7F070426" android:name="com.hundsun.security.v1.activity.SecuritySecretMainActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000020">
+<intent-filter>
+<action android:name="com.hundsun.hospitalcloud.hos.zj.xiaoshanFourthPH.security.v1.SecuritySecretMainActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:label="@7F070429" android:name="com.hundsun.security.v1.activity.SecuritySecretSetActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.hundsun.hospitalcloud.hos.zj.xiaoshanFourthPH.security.v1.SecuritySecretSetActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:label="@7F070423" android:name="com.hundsun.security.v1.activity.SecuritySecretChooseActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.hundsun.hospitalcloud.hos.zj.xiaoshanFourthPH.security.v1.SecuritySecretChooseActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:label="@7F070409" android:name="com.hundsun.security.v1.activity.SecurityGestureMainActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.hundsun.hospitalcloud.hos.zj.xiaoshanFourthPH.security.v1.SecurityGestureMainActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:label="@7F070409" android:name="com.hundsun.security.v1.activity.SecurityGestureSetActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.hundsun.hospitalcloud.hos.zj.xiaoshanFourthPH.security.v1.SecurityGestureSetActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:label="@7F070409" android:name="com.hundsun.security.v1.activity.SecurityGestureValiActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.hundsun.hospitalcloud.hos.zj.xiaoshanFourthPH.security.v1.SecurityGestureValiActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:name="com.hundsun.security.v1.activity.SecurityGestureLockedActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.hundsun.hospitalcloud.hos.zj.xiaoshanFourthPH.security.v1.SecurityGestureLockedActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:label="@7F07042B" android:name="com.hundsun.security.v1.activity.SecurityUserAuthActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000004">
+<intent-filter>
+<action android:name="com.hundsun.hospitalcloud.hos.zj.xiaoshanFourthPH.security.v1.SecurityUserAuthActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:label="@7F0703BE" android:name="com.hundsun.register.v1.activity.RegNoticeActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.hundsun.hospitalcloud.hos.zj.xiaoshanFourthPH.register.v1.RegNoticeActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:label="@7F0703BC" android:name="com.hundsun.register.v1.activity.RegDistrictListActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.hundsun.hospitalcloud.hos.zj.xiaoshanFourthPH.register.v1.RegDistrictListActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:label="@7F0703C1" android:name="com.hundsun.register.v1.activity.RegOffTypeActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.hundsun.hospitalcloud.hos.zj.xiaoshanFourthPH.register.v1.RegOffTypeActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:label="@7F0703BF" android:name="com.hundsun.register.v1.activity.RegOffListActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.hundsun.hospitalcloud.hos.zj.xiaoshanFourthPH.register.v1.RegOffListActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:name="com.hundsun.register.v1.activity.RegOffSchActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.hundsun.hospitalcloud.hos.zj.xiaoshanFourthPH.register.v1.RegOffSchActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:label="@7F0703BD" android:name="com.hundsun.register.v1.activity.RegExpDetActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.hundsun.hospitalcloud.hos.zj.xiaoshanFourthPH.register.v1.RegExpDetActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:label="@7F0703BA" android:name="com.hundsun.register.v1.activity.RegDeptDetActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.hundsun.hospitalcloud.hos.zj.xiaoshanFourthPH.register.v1.RegDeptDetActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:label="@7F0703B9" android:name="com.hundsun.register.v1.activity.RegConfirmActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.hundsun.hospitalcloud.hos.zj.xiaoshanFourthPH.register.v1.RegConfirmActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:label="@7F0703B8" android:name="com.hundsun.register.v1.activity.RegCancelActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.hundsun.hospitalcloud.hos.zj.xiaoshanFourthPH.register.v1.RegCancelActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:label="@7F0703C5" android:name="com.hundsun.register.v1.activity.RegSuccessActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.hundsun.hospitalcloud.hos.zj.xiaoshanFourthPH.register.v1.RegSuccessActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:label="@7F0703C2" android:name="com.hundsun.register.v1.activity.RegSuccessCantPayActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.hundsun.hospitalcloud.hos.zj.xiaoshanFourthPH.register.v1.RegSuccessCantPayActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:label="@7F0702C2" android:name="com.hundsun.register.v1.activity.RegSuccessPayActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.hundsun.hospitalcloud.hos.zj.xiaoshanFourthPH.register.v1.RegSuccessPayActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:label="@7F0702D3" android:name="com.hundsun.register.v1.activity.PaySuccessActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.hundsun.hospitalcloud.hos.zj.xiaoshanFourthPH.register.v1.PaySuccessActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:label="@7F0703BB" android:name="com.hundsun.register.v1.activity.RegDetailActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.hundsun.hospitalcloud.hos.zj.xiaoshanFourthPH.register.v1.RegDetailActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:label="@7F0703C3" android:name="com.hundsun.register.v1.activity.RegQrCodeActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.hundsun.hospitalcloud.hos.zj.xiaoshanFourthPH.register.v1.RegQrCodeActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:label="@7F070153" android:name="com.hundsun.iguide.v1.activity.IguideActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.hundsun.hospitalcloud.hos.zj.xiaoshanFourthPH.iguide.v1.IguideActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:label="@7F070153" android:name="com.hundsun.iguide.v1.activity.SelfCheckActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.hundsun.hospitalcloud.hos.zj.xiaoshanFourthPH.iguide.v1.SelfCheckActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:label="@7F070155" android:name="com.hundsun.iguide.v1.activity.CheckResultActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.hundsun.hospitalcloud.hos.zj.xiaoshanFourthPH.iguide.v1.CheckResultActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:label="@7F07054F" android:name="com.hundsun.wiki.v1.activity.WikiMainActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.hundsun.hospitalcloud.hos.zj.xiaoshanFourthPH.wiki.v1.WikiMainActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:name="com.hundsun.wiki.v1.activity.WikiSearchActivity" android:screenOrientation="1" android:theme="@7F0800CC">
+<intent-filter>
+<action android:name="com.hundsun.hospitalcloud.hos.zj.xiaoshanFourthPH.wiki.v1.WikiSearchActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:name="com.hundsun.wiki.v1.activity.WikiSearchResultActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.hundsun.hospitalcloud.hos.zj.xiaoshanFourthPH.wiki.v1.WikiSearchResultActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:label="@7F07054F" android:name="com.hundsun.wiki.v1.activity.WikiModuleActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.hundsun.hospitalcloud.hos.zj.xiaoshanFourthPH.wiki.v1.WikiModuleActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:label="@7F07054F" android:name="com.hundsun.wiki.v1.activity.WikiArticleListActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.hundsun.hospitalcloud.hos.zj.xiaoshanFourthPH.wiki.v1.WikiArticleListActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:label="@7F07054D" android:name="com.hundsun.wiki.v1.activity.WikiArticleDetailActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.hundsun.hospitalcloud.hos.zj.xiaoshanFourthPH.wiki.v1.WikiArticleDetailActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:label="@7F070165" android:name="com.hundsun.hosinfo.v1.activity.HosIntroActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.hundsun.hospitalcloud.hos.zj.xiaoshanFourthPH.hosinfo.v1.HosIntroActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:label="@7F070162" android:name="com.hundsun.hosinfo.v1.activity.HosDetailActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.hundsun.hospitalcloud.hos.zj.xiaoshanFourthPH.hosinfo.v1.HosDetailActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:label="@7F070161" android:name="com.hundsun.hosinfo.v1.activity.HosDistrictListActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.hundsun.hospitalcloud.hos.zj.xiaoshanFourthPH.hosinfo.v1.HosDistrictListActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:label="@7F070168" android:name="com.hundsun.hosinfo.v1.activity.HosOffListActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.hundsun.hospitalcloud.hos.zj.xiaoshanFourthPH.hosinfo.v1.HosOffListActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:label="@7F070166" android:name="com.hundsun.hosinfo.v1.activity.HosOffDetActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.hundsun.hospitalcloud.hos.zj.xiaoshanFourthPH.hosinfo.v1.HosOffDetActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:label="@7F070164" android:name="com.hundsun.hosinfo.v1.activity.HosDocListActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.hundsun.hospitalcloud.hos.zj.xiaoshanFourthPH.hosinfo.v1.HosDocListActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:label="@7F070163" android:name="com.hundsun.hosinfo.v1.activity.HosDocDetActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.hundsun.hospitalcloud.hos.zj.xiaoshanFourthPH.hosinfo.v1.HosDocDetActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:name="com.hundsun.hosinfo.v1.activity.HosDeptDetActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.hundsun.hospitalcloud.hos.zj.xiaoshanFourthPH.hosinfo.v1.HosDeptDetActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:label="@7F070167" android:name="com.hundsun.hosinfo.v1.activity.HosOffDocActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.hundsun.hospitalcloud.hos.zj.xiaoshanFourthPH.hosinfo.v1.HosOffDocActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:label="@7F0701C6" android:name="com.hundsun.hosnavi.v1.activity.HosNaviActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.hundsun.hospitalcloud.hos.zj.xiaoshanFourthPH.hosnavi.v1.HosNaviActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:label="@7F0701C6" android:name="com.hundsun.hosnavi.v1.activity.HosNaviDetailActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.hundsun.hospitalcloud.hos.zj.xiaoshanFourthPH.hosnavi.v1.HosNaviDetailActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:label="@7F0701E3" android:name="com.hundsun.hosnavi.v1.activity.HosMapActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.hundsun.hospitalcloud.hos.zj.xiaoshanFourthPH.hosnavi.v1.HosMapActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:label="@7F0701AF" android:name="com.hundsun.hosnavi.v1.activity.HosAroundActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.hundsun.hospitalcloud.hos.zj.xiaoshanFourthPH.hosnavi.v1.HosAroundActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:label="@7F0701CA" android:name="com.hundsun.hosnavi.v1.activity.HosInnerActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.hundsun.hospitalcloud.hos.zj.xiaoshanFourthPH.hosnavi.v1.HosInnerActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:label="@7F0701EB" android:name="com.hundsun.hosnavi.v1.activity.HosOffLocActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.hundsun.hospitalcloud.hos.zj.xiaoshanFourthPH.hosnavi.v1.HosOffLocActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:label="@7F0701E8" android:name="com.hundsun.hosnavi.v1.activity.HosOutHosMapActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.hundsun.hospitalcloud.hos.zj.xiaoshanFourthPH.hosnavi.v1.HosOutHosMapActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:label="@7F0701B3" android:name="com.hundsun.hosnavi.v1.activity.HosBuildActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.hundsun.hospitalcloud.hos.zj.xiaoshanFourthPH.hosnavi.v1.HosBuildActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:label="@7F0701C2" android:name="com.hundsun.hosnavi.v1.activity.HosGraphActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.hundsun.hospitalcloud.hos.zj.xiaoshanFourthPH.hosnavi.v1.HosGraphActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:name="com.hundsun.search.v1.activity.SearchMainActivity" android:screenOrientation="1" android:theme="@7F0800A4">
+<intent-filter>
+<action android:name="com.hundsun.hospitalcloud.hos.zj.xiaoshanFourthPH.search.v1.SearchMainActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:name="com.hundsun.search.v1.activity.SearchMoreActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.hundsun.hospitalcloud.hos.zj.xiaoshanFourthPH.search.v1.SearchMoreActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:label="@7F070304" android:name="com.hundsun.queue.v1.activity.QueuePatientActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.hundsun.hospitalcloud.hos.zj.xiaoshanFourthPH.queue.v1.QueuePatientActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:label="@7F0702FE" android:name="com.hundsun.queue.v1.activity.QueueListActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.hundsun.hospitalcloud.hos.zj.xiaoshanFourthPH.queue.v1.QueueListActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="true" android:name="com.hundsun.queue.v1.activity.QueueAlertActivity" android:screenOrientation="1" android:theme="@7F0800A9">
+<intent-filter>
+<action android:name="com.hundsun.hospitalcloud.hos.zj.xiaoshanFourthPH.queue.v1.QueueAlertActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:label="@7F070118" android:name="com.hundsun.fee.v1.activity.FeePatientActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.hundsun.hospitalcloud.hos.zj.xiaoshanFourthPH.fee.v1.FeePatientActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:label="@7F0703C7" android:name="com.hundsun.report.v1.activity.ReportPatientActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.hundsun.hospitalcloud.hos.zj.xiaoshanFourthPH.report.v1.ReportPatientActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:label="@7F0703CB" android:name="com.hundsun.report.v1.activity.ReportScanningActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.hundsun.hospitalcloud.hos.zj.xiaoshanFourthPH.report.v1.ReportScanningActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:label="@7F0703CD" android:name="com.hundsun.report.v1.activity.ReportScanningNoResultActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.hundsun.hospitalcloud.hos.zj.xiaoshanFourthPH.report.v1.ReportScanningNoResultActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:label="@7F0703CE" android:name="com.hundsun.report.v1.activity.ReportScanningResultActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.hundsun.hospitalcloud.hos.zj.xiaoshanFourthPH.report.v1.ReportScanningResultActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:label="@7F0702B4" android:name="com.hundsun.transact.v1.activity.PatientCardTransactPatActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.hundsun.hospitalcloud.hos.zj.xiaoshanFourthPH.transact.v1.PatientCardTransactPatActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:label="@7F0702B4" android:name="com.hundsun.transact.v1.activity.PatientCardTransactMainActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000010">
+<intent-filter>
+<action android:name="com.hundsun.hospitalcloud.hos.zj.xiaoshanFourthPH.transact.v1.PatientCardTransactMainActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:label="@7F0702B5" android:name="com.hundsun.transact.v1.activity.PatientCardTransactSucActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.hundsun.hospitalcloud.hos.zj.xiaoshanFourthPH.transact.v1.PatientCardTransactSucActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:label="@7F070309" android:name="com.hundsun.cardrecharge.v1.activity.RechargePatientActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.hundsun.hospitalcloud.hos.zj.xiaoshanFourthPH.recharge.v1.RechargePatientActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:label="@7F070307" android:name="com.hundsun.cardrecharge.v1.activity.RechargeActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.hundsun.hospitalcloud.hos.zj.xiaoshanFourthPH.recharge.v1.RechargeActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:label="@7F070306" android:name="com.hundsun.cardrecharge.v1.activity.RechargeListActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.hundsun.hospitalcloud.hos.zj.xiaoshanFourthPH.recharge.v1.RechargeListActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:label="@7F070305" android:name="com.hundsun.cardrecharge.v1.activity.RechargePayActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.hundsun.hospitalcloud.hos.zj.xiaoshanFourthPH.recharge.v1.RechargePayActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:label="@7F0702D3" android:name="com.hundsun.cardrecharge.v1.activity.RechargePaySucessActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.hundsun.hospitalcloud.hos.zj.xiaoshanFourthPH.recharge.v1.RechargePaySucessActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:label="@7F07030B" android:name="com.hundsun.cardrecharge.v1.activity.RechargeCardPayActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.hundsun.hospitalcloud.hos.zj.xiaoshanFourthPH.recharge.v1.RechargeCardPayActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:label="@7F07044C" android:name="com.hundsun.selfpay.v1.activity.SelfpayPatientActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.hundsun.hospitalcloud.hos.zj.xiaoshanFourthPH.selfpay.v1.SelfpayPatientActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:label="@7F07046C" android:name="com.hundsun.selfpay.v1.activity.SelfpayPendingListActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.hundsun.hospitalcloud.hos.zj.xiaoshanFourthPH.selfpay.v1.SelfpayPendingListActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:label="@7F07046B" android:name="com.hundsun.selfpay.v1.activity.SelfpayPendingDetailActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.hundsun.hospitalcloud.hos.zj.xiaoshanFourthPH.selfpay.v1.SelfpayPendingDetailActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:label="@7F0702C2" android:name="com.hundsun.selfpay.v1.activity.SelfpayPayActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.hundsun.hospitalcloud.hos.zj.xiaoshanFourthPH.selfpay.v1.SelfpayPayActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:label="@7F0702D3" android:name="com.hundsun.selfpay.v1.activity.SelfpayPaySuccessActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.hundsun.hospitalcloud.hos.zj.xiaoshanFourthPH.selfpay.v1.SelfpayPaySuccessActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:label="@7F07044F" android:name="com.hundsun.selfpay.v1.activity.SelfpayHistroyListActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.hundsun.hospitalcloud.hos.zj.xiaoshanFourthPH.selfpay.v1.SelfpayHistroyListActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:label="@7F07044E" android:name="com.hundsun.selfpay.v1.activity.SelfpayHistroyDetailActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.hundsun.hospitalcloud.hos.zj.xiaoshanFourthPH.selfpay.v1.SelfpayHistroyDetailActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:label="@7F070466" android:name="com.hundsun.selfpay.v1.activity.SelfpayQrCodeActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.hundsun.hospitalcloud.hos.zj.xiaoshanFourthPH.selfpay.v1.SelfpayQrCodeActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:label="@7F070138" android:name="com.hundsun.gravida.v1.activity.GravidaMainActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.hundsun.hospitalcloud.hos.zj.xiaoshanFourthPH.gravida.v1.GravidaMainActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:label="@7F070131" android:name="com.hundsun.gravida.v1.activity.GravidaEddSettingActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.hundsun.hospitalcloud.hos.zj.xiaoshanFourthPH.gravida.v1.GravidaEddSettingActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:label="@7F070133" android:name="com.hundsun.gravida.v1.activity.GravidaExamineAlertActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.hundsun.hospitalcloud.hos.zj.xiaoshanFourthPH.gravida.v1.GravidaExamineAlertActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:label="@7F070121" android:name="com.hundsun.gravida.v1.activity.GravidaAlertSettingActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.hundsun.hospitalcloud.hos.zj.xiaoshanFourthPH.gravida.v1.GravidaAlertSettingActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:name="com.hundsun.gravida.v1.activity.GravidaJudgeActivity" android:screenOrientation="1" android:theme="@7F0800A5">
+<intent-filter>
+<action android:name="com.hundsun.hospitalcloud.hos.zj.xiaoshanFourthPH.gravida.v1.GravidaJudgeActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:label="@7F0702BA" android:name="com.hundsun.checkreservation.v1.activity.CheckReservationPatientActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.hundsun.hospitalcloud.hos.zj.xiaoshanFourthPH.checkReservation.v1.CheckReservationPatientActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:label="@7F070090" android:name="com.hundsun.checkreservation.v1.activity.CheckReservationListActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.hundsun.hospitalcloud.hos.zj.xiaoshanFourthPH.checkReservation.v1.CheckReservationListActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:label="@7F070090" android:name="com.hundsun.checkreservation.v1.activity.CheckSchedulingListActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.hundsun.hospitalcloud.hos.zj.xiaoshanFourthPH.checkReservation.v1.CheckSchedulingListActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:label="@7F070090" android:name="com.hundsun.checkreservation.v1.activity.CheckReservationSuccessActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.hundsun.hospitalcloud.hos.zj.xiaoshanFourthPH.checkReservation.v1.CheckReservationSuccessActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:label="@7F070092" android:name="com.hundsun.checkreservation.v1.activity.CheckReservationHisListActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.hundsun.hospitalcloud.hos.zj.xiaoshanFourthPH.checkReservation.v1.CheckReservationHisListActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:label="@7F070091" android:name="com.hundsun.checkreservation.v1.activity.CheckReservationHisDetailActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.hundsun.hospitalcloud.hos.zj.xiaoshanFourthPH.checkReservation.v1.CheckReservationHisDetailActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:label="@7F0700B4" android:name="com.hundsun.diagnosis.v1.activity.DiagnosisEntryActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000020">
+<intent-filter>
+<action android:name="com.hundsun.hospitalcloud.hos.zj.xiaoshanFourthPH.diagnosis.v1.DiagnosisEntryActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:name="com.hundsun.diseasedatabase.v1.activity.SicknessHistoryListActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.hundsun.hospitalcloud.hos.zj.xiaoshanFourthPH.diseasedatabase.v1.SicknessHistoryListActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:label="@7F0700F3" android:name="com.hundsun.diseasedatabase.v1.activity.AddandEditSicknessActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000020">
+<intent-filter>
+<action android:name="com.hundsun.hospitalcloud.hos.zj.xiaoshanFourthPH.diseasedatabase.v1.AddandEditSicknessActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:label="@7F0700F7" android:name="com.hundsun.diseasedatabase.v1.activity.SicknessSelectActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.hundsun.hospitalcloud.hos.zj.xiaoshanFourthPH.diseasedatabase.v1.SicknessSelectActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:label="@7F0700C1" android:name="com.hundsun.diseasedatabase.v1.activity.AddandEditAllearyActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000020">
+<intent-filter>
+<action android:name="com.hundsun.hospitalcloud.hos.zj.xiaoshanFourthPH.diseasedatabase.v1.AddandEditAllearyActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:label="@7F0700C6" android:name="com.hundsun.diseasedatabase.v1.activity.AllearySelectListActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.hundsun.hospitalcloud.hos.zj.xiaoshanFourthPH.diseasedatabase.v1.AllearySelectListActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:label="@7F0700DF" android:name="com.hundsun.diseasedatabase.v1.activity.FamilyMembersActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.hundsun.hospitalcloud.hos.zj.xiaoshanFourthPH.diseasedatabase.v1.FamilyMembersActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:label="@7F0700F7" android:name="com.hundsun.diseasedatabase.v1.activity.FamilySicknessSelectListActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.hundsun.hospitalcloud.hos.zj.xiaoshanFourthPH.diseasedatabase.v1.FamilySicknessSelectListActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:label="@7F0703F5" android:name="com.hundsun.reservationnum.v1.activity.ReservationNumPatientActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.hundsun.hospitalcloud.hos.zj.xiaoshanFourthPH.reservationnum.v1.ReservationNumPatientActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="com.tom.test.reservationnum.v1.ReservationNumPatientActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:label="@7F0703F2" android:name="com.hundsun.reservationnum.v1.activity.ReservationNumListActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.hundsun.hospitalcloud.hos.zj.xiaoshanFourthPH.reservationnum.v1.ReservationNumListActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="com.tom.test.reservationnum.v1.ReservationNumListActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:label="@7F0703F3" android:name="com.hundsun.reservationnum.v1.activity.ReservationNumPaidListActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.hundsun.hospitalcloud.hos.zj.xiaoshanFourthPH.reservationnum.v1.ReservationNumPaidListActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="com.tom.test.reservationnum.v1.ReservationNumPaidListActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:label="@7F0703F1" android:name="com.hundsun.reservationnum.v1.activity.ReservationNumDetailActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.hundsun.hospitalcloud.hos.zj.xiaoshanFourthPH.reservationnum.v1.ReservationNumDetailActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="com.tom.test.reservationnum.v1.ReservationNumDetailActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:label="@7F0703F7" android:name="com.hundsun.reservationnum.v1.activity.ReservationNumPayActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.hundsun.hospitalcloud.hos.zj.xiaoshanFourthPH.reservationnum.v1.ReservationNumPayActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="com.tom.test.reservationnum.v1.ReservationNumPayActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:label="@7F0703F8" android:name="com.hundsun.reservationnum.v1.activity.ReservationNumPaySuccessActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.hundsun.hospitalcloud.hos.zj.xiaoshanFourthPH.reservationnum.v1.ReservationNumPaySuccessActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="com.tom.test.reservationnum.v1.ReservationNumPaySuccessActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:name="com.hundsun.pay.activity.PayWebViewActivity" android:screenOrientation="1">
+</activity>
+<meta-data android:name="com.baidu.lbsapi.API_KEY" android:value="@7F070174">
+</meta-data>
+<service android:enabled="true" android:name="com.baidu.location.f" android:process=":remote">
+</service>
+<meta-data android:name="UMENG_APPKEY" android:value="@7F070481">
+</meta-data>
+<meta-data android:name="UMENG_CHANNEL" android:value="@7F070479">
+</meta-data>
+<activity android:configChanges="0x000004A0" android:exported="true" android:name="com.hundsun.hospitalcloud.hos.zj.xiaoshanFourthPH.wxapi.WXEntryActivity" android:screenOrientation="1" android:theme="@android:01030055">
+</activity>
+<activity android:exported="true" android:name="com.hundsun.hospitalcloud.hos.zj.xiaoshanFourthPH.wxapi.WXPayEntryActivity" android:screenOrientation="1" android:theme="@android:01030055">
+</activity>
+<activity android:configChanges="0x000000E0" android:exported="false" android:name="com.alipay.sdk.app.H5PayActivity" android:screenOrientation="3" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:launchMode="2" android:name="com.tencent.tauth.AuthActivity" android:noHistory="true" android:screenOrientation="1">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="tencent1105687435">
+</data>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.tencent.connect.common.AssistActivity" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x000000A0" android:exported="false" android:name="com.sina.weibo.sdk.component.WeiboSdkBrowser" android:screenOrientation="1" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:excludeFromRecents="true" android:name="com.umeng.socialize.editorpage.ShareActivity" android:screenOrientation="1" android:theme="@7F080118">
+</activity>
+<service android:exported="false" android:name="cmb.pb.cmbsafe.CmbService">
+</service>
+</application>
+</manifest>

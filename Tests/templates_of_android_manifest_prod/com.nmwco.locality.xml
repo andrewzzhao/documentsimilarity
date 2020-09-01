@@ -1,0 +1,174 @@
+<?xml version="1.0" ?><manifest android:versionCode="13" android:versionName="3.30.64287" package="com.nmwco.locality" platformBuildVersionCode="17" platformBuildVersionName="4.2.2-1425461" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="14" android:targetSdkVersion="17">
+</uses-sdk>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_CONTACTS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PROFILE">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="com.nmwco.locality.permission.INTERNAL_ACCESS">
+</uses-permission>
+<uses-permission android:name="com.nmwco.mobility.client.permission.INTERNAL_ACCESS">
+</uses-permission>
+<uses-permission android:name="com.nmwco.mobility.client.permission.TRUSTED_EXTERNAL_ACCESS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<permission android:name="com.nmwco.locality.permission.INTERNAL_ACCESS" android:protectionLevel="0x00000002">
+</permission>
+<permission android:name="com.nmwco.locality.permission.TRUSTED_EXTERNAL_ACCESS" android:protectionLevel="0x00000002">
+</permission>
+<application android:allowBackup="false" android:icon="@7F020013" android:label="@7F060000" android:name=".common.LocalityApplication" android:theme="@7F070001">
+<meta-data android:name="NMApplicationType:com.nmwco.locality" android:value="App">
+</meta-data>
+<meta-data android:name="NMApplicationType:com.nmwco.locality:service" android:value="Service">
+</meta-data>
+<activity android:label="@7F060002" android:name=".app.LaunchActivity" android:noHistory="true">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F060001" android:name=".app.StatusActivity">
+</activity>
+<activity android:label="@7F060001" android:name=".app.SetupActivity">
+</activity>
+<activity android:label="@7F060001" android:name=".app.AlertActivity" android:noHistory="true">
+</activity>
+<activity android:label="@7F06007E" android:name=".app.SettingsActivity">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".app.StatusActivity">
+</meta-data>
+</activity>
+<activity android:label="@7F06007C" android:name=".app.SupportDataActivity">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".app.StatusActivity">
+</meta-data>
+</activity>
+<activity android:label="@7F06007D" android:name=".app.AboutActivity">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".app.StatusActivity">
+</meta-data>
+</activity>
+<activity android:configChanges="0x00000480" android:label="@7F06001B" android:name="com.nmwco.locality.app.ClDiagResultsActivity">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".app.StatusActivity">
+</meta-data>
+</activity>
+<activity android:configChanges="0x00000480" android:label="@7F06001C" android:name="com.nmwco.locality.app.ClDiagDetailsActivity">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".app.ClDiagResultsActivity">
+</meta-data>
+</activity>
+<activity android:configChanges="0x00000480" android:label="@7F06006D" android:name="com.nmwco.locality.app.ClDiagViewReportsActivity">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".app.ClDiagViewReportsActivity">
+</meta-data>
+</activity>
+<service android:label="@7F060003" android:name=".svc.coll.CollectionService" android:permission="com.nmwco.locality.permission.INTERNAL_ACCESS" android:process=":service">
+<intent-filter>
+<action android:name="com.nmwco.locality.svc.coll.CollectionService.ACTION_SERVICE_CONTROL">
+</action>
+<action android:name="com.nmwco.locality.svc.coll.CollectionService.ACTION_API_BIND">
+</action>
+</intent-filter>
+</service>
+<service android:label="@7F060008" android:name=".svc.ctrl.ControllerService" android:permission="com.nmwco.locality.permission.INTERNAL_ACCESS" android:process=":service">
+<intent-filter>
+<action android:name="com.nmwco.locality.svc.ctrl.ControllerService.ACTION_BOOT">
+</action>
+<action android:name="com.nmwco.locality.svc.ctrl.ControllerService.ACTION_UPGRADE">
+</action>
+<action android:name="com.nmwco.locality.svc.ctrl.ControllerService.ACTION_SETTINGS_CHANGE">
+</action>
+<action android:name="com.nmwco.locality.svc.ctrl.ControllerService.ACTION_TEST_SERVER_COMM">
+</action>
+</intent-filter>
+</service>
+<service android:label="@7F060004" android:name=".svc.lic.LicensingService" android:permission="com.nmwco.locality.permission.INTERNAL_ACCESS" android:process=":service">
+<intent-filter>
+<action android:name="com.nmwco.locality.svc.lic.LicensingService.ACTION_RUN">
+</action>
+<action android:name="com.nmwco.locality.svc.lic.LicensingService.ACTION_BACKOFF">
+</action>
+<action android:name="com.nmwco.locality.svc.lic.LicensingService.ACTION_BIND">
+</action>
+</intent-filter>
+</service>
+<service android:label="@7F060005" android:name=".svc.trans.TransmissionService" android:permission="com.nmwco.locality.permission.INTERNAL_ACCESS" android:process=":service">
+<intent-filter>
+<action android:name="com.nmwco.locality.svc.trans.TransmissionService.ACTION_RUN">
+</action>
+<action android:name="com.nmwco.locality.svc.trans.TransmissionService.ACTION_BACKOFF">
+</action>
+<action android:name="com.nmwco.locality.svc.trans.TransmissionService.ACTION_BIND">
+</action>
+</intent-filter>
+</service>
+<service android:label="@7F060006" android:name=".svc.prov.ProvisioningService" android:permission="com.nmwco.locality.permission.INTERNAL_ACCESS" android:process=":service">
+<intent-filter>
+<action android:name="com.nmwco.locality.svc.prov.ProvisioningService.ACTION_RUN">
+</action>
+<action android:name="com.nmwco.locality.svc.prov.ProvisioningService.ACTION_BACKOFF">
+</action>
+<action android:name="com.nmwco.locality.svc.prov.ProvisioningService.ACTION_RENEWAL">
+</action>
+<action android:name="com.nmwco.locality.svc.prov.ProvisioningService.ACTION_BIND">
+</action>
+</intent-filter>
+</service>
+<service android:label="@7F06000A" android:name="com.nmwco.locality.svc.supportdata.SupportDataService" android:permission="com.nmwco.locality.permission.INTERNAL_ACCESS" android:process=":service">
+<intent-filter>
+<action android:name="com.nmwco.locality.supportdata.SupportDataService.ACTION_COMPLETE_SUPPORTDATA">
+</action>
+</intent-filter>
+</service>
+<service android:label="@7F060007" android:name=".svc.report.ReportService" android:permission="com.nmwco.locality.permission.TRUSTED_EXTERNAL_ACCESS" android:process=":service">
+<intent-filter>
+<action android:name="com.nmwco.locality.svc.report.ReportService.RunReport">
+</action>
+<action android:name="com.nmwco.locality.svc.report.ReportService.ACTION_RUN_INTERACTIVE">
+</action>
+</intent-filter>
+</service>
+<receiver android:name=".svc.ctrl.AutoStartReceiver" android:permission="android.permission.RECEIVE_BOOT_COMPLETED" android:process=":service">
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</receiver>
+<receiver android:name=".svc.ctrl.SpecialSettingsChangeReceiver" android:permission="com.nmwco.locality.permission.INTERNAL_ACCESS" android:process=":service">
+<intent-filter>
+<action android:name="com.nmwco.locality.settings.SpecialSettingsBroadcaster.SETTINGS_CHANGED">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name="com.nmwco.locality.upgrade.UpgradeReceiver" android:process=":service">
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_REPLACED">
+</action>
+<data android:scheme="package">
+</data>
+</intent-filter>
+</receiver>
+<provider android:authorities="com.nmwco.locality.settingsprovider" android:exported="true" android:name=".settings.SettingsProvider" android:permission="com.nmwco.locality.permission.INTERNAL_ACCESS" android:process=":service">
+</provider>
+</application>
+</manifest>

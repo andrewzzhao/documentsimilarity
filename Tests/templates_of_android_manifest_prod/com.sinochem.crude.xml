@@ -1,0 +1,538 @@
+<?xml version="1.0" ?><manifest android:versionCode="29" android:versionName="2.3.0" package="com.sinochem.crude" platformBuildVersionCode="24" platformBuildVersionName="7.000000" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="15" android:targetSdkVersion="26">
+</uses-sdk>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.BLUETOOTH_ADMIN">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.RECORD_AUDIO">
+</uses-permission>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_USER_PRESENT">
+</uses-permission>
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS">
+</uses-permission>
+<uses-permission android:name="android.permission.CALL_PHONE">
+</uses-permission>
+<uses-feature android:name="android.hardware.camera" android:required="true">
+</uses-feature>
+<uses-feature android:name="android.hardware.camera.autofocus" android:required="true">
+</uses-feature>
+<uses-feature android:name="android.hardware.camera.flash" android:required="false">
+</uses-feature>
+<permission android:name="com.sinochem.crude.permission.JPUSH_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="com.sinochem.crude.permission.JPUSH_MESSAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES">
+</uses-permission>
+<uses-permission android:name="android.permission.FLASHLIGHT">
+</uses-permission>
+<application android:allowBackup="true" android:hardwareAccelerated="true" android:icon="@7F03006B" android:label="@7F0B009E" android:name="com.stub.StubApp" android:resizeableActivity="true" android:supportsRtl="true" android:theme="@7F0D00B4">
+<meta-data android:name="android.max_aspect" android:value="2.100000">
+</meta-data>
+<meta-data android:name="EASEMOB_APPKEY" android:value="1151180608228968#comsinochemzhb2b">
+</meta-data>
+<service android:exported="true" android:name="com.hyphenate.chat.EMChatService">
+</service>
+<service android:exported="true" android:name="com.hyphenate.chat.EMJobService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<receiver android:name="com.hyphenate.chat.EMMonitorReceiver">
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_REMOVED">
+</action>
+<data android:scheme="package">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+<action android:name="android.intent.action.USER_PRESENT">
+</action>
+</intent-filter>
+</receiver>
+<provider android:authorities="com.sinochem.crude.fileprovider" android:exported="false" android:grantUriPermissions="true" android:name="android.support.v4.content.FileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F080000">
+</meta-data>
+</provider>
+<activity android:name="com.sinochem.crude.business.welcome.WelcomeActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="host" android:scheme="mycrudeoil">
+</data>
+</intent-filter>
+</activity>
+<activity android:launchMode="2" android:name="com.sinochem.crude.business.main.view.MainActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sinochem.crude.demo.NetDemoActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sinochem.crude.demo.DemoSingleRecyclerviewActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sinochem.crude.demo.DemoMultiRecyclerviewActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sinochem.crude.business.welcome.GuideActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sinochem.crude.business.tools.view.HomeToolsActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="2" android:name="com.sinochem.crude.business.login.view.LoginActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sinochem.crude.business.login.view.RegisterByEmailActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sinochem.crude.business.login.view.RegisterByPhoneActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sinochem.crude.business.login.view.MobileZoneActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sinochem.crude.business.login.view.VerificationCodeActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sinochem.crude.business.login.view.BindingPhoneActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sinochem.crude.business.login.view.WXBindingPhoneActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sinochem.crude.business.login.view.SetPasswordActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sinochem.crude.business.news.view.NewsChannelActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sinochem.crude.business.news.view.NewsInfoActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sinochem.crude.demo.DemoListActivity">
+</activity>
+<activity android:name="com.sinochem.crude.business.news.view.NewsEncyActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sinochem.crude.business.news.view.NewsSanDongActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sinochem.crude.business.news.view.NewsSearchActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000024">
+</activity>
+<activity android:name="com.sinochem.crude.business.coterie.view.CoterieSearchActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000024">
+</activity>
+<activity android:name="com.sinochem.crude.business.coterie.view.CardSearchActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000024">
+</activity>
+<activity android:name="com.sinochem.crude.business.news.activityen.NewsEnSupListActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sinochem.crude.business.news.activityen.NewsEnListActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sinochem.crude.business.coterie.view.CafeArticleDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sinochem.crude.business.coterie.view.CoterieDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sinochem.crude.business.coterie.view.BigCafeActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sinochem.crude.business.coterie.view.TopicEditActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000024">
+</activity>
+<activity android:name="com.sinochem.crude.business.coterie.view.CoterieEditCommActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000024">
+</activity>
+<activity android:name="com.sinochem.crude.business.coterie.view.CoterieComListActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sinochem.crude.business.coterie.view.CafeListActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sinochem.crude.business.transaction.view.TransActionDemandMarketActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sinochem.crude.business.transaction.view.TransActionMyDemandActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sinochem.crude.business.transaction.view.TransActionQuotationRecordActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sinochem.crude.business.transaction.view.TransActionMyOrderActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sinochem.crude.business.transaction.view.TransActionPurchaseInformationActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sinochem.crude.business.transaction.view.TransActionMarketingInformation" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sinochem.crude.business.transaction.view.TransActionToolsActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sinochem.crude.business.transaction.view.TransActionPurchaseActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sinochem.crude.business.transaction.view.TransActionExecutionOrderActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sinochem.crude.business.transaction.view.TransActionExchangePriceActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sinochem.crude.business.transaction.view.TransActionStatementsManagementActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sinochem.crude.business.transaction.view.TrabsActionDetailsStringActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sinochem.crude.business.transaction.view.TransActionStatementDetailsActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sinochem.crude.business.transaction.view.TransActionShippingInformationActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sinochem.crude.business.transaction.view.TransActionTradeDocumentsActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sinochem.crude.business.transaction.view.TrabsActionOrderDocumentResultActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sinochem.crude.business.transaction.view.TransActionOrderDocumentListActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sinochem.crude.business.transaction.view.TransActionContractActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sinochem.crude.business.transaction.view.TransActionOrderDetailsActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sinochem.crude.business.transaction.view.TransQuoteChangeHistoryActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sinochem.crude.business.transaction.view.TranDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sinochem.crude.business.tools.view.HomeToolsListActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sinochem.crude.business.transaction.view.TransBidSuccessActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sinochem.crude.business.transaction.view.TransAddExecutorActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sinochem.crude.business.transaction.view.TransEarnCostAnalyzeActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sinochem.crude.business.transaction.view.TransEarnCostAnalyzeDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00002004" android:name="com.sinochem.crude.business.personal.view.SetActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sinochem.crude.business.personal.set.ModifyPasswordActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sinochem.crude.business.personal.set.FeedBackActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sinochem.crude.business.personal.info.PersonalInfoActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sinochem.crude.business.personal.info.ModifyInfoActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sinochem.crude.business.personal.message.view.MessageListActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sinochem.crude.business.personal.message.view.MessageDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sinochem.crude.business.personal.view.MyCollectionActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sinochem.crude.business.personal.view.MyAttentionActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sinochem.crude.business.personal.view.MyReleaseActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sinochem.crude.business.shipping.view.ShippingPlateActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="2" android:name="com.sinochem.crude.business.shipping.view.ShippingSearchActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sinochem.crude.business.shipping.view.ShippingCharteringActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sinochem.crude.business.shipping.view.SearchTimeActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sinochem.crude.business.shipping.view.reachport.ReachPortResultActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="2" android:name="com.sinochem.crude.business.shipping.view.lane.SpeedLaneActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sinochem.crude.business.shipping.view.ShippingWebActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sinochem.crude.business.shipping.view.ShippingInfoWebActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sinochem.crude.business.shipping.view.lloyds.LloydsFileActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sinochem.crude.business.shipping.view.searchport.SearchPortActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="2" android:name="com.sinochem.crude.business.shipping.view.lane.SearchLaneActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sinochem.crude.business.shipping.view.details.HistoryLaneActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sinochem.crude.business.shipping.view.searchport.SearchPlateActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sinochem.crude.business.shipping.view.SearchPortResultActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sinochem.crude.business.personal.view.CommonProblemActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sinochem.crude.business.personal.view.CardClipActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sinochem.crude.business.personal.view.CardClipSearchActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sinochem.crude.business.personal.view.MyCardActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sinochem.crude.business.personal.view.CardClipApplyActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sinochem.crude.business.personal.view.MyEarningsActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sinochem.crude.business.shipping.view.ShippingMyChannelsNoTableActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sinochem.crude.business.shipping.view.ShippingMyActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sinochem.crude.business.shipping.view.ShippingMyChannelsSearchActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sinochem.crude.business.shipping.view.ShippingMyChannelsActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sinochem.crude.business.personal.view.CardDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sinochem.crude.business.shipping.view.details.ShipDemandDetailsActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sinochem.crude.business.shipping.view.details.ShipAgreementDetailsActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sinochem.crude.business.shipping.view.details.ShipSettlementDetailsActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sinochem.crude.business.shipping.view.details.ShipShipDetailsActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sinochem.crude.business.shipping.view.details.ShipQueryDetailsActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sinochem.crude.business.login.view.ForgetPasswordActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sinochem.crude.business.shipping.view.searchport.SearchLoadingActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sinochem.crude.business.news.view.NewsLogisticsActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sinochem.crude.business.shipping.view.logistics.ShippingLogisticsDetails" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sinochem.crude.business.shipping.view.logistics.ShippingVoyageDetails" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sinochem.crude.business.shipping.view.logistics.ShippingLoadingportDetails" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sinochem.crude.business.shipping.view.logistics.ShippingOnthewayDetails" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sinochem.crude.business.shipping.view.logistics.ShippingUnloadingportDetails" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:exported="true" android:launchMode="2" android:name="com.sinochem.crude.wxapi.WXEntryActivity" android:theme="@android:01030010">
+</activity>
+<activity android:name="com.sinochem.crude.business.shipping.view.details.ShipInquiriesListActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sinochem.crude.business.shipping.view.details.ShipInquiriesDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sinochem.crude.business.shipping.view.details.ShipOfferDetailsActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sinochem.crude.business.shipping.view.details.ShipCharterInformationActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sinochem.crude.business.shipping.view.ShippingTracingActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sinochem.crude.business.shipping.view.details.ShipCharterInfoActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sinochem.crude.business.shipping.view.details.ShipContractActivity">
+</activity>
+<receiver android:enabled="true" android:exported="false" android:name="com.sinochem.crude.receiver.JpushReceiver">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.REGISTRATION">
+</action>
+<action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED">
+</action>
+<action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED">
+</action>
+<action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED">
+</action>
+<action android:name="cn.jpush.android.intent.CONNECTION">
+</action>
+<category android:name="com.sinochem.crude">
+</category>
+</intent-filter>
+</receiver>
+<activity android:name="com.sinochem.crude.business.home.view.HotNewsActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sinochem.crude.business.shipping.view.dealpoints.DealPointsActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sinochem.crude.business.shipping.view.dealpoints.ShipOilActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sinochem.crude.business.shipping.view.dealpoints.JSFXActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sinochem.crude.business.personal.view.RevenueRecordActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sinochem.crude.business.login.view.EmailNoticeActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="2" android:name="com.sinochem.crude.im.activity.MyChatActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.sinochem.crude.im.activity.MyConversationListActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="2" android:name="com.sinochem.crude.business.capture.CaptureActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sinochem.crude.business.capture.SuccessLoginActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sinochem.crude.business.capture.CaptureErrorActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sinochem.crude.business.capture.CaptureConfirmActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sinochem.crude.business.shipping.view.ShippingToolsActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sinochem.crude.business.shipping.view.ShipInformationToolActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sinochem.crude.base.X5WebViewActivity">
+</activity>
+<activity android:name="com.sinochem.crude.business.shipping.view.searchport.SearchSpeedLoadingActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sinochem.crude.common.webview.CommonWebviewActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sinochem.crude.business.shipping.view.queuing.QueuingListActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sinochem.crude.business.shipping.view.queuing.QueuingDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="2" android:name="com.sinochem.crude.business.shipping.view.MyFleetActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sinochem.crude.business.expert.view.TechnicalServiceActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.sinochem.crude.business.expert.view.ExpertThinkTankActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.sinochem.crude.business.expert.view.EnterpriseThinkTankActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:name="com.sinochem.crude.business.expert.view.EnterpriseThinkTankDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sinochem.crude.business.personal.view.MyEnterPriseActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sinochem.crude.business.login.view.RegisterAgreementActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sinochem.crude.business.login.view.PrivacyPolicyActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sinochem.crude.business.login.view.RetrievePwdByPhoneActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sinochem.crude.business.login.view.RetrieveSetPwdActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sinochem.crude.business.login.view.RetrieveFinalActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sinochem.crude.business.login.view.RetrievePwdByEmailActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sinochem.crude.business.login.view.WXInfoActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.sinochem.crude.business.login.view.WXBindingNewActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.zhihu.matisse.ui.MatisseActivity">
+</activity>
+<activity android:name="com.zhihu.matisse.internal.ui.AlbumPreviewActivity">
+</activity>
+<activity android:name="com.zhihu.matisse.internal.ui.SelectedPreviewActivity">
+</activity>
+<activity android:exported="false" android:name="cn.jpush.android.ui.PopWinActivity" android:theme="@7F0D00EB">
+</activity>
+<activity android:configChanges="0x000000A0" android:exported="false" android:name="cn.jpush.android.ui.PushActivity" android:theme="@android:01030006">
+<intent-filter>
+<action android:name="cn.jpush.android.ui.PushActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="com.sinochem.crude">
+</category>
+</intent-filter>
+</activity>
+<service android:enabled="true" android:exported="false" android:name="cn.jpush.android.service.PushService" android:process=":pushcore">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.REGISTER">
+</action>
+<action android:name="cn.jpush.android.intent.REPORT">
+</action>
+<action android:name="cn.jpush.android.intent.PushService">
+</action>
+<action android:name="cn.jpush.android.intent.PUSH_TIME">
+</action>
+</intent-filter>
+</service>
+<service android:enabled="true" android:exported="true" android:name="cn.jpush.android.service.DaemonService">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.DaemonService">
+</action>
+<category android:name="com.sinochem.crude">
+</category>
+</intent-filter>
+</service>
+<receiver android:enabled="true" android:exported="false" android:name="cn.jpush.android.service.PushReceiver">
+<intent-filter android:priority="1000">
+<action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY">
+</action>
+<category android:name="com.sinochem.crude">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.USER_PRESENT">
+</action>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_ADDED">
+</action>
+<action android:name="android.intent.action.PACKAGE_REMOVED">
+</action>
+<data android:scheme="package">
+</data>
+</intent-filter>
+</receiver>
+<receiver android:exported="false" android:name="cn.jpush.android.service.AlarmReceiver">
+</receiver>
+<provider android:authorities="com.sinochem.crude.DataProvider" android:exported="false" android:name="cn.jpush.android.service.DataProvider">
+</provider>
+<provider android:authorities="com.sinochem.crude.DownloadProvider" android:exported="true" android:name="cn.jpush.android.service.DownloadProvider">
+</provider>
+<meta-data android:name="JPUSH_CHANNEL" android:value="developer-default">
+</meta-data>
+<meta-data android:name="JPUSH_APPKEY" android:value="1057f4831bed92341cffab6b">
+</meta-data>
+<service android:exported="true" android:name="com.taobao.sophix.aidl.DownloadService">
+<intent-filter>
+<action android:name="com.taobao.hotfix.action">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</service>
+<meta-data android:name="android.support.VERSION" android:value="25.4.0">
+</meta-data>
+<activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:01030010">
+</activity>
+<meta-data android:name="com.google.android.gms.version" android:value="@7F0F0009">
+</meta-data>
+<activity android:name="com.vondear.rxtools.activity.ActivityWebView">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:name="com.vondear.rxtools.activity.ActivityBase">
+</activity>
+<activity android:name="com.vondear.rxtools.activity.ActivityScanerCode">
+</activity>
+<activity android:name="com.vondear.rxtools.activity.ActivityCodeTool">
+</activity>
+<provider android:authorities="com.sinochem.crude.AgentWebFileProvider" android:exported="false" android:grantUriPermissions="true" android:name="com.just.agentweb.AgentWebFileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F080001">
+</meta-data>
+</provider>
+<activity android:configChanges="0x000004A0" android:exported="false" android:launchMode="0" android:name="com.just.agentweb.ActionActivity" android:theme="@7F0D01CB" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:launchMode="2" android:name="com.tencent.tauth.AuthActivity" android:noHistory="true">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="tencent1106950304">
+</data>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.tencent.connect.common.AssistActivity" android:screenOrientation="3" android:theme="@android:01030010">
+</activity>
+</application>
+</manifest>

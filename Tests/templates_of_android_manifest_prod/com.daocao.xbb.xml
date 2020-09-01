@@ -1,0 +1,474 @@
+<?xml version="1.0" ?><manifest android:versionCode="3" android:versionName="1.2.0" package="com.daocao.xbb" platformBuildVersionCode="24" platformBuildVersionName="7.000000" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="15" android:targetSdkVersion="24">
+</uses-sdk>
+<permission android:name="com.daocao.xbb.permission.JPUSH_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-feature android:name="android.hardware.camera">
+</uses-feature>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_CALL_LOG">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.SEND_SMS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_SMS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_CONTACTS">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_CONTACTS">
+</uses-permission>
+<uses-permission android:name="com.daocao.xbb.permission.JPUSH_MESSAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_USER_PRESENT">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-feature android:name="android.hardware.camera2.full">
+</uses-feature>
+<uses-feature android:name="android.hardware.camera.autofocus">
+</uses-feature>
+<uses-permission android:name="android.permission.RECEIVE_MMS">
+</uses-permission>
+<uses-permission android:name="android.permission.LOCATION_HARDWARE">
+</uses-permission>
+<uses-permission android:name="android.permission.LOCAL_MAC_ADDRESS">
+</uses-permission>
+<uses-permission android:name="android.permission.PACKAGE_USAGE_STATS">
+</uses-permission>
+<uses-permission android:name="android.permission.REAL_GET_TASKS">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERACT_ACROSS_USERS_FULL">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PRIVILEGED_PHONE_STATE">
+</uses-permission>
+<supports-screens android:anyDensity="true" android:largeScreens="true" android:normalScreens="true" android:resizeable="true" android:smallScreens="true">
+</supports-screens>
+<uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT">
+</uses-permission>
+<uses-feature android:name="android.hardware.camera.front" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.camera.front.autofocus" android:required="false">
+</uses-feature>
+<meta-data android:name="android.support.VERSION" android:value="25.3.1">
+</meta-data>
+<application android:allowBackup="true" android:icon="@7F030085" android:label="@7F0900D0" android:largeHeap="true" android:name="com.daocao.xbb.Application" android:screenOrientation="1" android:supportsRtl="true" android:theme="@7F0B0044" android:vmSafeMode="true">
+<meta-data android:name="com.daocao.xbb.view.GlideConfiguration" android:value="GlideModule">
+</meta-data>
+<provider android:authorities="com.daocao.xbb.fileprovider" android:exported="false" android:grantUriPermissions="true" android:name="android.support.v4.content.FileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F060000">
+</meta-data>
+</provider>
+<meta-data android:name="UMENG_APPKEY" android:value="5a6fd0d7b27b0a28fc000156">
+</meta-data>
+<meta-data android:name="UMENG_CHANNEL" android:value="oppo">
+</meta-data>
+<service android:enabled="true" android:exported="false" android:name="cn.jpush.android.service.PushService" android:process=":pushcore">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.REGISTER">
+</action>
+<action android:name="cn.jpush.android.intent.REPORT">
+</action>
+<action android:name="cn.jpush.android.intent.PushService">
+</action>
+<action android:name="cn.jpush.android.intent.PUSH_TIME">
+</action>
+</intent-filter>
+</service>
+<receiver android:enabled="true" android:name="com.daocao.xbb.receiver.JPushReceiver">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.REGISTRATION">
+</action>
+<action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED">
+</action>
+<action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED">
+</action>
+<action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED">
+</action>
+<action android:name="cn.jpush.android.intent.ACTION_RICHPUSH_CALLBACK">
+</action>
+<category android:name="com.daocao.xbb">
+</category>
+</intent-filter>
+</receiver>
+<activity android:configChanges="0x000000A0" android:exported="false" android:name="cn.jpush.android.ui.PushActivity" android:theme="@android:01030006">
+<intent-filter>
+<action android:name="cn.jpush.android.ui.PushActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="com.rabibird.borrow">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="cn.jpush.android.ui.PushActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="com.daocao.xbb">
+</category>
+</intent-filter>
+</activity>
+<service android:enabled="true" android:exported="false" android:name="cn.jpush.android.service.DownloadService">
+</service>
+<receiver android:exported="false" android:name="cn.jpush.android.service.AlarmReceiver">
+</receiver>
+<meta-data android:name="com.amap.api.v2.apikey" android:value="d9fc13097e8fa3ce3b968f05ba6181c1">
+</meta-data>
+<activity android:name="com.daocao.xbb.activity.SplashActivity" android:screenOrientation="1" android:theme="@7F0B00B1">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="www.baidu.com" android:scheme="xbb">
+</data>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004A0" android:exported="true" android:name="com.daocao.xbb.wxapi.WXEntryActivity" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<activity android:launchMode="2" android:name="com.daocao.xbb.MainActivity" android:screenOrientation="1" android:theme="@7F0B00B1">
+</activity>
+<activity android:launchMode="2" android:name="com.daocao.xbb.activity.GuideActivity" android:screenOrientation="1" android:theme="@7F0B00B1">
+</activity>
+<activity android:name="com.daocao.xbb.activity.ForgetPassSecActivity" android:screenOrientation="1" android:theme="@7F0B00B1">
+</activity>
+<activity android:name="com.daocao.xbb.activity.ForgetPassActivity" android:screenOrientation="1" android:theme="@7F0B00B1">
+</activity>
+<activity android:name="com.daocao.xbb.activity.LoginActivity" android:screenOrientation="1" android:theme="@7F0B00B1">
+</activity>
+<activity android:name="com.daocao.xbb.activity.IdcardIdentityActivity" android:screenOrientation="1" android:theme="@7F0B00B1">
+</activity>
+<activity android:name="com.daocao.xbb.activity.AboutActivity" android:screenOrientation="1" android:theme="@7F0B00B1">
+</activity>
+<activity android:name="com.daocao.xbb.activity.AddressActivity" android:screenOrientation="1" android:theme="@7F0B00B1">
+</activity>
+<activity android:name="com.daocao.xbb.activity.YangXinLoginActivity" android:screenOrientation="1" android:theme="@7F0B00B1">
+</activity>
+<activity android:name="com.daocao.xbb.activity.CreditRecordActivity" android:screenOrientation="1" android:theme="@7F0B00B1">
+</activity>
+<activity android:name="com.daocao.xbb.activity.CameraActivity" android:screenOrientation="0" android:theme="@7F0B00B1">
+</activity>
+<activity android:name="com.daocao.xbb.activity.FaceActivity" android:screenOrientation="1" android:theme="@7F0B00B1">
+</activity>
+<activity android:name="com.daocao.xbb.activity.OrderDetailActivity" android:screenOrientation="1" android:theme="@7F0B00B1">
+</activity>
+<activity android:name="com.daocao.xbb.activity.PaySuccessActivity" android:screenOrientation="1" android:theme="@7F0B00B1">
+</activity>
+<activity android:name="com.daocao.xbb.activity.BindPhoneActivity" android:screenOrientation="1" android:theme="@7F0B00B1">
+</activity>
+<activity android:name="com.daocao.xbb.activity.SubmitSuccessActivity" android:screenOrientation="1" android:theme="@7F0B00B1">
+</activity>
+<activity android:name="com.daocao.xbb.activity.LoanActivity" android:screenOrientation="1" android:theme="@7F0B00B1">
+</activity>
+<activity android:name="com.daocao.xbb.activity.TimeChooseActivity" android:screenOrientation="1" android:theme="@7F0B00B1">
+</activity>
+<activity android:name="com.daocao.xbb.activity.CallLogActivity" android:screenOrientation="1" android:theme="@7F0B00B1">
+</activity>
+<activity android:name="com.daocao.xbb.activity.LoanIntentionActivity" android:screenOrientation="1" android:theme="@7F0B00B1">
+</activity>
+<activity android:name="com.daocao.xbb.activity.CommonQuestionActivity" android:screenOrientation="1" android:theme="@7F0B00B1">
+</activity>
+<activity android:name="com.daocao.xbb.activity.ArticleDetailActivity" android:screenOrientation="1" android:theme="@7F0B00B1">
+</activity>
+<activity android:name="com.daocao.xbb.activity.BankActivity" android:screenOrientation="1" android:theme="@7F0B00B1">
+</activity>
+<activity android:name="com.daocao.xbb.activity.BankEditV2Activity" android:screenOrientation="1" android:theme="@7F0B00B1" android:windowSoftInputMode="0x00000021">
+</activity>
+<activity android:name="com.daocao.xbb.activity.BuyReportActivity" android:screenOrientation="1" android:theme="@7F0B00B1">
+</activity>
+<activity android:name="com.daocao.xbb.activity.BuyExpertReportActivity" android:screenOrientation="1" android:theme="@7F0B00B1">
+</activity>
+<activity android:name="com.daocao.xbb.activity.ActCenterActivity" android:screenOrientation="1" android:theme="@7F0B00B1">
+</activity>
+<activity android:name="com.daocao.xbb.activity.LoanMarketActivity" android:screenOrientation="1" android:theme="@7F0B00B1">
+</activity>
+<activity android:name="com.daocao.xbb.activity.PersonalCenterActivity" android:screenOrientation="1" android:theme="@7F0B00B1">
+</activity>
+<activity android:name="com.daocao.xbb.activity.MyOrderActivity" android:screenOrientation="1" android:theme="@7F0B00B1">
+</activity>
+<activity android:name="com.daocao.xbb.activity.MyWalletActivity" android:screenOrientation="1" android:theme="@7F0B00B1">
+</activity>
+<activity android:name="com.daocao.xbb.activity.RechargeActivity" android:screenOrientation="1" android:theme="@7F0B00B1">
+</activity>
+<activity android:name="com.daocao.xbb.activity.PayTypeActivity" android:screenOrientation="1" android:theme="@7F0B00B1">
+</activity>
+<activity android:name="com.daocao.xbb.activity.WithdrawActivity" android:screenOrientation="1" android:theme="@7F0B00B1">
+</activity>
+<activity android:name="com.daocao.xbb.activity.WithdrawSuccessActivity" android:screenOrientation="1" android:theme="@7F0B00B1">
+</activity>
+<activity android:name="com.daocao.xbb.activity.SettingActivity" android:screenOrientation="1" android:theme="@7F0B00B1">
+</activity>
+<activity android:name="com.daocao.xbb.activity.ChatCenterActivity" android:screenOrientation="1" android:theme="@7F0B00B1">
+</activity>
+<activity android:name="com.daocao.xbb.activity.RefundPlanActivity" android:screenOrientation="1" android:theme="@7F0B00B1">
+</activity>
+<activity android:name="com.daocao.xbb.activity.RefundPlanMoreActivity" android:screenOrientation="1" android:theme="@7F0B00B1">
+</activity>
+<activity android:name="com.daocao.xbb.activity.BorrowRecordActivity" android:screenOrientation="1" android:theme="@7F0B00B1">
+</activity>
+<activity android:name="com.daocao.xbb.activity.RefundSuccessActivity" android:screenOrientation="1" android:theme="@7F0B00B1">
+</activity>
+<activity android:name="com.daocao.xbb.activity.QuestionDetailActivity" android:screenOrientation="1" android:theme="@7F0B00B1">
+</activity>
+<activity android:name="com.daocao.xbb.activity.DownloadReportActivity" android:screenOrientation="1" android:theme="@7F0B00B1">
+</activity>
+<activity android:name="com.daocao.xbb.activity.ContractListActivity" android:screenOrientation="1" android:theme="@7F0B00B1">
+</activity>
+<activity android:name="com.daocao.xbb.activity.ContractDetailActivity" android:screenOrientation="1" android:theme="@7F0B00B1">
+</activity>
+<activity android:name="com.daocao.xbb.activity.OneKeyIdentityActivity" android:screenOrientation="1" android:theme="@7F0B00B1">
+</activity>
+<activity android:name="com.daocao.xbb.activity.EmailActivity" android:screenOrientation="1" android:theme="@7F0B00B1">
+</activity>
+<activity android:name="com.daocao.xbb.activity.CreditReportShowActivity" android:screenOrientation="1" android:theme="@7F0B00B1">
+</activity>
+<activity android:name="com.daocao.xbb.activity.NewReportShowActivity" android:screenOrientation="1" android:theme="@7F0B00B1">
+</activity>
+<activity android:name="com.daocao.xbb.activity.CreditManagerActivity" android:screenOrientation="1" android:theme="@7F0B00B1">
+</activity>
+<activity android:name="com.daocao.xbb.activity.IncomeIdentityActivity" android:screenOrientation="1" android:theme="@7F0B00B1">
+</activity>
+<activity android:name="com.daocao.xbb.activity.BankShareActivity" android:screenOrientation="1" android:theme="@7F0B00B1">
+</activity>
+<activity android:name="com.daocao.xbb.activity.ChsiRegisterActivity" android:screenOrientation="1" android:theme="@7F0B00B1">
+</activity>
+<activity android:name="com.daocao.xbb.activity.ChsiForgetPwdActivity" android:screenOrientation="1" android:theme="@7F0B00B1">
+</activity>
+<activity android:name="com.daocao.xbb.activity.ChsiActivity" android:screenOrientation="1" android:theme="@7F0B00B1">
+</activity>
+<activity android:name="com.daocao.xbb.activity.UseReportActivity" android:screenOrientation="1" android:theme="@7F0B00B1">
+</activity>
+<activity android:name="com.daocao.xbb.activity.OpinionActivity" android:screenOrientation="1" android:theme="@7F0B00B1">
+</activity>
+<activity android:name="com.daocao.xbb.activity.PhoneIdentityActivity" android:screenOrientation="1" android:theme="@7F0B00B1" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:name="com.daocao.xbb.activity.WebViewActivity" android:screenOrientation="1" android:theme="@7F0B00B1">
+</activity>
+<activity android:name="com.daocao.xbb.activity.AboutUsActivity" android:screenOrientation="1" android:theme="@7F0B00B1">
+</activity>
+<activity android:name="com.daocao.xbb.activity.ContractTempActivity" android:screenOrientation="1" android:theme="@7F0B00B1">
+</activity>
+<activity android:name="com.daocao.xbb.activity.PayDetailActivity" android:screenOrientation="1" android:theme="@7F0B00B1">
+</activity>
+<activity android:name="com.daocao.xbb.activity.ChangePhoneTotalActivity" android:screenOrientation="1" android:theme="@7F0B00B1">
+</activity>
+<activity android:name="com.daocao.xbb.activity.ChangPhoneSecActivity" android:screenOrientation="1" android:theme="@7F0B00B1">
+</activity>
+<activity android:name="com.daocao.xbb.activity.ChangePhoneIdcardActivity" android:screenOrientation="1" android:theme="@7F0B00B1">
+</activity>
+<activity android:name="com.daocao.xbb.activity.ChangePhoneFaceActivity" android:screenOrientation="1" android:theme="@7F0B00B1">
+</activity>
+<activity android:name="com.daocao.xbb.activity.IdcardDetailActivity" android:screenOrientation="1" android:theme="@7F0B00B1">
+</activity>
+<activity android:name="com.daocao.xbb.activity.ContractTempDetailActivity" android:screenOrientation="1" android:theme="@7F0B00B1">
+</activity>
+<activity android:name="com.daocao.xbb.activity.NewZhiMaActivity" android:screenOrientation="1" android:theme="@7F0B00B1">
+</activity>
+<activity android:label="⡏�" android:name="com.android.moblie.zmxy.antgroup.creditsdk.app.SDKActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="2" android:name="com.daocao.xbb.activity.ZhiMaCallBackActivity" android:screenOrientation="1" android:theme="@7F0B00B1">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="test.pay.api.dob500.com" android:scheme="xbb">
+</data>
+</intent-filter>
+</activity>
+<activity android:launchMode="1" android:name="cn.beecloud.BCWechatPaymentActivity" android:theme="@android:01030010">
+</activity>
+<activity-alias android:exported="true" android:name="com.daocao.xbb.wxapi.WXPayEntryActivity" android:targetActivity="cn.beecloud.BCWechatPaymentActivity">
+</activity-alias>
+<activity android:configChanges="0x000000A0" android:excludeFromRecents="true" android:launchMode="1" android:name="cn.beecloud.BCUnionPaymentActivity" android:screenOrientation="1" android:theme="@android:01030010" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.mob.tools.MobUIShell" android:theme="@android:01030010" android:windowSoftInputMode="0x00000012">
+<intent-filter>
+<data android:scheme="tencent1106639123">
+</data>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+<intent-filter>
+<data android:scheme="line.1477692153">
+</data>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x00000480" android:name="com.baidu.ocr.ui.camera.CameraActivity" android:theme="@android:0103006D">
+</activity>
+<activity android:name="kangcheng.com.lmzx_android_sdk_v10.ui.CreditBillSearchActivity" android:screenOrientation="1" android:theme="@7F0B0134">
+</activity>
+<activity android:name="kangcheng.com.lmzx_android_sdk_v10.ui.DataList" android:screenOrientation="1" android:theme="@7F0B0134">
+</activity>
+<activity android:launchMode="2" android:name="kangcheng.com.lmzx_android_sdk_v10.commom.SearchPage.CommPgrAty" android:screenOrientation="1" android:theme="@7F0B0134">
+</activity>
+<activity android:name="kangcheng.com.lmzx_android_sdk_v10.ui.NewCreditBillLogin" android:screenOrientation="1" android:theme="@7F0B0134">
+</activity>
+<activity android:name="kangcheng.com.lmzx_android_sdk_v10.ui.DidiActivity" android:screenOrientation="1" android:theme="@7F0B0134">
+</activity>
+<activity android:name="kangcheng.com.lmzx_android_sdk_v10.ui.XieChengActivity" android:screenOrientation="1" android:theme="@7F0B0134">
+</activity>
+<activity android:name="kangcheng.com.lmzx_android_sdk_v10.ui.ThemeActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="kangcheng.com.lmzx_android_sdk_v10.ResultAty" android:screenOrientation="1">
+</activity>
+<activity android:name="kangcheng.com.lmzx_android_sdk_v10.util.PermissionActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="kangcheng.com.lmzx_android_sdk_v10.ui.OperatorLoginActivity" android:screenOrientation="1" android:theme="@7F0B0134">
+</activity>
+<activity android:name="kangcheng.com.lmzx_android_sdk_v10.ui.BaseMomoAndLinkedInactivity" android:screenOrientation="1" android:theme="@7F0B0134">
+</activity>
+<activity android:name="kangcheng.com.lmzx_android_sdk_v10.ui.ColorSelectorActivity" android:screenOrientation="1" android:theme="@7F0B0134">
+</activity>
+<activity android:name="kangcheng.com.lmzx_android_sdk_v10.ui.LoseCreditActivity" android:screenOrientation="1" android:theme="@7F0B0134">
+</activity>
+<activity android:name="kangcheng.com.lmzx_android_sdk_v10.ui.InsuChose" android:screenOrientation="1" android:theme="@7F0B0134">
+</activity>
+<activity android:name="kangcheng.com.lmzx_android_sdk_v10.ui.CtrBankCredActi" android:screenOrientation="1" android:theme="@7F0B0134">
+</activity>
+<activity android:name="kangcheng.com.lmzx_android_sdk_v10.ui.webview.InjectWebViewActivity" android:screenOrientation="1" android:theme="@7F0B0134" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name="kangcheng.com.lmzx_android_sdk_v10.ui.CityChoseAct" android:screenOrientation="1" android:theme="@7F0B0134" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="kangcheng.com.lmzx_android_sdk_v10.ui.NetBkSearchActivity" android:screenOrientation="1" android:theme="@7F0B0134">
+</activity>
+<activity android:name="kangcheng.com.lmzx_android_sdk_v10.ui.NewSSloginActivity" android:screenOrientation="1" android:theme="@7F0B0134">
+</activity>
+<activity android:name="kangcheng.com.lmzx_android_sdk_v10.ui.CarInsAct" android:screenOrientation="1" android:theme="@7F0B0134">
+</activity>
+<activity android:name="kangcheng.com.lmzx_android_sdk_v10.ui.NewInsuLogin" android:screenOrientation="1" android:theme="@7F0B0134">
+</activity>
+<activity android:name="kangcheng.com.lmzx_android_sdk_v10.ui.EbusinessAct" android:screenOrientation="1" android:theme="@7F0B0134">
+</activity>
+<activity android:name="kangcheng.com.lmzx_android_sdk_v10.ui.ExpelledActivity" android:screenOrientation="1" android:theme="@7F0B0134">
+</activity>
+<activity android:name="kangcheng.com.lmzx_android_sdk_v10.commom.Agree" android:screenOrientation="1" android:theme="@7F0B0134">
+</activity>
+<activity android:name="kangcheng.com.lmzx_android_sdk_v10.ui.OperatorCreditAnalysisActivity" android:screenOrientation="1" android:theme="@7F0B0134" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name="kangcheng.com.lmzx_android_sdk_v10.ui.AddContactActivity" android:theme="@android:0103000F" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name="kangcheng.com.lmzx_android_sdk_v10.ui.HTJCActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.livedetect.LiveDetectActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F090162" android:launchMode="2" android:name="com.livedetect.SuccessActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F090162" android:launchMode="2" android:name="com.livedetect.FailActivity" android:screenOrientation="1">
+</activity>
+<activity android:exported="false" android:name="cn.jpush.android.ui.PopWinActivity" android:theme="@7F0B00EA">
+</activity>
+<service android:enabled="true" android:exported="true" android:name="cn.jpush.android.service.DaemonService">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.DaemonService">
+</action>
+<category android:name="com.daocao.xbb">
+</category>
+</intent-filter>
+</service>
+<receiver android:enabled="true" android:exported="false" android:name="cn.jpush.android.service.PushReceiver">
+<intent-filter android:priority="1000">
+<action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY">
+</action>
+<category android:name="com.daocao.xbb">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.USER_PRESENT">
+</action>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_ADDED">
+</action>
+<action android:name="android.intent.action.PACKAGE_REMOVED">
+</action>
+<data android:scheme="package">
+</data>
+</intent-filter>
+</receiver>
+<provider android:authorities="com.daocao.xbb.DataProvider" android:exported="false" android:name="cn.jpush.android.service.DataProvider">
+</provider>
+<provider android:authorities="com.daocao.xbb.DownloadProvider" android:exported="true" android:name="cn.jpush.android.service.DownloadProvider">
+</provider>
+<meta-data android:name="JPUSH_CHANNEL" android:value="developer-default">
+</meta-data>
+<meta-data android:name="JPUSH_APPKEY" android:value="127e7f9d28a5bb834ea3b697">
+</meta-data>
+</application>
+</manifest>

@@ -1,0 +1,266 @@
+<?xml version="1.0" ?><manifest android:versionCode="14" android:versionName="v2.0.5" package="com.quickfix51.www.business" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="10" android:targetSdkVersion="25">
+</uses-sdk>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_USER_PRESENT">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.RESTART_PACKAGES">
+</uses-permission>
+<uses-permission android:name="android.permission.BROADCAST_STICKY">
+</uses-permission>
+<uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_LOGS">
+</uses-permission>
+<uses-permission android:name="android.permission.BLUETOOTH">
+</uses-permission>
+<uses-permission android:name="android.permission.BATTERY_STATS">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_CONFIGURATION">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<supports-screens android:anyDensity="true" android:largeScreens="true" android:normalScreens="true" android:smallScreens="true" android:xlargeScreens="true">
+</supports-screens>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-feature android:name="android.hardware.camera" android:required="true">
+</uses-feature>
+<uses-permission android:name="android.permission.FLASHLIGHT">
+</uses-permission>
+<uses-feature android:name="android.hardware.autofocus">
+</uses-feature>
+<uses-feature android:name="android.hardware.camera.autofocus" android:required="false">
+</uses-feature>
+<meta-data android:name="android.support.VERSION" android:value="25.3.1">
+</meta-data>
+<application android:allowBackup="true" android:icon="@7F0C0035" android:label="@7F0D002E" android:name="com.stub.StubApp" android:qihoo="activity" android:theme="@7F0E0005">
+<meta-data android:name="com.amap.api.v2.apikey" android:value="af6b6ca8070086b94b8df202732dc553">
+</meta-data>
+<service android:name="com.amap.api.location.APSService">
+</service>
+<meta-data android:name="UMENG_APPKEY" android:value="5989d9018f4a9d4bde001c64">
+</meta-data>
+<meta-data android:name="UMENG_CHANNEL" android:value="Channel ID">
+</meta-data>
+<activity android:configChanges="0x000004A0" android:name="com.quickfix51.www.business.activity.WelcomeActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:excludeFromRecents="true" android:launchMode="0" android:name="com.stub.plugin.Stub01" android:noHistory="true" android:taskAffinity="com.quickfix51.www.business.affinity">
+</activity>
+<service android:enabled="true" android:exported="true" android:name="com.stub.plugin.Stub02">
+</service>
+<receiver android:enabled="true" android:exported="false" android:name="com.stub.plugin.Stub03">
+</receiver>
+<provider android:authorities="com.quickfix51.www.business.COMMONPROVIDER" android:exported="true" android:name="com.stub.plugin.Stub04">
+</provider>
+<activity android:configChanges="0x000004A0" android:label="@7F0D002E" android:name="com.quickfix51.www.business.activity.MainActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F0D002E" android:name="com.quickfix51.www.business.activity.std.StdMainActivity" android:screenOrientation="1">
+</activity>
+<receiver android:name="com.tencent.android.tpush.XGPushReceiver" android:process=":xg_service_v3">
+<intent-filter android:priority="0x7FFFFFFF">
+<action android:name="com.tencent.android.tpush.action.SDK">
+</action>
+<action android:name="com.tencent.android.tpush.action.INTERNAL_PUSH_MESSAGE">
+</action>
+<action android:name="android.intent.action.USER_PRESENT">
+</action>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+<action android:name="android.bluetooth.adapter.action.STATE_CHANGED">
+</action>
+<action android:name="android.intent.action.ACTION_POWER_CONNECTED">
+</action>
+<action android:name="android.intent.action.ACTION_POWER_DISCONNECTED">
+</action>
+</intent-filter>
+</receiver>
+<activity android:exported="false" android:name="com.tencent.android.tpush.XGPushActivity">
+</activity>
+<receiver android:exported="false" android:name="com.quickfix51.www.business.xinge.MessageReceiver">
+<intent-filter>
+<action android:name="com.tencent.android.tpush.action.PUSH_MESSAGE">
+</action>
+<action android:name="com.tencent.android.tpush.action.FEEDBACK">
+</action>
+</intent-filter>
+</receiver>
+<service android:exported="true" android:name="com.tencent.android.tpush.service.XGPushServiceV3" android:persistent="true" android:process=":xg_service_v3">
+</service>
+<service android:name="com.tencent.android.tpush.service.XGDaemonService" android:process=":xg_service_v3">
+</service>
+<provider android:authorities="com.quickfix51.www.business.AUTH_XGPUSH" android:exported="true" android:name="com.tencent.android.tpush.XGPushProvider">
+</provider>
+<provider android:authorities="com.quickfix51.www.business.TPUSH_PROVIDER" android:exported="false" android:name="com.tencent.android.tpush.SettingsContentProvider">
+</provider>
+<provider android:authorities="com.quickfix51.www.business.TENCENT.MID.V3" android:exported="true" android:name="com.tencent.mid.api.MidProvider">
+</provider>
+<meta-data android:name="XG_V2_ACCESS_ID" android:value="2100167011">
+</meta-data>
+<meta-data android:name="XG_V2_ACCESS_KEY" android:value="AF5R97I1RC4H">
+</meta-data>
+<activity android:configChanges="0x000004A0" android:name="com.quickfix51.www.business.activity.RegisterStep1Activity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.quickfix51.www.business.activity.RegisterStep2Activity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.quickfix51.www.business.activity.LoginActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.quickfix51.www.business.activity.ProfileActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.quickfix51.www.business.activity.LocSearchActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.quickfix51.www.business.activity.WaitForReplyActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.quickfix51.www.business.activity.std.StdWaitForReplyActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.quickfix51.www.business.activity.UpdateProfileActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.quickfix51.www.business.activity.SelectAddressActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.quickfix51.www.business.activity.SelectAddressFromMapActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.quickfix51.www.business.activity.ModifyPwdActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.example.scott.zbarandroid.ZBarScannerActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.quickfix51.www.business.activity.FillRepairActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.quickfix51.www.business.activity.RepairProcessActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.quickfix51.www.business.activity.DevMaintenanceHistoryActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.quickfix51.www.business.activity.FillRepairShopCodeActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.quickfix51.www.business.activity.std.StdFillRepairShopCodeActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.quickfix51.www.business.activity.FillRepairEmptyCodeActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.quickfix51.www.business.activity.AddShopActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.quickfix51.www.business.activity.AddDevActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.quickfix51.www.business.activity.SelectStoreActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.quickfix51.www.business.activity.SelectCityRegionActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.quickfix51.www.business.activity.SearchCityOrDevActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.quickfix51.www.business.activity.ImageZoomActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.quickfix51.www.business.activity.UserStoreInfoActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.quickfix51.www.business.activity.FeedBackActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.quickfix51.www.business.activity.TransactionListActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.quickfix51.www.business.activity.TransactionDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.quickfix51.www.business.activity.InventoryResultActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.quickfix51.www.business.activity.STDForgetPasswordActivity" android:screenOrientation="1">
+</activity>
+<service android:name="com.quickfix51.www.business.services.DownloadAppService">
+</service>
+<activity android:configChanges="0x000004A0" android:name="com.quickfix51.www.business.activity.std.StdRepairOrderActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.quickfix51.www.business.activity.std.StdRepairOrderDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.quickfix51.www.business.activity.std.StdMyFixTaskActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.quickfix51.www.business.activity.std.StdRepairProcessActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.quickfix51.www.business.activity.RepairOrderDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.quickfix51.www.business.activity.RepairOrderActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.quickfix51.www.business.activity.AssetInfoActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.quickfix51.www.business.activity.EditAssetInfoActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.quickfix51.www.business.activity.std.StdSelectAssetCategoryActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.quickfix51.www.business.activity.std.StdCompleteAssetInfoActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.quickfix51.www.business.activity.PreRegisterChoiceActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.quickfix51.www.business.activity.std.StdAddBusinessActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.quickfix51.www.business.activity.std.StdAddBusinessSuccessActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.quickfix51.www.business.activity.std.StdSelectCitiesActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.quickfix51.www.business.activity.std.StdSelectStoreActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.quickfix51.www.business.activity.std.StdSearchMyFixTaskActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.quickfix51.www.business.activity.std.StdSelectPinnedListActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.quickfix51.www.business.activity.std.StdSearchPinnedListActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.quickfix51.www.business.activity.std.StdSelectAssetNameActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.quickfix51.www.business.activity.std.StdSelectAssetModelActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.quickfix51.www.business.activity.std.StdSelectAssetSpecificationActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.quickfix51.www.business.activity.std.StdAssetInfoActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.quickfix51.www.business.activity.std.StdUserStoreInfoActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.quickfix51.www.business.activity.std.StdStoreAddrOnMapActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.quickfix51.www.business.activity.std.StdFanXiuActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.quickfix51.www.business.activity.MyTasksActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.quickfix51.www.business.activity.StoreBaoyangPlanActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.quickfix51.www.business.activity.StoreBaoyangPlanDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.quickfix51.www.business.activity.BaoyangDevResultActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.google.android.cameraview.crop.CropImageActivity" android:process=":imagecrop" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.google.android.cameraview.TakePhotoActivity" android:process=":takephoto" android:screenOrientation="1">
+</activity>
+<provider android:authorities="com.quickfix51.www.business.fileprovider" android:exported="false" android:grantUriPermissions="true" android:name="android.support.v4.content.FileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F100000">
+</meta-data>
+</provider>
+</application>
+</manifest>

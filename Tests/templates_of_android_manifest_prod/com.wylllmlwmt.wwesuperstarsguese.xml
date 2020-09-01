@@ -1,0 +1,122 @@
+<?xml version="1.0" ?><manifest android:installLocation="0" android:versionCode="2" android:versionName="3.2.7zg" package="com.wylllmlwmt.wwesuperstarsguese" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="15" android:targetSdkVersion="27">
+</uses-sdk>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="com.android.vending.BILLING">
+</uses-permission>
+<uses-feature android:name="android.hardware.location" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.location.gps" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.location.network" android:required="false">
+</uses-feature>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<application android:hardwareAccelerated="true" android:icon="@7F0700C9" android:label="@7F0C002D" android:largeHeap="true" android:name="com.vvteam.gamemachine.GameApplication" android:supportsRtl="true">
+<receiver android:name="com.vvteam.gamemachine.external.Scheduler$AlarmManagerBroadcastReceiver" android:process=":remote">
+</receiver>
+<activity android:configChanges="0x00000480" android:label="@7F0C002D" android:launchMode="2" android:name="com.vvteam.gamemachine.ui.activities.GameActivity" android:screenOrientation="7" android:theme="@7F0D0007">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<meta-data android:name="com.google.android.gms.version" android:value="@7F09000C">
+</meta-data>
+<provider android:authorities="com.wylllmlwmt.wwesuperstarsguese.provider" android:exported="false" android:grantUriPermissions="true" android:name="android.support.v4.content.FileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F0F0000">
+</meta-data>
+</provider>
+<service android:name="com.installtracker.TrackingSendService">
+</service>
+<receiver android:enabled="true" android:exported="true" android:name="com.vvteam.gamemachine.analytics.CustomReceiver">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.analytics.CampaignTrackingService">
+</service>
+<receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.analytics.AnalyticsReceiver">
+<intent-filter>
+<action android:name="com.google.android.gms.analytics.ANALYTICS_DISPATCH">
+</action>
+</intent-filter>
+</receiver>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.analytics.AnalyticsService">
+</service>
+<activity android:configChanges="0x00000480" android:name="com.applovin.adview.AppLovinInterstitialActivity">
+</activity>
+<activity android:configChanges="0x00000480" android:name="com.applovin.adview.AppLovinConfirmationActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.tapjoy.TJCOffersWebView">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.tapjoy.TapjoyVideoView">
+</activity>
+<activity android:configChanges="0x000004A0" android:hardwareAccelerated="true" android:name="com.tapjoy.TJAdUnitView" android:theme="@android:01030011">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.tapjoy.mraid.view.ActionHandler">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.tapjoy.mraid.view.Browser">
+</activity>
+<meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@7F0C006A">
+</meta-data>
+<activity android:configChanges="0x000005B0" android:label="@7F0C002D" android:name="com.facebook.FacebookActivity" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.facebook.ads.AudienceNetworkActivity">
+</activity>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.analytics.AnalyticsJobService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:01030010">
+</activity>
+<activity android:name="com.facebook.CustomTabMainActivity">
+</activity>
+<activity android:configChanges="0x00000FB0" android:exported="false" android:name="com.google.android.gms.ads.AdActivity" android:theme="@android:0103000F">
+</activity>
+<provider android:authorities="com.wylllmlwmt.wwesuperstarsguese.FacebookInitProvider" android:exported="false" android:name="com.facebook.internal.FacebookInitProvider">
+</provider>
+<service android:enabled="true" android:exported="true" android:name="com.yandex.metrica.MetricaService" android:process=":Metrica">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="com.yandex.metrica.IMetricaService">
+</action>
+<data android:scheme="metrica">
+</data>
+</intent-filter>
+<meta-data android:name="metrica:api:level" android:value="64">
+</meta-data>
+</service>
+<service android:enabled="true" android:exported="true" android:name="com.yandex.metrica.ConfigurationService" android:process=":Metrica">
+<meta-data android:name="metrica:configuration:api:level" android:value="2">
+</meta-data>
+<intent-filter>
+<action android:name="com.yandex.metrica.configuration.ACTION_START">
+</action>
+</intent-filter>
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.yandex.metrica.ConfigurationJobService" android:permission="android.permission.BIND_JOB_SERVICE" android:process=":Metrica">
+</service>
+<receiver android:enabled="true" android:exported="true" android:name="com.yandex.metrica.MetricaEventHandler">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+</application>
+</manifest>

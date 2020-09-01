@@ -1,0 +1,244 @@
+<?xml version="1.0" ?><manifest android:versionCode="15" android:versionName="2.5.0" package="com.health.prdemknd.www.rbskbugfree" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="19" android:targetSdkVersion="26">
+</uses-sdk>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_CALL_LOG">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.CALL_PHONE">
+</uses-permission>
+<supports-screens android:anyDensity="true" android:largeScreens="true" android:normalScreens="true" android:resizeable="true" android:smallScreens="true" android:xlargeScreens="true">
+</supports-screens>
+<uses-feature android:name="android.hardware.camera" android:required="true">
+</uses-feature>
+<uses-feature android:name="android.hardware.location.gps" android:required="true">
+</uses-feature>
+<uses-feature android:name="android.hardware.camera.autofocus" android:required="false">
+</uses-feature>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE">
+</uses-permission>
+<permission android:name="com.health.prdemknd.www.rbskbugfree.permission.C2D_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="com.health.prdemknd.www.rbskbugfree.permission.C2D_MESSAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<application android:allowBackup="true" android:hardwareAccelerated="true" android:icon="@7F0D0000" android:label="@7F0E0032" android:largeHeap="true" android:name="com.health.prdemknd.www.rbsk.RootContext" android:supportsRtl="true" android:theme="@7F0F0006">
+<receiver android:exported="false" android:name="com.health.prdemknd.www.rbsk.receiver.NetStatReceiver">
+<intent-filter>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+</receiver>
+<service android:exported="false" android:name="com.health.prdemknd.www.rbsk.services.ServiceAttendance">
+</service>
+<service android:exported="false" android:name="com.health.prdemknd.www.rbsk.services.ServiceGPSAttendance">
+</service>
+<service android:exported="false" android:name="com.health.prdemknd.www.rbsk.services.ServiceLeave">
+</service>
+<activity android:name="com.health.prdemknd.www.rbsk.Launcher">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:name="com.health.prdemknd.www.rbsk.signup.SignUp">
+</activity>
+<activity android:name="com.health.prdemknd.www.rbsk.ChildInfo.ChildReferDash">
+</activity>
+<activity android:label="@7F0E0032" android:name="com.health.prdemknd.www.rbsk.DilaerFunction.PhoneNo" android:theme="@7F0F0008">
+</activity>
+<activity android:label="@7F0E0032" android:name="com.health.prdemknd.www.rbsk.Login.LogIn" android:theme="@7F0F0008">
+</activity>
+<service android:name="com.health.prdemknd.www.rbsk.fcm.MyFirebaseMessagingService">
+<intent-filter>
+<action android:name="com.google.firebase.MESSAGING_EVENT">
+</action>
+</intent-filter>
+</service>
+<activity android:name="com.health.prdemknd.www.rbsk.leave.LeaveForm" android:parentActivityName="com.health.prdemknd.www.rbsk.profile.Profile">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".leave.LeaveManagement">
+</meta-data>
+</activity>
+<activity android:name="com.health.prdemknd.www.rbsk.profile.Profile">
+</activity>
+<activity android:name="com.health.prdemknd.www.rbsk.attendance.Attendance" android:parentActivityName="com.health.prdemknd.www.rbsk.profile.Profile" android:screenOrientation="1">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".profile.Profile">
+</meta-data>
+</activity>
+<activity android:name="com.health.prdemknd.www.rbsk.attendance.MainActivity">
+</activity>
+<activity android:name="com.health.prdemknd.www.rbsk.performance.Performance">
+</activity>
+<activity android:name="com.health.prdemknd.www.rbsk.ChildInfo.ChilldCure">
+</activity>
+<activity android:name="com.health.prdemknd.www.rbsk.ChildInfo.childTraking">
+</activity>
+<activity android:name="com.health.prdemknd.www.rbsk.ChildInfo.StudentAttendence">
+</activity>
+<activity android:name="com.health.prdemknd.www.rbsk.signup.ForgetOnBoard">
+</activity>
+<service android:exported="false" android:name="com.health.prdemknd.www.rbsk.services.ServiceChildTracking">
+</service>
+<service android:exported="false" android:name="com.health.prdemknd.www.rbsk.services.ServiceChildCure">
+</service>
+<service android:exported="false" android:name="com.health.prdemknd.www.rbsk.services.GpsPingService">
+</service>
+<service android:exported="false" android:name="com.health.prdemknd.www.rbsk.services.GpsTrackServer">
+</service>
+<service android:exported="false" android:name="com.health.prdemknd.www.rbsk.services.ServiceStudentAttendance">
+</service>
+<receiver android:enabled="true" android:name="com.health.prdemknd.www.rbsk.receiver.AppsStateChange" android:priority="0">
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_ADDED">
+</action>
+<action android:name="android.intent.action.PACKAGE_REMOVED">
+</action>
+<data android:scheme="package">
+</data>
+</intent-filter>
+</receiver>
+<receiver android:name="com.health.prdemknd.www.rbsk.receiver.AlertDialogReceiver">
+</receiver>
+<activity android:name="com.health.prdemknd.www.rbsk.ChildInfo.ChildTrakingTabed">
+</activity>
+<activity android:name="com.health.prdemknd.www.rbsk.attendance.AttendnceDash">
+</activity>
+<activity android:name="com.health.prdemknd.www.rbsk.signup.SignUpRequest" android:theme="@7F0F0191">
+</activity>
+<service android:name="com.health.prdemknd.www.rbsk.Fcm.MyFirebaseInstanceIDService">
+<intent-filter>
+<action android:name="com.google.firebase.INSTANCE_ID_EVENT">
+</action>
+</intent-filter>
+</service>
+<service android:name="com.health.prdemknd.www.rbsk.Fcm.MyFirebaseMessagingService1">
+<intent-filter>
+<action android:name="com.google.firebase.MESSAGING_EVENT">
+</action>
+</intent-filter>
+</service>
+<service android:name="com.health.prdemknd.www.rbsk.fcm.MyFirebaseMessagingService">
+<intent-filter>
+<action android:name="com.google.firebase.MESSAGING_EVENT">
+</action>
+</intent-filter>
+</service>
+<service android:exported="false" android:name="com.health.prdemknd.www.rbsk.profile.RefreshData">
+</service>
+<service android:exported="false" android:name="com.health.prdemknd.www.rbsk.services.FcmToServer">
+</service>
+<service android:exported="false" android:name="com.health.prdemknd.www.rbsk.receiver.AlarmReceiver">
+</service>
+<activity android:name="com.health.prdemknd.www.rbsk.ChildInfo.ChildCurePack.ChildCureOverView">
+</activity>
+<activity android:name="com.health.prdemknd.www.rbsk.ServerDashboard.webViewHost">
+</activity>
+<activity android:name="com.health.prdemknd.www.rbsk.ServerDashboard.webViewHostLeave">
+</activity>
+<activity android:name="com.health.prdemknd.www.rbsk.leave.LeaveManagement">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F0E00FA" android:name="com.health.prdemknd.www.rbsk.attendance.GpsBackDialog" android:theme="@7F0F0189">
+</activity>
+<activity android:label="@7F0E00FB" android:name="com.health.prdemknd.www.rbsk.HelpSection.HelpParentTabbed">
+</activity>
+<activity android:name="com.health.prdemknd.www.rbsk.Offices.ReportCount.ReportCount">
+</activity>
+<activity android:name="com.health.prdemknd.www.rbsk.ProfileNew.ProfileN">
+</activity>
+<activity android:name="com.health.prdemknd.www.rbsk.ChildInfo.ChildReferDash">
+</activity>
+<meta-data android:name="android.support.VERSION" android:value="26.1.0">
+</meta-data>
+<service android:exported="true" android:name="com.firebase.jobdispatcher.GooglePlayReceiver" android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE">
+<intent-filter>
+<action android:name="com.google.android.gms.gcm.ACTION_TASK_READY">
+</action>
+</intent-filter>
+</service>
+<service android:exported="true" android:name="com.google.firebase.messaging.FirebaseMessagingService">
+<intent-filter android:priority="-500">
+<action android:name="com.google.firebase.MESSAGING_EVENT">
+</action>
+</intent-filter>
+</service>
+<receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementReceiver">
+</receiver>
+<receiver android:enabled="true" android:name="com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver" android:permission="android.permission.INSTALL_PACKAGES">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementService">
+</service>
+<receiver android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+<category android:name="com.health.prdemknd.www.rbskbugfree">
+</category>
+</intent-filter>
+</receiver>
+<receiver android:exported="false" android:name="com.google.firebase.iid.FirebaseInstanceIdInternalReceiver">
+</receiver>
+<service android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdService">
+<intent-filter android:priority="-500">
+<action android:name="com.google.firebase.INSTANCE_ID_EVENT">
+</action>
+</intent-filter>
+</service>
+<provider android:authorities="com.health.prdemknd.www.rbskbugfree.firebaseinitprovider" android:exported="false" android:initOrder="100" android:name="com.google.firebase.provider.FirebaseInitProvider">
+</provider>
+<activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:01030010">
+</activity>
+<meta-data android:name="com.google.android.gms.version" android:value="@7F0A0007">
+</meta-data>
+<service android:exported="false" android:name="com.evernote.android.job.v21.PlatformJobService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<service android:exported="false" android:name="com.evernote.android.job.v14.PlatformAlarmService">
+</service>
+<receiver android:exported="false" android:name="com.evernote.android.job.v14.PlatformAlarmReceiver">
+<intent-filter>
+<action android:name="com.evernote.android.job.v14.RUN_JOB">
+</action>
+<action android:name="net.vrallev.android.job.v14.RUN_JOB">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:exported="false" android:name="com.evernote.android.job.JobBootReceiver">
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+<action android:name="android.intent.action.QUICKBOOT_POWERON">
+</action>
+<action android:name="com.htc.intent.action.QUICKBOOT_POWERON">
+</action>
+<action android:name="android.intent.action.MY_PACKAGE_REPLACED">
+</action>
+</intent-filter>
+</receiver>
+<service android:enabled="false" android:exported="true" android:name="com.evernote.android.job.gcm.PlatformGcmService" android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE">
+<intent-filter>
+<action android:name="com.google.android.gms.gcm.ACTION_TASK_READY">
+</action>
+</intent-filter>
+</service>
+<service android:exported="false" android:name="com.evernote.android.job.JobRescheduleService">
+</service>
+<meta-data android:name="android.arch.lifecycle.VERSION" android:value="27.0.0-SNAPSHOT">
+</meta-data>
+</application>
+</manifest>

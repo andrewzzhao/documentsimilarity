@@ -1,0 +1,54 @@
+<?xml version="1.0" ?><manifest android:versionCode="19" android:versionName="1.9.9" package="com.staah.channelmanager" platformBuildVersionCode="21" platformBuildVersionName="5.0.1-1624448" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="16" android:targetSdkVersion="21">
+</uses-sdk>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE">
+</uses-permission>
+<permission android:name="com.staah.channelmanager.permission.C2D_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="com.staah.channelmanager.permission.C2D_MESSAGE">
+</uses-permission>
+<application android:allowBackup="true" android:icon="@7F020036" android:label="@7F07002F" android:largeHeap="true" android:theme="@7F0B0065">
+<activity android:label="@7F07002F" android:name="com.staah.channelmanager.SplashActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:name="com.staah.channelmanager.LoginActivity" android:screenOrientation="1" android:theme="@7F0B0080" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:label="@7F070043" android:name="com.staah.channelmanager.DashboardActivity" android:screenOrientation="1" android:theme="@7F0B0080">
+</activity>
+<activity android:name="com.staah.channelmanager.NewBookingActivity" android:theme="@7F0B0080" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:label="@7F070044" android:name="com.staah.channelmanager.FourDigitPinActivity" android:screenOrientation="1" android:theme="@7F0B0080" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:label="@7F070045" android:name="com.staah.channelmanager.LoginWithFourDigitPin" android:screenOrientation="1" android:theme="@7F0B0080" android:windowSoftInputMode="0x00000002">
+</activity>
+<receiver android:name="com.staah.channelmanager.gcm.GcmReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+<category android:name="com.staah.channelmanager">
+</category>
+</intent-filter>
+</receiver>
+<service android:name="com.staah.channelmanager.gcm.GcmIntentService">
+</service>
+<meta-data android:name="com.google.android.gms.version" android:value="@7F0A0001">
+</meta-data>
+</application>
+</manifest>

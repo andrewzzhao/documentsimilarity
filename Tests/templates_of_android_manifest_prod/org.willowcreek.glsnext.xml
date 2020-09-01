@@ -1,0 +1,284 @@
+<?xml version="1.0" ?><manifest android:hardwareAccelerated="true" android:versionCode="30003000" android:versionName="3.0.0" package="org.willowcreek.glsnext" platformBuildVersionCode="26" platformBuildVersionName="8.0.0" xmlns:amazon="http://schemas.amazon.com/apk/res/android" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="16" android:targetSdkVersion="25">
+</uses-sdk>
+<supports-screens android:anyDensity="true" android:largeScreens="true" android:normalScreens="true" android:resizeable="true" android:smallScreens="true" android:xlargeScreens="true">
+</supports-screens>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="com.android.vending.BILLING">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.MANAGE_DOCUMENTS">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<permission android:name="org.willowcreek.glsnext.permission.UA_DATA" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="org.willowcreek.glsnext.permission.UA_DATA">
+</uses-permission>
+<permission android:name="org.willowcreek.glsnext.permission.C2D_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="org.willowcreek.glsnext.permission.C2D_MESSAGE">
+</uses-permission>
+<uses-permission android:name="com.amazon.device.messaging.permission.RECEIVE">
+</uses-permission>
+<permission android:name="org.willowcreek.glsnext.permission.RECEIVE_ADM_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="org.willowcreek.glsnext.permission.RECEIVE_ADM_MESSAGE">
+</uses-permission>
+<application android:hardwareAccelerated="true" android:icon="@7F030000" android:label="@7F09008D" android:supportsRtl="true">
+<activity android:configChanges="0x000004B4" android:label="@7F09008C" android:launchMode="1" android:name="org.willowcreek.glsnext.MainActivity" android:theme="@android:01030129" android:windowSoftInputMode="0x00000010">
+<intent-filter android:label="@7F090091">
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="glsnext">
+</data>
+</intent-filter>
+<intent-filter>
+<data android:scheme="glsnext">
+</data>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+</intent-filter>
+<intent-filter android:autoVerify="true">
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="glsnext.app.link" android:scheme="https">
+</data>
+</intent-filter>
+<intent-filter android:autoVerify="true">
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="glsnext-alternate.app.link" android:scheme="https">
+</data>
+</intent-filter>
+<intent-filter android:autoVerify="true">
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="glsnext" android:scheme="https">
+</data>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x00000480" android:label="Simple Audio Stream" android:name="com.hutchind.cordova.plugins.streamingmedia.SimpleAudioStream">
+</activity>
+<activity android:configChanges="0x00000480" android:label="Simple Video Stream" android:name="com.hutchind.cordova.plugins.streamingmedia.SimpleVideoStream">
+</activity>
+<activity android:configChanges="0x000005B0" android:label="@7F090090" android:name="com.facebook.FacebookActivity" android:theme="@7F0C01A7">
+</activity>
+<activity android:label="@7F090078" android:name="com.synconset.MultiImageChooserActivity" android:theme="@android:0103006E">
+</activity>
+<activity android:name="com.urbanairship.cordova.CustomMessageActivity" android:theme="@android:0103012B">
+<intent-filter>
+<action android:name="com.urbanairship.VIEW_RICH_PUSH_MESSAGE">
+</action>
+<data android:scheme="message">
+</data>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:launchMode="2" android:name="com.urbanairship.cordova.CustomMessageCenterActivity" android:theme="@android:0103012B">
+<intent-filter>
+<action android:name="com.urbanairship.VIEW_RICH_PUSH_INBOX">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:name="com.urbanairship.cordova.CustomLandingPageActivity" android:theme="@7F0C0157">
+<meta-data android:name="com.urbanairship.action.LANDING_PAGE_VIEW" android:resource="@7F040040">
+</meta-data>
+<meta-data android:name="com.urbanairship.push.iam.EXCLUDE_FROM_AUTO_SHOW" android:value="true">
+</meta-data>
+<intent-filter>
+<action android:name="com.urbanairship.actions.SHOW_LANDING_PAGE_INTENT_ACTION">
+</action>
+<data android:scheme="http">
+</data>
+<data android:scheme="https">
+</data>
+<data android:scheme="message">
+</data>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@7F09008F">
+</meta-data>
+<meta-data android:name="com.facebook.sdk.ApplicationName" android:value="@7F090090">
+</meta-data>
+<meta-data android:name="io.branch.sdk.BranchKey" android:value="key_live_hobH0jAXLwCkTyFG7JAi5dkdErlIPipx">
+</meta-data>
+<meta-data android:name="com.urbanairship.autopilot" android:value="com.urbanairship.cordova.CordovaAutopilot">
+</meta-data>
+<receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.analytics.AnalyticsReceiver">
+<intent-filter>
+<action android:name="com.google.android.gms.analytics.ANALYTICS_DISPATCH">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:enabled="true" android:exported="true" android:name="com.google.android.gms.analytics.CampaignTrackingReceiver">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:exported="false" android:name="com.urbanairship.cordova.CordovaAirshipReceiver">
+<intent-filter>
+<action android:name="com.urbanairship.push.CHANNEL_UPDATED">
+</action>
+<action android:name="com.urbanairship.push.OPENED">
+</action>
+<action android:name="com.urbanairship.push.DISMISSED">
+</action>
+<action android:name="com.urbanairship.push.RECEIVED">
+</action>
+<category android:name="org.willowcreek.glsnext">
+</category>
+</intent-filter>
+</receiver>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.analytics.AnalyticsService">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.analytics.CampaignTrackingService">
+</service>
+<amazon:enable-feature android:name="com.amazon.device.messaging" android:required="false">
+</amazon:enable-feature>
+<activity android:name="com.urbanairship.iam.html.HtmlActivity">
+</activity>
+<activity android:name="com.urbanairship.iam.fullscreen.FullScreenActivity">
+</activity>
+<activity android:name="com.urbanairship.iam.modal.ModalActivity" android:theme="@7F0C014C">
+</activity>
+<activity android:name="com.urbanairship.CoreActivity">
+</activity>
+<activity android:name="com.urbanairship.messagecenter.MessageActivity">
+</activity>
+<activity android:label="@7F09004A" android:name="com.urbanairship.messagecenter.MessageCenterActivity">
+</activity>
+<activity android:name="com.urbanairship.util.HelperActivity" android:theme="@android:01030010">
+<meta-data android:name="com.urbanairship.push.iam.EXCLUDE_FROM_AUTO_SHOW" android:value="true">
+</meta-data>
+</activity>
+<activity android:name="com.urbanairship.google.PlayServicesErrorActivity" android:theme="@android:01030010">
+<meta-data android:name="com.urbanairship.push.iam.EXCLUDE_FROM_AUTO_SHOW" android:value="true">
+</meta-data>
+</activity>
+<activity android:name="com.urbanairship.actions.RateAppActivity" android:theme="@7F0C0158">
+<meta-data android:name="com.urbanairship.push.iam.EXCLUDE_FROM_AUTO_SHOW" android:value="true">
+</meta-data>
+<intent-filter>
+<action android:name="com.urbanairship.actions.SHOW_RATE_APP_INTENT_ACTION">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:name="com.urbanairship.ChannelCaptureActivity">
+</activity>
+<service android:name="com.urbanairship.job.AirshipService">
+</service>
+<service android:name="com.urbanairship.actions.ActionService">
+</service>
+<service android:label="Segments Service" android:name="com.urbanairship.location.LocationService">
+</service>
+<service android:name="com.urbanairship.push.PushService">
+</service>
+<service android:exported="true" android:name="com.urbanairship.job.AirshipGcmTaskService" android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE">
+<intent-filter>
+<action android:name="com.google.android.gms.gcm.ACTION_TASK_READY">
+</action>
+</intent-filter>
+</service>
+<service android:name="com.urbanairship.job.AndroidJobService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<service android:exported="false" android:name="com.urbanairship.push.gcm.UAInstanceIDListenerService">
+<intent-filter android:priority="-999">
+<action android:name="com.google.android.gms.iid.InstanceID">
+</action>
+</intent-filter>
+</service>
+<receiver android:exported="false" android:name="com.urbanairship.CoreReceiver">
+<intent-filter android:priority="-999">
+<action android:name="com.urbanairship.push.OPENED">
+</action>
+<category android:name="org.willowcreek.glsnext">
+</category>
+</intent-filter>
+</receiver>
+<receiver android:name="com.urbanairship.push.gcm.GcmPushReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+<intent-filter android:priority="100">
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+<action android:name="com.google.android.c2dm.intent.REGISTRATION">
+</action>
+<category android:name="org.willowcreek.glsnext">
+</category>
+</intent-filter>
+</receiver>
+<receiver android:name="com.urbanairship.push.adm.AdmPushReceiver" android:permission="com.amazon.device.messaging.permission.SEND">
+<intent-filter>
+<action android:name="com.amazon.device.messaging.intent.RECEIVE">
+</action>
+<category android:name="org.willowcreek.glsnext">
+</category>
+</intent-filter>
+</receiver>
+<provider android:authorities="org.willowcreek.glsnext.urbanairship.provider" android:exported="true" android:name="com.urbanairship.UrbanAirshipProvider" android:permission="org.willowcreek.glsnext.permission.UA_DATA">
+</provider>
+<activity android:name="com.facebook.CustomTabMainActivity">
+</activity>
+<activity android:name="com.facebook.CustomTabActivity">
+</activity>
+<provider android:authorities="org.willowcreek.glsnext.MarketingInitProvider" android:exported="false" android:name="com.facebook.marketing.internal.MarketingInitProvider">
+</provider>
+<provider android:authorities="org.willowcreek.glsnext.FacebookInitProvider" android:exported="false" android:name="com.facebook.internal.FacebookInitProvider">
+</provider>
+<receiver android:exported="false" android:name="com.facebook.CurrentAccessTokenExpirationBroadcastReceiver">
+<intent-filter>
+<action android:name="com.facebook.sdk.ACTION_CURRENT_ACCESS_TOKEN_CHANGED">
+</action>
+</intent-filter>
+</receiver>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.analytics.AnalyticsJobService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:01030010">
+</activity>
+<meta-data android:name="com.google.android.gms.version" android:value="@7F100004">
+</meta-data>
+</application>
+</manifest>

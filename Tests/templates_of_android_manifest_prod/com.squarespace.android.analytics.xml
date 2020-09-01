@@ -1,0 +1,102 @@
+<?xml version="1.0" ?><manifest android:versionCode="1711081321" android:versionName="2.0.0" package="com.squarespace.android.analytics" platformBuildVersionCode="26" platformBuildVersionName="8.0.0" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="21" android:targetSdkVersion="26">
+</uses-sdk>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<application android:allowBackup="false" android:icon="@7F030000" android:label="Analytics" android:name="com.squarespace.android.analytics.AnalyticsApplication" android:roundIcon="@7F030002" android:supportsRtl="true" android:theme="@7F0B00B9">
+<activity android:name="com.squarespace.android.analytics.ui.activities.StartupActivity">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:name="com.squarespace.android.analytics.ui.activities.WelcomeActivity" android:screenOrientation="1" android:theme="@7F0B019D">
+</activity>
+<activity android:name="com.squarespace.android.analytics.ui.activities.SiteListActivity" android:noHistory="true" android:parentActivityName="com.squarespace.android.analytics.ui.activities.WelcomeActivity" android:screenOrientation="1">
+</activity>
+<activity android:launchMode="1" android:name="com.squarespace.android.analytics.ui.activities.OverviewActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.squarespace.android.analytics.ui.activities.TrafficOverviewDetailsActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.squarespace.android.analytics.ui.activities.CommerceOverviewDetailsActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F0901C6" android:name="com.squarespace.android.analytics.ui.activities.PurchaseFunnelDetailsActivity" android:screenOrientation="1" android:theme="@7F0B00B9">
+</activity>
+<activity android:label="@7F0901C6" android:name="com.squarespace.android.analytics.ui.activities.AbandonedCartDetailsActivity" android:screenOrientation="1" android:theme="@7F0B00B9">
+</activity>
+<activity android:name="com.squarespace.android.analytics.ui.activities.PopularContentDetailsActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.squarespace.android.analytics.ui.activities.TrafficSourcesDetailsActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.squarespace.android.analytics.ui.activities.DeviceTypeDetailsActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.squarespace.android.analytics.ui.activities.TopProductsDetailsActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.squarespace.android.analytics.ui.activities.ActivityLogDetailsActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.squarespace.android.analytics.ui.activities.IpDetailsActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.squarespace.android.analytics.ui.activities.ProductsActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.squarespace.android.analytics.ui.activities.SubscribersDetailsActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.squarespace.android.analytics.ui.activities.FeedbackActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.squarespace.android.ui.activity.VersionBlacklistedDialogActivity" android:screenOrientation="1" android:theme="@7F0B017D">
+</activity>
+<activity android:exported="true" android:label="@7F090213" android:name="com.squarespace.android.zendesk.ZendeskActivity" android:screenOrientation="1" android:theme="@7F0B0123">
+</activity>
+<activity android:exported="true" android:label="@7F090216" android:name="com.squarespace.android.zendesk.ZendeskKnowledgeBaseActivity" android:screenOrientation="1" android:theme="@7F0B0123">
+</activity>
+<activity android:exported="true" android:label="@7F090215" android:name="com.squarespace.android.zendesk.ZendeskContactUsActivity" android:screenOrientation="1" android:theme="@7F0B0123">
+</activity>
+<activity android:exported="true" android:label="@7F090217" android:name="com.squarespace.android.zendesk.ZendeskMyTicketsActivity" android:screenOrientation="1" android:theme="@7F0B0123">
+</activity>
+<activity android:configChanges="0x00000480" android:exported="true" android:name="com.zendesk.sdk.support.ViewArticleActivity" android:screenOrientation="1" android:theme="@7F0B0117">
+</activity>
+<activity android:exported="true" android:label="@7F09002A" android:name="com.zendesk.sdk.requests.ViewRequestActivity" android:screenOrientation="1" android:theme="@7F0B011F" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:exported="true" android:name="com.squarespace.android.zendesk.ZendeskArticleActivity" android:screenOrientation="1" android:theme="@7F0B0123">
+</activity>
+<receiver android:name="com.zendesk.sdk.power.BatteryStateBroadcastReceiver">
+<intent-filter>
+<action android:name="android.intent.action.BATTERY_LOW">
+</action>
+<action android:name="android.intent.action.BATTERY_OKAY">
+</action>
+</intent-filter>
+</receiver>
+<activity android:label="@7F09002A" android:name="com.zendesk.sdk.feedback.ui.ContactZendeskActivity" android:windowSoftInputMode="0x00000014">
+</activity>
+<activity android:label="@7F090041" android:name="com.zendesk.sdk.requests.RequestActivity">
+</activity>
+<activity android:label="@7F090049" android:name="com.zendesk.sdk.support.SupportActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<receiver android:exported="false" android:name="com.zendesk.sdk.deeplinking.ZendeskDeepLinkingBroadcastReceiver">
+<intent-filter>
+<action android:name="com.zendesk.sdk.deeplinking">
+</action>
+</intent-filter>
+</receiver>
+<provider android:authorities="com.squarespace.android.analytics.belvedere.attachments" android:exported="false" android:grantUriPermissions="true" android:name="com.zendesk.belvedere.BelvedereFileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F070000">
+</meta-data>
+</provider>
+<meta-data android:name="android.support.VERSION" android:value="26.1.0">
+</meta-data>
+<meta-data android:name="com.crashlytics.ApiKey" android:value="94569e6c26a92fe0a7a5254e1043b150796b646d">
+</meta-data>
+<meta-data android:name="android.arch.lifecycle.VERSION" android:value="27.0.0-SNAPSHOT">
+</meta-data>
+<activity android:name="com.jakewharton.processphoenix.ProcessPhoenix" android:process=":phoenix" android:theme="@android:01030010">
+</activity>
+</application>
+</manifest>

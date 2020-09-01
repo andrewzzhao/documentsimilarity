@@ -1,0 +1,92 @@
+<?xml version="1.0" ?><manifest android:installLocation="2" android:versionCode="313" android:versionName="2.3.33" package="com.asobimo.petitechronicle_g" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="14" android:targetSdkVersion="26">
+</uses-sdk>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS">
+</uses-permission>
+<uses-permission android:maxSdkVersion="22" android:name="android.permission.GET_ACCOUNTS">
+</uses-permission>
+<uses-permission android:maxSdkVersion="22" android:name="android.permission.USE_CREDENTIALS">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_LOGS">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="com.android.vending.BILLING">
+</uses-permission>
+<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE">
+</uses-permission>
+<uses-permission android:name="com.asobimo.petitechronicle_g.permission.RECEIVE">
+</uses-permission>
+<uses-permission android:name="com.asobimo.petitechronicle_g.permission.C2D_MESSAGE">
+</uses-permission>
+<permission android:name="com.asobimo.petitechronicle_g.permission.C2D_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES">
+</uses-permission>
+<application android:icon="@7F040015" android:label="@7F090001" android:theme="@android:0103000E">
+<activity android:configChanges="0x40000FFF" android:label="@7F090001" android:launchMode="2" android:multiprocess="false" android:name="com.asobimo.petitechronicle_g.GameFramework" android:noHistory="false" android:screenOrientation="6">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="pcrogccall">
+</data>
+</intent-filter>
+</activity>
+<meta-data android:name="com.google.android.gms.version" android:value="@7F060000">
+</meta-data>
+<activity android:name="net.adways.appdriver.sdk.ADARewardActivity" android:screenOrientation="6">
+</activity>
+<meta-data android:name="net.adways.appdriver.scheme" android:value="pcrogccall">
+</meta-data>
+<meta-data android:name="net.adways.appdriver.host" android:value="pcro.jp">
+</meta-data>
+<service android:enabled="true" android:name="com.asobimo.petitechronicle_g.GcmIntentService">
+</service>
+<receiver android:name="com.asobimo.petitechronicle_g.GcmBroadcastReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+<category android:name="com.asobimo.petitechronicle_g">
+</category>
+</intent-filter>
+</receiver>
+<provider android:authorities="com.asobimo.petitechronicle_g.fileprovider" android:exported="false" android:grantUriPermissions="true" android:name="android.support.v4.content.FileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F0B0000">
+</meta-data>
+</provider>
+<receiver android:exported="true" android:name="com.appsflyer.MultipleInstallBroadcastReceiver">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+<activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:01030010">
+</activity>
+</application>
+</manifest>

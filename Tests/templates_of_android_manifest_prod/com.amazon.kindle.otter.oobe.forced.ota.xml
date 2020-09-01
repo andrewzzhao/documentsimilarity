@@ -1,0 +1,46 @@
+<?xml version="1.0" ?><manifest android:versionCode="1009610" android:versionName="1.0.200000.0_1009610" package="com.amazon.kindle.otter.oobe.forced.ota" platformBuildVersionCode="25" platformBuildVersionName="7.1.1" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="21" android:targetSdkVersion="25">
+</uses-sdk>
+<uses-permission android:name="com.amazon.dcp.ota.permission.CONTROLLER">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="com.amazon.dcp.metrics.permission.METRICS_PERMISSION">
+</uses-permission>
+<uses-permission android:name="amazon.permission.COLLECT_METRICS">
+</uses-permission>
+<uses-feature android:name="com.fireos.sdk.ota_contracts" android:required="true" android:version="1">
+</uses-feature>
+<uses-feature android:name="com.fireos.sdk.metrics" android:required="true" android:version="2">
+</uses-feature>
+<uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.STATUS_BAR">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<application android:allowBackup="false" android:icon="@7F0201FF" android:label="@7F060090" android:name="com.amazon.kindle.otter.oobe.forced.ota.ForcedOTAApplication" android:supportsRtl="false" android:taskAffinity=".oobetask" android:theme="@7F080245">
+<activity android:configChanges="0x40002FFF" android:excludeFromRecents="true" android:label="@7F06008F" android:name="com.amazon.kindle.otter.oobe.forced.ota.OtaUpdate" android:screenOrientation="7" android:taskAffinity="" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x40002FFF" android:excludeFromRecents="true" android:label="@7F060090" android:name="com.amazon.kindle.otter.oobe.forced.ota.OTAHomeActivity" android:screenOrientation="7" android:theme="@android:01030010">
+<intent-filter>
+<action android:name="com.amazon.kindle.otter.oobe.modules.ota.START_FORCED_OTA">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<receiver android:name="com.amazon.kindle.otter.oobe.forced.ota.FOTAReceiver">
+<intent-filter>
+<action android:name="com.amazon.kindle.otter.oobe.forced.ota.FINISH_ACTIVITY">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</receiver>
+<activity android:configChanges="0x40002FFF" android:excludeFromRecents="true" android:hardwareAccelerated="false" android:name="com.amazon.oobe.commons.web.LearnMoreActivity" android:screenOrientation="7">
+</activity>
+<activity android:configChanges="0x40002FFF" android:excludeFromRecents="true" android:hardwareAccelerated="false" android:launchMode="2" android:name="com.amazon.oobe.commons.activity.LoadingActivity" android:screenOrientation="7">
+</activity>
+</application>
+</manifest>

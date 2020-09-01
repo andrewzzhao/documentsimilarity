@@ -1,0 +1,182 @@
+<?xml version="1.0" ?><manifest android:versionCode="11" android:versionName="2.1" package="mysense.advanceddatamanager" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="15" android:targetSdkVersion="26">
+</uses-sdk>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-permission android:name="android.permission.BLUETOOTH">
+</uses-permission>
+<uses-permission android:name="android.permission.BLUETOOTH_ADMIN">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-permission android:name="com.android.alarm.permission.SET_ALARM">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_NETWORK_USAGE_HISTORY">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="android.permission.PACKAGE_USAGE_STATS">
+</uses-permission>
+<application android:allowBackup="true" android:icon="@7F0800A0" android:label="@7F0E001E" android:roundIcon="@7F0800A0" android:supportsRtl="true" android:theme="@7F0F0009">
+<activity android:name="mysense.advanceddatamanager.activity.SplashActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000030">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:name="mysense.advanceddatamanager.activity.MainActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000030">
+</activity>
+<activity android:name="mysense.advanceddatamanager.activity.AllSetActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="mysense.advanceddatamanager.activity.SetUPlansActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000030">
+</activity>
+<activity android:name="mysense.advanceddatamanager.activity.SetPhonePlanActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="mysense.advanceddatamanager.activity.AppInfoActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="mysense.advanceddatamanager.activity.VPNActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="mysense.advanceddatamanager.activity.SummaryActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="mysense.advanceddatamanager.activity.AlarmManagerActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="mysense.advanceddatamanager.activity.VPNActivityD" android:screenOrientation="1">
+</activity>
+<activity android:name="mysense.advanceddatamanager.activity.AppInfo" android:screenOrientation="1">
+</activity>
+<activity android:name="mysense.advanceddatamanager.activity.RestrictAppProfileActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="mysense.advanceddatamanager.activity.testDirectory.AppSpeedActivity" android:theme="@7F0F012A">
+</activity>
+<service android:name="mysense.advanceddatamanager.other.VPNService" android:permission="android.permission.BIND_VPN_SERVICE">
+<intent-filter>
+<action android:name="android.net.VpnService">
+</action>
+</intent-filter>
+</service>
+<receiver android:name="mysense.advanceddatamanager.other.InternetSpeedReceiver">
+<intent-filter>
+<action android:name="restartApps">
+</action>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+<action android:name="android.intent.action.TIME_SET">
+</action>
+<action android:name="android.intent.action.TIMEZONE_CHANGED">
+</action>
+<action android:name="android.intent.action.LOCALE_CHANGED">
+</action>
+<action android:name="android.intent.action.PACKAGE_FULLY_REMOVED">
+</action>
+<action android:name="android.intent.action.PACKAGE_DATA_CLEARED">
+</action>
+<action android:name="android.intent.action.NEW_OUTGOING_CALL">
+</action>
+<action android:name="android.intent.action.NEW_OUTGOING_CALL">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</receiver>
+<service android:name="mysense.advanceddatamanager.other.NotificationService">
+</service>
+<receiver android:name="mysense.advanceddatamanager.other.ShutDownReceiver">
+<intent-filter>
+<action android:name="android.intent.action.ACTION_SHUTDOWN">
+</action>
+<action android:name="android.intent.action.REBOOT">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:enabled="true" android:name="mysense.advanceddatamanager.other.RebootReceiver" android:permission="android.permission.RECEIVE_BOOT_COMPLETED">
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</receiver>
+<receiver android:name="mysense.advanceddatamanager.other.AlarmReceiver1">
+</receiver>
+<receiver android:name="mysense.advanceddatamanager.other.PackageInstalledService">
+<intent-filter>
+<action android:name="android.net.wifi.WIFI_AP_STATE_CHANGED">
+</action>
+<action android:name="android.net.conn.TETHER_STATE_CHANGED">
+</action>
+<action android:name="android.bluetooth.device.action.BOND_STATE_CHANGED">
+</action>
+<action android:name="android.bluetooth.device.action.ACL_CONNECTED">
+</action>
+<action android:name="android.bluetooth.device.action.ACL_DISCONNECTED">
+</action>
+<action android:name="android.bluetooth.adapter.action.STATE_CHANGED">
+</action>
+</intent-filter>
+</receiver>
+<service android:name="mysense.advanceddatamanager.other.DataService">
+</service>
+<service android:name="mysense.advanceddatamanager.other.TrafficSample">
+</service>
+<activity android:name="mysense.advanceddatamanager.activity.HistoryActivity" android:screenOrientation="1">
+</activity>
+<receiver android:name="mysense.advanceddatamanager.other.DataAlarmReceiver">
+<intent-filter>
+<action android:name="restartApps">
+</action>
+<action android:name="ALARM_RECEIVER_INTENT_TRIGGER">
+</action>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+<action android:name="android.intent.action.TIME_SET">
+</action>
+<action android:name="android.intent.action.TIMEZONE_CHANGED">
+</action>
+<action android:name="android.intent.action.LOCALE_CHANGED">
+</action>
+<action android:name="android.intent.action.PACKAGE_FULLY_REMOVED">
+</action>
+<action android:name="android.intent.action.PACKAGE_DATA_CLEARED">
+</action>
+<action android:name="android.intent.action.NEW_OUTGOING_CALL">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</receiver>
+<activity android:name="mysense.advanceddatamanager.activity.TestActivity">
+</activity>
+<activity android:name="mysense.advanceddatamanager.activity.testDirectory.SetUpSharedPlan">
+</activity>
+<activity android:name="mysense.advanceddatamanager.activity.testDirectory.VerifyPin">
+</activity>
+<activity android:name="mysense.advanceddatamanager.activity.testDirectory.NewSharedPlan">
+</activity>
+<activity android:name="mysense.advanceddatamanager.activity.testDirectory.AllPlans">
+</activity>
+<activity android:name="mysense.advanceddatamanager.activity.SetAllocation">
+</activity>
+<activity android:name="mysense.advanceddatamanager.activity.NewSummaryActivity">
+</activity>
+<activity android:name="mysense.advanceddatamanager.activity.NewTestActivity">
+</activity>
+</application>
+</manifest>

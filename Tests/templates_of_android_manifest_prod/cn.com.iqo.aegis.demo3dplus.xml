@@ -1,0 +1,368 @@
+<?xml version="1.0" ?><manifest android:versionCode="2133" android:versionName="v14.38.4.2133" package="cn.com.iqo.aegis.demo3dplus" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="14" android:targetSdkVersion="19">
+</uses-sdk>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_CONTACTS">
+</uses-permission>
+<uses-permission android:name="android.permission.RECORD_AUDIO">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-feature android:name="android.hardware.camera" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.camera.autofocus" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.camera.front" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.camera.front.autofocus" android:required="false">
+</uses-feature>
+<uses-permission android:name="com.android.launcher.permission.READ_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<permission android:name="cn.com.iqo.aegis.demo3dplus.permission.JPUSH_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="cn.com.iqo.aegis.demo3dplus.permission.JPUSH_MESSAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_USER_PRESENT">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.USE_CREDENTIALS">
+</uses-permission>
+<uses-permission android:name="android.permission.MANAGE_ACCOUNTS">
+</uses-permission>
+<application android:allowBackup="true" android:icon="@7F020015" android:label="@7F060036" android:largeHeap="true" android:name="TDPApplication" android:theme="@7F070016">
+<meta-data android:name="com.facebook.sdk.ApplicationId" android:value="fb1569766619993428">
+</meta-data>
+<meta-data android:name="BaiduMobAd_STAT_ID" android:value="eecbcbe039">
+</meta-data>
+<meta-data android:name="BaiduMobAd_CHANNEL" android:value="Baidu Market">
+</meta-data>
+<meta-data android:name="BaiduMobAd_EXCEPTION_LOG" android:value="true">
+</meta-data>
+<meta-data android:name="BaiduMobAd_SEND_STRATEGY" android:value="SET_TIME_INTERVAL">
+</meta-data>
+<meta-data android:name="BaiduMobAd_TIME_INTERVAL" android:value="1">
+</meta-data>
+<meta-data android:name="BaiduMobAd_ONLY_WIFI" android:value="false">
+</meta-data>
+<meta-data android:name="BaiduMobAd_CELL_LOCATION" android:value="true">
+</meta-data>
+<meta-data android:name="BaiduMobAd_GPS_LOCATION" android:value="true">
+</meta-data>
+<meta-data android:name="BaiduMobAd_WIFI_LOCATION" android:value="true">
+</meta-data>
+<meta-data android:name="com.baidu.lbsapi.API_KEY" android:value="GDKKE29V8ucVG3UT7FdukbmE">
+</meta-data>
+<meta-data android:name="com.baidu.speech.APP_ID" android:value="YOUR-BAIDU-VOICE-APP-ID">
+</meta-data>
+<meta-data android:name="com.baidu.speech.API_KEY" android:value="YOUR-BAIDU-VOICE-API-KEY">
+</meta-data>
+<meta-data android:name="com.baidu.speech.SECRET_KEY" android:value="YOUR-BAIDU-VOICE-SECRET-KEY">
+</meta-data>
+<service android:exported="false" android:name="com.baidu.speech.VoiceRecognitionService">
+</service>
+<service android:enabled="true" android:exported="false" android:name="cn.jpush.android.service.PushService">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.REGISTER">
+</action>
+<action android:name="cn.jpush.android.intent.REPORT">
+</action>
+<action android:name="cn.jpush.android.intent.PushService">
+</action>
+<action android:name="cn.jpush.android.intent.PUSH_TIME">
+</action>
+</intent-filter>
+</service>
+<service android:enabled="true" android:exported="true" android:name="cn.jpush.android.service.DaemonService">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.DaemonService">
+</action>
+<category android:name="cn.com.iqo.aegis.demo3dplus">
+</category>
+</intent-filter>
+</service>
+<receiver android:enabled="true" android:name="cn.jpush.android.service.PushReceiver">
+<intent-filter android:priority="1000">
+<action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY">
+</action>
+<category android:name="cn.com.iqo.aegis.demo3dplus">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.USER_PRESENT">
+</action>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_ADDED">
+</action>
+<action android:name="android.intent.action.PACKAGE_REMOVED">
+</action>
+<data android:scheme="package">
+</data>
+</intent-filter>
+</receiver>
+<activity android:configChanges="0x000000A0" android:exported="false" android:name="cn.jpush.android.ui.PushActivity">
+<intent-filter>
+<action android:name="cn.jpush.android.ui.PushActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="cn.com.iqo.aegis.demo3dplus">
+</category>
+</intent-filter>
+</activity>
+<service android:enabled="true" android:exported="false" android:name="cn.jpush.android.service.DownloadService">
+</service>
+<receiver android:name="cn.jpush.android.service.AlarmReceiver">
+</receiver>
+<receiver android:enabled="true" android:name="hk.com.threedplus.TDPKit.JPushReceiver">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.REGISTRATION">
+</action>
+<action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED">
+</action>
+<action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED">
+</action>
+<action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED">
+</action>
+<action android:name="cn.jpush.android.intent.ACTION_RICHPUSH_CALLBACK">
+</action>
+<action android:name="cn.jpush.android.intent.CONNECTION">
+</action>
+<category android:name="cn.com.iqo.aegis.demo3dplus">
+</category>
+</intent-filter>
+</receiver>
+<meta-data android:name="JPUSH_CHANNEL" android:value="developer-default">
+</meta-data>
+<meta-data android:name="JPUSH_APPKEY" android:value="705023942b06b18ecc18272d">
+</meta-data>
+<activity android:configChanges="0x000004A0" android:label="@7F060037" android:launchMode="2" android:name="hk.com.threedplus.TDPKit.TDPResidentActivity" android:screenOrientation="4">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F060037" android:name="hk.com.threedplus.TDPKit.photopicker.PhotoPickerActivity" android:screenOrientation="4">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F060037" android:name="hk.com.threedplus.TDPKit.TDPActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F060037" android:name="cn.com.iqo.aegis.demo3dplus.TDPWrapperActivity" android:theme="@android:01030009">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<action android:name="android.intent.action.EDIT">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:host="*" android:mimeType="application/octet-stream" android:pathPattern=".*\.iqo">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<action android:name="android.intent.action.EDIT">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:host="*" android:mimeType="application/iqo" android:pathPattern=".*\.iqo">
+</data>
+</intent-filter>
+<intent-filter>
+<data android:scheme="iqo">
+</data>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<action android:name="android.intent.action.EDIT">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:host="*" android:mimeType="application/octet-stream" android:pathPattern=".*\.iqo-demo3dplus">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<action android:name="android.intent.action.EDIT">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:host="*" android:mimeType="application/iqo" android:pathPattern=".*\.iqo-demo3dplus">
+</data>
+</intent-filter>
+<intent-filter>
+<data android:scheme="iqo-demo3dplus">
+</data>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<action android:name="android.intent.action.EDIT">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:host="*" android:mimeType="application/octet-stream" android:pathPattern=".*\.tdp">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<action android:name="android.intent.action.EDIT">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:host="*" android:mimeType="application/tdp" android:pathPattern=".*\.tdp">
+</data>
+</intent-filter>
+<intent-filter>
+<data android:scheme="tdp">
+</data>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<action android:name="android.intent.action.EDIT">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:host="*" android:mimeType="application/octet-stream" android:pathPattern=".*\.tdp-demo3dplus">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<action android:name="android.intent.action.EDIT">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:host="*" android:mimeType="application/tdp" android:pathPattern=".*\.tdp-demo3dplus">
+</data>
+</intent-filter>
+<intent-filter>
+<data android:scheme="tdp-demo3dplus">
+</data>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:launchMode="2" android:name="com.tencent.tauth.AuthActivity" android:noHistory="true">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="tencent1104988688">
+</data>
+</intent-filter>
+</activity>
+<activity android:exported="true" android:label="WXEntryActivity" android:name="cn.com.iqo.aegis.demo3dplus.wxapi.WXEntryActivity">
+</activity>
+<activity android:exported="true" android:launchMode="1" android:name="cn.com.iqo.aegis.demo3dplus.wxapi.WXPayEntryActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.tencent.connect.common.AssistActivity" android:theme="@android:01030010">
+</activity>
+<activity android:name="com.tencent.weibo.sdk.android.component.Authorize">
+</activity>
+<activity android:configChanges="0x000000A0" android:exported="false" android:name="com.sina.weibo.sdk.component.WeiboSdkBrowser" android:windowSoftInputMode="0x00000010">
+</activity>
+<service android:exported="false" android:name="com.sina.weibo.sdk.net.DownloadService">
+</service>
+<activity android:configChanges="0x000004E0" android:name="com.renn.rennsdk.oauth.OAuthActivity">
+</activity>
+<service android:exported="false" android:name="com.paypal.android.sdk.payments.PayPalService">
+</service>
+<activity android:name="com.paypal.android.sdk.payments.PaymentActivity">
+</activity>
+<activity android:name="com.paypal.android.sdk.payments.LoginActivity">
+</activity>
+<activity android:name="com.paypal.android.sdk.payments.PaymentMethodActivity">
+</activity>
+<activity android:name="com.paypal.android.sdk.payments.PaymentConfirmActivity">
+</activity>
+<activity android:name="com.paypal.android.sdk.payments.PayPalFuturePaymentActivity">
+</activity>
+<activity android:name="com.paypal.android.sdk.payments.FuturePaymentConsentActivity">
+</activity>
+<activity android:name="com.paypal.android.sdk.payments.FuturePaymentInfoActivity">
+</activity>
+<activity android:name="com.paypal.android.sdk.payments.PayPalProfileSharingActivity">
+</activity>
+<activity android:name="com.paypal.android.sdk.payments.ProfileSharingConsentActivity">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="io.card.payment.CardIOActivity">
+</activity>
+<activity android:name="io.card.payment.DataEntryActivity">
+</activity>
+<service android:exported="false" android:name="hk.com.threedplus.TDPKit.map.TDPService">
+</service>
+<activity android:configChanges="0x000005B0" android:label="@7F060016" android:name="com.facebook.FacebookActivity" android:theme="@android:01030010">
+</activity>
+<provider android:authorities="com.facebook.app.FacebookContentProvider1569766619993428" android:exported="true" android:name="com.facebook.FacebookContentProvider">
+</provider>
+<activity android:name="com.twitter.sdk.android.core.identity.OAuthActivity">
+</activity>
+</application>
+</manifest>

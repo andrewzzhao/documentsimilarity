@@ -1,0 +1,60 @@
+<?xml version="1.0" ?><manifest android:versionCode="8" android:versionName="8.0" package="jp.kino.smakLite" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="7">
+</uses-sdk>
+<meta-data android:name="Adlantis_Publisher_ID" android:value="MjIzMTA%3D%0A">
+</meta-data>
+<application android:icon="@7F02000E" android:label="@7F060001">
+<activity android:label="@7F060001" android:name=".SmakLiteActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:label="@7F060001" android:name=".TitleActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F060001" android:name=".GameActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F060001" android:name=".ScoreActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F060001" android:name=".WebMoreGameActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000FB0" android:name="com.google.ads.AdActivity">
+</activity>
+<meta-data android:name="appc_media_key" android:value="aae596a100b7fd96a713c13f5c9f73317834b26c">
+</meta-data>
+<activity android:name="jp.co.cayto.appc.sdk.android.AppCAgreementActivity" android:noHistory="true" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x400003FF" android:name="jp.co.cayto.appc.sdk.android.AppCWebActivity" android:theme="@android:01030006">
+</activity>
+<service android:name="jp.co.cayto.appc.sdk.android.background.IDService">
+</service>
+<receiver android:name="jp.co.cayto.appc.sdk.android.background.BgAppReceiver">
+<intent-filter>
+<action android:name="jp.co.cayto.appc.sdk.android.remote.command.gid.search">
+</action>
+<action android:name="jp.co.cayto.appc.sdk.android.remote.command.gid.set">
+</action>
+<action android:name="jp.co.cayto.appc.sdk.android.remote.command.gid.remove">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:enabled="true" android:exported="false" android:label="BootStrap" android:name="jp.co.cayto.appc.sdk.android.background.BootStrap">
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_ADDED">
+</action>
+<action android:name="android.intent.action.PACKAGE_REMOVED">
+</action>
+<action android:name="android.intent.action.PACKAGE_REPLACED">
+</action>
+<data android:scheme="package">
+</data>
+</intent-filter>
+</receiver>
+</application>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+</manifest>

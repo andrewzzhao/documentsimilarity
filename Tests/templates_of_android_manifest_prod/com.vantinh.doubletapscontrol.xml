@@ -1,0 +1,90 @@
+<?xml version="1.0" ?><manifest android:versionCode="20" android:versionName="2.3.0" package="com.vantinh.doubletapscontrol" platformBuildVersionCode="24" platformBuildVersionName="7.000000" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="14" android:targetSdkVersion="24">
+</uses-sdk>
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.BLUETOOTH">
+</uses-permission>
+<uses-permission android:name="android.permission.BLUETOOTH_ADMIN">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NOTIFICATION_POLICY">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.PACKAGE_USAGE_STATS">
+</uses-permission>
+<application android:allowBackup="true" android:icon="@7F030001" android:label="@7F070031" android:name="com.vantinh.doubletaps.Apps" android:supportsRtl="true" android:theme="@7F090099">
+<meta-data android:name="com.google.android.gms.version" android:value="@7F0B0005">
+</meta-data>
+<activity android:label="@7F070031" android:name="com.vantinh.doubletaps.view.MainActivity" android:theme="@7F09003C">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:label="@7F07003A" android:name="com.vantinh.doubletaps.view.DoubleTapActionsActivity">
+</activity>
+<activity android:name="com.vantinh.doubletaps.admin.EnableAdminActivity" android:theme="@android:01030010">
+</activity>
+<activity android:excludeFromRecents="true" android:name="com.vantinh.doubletaps.view.FingerOffActivity" android:theme="@7F090089">
+</activity>
+<activity android:excludeFromRecents="true" android:name="com.vantinh.doubletaps.view.WakeUpActivity" android:theme="@7F09008A">
+</activity>
+<service android:exported="false" android:name="com.vantinh.doubletaps.allservice.DTService">
+</service>
+<service android:canRetrieveWindowContent="true" android:name="com.vantinh.doubletaps.allservice.ACSService" android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE">
+<intent-filter>
+<action android:name="android.accessibilityservice.AccessibilityService">
+</action>
+</intent-filter>
+</service>
+<receiver android:name="com.vantinh.doubletaps.recivers.OnBoot">
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name="com.vantinh.doubletaps.admin.AdminReceiver" android:permission="android.permission.BIND_DEVICE_ADMIN">
+<meta-data android:name="android.app.device_admin" android:resource="@7F060001">
+</meta-data>
+<intent-filter>
+<action android:name="android.app.action.DEVICE_ADMIN_ENABLED">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:enabled="true" android:name="com.vantinh.doubletaps.recivers.OffScreen">
+<intent-filter>
+<action android:name="off_screen">
+</action>
+</intent-filter>
+</receiver>
+<activity android:name="com.vantinh.doubletaps.view.PermissionAccess">
+</activity>
+<service android:enabled="true" android:exported="true" android:name="com.vantinh.doubletaps.allservice.FakeDTService">
+</service>
+<activity android:name="com.vantinh.doubletaps.view.BaseActivity" android:theme="@7F090099">
+</activity>
+<activity android:configChanges="0x00000FB0" android:name="com.google.android.gms.ads.AdActivity" android:theme="@android:0103000F">
+</activity>
+<activity android:name="com.google.android.gms.ads.purchase.InAppPurchaseActivity" android:theme="@7F090135">
+</activity>
+<activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:01030010">
+</activity>
+</application>
+</manifest>

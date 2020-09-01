@@ -1,0 +1,514 @@
+<?xml version="1.0" ?><manifest android:versionCode="148" android:versionName="1.48" package="com.thinkleft.eightyeightsms.mms" platformBuildVersionCode="21" platformBuildVersionName="5.0-1521886" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-feature android:name="android.hardware.telephony" android:required="false">
+</uses-feature>
+<uses-sdk android:minSdkVersion="16" android:targetSdkVersion="21">
+</uses-sdk>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-permission android:name="android.permission.CALL_PHONE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_CONTACTS">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_CONTACTS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PROFILE">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_SMS">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_MMS">
+</uses-permission>
+<uses-permission android:name="android.permission.SEND_SMS">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_SMS">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SMS">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.MODIFY_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.INSTALL_DRM">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_APN_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_PHONE_BLACKLIST">
+</uses-permission>
+<uses-permission android:name="com.android.vending.BILLING">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.DEVICE_POWER">
+</uses-permission>
+<uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES">
+</uses-permission>
+<uses-permission android:name="com.sec.android.provider.badge.permission.READ">
+</uses-permission>
+<uses-permission android:name="com.sec.android.provider.badge.permission.WRITE">
+</uses-permission>
+<uses-permission android:name="javax.microedition.gba.USE_GBA_SERVICE">
+</uses-permission>
+<uses-permission android:name="android.permission.DISABLE_KEYGUARD">
+</uses-permission>
+<permission android:description="@7F070130" android:label="@7F07012F" android:name="android.permission.MMS_PUSH" android:protectionLevel="0x00000003">
+</permission>
+<uses-permission android:name="android.permission.MMS_PUSH">
+</uses-permission>
+<uses-permission android:name="android.permission.MMS_SEND_OUTBOX_MSG">
+</uses-permission>
+<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE">
+</uses-permission>
+<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE">
+</uses-permission>
+<permission android:name="com.thinkleft.eightyeightsms.mms.permission.C2D_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="com.thinkleft.eightyeightsms.mms.permission.C2D_MESSAGE">
+</uses-permission>
+<application android:allowTaskReparenting="true" android:icon="@7F030001" android:label="@7F07015D" android:name="MmsApp">
+<meta-data android:name="extraversion" android:value="">
+</meta-data>
+<meta-data android:name="com.google.android.gms.version" android:value="@7F090000">
+</meta-data>
+<service android:exported="false" android:name=".transaction.TransactionService">
+</service>
+<service android:exported="false" android:name=".transaction.SmsReceiverService">
+</service>
+<service android:exported="false" android:name=".transaction.SecondarySmsReceiverService">
+</service>
+<service android:exported="false" android:name=".transaction.SecondaryMmsReceiverService">
+</service>
+<activity android:configChanges="0x000004A0" android:exported="true" android:label="@7F07015D" android:launchMode="1" android:name=".ui.ConversationList" android:theme="@7F06000A">
+</activity>
+<activity-alias android:icon="@7F030001" android:label="@7F07015D" android:name=".ui.ConversationList_0" android:targetActivity=".ui.ConversationList">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.APP_MESSAGING">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:mimeType="vnd.android.cursor.dir/mms">
+</data>
+<data android:mimeType="vnd.android-dir/mms-sms">
+</data>
+</intent-filter>
+</activity-alias>
+<activity-alias android:enabled="false" android:icon="@7F030002" android:label="@7F07015D" android:name=".ui.ConversationList_1" android:targetActivity=".ui.ConversationList">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.APP_MESSAGING">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:mimeType="vnd.android.cursor.dir/mms">
+</data>
+<data android:mimeType="vnd.android-dir/mms-sms">
+</data>
+</intent-filter>
+</activity-alias>
+<activity android:configChanges="0x000004A0" android:exported="true" android:launchMode="1" android:name=".ui.ComposeMessageActivity" android:parentActivityName=".ui.ConversationList" android:theme="@7F06000A" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity-alias android:icon="@7F030001" android:label="@7F07015D" android:name=".ui.ComposeMessageActivity_0" android:targetActivity=".ui.ComposeMessageActivity">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:mimeType="vnd.android-dir/mms-sms">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<action android:name="android.intent.action.SENDTO">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="sms">
+</data>
+<data android:scheme="smsto">
+</data>
+<data android:scheme="mms">
+</data>
+<data android:scheme="mmsto">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.SEND">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:mimeType="image/*">
+</data>
+<data android:mimeType="audio/*">
+</data>
+<data android:mimeType="video/*">
+</data>
+<data android:mimeType="text/plain">
+</data>
+<data android:mimeType="text/x-vCard">
+</data>
+<data android:mimeType="text/x-vcard">
+</data>
+<data android:mimeType="text/vcard">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.SEND_MULTIPLE">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:mimeType="image/*">
+</data>
+<data android:mimeType="audio/*">
+</data>
+<data android:mimeType="video/*">
+</data>
+<data android:mimeType="text/x-vCard">
+</data>
+<data android:mimeType="text/x-vcard">
+</data>
+<data android:mimeType="text/vcard">
+</data>
+</intent-filter>
+</activity-alias>
+<activity-alias android:enabled="false" android:icon="@7F030002" android:label="@7F07015D" android:name=".ui.ComposeMessageActivity_1" android:parentActivityName=".ui.ConversationList_1" android:targetActivity=".ui.ComposeMessageActivity">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:mimeType="vnd.android-dir/mms-sms">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<action android:name="android.intent.action.SENDTO">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="sms">
+</data>
+<data android:scheme="smsto">
+</data>
+<data android:scheme="mms">
+</data>
+<data android:scheme="mmsto">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.SEND">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:mimeType="image/*">
+</data>
+<data android:mimeType="audio/*">
+</data>
+<data android:mimeType="video/*">
+</data>
+<data android:mimeType="text/plain">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.SEND_MULTIPLE">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:mimeType="image/*">
+</data>
+<data android:mimeType="audio/*">
+</data>
+<data android:mimeType="video/*">
+</data>
+</intent-filter>
+</activity-alias>
+<activity-alias android:configChanges="0x000004A0" android:name=".ui.ForwardMessageActivity" android:targetActivity=".ui.ComposeMessageActivity" android:theme="@7F06000A" android:windowSoftInputMode="0x00000002">
+</activity-alias>
+<activity android:configChanges="0x000004A0" android:exported="false" android:launchMode="1" android:name=".ui.ComposeMessageActivityNoLockScreen" android:theme="@7F06000A" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:excludeFromRecents="true" android:label="@7F07025D" android:name=".ui.WarnOfStorageLimitsActivity" android:theme="@android:0103000B">
+</activity>
+<activity android:label="@7F07025E" android:name=".ui.EditSlideDurationActivity" android:theme="@android:0103000B">
+</activity>
+<activity android:label="@7F07025F" android:name=".ui.SlideshowEditActivity" android:theme="@7F06000A">
+</activity>
+<activity android:label="@7F070140" android:name=".ui.SelectRecipientsList" android:parentActivityName=".ui.ComposeMessageActivity" android:theme="@7F06000A">
+</activity>
+<activity android:label="@7F070260" android:name=".ui.RecipientListActivity" android:theme="@7F06000A">
+</activity>
+<activity android:label="@7F070261" android:name=".ui.SlideEditorActivity" android:theme="@7F06000A" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F070262" android:name=".ui.SlideshowActivity" android:noHistory="true" android:theme="@7F06000A">
+</activity>
+<activity android:excludeFromRecents="true" android:label="@7F070263" android:launchMode="1" android:name=".ui.ClassZeroActivity" android:theme="@android:0103000F">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F0701D3" android:name=".ui.MessagingPreferenceActivity" android:theme="@7F06000A">
+</activity>
+<receiver android:name=".transaction.PushReceiver" android:permission="android.permission.BROADCAST_WAP_PUSH">
+<intent-filter>
+<action android:name="android.provider.Telephony.WAP_PUSH_RECEIVED">
+</action>
+<data android:mimeType="application/vnd.wap.mms-message">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.provider.Telephony.WAP_PUSH_DELIVER">
+</action>
+<data android:mimeType="application/vnd.wap.mms-message">
+</data>
+</intent-filter>
+</receiver>
+<receiver android:name=".transaction.MmsSystemEventReceiver">
+<intent-filter>
+<action android:name="android.intent.action.CONTENT_CHANGED">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name=".transaction.MmsSystemPushMsgReceiver" android:permission="android.permission.MMS_PUSH">
+<intent-filter>
+<action android:name="android.intent.action.MMS_PUSH">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name=".transaction.MmsPushOutboxMessages" android:permission="android.permission.MMS_SEND_OUTBOX_MSG">
+<intent-filter>
+<action android:name="android.intent.action.MMS_SEND_OUTBOX_MSG">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name=".transaction.SecondaryMmsReceiver">
+<intent-filter>
+<action android:name="android.intent.action.TRANSACTION_COMPLETED_ACTION">
+</action>
+</intent-filter>
+</receiver>
+<activity android:configChanges="0x000004A0" android:label="@7F07021E" android:launchMode="1" android:name=".ui.ManageSimMessages" android:theme="@7F06000A">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+</intent-filter>
+</activity>
+<service android:exported="true" android:name=".ui.SelectMmsSubscription">
+</service>
+<receiver android:name=".transaction.SecondarySmsReceiver" android:permission="android.permission.BROADCAST_SMS">
+<intent-filter>
+<action android:name="android.provider.Telephony.SMS_RECEIVED">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.provider.Telephony.SMS_DELIVER">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name=".transaction.PrivilegedSmsReceiver" android:permission="android.permission.SEND_SMS">
+<intent-filter>
+<action android:name="com.android.mms.transaction.SEND_MESSAGE">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name=".transaction.SmsReceiver">
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+<action android:name="com.android.mms.action.REMOVE_BLACKLIST">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="com.android.mms.transaction.MESSAGE_SENT">
+</action>
+<data android:scheme="content">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.SEND_MESSAGE">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="com.android.mms.transaction.SEND_MESSAGE">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name=".transaction.MessageStatusReceiver">
+<intent-filter>
+<action android:name="com.android.mms.transaction.MessageStatusReceiver.MESSAGE_STATUS_RECEIVED">
+</action>
+</intent-filter>
+</receiver>
+<service android:name=".transaction.MessageStatusService">
+</service>
+<receiver android:name=".transaction.SimFullReceiver">
+<intent-filter>
+<action android:name="android.provider.Telephony.SIM_FULL">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name=".transaction.SmsRejectedReceiver">
+<intent-filter>
+<action android:name="android.provider.Telephony.SMS_REJECTED">
+</action>
+</intent-filter>
+</receiver>
+<activity android:name=".ui.ConfirmRateLimitActivity" android:theme="@android:0103000B">
+<intent-filter>
+<action android:name="com.android.mms.RATE_LIMIT_SURPASSED">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F070266" android:name=".ui.SearchActivity" android:theme="@7F06000A">
+<intent-filter>
+<action android:name="android.intent.action.SEARCH">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+<meta-data android:name="android.app.searchable" android:resource="@7F050004">
+</meta-data>
+</activity>
+<meta-data android:name="android.app.default_searchable" android:value=".ui.SearchActivity">
+</meta-data>
+<provider android:authorities="com.thinkleft.eightyeightsms.mms.SuggestionsProvider" android:exported="true" android:name="SuggestionsProvider" android:readPermission="android.permission.READ_SMS">
+<path-permission android:pathPrefix="/search_suggest_query" android:readPermission="android.permission.GLOBAL_SEARCH">
+</path-permission>
+<path-permission android:pathPrefix="/search_suggest_shortcut" android:readPermission="android.permission.GLOBAL_SEARCH">
+</path-permission>
+</provider>
+<service android:exported="true" android:name=".ui.NoConfirmationSendService" android:permission="android.permission.SEND_RESPOND_VIA_MESSAGE">
+<intent-filter>
+<action android:name="android.intent.action.RESPOND_VIA_MESSAGE">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:scheme="sms">
+</data>
+<data android:scheme="smsto">
+</data>
+</intent-filter>
+</service>
+<provider android:authorities="com.thinkleft.eightyeightsms.mms.mms_temp_file" android:exported="true" android:multiprocess="true" android:name="TempFileProvider">
+</provider>
+<activity android:name=".ui.MiniPreferenceActivity">
+<intent-filter>
+<action android:name="com.android.mms.intent.action.MESSAGING_APP_NOTIFICATIONS">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<receiver android:name=".ui.SmsStorageMonitor">
+<intent-filter>
+<action android:name="android.intent.action.DEVICE_STORAGE_FULL">
+</action>
+<action android:name="android.intent.action.DEVICE_STORAGE_NOT_FULL">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:label="@7F07015D" android:name=".widget.MmsWidgetProvider">
+<intent-filter>
+<action android:name="android.appwidget.action.APPWIDGET_UPDATE">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="com.android.mms.intent.action.ACTION_NOTIFY_DATASET_CHANGED">
+</action>
+</intent-filter>
+<meta-data android:name="android.appwidget.provider" android:resource="@7F050007">
+</meta-data>
+</receiver>
+<service android:exported="false" android:name=".widget.MmsWidgetService" android:permission="android.permission.BIND_REMOTEVIEWS">
+</service>
+<activity android:label="@7F07010A" android:name=".templates.TemplatesListActivity" android:theme="@7F06000A">
+</activity>
+<activity android:label="@7F07010B" android:name=".templates.TemplateEditor" android:theme="@7F06000A">
+</activity>
+<provider android:authorities="com.thinkleft.eightyeightsms.mms.template" android:exported="true" android:name=".templates.TemplatesProvider">
+</provider>
+<activity android:configChanges="0x00000480" android:excludeFromRecents="true" android:exported="true" android:launchMode="1" android:name=".quickmessage.QuickMessagePopup" android:taskAffinity="" android:theme="@android:0103006F">
+</activity>
+<receiver android:exported="true" android:name=".quickmessage.QmMarkRead">
+</receiver>
+<receiver android:name=".quickmessage.ClearAllReceiver">
+</receiver>
+<activity android:label="@7F070036" android:name=".ui.AboutActivity" android:theme="@7F06000A">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F0700C3" android:name=".websms.WebSmsActivity" android:theme="@7F06000A">
+</activity>
+<service android:exported="false" android:name=".websms.WebSmsService">
+</service>
+<receiver android:name=".websms.WebSmsReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+<category android:name="com.thinkleft.eightyeightsms.mms">
+</category>
+</intent-filter>
+</receiver>
+<activity android:configChanges="0x00000FB0" android:name="com.google.android.gms.ads.AdActivity" android:theme="@android:0103000F">
+</activity>
+<service android:name=".pushbullet.PushbulletExtension" android:permission="com.pushbullet.android.permission.READ_MESSAGING_EXTENSION_DATA">
+<intent-filter>
+<action android:name="com.pushbullet.android.extension.MessagingExtension">
+</action>
+</intent-filter>
+<meta-data android:name="protocolVersion" android:value="1">
+</meta-data>
+</service>
+<activity android:configChanges="0x000000A0" android:name="com.mopub.mobileads.MoPubActivity">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.mopub.mobileads.MraidActivity">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.mopub.common.MoPubBrowser">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.mopub.mobileads.MraidVideoPlayerActivity">
+</activity>
+<activity android:configChanges="0x000000B0" android:name="com.millennialmedia.android.MMActivity" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x000000B0" android:name="com.millennialmedia.android.VideoPlayer">
+</activity>
+</application>
+</manifest>

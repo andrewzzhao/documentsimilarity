@@ -1,0 +1,24 @@
+<?xml version="1.0" ?><manifest android:versionCode="1" android:versionName="1.0" package="com.evo.wifiwidget" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="3" android:targetSdkVersion="4">
+</uses-sdk>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<application android:icon="@7F020005" android:label="@7F050000">
+<receiver android:name="WifiAppWidgetProvider">
+<intent-filter>
+<action android:name="android.appwidget.action.APPWIDGET_UPDATE">
+</action>
+<action android:name="android.net.wifi.WIFI_STATE_CHANGED">
+</action>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+<meta-data android:name="android.appwidget.provider" android:resource="@7F040000">
+</meta-data>
+</receiver>
+</application>
+</manifest>

@@ -1,0 +1,110 @@
+<?xml version="1.0" ?><manifest android:versionCode="4" android:versionName="1.3" package="com.lt.bombboy" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="8">
+</uses-sdk>
+<uses-feature android:glEsVersion="0x00020000">
+</uses-feature>
+<application android:icon="@7F020000" android:label="@7F050000">
+<activity android:configChanges="0x00000080" android:label="@7F050000" android:name=".bombboy" android:screenOrientation="0" android:theme="@android:01030007">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<meta-data android:name="TD_CHANNEL_ID" android:value="m1002">
+</meta-data>
+<meta-data android:name="LT_PACKAGE" android:value="2014-6-7 15:16">
+</meta-data>
+<meta-data android:name="LT_APPID" android:value="m10028">
+</meta-data>
+<meta-data android:name="TD_APP_ID" android:value="E7381A8ACCD620DF2DA1341DED5836F4">
+</meta-data>
+<service android:exported="true" android:name="mm.purchasesdk.iapservice.PurchaseService">
+<intent-filter android:priority="240">
+<action android:name="com.aspire.purchaseservice.BIND">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+<intent-filter android:priority="240">
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.SAFIAP.COMPONENT">
+</category>
+</intent-filter>
+</service>
+<activity android:configChanges="0x000000A0" android:name="mm.purchasesdk.iapservice.BillingLayoutActivity" android:theme="@android:0103000F">
+<intent-filter android:priority="240">
+<action android:name="com.lt.bombboy.com.mmiap.activity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<service android:exported="true" android:name="safiap.framework.SafFrameworkManager" android:process="safiap.framework">
+<intent-filter android:priority="610">
+<action android:name="safiap.framework.sdk.ISAFFramework">
+</action>
+</intent-filter>
+<intent-filter android:priority="610">
+<action android:name="safiap.framework.ACTION_START_DOWNLOAD">
+</action>
+</intent-filter>
+<intent-filter android:priority="610">
+<action android:name="safiap.framework.ACTION_CHECK_UPDATE">
+</action>
+</intent-filter>
+</service>
+<receiver android:name="safiap.framework.CheckUpdateReceiver">
+<intent-filter>
+<action android:name="safiap.framework.ACTION_CANCEL_NOTIFICATION">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="safiap.GET_SHARED_DATA">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="safiap.framework.ACTION_SET_TIMER">
+</action>
+</intent-filter>
+</receiver>
+<activity android:configChanges="0x00000080" android:excludeFromRecents="true" android:launchMode="3" android:name="safiap.framework.ui.UpdateHintActivity" android:theme="@android:01030010">
+<intent-filter android:priority="610">
+<action android:name="safiap.framework.ACTION_TO_INSTALL">
+</action>
+</intent-filter>
+<intent-filter android:priority="610">
+<action android:name="safiap.framework.ACTION_TO_INSTALL_IAP">
+</action>
+</intent-filter>
+<intent-filter android:priority="610">
+<action android:name="safiap.framework.ACTION_NETWORK_ERROR">
+</action>
+</intent-filter>
+</activity>
+<service android:name="safiap.framework.logreport.monitor.handler.LogreportHandler" android:process=":remote">
+</service>
+</application>
+<supports-screens android:anyDensity="true" android:largeScreens="true" android:normalScreens="true" android:smallScreens="true">
+</supports-screens>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.SEND_SMS">
+</uses-permission>
+<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS">
+</uses-permission>
+</manifest>

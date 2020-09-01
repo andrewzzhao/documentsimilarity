@@ -1,0 +1,48 @@
+<?xml version="1.0" ?><manifest android:installLocation="0" android:versionCode="13" android:versionName="1.13" package="com.airymob.yamaha.r6.superbike.moto.gp.hd" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-sdk android:minSdkVersion="8" android:targetSdkVersion="16">
+</uses-sdk>
+<uses-feature android:glEsVersion="0x00020000">
+</uses-feature>
+<uses-feature android:name="android.software.live_wallpaper">
+</uses-feature>
+<application android:icon="@7F020006" android:label="@7F060000" android:theme="@7F070000">
+<service android:enabled="true" android:label="@7F060000" android:name=".WallpaperService" android:permission="android.permission.BIND_WALLPAPER">
+<intent-filter>
+<action android:name="android.service.wallpaper.WallpaperService">
+</action>
+</intent-filter>
+<meta-data android:name="android.service.wallpaper" android:resource="@7F040000">
+</meta-data>
+</service>
+<service android:name=".DataDownloadService">
+</service>
+<receiver android:name=".DataReceiver">
+</receiver>
+<receiver android:name=".DataUpdater">
+</receiver>
+<receiver android:name=".PollReceiver">
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+</intent-filter>
+</receiver>
+<activity android:configChanges="0x00000FB0" android:label="@7F060000" android:name=".OpenApplication" android:theme="@android:0103000B">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x00000FB0" android:exported="true" android:name=".WallpaperSettings">
+</activity>
+</application>
+</manifest>

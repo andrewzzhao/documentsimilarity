@@ -1,0 +1,288 @@
+<?xml version="1.0" ?><manifest android:versionCode="123" android:versionName="2.2.7" package="com.douban.shuo" platformBuildVersionCode="21" platformBuildVersionName="5.0.1-1624448" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="10" android:targetSdkVersion="21">
+</uses-sdk>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-feature android:name="android.hardware.camera" android:required="false">
+</uses-feature>
+<supports-screens android:anyDensity="true" android:largeScreens="true" android:normalScreens="true" android:smallScreens="true" android:xlargeScreens="true">
+</supports-screens>
+<application android:allowBackup="true" android:hardwareAccelerated="true" android:icon="@7F0200F9" android:label="@7F06002C" android:largeHeap="@7F080001" android:name="com.douban.shuo.DoubanApp" android:theme="@7F0A0004">
+<meta-data android:name="UMENG_APPKEY" android:value="4def9913431fe30eb500002e">
+</meta-data>
+<meta-data android:name="UMENG_CHANNEL" android:value="Baidu_Market">
+</meta-data>
+<meta-data android:name="Douban_Apikey" android:value="07c78782db00a121175696889101e363">
+</meta-data>
+<meta-data android:name="Douban_Appname" android:value="shuo_android">
+</meta-data>
+<meta-data android:name="Douban_Channel" android:value="Baidu_Market">
+</meta-data>
+<meta-data android:name="source" android:value="mobile">
+</meta-data>
+<activity android:configChanges="0x000004A0" android:label="@7F06002C" android:name="com.douban.shuo.app.WelcomeActivity" android:noHistory="true" android:screenOrientation="1" android:theme="@7F0A0007">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="crystalexpress" android:scheme="doubanshuo">
+</data>
+<data android:host="crystalexpress" android:pathPattern=".*" android:scheme="doubanshuo">
+</data>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004A0" android:exported="true" android:label="@7F06002C" android:launchMode="1" android:name="com.douban.shuo.app.LoginActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000014">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="activated" android:scheme="doubanshuo">
+</data>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004A0" android:exported="true" android:label="@7F06002C" android:launchMode="1" android:name="com.douban.shuo.app.HomeActivity" android:screenOrientation="1" android:theme="@7F0A0005">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F06014E" android:name="com.douban.shuo.app.ProfileDescActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:exported="true" android:label="@7F060030" android:name="com.douban.shuo.app.ProfileActivity" android:screenOrientation="1" android:theme="@7F0A0050">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:host="shuo" android:pathPrefix="/people/" android:scheme="natalya">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:host="www.douban.com" android:pathPattern="/people/.*\/" android:scheme="http">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="com.douban.shuo">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:host="www.douban.com" android:pathPattern="/people/.*\/" android:scheme="http">
+</data>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004A0" android:exported="true" android:label="@7F06002C" android:name="com.douban.shuo.app.TopicActivity" android:screenOrientation="1" android:theme="@7F0A0050">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:host="shuo" android:pathPrefix="/topic/" android:scheme="natalya">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="com.douban.shuo">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:host="www.douban.com" android:pathPrefix="/update/topic/" android:scheme="http">
+</data>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004A0" android:exported="true" android:label="@7F06002C" android:name="com.douban.shuo.app.NoteListActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F06002C" android:name="com.douban.shuo.app.NoteActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:exported="true" android:label="@7F06002C" android:launchMode="1" android:name="com.douban.shuo.app.ComposeActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000004">
+<intent-filter>
+<action android:name="android.intent.action.SEND_MULTIPLE">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:mimeType="image/*">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.SEND">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:mimeType="image/*">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.SEND">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:mimeType="text/*">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.SEND">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:mimeType="message/rfc822">
+</data>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004A0" android:exported="true" android:label="@7F06002C" android:name="com.douban.shuo.app.StatusActivity" android:screenOrientation="1" android:theme="@7F0A0050" android:windowSoftInputMode="0x00000012">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:host="shuo" android:pathPrefix="/status/" android:scheme="natalya">
+</data>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F06002C" android:name="com.douban.shuo.app.AccountManageActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F06002C" android:name="com.douban.shuo.app.photo.AlbumListActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F06002C" android:name="com.douban.shuo.app.photo.AlbumEditActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:exported="true" android:label="@7F06002D" android:name="com.douban.shuo.app.photo.AlbumPhotosActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:host="shuo" android:path="album" android:scheme="natalya">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:host="www.douban.com" android:pathPrefix="/photos/album/" android:scheme="http">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="com.douban.shuo">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:host="www.douban.com" android:pathPrefix="/photos/album/" android:scheme="http">
+</data>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F06002C" android:name="com.douban.shuo.app.ChooserActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F06002C" android:name="com.douban.shuo.app.photo.PhotoPagerActivity" android:screenOrientation="1" android:theme="@7F0A0006" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:configChanges="0x000004A0" android:exported="true" android:label="@7F06002C" android:name="com.douban.shuo.app.photo.ImageViewerActivity" android:screenOrientation="1" android:theme="@7F0A0006">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:host="shuo" android:path="photo" android:scheme="natalya">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:host="www.douban.com" android:pathPrefix="/photos/photo/" android:scheme="http">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="com.douban.shuo">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:host="www.douban.com" android:pathPrefix="/photos/photo/" android:scheme="http">
+</data>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F06002C" android:name="com.douban.shuo.app.WebActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F06002C" android:launchMode="1" android:name="com.douban.shuo.app.RegisterActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F060145" android:name="com.douban.shuo.app.DebugActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F06002C" android:name="com.douban.shuo.app.UserFollowActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F06002C" android:launchMode="1" android:name="com.douban.shuo.app.SearchActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000010">
+<intent-filter>
+<action android:name="android.intent.action.SEARCH">
+</action>
+</intent-filter>
+<meta-data android:name="android.app.searchable" android:resource="@7F050001">
+</meta-data>
+</activity>
+<activity android:configChanges="0x000004A0" android:exported="true" android:label="@7F06002C" android:launchMode="1" android:name="com.douban.shuo.app.UploadNotifyActivity" android:noHistory="true" android:screenOrientation="1" android:theme="@7F0A0052">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F06002C" android:launchMode="1" android:name="com.douban.shuo.app.NotificationsActivity" android:parentActivityName="com.douban.shuo.app.HomeActivity" android:screenOrientation="1">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.douban.shuo.app.HomeActivity">
+</meta-data>
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F06002C" android:name="com.douban.shuo.app.ResharersAndLikersActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F06002C" android:launchMode="1" android:name="com.douban.shuo.app.SettingActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F06002C" android:launchMode="1" android:name="com.douban.shuo.app.AboutActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F06002C" android:launchMode="1" android:name="com.douban.shuo.app.FeedBackActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000004">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F06002C" android:launchMode="1" android:name="com.douban.shuo.app.DeveloperSettingsActivity" android:screenOrientation="1">
+</activity>
+<receiver android:exported="false" android:name="com.douban.shuo.receiver.AlarmReceiver">
+<intent-filter>
+<action android:name="com.douban.shuo.ALARM_ACTION_UPDATE_AUTO_COMPLETE">
+</action>
+<action android:name="com.douban.shuo.ALARM_ACTION_TRIM_NOTIFICATIONS">
+</action>
+<action android:name="com.douban.shuo.ALARM_ACTION_UPDATE_NOTIFICATIONS">
+</action>
+</intent-filter>
+</receiver>
+<service android:exported="false" android:label="@7F06002C" android:name="com.douban.shuo.service.DataService">
+</service>
+<service android:exported="false" android:label="@7F06002C" android:name="com.douban.shuo.service.CoreService">
+</service>
+<service android:name="com.umeng.update.net.DownloadingService" android:process=":DownloadingService">
+</service>
+<activity android:configChanges="0x00000480" android:launchMode="2" android:name="com.intowow.sdk.SplashAdActivity" android:screenOrientation="1" android:theme="@android:01030011">
+</activity>
+<activity android:configChanges="0x00000480" android:name="com.intowow.sdk.WebViewActivity" android:theme="@android:01030007">
+</activity>
+<receiver android:name="com.intowow.sdk.ScheduleReceiver">
+<intent-filter>
+<action android:name="com.intowow.sdk.prefetch">
+</action>
+</intent-filter>
+</receiver>
+<meta-data android:name="CRYSTAL_ID" android:value="17812ea791d0442f961c82eaad1a5a60">
+</meta-data>
+</application>
+</manifest>

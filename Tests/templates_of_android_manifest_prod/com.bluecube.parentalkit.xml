@@ -1,0 +1,448 @@
+<?xml version="1.0" ?><manifest android:versionCode="76" android:versionName="4.5.6" package="com.bluecube.parentalkit" platformBuildVersionCode="26" platformBuildVersionName="8.0.0" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="16" android:targetSdkVersion="19">
+</uses-sdk>
+<uses-permission android:name="android.permission.GET_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.SET_TIME_ZONE">
+</uses-permission>
+<uses-permission android:name="com.android.vending.BILLING">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-permission android:name="android.permission.BIND_ACCESSIBILITY_SERVICE">
+</uses-permission>
+<uses-feature android:name="android.hardware.location.gps">
+</uses-feature>
+<uses-feature android:name="android.hardware.location.network">
+</uses-feature>
+<uses-permission android:name="android.permission.PACKAGE_USAGE_STATS">
+</uses-permission>
+<uses-feature android:name="android.hardware.camera" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.camera.autofocus" android:required="false">
+</uses-feature>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="com.bluecube.parentalkit.permission.C2D_MESSAGE">
+</uses-permission>
+<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE">
+</uses-permission>
+<permission android:name="com.bluecube.parentalkit.permission.C2D_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-feature android:glEsVersion="0x00020000" android:required="true">
+</uses-feature>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-feature android:name="android.hardware.touchscreen" android:required="false">
+</uses-feature>
+<uses-permission android:name="com.androidid.browser.permission.READ_HISTORY_BOOKMARKS">
+</uses-permission>
+<uses-permission android:name="com.android.browser.permission.WRITE_HISTORY_BOOKMARKS">
+</uses-permission>
+<uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT">
+</uses-permission>
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW">
+</uses-permission>
+<uses-permission android:name="android.permission.RESTART_PACKAGES">
+</uses-permission>
+<permission android:name="android.permission.INTERNAL_SYSTEM_WINDOW" android:protectionLevel="0x00000002">
+</permission>
+<uses-feature android:name="android.hardware.camera.front" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.camera.flash" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.screen.landscape" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.wifi" android:required="false">
+</uses-feature>
+<application android:allowBackup="true" android:icon="@7F030000" android:installLocation="1" android:label="@7F0A0156" android:manageSpaceActivity=".activity.AccountActivity" android:name="com.bluecube.parentalkit.ParentalKitApplication" android:screenOrientation="1" android:supportsRtl="true" android:theme="@7F0E0029">
+<receiver android:enabled="true" android:name="com.google.android.gms.analytics.AnalyticsReceiver">
+<intent-filter>
+<action android:name="com.google.android.gms.analytics.ANALYTICS_DISPATCH">
+</action>
+</intent-filter>
+</receiver>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.analytics.AnalyticsService">
+</service>
+<activity android:configChanges="0x40002FFF" android:exported="true" android:launchMode="2" android:name="com.bluecube.parentalkit.activity.AccountActivity" android:screenOrientation="1" android:theme="@7F0E01E8" android:windowSoftInputMode="0x00000020">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="tittle">
+</data>
+</intent-filter>
+</activity>
+<service android:enabled="true" android:exported="true" android:name="com.bluecube.parentalkit.fcm.FirebaseIDService">
+<intent-filter>
+<action android:name="com.google.firebase.INSTANCE_ID_EVENT">
+</action>
+</intent-filter>
+</service>
+<service android:enabled="true" android:exported="true" android:name="com.bluecube.parentalkit.fcm.MyFirebaseMessagingService">
+<intent-filter>
+<action android:name="com.google.firebase.MESSAGING_EVENT">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</service>
+<activity android:exported="true" android:launchMode="3" android:name="com.bluecube.parentalkit.activity.OpenAppFromURLActivity">
+<intent-filter>
+<data android:host="app" android:scheme="tittle">
+</data>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x40002FFF" android:launchMode="2" android:name="com.bluecube.parentalkit.activity.FunctionListActivity" android:screenOrientation="1" android:theme="@7F0E01E8" android:windowSoftInputMode="0x00000010">
+</activity>
+<service android:exported="false" android:name="com.bluecube.parentalkit.service.ParentalKitApplicationService">
+</service>
+<meta-data android:name="com.google.android.geo.API_KEY" android:value="AIzaSyA5SCBWDgSNY_BzBvNfrvpmOvD1c8JGREc">
+</meta-data>
+<service android:exported="false" android:name="com.bluecube.parentalkit.service.ParentalKitLocationService">
+</service>
+<service android:exported="false" android:name="com.bluecube.parentalkit.service.ParentalKitUpdatePurchaseDataService">
+</service>
+<receiver android:name="com.bluecube.parentalkit.receiver.ParentalKitDeviceAdminReceiver" android:permission="android.permission.BIND_DEVICE_ADMIN">
+<intent-filter>
+<action android:name="android.app.action.DEVICE_ADMIN_ENABLED">
+</action>
+<action android:name="android.app.action.ACTION_DEVICE_ADMIN_DISABLE_REQUESTED">
+</action>
+<action android:name="android.app.action.ACTION_DEVICE_ADMIN_DISABLED">
+</action>
+</intent-filter>
+<meta-data android:name="android.app.device_admin" android:resource="@7F080001">
+</meta-data>
+</receiver>
+<receiver android:name="com.bluecube.parentalkit.receiver.AutoStart">
+<intent-filter android:priority="999">
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+<action android:name="android.intent.action.QUICKBOOT_POWERON">
+</action>
+<action android:name="android.intent.action.REBOOT">
+</action>
+<category android:name="android.intent.category.HOME">
+</category>
+</intent-filter>
+</receiver>
+<receiver android:name="com.bluecube.parentalkit.receiver.ParentalKitPhoneConnectivityChangedReceiver">
+<intent-filter>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+<category android:name="android.intent.category.HOME">
+</category>
+</intent-filter>
+</receiver>
+<receiver android:name="com.bluecube.parentalkit.receiver.ParentalKitDetectListAppChangedReceiver">
+<intent-filter android:priority="999">
+<action android:name="android.intent.action.PACKAGE_ADDED">
+</action>
+<action android:name="android.intent.action.PACKAGE_REMOVED">
+</action>
+<action android:name="android.intent.action.PACKAGE_REPLACED">
+</action>
+<action android:name="android.intent.action.PACKAGE_FULLY_REMOVED">
+</action>
+<action android:name="android.intent.action.MY_PACKAGE_REPLACED">
+</action>
+<action android:name="android.intent.ACTION_MY_PACKAGE_REPLACED">
+</action>
+<data android:scheme="package">
+</data>
+</intent-filter>
+</receiver>
+<receiver android:name="com.bluecube.parentalkit.receiver.ParentalKitLocationAccessChangedReceiver">
+<intent-filter>
+<action android:name="android.location.PROVIDERS_CHANGED">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</receiver>
+<receiver android:name="com.bluecube.parentalkit.receiver.ParentalKitTimeChangeListener">
+<intent-filter>
+<action android:name="android.intent.action.TIME_SET">
+</action>
+</intent-filter>
+</receiver>
+<service android:name="com.bluecube.parentalkit.service.ParentalKitUpdateGCMTokenService">
+</service>
+<meta-data android:name="com.google.android.gms.version" android:value="@7F10000A">
+</meta-data>
+<service android:name="com.bluecube.parentalkit.geofence.service.GeofenceGeneratorService">
+</service>
+<service android:name="com.bluecube.parentalkit.geofence.service.GeofenceDeletionService">
+</service>
+<service android:name="com.bluecube.parentalkit.geofence.service.GeofenceStatusReporterService">
+</service>
+<service android:name="com.bluecube.parentalkit.geofence.service.GeofenceBootReceiverService">
+</service>
+<service android:exported="true" android:name="com.bluecube.parentalkit.geofence.service.GeofenceListenerService">
+</service>
+<service android:enabled="true" android:name="com.bluecube.parentalkit.geofence.service.GeofencePushNotificationService">
+</service>
+<service android:name="com.bluecube.parentalkit.service.ParentalKitCommonUpdateService">
+</service>
+<meta-data android:name="io.fabric.ApiKey" android:value="356ff212283b153ebb3eacbcbaa6c2f0827b8809">
+</meta-data>
+<meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@7F0A0639">
+</meta-data>
+<activity android:configChanges="0x000005B0" android:label="@7F0A0156" android:name="com.facebook.FacebookActivity" android:theme="@7F0E0204">
+</activity>
+<activity android:exported="true" android:name="com.facebook.CustomTabActivity">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="@7F0A063A">
+</data>
+</intent-filter>
+</activity>
+<intent-filter>
+<action android:name="android.intent.action.SEND">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:mimeType="text/plain">
+</data>
+</intent-filter>
+<meta-data android:name="android.webkit.WebView.MetricsOptOut" android:value="true">
+</meta-data>
+<meta-data android:name="android.max_aspect" android:value="2.100000">
+</meta-data>
+<activity android:configChanges="0x40002FFF" android:exported="true" android:launchMode="2" android:name="com.bluecube.parentalkit.browser.BrowserActivity" android:screenOrientation="1" android:theme="@7F0E01E8" android:windowSoftInputMode="0x00000020">
+<intent-filter>
+<action android:name="info.guardianproject.panic.action.TRIGGER">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:alwaysRetainTaskState="true" android:configChanges="0x00000DB0" android:label="@7F0A0156" android:launchMode="2" android:name="com.bluecube.parentalkit.browser.IncognitoActivity" android:theme="@7F0E00A3" android:windowSoftInputMode="0x00000012">
+<intent-filter>
+<action android:name="android.intent.action.INCOGNITO">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x00000DB0" android:label="@7F0A048F" android:name="com.bluecube.parentalkit.browser.reading.activity.ReadingActivity" android:theme="@7F0E00A5">
+<intent-filter>
+<action android:name="android.intent.action.READING">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<provider android:authorities="com.bluecube.parentalkit.fileprovider" android:exported="false" android:grantUriPermissions="true" android:name="android.support.v4.content.FileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F080002">
+</meta-data>
+</provider>
+<activity android:name="com.bluecube.parentalkit.activity.BrowserActivity.AddBookMarkActivity" android:theme="@7F0E016C">
+</activity>
+<activity android:configChanges="0x40002FFF" android:exported="true" android:launchMode="2" android:name="com.bluecube.parentalkit.activity.ChildFunctionListActivity" android:screenOrientation="1" android:theme="@7F0E01E8" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.bluecube.parentalkit.activity.BrowserActivity.BookMarksListActivity" android:theme="@7F0E016C">
+</activity>
+<activity android:name="com.bluecube.parentalkit.activity.BrowserActivity.BrowserHistoryActivity" android:theme="@7F0E016C">
+</activity>
+<activity android:name="com.bluecube.parentalkit.socialSiteIntigration.SocialSiteInte" android:theme="@7F0E0183">
+</activity>
+<activity android:name="com.bluecube.parentalkit.socialSiteIntigration.TellPeopleAboutUsIntegration" android:theme="@android:01030073">
+</activity>
+<activity android:name="com.bluecube.parentalkit.socialSiteIntigration.LikeOnFacebook" android:theme="@android:01030073">
+</activity>
+<activity android:name="com.bluecube.parentalkit.fragment.kids.webtracking.WebTrackingWebView" android:theme="@7F0E016C">
+</activity>
+<activity android:name="com.bluecube.parentalkit.browser.browser.history.HistoryWebView" android:theme="@7F0E016C">
+</activity>
+<activity android:name="com.bluecube.parentalkit.socialSiteIntigration.EmailCustomActivity" android:theme="@7F0E016C">
+</activity>
+<activity android:launchMode="2" android:name="com.braintreepayments.api.BraintreeBrowserSwitchActivity">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="com.bluecube.parentalkit.braintree">
+</data>
+</intent-filter>
+</activity>
+<activity android:excludeFromRecents="true" android:launchMode="3" android:name="com.bluecube.parentalkit.activity.TransparentActivity" android:theme="@android:01030010">
+</activity>
+<activity android:excludeFromRecents="true" android:launchMode="3" android:name="com.bluecube.parentalkit.activity.TestActivity" android:theme="@android:01030010">
+</activity>
+<service android:enabled="true" android:name="com.bluecube.parentalkit.service.ParentalKitWindowChangeDetectingService" android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE">
+<intent-filter>
+<action android:name="android.accessibilityservice.AccessibilityService">
+</action>
+</intent-filter>
+<meta-data android:name="android.accessibilityservice" android:resource="@7F080000">
+</meta-data>
+</service>
+<service android:exported="false" android:name="com.bluecube.parentalkit.jobdispatcher.CheckDataLimitJobService">
+<intent-filter>
+<action android:name="com.firebase.jobdispatcher.ACTION_EXECUTE">
+</action>
+</intent-filter>
+</service>
+<service android:exported="false" android:name="com.bluecube.parentalkit.jobdispatcher.RestartLocationServiceJob">
+<intent-filter>
+<action android:name="com.firebase.jobdispatcher.ACTION_EXECUTE">
+</action>
+</intent-filter>
+</service>
+<meta-data android:name="com.rollbar.android.ACCESS_TOKEN" android:value="02a7b10a4abb4cbb864338c6e4262c12">
+</meta-data>
+<activity android:excludeFromRecents="true" android:exported="false" android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity" android:theme="@android:01030010">
+</activity>
+<service android:exported="true" android:name="com.google.android.gms.auth.api.signin.RevocationBoundService" android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION">
+</service>
+<activity android:configChanges="0x00000FB0" android:name="com.google.android.gms.ads.AdActivity" android:theme="@android:0103000F">
+</activity>
+<activity android:exported="true" android:name="com.google.android.gms.appinvite.PreviewActivity" android:theme="@7F0E0174">
+<intent-filter>
+<action android:name="com.google.android.gms.appinvite.ACTION_PREVIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<receiver android:name="com.google.android.gms.cast.framework.media.MediaIntentReceiver">
+</receiver>
+<service android:name="com.google.android.gms.cast.framework.media.MediaNotificationService">
+</service>
+<service android:name="com.google.android.gms.cast.framework.ReconnectionService">
+</service>
+<activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:01030010">
+</activity>
+<service android:exported="true" android:name="com.google.firebase.messaging.FirebaseMessagingService">
+<intent-filter android:priority="-500">
+<action android:name="com.google.firebase.MESSAGING_EVENT">
+</action>
+</intent-filter>
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.tagmanager.TagManagerService">
+</service>
+<activity android:exported="true" android:name="com.google.android.gms.tagmanager.TagManagerPreviewActivity" android:noHistory="true">
+<intent-filter>
+<data android:scheme="tagmanager.c.com.bluecube.parentalkit">
+</data>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+</intent-filter>
+</activity>
+<receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementReceiver">
+</receiver>
+<receiver android:enabled="true" android:exported="true" android:name="com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver" android:permission="android.permission.INSTALL_PACKAGES">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementService">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementJobService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<receiver android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+<category android:name="com.bluecube.parentalkit">
+</category>
+</intent-filter>
+</receiver>
+<receiver android:exported="false" android:name="com.google.firebase.iid.FirebaseInstanceIdInternalReceiver">
+</receiver>
+<service android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdService">
+<intent-filter android:priority="-500">
+<action android:name="com.google.firebase.INSTANCE_ID_EVENT">
+</action>
+</intent-filter>
+</service>
+<provider android:authorities="com.bluecube.parentalkit.firebaseinitprovider" android:exported="false" android:initOrder="100" android:name="com.google.firebase.provider.FirebaseInitProvider">
+</provider>
+<activity android:configChanges="0x000004A0" android:name="com.twitter.sdk.android.tweetui.PlayerActivity" android:theme="@7F0E0022">
+</activity>
+<activity android:name="com.twitter.sdk.android.tweetui.GalleryActivity" android:theme="@7F0E0022">
+</activity>
+<activity android:exported="false" android:label="" android:name="pub.devrel.easypermissions.AppSettingsDialogHolderActivity" android:theme="@7F0E010B">
+</activity>
+<activity android:name="com.facebook.CustomTabMainActivity">
+</activity>
+<provider android:authorities="com.bluecube.parentalkit.FacebookInitProvider" android:exported="false" android:name="com.facebook.internal.FacebookInitProvider">
+</provider>
+<activity android:name="com.braintreepayments.api.threedsecure.ThreeDSecureWebViewActivity" android:theme="@7F0E00A9">
+</activity>
+<activity android:name="com.braintreepayments.api.dropin.DropInActivity" android:theme="@7F0E01F0">
+</activity>
+<activity android:name="com.braintreepayments.api.dropin.AddCardActivity" android:theme="@7F0E01ED">
+</activity>
+<meta-data android:name="android.support.VERSION" android:value="26.0.2">
+</meta-data>
+<activity android:exported="false" android:name="com.twitter.sdk.android.tweetcomposer.ComposerActivity" android:windowSoftInputMode="0x00000014">
+</activity>
+<service android:enabled="true" android:exported="false" android:name="com.twitter.sdk.android.tweetcomposer.TweetUploadService">
+</service>
+<activity android:configChanges="0x00000480" android:excludeFromRecents="true" android:exported="false" android:name="com.twitter.sdk.android.core.identity.OAuthActivity">
+</activity>
+<activity android:clearTaskOnLaunch="true" android:name="com.journeyapps.barcodescanner.CaptureActivity" android:screenOrientation="6" android:stateNotNeeded="true" android:theme="@7F0E002A" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.braintreepayments.api.AndroidPayActivity" android:theme="@7F0E01FD">
+</activity>
+<activity android:name="com.braintreepayments.api.GooglePaymentActivity" android:theme="@7F0E01FD">
+</activity>
+<service android:name="com.braintreepayments.api.internal.AnalyticsIntentService">
+</service>
+<provider android:authorities="com.bluecube.parentalkit.crashlyticsinitprovider" android:exported="false" android:initOrder="100" android:name="com.crashlytics.android.CrashlyticsInitProvider">
+</provider>
+<service android:exported="true" android:name="com.firebase.jobdispatcher.GooglePlayReceiver" android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE">
+<intent-filter>
+<action android:name="com.google.android.gms.gcm.ACTION_TASK_READY">
+</action>
+</intent-filter>
+</service>
+</application>
+</manifest>

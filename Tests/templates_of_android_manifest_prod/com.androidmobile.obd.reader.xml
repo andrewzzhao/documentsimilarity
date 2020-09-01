@@ -1,0 +1,50 @@
+<?xml version="1.0" ?><manifest android:versionCode="202" android:versionName="4.0.0" package="com.androidmobile.obd.reader" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="14" android:targetSdkVersion="27">
+</uses-sdk>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.BLUETOOTH">
+</uses-permission>
+<uses-permission android:name="android.permission.BLUETOOTH_ADMIN">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_LOGS">
+</uses-permission>
+<application android:icon="@7F070081" android:label="@7F0C0068" android:name="android.support.multidex.MultiDexApplication" android:theme="@7F0D0006">
+<activity android:configChanges="0x00000480" android:hardwareAccelerated="false" android:label="@7F0C0068" android:name="com.androidmobile.obd.reader.activity.MainActivity">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:label="@7F0C0068" android:name="com.androidmobile.obd.reader.activity.ConfigActivity">
+</activity>
+<activity android:label="@7F0C0107" android:name="com.androidmobile.obd.reader.activity.TroubleCodesActivity">
+</activity>
+<activity android:label="@7F0C0106" android:name="com.androidmobile.obd.reader.activity.TripListActivity">
+</activity>
+<activity android:configChanges="0x00000488" android:label="@7F0C006F" android:name="com.androidmobile.obd.reader.gauge.ChartActivity">
+</activity>
+<activity android:configChanges="0x000000A0" android:label="@7F0C0068" android:name="com.androidmobile.obd.reader.BluetoothTerminal.MainActivityTerminal">
+</activity>
+<activity android:configChanges="0x000000A0" android:label="@7F0C00D7" android:name="com.androidmobile.obd.reader.BluetoothTerminal.DeviceListActivity" android:theme="@android:0103006B">
+</activity>
+<activity android:configChanges="0x000000A0" android:label="@7F0C00DC" android:name="com.androidmobile.obd.reader.BluetoothTerminal.SetupActivity" android:theme="@android:0103006B">
+</activity>
+<service android:exported="false" android:name="com.androidmobile.obd.reader.io.ObdGatewayService">
+</service>
+<service android:exported="false" android:name="com.androidmobile.obd.reader.io.MockObdGatewayService">
+</service>
+</application>
+</manifest>

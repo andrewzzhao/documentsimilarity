@@ -1,0 +1,344 @@
+<?xml version="1.0" ?><manifest android:versionCode="7" android:versionName="2.3" package="com.fcpattern" platformBuildVersionCode="23" platformBuildVersionName="6.0-2704002" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-permission android:name="android.permission.READ_LOGS">
+</uses-permission>
+<uses-sdk android:minSdkVersion="16" android:targetSdkVersion="23">
+</uses-sdk>
+<uses-feature android:name="android.hardware.camera">
+</uses-feature>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.CALL_PHONE">
+</uses-permission>
+<uses-feature android:name="android.hardware.camera.autofocus">
+</uses-feature>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.NFC">
+</uses-permission>
+<uses-feature android:name="android.hardware.nfc.hce">
+</uses-feature>
+<uses-permission android:name="android.permission.RECORD_AUDIO">
+</uses-permission>
+<uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS">
+</uses-permission>
+<uses-permission android:name="org.simalliance.openmobileapi.SMARTCARD">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.RESTART_PACKAGES">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.REORDER_TASKS">
+</uses-permission>
+<permission android:name="com.fcpattern.permission.MIPUSH_RECEIVE" android:protectionLevel="0x00000003">
+</permission>
+<uses-permission android:name="com.fcpattern.permission.MIPUSH_RECEIVE">
+</uses-permission>
+<application android:allowBackup="true" android:icon="@7F020047" android:label="@7F060015" android:name="com.tencent.StubShell.TxAppEntry" android:supportsRtl="true" android:theme="@android:0103000D">
+<meta-data android:name="TxAppEntry" android:value="com.fcpattern.base.MyApplication">
+</meta-data>
+<uses-library android:name="org.simalliance.openmobileapi" android:required="false">
+</uses-library>
+<meta-data android:name="com.alibaba.app.appkey" android:value="23725882">
+</meta-data>
+<meta-data android:name="com.alibaba.app.appsecret" android:value="3dfeab73c55787dd49c5b9aeb1fe47ca">
+</meta-data>
+<receiver android:exported="true" android:name="com.fcpattern.receiver.MyMessageReceiver">
+<intent-filter>
+<action android:name="com.alibaba.push2.action.NOTIFICATION_OPENED">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="com.alibaba.push2.action.NOTIFICATION_REMOVED">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="com.taobao.accs.intent.action.COMMAND">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="com.taobao.taobao.intent.action.COMMAND">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="com.alibaba.sdk.android.push.RECEIVE">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.USER_PRESENT">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_REMOVED">
+</action>
+<data android:scheme="package">
+</data>
+</intent-filter>
+</receiver>
+<activity android:configChanges="0x000000A0" android:excludeFromRecents="true" android:label="@7F060015" android:name="com.unionpay.uppay.PayActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.unionpay.UPPayWapActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.fcpattern.activity.PHomeActivity">
+</activity>
+<activity android:name="com.google.zxing.activity.CaptureActivity" android:theme="@7F090032">
+</activity>
+<activity android:name="com.fcpattern.scan.InputNumberActivity">
+</activity>
+<activity android:name="com.fcpattern.scan.ScanDeviceInfoActivity">
+</activity>
+<activity android:configChanges="0x000004B0" android:launchMode="1" android:name="com.fcpattern.activity.SHomeActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.fcpattern.activity.LoginActivity">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:launchMode="2" android:name="com.fcpattern.activity.PRepairListActivity" android:windowSoftInputMode="0x00000014">
+</activity>
+<activity android:launchMode="2" android:name="com.fcpattern.activity.PEvalutionActivity">
+</activity>
+<activity android:launchMode="2" android:name="com.fcpattern.activity.PEDetailActivity">
+</activity>
+<activity android:name="com.fcpattern.activity.WARepairDetailActivity">
+</activity>
+<activity android:name="com.fcpattern.activity.DCRepairDetailActivity">
+</activity>
+<activity android:name="com.fcpattern.activity.SEvalutionActivity">
+</activity>
+<activity android:name="com.fcpattern.activity.RegisterActivity">
+</activity>
+<activity android:name="com.fcpattern.activity.ForgetPwdActivity">
+</activity>
+<activity android:name="com.fcpattern.activity.ChangePhoneActivity">
+</activity>
+<activity android:name="com.fcpattern.activity.ChangePwdActivity">
+</activity>
+<activity android:name="com.fcpattern.activity.RepairFormActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.fcpattern.activity.WelcomeActivity">
+</activity>
+<activity android:name="com.fcpattern.activity.PageActivity">
+</activity>
+<activity android:name="com.fcpattern.activity.PSearchRepairActivity">
+</activity>
+<activity android:name="com.fcpattern.activity.PRepairSolutionOrderActivity">
+</activity>
+<activity android:name="com.fcpattern.activity.SRepairFormActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.fcpattern.activity.SSearchrepairActivity">
+</activity>
+<activity android:name="com.fcpattern.activity.ArrangeServiceActivity" android:theme="@7F0900B4">
+</activity>
+<activity android:name="com.fcpattern.psolutionlist.PSolutionListActivity2">
+</activity>
+<activity android:name="com.fcpattern.psolutionlist.SolutionSearchActivity2">
+</activity>
+<activity android:name="com.fcpattern.activity.DatePickerActivity" android:theme="@7F0900B9">
+</activity>
+<activity android:name="com.fcpattern.activity.MyActivity">
+</activity>
+<activity android:name="com.fcpattern.activity.AccountActivity">
+</activity>
+<activity android:name="com.fcpattern.activity.PayUnionActivity2">
+</activity>
+<activity android:name="com.fcpattern.activity.AgentActivity">
+</activity>
+<activity android:name="com.fcpattern.activity.PaymentByActivity">
+</activity>
+<activity android:name="com.fcpattern.activity.PaylistActivity">
+</activity>
+<activity android:name="com.fcpattern.activity.PartsSearchActivity">
+</activity>
+<activity android:name="com.fcpattern.activity.PartsDetailActivity">
+</activity>
+<activity android:name="com.fcpattern.activity.PartsListActivity">
+</activity>
+<activity android:name="com.fcpattern.activity.PartsTypeSelectActivity">
+</activity>
+<activity android:name="com.fcpattern.srepair.SSolutionListActivity2">
+</activity>
+<activity android:name="com.fcpattern.srepair.SSolutionSearchActivity">
+</activity>
+<activity android:name="com.fcpattern.srepair.SRepairListActivity2">
+</activity>
+<activity android:name="com.fcpattern.psolutionlist.SolutionMaintenanceActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.fcpattern.psolutionlist.PSolutionDeviceAcitivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.fcpattern.psolutionlist.SolutionCostSettlementActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.fcpattern.psolutionlist.SolutionDetailUpdateActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.fcpattern.activity.ArrageServerActivity">
+</activity>
+ //支孎
+
+<activity android:configChanges="0x000000E0" android:exported="false" android:name="com.alipay.sdk.app.H5PayActivity" android:screenOrientation="3">
+</activity>
+<activity android:configChanges="0x000000E0" android:exported="false" android:name="com.alipay.sdk.auth.AuthActivity" android:screenOrientation="3">
+</activity>
+<activity android:name="com.fcpattern.activity.XiaoMiActivity">
+</activity>
+<activity android:name="com.fcpattern.psolutionlist.SolutionProcessServiceActivity3" android:screenOrientation="1">
+</activity>
+<service android:exported="false" android:name="com.alibaba.sdk.android.push.MsgService">
+<intent-filter>
+<action android:name="com.alibaba.sdk.android.push.NOTIFY_ACTION">
+</action>
+</intent-filter>
+</service>
+<service android:name="com.alibaba.sdk.android.push.channel.CheckService" android:process=":channel">
+<intent-filter>
+<action android:name="com.alibaba.sdk.android.push.CHECK_SERVICE">
+</action>
+</intent-filter>
+</service>
+<service android:exported="true" android:name="com.taobao.accs.ChannelService" android:process=":channel">
+<intent-filter>
+<action android:name="com.taobao.accs.intent.action.SERVICE">
+</action>
+</intent-filter>
+</service>
+<service android:exported="false" android:name="com.taobao.accs.ChannelService$KernelService" android:process=":channel">
+</service>
+<service android:exported="true" android:name="com.taobao.accs.data.MsgDistributeService">
+<intent-filter>
+<action android:name="com.taobao.accs.intent.action.RECEIVE">
+</action>
+</intent-filter>
+</service>
+<receiver android:name="com.taobao.accs.EventReceiver" android:process=":channel">
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_REMOVED">
+</action>
+<data android:scheme="package">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.USER_PRESENT">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name="com.taobao.accs.ServiceReceiver" android:process=":channel">
+<intent-filter>
+<action android:name="com.taobao.accs.intent.action.COMMAND">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="com.taobao.accs.intent.action.START_FROM_AGOO">
+</action>
+</intent-filter>
+</receiver>
+<service android:exported="true" android:name="org.android.agoo.accs.AgooService" android:process=":channel">
+<intent-filter>
+<action android:name="com.taobao.accs.intent.action.RECEIVE">
+</action>
+</intent-filter>
+</service>
+<service android:exported="true" android:name="com.alibaba.sdk.android.push.AliyunPushIntentService">
+<intent-filter>
+<action android:name="org.agoo.android.intent.action.RECEIVE">
+</action>
+</intent-filter>
+</service>
+<receiver android:exported="true" android:name="com.taobao.agoo.AgooCommondReceiver" android:process=":channel">
+<intent-filter>
+<action android:name="com.fcpattern.intent.action.COMMAND">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_REMOVED">
+</action>
+<data android:scheme="package">
+</data>
+</intent-filter>
+</receiver>
+<service android:exported="true" android:name="com.alibaba.sdk.android.push.channel.TaobaoRecvService" android:process=":channel">
+<intent-filter>
+<action android:name="org.android.agoo.client.MessageReceiverService">
+</action>
+</intent-filter>
+</service>
+<service android:enabled="true" android:exported="true" android:name="com.xiaomi.mipush.sdk.PushMessageHandler">
+</service>
+<service android:enabled="true" android:name="com.xiaomi.mipush.sdk.MessageHandleService">
+</service>
+<receiver android:exported="true" android:name="com.alibaba.sdk.android.push.MiPushBroadcastReceiver">
+<intent-filter>
+<action android:name="com.xiaomi.mipush.RECEIVE_MESSAGE">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="com.xiaomi.mipush.MESSAGE_ARRIVED">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="com.xiaomi.mipush.ERROR">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:exported="true" android:name="com.xiaomi.push.service.receivers.NetworkStatusReceiver">
+<intent-filter>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</receiver>
+<receiver android:name="com.alibaba.sdk.android.push.HuaWeiReceiver">
+<intent-filter>
+<action android:name="com.huawei.android.push.intent.REGISTRATION">
+</action>
+<action android:name="com.huawei.android.push.intent.RECEIVE">
+</action>
+<action android:name="com.huawei.intent.action.PUSH">
+</action>
+<action android:name="com.huawei.intent.action.PUSH_STATE">
+</action>
+</intent-filter>
+</receiver>
+</application>
+</manifest>

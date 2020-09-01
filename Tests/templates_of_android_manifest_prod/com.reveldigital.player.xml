@@ -1,0 +1,238 @@
+<?xml version="1.0" ?><manifest android:versionCode="171" android:versionName="2.1.161" package="com.reveldigital.player" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="16" android:targetSdkVersion="27">
+</uses-sdk>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_LOGS">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-permission android:name="android.permission.BLUETOOTH">
+</uses-permission>
+<uses-permission android:name="android.permission.BLUETOOTH_ADMIN">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE">
+</uses-permission>
+<uses-permission android:name="android.permission.NFC">
+</uses-permission>
+<uses-permission android:name="android.permission.SET_TIME_ZONE">
+</uses-permission>
+<uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.RECORD_AUDIO">
+</uses-permission>
+<uses-permission android:name="android.permission.CAPTURE_AUDIO_OUTPUT">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW">
+</uses-permission>
+<uses-feature android:name="android.hardware.touchscreen" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.bluetooth" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.camera" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.camera.autofocus" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.usb.host" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.nfc" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.software.leanback" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.microphone" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.location.gps" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.sensor.accelerometer" android:required="false">
+</uses-feature>
+<uses-feature android:glEsVersion="0x00020000" android:required="true">
+</uses-feature>
+<uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE">
+</uses-permission>
+<permission android:name="com.reveldigital.player.permission.C2D_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="com.reveldigital.player.permission.C2D_MESSAGE">
+</uses-permission>
+<application android:allowBackup="false" android:banner="@7F0700F0" android:hardwareAccelerated="true" android:icon="@7F0700C7" android:label="@7F0E002A" android:largeHeap="true" android:name="com.reveldigital.player.PlayerApplication" android:persistent="true" android:supportsRtl="true" android:theme="@android:01030007">
+<meta-data android:name="com.google.android.gms.version" android:value="@7F090009">
+</meta-data>
+<activity android:label="@7F0E0100" android:name="com.reveldigital.player.SplashActivity" android:noHistory="true">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+<category android:name="android.intent.category.LEANBACK_LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x00000480" android:exported="true" android:hardwareAccelerated="true" android:label="@7F0E0100" android:launchMode="2" android:name="com.reveldigital.player.MainActivity" android:stateNotNeeded="true">
+<intent-filter>
+<action android:name="com.reveldigital.player.RESTART">
+</action>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED">
+</action>
+</intent-filter>
+<meta-data android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED" android:resource="@7F110000">
+</meta-data>
+</activity>
+<activity android:label="@7F0E00E7" android:name="com.reveldigital.player.RegisterActivity">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".MainActivity">
+</meta-data>
+</activity>
+<activity android:label="@7F0E00EC" android:name="com.reveldigital.player.SettingsActivity">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".MainActivity">
+</meta-data>
+</activity>
+<activity android:label="@7F0E00AB" android:name="com.google.android.gms.oss.licenses.OssLicensesMenuActivity" android:theme="@7F0F0117">
+</activity>
+<activity android:name="com.google.android.gms.oss.licenses.OssLicensesActivity" android:theme="@7F0F0117">
+</activity>
+<service android:name="com.reveldigital.player.AffidavitService">
+</service>
+<service android:name="com.reveldigital.player.AudienceService">
+</service>
+<service android:name="com.reveldigital.player.UDPListenerService">
+</service>
+<service android:name="com.reveldigital.player.BluetoothListenerService">
+</service>
+<service android:name="com.reveldigital.player.MotionService">
+</service>
+<service android:name="com.reveldigital.player.UsbPackageService">
+</service>
+<service android:name="com.reveldigital.player.serial.UsbSerialService">
+</service>
+<service android:name="com.reveldigital.player.telnet.TelnetService">
+</service>
+<service android:exported="true" android:name="com.visidon.facerecognition.service.VDFaceRecognitionService">
+</service>
+<service android:name="com.reveldigital.player.visidon.VDFaceRecognitionService">
+</service>
+<service android:name="com.reveldigital.player.CommandService" android:process=":remote">
+</service>
+<service android:name="com.reveldigital.player.WatchdogService" android:process=":remote">
+</service>
+<service android:name="com.reveldigital.player.PackageService" android:process=":remote">
+</service>
+<service android:name="com.reveldigital.player.fcm.FcmInstanceIDListenerService">
+<intent-filter>
+<action android:name="com.google.firebase.INSTANCE_ID_EVENT">
+</action>
+</intent-filter>
+</service>
+<service android:name="com.reveldigital.player.fcm.FcmListenerService">
+<intent-filter>
+<action android:name="com.google.firebase.MESSAGING_EVENT">
+</action>
+</intent-filter>
+</service>
+<receiver android:enabled="true" android:name="com.reveldigital.player.BootUpReceiver" android:permission="android.permission.RECEIVE_BOOT_COMPLETED">
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+<action android:name="android.intent.action.QUICKBOOT_POWERON">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_REPLACED">
+</action>
+<data android:path="com.reveldigital.player" android:scheme="package">
+</data>
+</intent-filter>
+</receiver>
+<receiver android:name="com.reveldigital.player.RebootReceiver">
+<intent-filter>
+<action android:name="com.reveldigital.player.REBOOT">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name="com.reveldigital.player.WatchdogReceiver">
+<intent-filter>
+<action android:name="com.reveldigital.player.WATCHDOG">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name="com.reveldigital.player.UsbPackageReceiver">
+<intent-filter>
+<action android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED">
+</action>
+</intent-filter>
+<meta-data android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED" android:resource="@7F110002">
+</meta-data>
+</receiver>
+<service android:exported="true" android:name="com.google.firebase.messaging.FirebaseMessagingService">
+<intent-filter android:priority="-500">
+<action android:name="com.google.firebase.MESSAGING_EVENT">
+</action>
+</intent-filter>
+</service>
+<service android:name="com.google.firebase.components.ComponentDiscoveryService">
+<meta-data android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar" android:value="com.google.firebase.components.ComponentRegistrar">
+</meta-data>
+<meta-data android:name="com.google.firebase.components:com.google.firebase.iid.Registrar" android:value="com.google.firebase.components.ComponentRegistrar">
+</meta-data>
+</service>
+<receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementReceiver">
+</receiver>
+<receiver android:enabled="true" android:exported="true" android:name="com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver" android:permission="android.permission.INSTALL_PACKAGES">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementService">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementJobService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<receiver android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+<category android:name="com.reveldigital.player">
+</category>
+</intent-filter>
+</receiver>
+<service android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdService">
+<intent-filter android:priority="-500">
+<action android:name="com.google.firebase.INSTANCE_ID_EVENT">
+</action>
+</intent-filter>
+</service>
+<activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:01030010">
+</activity>
+<provider android:authorities="com.reveldigital.player.crashlyticsinitprovider" android:exported="false" android:initOrder="100" android:name="com.crashlytics.android.CrashlyticsInitProvider">
+</provider>
+<provider android:authorities="com.reveldigital.player.firebaseinitprovider" android:exported="false" android:initOrder="100" android:name="com.google.firebase.provider.FirebaseInitProvider">
+</provider>
+</application>
+</manifest>

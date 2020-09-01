@@ -1,0 +1,160 @@
+<?xml version="1.0" ?><manifest android:versionCode="33" android:versionName="1.4.5" package="com.agilestorm.fakecall.free" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="3" android:targetSdkVersion="13">
+</uses-sdk>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.DEVICE_POWER">
+</uses-permission>
+<uses-permission android:name="android.permission.DISABLE_KEYGUARD">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.BLUETOOTH">
+</uses-permission>
+<uses-feature android:name="android.hardware.location.network" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.location" android:required="false">
+</uses-feature>
+<application android:debuggable="false" android:icon="@7F020089" android:label="@7F090004" android:theme="@android:01030006">
+<activity android:label="@7F090004" android:name="com.agilestorm.fakecall.FakeCall" android:screenOrientation="1">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<receiver android:name="com.agilestorm.fakecall.common.FakeCallReceiver">
+<intent-filter>
+<action android:name="com.agilestorm.fakecall.FAKECALL_ALERT.free">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:label="@7F090004" android:name="com.agilestorm.fakecall.common.InComingCallReceiver">
+<intent-filter>
+<action android:name="android.intent.action.PHONE_STATE">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name="com.agilestorm.fakecall.common.FakecallWidget">
+<intent-filter>
+<action android:name="com.agilestorm.fakecall.APPWIDGET_CONTROL">
+</action>
+<data android:scheme="fakecall_widget">
+</data>
+</intent-filter>
+</receiver>
+<activity android:excludeFromRecents="true" android:label="" android:launchMode="2" android:name="com.agilestorm.fakecall.common.CallingUIActivity" android:screenOrientation="1" android:taskAffinity=":CallingUIActivity">
+<intent-filter>
+<action android:name="com.agilestorm.fakecall.filter.free">
+</action>
+</intent-filter>
+</activity>
+<activity android:label="@7F090004" android:name="com.agilestorm.fakecall.common.FakecallPreferenceActivity">
+</activity>
+<activity android:name="com.agilestorm.fakecall.common.TimePickerActivity" android:theme="@android:0103000B">
+</activity>
+<activity android:excludeFromRecents="true" android:launchMode="2" android:name="com.agilestorm.fakecall.common.NewsActivity" android:taskAffinity=":FakecallNews" android:theme="@android:0103000B">
+</activity>
+<activity android:name="com.agilestorm.fakecall.common.ScheduledCallsActivity">
+</activity>
+<activity android:excludeFromRecents="true" android:label="" android:launchMode="2" android:name="com.agilestorm.fakecall.common.CallingUIActivityUnderEclair" android:screenOrientation="1" android:taskAffinity=":CallingUIActivityUnderEclair">
+<intent-filter>
+<action android:name="com.agilestorm.fakecall.filter.free">
+</action>
+</intent-filter>
+</activity>
+<activity android:excludeFromRecents="true" android:label="" android:launchMode="2" android:name="com.agilestorm.fakecall.common.CallingUIActivityHero" android:screenOrientation="1" android:taskAffinity=":CallingUIActivityHero">
+<intent-filter>
+<action android:name="com.agilestorm.fakecall.filter.free">
+</action>
+</intent-filter>
+</activity>
+<activity android:excludeFromRecents="true" android:label="" android:launchMode="2" android:name="com.agilestorm.fakecall.common.CallingUIActivityCliq" android:screenOrientation="1" android:taskAffinity=":CallingUIActivityCliq">
+<intent-filter>
+<action android:name="com.agilestorm.fakecall.filter.free">
+</action>
+</intent-filter>
+</activity>
+<activity android:excludeFromRecents="true" android:label="" android:launchMode="2" android:name="com.agilestorm.fakecall.common.CallingUIActivityDroid" android:screenOrientation="1" android:taskAffinity=":CallingUIActivityDroid">
+<intent-filter>
+<action android:name="com.agilestorm.fakecall.filter.free">
+</action>
+</intent-filter>
+</activity>
+<activity android:excludeFromRecents="true" android:label="" android:launchMode="2" android:name="com.agilestorm.fakecall.common.CallingUIActivityDefy" android:screenOrientation="1" android:taskAffinity=":CallingUIActivityDefy">
+<intent-filter>
+<action android:name="com.agilestorm.fakecall.filter.free">
+</action>
+</intent-filter>
+</activity>
+<activity android:excludeFromRecents="true" android:label="" android:launchMode="2" android:name="com.agilestorm.fakecall.common.CallingUIV6Activity" android:screenOrientation="1" android:taskAffinity=":CallingUIV6Activity">
+<intent-filter>
+<action android:name="com.agilestorm.fakecall.filter.free">
+</action>
+</intent-filter>
+</activity>
+<activity android:excludeFromRecents="true" android:label="" android:launchMode="2" android:name="com.agilestorm.fakecall.common.CallingUIV14Activity" android:screenOrientation="1" android:taskAffinity=":CallingUIV14Activity">
+<intent-filter>
+<action android:name="com.agilestorm.fakecall.filter.free">
+</action>
+</intent-filter>
+</activity>
+<activity android:excludeFromRecents="true" android:label="" android:launchMode="2" android:name="com.agilestorm.fakecall.common.CallingUIGalaxyActivity" android:screenOrientation="1" android:taskAffinity=":CallingUIGalaxyActivity">
+<intent-filter>
+<action android:name="com.agilestorm.fakecall.filter.free">
+</action>
+</intent-filter>
+</activity>
+<activity android:excludeFromRecents="true" android:label="" android:launchMode="2" android:name="com.agilestorm.fakecall.common.CallingUIGalaxyActivity2" android:screenOrientation="1" android:taskAffinity=":CallingUIGalaxyActivity2">
+<intent-filter>
+<action android:name="com.agilestorm.fakecall.filter.free">
+</action>
+</intent-filter>
+</activity>
+<activity android:excludeFromRecents="true" android:label="" android:launchMode="2" android:name="com.agilestorm.fakecall.common.CallingUIV16Activity" android:screenOrientation="1" android:taskAffinity=":CallingUIV16Activity">
+<intent-filter>
+<action android:name="com.agilestorm.fakecall.filter.free">
+</action>
+</intent-filter>
+</activity>
+<activity android:name="com.pontiflex.mobile.webview.sdk.activities.MultiOfferActivity">
+</activity>
+<activity android:configChanges="0x00000020" android:name="com.pontiflex.mobile.webview.sdk.activities.RegistrationActivity">
+</activity>
+<activity android:configChanges="0x00000FB0" android:name="com.google.ads.AdActivity">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.mopub.mobileads.MoPubActivity">
+</activity>
+<meta-data android:name="ADMOB_PUBLISHER_ID" android:value="a14b0b7c4a8399d">
+</meta-data>
+<activity android:configChanges="0x000000B0" android:name="com.millennialmedia.android.MMAdViewOverlayActivity">
+</activity>
+<activity android:configChanges="0x000000B0" android:name="com.millennialmedia.android.VideoPlayer">
+</activity>
+<receiver android:name="com.agilestorm.fakecall.common.OnAppUpgradeReceiver">
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_REPLACED">
+</action>
+<data android:path="com.agilestorm.fakecall.free" android:scheme="package">
+</data>
+</intent-filter>
+</receiver>
+</application>
+</manifest>

@@ -1,0 +1,436 @@
+<?xml version="1.0" ?><manifest android:versionCode="262" android:versionName="2.5.152" package="com.livesafe.activities" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="16" android:targetSdkVersion="28">
+</uses-sdk>
+<uses-permission android:name="android.permission.USE_FINGERPRINT">
+</uses-permission>
+<uses-permission android:name="com.livesafe.activities.permission.MAPS_RECEIVE">
+</uses-permission>
+<uses-permission android:name="android.permission.RECORD_AUDIO">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_CONTACTS">
+</uses-permission>
+<uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="android.permission.FOREGROUND_SERVICE">
+</uses-permission>
+<uses-feature android:name="android.hardware.camera">
+</uses-feature>
+<uses-feature android:name="android.hardware.telephony" android:required="false">
+</uses-feature>
+<uses-feature android:glEsVersion="0x00020000" android:required="true">
+</uses-feature>
+<uses-permission android:name="com.livesafemobile.livesafesdk.permission.C2D_MESSAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE">
+</uses-permission>
+<permission android:name="com.livesafe.activities.permission.C2D_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="com.livesafe.activities.permission.C2D_MESSAGE">
+</uses-permission>
+<application android:allowBackup="false" android:icon="@7F08006F" android:label="@7F0F008C" android:name="com.livesafe.app.LiveSafeApplication" android:supportsRtl="true" android:theme="@7F100007">
+<uses-library android:name="org.apache.http.legacy" android:required="false">
+</uses-library>
+<meta-data android:name="io.fabric.ApiKey" android:value="f790a582b9bbda5961bfe2d0b34b3ceef828127c">
+</meta-data>
+<meta-data android:name="io.branch.sdk.BranchKey" android:value="@7F0F00A5">
+</meta-data>
+<meta-data android:name="com.google.android.gms.version" android:value="@7F0A0007">
+</meta-data>
+<meta-data android:name="com.google.android.gms.analytics.globalConfigResource" android:resource="@7F120002">
+</meta-data>
+<meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@7F0F01B4">
+</meta-data>
+<meta-data android:name="com.google.android.geo.API_KEY" android:value="AIzaSyD8gbkV36KB_vzl65m7lmlKmBHwKJM2Q0A">
+</meta-data>
+<activity android:label="@7F0F008C" android:launchMode="1" android:name="com.livesafe.activities.SplashActivity" android:screenOrientation="1" android:theme="@7F1000E0">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="chooseorg" android:scheme="@7F0F0177">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="open" android:scheme="@7F0F0177">
+</data>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F0F008C" android:launchMode="1" android:name="com.livesafe.activities.HomeActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:label="@7F0F008C" android:name="com.livesafe.activities.StartActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:label="@7F0F008C" android:name="com.livesafe.activities.DebugActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:label="@7F0F008C" android:launchMode="1" android:name="com.livesafe.activities.sub.EmergencyActivity" android:parentActivityName="com.livesafe.activities.HomeActivity" android:screenOrientation="1">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.livesafe.activities.HomeActivity">
+</meta-data>
+</activity>
+<activity android:label="@7F0F008C" android:name="com.livesafe.activities.sub.AboutAppActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F0F008C" android:name="com.livesafe.activities.sub.ContactUsActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F0F008C" android:launchMode="3" android:name="com.livesafe.activities.sub.WebActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F0F008C" android:name="com.livesafe.activities.sub.OrgInfoActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F0F008C" android:name="com.livesafe.activities.sub.HTMLFileActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F0F008C" android:name="com.livesafe.activities.sub.TextViewOrgInfoActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F0F008C" android:name="com.livesafe.activities.sub.ProfileActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F0F008C" android:name="com.livesafe.activities.sub.StaySafeActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F0F008C" android:name="com.livesafe.activities.sub.SafeRideActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000013">
+</activity>
+<activity android:label="@7F0F008C" android:name="com.livesafe.organization.QuestionActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:label="@7F0F008C" android:name="com.livesafe.activities.sub.general.TextInputActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000004">
+</activity>
+<activity android:label="@7F0F008C" android:name="com.livesafe.activities.sub.CountriesActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:label="@7F0F008C" android:name="com.livesafe.safewalk.ui.ContactIsoCaptureActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:name="com.livesafe.broadcast.CheckInIntentFilterActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="@7F0F01F5" android:pathPrefix="/2/services/user/checkin/" android:scheme="https">
+</data>
+<data android:host="@7F0F01F5" android:pathPrefix="/2/services/user/checkin/" android:scheme="http">
+</data>
+</intent-filter>
+</activity>
+<activity android:label="@7F0F008C" android:name="com.livesafe.broadcast.BroadcastCheckInEmergencyActivity" android:screenOrientation="1" android:theme="@7F100143" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000005B0" android:label="@7F0F008C" android:name="com.facebook.FacebookActivity" android:theme="@7F1001BC">
+</activity>
+<activity android:launchMode="1" android:name="com.livesafe.activities.sub.general.SsoCompletedActivity">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="authuser" android:scheme="@7F0F0177">
+</data>
+</intent-filter>
+</activity>
+<activity android:launchMode="1" android:name="com.livesafe.activities.safewalk.SafeWalkWalkerActivity" android:parentActivityName="com.livesafe.activities.HomeActivity" android:screenOrientation="1">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.livesafe.activities.HomeActivity">
+</meta-data>
+</activity>
+<activity android:launchMode="1" android:name="com.livesafe.activities.safewalk.SafeDriveActivity" android:parentActivityName="com.livesafe.activities.HomeActivity" android:screenOrientation="1">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.livesafe.activities.HomeActivity">
+</meta-data>
+</activity>
+<activity android:launchMode="1" android:name="com.livesafe.activities.safewalk.SafeWalkWatcherActivity" android:parentActivityName="com.livesafe.activities.HomeActivity" android:screenOrientation="1">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.livesafe.activities.HomeActivity">
+</meta-data>
+</activity>
+<activity android:launchMode="2" android:name="com.livesafe.activities.safewalk.SafeWalkIntentFilterActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="@7F0F01F5" android:pathPrefix="/2/services/app/" android:scheme="https">
+</data>
+<data android:host="@7F0F01F5" android:pathPrefix="/2/services/app/" android:scheme="http">
+</data>
+<data android:host="@7F0F01F5" android:pathPrefix="/sw.html" android:scheme="https">
+</data>
+</intent-filter>
+<intent-filter>
+<data android:host="safewalk" android:scheme="@7F0F0177">
+</data>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+</intent-filter>
+</activity>
+<activity android:name="com.livesafe.tip.TipSelectActivity" android:screenOrientation="1" android:theme="@7F100143">
+</activity>
+<activity android:launchMode="1" android:name="com.livesafe.resources.CombinedResourcesActivity" android:screenOrientation="1" android:theme="@7F100007">
+</activity>
+<activity android:name="com.livesafe.tip.TipHistoryActivity" android:screenOrientation="1" android:theme="@7F100143">
+</activity>
+<activity android:name="com.livesafe.safewalk.chat.DeadSafeWalkChatActivity" android:screenOrientation="1" android:theme="@7F100143">
+</activity>
+<activity android:name="com.livesafe.activities.sub.HomeDrawerCompatActivityFactory$SettingsCompatActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.livesafe.activities.sub.HomeDrawerCompatActivityFactory$OrgInfoCompatActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.livesafe.activities.sub.HomeDrawerCompatActivityFactory$ProfileCompatActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.livesafe.organization.CartelSelectActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.livesafe.organization.LeafSelectActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.livesafe.organization.auth.EmailAuthorizationActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.livesafe.organization.auth.PinAuthActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.livesafe.organization.subscription.SubscriptionListActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.livesafe.organization.auth.EmailAuthorizationWaitActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.livesafe.broadcast.BroadcastDetailsAppActivity" android:screenOrientation="1" android:theme="@7F100143">
+</activity>
+<activity android:name="com.livesafe.map.AppMapActivity" android:screenOrientation="1" android:theme="@7F100143">
+</activity>
+<service android:name="com.livesafe.model.webservice.aws.ZipDownloadService">
+</service>
+<service android:exported="false" android:label="@7F0F008C" android:name="com.livesafe.service.ReceiveTransitionsIntentService">
+</service>
+<service android:exported="false" android:name="com.livesafe.service.SafeWalkWalkerService">
+</service>
+<service android:exported="false" android:name="com.livesafe.service.SafeWalkWatcherService">
+</service>
+<service android:enabled="true" android:name="com.amazonaws.mobileconnectors.s3.transferutility.TransferService">
+</service>
+<receiver android:exported="true" android:name="com.livesafe.controller.campaign.CampaignReceiver">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:exported="true" android:name="com.livesafe.location.AppLocationUpdatesBroadcastReceiver">
+<intent-filter>
+<action android:name="com.livesafemobile.locationtracker.LocationUpdatesBroadcastReceiver.ACTION_PROCESS_UPDATES">
+</action>
+</intent-filter>
+</receiver>
+<provider android:authorities="@7F0F0093" android:exported="true" android:name="com.livesafe.contentprovider.PDFContentProvider">
+</provider>
+<service android:name="com.livesafe.controller.pushmanager.AppPushNotificationListenerService">
+<intent-filter>
+<action android:name="com.google.firebase.MESSAGING_EVENT">
+</action>
+</intent-filter>
+</service>
+<service android:exported="false" android:name="com.livesafe.controller.pushmanager.AppInstanceIdListenerService">
+<intent-filter>
+<action android:name="com.google.firebase.INSTANCE_ID_EVENT">
+</action>
+</intent-filter>
+</service>
+<activity android:name="com.livesafe.sidekick.SideKickActivity" android:theme="@7F1000DF">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="app" android:scheme="@7F0F0177">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.livesafemobile.safetymap.SafeMapActivity" android:screenOrientation="1" android:theme="@7F100143">
+</activity>
+<provider android:authorities="com.livesafe.activities.provider" android:exported="false" android:grantUriPermissions="true" android:name="com.livesafemobile.livesafesdk.tip.MediaContentProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F120005">
+</meta-data>
+</provider>
+<activity android:name="com.livesafemobile.livesafesdk.tip.ReportTipActivity" android:screenOrientation="1" android:theme="@7F100143">
+</activity>
+<activity android:name="com.livesafemobile.livesafesdk.chat.ChatActivity" android:screenOrientation="1" android:theme="@7F100143">
+</activity>
+<activity android:name="com.livesafemobile.livesafesdk.login.RegisterUserActivity" android:screenOrientation="1" android:theme="@7F100143">
+</activity>
+<activity android:name="com.livesafemobile.livesafesdk.login.VerifyPhoneNumberActivity" android:screenOrientation="1" android:theme="@7F100143">
+</activity>
+<activity android:label="@7F0F0069" android:name="com.livesafemobile.livesafesdk.login.SelectCountryActivity" android:screenOrientation="1" android:theme="@7F100143">
+</activity>
+<activity android:name="com.livesafemobile.livesafesdk.broadcast.BroadcastDetailsActivity" android:screenOrientation="1" android:theme="@7F100143">
+</activity>
+<activity android:name="com.livesafemobile.livesafesdk.tip.MediaPreviewActivity" android:screenOrientation="1" android:theme="@7F100143">
+</activity>
+<activity android:name="com.livesafemobile.livesafesdk.broadcast.BroadcastCheckInActivity" android:screenOrientation="1" android:theme="@7F100143">
+</activity>
+<activity android:name="com.livesafemobile.livesafesdk.tip.RecordAudioActivity" android:screenOrientation="1" android:theme="@7F100143">
+</activity>
+<activity android:name="com.livesafemobile.livesafesdk.tip.TipHistoryActivity" android:screenOrientation="1" android:theme="@7F100143">
+</activity>
+<service android:enabled="true" android:exported="true" android:name="com.livesafemobile.livesafesdk.tip.TipUploadService">
+</service>
+<service android:name="com.livesafemobile.livesafesdk.tip.RetryingTipUploadService">
+</service>
+<service android:enabled="true" android:name="com.livesafemobile.livesafesdk.chat.ChatUploadService">
+</service>
+<receiver android:name="com.livesafemobile.livesafesdk.tip.TipRetryBroadcastReceiver">
+<intent-filter>
+<action android:name="com.livesafemobile.livesafesdk.tip.notification.RETRY">
+</action>
+<category android:name="com.livesafemobile.livesafesdk">
+</category>
+</intent-filter>
+</receiver>
+<receiver android:name="com.livesafemobile.locationtracker.LocationTrackerStopReceiver">
+<intent-filter>
+<action android:name="com.livesafemobile.locationtracker.STOP">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name="com.livesafemobile.livesafesdk.tip.MediaActionIntentReceiver">
+</receiver>
+<receiver android:name="com.livesafemobile.livesafesdk.push.PushNotificationFactory">
+<intent-filter android:priority="@7F0A000F">
+<action android:name="com.livesafemobile.livesafesdk.chat.notification">
+</action>
+</intent-filter>
+<intent-filter android:priority="@7F0A000F">
+<action android:name="com.livesafemobile.livesafesdk.broadcast.notification">
+</action>
+</intent-filter>
+<intent-filter android:priority="@7F0A000F">
+<action android:name="com.livesafemobile.livesafesdk.broadcastCheckIn.notification">
+</action>
+</intent-filter>
+<intent-filter android:priority="@7F0A000F">
+<action android:name="com.livesafemobile.livesafesdk.broadcastCheckInDrill.notification">
+</action>
+</intent-filter>
+<intent-filter android:priority="@7F0A000F">
+<action android:name="com.livesafemobile.livesafesdk.publishedTip.notification">
+</action>
+</intent-filter>
+</receiver>
+<service android:exported="false" android:name="com.livesafemobile.livesafesdk.push.InstanceIdListenerService">
+<intent-filter>
+<action android:name="com.google.android.gms.iid.InstanceID">
+</action>
+</intent-filter>
+</service>
+<service android:enabled="true" android:name="com.livesafemobile.livesafesdk.push.RegistrationIntentService">
+</service>
+<receiver android:exported="true" android:name="com.livesafemobile.locationtracker.LocationUpdatesBroadcastReceiver">
+<intent-filter>
+<action android:name="com.livesafemobile.locationtracker.LocationUpdatesBroadcastReceiver.ACTION_PROCESS_UPDATES">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name="com.livesafemobile.livesafesdk.location.RestartTrackingReceiver">
+<intent-filter>
+<action android:name="android.intent.action.MY_PACKAGE_REPLACED">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+</intent-filter>
+</receiver>
+<activity android:name="com.facebook.CustomTabMainActivity">
+</activity>
+<provider android:authorities="com.livesafe.activities.FacebookInitProvider" android:exported="false" android:name="com.facebook.internal.FacebookInitProvider">
+</provider>
+<receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.analytics.AnalyticsReceiver">
+</receiver>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.analytics.AnalyticsService">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.analytics.AnalyticsJobService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<activity android:name="com.livesafemobile.locationlogger.ui.LocationLoggerListActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.livesafemobile.locationlogger.ui.LocationLoggerMapActivity" android:screenOrientation="1">
+</activity>
+<provider android:authorities="com.livesafe.activities.com.livesafemobile.locationlogger.data.provider" android:exported="false" android:grantUriPermissions="true" android:name="com.livesafemobile.locationlogger.data.LogFileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F120007">
+</meta-data>
+</provider>
+<activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:01030010">
+</activity>
+<service android:exported="true" android:name="com.google.firebase.messaging.FirebaseMessagingService">
+<intent-filter android:priority="-500">
+<action android:name="com.google.firebase.MESSAGING_EVENT">
+</action>
+</intent-filter>
+</service>
+<receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementReceiver">
+</receiver>
+<receiver android:enabled="true" android:exported="true" android:name="com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver" android:permission="android.permission.INSTALL_PACKAGES">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementService">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementJobService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<receiver android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+<category android:name="com.livesafe.activities">
+</category>
+</intent-filter>
+</receiver>
+<service android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdService">
+<intent-filter android:priority="-500">
+<action android:name="com.google.firebase.INSTANCE_ID_EVENT">
+</action>
+</intent-filter>
+</service>
+<provider android:authorities="com.livesafe.activities.firebaseinitprovider" android:exported="false" android:initOrder="100" android:name="com.google.firebase.provider.FirebaseInitProvider">
+</provider>
+<service android:exported="true" android:name="com.firebase.jobdispatcher.GooglePlayReceiver" android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE">
+<intent-filter>
+<action android:name="com.google.android.gms.gcm.ACTION_TASK_READY">
+</action>
+</intent-filter>
+</service>
+<provider android:authorities="com.livesafe.activities.multipicker.fileprovider" android:exported="false" android:grantUriPermissions="true" android:name="com.kbeanie.multipicker.utils.AMPFileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F120006">
+</meta-data>
+</provider>
+</application>
+</manifest>

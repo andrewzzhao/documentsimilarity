@@ -1,0 +1,296 @@
+<?xml version="1.0" ?><manifest android:versionCode="1801015376" android:versionName="1.5.1801015376" package="com.samsung.mdl.radio" platformBuildVersionCode="23" platformBuildVersionName="6.0-2704002" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="17" android:targetSdkVersion="23">
+</uses-sdk>
+<supports-screens android:requiresSmallestWidthDp="320">
+</supports-screens>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CLEAR_APP_CACHE">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="com.samsung.mdl.radio.permission.READ_RADIO_STORAGE">
+</uses-permission>
+<uses-permission android:name="com.samsung.mdl.radio.permission.WRITE_RADIO_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.BLUETOOTH">
+</uses-permission>
+<permission android:name="com.samsung.mdl.radio.permission.C2D_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="com.samsung.mdl.radio.permission.C2D_MESSAGE">
+</uses-permission>
+<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<permission android:description="@7F070043" android:label="@7F070042" android:name="com.samsung.mdl.radio.permission.READ_RADIO_STORAGE" android:protectionLevel="0x00000000">
+</permission>
+<permission android:description="@7F070045" android:label="@7F070044" android:name="com.samsung.mdl.radio.permission.WRITE_RADIO_STORAGE" android:protectionLevel="0x00000002">
+</permission>
+<application android:allowBackup="true" android:icon="@7F02011B" android:label="@7F07001B" android:largeHeap="true" android:name="com.samsung.mdl.radio.RadioApp" android:theme="@7F090001">
+<meta-data android:name="com.samsung.android.icon_container.has_icon_container" android:value="true">
+</meta-data>
+<provider android:authorities="com.samsung.mdl.radio.slacker.cached" android:exported="false" android:name="com.slacker.radio.media.cache.impl.CachedContentProvider">
+</provider>
+<activity android:configChanges="0x00000480" android:label="@7F07001B" android:launchMode="2" android:name="com.samsung.mdl.radio.MainActivity">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="com.sec.android.airview.HOVER">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.MUSIC_PLAYER">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="www.samsung.com" android:pathPrefix="/us/milkmusic/" android:scheme="http">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="www.samsung.com" android:pathPrefix="/us/milkmusicevent/" android:scheme="http">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="milkmusic">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="milkmusicevent">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="samsungmilk">
+</data>
+</intent-filter>
+</activity>
+<activity android:label="@7F070040" android:name="com.samsung.mdl.radio.FBMessengerReplyActivity">
+<intent-filter>
+<action android:name="android.intent.action.PICK">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="com.facebook.orca.category.PLATFORM_THREAD_20150314">
+</category>
+</intent-filter>
+</activity>
+<activity android:label="@7F070040" android:name="com.samsung.mdl.radio.TipsOverviewActivity">
+</activity>
+<activity android:label="@7F070040" android:name="com.samsung.mdl.radio.HandednessTipsOverviewActivity">
+</activity>
+<activity android:label="@7F070040" android:name="com.samsung.mdl.radio.SystemOutageActivity">
+</activity>
+<activity android:configChanges="0x00000500" android:label="@7F070040" android:name="com.samsung.mdl.radio.SplashActivity">
+</activity>
+<activity android:label="@7F070040" android:name="com.samsung.mdl.radio.TalkBackSplashActivity">
+</activity>
+<activity android:label="@7F070040" android:name="com.samsung.mdl.radio.MobileKeyboardSplashActivity">
+</activity>
+<activity android:configChanges="0x000004B0" android:hardwareAccelerated="true" android:label="@7F07001B" android:name="com.samsung.mdl.radio.SubscriptionWebViewActivity" android:theme="@android:01030007" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F070040" android:name="com.samsung.mdl.radio.VideoActivity" android:parentActivityName="com.samsung.mdl.radio.MainActivity">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.samsung.mdl.radio.MainActivity">
+</meta-data>
+</activity>
+<activity android:configChanges="0x000005B0" android:label="@7F07001B" android:name="com.facebook.FacebookActivity">
+</activity>
+<activity android:name="com.mixpanel.android.surveys.SurveyActivity" android:theme="@7F090018">
+</activity>
+<activity android:exported="false" android:name="com.samsung.account.sdk.SamsungLoginActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000010">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<service android:name="com.samsung.mdl.radio.service.RadioService">
+</service>
+<service android:enabled="true" android:name="com.samsung.mdl.radio.offline.AutoRefreshService">
+</service>
+<service android:name="com.samsung.mdl.radio.service.ExternalInputIntentService">
+</service>
+<receiver android:exported="false" android:name="com.samsung.mdl.radio.offline.AutoRefreshReceiver">
+<intent-filter>
+<action android:name="com.samsung.radio.AUTO_SYNC_OFFLINE_ALARM_EXPIRED">
+</action>
+<action android:name="android.intent.action.TIMEZONE_CHANGED">
+</action>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name="com.samsung.mdl.radio.service.MediaButtonReceiver">
+<intent-filter>
+<action android:name="com.samsung.mdl.radio.COMMAND_PLAY">
+</action>
+<action android:name="com.samsung.mdl.radio.COMMAND_SKIP">
+</action>
+<action android:name="com.samsung.mdl.radio.COMMAND_PAUSE">
+</action>
+<action android:name="com.samsung.mdl.radio.CHANGE_STATION">
+</action>
+<action android:name="com.samsung.radio.COMMAND_PLAY">
+</action>
+<action android:name="com.samsung.radio.COMMAND_PAUSE">
+</action>
+<action android:name="com.samsung.radio.COMMAND_SKIP">
+</action>
+<action android:name="com.samsung.radio.COMMAND_PLAYPAUSE">
+</action>
+<action android:name="com.samsung.radio.NEXT_STATION">
+</action>
+<action android:name="com.samsung.radio.PREVIOUS_STATION">
+</action>
+<action android:name="com.samsung.radio.NEXT_GENRE">
+</action>
+<action android:name="com.samsung.radio.PREVIOUS_GENRE">
+</action>
+<action android:name="com.samsung.radio.CHANGE_STATION">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name="com.samsung.mdl.radio.widget.RadioAppWidgetProvider">
+<intent-filter>
+<action android:name="android.appwidget.action.APPWIDGET_UPDATE">
+</action>
+</intent-filter>
+<meta-data android:name="android.appwidget.provider" android:resource="@7F03006A">
+</meta-data>
+</receiver>
+<provider android:authorities="com.samsung.mdl.radio.provider" android:exported="true" android:label="@7F070041" android:name="com.samsung.mdl.radio.provider.RadioProvider" android:readPermission="com.samsung.mdl.radio.permission.READ_RADIO_STORAGE" android:syncable="false" android:writePermission="com.samsung.mdl.radio.permission.WRITE_RADIO_STORAGE">
+</provider>
+<provider android:authorities="com.facebook.app.FacebookContentProvider656877194440124" android:exported="true" android:name="com.facebook.FacebookContentProvider">
+</provider>
+<receiver android:exported="true" android:name="com.appsflyer.MultipleInstallBroadcastReceiver">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+ ;
+
+<service android:name="com.google.analytics.tracking.android.CampaignTrackingService">
+</service>
+<receiver android:exported="true" android:name="com.google.analytics.tracking.android.CampaignTrackingReceiver">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:exported="true" android:name="com.samsung.mdl.radio.service.MilkInstallReferrerReceiver">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name="com.mixpanel.android.mpmetrics.GCMReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+<action android:name="com.google.android.c2dm.intent.REGISTRATION">
+</action>
+<category android:name="com.samsung.mdl.radio">
+</category>
+</intent-filter>
+</receiver>
+<receiver android:name="com.samsung.mdl.radio.provider.MilkCocktailProvider">
+<intent-filter>
+<action android:name="com.samsung.android.cocktail.v2.action.COCKTAIL_UPDATE">
+</action>
+</intent-filter>
+<meta-data android:name="com.samsung.android.cocktail.provider" android:resource="@7F050000">
+</meta-data>
+</receiver>
+<receiver android:name="com.samsung.mdl.radio.provider.NoteEdgeMilkCocktailProvider">
+<intent-filter>
+<action android:name="com.samsung.android.cocktail.action.COCKTAIL_UPDATE">
+</action>
+</intent-filter>
+<meta-data android:name="com.samsung.android.cocktail.provider" android:resource="@7F050001">
+</meta-data>
+</receiver>
+<uses-library android:name="com.samsung.device">
+</uses-library>
+<meta-data android:name="com.google.android.gms.version" android:value="@7F080000">
+</meta-data>
+<meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@7F0702BA">
+</meta-data>
+<activity android:configChanges="0x000004B0" android:hardwareAccelerated="true" android:label="@7F07001B" android:launchMode="0" android:name="com.samsung.mdl.radio.CaptchaActivity" android:theme="@android:01030007" android:windowSoftInputMode="0x00000010">
+</activity>
+<receiver android:name="com.samsung.mdl.radio.service.PromotionPageReceiver">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="promopage" android:scheme="milkmusicnoui">
+</data>
+</intent-filter>
+</receiver>
+<provider android:authorities="com.samsung.mdl.radio.fileprovider" android:exported="false" android:grantUriPermissions="true" android:name="android.support.v4.content.FileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F050002">
+</meta-data>
+</provider>
+</application>
+</manifest>

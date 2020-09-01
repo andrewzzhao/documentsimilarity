@@ -1,0 +1,212 @@
+<?xml version="1.0" ?><manifest android:versionCode="115" android:versionName="1.4.5" package="com.mapleapps.android.csgoskills" platformBuildVersionCode="25" platformBuildVersionName="7.1.1" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="15" android:targetSdkVersion="22">
+</uses-sdk>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="com.android.vending.BILLING">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<permission android:name="com.mapleapps.android.csgoskills.permission.C2D_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="com.mapleapps.android.csgoskills.permission.C2D_MESSAGE">
+</uses-permission>
+<application android:allowBackup="true" android:hardwareAccelerated="true" android:icon="@7F0200B4" android:label="@7F070132" android:name="maple.MapleApplication" android:theme="@7F090043">
+<activity android:label="@7F070132" android:launchMode="2" android:name="maple.ui.main.MainActivity" android:theme="@7F090043">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:label="@7F0704FF" android:name="maple.ui.plan.PlanActivity" android:parentActivityName="maple.ui.main.MainActivity" android:theme="@7F090043">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value="maple.ui.main.MainActivity">
+</meta-data>
+</activity>
+<activity android:name="maple.ui.plan.PlanTaskDetailActivity" android:parentActivityName="maple.ui.plan.PlanActivity" android:theme="@7F090044">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value="maple.ui.plan.PlanActivity">
+</meta-data>
+</activity>
+<activity android:name="maple.ui.plan.LogGameActivity" android:theme="@7F090044">
+</activity>
+<activity android:name="maple.ui.plan.BuyCoinsDialogActivity" android:theme="@7F090045">
+</activity>
+<activity android:name="maple.ui.voteForFeatures.BuyDialogActivity" android:theme="@7F090045">
+</activity>
+<activity android:label="@7F0704FF" android:name="maple.ui.plan.RenewSubscriptionActivity" android:theme="@7F090047">
+</activity>
+<activity android:label="@7F070500" android:name="maple.ui.stats.overview.RenewSubscriptionActivity" android:theme="@7F090047">
+</activity>
+<activity android:name="maple.ui.bullets.BulletRewardActivity" android:theme="@7F090045">
+</activity>
+<activity android:label="@7F070501" android:name="maple.ui.training.traininglist.TrainingListActivity" android:parentActivityName="maple.ui.main.MainActivity" android:theme="@7F090043">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value="maple.ui.main.MainActivity">
+</meta-data>
+</activity>
+<activity android:name="maple.ui.training.tutoriallist.TutorialListActivity" android:parentActivityName="maple.ui.training.traininglist.TrainingListActivity" android:theme="@7F090043">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value="maple.ui.training.traininglist.TrainingListActivity">
+</meta-data>
+</activity>
+<activity android:name="maple.ui.training.tutorialdetail.TutorialDetailActivity" android:parentActivityName="maple.ui.training.tutoriallist.TutorialListActivity" android:theme="@7F090048">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value="maple.ui.training.tutoriallist.TutorialListActivity">
+</meta-data>
+</activity>
+<activity android:launchMode="2" android:name="maple.ui.training.task.TimerTaskDetailActivity" android:theme="@7F090044">
+</activity>
+<activity android:launchMode="2" android:name="maple.ui.training.task.CheckTaskDetailActivity" android:theme="@7F090044">
+</activity>
+<activity android:name="maple.ui.youtube.YoutubeFullscreenActivity" android:screenOrientation="0" android:theme="@7F0900BC">
+</activity>
+<activity android:label="@7F070057" android:name="maple.ui.preferences.PrefsActivity">
+</activity>
+<activity android:configChanges="0x00000480" android:label="@7F07005C" android:name="maple.ui.user.OpenIdActivity" android:theme="@7F0900BA">
+</activity>
+<activity android:label="@7F07005B" android:name="maple.ui.user.EditProfileActivity" android:theme="@7F0900B6">
+</activity>
+<activity android:label="@7F070051" android:name="maple.ui.preferences.PrefsDialogActivity" android:theme="@7F0900B6">
+</activity>
+<activity android:label="@7F0704FE" android:name="maple.ui.myprogress.TrainingProgressListActivity" android:parentActivityName="maple.ui.main.MainActivity" android:theme="@7F0900BB">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value="maple.ui.main.MainActivity">
+</meta-data>
+</activity>
+<activity android:label="@7F07006D" android:name="maple.ui.myprogress.KDChartActivity" android:theme="@7F0900BB">
+</activity>
+<activity android:label="@7F07006D" android:name="maple.ui.myprogress.PlanCategoryChartActivity" android:theme="@7F0900BB">
+</activity>
+<activity android:label="@7F070502" android:launchMode="2" android:name="maple.ui.voteForFeatures.VoteForFeatureActivity" android:parentActivityName="maple.ui.main.MainActivity" android:theme="@7F090043">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value="maple.ui.main.MainActivity">
+</meta-data>
+</activity>
+<activity android:label="@7F070500" android:launchMode="2" android:name="maple.ui.stats.overview.StatsOverviewActivity" android:theme="@7F090043">
+</activity>
+<activity android:label="@7F070500" android:launchMode="2" android:name="maple.ui.stats.linegraph.StatsCategoryGraphActivity" android:theme="@7F090043">
+</activity>
+<activity android:label="@7F0704FC" android:launchMode="2" android:name="maple.ui.stats.leaderboard.LeaderboardActivity" android:theme="@7F090043">
+</activity>
+<activity android:name="maple.ui.stats.overview.SkillGroupDialogActivity" android:theme="@7F090045">
+</activity>
+<activity android:launchMode="2" android:name="maple.ui.guides.GuideListActivity" android:parentActivityName="maple.ui.main.MainActivity" android:theme="@7F090043">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value="maple.ui.main.MainActivity">
+</meta-data>
+</activity>
+<activity android:launchMode="2" android:name="maple.ui.guides.GuideChapterListActivity" android:parentActivityName="maple.ui.guides.GuideListActivity" android:theme="@7F090046">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value="maple.ui.guides.GuideListActivity">
+</meta-data>
+<intent-filter android:label="@7F070130">
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="csgoskills.com" android:pathPrefix="/academy/weapons" android:scheme="http">
+</data>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+</intent-filter>
+<intent-filter android:label="@7F070130">
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="csgoskills.com" android:pathPrefix="/academy/aiming" android:scheme="http">
+</data>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+</intent-filter>
+<intent-filter android:label="@7F070130">
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="csgoskills.com" android:pathPrefix="/maps/dust2" android:scheme="http">
+</data>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+</intent-filter>
+<intent-filter android:label="@7F070130">
+<action android:name="android.intent.action.VIEW">
+</action>
+<data android:host="guides" android:scheme="csgoskills">
+</data>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+</intent-filter>
+</activity>
+<activity android:launchMode="1" android:name="maple.ui.guides.GuideChapterActivity" android:parentActivityName="maple.ui.guides.GuideChapterListActivity" android:theme="@7F090043">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value="maple.ui.guides.GuideChapterListActivity">
+</meta-data>
+</activity>
+<activity android:configChanges="0x000004A0" android:name="maple.ui.guides.ViewImageActivity" android:theme="@7F0900B8">
+</activity>
+<activity android:name="maple.ui.guides.TwitchReminderDialogActivity" android:theme="@7F0900B7">
+</activity>
+<activity android:label="@7F07004D" android:name="maple.ui.LegalActivity" android:parentActivityName="maple.ui.main.MainActivity" android:theme="@7F090043">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value="maple.ui.main.MainActivity">
+</meta-data>
+</activity>
+<activity android:configChanges="0x00000CB0" android:hardwareAccelerated="true" android:name="com.inmobi.androidsdk.IMBrowserActivity" android:theme="@android:01030010">
+</activity>
+<service android:enabled="true" android:exported="false" android:name="maple.ui.training.task.TimerService">
+</service>
+<service android:enabled="true" android:exported="false" android:name="maple.ui.plan.PlanTimerService">
+</service>
+<service android:name="maple.ui.plan.NotificationService">
+</service>
+<service android:name="maple.ui.guides.TwitchNotificationService">
+</service>
+<receiver android:enabled="true" android:exported="true" android:label="BootReceiver" android:name="maple.ui.InitAlarmReceiver">
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.TIMEZONE_CHANGED">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.TIME_SET">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name="maple.ui.notification.GcmBroadcastReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+<category android:name="com.mapleapps.android.csgoskills">
+</category>
+</intent-filter>
+</receiver>
+<service android:name="maple.ui.notification.GcmIntentService">
+</service>
+<meta-data android:name="LOCALYTICS_NOTIFICATION_ICON" android:value="@7F0200DA">
+</meta-data>
+<meta-data android:name="AdjustLogLevel" android:value="info">
+</meta-data>
+<receiver android:exported="true" android:name="maple.ui.share.ReferrerReceiver">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+<meta-data android:name="com.google.android.gms.version" android:value="@7F0A0004">
+</meta-data>
+<meta-data android:name="LOCALYTICS_APP_KEY" android:value="bea8b8d80c4e2b95828d40e-5374437a-6f15-11e4-a792-009c5fda0a25">
+</meta-data>
+<meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@7F070127">
+</meta-data>
+<meta-data android:name="io.fabric.ApiKey" android:value="13c190b00a74e73b0bb32f85dee7901dac48af5f">
+</meta-data>
+<activity android:name="com.mikepenz.aboutlibraries.ui.LibsActivity">
+</activity>
+</application>
+</manifest>

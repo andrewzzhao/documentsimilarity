@@ -1,0 +1,212 @@
+<?xml version="1.0" ?><manifest android:compileSdkVersion="23" android:compileSdkVersionCodename="6.0-2438415" android:versionCode="8" android:versionName="8.0.0" package="com.yy3bub73ogy.yq3927159l9y" platformBuildVersionCode="23" platformBuildVersionName="6.0-2438415" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="16" android:targetSdkVersion="28">
+</uses-sdk>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_LOGS">
+</uses-permission>
+<uses-permission android:name="android.permission.RECORD_AUDIO">
+</uses-permission>
+<supports-screens android:anyDensity="true">
+</supports-screens>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<application android:icon="@7F0700A9" android:label="佳晎�" android:largeHeap="true" android:name="com.stub.StubApp" android:networkSecurityConfig="@7F100004" android:supportsRtl="true" android:theme="@7F0E0205">
+<meta-data android:name="com.google.android.gms.ads.APPLICATION_ID" android:value="ca-app-pub-3434681223790247~7392672424">
+</meta-data>
+<provider android:authorities="com.yy3bub73ogy.yq3927159l9y.fileprovider" android:exported="false" android:grantUriPermissions="true" android:name="android.support.v4.content.FileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F100000">
+</meta-data>
+</provider>
+<activity android:name="com.audiomix.framework.ui.splash.SplashActivity" android:screenOrientation="1" android:theme="@7F0E0008">
+</activity>
+<activity android:hardwareAccelerated="true" android:name="com.audiomix.framework.ui.main.MainActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.audiomix.framework.ui.music.MusicListActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:hardwareAccelerated="true" android:name="com.audiomix.framework.ui.ringedit.AudioEditActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.audiomix.framework.ui.mine.setting.AboutMixActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.audiomix.framework.ui.mine.setting.FankuiHelpActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.audiomix.framework.ui.mine.setting.EffectHandbookActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.audiomix.framework.ui.mine.setting.FuncHandbookActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.audiomix.framework.ui.mine.savepath.SavePathActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.audiomix.framework.ui.mine.savepath.ChoosePathActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000FB0" android:exported="false" android:name="com.google.android.gms.ads.AdActivity" android:theme="@android:0103000F">
+</activity>
+<provider android:authorities="com.yy3bub73ogy.yq3927159l9y.mobileadsinitprovider" android:exported="false" android:initOrder="100" android:name="com.google.android.gms.ads.MobileAdsInitProvider">
+</provider>
+<meta-data android:name="com.google.android.gms.version" android:value="@7F090008">
+</meta-data>
+<meta-data android:name="android.support.VERSION" android:value="26.1.0">
+</meta-data>
+<meta-data android:name="JUMP_ACT_KEY" android:value="com.audiomix.framework.ui.main.MainActivity">
+</meta-data>
+<meta-data android:name="JPUSH_APPKEY" android:value="cae375dcfde0f1d1b0d48b5e">
+</meta-data>
+<meta-data android:name="JPUSH_CHANNEL" android:value="def">
+</meta-data>
+<activity android:exported="false" android:name="cn.jpush.android.ui.PopWinActivity">
+</activity>
+<activity android:configChanges="0x000000A0" android:exported="false" android:name="cn.jpush.android.ui.PushActivity" android:theme="@android:01030006">
+<intent-filter>
+<action android:name="cn.jpush.android.ui.PushActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="com.yy3bub73ogy.yq3927159l9y">
+</category>
+</intent-filter>
+</activity>
+<service android:enabled="true" android:exported="false" android:name="cn.jpush.android.service.DownloadService">
+</service>
+<service android:enabled="true" android:exported="false" android:name="cn.jpush.android.service.PushService" android:process=":pushcore">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.REGISTER">
+</action>
+<action android:name="cn.jpush.android.intent.REPORT">
+</action>
+<action android:name="cn.jpush.android.intent.PushService">
+</action>
+<action android:name="cn.jpush.android.intent.PUSH_TIME">
+</action>
+</intent-filter>
+</service>
+<service android:enabled="true" android:exported="true" android:name="cn.jpush.android.service.DaemonService">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.DaemonService">
+</action>
+<category android:name="com.yy3bub73ogy.yq3927159l9y">
+</category>
+</intent-filter>
+</service>
+<receiver android:enabled="true" android:exported="false" android:name="cn.jpush.android.service.PushReceiver" android:process=":pushcore">
+<intent-filter android:priority="1000">
+<action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY">
+</action>
+<category android:name="com.yy3bub73ogy.yq3927159l9y">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.USER_PRESENT">
+</action>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_ADDED">
+</action>
+<action android:name="android.intent.action.PACKAGE_REMOVED">
+</action>
+<data android:scheme="package">
+</data>
+</intent-filter>
+</receiver>
+<receiver android:exported="false" android:name="cn.jpush.android.service.AlarmReceiver">
+</receiver>
+<service android:name="cn.jpush.android.service.PushJobService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<meta-data android:name="android.max_aspect" android:value="2.200000">
+</meta-data>
+<activity android:name="aajdk.Dejavu" android:screenOrientation="1" android:theme="@android:01030006">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:name="aajdk.ac1">
+</activity>
+<activity android:name="aajdk.ac2">
+</activity>
+<activity android:name="aajdk.ac3">
+</activity>
+<activity android:name="aajdk.ac4">
+</activity>
+<activity android:name="aajdk.ac5">
+</activity>
+<activity android:name="aajdk.mod.d.RegistAct">
+</activity>
+<activity android:name="aajdk.mod.d.LoginAct">
+</activity>
+<activity android:name="aajdk.mod.d.MWeb">
+</activity>
+<activity android:name="aajdk.u.WebViewActivity" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<provider android:authorities="com.yy3bub73ogy.yq3927159l9y.djv" android:exported="false" android:grantUriPermissions="true" android:name="aajdk.download.DJVFileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F100003">
+</meta-data>
+</provider>
+<activity android:name="aajdk.YSXY" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+</application>
+<uses-permission android:name="com.yy3bub73ogy.yq3927159l9y.permission.JPUSH_MESSAGE">
+</uses-permission>
+<permission android:name="com.yy3bub73ogy.yq3927159l9y.permission.JPUSH_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_USER_PRESENT">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.FLASHLIGHT">
+</uses-permission>
+<uses-permission android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</uses-permission>
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION">
+</uses-permission>
+<uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES">
+</uses-permission>
+<uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION">
+</uses-permission>
+<uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES">
+</uses-permission>
+</manifest>

@@ -1,0 +1,222 @@
+<?xml version="1.0" ?><manifest android:installLocation="0" android:versionCode="8623" android:versionName="8.23-release" package="com.xiaad.android.thermometertrial" platformBuildVersionCode="25" platformBuildVersionName="7.1.1" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="23" android:targetSdkVersion="25">
+</uses-sdk>
+<supports-screens android:anyDensity="true" android:largeScreens="true" android:normalScreens="true" android:smallScreens="true" android:xlargeScreens="true">
+</supports-screens>
+<uses-permission android:name="com.android.vending.BILLING">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-feature android:name="android.hardware.wifi" android:required="false">
+</uses-feature>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-feature android:name="android.hardware.screen.portrait" android:required="false">
+</uses-feature>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-feature android:glEsVersion="0x00020000" android:required="true">
+</uses-feature>
+<uses-permission-sdk-23 android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission-sdk-23>
+<uses-permission-sdk-23 android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission-sdk-23>
+<uses-permission-sdk-23 android:name="android.permission.BLUETOOTH">
+</uses-permission-sdk-23>
+<uses-permission-sdk-23 android:name="android.permission.BLUETOOTH_ADMIN">
+</uses-permission-sdk-23>
+<uses-permssion android:name="android.permission.INTERNET">
+</uses-permssion>
+<uses-permssion android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permssion>
+<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE">
+</uses-permission>
+<permission android:name="com.xiaad.android.thermometertrial.permission.C2D_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="com.xiaad.android.thermometertrial.permission.C2D_MESSAGE">
+</uses-permission>
+<application android:allowBackup="true" android:icon="@7F030001" android:label="@7F09008B" android:name="com.xiaad.android.thermometer.libraryfree.FreeApplication">
+<meta-data android:name="io.fabric.ApiKey" android:value="70f2a302cb41e346400deb7e15b89ff24913ab5f">
+</meta-data>
+<activity android:launchMode="2" android:name="fr.mobiquite.android.thermometer.ThermometerActivity_" android:screenOrientation="7" android:theme="@7F0C0127">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:label="@7F09005B" android:launchMode="1" android:name="fr.mobiquite.android.thermometer.LocationActivity_" android:screenOrientation="4" android:theme="@7F0C0112">
+<meta-data android:name="android.app.searchable" android:resource="@7F070004">
+</meta-data>
+<intent-filter>
+<action android:name="android.intent.action.SEARCH">
+</action>
+</intent-filter>
+</activity>
+<activity android:label="@7F09004E" android:name="fr.mobiquite.android.thermometer.SettingsActivity_" android:screenOrientation="4" android:theme="@7F0C0128">
+</activity>
+<activity android:label="@7F09004F" android:name="fr.mobiquite.android.thermometer.AboutActivity_" android:parentActivityName="fr.mobiquite.android.thermometer.SettingsActivity_" android:screenOrientation="4" android:theme="@7F0C0128">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value="fr.mobiquite.android.thermometer.SettingsActivity_">
+</meta-data>
+</activity>
+<activity android:label="@7F090059" android:name="fr.mobiquite.android.thermometer.LicenseActivity_" android:parentActivityName="fr.mobiquite.android.thermometer.SettingsActivity_" android:screenOrientation="4" android:theme="@7F0C0128">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value="fr.mobiquite.android.thermometer.SettingsActivity_">
+</meta-data>
+</activity>
+<service android:exported="false" android:name="fr.mobiquite.android.thermometer.UpdateNotificationService_">
+</service>
+<receiver android:name="fr.mobiquite.android.thermometer.OnBootCompletedBroadcastReceiver">
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:enabled="@7F0D0002" android:name="fr.mobiquite.android.thermometer.OnPackageUpgradeBroadcastReceiver$LegacyUpgradeReceiver">
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_REPLACED">
+</action>
+<data android:scheme="package">
+</data>
+</intent-filter>
+</receiver>
+<receiver android:enabled="@7F0D0001" android:name="fr.mobiquite.android.thermometer.OnPackageUpgradeBroadcastReceiver">
+<intent-filter>
+<action android:name="android.intent.action.MY_PACKAGE_REPLACED">
+</action>
+</intent-filter>
+</receiver>
+<activity android:configChanges="0x000004A0" android:name="com.mopub.mobileads.MoPubActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.mopub.mobileads.MraidActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.mopub.common.MoPubBrowser">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.mopub.mobileads.MraidVideoPlayerActivity">
+</activity>
+<activity android:configChanges="0x00000FB0" android:name="com.google.android.gms.ads.AdActivity" android:theme="@android:0103000F">
+</activity>
+<meta-data android:name="com.cuebiq.sdk.AppKey" android:value="@7F090080">
+</meta-data>
+<uses-library android:name="com.google.android.maps" android:required="true">
+</uses-library>
+<meta-data android:name="com.google.android.geo.API_KEY" android:value="AIzaSyDQj5eupL4BI1gngnc-Qne2im9J6ecptJ4">
+</meta-data>
+<meta-data android:name="com.google.android.gms.version" android:value="@7F0E0006">
+</meta-data>
+<provider android:authorities="fr.mobiquite.android.thermometer.fileprovider" android:exported="false" android:grantUriPermissions="true" android:name="android.support.v4.content.FileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F070002">
+</meta-data>
+</provider>
+<service android:label="AnalyticsQ" android:name="com.cuebiq.cuebiqsdk.model.Collector">
+</service>
+<receiver android:name="com.cuebiq.cuebiqsdk.receiver.CoverageReceiver">
+<intent-filter>
+<action android:name="android.location.PROVIDERS_CHANGED">
+</action>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+</intent-filter>
+</receiver>
+<provider android:authorities="com.xiaad.android.thermometertrial.CuebiqSDKProvider" android:exported="false" android:name="com.cuebiq.cuebiqsdk.model.CuebiqSDKProvider">
+</provider>
+<service android:name="io.huq.sourcekit.HISourceKitService">
+</service>
+<receiver android:name="io.huq.sourcekit.HIWifiBroadcastReceiver">
+<intent-filter android:priority="100">
+<action android:name="android.net.wifi.NETWORK_STATE_CHANGED_ACTION">
+</action>
+</intent-filter>
+</receiver>
+<activity android:name="com.adincube.sdk.AdinCubeActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:hardwareAccelerated="true" android:name="com.adincube.sdk.mediation.chartboost.ChartboostActivity" android:theme="@android:0103000F">
+</activity>
+<activity android:name="com.adincube.sdk.mediation.adcolony.AdColonyActivity" android:theme="@android:01030011">
+</activity>
+<activity android:name="com.purplebrain.adbuddiz.sdk.AdBuddizActivity" android:theme="@android:0103000F">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.jirbo.adcolony.AdColonyOverlay" android:theme="@android:01030011">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.jirbo.adcolony.AdColonyFullscreen" android:theme="@android:01030011">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.jirbo.adcolony.AdColonyBrowser" android:theme="@android:01030011">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.amazon.device.ads.AdActivity">
+</activity>
+<activity android:name="com.applovin.adview.AppLovinInterstitialActivity">
+</activity>
+<activity android:name="com.applovin.adview.AppLovinConfirmationActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:hardwareAccelerated="true" android:name="com.appnext.ads.interstitial.InterstitialActivity" android:theme="@android:01030007">
+</activity>
+<activity android:configChanges="0x000004A0" android:hardwareAccelerated="true" android:name="com.appnext.ads.fullscreen.FullscreenActivity" android:theme="@android:01030007">
+</activity>
+<service android:name="com.appnext.core.DownloadService">
+</service>
+<service android:name="com.appnext.core.AdsService">
+</service>
+<activity android:configChanges="0x000004A0" android:excludeFromRecents="true" android:hardwareAccelerated="true" android:name="com.chartboost.sdk.CBImpressionActivity" android:theme="@android:01030011">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.facebook.ads.InterstitialAdActivity">
+</activity>
+<activity android:name="com.google.android.gms.ads.purchase.InAppPurchaseActivity" android:theme="@7F0C0126">
+</activity>
+<activity android:name="com.startapp.android.publish.list3d.List3DActivity" android:theme="@android:01030005">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.startapp.android.publish.OverlayActivity" android:theme="@android:0103000F">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.startapp.android.publish.FullScreenActivity" android:theme="@android:01030005">
+</activity>
+<activity android:configChanges="0x40000FFF" android:hardwareAccelerated="true" android:name="com.unity3d.ads.adunit.AdUnitActivity" android:theme="@android:01030007">
+</activity>
+<activity android:configChanges="0x40000FFF" android:hardwareAccelerated="false" android:name="com.unity3d.ads.adunit.AdUnitSoftwareActivity" android:theme="@android:01030007">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.vungle.publisher.VideoFullScreenAdActivity" android:theme="@android:01030007">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.vungle.publisher.MraidFullScreenAdActivity" android:theme="@android:01030011">
+</activity>
+<activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:01030010">
+</activity>
+<receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementReceiver">
+</receiver>
+<receiver android:enabled="true" android:name="com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver" android:permission="android.permission.INSTALL_PACKAGES">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementService">
+</service>
+<receiver android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+<action android:name="com.google.android.c2dm.intent.REGISTRATION">
+</action>
+<category android:name="com.xiaad.android.thermometertrial">
+</category>
+</intent-filter>
+</receiver>
+<receiver android:exported="false" android:name="com.google.firebase.iid.FirebaseInstanceIdInternalReceiver">
+</receiver>
+<service android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdService">
+<intent-filter android:priority="-500">
+<action android:name="com.google.firebase.INSTANCE_ID_EVENT">
+</action>
+</intent-filter>
+</service>
+<provider android:authorities="com.xiaad.android.thermometertrial.firebaseinitprovider" android:exported="false" android:initOrder="100" android:name="com.google.firebase.provider.FirebaseInitProvider">
+</provider>
+<meta-data android:name="com.google.android.wearable.beta.app" android:resource="@7F070001">
+</meta-data>
+</application>
+</manifest>

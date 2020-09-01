@@ -1,0 +1,222 @@
+<?xml version="1.0" ?><manifest android:installLocation="0" android:versionCode="18" android:versionName="1.9" package="com.appsbuilder.applibe" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="14" android:targetSdkVersion="21">
+</uses-sdk>
+<supports-screens android:anyDensity="true" android:largeScreens="true" android:normalScreens="true" android:smallScreens="true" android:xlargeScreens="true">
+</supports-screens>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.FLASHLIGHT">
+</uses-permission>
+<uses-feature android:name="android.hardware.telephony" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.bluetooth" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.location" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.location.network" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.location.gps" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.touchscreen" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.wifi" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.screen.landscape" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.screen.portrait" android:required="false">
+</uses-feature>
+<application android:allowBackup="true" android:configChanges="0x00000FB0" android:hardwareAccelerated="true" android:icon="@7F020049" android:label="@7F070217" android:largeHeap="true" android:name="com.appyet.context.ApplicationContext" android:supportsRtl="true" android:theme="@7F0A0144">
+<provider android:authorities="com.appsbuilder.applibe.suggestion.provider" android:name="com.appyet.provider.SuggestionProvider">
+</provider>
+<meta-data android:name="com.google.android.gms.version" android:value="@7F0C000B">
+</meta-data>
+<service android:name="com.appyet.service.SyncService">
+</service>
+<service android:name="com.appyet.service.MediaService">
+</service>
+<receiver android:name="com.appyet.receiver.DownloadReceiver">
+<intent-filter>
+<action android:name="android.intent.action.DOWNLOAD_COMPLETE">
+</action>
+<action android:name="android.intent.action.DOWNLOAD_NOTIFICATION_CLICKED">
+</action>
+<action android:name="android.intent.action.ACTION_VIEW_DOWNLOADS">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name="com.appyet.receiver.CommonReceiver">
+<intent-filter>
+<action android:name="android.intent.action.MEDIA_BUTTON">
+</action>
+<action android:name="android.intent.action.HEADSET_PLUG">
+</action>
+<action android:name="android.intent.action.ACTION_POWER_DISCONNECTED">
+</action>
+<action android:name="android.net.ConnectivityManager.CONNECTIVITY_ACTION">
+</action>
+<action android:name="android.bluetooth.adapter.action.STATE_CHANGED">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name="com.appyet.receiver.AlarmUpdateReceiver">
+</receiver>
+<receiver android:name="com.appyet.receiver.BootCompletedReceiver">
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:label="@7F070218" android:name="com.appyet.provider.WidgetProvider">
+<intent-filter>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+<action android:name="android.appwidget.action.APPWIDGET_UPDATE">
+</action>
+</intent-filter>
+<meta-data android:name="android.appwidget.provider" android:resource="@7F050000">
+</meta-data>
+</receiver>
+<receiver android:label="@7F070219" android:name="com.appyet.provider.WidgetProvider_4_1">
+<intent-filter>
+<action android:name="android.appwidget.action.APPWIDGET_UPDATE">
+</action>
+</intent-filter>
+<meta-data android:name="android.appwidget.provider" android:resource="@7F050001">
+</meta-data>
+</receiver>
+<receiver android:enabled="true" android:name="com.google.android.gms.analytics.AnalyticsReceiver">
+<intent-filter>
+<action android:name="com.google.android.gms.analytics.ANALYTICS_DISPATCH">
+</action>
+</intent-filter>
+</receiver>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.analytics.AnalyticsService">
+</service>
+<receiver android:exported="true" android:name="com.google.android.gms.analytics.CampaignTrackingReceiver">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+<service android:name="com.google.android.gms.analytics.CampaignTrackingService">
+</service>
+<activity android:configChanges="0x00000FB0" android:label="@7F070217" android:launchMode="2" android:name="com.appyet.activity.SplashActivity" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x00000FB0" android:label="@7F070217" android:launchMode="2" android:name="com.appyet.activity.MainActivity" android:theme="@7F0A0144">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x00000FB0" android:launchMode="1" android:name="com.appyet.activity.TranslateActivity" android:theme="@7F0A0145">
+</activity>
+<activity android:configChanges="0x00000FB0" android:launchMode="1" android:name="com.appyet.activity.MediaPlayerActivity" android:theme="@7F0A013F">
+</activity>
+<activity android:configChanges="0x00000FB0" android:launchMode="1" android:name="com.appyet.activity.PodcastActionActivity" android:theme="@7F0A013F">
+</activity>
+<activity android:configChanges="0x00000FB0" android:launchMode="1" android:name="com.appyet.activity.WebActionActivity" android:theme="@7F0A013F">
+</activity>
+<activity android:configChanges="0x00000FB0" android:name="com.appyet.activity.WebBrowserActivity">
+</activity>
+<activity android:configChanges="0x00000FB0" android:name="com.appyet.activity.WhatsNewActivity" android:theme="@7F0A0145">
+</activity>
+<activity android:configChanges="0x00000FB0" android:name="com.appyet.activity.DisqusCommentActivity">
+</activity>
+<activity android:configChanges="0x00000FB0" android:name="com.appyet.activity.VideoPlayerActivity" android:screenOrientation="6" android:theme="@7F0A0153">
+</activity>
+<activity android:configChanges="0x00000FB0" android:launchMode="1" android:name="com.appyet.activity.DownloadActivity" android:theme="@7F0A0144">
+</activity>
+<activity android:configChanges="0x00000FB0" android:name="com.appyet.activity.ExploreActivity" android:theme="@7F0A0151">
+</activity>
+<activity android:configChanges="0x00000FB0" android:name="com.appyet.activity.SettingsActivity" android:theme="@7F0A0144">
+</activity>
+<activity android:configChanges="0x00000FB0" android:name="com.appyet.activity.AboutActivity" android:theme="@7F0A013F">
+</activity>
+<activity android:configChanges="0x00000FB0" android:name="com.appyet.activity.ImageViewerActivity" android:theme="@7F0A0155">
+</activity>
+<activity android:configChanges="0x00000FB0" android:name="com.appyet.activity.YouTubePlayerActivity" android:screenOrientation="0" android:theme="@7F0A014A">
+</activity>
+<activity android:configChanges="0x000000A4" android:launchMode="1" android:name="com.appyet.activity.WidgetConfigureActivity" android:theme="@7F0A013D">
+<intent-filter>
+<action android:name="android.appwidget.action.APPWIDGET_CONFIGURE">
+</action>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x00000FB0" android:name="com.google.android.gms.ads.AdActivity" android:theme="@android:0103000F">
+</activity>
+<activity android:configChanges="0x00000CB0" android:name="com.inmobi.androidsdk.IMBrowserActivity">
+</activity>
+<activity android:configChanges="0x000000B0" android:name="com.millennialmedia.android.MMActivity" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x000000B0" android:name="com.millennialmedia.android.VideoPlayer">
+</activity>
+<activity android:configChanges="0x00000FB0" android:name="com.adsdk.sdk.banner.InAppWebView">
+</activity>
+<activity android:configChanges="0x00000FB0" android:name="com.adsdk.sdk.mraid.MraidBrowser">
+</activity>
+<activity android:configChanges="0x00000FB0" android:hardwareAccelerated="false" android:name="com.adsdk.sdk.video.RichMediaActivity">
+</activity>
+<activity android:configChanges="0x00000FB0" android:name="com.appyet.activity.forum.ForumNewTopicActivity" android:theme="@7F0A0144">
+</activity>
+<activity android:configChanges="0x00000FB0" android:name="com.appyet.activity.forum.ForumReplyPostActivity" android:theme="@7F0A0144">
+</activity>
+<activity android:configChanges="0x00000FB0" android:name="com.appyet.activity.forum.ForumNewMessageActivity" android:theme="@7F0A0144">
+</activity>
+<activity android:configChanges="0x00000FB0" android:name="com.appyet.activity.forum.ForumNewConversationActivity" android:theme="@7F0A0144">
+</activity>
+<activity android:configChanges="0x00000FB0" android:name="com.appyet.activity.forum.ForumSignInActivity" android:theme="@7F0A0144">
+</activity>
+<activity android:configChanges="0x00000FB0" android:name="com.appyet.activity.forum.ForumSignUpActivity" android:theme="@7F0A0144">
+</activity>
+<activity android:configChanges="0x00000FB0" android:name="com.appyet.activity.forum.ForumForgetPasswordActivity" android:theme="@7F0A0144">
+</activity>
+<activity android:configChanges="0x00000FB0" android:name="com.appyet.activity.forum.ForumProfileActivity" android:theme="@7F0A0143">
+</activity>
+<activity android:configChanges="0x00000FB0" android:name="com.appyet.activity.forum.ForumSearchActivity" android:theme="@7F0A0143">
+</activity>
+<activity android:configChanges="0x00000FB0" android:name="com.appyet.activity.forum.ForumMessageActivity" android:theme="@7F0A0143">
+</activity>
+<activity android:configChanges="0x00000FB0" android:name="com.appyet.activity.forum.ForumSettingsActivity" android:theme="@7F0A013D">
+</activity>
+<activity android:configChanges="0x00000FB0" android:name="com.appyet.activity.forum.ForumConversationActivity" android:theme="@7F0A0143">
+</activity>
+<activity android:configChanges="0x00000FB0" android:name="com.appyet.activity.forum.ForumPeopleActivity" android:theme="@7F0A013D">
+</activity>
+<activity android:configChanges="0x00000FB0" android:name="com.appyet.activity.forum.ForumStatisticsActivity" android:theme="@7F0A013D">
+</activity>
+<activity android:configChanges="0x00000FB0" android:name="com.appyet.activity.msgaw.ChatActivity" android:theme="@7F0A013D">
+</activity>
+<activity android:label="@7F070217" android:launchMode="1" android:name="com.appyet.activity.auth.AuthLoginActivity">
+<meta-data android:name="com.appyet.activity.auth.AuthLoginActivity.AUTH_LOGIN_ENABLED" android:value="true">
+</meta-data>
+<meta-data android:name="com.appyet.activity.auth.AuthLoginActivity.AUTH_LOGIN_EMAIL_AS_USERNAME" android:value="true">
+</meta-data>
+<meta-data android:name="com.appyet.activity.auth.AuthLoginActivity.FACEBOOK_LOGIN_ENABLED" android:value="true">
+</meta-data>
+<meta-data android:name="com.appyet.activity.auth.AuthLoginActivity.TWITTER_LOGIN_ENABLED" android:value="true">
+</meta-data>
+<meta-data android:name="com.appyet.activity.auth.AuthLoginActivity.GOOGLE_LOGIN_ENABLED" android:value="true">
+</meta-data>
+</activity>
+<activity android:configChanges="0x000005B0" android:label="@7F070217" android:name="com.facebook.FacebookActivity" android:theme="@android:01030010">
+</activity>
+<activity android:label="@7F070217" android:name="com.appyet.activity.GalleryActivity" android:screenOrientation="1" android:theme="@7F0A014A">
+</activity>
+<meta-data android:name="io.fabric.ApiKey" android:value="1e7fb93d940e7edf0198fe9e673a0774c9cc960e">
+</meta-data>
+</application>
+</manifest>

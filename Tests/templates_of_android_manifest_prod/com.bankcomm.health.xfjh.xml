@@ -1,0 +1,154 @@
+<?xml version="1.0" ?><manifest android:versionCode="10000006" android:versionName="1.1.1" package="com.bankcomm.health.xfjh" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="21" android:targetSdkVersion="26">
+</uses-sdk>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.CALL_PHONE">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-feature android:name="android.hardware.sensor.accelerometer">
+</uses-feature>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_LOGS">
+</uses-permission>
+<uses-feature android:name="android.hardware.sensor.stepcounter" android:required="true">
+</uses-feature>
+<uses-permission android:name="com.bankcomm.health.xfjh.permissions.MY_BROADCAST">
+</uses-permission>
+<permission android:name="com.bankcomm.health.xfjh.permissions.MY_BROADCAST" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-permission android:name="android.permission.PACKAGE_USAGE_STATS">
+</uses-permission>
+<uses-permission android:name="android.permission.BLUETOOTH">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_SMS">
+</uses-permission>
+<uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES">
+</uses-permission>
+<application android:allowBackup="false" android:icon="@7F0C0000" android:label="@7F0E0022" android:name="com.bankcomm.health.xfjh.HealthApplication" android:persistent="true" android:roundIcon="@7F0C0000" android:supportsRtl="true" android:theme="@7F0F0009">
+<activity android:name="com.bankcomm.health.xfjh.activity.SplashActivity" android:theme="@7F0F00D5">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:name="com.bankcomm.health.xfjh.activity.WebActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.bankcomm.health.xfjh.BaseActivity" android:screenOrientation="1">
+</activity>
+<activity android:exported="false" android:name="com.bankcomm.health.xfjh.activity.sport.HealthActivity" android:screenOrientation="1">
+</activity>
+<meta-data android:name="com.amap.api.v2.apikey" android:value="d2197860474e562d966769478b714180">
+</meta-data>
+<service android:exported="false" android:name="com.amap.api.location.APSService">
+</service>
+<service android:exported="false" android:name="com.bankcomm.health.xfjh.map.wake.LocationBackgroundService">
+</service>
+<service android:enabled="true" android:exported="true" android:name="com.bankcomm.health.xfjh.map.wake.SelfLocationService">
+</service>
+<service android:enabled="true" android:exported="true" android:name="com.bankcomm.health.xfjh.map.wake.PlayerMusicService" android:process=":music_service">
+</service>
+<service android:exported="false" android:name="com.bankcomm.health.xfjh.map.wake.AliveJobService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<activity android:exported="false" android:name="com.bankcomm.health.xfjh.activity.sport.SportsHistoryActivity" android:screenOrientation="1">
+</activity>
+<activity android:exported="false" android:name="com.bankcomm.health.xfjh.activity.sport.SportsChartActivity" android:screenOrientation="1">
+</activity>
+<activity android:exported="false" android:name="com.bankcomm.health.xfjh.activity.sport.ScoreDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:exported="false" android:name="com.bankcomm.health.xfjh.activity.sport.TrackActivity" android:screenOrientation="1">
+</activity>
+<activity android:exported="false" android:name="com.bankcomm.health.xfjh.activity.LoginActivity" android:screenOrientation="1">
+</activity>
+<activity android:exported="false" android:name="com.bankcomm.health.xfjh.activity.EditPhotoActivity" android:screenOrientation="1">
+</activity>
+<activity android:exported="false" android:name="com.bankcomm.health.xfjh.activity.EditInformationActivity" android:screenOrientation="1">
+</activity>
+<activity android:exported="false" android:name="com.bankcomm.health.xfjh.activity.GuideActivity" android:screenOrientation="1">
+</activity>
+<activity android:exported="false" android:name="com.soundcloud.android.crop.CropImageActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.bankcomm.health.xfjh.pay.WeatchPayActivity" android:screenOrientation="1">
+</activity>
+<activity android:exported="true" android:launchMode="1" android:name="com.bankcomm.health.xfjh.wxapi.WXPayEntryActivity" android:screenOrientation="1">
+</activity>
+<activity android:exported="false" android:launchMode="1" android:name="com.bankcomm.health.xfjh.activity.sport.SelfSportingActivity" android:screenOrientation="1">
+</activity>
+<meta-data android:name="com.amap.api.v2.apikey" android:value="d2197860474e562d966769478b714180">
+</meta-data>
+<provider android:authorities="com.bankcomm.health.xfjh.fileprovider" android:exported="false" android:grantUriPermissions="true" android:name="android.support.v4.content.FileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F110001">
+</meta-data>
+</provider>
+<activity android:configChanges="0x000004A0" android:name="com.mob.tools.MobUIShell" android:theme="@android:01030010" android:windowSoftInputMode="0x00000012">
+<intent-filter>
+<action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000E0" android:exported="false" android:name="com.alipay.sdk.app.H5PayActivity" android:screenOrientation="3">
+</activity>
+<activity android:configChanges="0x000000E0" android:exported="false" android:name="com.alipay.sdk.auth.AuthActivity" android:screenOrientation="3">
+</activity>
+<meta-data android:name="android.support.VERSION" android:value="26.1.0">
+</meta-data>
+<activity android:configChanges="0x000004A4" android:name="com.tencent.bugly.beta.ui.BetaActivity" android:theme="@android:0103000F">
+</activity>
+<provider android:authorities="com.bankcomm.health.xfjh.fileProvider" android:exported="false" android:grantUriPermissions="true" android:name="com.tencent.bugly.beta.utils.BuglyFileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F110002">
+</meta-data>
+</provider>
+<service android:exported="false" android:name="com.tencent.bugly.beta.tinker.TinkerResultService">
+</service>
+<meta-data android:name="android.arch.lifecycle.VERSION" android:value="27.0.0-SNAPSHOT">
+</meta-data>
+<provider android:authorities="com.bankcomm.health.xfjh.com.mob.MobProvider" android:exported="false" android:multiprocess="true" android:name="com.mob.MobProvider">
+</provider>
+<meta-data android:name="Mob-AppKey" android:value="25fcf10560e79">
+</meta-data>
+<meta-data android:name="Mob-AppSeret" android:value="4e37233f7e624cb07e1068c6cd8098c1">
+</meta-data>
+<activity android:configChanges="0x000004A0" android:exported="false" android:name="cn.sharesdk.wechat.utils.WechatHandlerActivity">
+</activity>
+<activity-alias android:exported="true" android:name="com.bankcomm.health.xfjh.wxapi.WXEntryActivity" android:targetActivity="cn.sharesdk.wechat.utils.WechatHandlerActivity">
+</activity-alias>
+</application>
+</manifest>

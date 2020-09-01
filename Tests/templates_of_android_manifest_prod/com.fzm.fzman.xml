@@ -1,0 +1,266 @@
+<?xml version="1.0" ?><manifest android:versionCode="21" android:versionName="2.0.5" package="com.fzm.fzman" platformBuildVersionCode="25" platformBuildVersionName="7.1.1" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-permission android:name="android.permission.READ_LOGS">
+</uses-permission>
+<uses-sdk android:minSdkVersion="16" android:targetSdkVersion="25">
+</uses-sdk>
+<permission android:name="com.fzm.fzman.permission.JPUSH_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-feature android:name="android.hardware.camera">
+</uses-feature>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-permission android:name="android.hardware.camera.autofocus">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS">
+</uses-permission>
+<uses-permission android:name="com.fzm.fzman.permission.JPUSH_MESSAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_USER_PRESENT">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CALL_PHONE">
+</uses-permission>
+<uses-permission android:name="android.permission.SEND_SMS">
+</uses-permission>
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="com.android.launcher.permission.READ_SETTINGS">
+</uses-permission>
+<supports-screens android:anyDensity="true" android:largeScreens="true" android:normalScreens="true" android:resizeable="true" android:smallScreens="true">
+</supports-screens>
+<meta-data android:name="android.support.VERSION" android:value="25.3.1">
+</meta-data>
+<uses-feature android:glEsVersion="0x00020000" android:required="true">
+</uses-feature>
+<supports-gl-texture android:name="GL_OES_compressed_ETC1_RGB8_texture">
+</supports-gl-texture>
+<supports-gl-texture android:name="GL_OES_compressed_paletted_texture">
+</supports-gl-texture>
+<application android:allowBackup="true" android:hardwareAccelerated="true" android:icon="@7F030034" android:label="@7F090064" android:name="com.tencent.StubShell.TxAppEntry" android:supportsRtl="true" android:theme="@7F0B0120">
+<meta-data android:name="TxAppEntry" android:value="com.fzm.fzman.FzmApplication">
+</meta-data>
+<meta-data android:name="com.baidu.lbsapi.API_KEY" android:value="hG1VUV6mdxuL1Mtz2lKapgMISr9BQ6Vo">
+</meta-data>
+<service android:enabled="true" android:name="com.baidu.location.f" android:process=":remote">
+</service>
+<receiver android:name="com.fzm.fzman.Receiver.MyMediaButtonReceiver">
+<intent-filter android:priority="1000">
+<action android:name="android.intent.action.MEDIA_BUTTON">
+</action>
+</intent-filter>
+</receiver>
+<provider android:authorities="com.fzm.fzman.fileprovider" android:exported="false" android:grantUriPermissions="true" android:name="android.support.v4.content.FileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F070000">
+</meta-data>
+</provider>
+<activity android:name="com.fzm.fzman.activity.MainActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.fzm.fzman.activity.BaseActivity" android:screenOrientation="1">
+</activity>
+<activity android:exported="false" android:name="cn.jpush.android.ui.PopWinActivity" android:theme="@7F0B00D7">
+</activity>
+<activity android:configChanges="0x000000A0" android:exported="false" android:name="cn.jpush.android.ui.PushActivity" android:theme="@android:01030006">
+<intent-filter>
+<action android:name="cn.jpush.android.ui.PushActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="com.fzm.fzman">
+</category>
+</intent-filter>
+</activity>
+<service android:enabled="true" android:exported="false" android:name="cn.jpush.android.service.DownloadService">
+</service>
+<service android:name="cn.jpush.android.service.PushService" android:process=":mult">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.REGISTER">
+</action>
+<action android:name="cn.jpush.android.intent.REPORT">
+</action>
+<action android:name="cn.jpush.android.intent.PushService">
+</action>
+<action android:name="cn.jpush.android.intent.PUSH_TIME">
+</action>
+</intent-filter>
+</service>
+<service android:enabled="true" android:exported="true" android:name="cn.jpush.android.service.DaemonService">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.DaemonService">
+</action>
+<category android:name="com.fzm.fzman">
+</category>
+</intent-filter>
+</service>
+<receiver android:enabled="true" android:name="cn.jpush.android.service.PushReceiver">
+<intent-filter android:priority="1000">
+<action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY">
+</action>
+<category android:name="com.fzm.fzman">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.USER_PRESENT">
+</action>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_ADDED">
+</action>
+<action android:name="android.intent.action.PACKAGE_REMOVED">
+</action>
+<data android:scheme="package">
+</data>
+</intent-filter>
+</receiver>
+<receiver android:exported="false" android:name="cn.jpush.android.service.AlarmReceiver">
+</receiver>
+<meta-data android:name="JPUSH_CHANNEL" android:value="developer-default">
+</meta-data>
+<meta-data android:name="JPUSH_APPKEY" android:value="b651d62c00d7f8cb437da45b">
+</meta-data>
+<activity android:name="com.fzm.fzman.activity.ReleaseHInfoActivity" android:screenOrientation="1">
+</activity>
+<receiver android:enabled="true" android:exported="false" android:name="com.fzm.fzman.Receiver.MyReceiver">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.REGISTRATION">
+</action>
+<action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED">
+</action>
+<action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED">
+</action>
+<action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED">
+</action>
+<action android:name="cn.jpush.android.intent.CONNECTION">
+</action>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+<category android:name="com.fzm.fzman">
+</category>
+</intent-filter>
+</receiver>
+<activity android:name="com.fzm.fzman.activity.HousePhotoActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.fzm.fzman.activity.ExpectedPriceActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.fzm.fzman.activity.HouseAuthenActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.fzm.fzman.activity.LoginActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.fzm.fzman.activity.SelectVillageActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.fzm.fzman.activity.MySaleHoueActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.fzm.fzman.activity.HouseDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.fzm.fzman.activity.RegistActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.fzm.fzman.activity.AboutUsActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.fzm.fzman.activity.UserFeedBackActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.fzm.fzman.activity.PersonalInfoActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.fzm.fzman.activity.SplashActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:name="com.fzm.fzman.activity.CameraActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.fzm.fzman.activity.HouseListDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.fzm.fzman.activity.MessageActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.fzm.fzman.activity.UserProgressActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.fzm.fzman.activity.BuyHProcessActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.fzm.fzman.activity.SealHProcessActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.fzm.fzman.activity.MyFavoriteActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.fzm.fzman.activity.ServerUnconnctedActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.fzm.fzman.activity.WebActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:configChanges="0x000004A0" android:exported="true" android:name="com.fzm.fzman.wxapi.WXEntryActivity" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<activity android:launchMode="2" android:name="com.umeng.qq.tencent.AuthActivity" android:noHistory="true">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="tencent1106037824">
+</data>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.umeng.qq.tencent.AssistActivity" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<meta-data android:name="UMENG_APPKEY" android:value="59005e6eae1bf84af6000ed0">
+</meta-data>
+<activity android:name="com.fzm.fzman.activity.QueryPriceActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.fzm.fzman.activity.ChengJiaoDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.fzm.fzman.activity.FirstInActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.fzm.fzman.activity.VillageListActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.fzm.fzman.activity.VillageDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.fzm.fzman.activity.VillageSealHouseListActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.fzm.fzman.activity.VillageDealHouseListActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000480" android:name="com.fzm.fzman.activity.VrBitmapActivity" android:screenOrientation="0">
+</activity>
+<activity android:name="com.fzm.fzman.activity.MyCallRecordActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.fzm.fzman.activity.MapHouseActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.fzm.fzman.activity.LocationActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.fzm.fzman.activity.AgentAuthActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.fzm.fzman.activity.MessagDetailActivity" android:screenOrientation="1">
+</activity>
+</application>
+</manifest>

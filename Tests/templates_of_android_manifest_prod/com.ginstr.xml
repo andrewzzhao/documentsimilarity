@@ -1,0 +1,194 @@
+<?xml version="1.0" ?><manifest android:versionCode="30180814" android:versionName="Babel_14082018_production_de" package="com.ginstr" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="10" android:targetSdkVersion="17">
+</uses-sdk>
+<uses-feature android:name="android.hardware.camera" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.nfc" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.bluetooth" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.location.gps" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.telephony" android:required="false">
+</uses-feature>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.CALL_PHONE">
+</uses-permission>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.RECORD_AUDIO">
+</uses-permission>
+<uses-permission android:name="android.permission.RECORD_VIDEO">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.NFC">
+</uses-permission>
+<uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT">
+</uses-permission>
+<uses-permission android:name="com.android.launcher.permission.UNINSTALL_SHORTCUT">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_LOGS">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES">
+</uses-permission>
+<uses-permission android:name="android.permission.BLUETOOTH">
+</uses-permission>
+<uses-permission android:name="android.permission.BLUETOOTH_ADMIN">
+</uses-permission>
+<uses-permission android:name="android.permission.SEND_SMS">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-permission android:name="android.permission.PACKAGE_USAGE_STATS">
+</uses-permission>
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW">
+</uses-permission>
+<application android:allowBackup="true" android:icon="@7F050002" android:label="@7F0A0000" android:largeHeap="true" android:name="com.ginstr.GinstrLauncherApplication" android:theme="@7F0B0001">
+<meta-data android:name="testMode" android:value="true">
+</meta-data>
+<meta-data android:name="ag" android:value="production_de">
+</meta-data>
+<meta-data android:name="sso" android:value="production_de">
+</meta-data>
+<activity android:icon="@7F050002" android:label="@7F0A0000" android:launchMode="2" android:name="com.ginstr.activities.MainActivityAG" android:theme="@android:01030009">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.CREATE_SHORTCUT">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x00000480" android:icon="@7F050002" android:name="com.ginstr.activities.LayoutActivity" android:theme="@android:01030009" android:windowSoftInputMode="0x00000012">
+<intent-filter>
+<action android:name="com.ginstr.GINSTR_LAUNCH_ACTION">
+</action>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+<intent-filter>
+<data android:host="sso.enaikoon.de" android:scheme="https">
+</data>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+</intent-filter>
+<intent-filter>
+<data android:host="testsso.enaikoon.de" android:scheme="https">
+</data>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+</intent-filter>
+</activity>
+<activity android:name="com.ginstr.activities.PreferencesActivity" android:theme="@7F0B0003">
+</activity>
+<activity android:name="com.ginstr.activities.LoggingActivity" android:theme="@7F0B0003">
+</activity>
+<activity android:name="com.ginstr.activities.CaptureVideo">
+</activity>
+<activity android:configChanges="0x000000A4" android:name="com.ginstr.activities.ExceptionActivity">
+</activity>
+<activity android:label="Signature Confirmation" android:name="com.ginstr.activities.CaptureSignature">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.google.zxing.client.android.CaptureActivity" android:screenOrientation="0" android:theme="@android:01030007" android:windowSoftInputMode="0x00000003">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="com.ginstr.zxing.client.android.SCAN">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:enabled="false" android:launchMode="3" android:name="com.ginstr.activities.KioskActivity" android:stateNotNeeded="true" android:theme="@android:01030009">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.HOME">
+</category>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<receiver android:name="com.ginstr.receivers.IntentBroadcastRecieverGateway">
+<intent-filter>
+<action android:name="com.ginstr.CONFIGURATION_REPLICATED">
+</action>
+<action android:name="com.ginstr.APPLICATION_INSTALLED">
+</action>
+<action android:name="com.ginstr.APPLICATION_UNINSTALLED">
+</action>
+<action android:name="com.ginstr.DB_UNAUTHORIZED">
+</action>
+<action android:name="com.ginstr.DB_INDEXING">
+</action>
+<action android:name="com.ginstr.DB_INDEXING_STOP">
+</action>
+<action android:name="com.ginstr.LAUNCHER_DISABLED">
+</action>
+<action android:name="com.ginstr.GINSTR_DISABLED">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name="com.ginstr.receivers.CommandReciever">
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name="com.ginstr.receivers.BootReceiver">
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name="com.ginstr.receivers.UpdateAppAlarmReceiver">
+</receiver>
+<service android:exported="false" android:name="com.ginstr.services.KioskService">
+</service>
+<service android:exported="false" android:name="com.ginstr.services.EmailService">
+</service>
+<meta-data android:name="HOMode" android:value="false">
+</meta-data>
+<meta-data android:name="internalViewsVersion" android:value="6">
+</meta-data>
+</application>
+</manifest>

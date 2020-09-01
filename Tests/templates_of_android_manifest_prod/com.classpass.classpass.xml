@@ -1,0 +1,536 @@
+<?xml version="1.0" ?><manifest android:compileSdkVersion="28" android:compileSdkVersionCodename="9" android:versionCode="41501004" android:versionName="4.15.1" package="com.classpass.classpass" platformBuildVersionCode="28" platformBuildVersionName="9" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="23" android:targetSdkVersion="28">
+</uses-sdk>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.FOREGROUND_SERVICE">
+</uses-permission>
+<uses-permission android:name="android.permission.BLUETOOTH">
+</uses-permission>
+<uses-permission android:name="android.permission.BLUETOOTH_ADMIN">
+</uses-permission>
+<uses-permission android:name="android.permission.BLUETOOTH_PRIVILEGED">
+</uses-permission>
+<uses-feature android:name="android.hardware.bluetooth" android:required="true">
+</uses-feature>
+<uses-feature android:name="android.hardware.bluetooth_le" android:required="true">
+</uses-feature>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-permission android:name="android.permission.USE_FINGERPRINT">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_CALENDAR">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_CALENDAR">
+</uses-permission>
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW">
+</uses-permission>
+<uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE">
+</uses-permission>
+<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE">
+</uses-permission>
+<uses-feature android:glEsVersion="0x00020000" android:required="true">
+</uses-feature>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<application android:allowBackup="true" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:fullBackupContent="@7F160000" android:icon="@7F0F0000" android:label="@7F12007E" android:largeHeap="true" android:name="com.classpass.classpass.ClasspassApplication" android:networkSecurityConfig="@7F160004" android:supportsRtl="true" android:theme="@7F1301E6">
+<meta-data android:name="com.google.android.gms.version" android:value="@7F0B0014">
+</meta-data>
+<meta-data android:name="com.google.android.geo.API_KEY" android:value="@7F1202A5">
+</meta-data>
+<meta-data android:name="com.classpass.classpass.core.glide.ClassPassGlideModule" android:value="GlideModule">
+</meta-data>
+<meta-data android:name="BITMOVIN_PLAYER_LICENSE_KEY" android:value="@7F1200AD">
+</meta-data>
+<meta-data android:name="com.google.android.gms.wallet.api.enabled" android:value="true">
+</meta-data>
+<meta-data android:name="com.rollbar.android.ACCESS_TOKEN" android:value="a965b472a6e34959b38312667bfa0699">
+</meta-data>
+<activity android:launchMode="2" android:name="com.classpass.classpass.appstart.viewcontrollers.activities.SplashScreenActivity" android:screenOrientation="1" android:theme="@7F1301F6">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:label="" android:name="com.classpass.classpass.core.permissions.viewcontrollers.PermissionsActivity" android:theme="@7F13000D">
+</activity>
+<activity android:launchMode="2" android:name="com.classpass.classpass.deeplink.viewcontrollers.activities.DeeplinkRoutingActivity" android:screenOrientation="1" android:theme="@7F1301F6">
+<intent-filter android:autoVerify="true">
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="@7F1200B6" android:scheme="https">
+</data>
+<data android:host="@7F1200B7" android:scheme="https">
+</data>
+<data android:host="@7F1200B5" android:scheme="https">
+</data>
+<data android:host="@7F1200B4" android:scheme="https">
+</data>
+<data android:host="open" android:scheme="classpass">
+</data>
+</intent-filter>
+<intent-filter android:autoVerify="true">
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="classpass.com" android:scheme="https">
+</data>
+<data android:host="develop.classpass.com" android:scheme="https">
+</data>
+</intent-filter>
+</activity>
+<activity android:label="" android:name="com.classpass.classpass.home.viewcontrollers.activities.HomeActivity" android:screenOrientation="1" android:theme="@7F1301F1">
+</activity>
+<activity android:label="@7F1201DC" android:name="com.classpass.classpass.checkout.viewcontrollers.activities.DirectDebitActivity" android:screenOrientation="1" android:theme="@7F1301FA">
+</activity>
+<activity android:label="@7F1202B8" android:name="com.classpass.classpass.checkout.viewcontrollers.activities.IDEALActivity" android:theme="@7F1301E8">
+</activity>
+<activity android:label="@7F1203C7" android:name="com.classpass.classpass.purchasebundles.viewcontrollers.activities.PurchaseBundlesActivity" android:theme="@7F1301E8">
+</activity>
+<activity android:label="@7F120436" android:name="com.classpass.classpass.checkout.viewcontrollers.activities.SofortActivity" android:theme="@7F1301E8">
+</activity>
+<activity android:label="@7F120451" android:name="com.classpass.classpass.checkout.viewcontrollers.activities.IDEALLandingCheckoutActivity" android:theme="@7F1301E8">
+</activity>
+<activity android:label="" android:name="com.classpass.classpass.playlist.viewcontrollers.activities.PlaylistMainActivity" android:screenOrientation="1" android:theme="@7F1301FA">
+</activity>
+<activity android:label="@7F12007E" android:name="com.classpass.classpass.findclass.viewcontrollers.activities.LocationSearchActivity" android:screenOrientation="1" android:theme="@7F1301FA" android:windowSoftInputMode="0x00000030">
+</activity>
+<activity android:label="@7F12007E" android:name="com.classpass.classpass.findclass.viewcontrollers.activities.NeighborhoodPickerActivity" android:screenOrientation="1" android:theme="@7F1301FA" android:windowSoftInputMode="0x00000030">
+</activity>
+<activity android:label="@7F12007E" android:name="com.classpass.classpass.upcoming.viewcontrollers.activities.UpcomingActivity" android:screenOrientation="1" android:theme="@7F1301FA">
+</activity>
+<activity android:label="@7F12007E" android:name="com.classpass.classpass.explore.views.ExploreActivity" android:screenOrientation="1" android:theme="@7F1301FA">
+</activity>
+<activity android:label="@7F12007E" android:name="com.classpass.classpass.social.viewcontrollers.activities.FriendActivity" android:theme="@7F13000B" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:label="@7F12007E" android:name="com.classpass.classpass.cpclasses.viewcontrollers.activities.FriendsAttendingListActivity" android:theme="@7F13000B" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:label="@7F12007E" android:name="com.classpass.classpass.settings.viewcontrollers.activities.PrivacySettingsActivity" android:parentActivityName="com.classpass.classpass.profile.viewcontrollers.activities.ProfileActivity" android:theme="@7F13000B" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:label="@7F12007E" android:name="com.classpass.classpass.profile.viewcontrollers.activities.ProfileActivity" android:screenOrientation="1" android:theme="@7F1301FA">
+</activity>
+<activity android:label="@7F12007E" android:name="com.classpass.classpass.social.viewcontrollers.activities.FindFriendsActivity" android:screenOrientation="1" android:theme="@7F1301FA">
+</activity>
+<activity android:label="@7F12007E" android:name="com.classpass.classpass.social.viewcontrollers.activities.FacebookAuthorizationActivity" android:screenOrientation="1" android:theme="@7F1301FA">
+</activity>
+<activity android:label="@7F12007E" android:name="com.classpass.classpass.appupdate.viewcontrollers.activities.RequiredUpdateActivity" android:theme="@7F13000B" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:label="@7F12007E" android:name="com.classpass.classpass.social.viewcontrollers.activities.AddByNameActivity" android:screenOrientation="1" android:theme="@7F1301FA">
+</activity>
+<activity android:label="@7F12007E" android:name="com.classpass.classpass.social.viewcontrollers.activities.FindFacebookFriendsActivity" android:theme="@7F13000B" android:windowSoftInputMode="0x00000030">
+</activity>
+<activity android:label="@7F12007E" android:name="com.classpass.classpass.cpclasses.viewcontrollers.activities.ClassDetailsActivity" android:screenOrientation="1" android:theme="@7F1301FA">
+</activity>
+<activity android:label="@7F12007E" android:name="com.classpass.classpass.cpclasses.views.ReserveClassActivity" android:screenOrientation="1" android:theme="@7F1301F0">
+</activity>
+<activity android:label="@7F12007E" android:name="com.classpass.classpass.reviews.viewcontrollers.activities.ReviewsActivity" android:theme="@7F13000B" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:label="@7F12007E" android:name="com.classpass.classpass.survey.viewcontrollers.activities.RatingSurveyActivity" android:theme="@7F13000B" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:label="@7F12007E" android:name="com.classpass.classpass.venues.viewcontrollers.activities.VenueDetailsLegacyActivity" android:screenOrientation="1" android:theme="@7F1301FA">
+</activity>
+<activity android:label="@7F12007E" android:name="com.classpass.classpass.venues.viewcontrollers.activities.VenueDetailsActivity" android:screenOrientation="1" android:theme="@7F1301F3">
+</activity>
+<activity android:label="@7F12007E" android:launchMode="2" android:name="com.classpass.classpass.chat.views.ChatActivity" android:screenOrientation="1" android:theme="@7F1302D0">
+</activity>
+<activity android:label="@7F12007E" android:name="com.classpass.classpass.schedules.viewcontrollers.activities.SchedulesActivity" android:screenOrientation="1" android:theme="@7F1301FA">
+</activity>
+<activity android:label="@7F12007E" android:name="com.classpass.classpass.scheduledetail.views.ScheduleDetailActivity" android:screenOrientation="1" android:theme="@7F1301F3">
+</activity>
+<activity android:exported="false" android:label="@7F12007E" android:launchMode="1" android:name="com.classpass.classpass.search.viewcontrollers.activities.KeywordSearchActivity" android:theme="@7F13000D" android:windowSoftInputMode="0x00000010">
+<intent-filter>
+<action android:name="android.intent.action.SEARCH">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+<meta-data android:name="android.app.searchable" android:resource="@7F160006">
+</meta-data>
+</activity>
+<activity android:label="@7F12007E" android:name="com.classpass.classpass.search.viewcontrollers.activities.KeywordSearchExtendedActivity" android:screenOrientation="1" android:theme="@7F1301F3" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:label="@7F12007E" android:name="com.classpass.classpass.inbuiltbrowser.viewcontrollers.activities.InbuiltBrowserActivity" android:theme="@7F13000B" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:label="@7F12007E" android:name="com.classpass.classpass.filters.FiltersActivity" android:screenOrientation="1" android:theme="@7F13000C">
+</activity>
+<activity android:label="@7F12007E" android:name="com.classpass.classpass.onboarding.activity.OnBoardingActivity" android:screenOrientation="1" android:theme="@7F1301E4">
+</activity>
+<activity android:name="com.classpass.classpass.membership.activities.MembershipActivity" android:screenOrientation="1" android:theme="@7F1301F3">
+</activity>
+<activity android:name="com.classpass.classpass.membership.activities.CancelReasonsActivity" android:screenOrientation="1" android:theme="@7F1301F3">
+</activity>
+<activity android:name="com.classpass.classpass.appstart.SignUpWalkthroughActivity" android:screenOrientation="1" android:theme="@7F1301F3">
+</activity>
+<activity android:name="com.classpass.classpass.appstart.SignUpNameCollectionActivity" android:screenOrientation="1" android:theme="@7F1301F3">
+</activity>
+<activity android:name="com.classpass.classpass.reactivation.views.ReactivationModalActivity" android:screenOrientation="1" android:theme="@7F1301F3">
+</activity>
+<activity android:name="com.classpass.classpass.reactivation.views.ReactivationSuccessModalActivity" android:screenOrientation="1" android:theme="@7F1301F3">
+</activity>
+<activity android:label="" android:name="com.classpass.classpass.friendsinvite.viewcontrollers.activities.InviteModalFriendActivity" android:theme="@7F13000B" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:name="com.classpass.classpass.oalogin.viewcontrollers.ResetPasswordActivity" android:screenOrientation="1" android:theme="@7F1301F3">
+</activity>
+<activity android:label="" android:name="com.classpass.classpass.share.viewcontrollers.activities.ShareModalActivity" android:theme="@7F13000B" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:name="com.classpass.classpass.signup.viewcontrollers.WaitlistSignUpActivity" android:screenOrientation="1" android:theme="@7F1301F3">
+</activity>
+<activity android:name="com.classpass.classpass.signup.viewcontrollers.SignUpLocationActivity" android:screenOrientation="1" android:theme="@7F1301F3">
+</activity>
+<activity android:name="com.classpass.classpass.reactivation.views.ReactivationActivity" android:screenOrientation="1" android:theme="@7F1301F3">
+</activity>
+<activity android:name="com.classpass.classpass.signup.viewcontrollers.StudiosNearMeActivity" android:screenOrientation="1" android:theme="@7F1301F3">
+</activity>
+<activity android:name="com.classpass.classpass.oalogin.viewcontrollers.OaLoginActivity" android:screenOrientation="1" android:theme="@7F1301F3">
+</activity>
+<activity android:name="com.classpass.classpass.signup.viewcontrollers.AccountCreationActivity" android:screenOrientation="1" android:theme="@7F1301F3">
+</activity>
+<activity android:name="com.classpass.classpass.achievement.viewcontrollers.activities.AchievementsListActivity" android:screenOrientation="1" android:theme="@7F1301F3">
+</activity>
+<activity android:name="com.classpass.classpass.achievement.viewcontrollers.activities.AchievementsDetailActivity" android:screenOrientation="1" android:theme="@7F1301F3">
+</activity>
+<activity android:label="" android:name="com.classpass.classpass.videos.viewcontrollers.activities.VideosMainActivity" android:screenOrientation="1" android:theme="@7F1301FA">
+</activity>
+<activity android:label="@7F12007E" android:launchMode="2" android:name="com.classpass.classpass.chromecast.viewcontrollers.activities.ExpandedControlsActivity" android:screenOrientation="1" android:theme="@7F1301EA">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+</intent-filter>
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".videos.viewcontrollers.activities.VideosMainActivity">
+</meta-data>
+</activity>
+<activity android:label="@7F12007E" android:name="com.classpass.classpass.videos.viewcontrollers.activities.VideoDetailsActivity" android:screenOrientation="1" android:theme="@7F1301FA">
+</activity>
+<activity android:label="@7F12007E" android:name="com.classpass.classpass.videos.viewcontrollers.activities.VideosListActivity" android:screenOrientation="1" android:theme="@7F1301ED">
+</activity>
+<activity android:label="@7F12007E" android:launchMode="2" android:name="com.classpass.classpass.videos.viewcontrollers.activities.VideoPlayerActivity" android:screenOrientation="6" android:theme="@7F1301F0">
+</activity>
+<activity android:label="@7F12007E" android:name="com.classpass.classpass.videos.live.viewcontrollers.activities.LiveVideoSetUpActivity" android:theme="@7F13000B" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:label="" android:launchMode="2" android:name="com.classpass.classpass.videos.live.viewcontrollers.activities.LiveClassActivity" android:theme="@7F1301FA" android:windowSoftInputMode="0x00000012">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+</intent-filter>
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".videos.viewcontrollers.activities.VideosMainActivity">
+</meta-data>
+</activity>
+<activity android:label="" android:name="com.classpass.classpass.videos.viewcontrollers.activities.CastControllerActivity" android:theme="@7F13000D">
+</activity>
+<activity android:label="@7F12007E" android:name="com.classpass.classpass.photos.viewcontrollers.activities.EditPhotoActivity" android:screenOrientation="1" android:theme="@7F1301F8">
+</activity>
+<activity android:name="com.classpass.classpass.reservations.viewcontrollers.activities.ConfirmTopUpActivity" android:screenOrientation="1" android:theme="@7F13000C">
+</activity>
+<activity android:name="com.classpass.classpass.termsandconditions.viewcontrollers.activities.TermsAndConditionsActivity" android:theme="@7F13000B" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:name="com.classpass.classpass.settings.viewcontrollers.activities.SettingsAccountActivity" android:screenOrientation="1" android:theme="@7F1301F3" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:name="com.classpass.classpass.settingsV2.viewcontrollers.SettingsV2Activity" android:screenOrientation="1" android:theme="@7F1301F3" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:name="com.classpass.classpass.checkout.viewcontrollers.activities.CreditCardPaymentActivity" android:screenOrientation="1" android:theme="@7F1301F3">
+</activity>
+<activity android:name="com.classpass.classpass.checkout.viewcontrollers.activities.TryClassPassActivity" android:screenOrientation="1" android:theme="@7F1301F3">
+</activity>
+<activity android:name="com.classpass.classpass.checkout.viewcontrollers.activities.CheckoutActivity" android:screenOrientation="1" android:theme="@7F1301F3">
+</activity>
+<activity android:name="com.classpass.classpass.checkout.viewcontrollers.activities.PhoneVerificationActivity" android:screenOrientation="1" android:theme="@7F1301F3">
+</activity>
+<activity android:name="com.classpass.classpass.checkout.viewcontrollers.activities.PhoneVerificationCodeActivity" android:screenOrientation="1" android:theme="@7F1301F3">
+</activity>
+<activity android:name="com.classpass.classpass.venuestore.views.VenueStoreActivity" android:screenOrientation="1" android:theme="@7F1301F3">
+</activity>
+<activity android:configChanges="0x000005B0" android:label="@7F12007E" android:name="com.facebook.FacebookActivity" android:theme="@android:01030010">
+</activity>
+<activity android:exported="true" android:name="com.facebook.CustomTabActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="@7F120238">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.classpass.classpass.membership.activities.NpsSurveyActivity" android:screenOrientation="1" android:theme="@7F1301F3">
+</activity>
+<activity android:name="com.classpass.classpass.membership.activities.CancelStepActivity" android:screenOrientation="1" android:theme="@7F1301F3">
+</activity>
+<provider android:authorities="com.classpass.classpass.fileprovider" android:exported="false" android:grantUriPermissions="true" android:name="androidx.core.content.FileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F160002">
+</meta-data>
+</provider>
+<meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@7F120232">
+</meta-data>
+<meta-data android:name="io.fabric.ApiKey" android:value="4c4e04e6ff9abb37b9e019c7986877136787eebf">
+</meta-data>
+<receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.analytics.AnalyticsReceiver">
+<intent-filter>
+<action android:name="com.google.android.gms.analytics.ANALYTICS_DISPATCH">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:enabled="true" android:name="com.classpass.classpass.share.receivers.ShareModalReceiver">
+</receiver>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.analytics.AnalyticsService">
+</service>
+<service android:name="com.classpass.classpass.push.ClassPassFirebaseMessagingService">
+<intent-filter>
+<action android:name="com.google.firebase.MESSAGING_EVENT">
+</action>
+</intent-filter>
+</service>
+<service android:name="com.classpass.classpass.push.ClassPassFirebaseInstanceIdService">
+<intent-filter>
+<action android:name="com.google.firebase.INSTANCE_ID_EVENT">
+</action>
+</intent-filter>
+</service>
+<meta-data android:name="com.google.firebase.messaging.default_notification_icon" android:resource="@7F0801A0">
+</meta-data>
+<meta-data android:name="com.google.firebase.messaging.default_notification_color" android:resource="@7F06002E">
+</meta-data>
+<receiver android:exported="true" android:name="com.classpass.classpass.analytics.InstallReferrerReceiver" android:permission="android.permission.INSTALL_PACKAGES">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+<service android:enabled="true" android:name="com.classpass.classpass.bluetooth.connection.BluetoothLeService">
+</service>
+<meta-data android:name="io.branch.sdk.BranchKey" android:value="key_live_phe4Yf3W3FgoUKMeZTbBRkaevveeJq6e">
+</meta-data>
+<meta-data android:name="io.branch.sdk.BranchKey.test" android:value="key_test_kam80g4W5wmmGRKh6HaMUhfktxehSrXu">
+</meta-data>
+<meta-data android:name="io.branch.sdk.TestMode" android:value="@7F050003">
+</meta-data>
+<meta-data android:name="com.google.android.gms.cast.framework.OPTIONS_PROVIDER_CLASS_NAME" android:value="com.classpass.classpass.chromecast.CastOptionsProvider">
+</meta-data>
+<uses-library android:name="org.apache.http.legacy" android:required="false">
+</uses-library>
+<service android:name="com.bitmovin.player.offline.service.BitmovinDownloadService">
+</service>
+<service android:exported="true" android:name="com.google.android.exoplayer2.scheduler.PlatformScheduler$PlatformSchedulerService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<receiver android:exported="true" android:name="com.adjust.sdk.AdjustReferrerReceiver" android:permission="android.permission.INSTALL_PACKAGES">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+<activity android:exported="false" android:launchMode="2" android:name="com.gettipsi.stripe.OpenBrowserActivity" android:theme="@android:01030010">
+</activity>
+<activity android:exported="true" android:launchMode="2" android:name="com.gettipsi.stripe.RedirectUriReceiver" android:theme="@android:01030011">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="example">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.stripe.android.view.AddSourceActivity" android:theme="@7F130163" android:windowSoftInputMode="0x00000004">
+</activity>
+<activity android:name="com.stripe.android.view.PaymentMethodsActivity" android:theme="@7F130163">
+</activity>
+<activity android:name="com.stripe.android.view.PaymentFlowActivity" android:theme="@7F130163">
+</activity>
+<receiver android:exported="false" android:name="com.google.android.gms.cast.framework.media.MediaIntentReceiver">
+</receiver>
+<service android:exported="false" android:name="com.google.android.gms.cast.framework.media.MediaNotificationService">
+</service>
+<service android:exported="false" android:name="com.google.android.gms.cast.framework.ReconnectionService">
+</service>
+<service android:exported="false" android:name="com.zopim.android.sdk.widget.ChatWidgetService" android:stopWithTask="true">
+</service>
+<activity android:label="@7F120138" android:name="com.zopim.android.sdk.prechat.ZopimChatActivity" android:theme="@7F1302D0" android:windowSoftInputMode="0x00000011">
+<intent-filter android:priority="-1000">
+<action android:name="zopim.action.RESUME_CHAT">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:label="@7F1203CD" android:name="com.zopim.android.sdk.chatlog.ZopimCommentActivity" android:theme="@7F1302D0" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.facebook.CustomTabMainActivity">
+</activity>
+<service android:exported="false" android:name="com.zopim.android.sdk.api.ChatService">
+</service>
+<provider android:authorities="com.classpass.classpass.belvedere.attachments" android:exported="false" android:grantUriPermissions="true" android:name="com.zendesk.belvedere.BelvedereFileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F160001">
+</meta-data>
+</provider>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.analytics.AnalyticsJobService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<service android:exported="false" android:name="com.google.firebase.messaging.FirebaseMessagingService">
+<intent-filter android:priority="-500">
+<action android:name="com.google.firebase.MESSAGING_EVENT">
+</action>
+</intent-filter>
+</service>
+<service android:exported="false" android:name="com.google.firebase.components.ComponentDiscoveryService">
+<meta-data android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar" android:value="com.google.firebase.components.ComponentRegistrar">
+</meta-data>
+<meta-data android:name="com.google.firebase.components:com.google.firebase.iid.Registrar" android:value="com.google.firebase.components.ComponentRegistrar">
+</meta-data>
+</service>
+<receiver android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+</intent-filter>
+</receiver>
+<activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:01030010">
+</activity>
+<receiver android:enabled="true" android:exported="true" android:name="com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver" android:permission="android.permission.INSTALL_PACKAGES">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+<provider android:authorities="com.classpass.classpass.workmanager-init" android:directBootAware="false" android:exported="false" android:multiprocess="true" android:name="androidx.work.impl.WorkManagerInitializer">
+</provider>
+<service android:directBootAware="false" android:enabled="@7F050006" android:exported="false" android:name="androidx.work.impl.background.systemalarm.SystemAlarmService">
+</service>
+<service android:directBootAware="false" android:enabled="@7F050007" android:exported="true" android:name="androidx.work.impl.background.systemjob.SystemJobService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<receiver android:directBootAware="false" android:enabled="true" android:exported="false" android:name="androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver">
+</receiver>
+<receiver android:directBootAware="false" android:enabled="false" android:exported="false" android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryChargingProxy">
+<intent-filter>
+<action android:name="android.intent.action.ACTION_POWER_CONNECTED">
+</action>
+<action android:name="android.intent.action.ACTION_POWER_DISCONNECTED">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:directBootAware="false" android:enabled="false" android:exported="false" android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryNotLowProxy">
+<intent-filter>
+<action android:name="android.intent.action.BATTERY_OKAY">
+</action>
+<action android:name="android.intent.action.BATTERY_LOW">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:directBootAware="false" android:enabled="false" android:exported="false" android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$StorageNotLowProxy">
+<intent-filter>
+<action android:name="android.intent.action.DEVICE_STORAGE_LOW">
+</action>
+<action android:name="android.intent.action.DEVICE_STORAGE_OK">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:directBootAware="false" android:enabled="false" android:exported="false" android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$NetworkStateProxy">
+<intent-filter>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:directBootAware="false" android:enabled="false" android:exported="false" android:name="androidx.work.impl.background.systemalarm.RescheduleReceiver">
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+<action android:name="android.intent.action.TIME_SET">
+</action>
+<action android:name="android.intent.action.TIMEZONE_CHANGED">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:directBootAware="false" android:enabled="@7F050006" android:exported="false" android:name="androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver">
+<intent-filter>
+<action android:name="androidx.work.impl.background.systemalarm.UpdateProxies">
+</action>
+</intent-filter>
+</receiver>
+<provider android:authorities="com.classpass.classpass.lifecycle-process" android:exported="false" android:multiprocess="true" android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer">
+</provider>
+<service android:exported="false" android:name="com.evernote.android.job.v21.PlatformJobService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<service android:exported="false" android:name="com.evernote.android.job.v14.PlatformAlarmService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<service android:exported="false" android:name="com.evernote.android.job.v14.PlatformAlarmServiceExact">
+</service>
+<receiver android:exported="false" android:name="com.evernote.android.job.v14.PlatformAlarmReceiver">
+<intent-filter>
+<action android:name="com.evernote.android.job.v14.RUN_JOB">
+</action>
+<action android:name="net.vrallev.android.job.v14.RUN_JOB">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:exported="false" android:name="com.evernote.android.job.JobBootReceiver">
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+<action android:name="android.intent.action.QUICKBOOT_POWERON">
+</action>
+<action android:name="com.htc.intent.action.QUICKBOOT_POWERON">
+</action>
+<action android:name="android.intent.action.MY_PACKAGE_REPLACED">
+</action>
+</intent-filter>
+</receiver>
+<service android:enabled="false" android:exported="true" android:name="com.evernote.android.job.gcm.PlatformGcmService" android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE">
+<intent-filter>
+<action android:name="com.google.android.gms.gcm.ACTION_TASK_READY">
+</action>
+</intent-filter>
+</service>
+<service android:exported="false" android:name="com.evernote.android.job.JobRescheduleService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<provider android:authorities="com.classpass.classpass.firebaseinitprovider" android:exported="false" android:initOrder="100" android:name="com.google.firebase.provider.FirebaseInitProvider">
+</provider>
+<receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementReceiver">
+</receiver>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementService">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementJobService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<provider android:authorities="com.classpass.classpass.MarketingInitProvider" android:exported="false" android:name="com.facebook.marketing.internal.MarketingInitProvider">
+</provider>
+<provider android:authorities="com.classpass.classpass.FacebookInitProvider" android:exported="false" android:name="com.facebook.internal.FacebookInitProvider">
+</provider>
+<receiver android:exported="false" android:name="com.facebook.CurrentAccessTokenExpirationBroadcastReceiver">
+<intent-filter>
+<action android:name="com.facebook.sdk.ACTION_CURRENT_ACCESS_TOKEN_CHANGED">
+</action>
+</intent-filter>
+</receiver>
+<service android:exported="false" android:name="androidx.room.MultiInstanceInvalidationService">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.optimizely.ab.android.datafile_handler.DatafileService">
+</service>
+<service android:exported="false" android:name="com.optimizely.ab.android.event_handler.EventIntentService">
+</service>
+<service android:name="com.optimizely.ab.android.shared.JobWorkService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<service android:name="com.optimizely.ab.android.shared.ScheduledJobService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+</application>
+</manifest>

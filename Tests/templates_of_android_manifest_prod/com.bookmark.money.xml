@@ -1,0 +1,808 @@
+<?xml version="1.0" ?><manifest android:compileSdkVersion="28" android:compileSdkVersionCodename="9" android:installLocation="0" android:versionCode="1553" android:versionName="4.0.11.2020032308" package="com.bookmark.money" platformBuildVersionCode="28" platformBuildVersionName="9" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="21" android:targetSdkVersion="28">
+</uses-sdk>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_CONTACTS">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT">
+</uses-permission>
+<uses-permission android:name="com.android.launcher.permission.UNINSTALL_SHORTCUT">
+</uses-permission>
+<uses-permission android:name="com.android.vending.BILLING">
+</uses-permission>
+<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE">
+</uses-permission>
+<uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES">
+</uses-permission>
+<uses-permission android:name="android.permission.USE_FINGERPRINT">
+</uses-permission>
+<uses-permission android:name="android.permission.FOREGROUND_SERVICE">
+</uses-permission>
+<uses-feature android:glEsVersion="0x00020000" android:required="true">
+</uses-feature>
+<supports-screens android:anyDensity="true" android:largeScreens="true" android:normalScreens="true" android:resizeable="true" android:smallScreens="true" android:xlargeScreens="true">
+</supports-screens>
+<uses-feature android:name="android.hardware.camera" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.location" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.location.network" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.location.gps" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.wifi" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.screen.landscape" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.touchscreen" android:required="false">
+</uses-feature>
+<uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE">
+</uses-permission>
+<application android:allowBackup="false" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:enabled="true" android:icon="@7F0E0002" android:label="@7F1100A1" android:largeHeap="true" android:name="com.zoostudio.moneylover.MoneyApplication" android:supportsRtl="true" android:theme="@7F12025D">
+<uses-library android:name="org.apache.http.legacy" android:required="false">
+</uses-library>
+<meta-data android:name="android.max_aspect" android:value="2:1">
+</meta-data>
+<meta-data android:name="com.google.firebase.messaging.default_notification_icon" android:resource="@7F080349">
+</meta-data>
+<activity android:configChanges="0x00000020" android:name="com.zoostudio.moneylover.authentication.ui.ActivityAuthenticate" android:screenOrientation="14">
+</activity>
+<activity android:configChanges="0x00000020" android:name="com.zoostudio.moneylover.authentication.ui.ActivityAuthenticateV4" android:screenOrientation="14" android:taskAffinity=".ActivityAuthenticateV4" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:name="com.zoostudio.moneylover.widget.ActivityPickerWalletForWidget" android:screenOrientation="14">
+<intent-filter>
+<action android:name="android.appwidget.action.APPWIDGET_CONFIGURE">
+</action>
+</intent-filter>
+</activity>
+<activity android:name="com.zoostudio.moneylover.ui.view.ActivityPickerWallet" android:screenOrientation="14">
+</activity>
+<activity android:name="com.zoostudio.moneylover.ui.view.ActivityPickerLocation" android:screenOrientation="14">
+</activity>
+<activity android:name="com.zoostudio.moneylover.ui.view.ActivityPickerAmount" android:screenOrientation="14">
+</activity>
+<activity android:name="com.zoostudio.moneylover.ui.ActivityEditRelatedTransaction" android:screenOrientation="14">
+</activity>
+<activity android:launchMode="2" android:name="com.zoostudio.moneylover.ui.ActivityEditTransaction" android:parentActivityName="com.zoostudio.moneylover.main.MainActivity" android:screenOrientation="14">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.zoostudio.moneylover.main.MainActivity">
+</meta-data>
+</activity>
+<activity android:launchMode="2" android:name="com.zoostudio.moneylover.ui.ActivityEditWallet" android:screenOrientation="14">
+</activity>
+<activity android:launchMode="2" android:name="com.zoostudio.moneylover.ui.ActivityEditCredit" android:screenOrientation="14">
+</activity>
+<activity android:name="com.zoostudio.moneylover.ui.ActivityInputInterest" android:screenOrientation="14">
+</activity>
+<activity android:name="com.zoostudio.moneylover.ui.ActivityEditCategory" android:screenOrientation="14">
+</activity>
+<activity android:name="com.zoostudio.moneylover.ui.ActivityEditSaving" android:screenOrientation="14">
+</activity>
+<activity android:launchMode="2" android:name="com.zoostudio.moneylover.ui.activity.ActivityEditEvent" android:screenOrientation="14">
+</activity>
+<activity android:launchMode="2" android:name="com.zoostudio.moneylover.ui.activity.ActivityEditRecurringTransaction" android:screenOrientation="14">
+</activity>
+<activity android:launchMode="2" android:name="com.zoostudio.moneylover.ui.ActivitySplash" android:screenOrientation="14" android:taskAffinity="com.bookmark.money" android:theme="@7F1201A3">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<action android:name="com.zoostudio.intent.action.RUN_SHORTCUT_WALLET">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+<meta-data android:name="android.app.shortcuts" android:resource="@7F150007">
+</meta-data>
+</activity>
+<activity android:name="com.zoostudio.moneylover.ui.ActivityImageShow" android:screenOrientation="14" android:theme="@7F1201A5">
+</activity>
+<activity android:configChanges="0x000001A0" android:name="com.zoostudio.moneylover.ui.ActivityCompareBuy" android:screenOrientation="14">
+</activity>
+<activity android:configChanges="0x000001A0" android:name="com.zoostudio.moneylover.ui.ActivityEnterCode" android:screenOrientation="14">
+</activity>
+<activity android:configChanges="0x000001A0" android:name="com.zoostudio.moneylover.ui.ActivityForUserVietNam" android:screenOrientation="14">
+</activity>
+<activity android:configChanges="0x00000004" android:launchMode="2" android:name="com.zoostudio.moneylover.ui.ActivityBase" android:screenOrientation="14">
+<intent-filter>
+<action android:name="com.zoostudio.intent.action.RUN_SHORTCUT">
+</action>
+<action android:name="com.zoostudio.intent.action.RUN_SHORTCUT_WALLET">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x00000004" android:name="com.zoostudio.moneylover.ui.ActivityTransListSubTransaction" android:screenOrientation="14">
+</activity>
+<activity android:configChanges="0x00000004" android:name="com.zoostudio.moneylover.ui.ActivityTransListDebtLoan" android:screenOrientation="14">
+</activity>
+<activity android:configChanges="0x00000004" android:name="com.zoostudio.moneylover.modules.ail.ui.ActivityLazyCamera" android:screenOrientation="14">
+</activity>
+<activity android:configChanges="0x00000004" android:name="com.zoostudio.moneylover.modules.ail.ui.ActivityAilRemovePhoto" android:screenOrientation="14">
+</activity>
+<activity android:configChanges="0x00000080" android:name="com.zoostudio.moneylover.modules.ail.ui.ActivityAilViewPhoto" android:screenOrientation="14" android:theme="@7F120197">
+</activity>
+<activity android:configChanges="0x00000004" android:name="com.zoostudio.moneylover.modules.ail.ui.ActivityRemoveNotification" android:screenOrientation="14">
+</activity>
+<activity android:configChanges="0x00000004" android:name="com.zoostudio.moneylover.ui.ActivityPreferences" android:screenOrientation="14">
+</activity>
+<activity android:configChanges="0x00000004" android:name="com.zoostudio.moneylover.ui.ActivityTransListSearch" android:screenOrientation="14">
+</activity>
+<activity android:name="com.zoostudio.moneylover.ui.ActivityTransListExcludedReport" android:screenOrientation="14">
+</activity>
+<activity android:configChanges="0x00000004" android:name="com.zoostudio.moneylover.ui.ActivityTransListBudget" android:screenOrientation="14">
+</activity>
+<activity android:configChanges="0x00000004" android:name="com.zoostudio.moneylover.ui.activity.ActivityContact" android:screenOrientation="14">
+</activity>
+<activity android:configChanges="0x00000004" android:exported="true" android:name="com.zoostudio.moneylover.ui.ActivityInterestRate" android:screenOrientation="14">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x00000FB0" android:exported="false" android:name="com.google.android.gms.ads.AdActivity" android:screenOrientation="14" android:theme="@android:0103000F">
+</activity>
+<activity android:configChanges="0x00000004" android:name="com.zoostudio.moneylover.ui.ActivityTransListCampaign" android:screenOrientation="14">
+</activity>
+<activity android:configChanges="0x00000080" android:name="com.zoostudio.moneylover.ui.ActivityListFileBackup" android:screenOrientation="14">
+</activity>
+<activity android:name="com.zoostudio.moneylover.ui.ActivityDontShowRateAgain" android:screenOrientation="14">
+</activity>
+<activity android:name="com.zoostudio.moneylover.ui.ActivityChooseLanguage" android:screenOrientation="14">
+</activity>
+<activity android:name="com.zoostudio.moneylover.ui.ActivityTools" android:screenOrientation="14">
+</activity>
+<activity android:configChanges="0x00000004" android:name="com.zoostudio.moneylover.ui.ActivitySearchMultiPanel" android:screenOrientation="14" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:configChanges="0x00000004" android:name="com.zoostudio.moneylover.ui.ActivityWalkthrough" android:screenOrientation="14">
+</activity>
+<activity android:configChanges="0x00000004" android:name="com.zoostudio.moneylover.ui.ActivityWalkthroughBudget" android:screenOrientation="14">
+</activity>
+<activity android:configChanges="0x00000004" android:name="com.zoostudio.moneylover.ui.ActivityWalkthroughBill" android:screenOrientation="14">
+</activity>
+<activity android:configChanges="0x00000004" android:name="com.zoostudio.moneylover.ui.ActivityWalkthroughSaving" android:screenOrientation="14">
+</activity>
+<activity android:configChanges="0x00000004" android:name="com.zoostudio.moneylover.ui.ActivityWalkthroughEvent" android:screenOrientation="14">
+</activity>
+<activity android:configChanges="0x00000004" android:name="com.zoostudio.moneylover.ui.ActivityAbout" android:screenOrientation="14">
+</activity>
+<activity android:configChanges="0x00000004" android:name="com.zoostudio.moneylover.ui.ActivityBackupData" android:screenOrientation="14">
+</activity>
+<activity android:configChanges="0x00000004" android:name="com.zoostudio.moneylover.ui.ActivityQuickAddManager" android:screenOrientation="14">
+</activity>
+<activity android:name="com.zoostudio.moneylover.ui.ActivityDialogQuickAdd" android:screenOrientation="14">
+</activity>
+<activity android:name="com.zoostudio.moneylover.ui.ActivityCashbookOverviewFull" android:screenOrientation="14">
+</activity>
+<activity android:configChanges="0x00000080" android:name="com.zoostudio.moneylover.ui.ActivitySpentMap" android:screenOrientation="14">
+</activity>
+<activity android:name="com.zoostudio.moneylover.ui.view.ActivitySavingDeposit" android:screenOrientation="14">
+</activity>
+<activity android:name="com.zoostudio.moneylover.ui.ActivityCashback" android:screenOrientation="14" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:name="com.zoostudio.moneylover.ui.view.ActivitySavingWithdraw" android:screenOrientation="14">
+</activity>
+<activity android:configChanges="0x00000080" android:name="com.zoostudio.moneylover.ui.ActivityCloseAddItLate" android:screenOrientation="14" android:theme="@7F1201A5">
+</activity>
+<activity android:configChanges="0x00000080" android:name="com.zoostudio.moneylover.ui.ActivityDownloadGiftIconDialog" android:screenOrientation="14" android:theme="@7F120274">
+</activity>
+<activity android:name="com.zoostudio.moneylover.ui.view.ActivityPickerCurrency" android:screenOrientation="14">
+</activity>
+<activity android:name="com.zoostudio.moneylover.ui.ActivityTourLinkedWallet" android:screenOrientation="14">
+</activity>
+<activity android:name="com.zoostudio.moneylover.ui.ActivityLWEP" android:screenOrientation="14">
+</activity>
+<activity android:name="com.zoostudio.moneylover.ui.ActivitySync" android:screenOrientation="14">
+</activity>
+<activity android:name="com.zoostudio.moneylover.ui.ActivityLogout" android:screenOrientation="14">
+</activity>
+<activity android:name="com.zoostudio.moneylover.ui.ActivityReadMoreNotification" android:screenOrientation="14">
+</activity>
+<activity android:name="com.zoostudio.moneylover.ui.activity.ActivitySelectPeopleForCate" android:screenOrientation="14">
+</activity>
+<activity android:name="com.zoostudio.moneylover.ui.fragment.ActivityDetailEvent" android:screenOrientation="14">
+</activity>
+<activity android:name="com.zoostudio.moneylover.ui.activity.ActivityCategoryManager" android:screenOrientation="14">
+</activity>
+<activity android:name="com.zoostudio.moneylover.ui.activity.ActivityDetailCategory" android:screenOrientation="14">
+</activity>
+<activity android:name="com.zoostudio.moneylover.billing.ActivityStoreV2" android:screenOrientation="14">
+</activity>
+<activity android:name="com.zoostudio.moneylover.ui.activity.ActivityShortcutScanReceipt" android:screenOrientation="14">
+</activity>
+<activity android:name="com.zoostudio.moneylover.ui.activity.ActivityShortcutShowReport" android:screenOrientation="14">
+</activity>
+<activity android:name="com.zoostudio.moneylover.ui.activity.ActivityDevOptions" android:screenOrientation="14">
+</activity>
+<activity android:name="com.zoostudio.moneylover.linkedWallet.ui.activitys.ActivityFinsifySearch" android:screenOrientation="14">
+</activity>
+<activity android:name="com.zoostudio.moneylover.ui.activity.ActivityFinsifyReconnect" android:screenOrientation="14">
+</activity>
+<activity android:configChanges="0x00000004" android:name="com.zoostudio.moneylover.ui.activity.ActivityNotificationCenter" android:screenOrientation="14" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.zoostudio.moneylover.billing.premium.ActivityPremier" android:screenOrientation="14">
+</activity>
+<activity android:name="com.zoostudio.moneylover.ui.activity.ActivityAccountInfo" android:screenOrientation="14">
+</activity>
+<activity android:name="com.zoostudio.moneylover.ui.activity.ActivityRedirectionNotification" android:screenOrientation="14">
+</activity>
+<activity android:configChanges="0x000005B0" android:label="@7F1100A1" android:name="com.facebook.FacebookActivity" android:screenOrientation="14" android:theme="@android:01030010">
+</activity>
+<activity android:exported="true" android:name="com.facebook.CustomTabActivity" android:screenOrientation="14">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="@7F110308">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.zoostudio.moneylover.ui.activity.ActivityShortcutAddTransaction" android:screenOrientation="14">
+</activity>
+<meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@7F110309">
+</meta-data>
+<activity android:configChanges="0x00000004" android:exported="true" android:name="com.zoostudio.moneylover.ui.ActivityTransListBill" android:screenOrientation="14">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:label="@7F110388" android:name="com.zoostudio.moneylover.help.activity.ActivityMainHelp" android:parentActivityName="com.zoostudio.moneylover.ui.ActivityAbout" android:screenOrientation="14">
+</activity>
+<activity android:label="@7F110377" android:name="com.zoostudio.moneylover.help.activity.ActivityCreateNewQuestion" android:screenOrientation="14">
+</activity>
+<activity android:label="@7F110399" android:name="com.zoostudio.moneylover.help.activity.ActivityHelpDetail" android:screenOrientation="14">
+</activity>
+<activity android:name="com.zoostudio.moneylover.help.activity.ActivitySearchHelp" android:screenOrientation="14">
+</activity>
+<activity android:configChanges="0x00000030" android:exported="true" android:label="@7F110377" android:name="com.zoostudio.moneylover.help.activity.ActivityChatHelp" android:screenOrientation="14">
+</activity>
+<activity android:label="@7F110391" android:name="com.zoostudio.moneylover.help.activity.ActivityIssue" android:screenOrientation="14">
+</activity>
+<activity android:name="com.zoostudio.moneylover.ui.activity.ActivitySearchSimple" android:screenOrientation="14">
+</activity>
+<activity android:name="com.zoostudio.moneylover.ui.ActivityPickerIcon" android:screenOrientation="14">
+</activity>
+<meta-data android:name="com.google.android.gms.version" android:value="@7F0A0010">
+</meta-data>
+<meta-data android:name="com.crashlytics.ApiKey" android:value="6cfcd20e93f095e56e81420cae248ef4c7ec4f47">
+</meta-data>
+<activity android:exported="true" android:name="com.zoostudio.moneylover.ui.ActivityPickerWalletForDashClock" android:screenOrientation="14">
+</activity>
+<activity android:name="com.zoostudio.moneylover.security.ui.ActivitySecurityPINNew" android:screenOrientation="14">
+</activity>
+<activity android:name="com.zoostudio.moneylover.security.ui.ActivitySecurityFingerprints" android:screenOrientation="14">
+</activity>
+<activity android:name="com.zoostudio.moneylover.ui.ActivitySecurityManager" android:screenOrientation="14">
+</activity>
+<activity android:name="com.zoostudio.moneylover.ui.ActivityCloudManager" android:screenOrientation="14">
+</activity>
+<activity android:name="com.zoostudio.moneylover.ui.ActivityShareWallet" android:screenOrientation="14" android:windowSoftInputMode="0x00000013">
+</activity>
+<activity android:exported="true" android:name="com.zoostudio.moneylover.ui.ActivityDialogATMFinder" android:screenOrientation="14" android:theme="@7F1201A5">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="true" android:name="com.zoostudio.moneylover.ui.ActivityDialogBankFinder" android:screenOrientation="14" android:theme="@7F1201A5">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:name="com.zoostudio.moneylover.ui.ActivityShareWalletPending" android:screenOrientation="14">
+</activity>
+<activity android:name="com.zoostudio.moneylover.ui.ActivityUpdateApplication" android:screenOrientation="14">
+</activity>
+<activity android:name="com.zoostudio.moneylover.ui.ActivityMergeCategory" android:screenOrientation="14">
+</activity>
+<activity android:name="com.zoostudio.moneylover.ui.ActivityCopyTransaction" android:screenOrientation="14">
+</activity>
+<activity android:name="com.zoostudio.moneylover.ui.ActivityShareTransaction" android:screenOrientation="14" android:theme="@7F120274">
+</activity>
+<activity android:name="com.zoostudio.moneylover.ui.ActivitySubCategoryOverview" android:screenOrientation="14">
+</activity>
+<activity android:name="com.zoostudio.moneylover.ui.ActivityUserSubOverview" android:screenOrientation="14">
+</activity>
+<activity android:name="com.zoostudio.moneylover.ui.ActivityTransactionsUserSubOverView" android:screenOrientation="14">
+</activity>
+<activity android:name="com.zoostudio.moneylover.ui.view.ActivityDonorsInfo" android:screenOrientation="14" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:name="com.zoostudio.moneylover.authentication.ui.ActivityChangePassword" android:screenOrientation="14" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.zoostudio.moneylover.ui.ActivityCheckServer" android:screenOrientation="14">
+</activity>
+<activity android:launchMode="2" android:name="com.zoostudio.moneylover.linkedWallet.ui.activitys.ActivityLinkRemoteAccount" android:screenOrientation="14">
+<intent-filter android:autoVerify="true">
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="connect" android:scheme="fs-moneylover">
+</data>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.zoostudio.moneylover.ui.ActivityWalletManager" android:screenOrientation="14">
+</activity>
+<activity android:name="com.zoostudio.moneylover.ui.ActivityWalletSwitcher" android:screenOrientation="14">
+</activity>
+<activity android:name="com.zoostudio.moneylover.ui.activity.ActivityEditBudget" android:screenOrientation="14">
+</activity>
+<activity android:name="com.zoostudio.moneylover.ui.activity.ActivityPickTimeRange" android:screenOrientation="14">
+</activity>
+<activity android:launchMode="2" android:name="com.zoostudio.moneylover.ui.activity.ActivityEditBill" android:screenOrientation="14">
+</activity>
+<activity android:name="com.zoostudio.moneylover.ui.ActivityDetailTransaction" android:screenOrientation="14">
+</activity>
+<activity android:name="com.zoostudio.moneylover.ui.activity.ActivityScanReceipt" android:screenOrientation="14">
+</activity>
+<activity android:name="com.zoostudio.moneylover.ui.activity.ActivityBilling" android:screenOrientation="14" android:theme="@7F1201A5">
+</activity>
+<activity android:name="com.zoostudio.moneylover.ui.activity.ActivityWelcomeV4" android:screenOrientation="14" android:theme="@7F12019F">
+</activity>
+<activity android:name="com.zoostudio.moneylover.authentication.ui.ActivityForgotPassword" android:screenOrientation="14" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.zoostudio.moneylover.ui.activity.ActivityListDevice" android:screenOrientation="14">
+</activity>
+<meta-data android:name="com.google.android.geo.API_KEY" android:value="AIzaSyBdLxbnMjXleuUtGbu6tkMc5SHY7W_vHYw">
+</meta-data>
+<meta-data android:name="App-secret" android:value="WURAEOJieIwOdg2-VhCIBOvKePzudp2JTejTojZP100">
+</meta-data>
+<meta-data android:name="Client-Id" android:value="2G_1atnpgmtfeA">
+</meta-data>
+<service android:exported="false" android:name="com.zoostudio.moneylover.task.PushReceiptTask">
+</service>
+<service android:name="com.zoostudio.moneylover.sync.services.SyncService">
+</service>
+<service android:label="moneylover Autofill Service" android:name="com.zoostudio.moneylover.utils.AutoFillService" android:permission="android.permission.BIND_AUTOFILL_SERVICE">
+<intent-filter>
+<action android:name="android.service.autofill.AutofillService">
+</action>
+</intent-filter>
+</service>
+<service android:icon="@7F0802C8" android:label="@7F1100A1" android:name="com.zoostudio.moneylover.service.DashClockExtensionService" android:permission="com.google.android.apps.dashclock.permission.READ_EXTENSION_DATA">
+<intent-filter>
+<action android:name="com.google.android.apps.dashclock.Extension">
+</action>
+</intent-filter>
+<meta-data android:name="protocolVersion" android:value="2">
+</meta-data>
+<meta-data android:name="worldReadable" android:value="true">
+</meta-data>
+<meta-data android:name="description" android:value="@7F1100A1">
+</meta-data>
+<meta-data android:name="settingsActivity" android:value="com.zoostudio.moneylover.ui.ActivityDashClockSelectAccount">
+</meta-data>
+</service>
+<service android:exported="false" android:name="com.bookmark.money.fcm.MLFirebaseMessagingService">
+<intent-filter>
+<action android:name="com.google.firebase.MESSAGING_EVENT">
+</action>
+</intent-filter>
+</service>
+<service android:enabled="true" android:name="com.zoostudio.moneylover.location.GetLocationService">
+</service>
+<service android:name="com.zoostudio.moneylover.service.MoneyDownloadService">
+</service>
+<receiver android:enabled="true" android:exported="true" android:name="com.zoostudio.moneylover.ui.ActivityReceiverSmsBanking">
+<intent-filter>
+<action android:name="com.zoostudio.moneylover.SMS_BANKING_RECEIVER">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:exported="false" android:name="com.zoostudio.moneylover.broadcast.BroadcastSyncTimeout">
+<intent-filter>
+<action android:name="com.zoostudio.moneylover.db.sync.MoneyCloud.TIMEOUT_ERROR">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name="com.zoostudio.moneylover.broadcast.BroadcastSubsExpired">
+</receiver>
+<receiver android:name="com.zoostudio.moneylover.ui.ActivitySendListWalletToSMSDetector">
+<intent-filter>
+<action android:name="com.zoostudio.moneylover.GET_LIST_RECEIVER">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:label="@7F11007C" android:name="com.zoostudio.moneylover.widget.AddTransactionWidget">
+<intent-filter>
+<action android:name="android.appwidget.action.APPWIDGET_UPDATE">
+</action>
+</intent-filter>
+<meta-data android:name="android.appwidget.provider" android:resource="@7F150000">
+</meta-data>
+</receiver>
+<receiver android:exported="true" android:name="com.zoostudio.moneylover.broadcast.BroadcastUpdateBalanceQuickAdd">
+<intent-filter>
+<action android:name="android.appwidget.action.APPWIDGET_UPDATE">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name="com.zoostudio.moneylover.broadcast.BroadcastDownloadIconDone">
+<intent-filter>
+<action android:name="android.intent.action.DOWNLOAD_COMPLETE">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:enabled="true" android:exported="true" android:name="com.zoostudio.moneylover.broadcast.BroadcastInstallReferrer" android:permission="android.permission.INSTALL_PACKAGES">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name="com.zoostudio.moneylover.broadcast.BroadcastRepeatBudget">
+</receiver>
+<receiver android:name="com.zoostudio.moneylover.creditWallet.BroadcastNotificationCreditAlarm">
+</receiver>
+<receiver android:exported="true" android:name="com.zoostudio.moneylover.widget.MoneyWidgetAccountDark">
+<intent-filter>
+<action android:name="android.appwidget.action.APPWIDGET_UPDATE">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="UPDATE_APPLICATION_FOR_CURRENT_USERITEM_BECAUSE_OF_SYNCING">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="UPDATE_APPLICATION_FOR_CURRENT_ACCOUNT_BECAUSE_OF_EDITING_TRANSACTIONS">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="UPDATE_CURRENT_WALLET_IN_USERITEM">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+<meta-data android:name="android.appwidget.provider" android:resource="@7F150008">
+</meta-data>
+</receiver>
+<receiver android:name="com.zoostudio.moneylover.widget.MoneyAccountWidgetLight">
+<intent-filter>
+<action android:name="android.appwidget.action.APPWIDGET_UPDATE">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="UPDATE_APPLICATION_FOR_CURRENT_USERITEM_BECAUSE_OF_SYNCING">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="UPDATE_APPLICATION_FOR_CURRENT_ACCOUNT_BECAUSE_OF_EDITING_TRANSACTIONS">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="UPDATE_CURRENT_WALLET_IN_USERITEM">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+<meta-data android:name="android.appwidget.provider" android:resource="@7F150009">
+</meta-data>
+</receiver>
+<receiver android:name="com.zoostudio.moneylover.goalWallet.notification.BroadcastNotificationPercentBalance">
+</receiver>
+<receiver android:name="com.zoostudio.moneylover.alarm.AlarmReceiver">
+</receiver>
+<receiver android:name="com.zoostudio.moneylover.broadcast.BroadcastMonthlyAlarm">
+</receiver>
+<receiver android:name="com.zoostudio.moneylover.broadcast.RepeatingAlarmReceiver">
+</receiver>
+<receiver android:name="com.zoostudio.moneylover.broadcast.BroadRepeatBills">
+</receiver>
+<receiver android:name="com.zoostudio.moneylover.broadcast.BroadNotificationBillWarning">
+</receiver>
+<receiver android:name="com.zoostudio.moneylover.broadcast.BroadcastRepeatBillResetPayStatus">
+</receiver>
+<receiver android:name="com.zoostudio.moneylover.broadcast.BroadEvent">
+</receiver>
+<receiver android:name="com.zoostudio.moneylover.broadcast.BroadSavingMoney">
+</receiver>
+<receiver android:exported="false" android:name="com.zoostudio.moneylover.broadcast.InitReceiver">
+<intent-filter>
+<action android:name="com.zoostudio.moneylover.utils.INIT">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:enabled="true" android:exported="true" android:name="com.zoostudio.moneylover.broadcast.BootUpReceiver">
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name="com.zoostudio.moneylover.goalWallet.notification.BroadcastNotificationGoalAlarm">
+</receiver>
+<provider android:authorities="@7F110472" android:exported="false" android:grantUriPermissions="true" android:name="androidx.core.content.FileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F150003">
+</meta-data>
+</provider>
+<activity android:name="com.zoostudio.moneylover.ui.ActivityListSMSBanking" android:screenOrientation="14">
+</activity>
+<activity android:name="com.zoostudio.moneylover.ui.ActivityIconPackDetail" android:screenOrientation="14">
+</activity>
+<activity android:label="@7F11075B" android:name="com.zoostudio.moneylover.ui.ActivitySecurityManagerV2" android:screenOrientation="14">
+</activity>
+<activity android:name="com.zoostudio.moneylover.ui.ActivityListTransactionChanged" android:screenOrientation="14">
+</activity>
+<activity android:name="com.zoostudio.moneylover.ui.ActivityDetailBudget" android:screenOrientation="14">
+</activity>
+<activity android:name="com.zoostudio.moneylover.ui.activity.ActivityPickerIcon" android:screenOrientation="14">
+</activity>
+<activity android:exported="true" android:name="com.zoostudio.moneylover.thueTNCN.ActivityThueTNCN" android:screenOrientation="14">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:name="com.zoostudio.moneylover.ui.activity.ActivityAdjustBalanceV2" android:screenOrientation="14">
+</activity>
+<activity android:name="com.zoostudio.moneylover.ui.activity.ActivityCashbackV2" android:screenOrientation="14">
+</activity>
+<activity android:name="com.zoostudio.moneylover.ui.activity.ActivityDepositSavingV2" android:screenOrientation="14">
+</activity>
+<activity android:name="com.zoostudio.moneylover.ui.activity.ActivityWithdrawSavingV2" android:screenOrientation="14">
+</activity>
+<activity android:name="com.zoostudio.moneylover.ui.activity.ActivityTransferV2" android:screenOrientation="14">
+</activity>
+<activity android:name="com.zoostudio.moneylover.ui.ActivityExchangeCredits" android:screenOrientation="14">
+</activity>
+<activity android:name="com.zoostudio.moneylover.redeemcredits.ActivityRedeemCredits" android:screenOrientation="14">
+</activity>
+<activity android:name="com.zoostudio.moneylover.ui.ActivityAuthenAutoFill" android:screenOrientation="14">
+</activity>
+<activity android:name="com.zoostudio.moneylover.thueTNCN.ActivityKetQuaTinhThueTNCN" android:screenOrientation="14">
+</activity>
+<activity android:alwaysRetainTaskState="true" android:launchMode="2" android:name="com.zoostudio.moneylover.ui.ActivityReceiverDeepLink" android:screenOrientation="14">
+<intent-filter android:autoVerify="true">
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="link.moneylover.me" android:scheme="https">
+</data>
+<data android:host="link.moneylover.me" android:scheme="http">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="com.zoostudio.moneylover.switchLanguage.PickerLanguageActivity" android:screenOrientation="14">
+</activity>
+<activity android:name="com.zoostudio.moneylover.help.fragment.ListFAQActivity" android:screenOrientation="14">
+</activity>
+<activity android:name="com.zoostudio.moneylover.renewPremium.PremiumExpireActivity" android:screenOrientation="14">
+</activity>
+<activity android:name="com.zoostudio.moneylover.renewPremium.ChooseWalletsToKeepActivity" android:screenOrientation="14">
+</activity>
+<activity android:name="com.zoostudio.moneylover.bankStatement.UploadBankStatementActivity" android:screenOrientation="14">
+</activity>
+<activity android:name="com.zoostudio.moneylover.crypto.activities.IntroducingCryptoActivity" android:screenOrientation="14">
+</activity>
+<activity android:name="com.zoostudio.moneylover.crypto.activities.IntroCryptoConnectActivity" android:screenOrientation="14">
+</activity>
+<activity android:name="com.zoostudio.moneylover.ui.activity.SelectWalletTypeActivity" android:screenOrientation="14" android:theme="@7F12025E">
+</activity>
+<activity android:name="com.zoostudio.moneylover.ui.activity.ActivityExportExcel" android:screenOrientation="14">
+</activity>
+<activity android:name="com.zoostudio.moneylover.ui.activity.ActivityExportCsv" android:screenOrientation="14">
+</activity>
+<activity android:name="com.zoostudio.moneylover.ui.activity.ListWalletErrorCurrencyActivity" android:screenOrientation="14">
+</activity>
+<activity android:name="com.zoostudio.moneylover.ui.ActivitySearchResult" android:screenOrientation="14">
+</activity>
+<activity android:name="com.zoostudio.moneylover.locationPicker.ActivityPickerLocationV2" android:screenOrientation="14">
+</activity>
+<activity android:name="com.zoostudio.moneylover.deleteEvent.ActivityDeleteTransactionEvent" android:screenOrientation="14">
+</activity>
+<activity android:name="com.zoostudio.moneylover.hashtagTransaction.activities.ActivityFindTag" android:screenOrientation="14">
+</activity>
+<activity android:name="com.zoostudio.moneylover.familyPlan.activities.ActivityAccountInfoV2" android:screenOrientation="14">
+</activity>
+<activity android:name="com.zoostudio.moneylover.familyPlan.activities.ActivitySharedWalletAwaiting" android:screenOrientation="14">
+</activity>
+<activity android:name="com.zoostudio.moneylover.familyPlan.activities.ActivityShareWalletV2" android:screenOrientation="14">
+</activity>
+<activity android:name="com.zoostudio.moneylover.hashtagTransaction.activities.ActivityAddNote" android:screenOrientation="14" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.zoostudio.moneylover.goalWallet.activities.ActivityGoalReportAll" android:screenOrientation="14">
+</activity>
+<activity android:name="com.zoostudio.moneylover.supportService.ActivityCountryPicker" android:screenOrientation="14" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.zoostudio.moneylover.goalWallet.activities.ActivityReportInOutflow" android:screenOrientation="14">
+</activity>
+<activity android:name="com.zoostudio.moneylover.goalWallet.activities.ActivityReportCateType" android:screenOrientation="14">
+</activity>
+<activity android:name="com.zoostudio.moneylover.copyCate.activities.ActivityListCateCopy" android:screenOrientation="14">
+</activity>
+<activity android:name="com.zoostudio.moneylover.copyCate.activities.ActivitySelectWalletCopyCate" android:screenOrientation="14">
+</activity>
+<activity android:name="com.zoostudio.moneylover.familyPlan.activities.ActivityOpenEditWalletFromNotification" android:screenOrientation="14">
+</activity>
+<activity android:name="com.zoostudio.moneylover.supportService.ActivityListServiceSupport" android:screenOrientation="14">
+</activity>
+<activity android:name="com.zoostudio.moneylover.ui.activity.ActivityTestEmailColor" android:screenOrientation="14">
+</activity>
+<activity android:name="com.zoostudio.moneylover.locationPicker.ActivitySearchLocation" android:screenOrientation="14">
+</activity>
+<activity android:name="com.zoostudio.moneylover.locationPicker.ActivitySearchLocationV2" android:screenOrientation="14">
+</activity>
+<activity android:name="com.zoostudio.moneylover.ui.walletPicker.WalletPickerActivity" android:screenOrientation="14">
+</activity>
+<activity android:name="com.zoostudio.moneylover.ui.categoryPicker.CategoryPickerActivity" android:screenOrientation="14">
+</activity>
+<activity android:name="com.zoostudio.moneylover.ui.eventPicker.EventPickerActivity" android:screenOrientation="14">
+</activity>
+<activity android:name="com.zoostudio.moneylover.segmentUser.SegmentUserActivity" android:screenOrientation="14">
+</activity>
+<activity android:launchMode="2" android:name="com.zoostudio.moneylover.ui.onboarding.defaultwallets.DefaultWalletV3Activity" android:screenOrientation="14">
+</activity>
+<activity android:launchMode="3" android:name="com.zoostudio.moneylover.main.MainActivity" android:screenOrientation="14">
+</activity>
+<activity android:launchMode="2" android:name="com.zoostudio.moneylover.main.reports.subreports.TransactionListActivity" android:screenOrientation="14">
+</activity>
+<activity android:launchMode="2" android:name="com.zoostudio.moneylover.main.reports.ReportByDateActivity" android:screenOrientation="14">
+</activity>
+<activity android:launchMode="2" android:name="com.zoostudio.moneylover.ui.onboarding.defaultwallets.AHabitActivity" android:screenOrientation="14">
+</activity>
+<meta-data android:name="io.branch.sdk.BranchKey" android:value="key_live_kkc0q2Ec0AWnWuhrIXfrUlbltyj2kytt">
+</meta-data>
+<meta-data android:name="com.google.android.gms.ads.APPLICATION_ID" android:value="ca-app-pub-9895422139050049~7864879411">
+</meta-data>
+<meta-data android:name="com.google.android.gms.ads.APPLICATION_ID" android:value="ca-app-pub-9895422139050049~7864879411">
+</meta-data>
+<provider android:authorities="com.bookmark.money.crashlyticsinitprovider" android:exported="false" android:initOrder="90" android:name="com.crashlytics.android.CrashlyticsInitProvider">
+</provider>
+<service android:directBootAware="true" android:exported="false" android:name="com.google.firebase.components.ComponentDiscoveryService">
+<meta-data android:name="com.google.firebase.components:com.google.firebase.inappmessaging.display.ktx.FirebaseInAppMessagingDisplayKtxRegistrar" android:value="com.google.firebase.components.ComponentRegistrar">
+</meta-data>
+<meta-data android:name="com.google.firebase.components:com.google.firebase.inappmessaging.display.FirebaseInAppMessagingDisplayRegistrar" android:value="com.google.firebase.components.ComponentRegistrar">
+</meta-data>
+<meta-data android:name="com.google.firebase.components:com.google.firebase.remoteconfig.ktx.FirebaseConfigKtxRegistrar" android:value="com.google.firebase.components.ComponentRegistrar">
+</meta-data>
+<meta-data android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar" android:value="com.google.firebase.components.ComponentRegistrar">
+</meta-data>
+<meta-data android:name="com.google.firebase.components:com.google.firebase.perf.FirebasePerfRegistrar" android:value="com.google.firebase.components.ComponentRegistrar">
+</meta-data>
+<meta-data android:name="com.google.firebase.components:com.google.firebase.dynamiclinks.internal.FirebaseDynamicLinkRegistrar" android:value="com.google.firebase.components.ComponentRegistrar">
+</meta-data>
+<meta-data android:name="com.google.firebase.components:com.google.firebase.inappmessaging.FirebaseInAppMessagingRegistrar" android:value="com.google.firebase.components.ComponentRegistrar">
+</meta-data>
+<meta-data android:name="com.google.firebase.components:com.google.firebase.ktx.FirebaseCommonKtxRegistrar" android:value="com.google.firebase.components.ComponentRegistrar">
+</meta-data>
+<meta-data android:name="com.google.firebase.components:com.google.firebase.remoteconfig.RemoteConfigRegistrar" android:value="com.google.firebase.components.ComponentRegistrar">
+</meta-data>
+<meta-data android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar" android:value="com.google.firebase.components.ComponentRegistrar">
+</meta-data>
+<meta-data android:name="com.google.firebase.components:com.google.firebase.iid.Registrar" android:value="com.google.firebase.components.ComponentRegistrar">
+</meta-data>
+<meta-data android:name="com.google.firebase.components:com.google.firebase.abt.component.AbtRegistrar" android:value="com.google.firebase.components.ComponentRegistrar">
+</meta-data>
+<meta-data android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar" android:value="com.google.firebase.components.ComponentRegistrar">
+</meta-data>
+</service>
+<activity android:name="com.facebook.CustomTabMainActivity">
+</activity>
+<activity android:excludeFromRecents="true" android:exported="false" android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity" android:theme="@android:01030010">
+</activity>
+<service android:exported="true" android:name="com.google.android.gms.auth.api.signin.RevocationBoundService" android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION">
+</service>
+<service android:exported="false" android:name="com.google.firebase.messaging.FirebaseMessagingService">
+<intent-filter android:priority="-500">
+<action android:name="com.google.firebase.MESSAGING_EVENT">
+</action>
+</intent-filter>
+</service>
+<provider android:authorities="com.bookmark.money.firebaseperfprovider" android:exported="false" android:initOrder="101" android:name="com.google.firebase.perf.provider.FirebasePerfProvider">
+</provider>
+<provider android:authorities="com.bookmark.money.com.squareup.picasso" android:exported="false" android:name="com.squareup.picasso.PicassoProvider">
+</provider>
+<service android:exported="false" android:name="com.evernote.android.job.v21.PlatformJobService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<service android:exported="false" android:name="com.evernote.android.job.v14.PlatformAlarmService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<service android:exported="false" android:name="com.evernote.android.job.v14.PlatformAlarmServiceExact">
+</service>
+<receiver android:exported="false" android:name="com.evernote.android.job.v14.PlatformAlarmReceiver">
+<intent-filter>
+<action android:name="com.evernote.android.job.v14.RUN_JOB">
+</action>
+<action android:name="net.vrallev.android.job.v14.RUN_JOB">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:exported="false" android:name="com.evernote.android.job.JobBootReceiver">
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+<action android:name="android.intent.action.QUICKBOOT_POWERON">
+</action>
+<action android:name="com.htc.intent.action.QUICKBOOT_POWERON">
+</action>
+<action android:name="android.intent.action.MY_PACKAGE_REPLACED">
+</action>
+</intent-filter>
+</receiver>
+<service android:enabled="false" android:exported="true" android:name="com.evernote.android.job.gcm.PlatformGcmService" android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE">
+<intent-filter>
+<action android:name="com.google.android.gms.gcm.ACTION_TASK_READY">
+</action>
+</intent-filter>
+</service>
+<service android:exported="false" android:name="com.evernote.android.job.JobRescheduleService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<receiver android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementReceiver">
+</receiver>
+<receiver android:enabled="true" android:exported="true" android:name="com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver" android:permission="android.permission.INSTALL_PACKAGES">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementService">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementJobService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<provider android:authorities="com.bookmark.money.FacebookInitProvider" android:exported="false" android:name="com.facebook.internal.FacebookInitProvider">
+</provider>
+<receiver android:exported="false" android:name="com.facebook.CurrentAccessTokenExpirationBroadcastReceiver">
+<intent-filter>
+<action android:name="com.facebook.sdk.ACTION_CURRENT_ACCESS_TOKEN_CHANGED">
+</action>
+</intent-filter>
+</receiver>
+<provider android:authorities="com.bookmark.money.firebaseinitprovider" android:exported="false" android:initOrder="100" android:name="com.google.firebase.provider.FirebaseInitProvider">
+</provider>
+<activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:01030010">
+</activity>
+<provider android:authorities="com.bookmark.money.mobileadsinitprovider" android:exported="false" android:initOrder="100" android:name="com.google.android.gms.ads.MobileAdsInitProvider">
+</provider>
+<service android:exported="false" android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery">
+<meta-data android:name="backend:com.google.android.datatransport.cct.CctBackendFactory" android:value="cct">
+</meta-data>
+</service>
+<service android:exported="false" android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<receiver android:exported="false" android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver">
+</receiver>
+<provider android:authorities="com.bookmark.money.lifecycle-process" android:exported="false" android:multiprocess="true" android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer">
+</provider>
+<meta-data android:name="com.android.vending.derived.apk.id" android:value="1">
+</meta-data>
+</application>
+</manifest>

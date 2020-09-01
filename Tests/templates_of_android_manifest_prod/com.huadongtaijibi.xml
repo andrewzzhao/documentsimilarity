@@ -1,0 +1,34 @@
+<?xml version="1.0" ?><manifest android:installLocation="0" android:versionCode="16" android:versionName="1.1.5" package="com.huadongtaijibi" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="7">
+</uses-sdk>
+<application android:debuggable="false" android:icon="@7F020025" android:label="@7F060000">
+<activity android:label="@7F060000" android:name="com.xllusion.livewallpaper.bloomingnightpro.AppLauncher">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.INFO">
+</category>
+</intent-filter>
+</activity>
+<service android:label="@7F060001" android:name="BloomingNightPro" android:permission="android.permission.BIND_WALLPAPER">
+<intent-filter>
+<action android:name="android.service.wallpaper.WallpaperService">
+</action>
+</intent-filter>
+<meta-data android:name="android.service.wallpaper" android:resource="@7F040001">
+</meta-data>
+</service>
+<activity android:exported="true" android:label="@7F060002" android:name="Settings" android:theme="@android:01030061">
+</activity>
+<receiver android:label="@7F060000" android:name="SettingWidget">
+<intent-filter>
+<action android:name="android.appwidget.action.APPWIDGET_UPDATE">
+</action>
+</intent-filter>
+<meta-data android:name="android.appwidget.provider" android:resource="@7F040002">
+</meta-data>
+</receiver>
+</application>
+<uses-feature android:name="android.software.live_wallpaper">
+</uses-feature>
+</manifest>

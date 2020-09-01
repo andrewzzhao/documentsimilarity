@@ -1,0 +1,258 @@
+<?xml version="1.0" ?><manifest android:versionCode="41" android:versionName="1.09" package="com.heycare" platformBuildVersionCode="25" platformBuildVersionName="7.1.1" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="16" android:targetSdkVersion="24">
+</uses-sdk>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-feature android:name="android.hardware.camera" android:required="false">
+</uses-feature>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.MANAGE_DOCUMENTS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_SMS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_SMS">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE">
+</uses-permission>
+<uses-permission android:name="android.permission.CALL_PHONE">
+</uses-permission>
+<uses-permission android:name="android.permission.RECORD_AUDIO">
+</uses-permission>
+<permission android:name="com.heycare.permission.C2D_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="com.heycare.permission.C2D_MESSAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_SMS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_SMS">
+</uses-permission>
+<uses-permission android:name="android.permission.SEND_SMS">
+</uses-permission>
+<meta-data android:name="android.support.VERSION" android:value="25.3.1">
+</meta-data>
+<application android:allowBackup="true" android:hardwareAccelerated="true" android:icon="@7F02005E" android:label="@7F0900B2" android:largeHeap="true" android:name="com.heycare.HeyCareApplication" android:theme="@7F0B00AC">
+<activity android:configChanges="0x00000080" android:name="com.heycare.MainActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x00000080" android:label="@7F09015F" android:name="com.heycare.pill.reminders.activity.AddMedicineReminderActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000080" android:label="@7F09015F" android:name="com.heycare.settings.faq.FAQActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000080" android:name="com.heycare.Options" android:screenOrientation="1" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:configChanges="0x00000080" android:label="@7F090169" android:name="com.heycare.Schedules" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090162" android:name="com.heycare.OrderPlacedScreen" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090163" android:name="com.heycare.OrderReview" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F090166" android:name="com.heycare.PrescriptionViewActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.heycare.pill.reminders.activity.MedicineNotificationActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.heycare.Drawactivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.heycare.settings.fragment.tutorial.TutorialActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F09016A" android:name="com.heycare.Summary" android:screenOrientation="1">
+</activity>
+<activity android:name="com.heycare.Editactivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.billdesk.library.OtpDialogActivity" android:theme="@android:0103000B">
+</activity>
+<activity android:label="@7F09016A" android:name="com.heycare.OrderDetails" android:screenOrientation="1">
+</activity>
+<activity android:name="com.heycare.pill.reminders.activity.UpdateMedicineReminderActivity" android:screenOrientation="1">
+</activity>
+<receiver android:enabled="true" android:name="com.google.android.gms.analytics.AnalyticsReceiver">
+<intent-filter>
+<action android:name="com.google.android.gms.analytics.ANALYTICS_DISPATCH">
+</action>
+</intent-filter>
+</receiver>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.analytics.AnalyticsService">
+</service>
+<receiver android:enabled="true" android:exported="true" android:name="com.google.android.gms.analytics.CampaignTrackingReceiver">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.analytics.CampaignTrackingService">
+</service>
+<receiver android:name="com.heycare.VaccNotiBroadcast">
+</receiver>
+<receiver android:label="NetworkChangeReceiver" android:name="com.heycare.NetworkChangeReceiver">
+<intent-filter>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+<action android:name="android.net.wifi.WIFI_STATE_CHANGED">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name="com.heycare.pill.reminders.receiver.NotificationPublisher">
+</receiver>
+<meta-data android:name="com.google.android.gms.version" android:value="@7F0D000C">
+</meta-data>
+<meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@7F0900C3">
+</meta-data>
+<activity android:label="Payment Status" android:name="com.heycare.StatusActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000014">
+</activity>
+<activity android:label="Set Reminder" android:name="com.heycare.pill.reminders.OrderReminderActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="FeedBack" android:name="com.heycare.FeedBack" android:screenOrientation="1">
+</activity>
+<receiver android:name="com.heycare.GcmBroadcastReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+<action android:name="com.google.android.c2dm.intent.REGISTRATION">
+</action>
+<category android:name="com.heycare">
+</category>
+</intent-filter>
+</receiver>
+<service android:name="com.heycare.GcmIntentService">
+</service>
+<activity android:name="com.billdesk.sdk.PaymentOptions">
+</activity>
+<activity android:name="com.billdesk.sdk.BankList" android:theme="@7F0B0196">
+</activity>
+<activity android:name="com.billdesk.sdk.QuickPayView" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:name="com.billdesk.sdk.CreditCardView" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:name="com.billdesk.sdk.PaymentWebView" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:configChanges="0x00000020" android:name="com.billdesk.utils.URLUtilActivity" android:theme="@android:0103000B">
+</activity>
+<activity android:configChanges="0x00000020" android:name="com.heycare.pill.reminders.activity.ReminderTimePickerAcitvity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000020" android:name="com.heycare.products.activity.ProdOrderReviewActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000020" android:name="com.heycare.products.activity.ProdOrderPlacedActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000020" android:name="com.heycare.products.activity.ProdOrderDetailsActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000020" android:name="com.heycare.gps.SelectCityActivity" android:screenOrientation="1">
+</activity>
+<meta-data android:name="io.fabric.ApiKey" android:value="1695d13b48036ddd98c1396138a6d8adbfa7505f">
+</meta-data>
+<receiver android:name="com.heycare.pill.reminders.receiver.NotificationButtonReceiver">
+<intent-filter>
+<action android:name="com.heycare.take_medicine">
+</action>
+<action android:name="com.heycare.snooze_medicine">
+</action>
+<action android:name="com.heycare.skip_medicine">
+</action>
+<action android:name="com.heycare.take_medicine_update">
+</action>
+<action android:name="com.heycare.snooze_medicine_update">
+</action>
+<action android:name="com.heycare.skip_medicine_update">
+</action>
+</intent-filter>
+</receiver>
+<activity android:label="Order Review" android:name="com.heycare.diagnostic.DiagnosticReviewFragment" android:screenOrientation="1">
+</activity>
+<activity android:label="Order Placed" android:name="com.heycare.diagnostic.DiagnosticOrderPlacedFrag" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000080" android:label="Pill Reminder" android:name="com.heycare.pill.reminders.PillReminderActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="Order Details" android:name="com.heycare.diagnostic.DiagnosticOrderDetails" android:screenOrientation="1">
+</activity>
+<activity android:label="Payment Details" android:name="com.heycare.PaymentOptionActivity" android:screenOrientation="1">
+</activity>
+<service android:name="com.heycare.utils.ImageDownloaderService">
+</service>
+<activity android:name="com.heycare.products.activity.DeliveryAddressActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.heycare.diagnostic.DiagnosticItemDetail" android:screenOrientation="1">
+</activity>
+<activity android:name="com.heycare.login.LoginActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.heycare.login.RegistrationActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.heycare.login.ForgotPasswordActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.heycare.UpdateAppActivity" android:screenOrientation="1" android:theme="@7F0B019D">
+</activity>
+<activity android:label="@7F09016B" android:name="com.heycare.WalletHistory" android:screenOrientation="1" android:theme="@7F0B00AC">
+</activity>
+<activity android:label="@7F09015C" android:name="com.heycare.CareWalletActivity" android:screenOrientation="1" android:theme="@7F0B00AC" android:windowSoftInputMode="0x00000030">
+</activity>
+<activity android:label="@7F09015D" android:name="com.heycare.CouponActivity" android:screenOrientation="1" android:theme="@7F0B00AC">
+</activity>
+<activity android:name="com.heycare.BlogsActivity" android:screenOrientation="1" android:theme="@7F0B00AC">
+</activity>
+<activity android:name="com.heycare.TrackDetailsActivity">
+</activity>
+<activity android:name="com.heycare.pill.reminders.activity.PillSettings">
+</activity>
+<activity android:name="com.heycare.products.activity.ProductDetailActivity" android:screenOrientation="1" android:theme="@7F0B00AC">
+</activity>
+<activity android:name="com.heycare.diagnostic.FullImageActivity" android:screenOrientation="1" android:theme="@7F0B00AC">
+</activity>
+<activity android:name="com.heycare.vaccinations.VaccinationDetailActivity" android:screenOrientation="1" android:theme="@7F0B00AC">
+</activity>
+<receiver android:name="com.zendesk.sdk.power.BatteryStateBroadcastReceiver">
+<intent-filter>
+<action android:name="android.intent.action.BATTERY_LOW">
+</action>
+<action android:name="android.intent.action.BATTERY_OKAY">
+</action>
+</intent-filter>
+</receiver>
+<activity android:label="@7F090061" android:name="com.zendesk.sdk.feedback.ui.ContactZendeskActivity" android:windowSoftInputMode="0x00000014">
+</activity>
+<activity android:label="@7F090061" android:name="com.zendesk.sdk.requests.ViewRequestActivity" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:label="@7F090078" android:name="com.zendesk.sdk.requests.RequestActivity">
+</activity>
+<activity android:configChanges="0x00000480" android:name="com.zendesk.sdk.support.ViewArticleActivity">
+</activity>
+<activity android:label="@7F090080" android:name="com.zendesk.sdk.support.SupportActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<receiver android:exported="false" android:name="com.zendesk.sdk.deeplinking.ZendeskDeepLinkingBroadcastReceiver">
+<intent-filter>
+<action android:name="com.zendesk.sdk.deeplinking">
+</action>
+</intent-filter>
+</receiver>
+<provider android:authorities="com.heycare.belvedere.attachments" android:exported="false" android:grantUriPermissions="true" android:name="com.zendesk.belvedere.BelvedereFileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F070001">
+</meta-data>
+</provider>
+<activity android:configChanges="0x000005B0" android:name="com.facebook.FacebookActivity" android:theme="@7F0B0260">
+</activity>
+<activity android:name="com.facebook.CustomTabMainActivity">
+</activity>
+<provider android:authorities="com.heycare.FacebookInitProvider" android:exported="false" android:name="com.facebook.internal.FacebookInitProvider">
+</provider>
+<activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:01030010">
+</activity>
+<provider android:authorities="com.heycare.firebaseinitprovider" android:exported="false" android:initOrder="100" android:name="com.google.firebase.provider.FirebaseInitProvider">
+</provider>
+</application>
+</manifest>

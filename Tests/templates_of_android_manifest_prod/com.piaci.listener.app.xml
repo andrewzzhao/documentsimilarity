@@ -1,0 +1,156 @@
+<?xml version="1.0" ?><manifest android:installLocation="1" android:versionCode="42" android:versionName="1.2.7" package="com.piaci.listener.app" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-feature android:name="android.hardware.telephony" android:required="false">
+</uses-feature>
+<uses-sdk android:minSdkVersion="15" android:targetSdkVersion="19">
+</uses-sdk>
+<supports-screens android:anyDensity="true">
+</supports-screens>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_CALL_LOG">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_SMS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_SMS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_CONTACTS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_CALENDAR">
+</uses-permission>
+<uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS">
+</uses-permission>
+<uses-permission android:name="com.piaci.listener.PERMISSION">
+</uses-permission>
+<permission android:label="listener key" android:name="com.piaci.listener.PERMISSION" android:permissionGroup="android.permission-group.PERSONAL_INFO" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="com.fsck.k9.permission.READ_MESSAGES">
+</uses-permission>
+<permission android:label="read k9mail data" android:name="com.fsck.k9.permission.READ_MESSAGES" android:permissionGroup="android.permission-group.PERSONAL_INFO" android:protectionLevel="0x00000001">
+</permission>
+<uses-permission android:name="com.kaitenmail.permission.READ_MESSAGES">
+</uses-permission>
+<permission android:label="read kaitenmail data" android:name="com.kaitenmail.permission.READ_MESSAGES" android:permissionGroup="android.permission-group.PERSONAL_INFO" android:protectionLevel="0x00000001">
+</permission>
+<uses-permission android:name="com.kaitenmail.adsupported.permission.READ_MESSAGES">
+</uses-permission>
+<permission android:label="read kaitenmail ads data" android:name="com.kaitenmail.adsupported.permission.READ_MESSAGES" android:permissionGroup="android.permission-group.PERSONAL_INFO" android:protectionLevel="0x00000001">
+</permission>
+<uses-permission android:name="com.qs.enhancedemail.permission.ACCESS_PROVIDER">
+</uses-permission>
+<permission android:label="read enhancedmail data" android:name="com.qs.enhancedemail.permission.ACCESS_PROVIDER" android:permissionGroup="android.permission-group.PERSONAL_INFO" android:protectionLevel="0x00000001">
+</permission>
+<uses-permission android:name="org.kman.AquaMail.datax.GET_ACCOUNTS">
+</uses-permission>
+<permission android:label="read aquamail data" android:name="org.kman.AquaMail.datax.GET_ACCOUNTS" android:permissionGroup="android.permission-group.PERSONAL_INFO" android:protectionLevel="0x00000001">
+</permission>
+<uses-permission android:name="org.kman.AquaMail.datax.READ_MESSAGES">
+</uses-permission>
+<permission android:label="read aquamail mail data" android:name="org.kman.AquaMail.datax.READ_MESSAGES" android:permissionGroup="android.permission-group.PERSONAL_INFO" android:protectionLevel="0x00000001">
+</permission>
+<uses-permission android:name="com.google.android.gm.permission.READ_CONTENT_PROVIDER">
+</uses-permission>
+<permission android:label="read gmail data" android:name="com.google.android.gm.permission.READ_CONTENT_PROVIDER" android:permissionGroup="android.permission-group.PERSONAL_INFO" android:protectionLevel="0x00000001">
+</permission>
+<uses-permission android:name="android.permission.GET_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<application android:allowBackup="true" android:clearTaskOnLaunch="true" android:configChanges="0x000000A0" android:hardwareAccelerated="true" android:icon="@7F020022" android:label="@7F07001A" android:largeHeap="true" android:launchMode="2" android:stateNotNeeded="false" android:theme="@7F0A0005">
+<activity android:alwaysRetainTaskState="true" android:label="@7F07001A" android:launchMode="3" android:name=".MainActivity" android:windowSoftInputMode="0x00000003">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.HOME">
+</category>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.provider.Telephony.SMS_RECEIVED">
+</action>
+<action android:name="com.piaci.listener.app.PLAYERMSG">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.net.wifi.WIFI_STATE_CHANGED">
+</action>
+<action android:name="android.net.wifi.STATE_CHANGE">
+</action>
+<action android:name="android.net.ConnectivityManager.CONNECTIVITY_ACTION">
+</action>
+<action android:name="android.permission.READ_PHONE_STATE">
+</action>
+</intent-filter>
+</activity>
+<receiver android:name=".AlarmReceiver">
+</receiver>
+<service android:name=".UpdateService">
+</service>
+<service android:name=".PlayerService">
+</service>
+<service android:enabled="true" android:exported="false" android:name=".NotificationService" android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE">
+<intent-filter>
+<action android:name="android.accessibilityservice.AccessibilityService">
+</action>
+</intent-filter>
+<meta-data android:name="android.accessibilityservice" android:resource="@7F050000">
+</meta-data>
+</service>
+<service android:name=".NotificationListener" android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE">
+<intent-filter>
+<action android:name="android.service.notification.NotificationListenerService">
+</action>
+</intent-filter>
+</service>
+<receiver android:name="com.piaci.listener.app.music.ButtonReceiver">
+<intent-filter android:priority="10000">
+<action android:name="android.media.AUDIO_BECOMING_NOISY">
+</action>
+<action android:name="android.intent.action.MEDIA_BUTTON">
+</action>
+</intent-filter>
+</receiver>
+<activity android:alwaysRetainTaskState="true" android:launchMode="3" android:name=".AppDrawer" android:theme="@7F0A0005">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="3" android:name=".Groups" android:theme="@7F0A0005" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="3" android:name="com.piaci.listener.app.detail.Detail" android:theme="@7F0A0005">
+</activity>
+<activity android:configChanges="0x000004A0" android:name=".Preferences" android:theme="@7F0A0005">
+</activity>
+<activity android:launchMode="1" android:name=".FacebookLogin" android:theme="@7F0A0002">
+</activity>
+<activity android:name=".TwitterLogin">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="callback" android:scheme="x-oauthflow-twitter">
+</data>
+</intent-filter>
+</activity>
+<activity android:launchMode="1" android:name="com.facebook.LoginActivity" android:theme="@7F0A0005">
+</activity>
+<meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@7F070000">
+</meta-data>
+</application>
+</manifest>

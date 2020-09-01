@@ -1,0 +1,88 @@
+<?xml version="1.0" ?><manifest android:installLocation="2" android:versionCode="71" android:versionName="1.95" package="org.vv.health.testing" platformBuildVersionCode="19" platformBuildVersionName="4.4.2-1456859" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="8" android:targetSdkVersion="19">
+</uses-sdk>
+<supports-screens android:anyDensity="true" android:largeScreens="true" android:normalScreens="true" android:resizeable="true" android:smallScreens="true">
+</supports-screens>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<application android:allowBackup="true" android:icon="@7F02001E" android:label="@7F060000" android:name="com.baidu.protect.StubApplication" android:theme="@7F070003">
+<activity android:configChanges="0x000004A0" android:label="@7F060000" android:name=".WelcomeActivity" android:screenOrientation="1" android:theme="@android:0103000A">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F060000" android:name=".LifeCalcActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F060000" android:name=".MainActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:name=".SubCatelogActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:name=".SubjectActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:name=".TurnTableActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000000B0" android:name="com.baidu.mobads.AppActivity" android:theme="@android:01030010">
+</activity>
+<meta-data android:name="BaiduMobAd_APP_ID" android:value="e569054e">
+</meta-data>
+<provider android:authorities="org.vv.health.testing.protect.stubprovider" android:exported="false" android:initOrder="2147483647" android:name="com.baidu.protect.StubProvider">
+</provider>
+<provider android:authorities="org.vv.health.testing.xshield.ac.provider" android:exported="true" android:name="com.baidu.xshield.XshieldProvider">
+</provider>
+<activity android:excludeFromRecents="true" android:exported="true" android:launchMode="0" android:name="com.baidu.xshield.XshieldActivity" android:theme="@android:0103000F">
+<intent-filter>
+<action android:name="com.baidu.action.Xshield.VIEW">
+</action>
+<category android:name="com.baidu.category.xshield">
+</category>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<receiver android:exported="false" android:name="com.baidu.xshield.XshieldReceiver">
+<intent-filter>
+<action android:name="com.baidu.action.Xshield.VIEW">
+</action>
+<category android:name="com.baidu.category.xshield">
+</category>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+<intent-filter android:priority="2147483647">
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+</intent-filter>
+</receiver>
+<service android:exported="false" android:name="com.baidu.xshield.XshieldService">
+<intent-filter>
+<action android:name="com.baidu.action.Xshield.VIEW">
+</action>
+<category android:name="com.baidu.category.xshield">
+</category>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</service>
+<service android:exported="false" android:name="com.baidu.xshield.XshieldJobService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+</application>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+</manifest>

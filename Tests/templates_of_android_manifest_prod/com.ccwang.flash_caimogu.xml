@@ -1,0 +1,42 @@
+<?xml version="1.0" ?><manifest android:versionCode="1" android:versionName="1.0" package="com.ccwang.flash_caimogu" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="8" android:targetSdkVersion="15">
+</uses-sdk>
+<meta-data android:name="YOUMI_CHANNEL" android:value="1">
+</meta-data>
+<meta-data android:name="YOUMI_CHANNEL_DESCRIPTION" android:value="Google Play">
+</meta-data>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT">
+</uses-permission>
+<application android:icon="@7F020001" android:label="@7F040000" android:theme="@7F050000">
+<activity android:label="@7F040001" android:name=".MainActivity" android:screenOrientation="0" android:theme="@android:01030007">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000B0" android:name="net.youmi.android.AdActivity">
+</activity>
+<receiver android:name="net.youmi.android.YoumiReceiver">
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_ADDED">
+</action>
+<action android:name="android.intent.action.PACKAGE_INSTALL">
+</action>
+<data android:scheme="package">
+</data>
+</intent-filter>
+</receiver>
+</application>
+</manifest>

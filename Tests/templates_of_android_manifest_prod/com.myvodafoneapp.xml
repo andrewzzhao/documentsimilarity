@@ -1,0 +1,330 @@
+<?xml version="1.0" ?><manifest android:versionCode="8010410" android:versionName="8.1" package="com.myvodafoneapp" xmlns:amazon="http://schemas.amazon.com/apk/res/android" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="19" android:targetSdkVersion="27">
+</uses-sdk>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_CONTACTS">
+</uses-permission>
+<uses-permission android:name="android.permission.REORDER_TASKS">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-feature android:name="android.hardware.camera" android:required="true">
+</uses-feature>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE">
+</uses-permission>
+<uses-permission android:name="android.permission.USE_FINGERPRINT">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-permission android:name="android.permission.REORDER_TASKS">
+</uses-permission>
+<uses-permission android:name="android.permission.FOREGROUND_SERVICE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_CALL_LOG">
+</uses-permission>
+<uses-permission android:name="android.permission.PACKAGE_USAGE_STATS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_NETWORK_USAGE_HISTORY">
+</uses-permission>
+<permission android:name="com.myvodafoneapp.permission.C2D_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="com.myvodafoneapp.permission.C2D_MESSAGE">
+</uses-permission>
+<uses-permission android:name="com.amazon.device.messaging.permission.RECEIVE">
+</uses-permission>
+<permission android:name="com.myvodafoneapp.permission.RECEIVE_ADM_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="com.myvodafoneapp.permission.RECEIVE_ADM_MESSAGE">
+</uses-permission>
+<uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE">
+</uses-permission>
+<application android:allowBackup="false" android:icon="@7F070063" android:label="@7F11002B" android:name="com.tsse.vfuk.VFApplication" android:resizeableActivity="false" android:roundIcon="@7F070063" android:supportsRtl="true" android:theme="@7F120006" android:usesCleartextTraffic="true">
+<meta-data android:name="asset_statements" android:resource="@7F11002F">
+</meta-data>
+<meta-data android:name="com.tsse.vfuk.pushnotifications" android:value="com.tsse.vfuk.pushnotifications.VfAutopilot">
+</meta-data>
+<meta-data android:name="com.urbanairship.job.PREFER_ANDROID_JOB_SCHEDULER" android:value="true">
+</meta-data>
+<meta-data android:name="com.urbanairship.webview.ENABLE_LOCAL_STORAGE" android:value="true">
+</meta-data>
+<activity android:launchMode="1" android:name="com.tsse.vfuk.view.VFLaunchActivity" android:screenOrientation="1" android:theme="@7F1201B5" android:windowSoftInputMode="0x00000030">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<meta-data android:name="io.fabric.ApiKey" android:value="c399dad97f100e3c141cc452b8f0c978670966a9">
+</meta-data>
+<activity android:name="com.tsse.vfuk.feature.developersettings.view.DeveloperSettingsActivity" android:screenOrientation="1" android:theme="@7F1201B5" android:windowSoftInputMode="0x00000030">
+</activity>
+<activity android:name="com.tsse.vfuk.view.VFBaseMainActivity" android:screenOrientation="1" android:theme="@7F1201B5" android:windowSoftInputMode="0x00000030">
+</activity>
+<activity android:name="com.tsse.vfuk.feature.subscriptionswitching.view.SubscriptionSwitchingActivity" android:theme="@7F1201B6" android:windowSoftInputMode="0x00000030">
+</activity>
+<activity android:launchMode="2" android:name="com.tsse.vfuk.feature.VfDeepLinkingActivity" android:theme="@7F1200C4">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="myvodafone">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="@7F110338">
+</data>
+</intent-filter>
+<intent-filter android:autoVerify="true">
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="@7F110000" android:pathPrefix="@7F110001" android:scheme="https">
+</data>
+<data android:pathPrefix="@7F110001" android:scheme="http">
+</data>
+</intent-filter>
+</activity>
+<activity android:launchMode="1" android:name="com.tsse.vfuk.feature.auth.view.AuthActivity" android:theme="@7F1201B7" android:windowSoftInputMode="0x00000030">
+</activity>
+<activity android:name="com.tsse.vfuk.feature.login.view.VFLoginActivity" android:theme="@7F1201B6" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.tsse.vfuk.feature.welcomeflow.view.VFWelcomeActivity" android:screenOrientation="1" android:theme="@7F1201B5" android:windowSoftInputMode="0x00000017">
+</activity>
+<activity android:name="com.tsse.vfuk.feature.welcomeflow.view.LoginBenefitsActivity" android:screenOrientation="1" android:theme="@7F1201B5" android:windowSoftInputMode="0x00000017">
+</activity>
+<activity android:name="com.tsse.vfuk.feature.notifications.InboxMessageDetailsActivity" android:screenOrientation="1" android:theme="@7F1201B5" android:windowSoftInputMode="0x00000017">
+</activity>
+<activity android:name="com.tsse.vfuk.feature.notifications.InboxReceiverActivity">
+<intent-filter>
+<action android:name="com.urbanairship.VIEW_RICH_PUSH_MESSAGE">
+</action>
+<data android:scheme="message">
+</data>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:launchMode="1" android:name="com.tsse.vfuk.feature.redPlus.view.RedPlusSharerDetailsActivity" android:theme="@7F1201B5" android:windowSoftInputMode="0x00000030">
+</activity>
+<receiver android:exported="false" android:name="com.tsse.vfuk.pushnotifications.VfAirshipReceiver">
+<intent-filter>
+<action android:name="com.urbanairship.push.CHANNEL_UPDATED">
+</action>
+<action android:name="com.urbanairship.push.OPENED">
+</action>
+<action android:name="com.urbanairship.push.DISMISSED">
+</action>
+<action android:name="com.urbanairship.push.RECEIVED">
+</action>
+<category android:name="com.myvodafoneapp">
+</category>
+</intent-filter>
+</receiver>
+<service android:name="com.tsse.vfuk.feature.inlife.service.ILNGService">
+</service>
+<provider android:authorities="com.myvodafoneapp.provider" android:exported="false" android:grantUriPermissions="true" android:name="android.support.v4.content.FileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F140000">
+</meta-data>
+</provider>
+<provider android:authorities="com.myvodafoneapp.crashlyticsinitprovider" android:exported="false" android:initOrder="100" android:name="com.crashlytics.android.CrashlyticsInitProvider">
+</provider>
+<activity android:configChanges="0x00002004" android:name="com.vfg.netperform.MockSettingActivity" android:screenOrientation="1">
+</activity>
+<service android:label="NPService" android:name="com.vodafone.netperform.runtime.NetPerformService" android:permission="android.permission.BIND_CARRIER_SERVICES">
+<intent-filter>
+<action android:name="android.service.carrier.CarrierService">
+</action>
+</intent-filter>
+<meta-data android:name="android.service.carrier.LONG_LIVED_BINDING" android:value="true">
+</meta-data>
+</service>
+<service android:label="NPJobService" android:name="com.vodafone.netperform.runtime.NetPerformJobService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<receiver android:name="com.vodafone.netperform.runtime.RebootIntentReceiver">
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+<category android:name="android.intent.category.HOME">
+</category>
+</intent-filter>
+</receiver>
+<activity android:name="com.vfg.commonui.activities.VfgCampaignWebView">
+</activity>
+<provider android:authorities="com.myvodafoneapp.lifecycle-trojan" android:exported="false" android:multiprocess="true" android:name="android.arch.lifecycle.ProcessLifecycleOwnerInitializer">
+</provider>
+<service android:exported="false" android:name="com.urbanairship.push.gcm.UAInstanceIDListenerService">
+<intent-filter android:priority="-999">
+<action android:name="com.google.android.gms.iid.InstanceID">
+</action>
+</intent-filter>
+</service>
+<receiver android:name="com.urbanairship.push.gcm.GcmPushReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+<intent-filter android:priority="100">
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+<action android:name="com.google.android.c2dm.intent.REGISTRATION">
+</action>
+<category android:name="com.myvodafoneapp">
+</category>
+</intent-filter>
+</receiver>
+<amazon:enable-feature android:name="com.amazon.device.messaging" android:required="false">
+</amazon:enable-feature>
+<receiver android:name="com.urbanairship.push.adm.AdmPushReceiver" android:permission="com.amazon.device.messaging.permission.SEND">
+<intent-filter>
+<action android:name="com.amazon.device.messaging.intent.RECEIVE">
+</action>
+<category android:name="com.myvodafoneapp">
+</category>
+</intent-filter>
+</receiver>
+<activity android:name="com.urbanairship.iam.html.HtmlActivity" android:theme="@7F12016F">
+</activity>
+<activity android:name="com.urbanairship.iam.fullscreen.FullScreenActivity" android:theme="@7F120156">
+</activity>
+<activity android:name="com.urbanairship.iam.modal.ModalActivity" android:theme="@7F120178">
+</activity>
+<activity android:name="com.urbanairship.CoreActivity" android:theme="@android:01030010">
+</activity>
+<activity android:name="com.urbanairship.messagecenter.MessageActivity">
+</activity>
+<activity android:label="@7F110305" android:name="com.urbanairship.messagecenter.MessageCenterActivity">
+</activity>
+<activity android:name="com.urbanairship.util.HelperActivity" android:theme="@android:01030010">
+<meta-data android:name="com.urbanairship.push.iam.EXCLUDE_FROM_AUTO_SHOW" android:value="true">
+</meta-data>
+</activity>
+<activity android:name="com.urbanairship.google.PlayServicesErrorActivity" android:theme="@android:01030010">
+<meta-data android:name="com.urbanairship.push.iam.EXCLUDE_FROM_AUTO_SHOW" android:value="true">
+</meta-data>
+</activity>
+<activity android:name="com.urbanairship.actions.RateAppActivity" android:theme="@7F120194">
+<meta-data android:name="com.urbanairship.push.iam.EXCLUDE_FROM_AUTO_SHOW" android:value="true">
+</meta-data>
+<intent-filter>
+<action android:name="com.urbanairship.actions.SHOW_RATE_APP_INTENT_ACTION">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:name="com.urbanairship.actions.LandingPageActivity" android:theme="@7F120193">
+<meta-data android:name="com.urbanairship.action.LANDING_PAGE_VIEW" android:resource="@7F0C010B">
+</meta-data>
+<meta-data android:name="com.urbanairship.push.iam.EXCLUDE_FROM_AUTO_SHOW" android:value="true">
+</meta-data>
+<intent-filter>
+<action android:name="com.urbanairship.actions.SHOW_LANDING_PAGE_INTENT_ACTION">
+</action>
+<data android:scheme="http">
+</data>
+<data android:scheme="https">
+</data>
+<data android:scheme="message">
+</data>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:name="com.urbanairship.ChannelCaptureActivity">
+</activity>
+<service android:name="com.urbanairship.job.AirshipService">
+</service>
+<service android:name="com.urbanairship.actions.ActionService">
+</service>
+<service android:label="Segments Service" android:name="com.urbanairship.location.LocationService">
+</service>
+<service android:name="com.urbanairship.push.PushService">
+</service>
+<service android:name="com.urbanairship.job.AndroidJobService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<receiver android:exported="false" android:name="com.urbanairship.CoreReceiver">
+<intent-filter android:priority="-999">
+<action android:name="com.urbanairship.push.OPENED">
+</action>
+<category android:name="com.myvodafoneapp">
+</category>
+</intent-filter>
+</receiver>
+<provider android:authorities="com.myvodafoneapp.urbanairship.provider" android:exported="false" android:name="com.urbanairship.UrbanAirshipProvider">
+</provider>
+<service android:name="com.google.firebase.components.ComponentDiscoveryService">
+<meta-data android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar" android:value="com.google.firebase.components.ComponentRegistrar">
+</meta-data>
+<meta-data android:name="com.google.firebase.components:com.google.firebase.iid.Registrar" android:value="com.google.firebase.components.ComponentRegistrar">
+</meta-data>
+</service>
+<receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementReceiver">
+</receiver>
+<receiver android:enabled="true" android:exported="true" android:name="com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver" android:permission="android.permission.INSTALL_PACKAGES">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementService">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementJobService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<receiver android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+<category android:name="com.myvodafoneapp">
+</category>
+</intent-filter>
+</receiver>
+<service android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdService">
+<intent-filter android:priority="-500">
+<action android:name="com.google.firebase.INSTANCE_ID_EVENT">
+</action>
+</intent-filter>
+</service>
+<provider android:authorities="com.myvodafoneapp.firebaseinitprovider" android:exported="false" android:initOrder="100" android:name="com.google.firebase.provider.FirebaseInitProvider">
+</provider>
+<activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:01030010">
+</activity>
+<meta-data android:name="com.google.android.gms.version" android:value="@7F0A001E">
+</meta-data>
+<activity android:name="com.bugfender.sdk.internal.ui.FeedbackActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<meta-data android:name="android.support.VERSION" android:value="26.1.0">
+</meta-data>
+</application>
+</manifest>

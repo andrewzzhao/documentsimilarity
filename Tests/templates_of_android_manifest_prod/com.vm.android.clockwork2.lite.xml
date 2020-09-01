@@ -1,0 +1,30 @@
+<?xml version="1.0" ?><manifest android:versionCode="107" android:versionName="1.07" package="com.vm.android.clockwork2.lite" platformBuildVersionCode="10" platformBuildVersionName="2.3.3" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="8" android:targetSdkVersion="19">
+</uses-sdk>
+<uses-feature android:name="android.software.live_wallpaper">
+</uses-feature>
+<uses-feature android:glEsVersion="0x00020000">
+</uses-feature>
+<application android:allowBackup="true" android:icon="@7F020010" android:label="@7F050000" android:name="com.vm.android.wallpaper.WallpaperApplication">
+<service android:enabled="true" android:icon="@7F020010" android:label="@7F05002E" android:name="com.vm.android.clockwork.ClockworkWallpaperServiceGoldLite" android:permission="android.permission.BIND_WALLPAPER">
+<intent-filter android:priority="1">
+<action android:name="android.service.wallpaper.WallpaperService">
+</action>
+</intent-filter>
+<meta-data android:name="android.service.wallpaper" android:resource="@7F040001">
+</meta-data>
+</service>
+<receiver android:name="com.vm.android.clockwork.OnUpgradeReceiver">
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_ADDED">
+</action>
+<action android:name="android.intent.action.PACKAGE_REPLACED">
+</action>
+<data android:path="com.vm.android.clockwork2.lite" android:scheme="package">
+</data>
+</intent-filter>
+</receiver>
+<activity android:exported="true" android:label="@7F050008" android:name="com.vm.android.clockwork.ClockworkSettingsActivityGoldLite" android:theme="@android:01030062">
+</activity>
+</application>
+</manifest>

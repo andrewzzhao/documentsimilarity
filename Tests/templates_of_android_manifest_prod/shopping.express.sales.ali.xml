@@ -1,0 +1,372 @@
+<?xml version="1.0" ?><manifest android:compileSdkVersion="29" android:compileSdkVersionCodename="10" android:versionCode="47" android:versionName="47" package="shopping.express.sales.ali" platformBuildVersionCode="29" platformBuildVersionName="10" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="19" android:targetSdkVersion="28">
+</uses-sdk>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.FLASHLIGHT">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:maxSdkVersion="18" android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-permission android:name="com.samsung.android.providers.context.permission.WRITE_USE_APP_FEATURE_SURVEY">
+</uses-permission>
+<uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE">
+</uses-permission>
+<uses-feature android:name="android.hardware.camera.flash" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.camera.autofocus" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.touchscreen" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.location" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.location.gps" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.telephony" android:required="false">
+</uses-feature>
+<supports-screens android:anyDensity="true" android:largeScreens="true" android:normalScreens="true" android:resizeable="true" android:smallScreens="true" android:xlargeScreens="true">
+</supports-screens>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE">
+</uses-permission>
+<application android:allowBackup="true" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:fullBackupContent="true" android:hardwareAccelerated="true" android:icon="@7F0F0000" android:label="@7F1200C3" android:name="shopping.express.sales.ali.GoodsApplication" android:networkSecurityConfig="@7F150002" android:roundIcon="@7F0F0007" android:supportsRtl="true" android:theme="@7F130008">
+<activity android:label="@7F1200C3" android:name="shopping.express.sales.ali.ui.CategoryActivity" android:theme="@7F13000F">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:name="shopping.express.sales.ali.ui.OnboardingActivity" android:screenOrientation="1" android:theme="@7F13000A">
+</activity>
+<activity android:label="@7F12000F" android:launchMode="2" android:name="shopping.express.sales.ali.ui.PromotionActivity" android:parentActivityName="shopping.express.sales.ali.ui.CategoryActivity" android:theme="@7F13000A" android:windowSoftInputMode="0x00000020">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value="shopping.express.sales.ali.ui.CategoryActivity">
+</meta-data>
+<intent-filter>
+<action android:name="android.intent.action.SEARCH">
+</action>
+</intent-filter>
+<meta-data android:name="android.app.searchable" android:resource="@7F150001">
+</meta-data>
+</activity>
+<activity android:label="@7F120002" android:name="shopping.express.sales.ali.ui.SettingsActivity" android:theme="@7F13000A">
+</activity>
+<activity android:label="@7F120091" android:name="shopping.express.sales.ali.ui.ChooseLanguageActivity" android:theme="@7F13000A">
+</activity>
+<activity android:label="@7F120090" android:name="shopping.express.sales.ali.ui.ChooseCurrencyActivity" android:theme="@7F13000A">
+</activity>
+<activity android:launchMode="2" android:name="shopping.express.sales.ali.ui.PromotionDetailsActivity" android:theme="@7F13000A">
+<intent-filter android:autoVerify="true">
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="http">
+</data>
+<data android:scheme="https">
+</data>
+<data android:host="ali-sale.store">
+</data>
+<data android:pathPattern="/product/.*">
+</data>
+</intent-filter>
+</activity>
+<activity android:label="@7F1200A3" android:name="shopping.express.sales.ali.ui.URLPreviewActivity" android:theme="@7F13000A">
+</activity>
+<activity android:label="@7F120045" android:launchMode="2" android:name="shopping.express.sales.ali.ui.FilterActivity" android:theme="@7F13000B">
+</activity>
+<activity android:label="@7F12004A" android:launchMode="2" android:name="shopping.express.sales.ali.ui.HotProductActivity" android:theme="@7F13000A">
+</activity>
+<activity android:launchMode="2" android:name="shopping.express.sales.ali.ui.NotFoundCategoryActivity" android:theme="@7F13000A">
+</activity>
+<receiver android:enabled="true" android:name="shopping.express.sales.ali.serve.BootReceiver">
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.QUICKBOOT_POWERON">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:enabled="true" android:name="shopping.express.sales.ali.serve.MyPackageReplacedBroadcast">
+<intent-filter>
+<action android:name="android.intent.action.MY_PACKAGE_REPLACED">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name="shopping.express.sales.ali.serve.DailyReminderTask">
+<intent-filter>
+<action android:name=".serve.DailyReminderTask">
+</action>
+</intent-filter>
+</receiver>
+<service android:name="shopping.express.sales.ali.flight.MessagingService">
+<intent-filter>
+<action android:name="com.google.firebase.MESSAGING_EVENT">
+</action>
+</intent-filter>
+</service>
+<meta-data android:name="io.fabric.ApiKey" android:value="02615fdee05e1d57122fbd1a7283c7fc086c07ff">
+</meta-data>
+<activity android:configChanges="0x000004A0" android:name="com.mopub.common.MoPubBrowser" android:theme="@7F13011A">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.mopub.mobileads.MoPubActivity" android:theme="@7F13011A">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.mopub.mobileads.MraidActivity" android:theme="@7F13011A">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.mopub.mobileads.RewardedMraidActivity" android:theme="@7F13011A">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.mopub.common.privacy.ConsentDialogActivity" android:theme="@7F13011A">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.mopub.mobileads.MraidVideoPlayerActivity" android:theme="@7F13011A">
+</activity>
+<meta-data android:name="com.google.android.gms.ads.APPLICATION_ID" android:value="ca-app-pub-4371403291520846~9696473573">
+</meta-data>
+<activity android:configChanges="0x00000FB0" android:exported="false" android:name="com.google.android.gms.ads.AdActivity" android:theme="@7F13010E">
+</activity>
+<meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@7F120112">
+</meta-data>
+<activity android:label="@7F12000F" android:launchMode="2" android:name="shopping.express.sales.ali.ui.SearchActivity" android:parentActivityName="shopping.express.sales.ali.ui.CategoryActivity" android:theme="@7F13000A" android:windowSoftInputMode="0x00000020">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".ui.CategoryActivity">
+</meta-data>
+<intent-filter>
+<action android:name="android.intent.action.SEARCH">
+</action>
+</intent-filter>
+<meta-data android:name="android.app.searchable" android:resource="@7F150001">
+</meta-data>
+</activity>
+<receiver android:exported="true" android:name="com.appsflyer.SingleInstallBroadcastReceiver">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+<activity android:launchMode="2" android:name="shopping.express.sales.ali.ui.OfferActivity" android:theme="@7F13000C">
+</activity>
+<activity android:launchMode="2" android:name="shopping.express.sales.ali.ui.AliFeedOfferActivity" android:theme="@7F13000C">
+</activity>
+<activity android:launchMode="2" android:name="shopping.express.sales.ali.ui.MoPubOfferActivity" android:theme="@7F13000C">
+</activity>
+<activity android:launchMode="2" android:name="shopping.express.sales.ali.ui.AppRatingActivity" android:theme="@7F13000C">
+</activity>
+<meta-data android:name="applovin.sdk.key" android:value="GvDeJS9rAG0BFiKy1arBavWCUQBxf-MxuaZB1k0C-0NDiiAlH0wtwR3OsEKVDgQ5G_GHkHThIsv0T4lr5fh_6m">
+</meta-data>
+<activity android:configChanges="0x00002004" android:name="com.verizon.ads.interstitialvastadapter.VASTActivity" android:theme="@7F130202">
+</activity>
+<activity android:configChanges="0x00002004" android:name="com.verizon.ads.interstitialwebadapter.WebViewActivity" android:theme="@7F130202">
+</activity>
+<activity android:configChanges="0x00000480" android:name="com.verizon.ads.webview.MRAIDExpandedActivity" android:theme="@7F130203">
+</activity>
+<service android:directBootAware="true" android:exported="false" android:name="com.google.firebase.components.ComponentDiscoveryService">
+<meta-data android:name="com.google.firebase.components:com.google.firebase.dynamiclinks.internal.FirebaseDynamicLinkRegistrar" android:value="com.google.firebase.components.ComponentRegistrar">
+</meta-data>
+<meta-data android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar" android:value="com.google.firebase.components.ComponentRegistrar">
+</meta-data>
+<meta-data android:name="com.google.firebase.components:com.google.firebase.ml.naturallanguage.NaturalLanguageRegistrar" android:value="com.google.firebase.components.ComponentRegistrar">
+</meta-data>
+<meta-data android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar" android:value="com.google.firebase.components.ComponentRegistrar">
+</meta-data>
+<meta-data android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar" android:value="com.google.firebase.components.ComponentRegistrar">
+</meta-data>
+<meta-data android:name="com.google.firebase.components:com.google.firebase.ml.naturallanguage.translate.NaturalLanguageTranslateRegistrar" android:value="com.google.firebase.components.ComponentRegistrar">
+</meta-data>
+<meta-data android:name="com.google.firebase.components:com.google.firebase.ml.common.CommonComponentRegistrar" android:value="com.google.firebase.components.ComponentRegistrar">
+</meta-data>
+<meta-data android:name="com.google.firebase.components:com.google.firebase.remoteconfig.RemoteConfigRegistrar" android:value="com.google.firebase.components.ComponentRegistrar">
+</meta-data>
+<meta-data android:name="com.google.firebase.components:com.google.firebase.iid.Registrar" android:value="com.google.firebase.components.ComponentRegistrar">
+</meta-data>
+<meta-data android:name="com.google.firebase.components:com.google.firebase.abt.component.AbtRegistrar" android:value="com.google.firebase.components.ComponentRegistrar">
+</meta-data>
+</service>
+<service android:exported="false" android:name="com.google.firebase.messaging.FirebaseMessagingService">
+<intent-filter android:priority="-500">
+<action android:name="com.google.firebase.MESSAGING_EVENT">
+</action>
+</intent-filter>
+</service>
+<activity android:configChanges="0x00000580" android:exported="false" android:hardwareAccelerated="true" android:name="jp.maio.sdk.android.AdFullscreenActivity" android:theme="@android:01030007">
+</activity>
+<activity android:configChanges="0x000004A0" android:exported="false" android:name="jp.maio.sdk.android.HtmlBasedAdActivity" android:theme="@android:01030007">
+</activity>
+<service android:enabled="true" android:exported="true" android:name="com.yandex.metrica.MetricaService" android:process=":Metrica">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="com.yandex.metrica.IMetricaService">
+</action>
+<data android:scheme="metrica">
+</data>
+</intent-filter>
+<meta-data android:name="metrica:api:level" android:value="85">
+</meta-data>
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.yandex.metrica.ConfigurationService" android:process=":Metrica">
+<meta-data android:name="metrica:configuration:api:level" android:value="3">
+</meta-data>
+<intent-filter>
+<action android:name="com.yandex.metrica.configuration.ACTION_INIT">
+</action>
+</intent-filter>
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.yandex.metrica.ConfigurationJobService" android:permission="android.permission.BIND_JOB_SERVICE" android:process=":Metrica">
+</service>
+<receiver android:enabled="true" android:exported="true" android:name="com.yandex.metrica.MetricaEventHandler">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:enabled="true" android:exported="true" android:name="com.yandex.metrica.ConfigurationServiceReceiver" android:process=":Metrica">
+<intent-filter>
+<action android:name="com.yandex.metrica.configuration.service.PLC">
+</action>
+</intent-filter>
+</receiver>
+<uses-library android:name="org.apache.http.legacy" android:required="false">
+</uses-library>
+<activity android:configChanges="0x00000FB0" android:name="com.yandex.mobile.ads.AdActivity">
+</activity>
+<meta-data android:name="com.bumptech.glide.integration.okhttp3.OkHttpGlideModule" android:value="GlideModule">
+</meta-data>
+<provider android:authorities="shopping.express.sales.ali.crashlyticsinitprovider" android:exported="false" android:initOrder="90" android:name="com.crashlytics.android.CrashlyticsInitProvider">
+</provider>
+<provider android:authorities="shopping.express.sales.ali.FacebookInitProvider" android:exported="false" android:name="com.facebook.internal.FacebookInitProvider">
+</provider>
+<receiver android:exported="false" android:name="com.facebook.CurrentAccessTokenExpirationBroadcastReceiver">
+<intent-filter>
+<action android:name="com.facebook.sdk.ACTION_CURRENT_ACCESS_TOKEN_CHANGED">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:exported="true" android:name="com.facebook.CampaignTrackingReceiver" android:permission="android.permission.INSTALL_PACKAGES">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:exported="true" android:name="com.appnext.tracking.ReferralReceiver">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+<activity android:configChanges="0x00000DA0" android:launchMode="1" android:name="com.vungle.warren.ui.VungleActivity" android:theme="@android:01030007">
+</activity>
+<activity android:configChanges="0x00000DA0" android:hardwareAccelerated="true" android:launchMode="1" android:name="com.vungle.warren.ui.VungleFlexViewActivity" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x00000DA0" android:launchMode="1" android:name="com.vungle.warren.ui.VungleWebViewActivity">
+</activity>
+<receiver android:enabled="false" android:name="com.vungle.warren.NetworkProviderReceiver">
+<intent-filter>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</receiver>
+<service android:exported="false" android:name="androidx.room.MultiInstanceInvalidationService">
+</service>
+<activity android:configChanges="0x00000480" android:hardwareAccelerated="true" android:name="com.ironsource.sdk.controller.ControllerActivity">
+</activity>
+<activity android:configChanges="0x00000480" android:hardwareAccelerated="true" android:name="com.ironsource.sdk.controller.InterstitialActivity" android:theme="@android:0103000F">
+</activity>
+<activity android:configChanges="0x00000480" android:hardwareAccelerated="true" android:name="com.ironsource.sdk.controller.OpenUrlActivity" android:theme="@android:0103000F">
+</activity>
+<activity android:configChanges="0x40000FFF" android:hardwareAccelerated="true" android:name="com.unity3d.services.ads.adunit.AdUnitActivity" android:theme="@android:01030007">
+</activity>
+<activity android:configChanges="0x40000FFF" android:hardwareAccelerated="true" android:name="com.unity3d.services.ads.adunit.AdUnitTransparentActivity" android:theme="@android:01030011">
+</activity>
+<activity android:configChanges="0x40000FFF" android:hardwareAccelerated="false" android:name="com.unity3d.services.ads.adunit.AdUnitTransparentSoftwareActivity" android:theme="@android:01030011">
+</activity>
+<activity android:configChanges="0x40000FFF" android:hardwareAccelerated="false" android:name="com.unity3d.services.ads.adunit.AdUnitSoftwareActivity" android:theme="@android:01030007">
+</activity>
+<activity android:configChanges="0x00000D80" android:hardwareAccelerated="true" android:name="com.applovin.adview.AppLovinInterstitialActivity" android:screenOrientation="3">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.applovin.sdk.AppLovinWebViewActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.applovin.mediation.MaxDebuggerActivity" android:theme="@7F1302FD">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.applovin.mediation.MaxDebuggerDetailActivity" android:theme="@7F1302FD">
+</activity>
+<service android:exported="false" android:name="com.applovin.impl.sdk.utils.AppKilledService" android:stopWithTask="false">
+</service>
+<activity android:configChanges="0x000004A0" android:hardwareAccelerated="true" android:name="com.adcolony.sdk.AdColonyInterstitialActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:hardwareAccelerated="true" android:name="com.adcolony.sdk.AdColonyAdViewActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:exported="false" android:name="com.facebook.ads.AudienceNetworkActivity" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x000004A0" android:exported="false" android:name="com.facebook.ads.internal.ipc.RemoteANActivity" android:process=":adnw" android:theme="@android:01030010">
+</activity>
+<service android:exported="false" android:name="com.facebook.ads.internal.ipc.AdsProcessPriorityService">
+</service>
+<service android:exported="false" android:name="com.facebook.ads.internal.ipc.AdsMessengerService" android:process=":adnw">
+</service>
+<provider android:authorities="shopping.express.sales.ali.AudienceNetworkContentProvider" android:exported="false" android:name="com.facebook.ads.AudienceNetworkContentProvider">
+</provider>
+<service android:exported="false" android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery">
+<meta-data android:name="backend:com.google.android.datatransport.cct.CctBackendFactory" android:value="cct">
+</meta-data>
+</service>
+<service android:exported="false" android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<receiver android:exported="false" android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver">
+</receiver>
+<activity android:configChanges="0x00000090" android:exported="true" android:name="com.mintegral.msdk.activity.MTGCommonActivity" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.mintegral.msdk.reward.player.MTGRewardVideoActivity" android:theme="@7F1302FF">
+</activity>
+<provider android:authorities="shopping.express.sales.ali.FlurryContentProvider" android:exported="false" android:name="com.flurry.android.agent.FlurryContentProvider">
+</provider>
+<receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementReceiver">
+</receiver>
+<receiver android:enabled="true" android:exported="true" android:name="com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver" android:permission="android.permission.INSTALL_PACKAGES">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementService">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementJobService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<receiver android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+</intent-filter>
+</receiver>
+<activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:01030010">
+</activity>
+<provider android:authorities="shopping.express.sales.ali.firebaseinitprovider" android:exported="false" android:initOrder="100" android:name="com.google.firebase.provider.FirebaseInitProvider">
+</provider>
+<provider android:authorities="shopping.express.sales.ali.mobileadsinitprovider" android:exported="false" android:initOrder="100" android:name="com.google.android.gms.ads.MobileAdsInitProvider">
+</provider>
+<meta-data android:name="com.google.android.gms.version" android:value="@7F0B000A">
+</meta-data>
+<activity android:configChanges="0x00000FB0" android:name="com.my.target.common.MyTargetActivity">
+</activity>
+<provider android:authorities="shopping.express.sales.ali.lifecycle-process" android:exported="false" android:multiprocess="true" android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer">
+</provider>
+<meta-data android:name="com.android.vending.derived.apk.id" android:value="1">
+</meta-data>
+</application>
+</manifest>

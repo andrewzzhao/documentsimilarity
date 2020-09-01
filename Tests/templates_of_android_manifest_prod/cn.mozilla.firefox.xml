@@ -1,0 +1,542 @@
+<?xml version="1.0" ?><manifest android:installLocation="1" android:sharedUserId="cn.mozilla.firefox.sharedID" android:versionCode="2015574865" android:versionName="61.0.2" package="cn.mozilla.firefox" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="16" android:targetSdkVersion="23">
+</uses-sdk>
+<uses-permission android:name="android.permission.GET_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.MANAGE_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="android.permission.USE_CREDENTIALS">
+</uses-permission>
+<uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_SYNC_STATS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_SYNC_SETTINGS">
+</uses-permission>
+<permission android:name="cn.mozilla.firefox_fxaccount.permission.PER_ACCOUNT_TYPE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="cn.mozilla.firefox_fxaccount.permission.PER_ACCOUNT_TYPE">
+</uses-permission>
+<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE">
+</uses-permission>
+<permission android:name="cn.mozilla.firefox.permission.C2D_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="cn.mozilla.firefox.permission.C2D_MESSAGE">
+</uses-permission>
+<uses-permission android:name="com.samsung.android.providers.context.permission.WRITE_USE_APP_FEATURE_SURVEY">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT">
+</uses-permission>
+<uses-permission android:name="com.android.launcher.permission.UNINSTALL_SHORTCUT">
+</uses-permission>
+<uses-permission android:name="com.android.browser.permission.READ_HISTORY_BOOKMARKS">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION">
+</uses-permission>
+<uses-feature android:name="android.hardware.location" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.location.gps" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.touchscreen">
+</uses-feature>
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW">
+</uses-permission>
+<uses-permission android:name="android.permission.NFC">
+</uses-permission>
+<uses-feature android:name="android.hardware.nfc" android:required="false">
+</uses-feature>
+<uses-permission android:name="android.permission.RECORD_AUDIO">
+</uses-permission>
+<uses-feature android:name="android.hardware.audio.low_latency" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.camera.any" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.microphone" android:required="false">
+</uses-feature>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-feature android:name="android.hardware.camera" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.camera.autofocus" android:required="false">
+</uses-feature>
+<uses-feature android:glEsVersion="0x00020000" android:required="true">
+</uses-feature>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS">
+</uses-permission>
+<application android:allowBackup="false" android:hardwareAccelerated="true" android:icon="@7F07016A" android:label="@7F0E0167" android:logo="@7F070179" android:name="org.mozilla.gecko.GeckoApplication" android:supportsRtl="true">
+<meta-data android:name="com.sec.android.support.multiwindow" android:value="true">
+</meta-data>
+<meta-data android:name="android.max_aspect" android:value="2.100000">
+</meta-data>
+<service android:exported="false" android:name="org.mozilla.gecko.RemotePresentationService">
+</service>
+<activity android:excludeFromRecents="true" android:exported="true" android:name="org.mozilla.gecko.LauncherActivity" android:relinquishTaskIdentity="true" android:taskAffinity="" android:theme="@android:01030010">
+</activity>
+<activity-alias android:label="Firefox" android:name=".App" android:targetActivity="org.mozilla.gecko.LauncherActivity">
+<intent-filter android:priority="999">
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+<category android:name="android.intent.category.MULTIWINDOW_LAUNCHER">
+</category>
+<category android:name="android.intent.category.APP_BROWSER">
+</category>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="http">
+</data>
+<data android:scheme="https">
+</data>
+<data android:scheme="about">
+</data>
+<data android:scheme="javascript">
+</data>
+<data android:scheme="firefox">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:scheme="file">
+</data>
+<data android:scheme="http">
+</data>
+<data android:scheme="https">
+</data>
+<data android:mimeType="text/html">
+</data>
+<data android:mimeType="text/plain">
+</data>
+<data android:mimeType="application/xhtml+xml">
+</data>
+<data android:mimeType="image/svg+xml">
+</data>
+</intent-filter>
+<meta-data android:name="com.sec.minimode.icon.portrait.normal" android:resource="@7F07016A">
+</meta-data>
+<meta-data android:name="com.sec.minimode.icon.landscape.normal" android:resource="@7F07016A">
+</meta-data>
+<intent-filter>
+<action android:name="org.mozilla.gecko.ACTION_ALERT_CALLBACK">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="org.mozilla.gecko.GUEST_SESSION_INPROGRESS">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="org.mozilla.gecko.UPDATE">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.WEB_SEARCH">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="">
+</data>
+<data android:scheme="http">
+</data>
+<data android:scheme="https">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.ASSIST">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+<meta-data android:name="com.android.systemui.action_assist_icon" android:resource="@7F090003">
+</meta-data>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:scheme="file">
+</data>
+<data android:scheme="http">
+</data>
+<data android:scheme="https">
+</data>
+<data android:mimeType="application/x-xpinstall">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:host="">
+</data>
+<data android:scheme="file">
+</data>
+<data android:pathPattern=".*\.xpi">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.nfc.action.NDEF_DISCOVERED">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:scheme="http">
+</data>
+<data android:scheme="https">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="org.mozilla.gecko.DEBUG">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity-alias>
+<activity android:configChanges="0x000004B3" android:exported="true" android:label="@7F0E0080" android:launchMode="2" android:name="org.mozilla.gecko.compatiblemode.activities.CompatibleModeActivity" android:taskAffinity="org.mozilla.gecko.WEBAPP" android:theme="@7F0F00AD" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:alwaysRetainTaskState="true" android:configChanges="0x00002DB7" android:exported="true" android:label="@7F0E0167" android:launchMode="2" android:name="org.mozilla.gecko.BrowserApp" android:taskAffinity="cn.mozilla.firefox.BROWSER" android:theme="@7F0F00AD" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity-alias android:exported="true" android:name="com.android.internal.app.ResolverActivity" android:targetActivity="org.mozilla.gecko.BrowserApp">
+</activity-alias>
+<service android:name="org.mozilla.gecko.GeckoService">
+</service>
+<activity android:launchMode="1" android:name="org.mozilla.gecko.trackingprotection.TrackingProtectionPrompt" android:theme="@7F0F00BB">
+</activity>
+<activity android:launchMode="1" android:name="org.mozilla.gecko.promotion.SimpleHelperUI" android:theme="@7F0F00BB">
+</activity>
+<activity android:launchMode="1" android:name="org.mozilla.gecko.promotion.HomeScreenPrompt" android:theme="@7F0F00BB">
+</activity>
+<service android:name="org.mozilla.gecko.tabqueue.TabQueueService">
+</service>
+<activity android:launchMode="1" android:name="org.mozilla.gecko.tabqueue.TabQueuePrompt" android:theme="@7F0F00BB">
+</activity>
+<receiver android:name="org.mozilla.gecko.restrictions.RestrictionProvider">
+<intent-filter>
+<action android:name="android.intent.action.GET_RESTRICTION_ENTRIES">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name="org.mozilla.gecko.GeckoUpdateReceiver">
+<intent-filter>
+<action android:name="cn.mozilla.firefox.CHECK_UPDATE_RESULT">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:exported="false" android:name="org.mozilla.gecko.GeckoMessageReceiver">
+</receiver>
+<receiver android:exported="true" android:name="org.mozilla.gecko.distribution.ReferrerReceiver">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+<service android:exported="false" android:name="org.mozilla.gecko.Restarter" android:process="cn.mozilla.firefox.Restarter">
+</service>
+<service android:exported="false" android:name="org.mozilla.gecko.media.MediaControlService" android:stopWithTask="true">
+</service>
+<receiver android:exported="false" android:name="org.mozilla.gecko.notifications.WhatsNewReceiver">
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_REPLACED">
+</action>
+<data android:path="org.mozilla.gecko" android:scheme="package">
+</data>
+</intent-filter>
+</receiver>
+<receiver android:exported="false" android:name="org.mozilla.gecko.notifications.NotificationReceiver">
+<intent-filter>
+<action android:name="cn.mozilla.firefox.helperBroadcastAction">
+</action>
+<action android:name="cn.mozilla.firefox.NOTIFICATION_CLICK">
+</action>
+<action android:name="cn.mozilla.firefox.NOTIFICATION_CLOSE">
+</action>
+<data android:scheme="moz-notification">
+</data>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</receiver>
+<meta-data android:name="com.baidu.lbsapi.API_KEY" android:value="4XxlgLEXgFPU8oR8Kj7xipyfkIoSD1Vx">
+</meta-data>
+<service android:enabled="true" android:name="com.baidu.location.f" android:process=":remote">
+</service>
+<activity android:clearTaskOnLaunch="true" android:configChanges="0x00002004" android:label="@7F0E0107" android:name="org.mozilla.gecko.fxa.activities.FxAccountStatusActivity" android:taskAffinity="cn.mozilla.firefox.FXA" android:theme="@7F0F00AB" android:windowSoftInputMode="0x00000010">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="cn.mozilla.firefox.ACTION_FXA_STATUS">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<receiver android:name="org.mozilla.gecko.fxa.receivers.FxAccountUpgradeReceiver">
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_REPLACED">
+</action>
+<data android:scheme="package">
+</data>
+</intent-filter>
+</receiver>
+<activity android:exported="false" android:name="org.mozilla.gecko.fxa.activities.FxAccountGetStartedActivityWeb">
+<intent-filter>
+<action android:name="cn.mozilla.firefox.ACTION_FXA_GET_STARTED">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:name="org.mozilla.gecko.fxa.activities.FxAccountUpdateCredentialsActivityWeb">
+<intent-filter>
+<action android:name="cn.mozilla.firefox.ACTION_FXA_UPDATE_CREDENTIALS">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:name="org.mozilla.gecko.fxa.activities.FxAccountFinishMigratingActivityWeb">
+<intent-filter>
+<action android:name="cn.mozilla.firefox.ACTION_FXA_FINISH_MIGRATING">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:name="org.mozilla.gecko.fxa.activities.FxAccountConfirmAccountActivityWeb">
+<intent-filter>
+<action android:name="cn.mozilla.firefox.ACTION_FXA_CONFIRM_ACCOUNT">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:excludeFromRecents="true" android:exported="false" android:icon="@7F0700D7" android:label="@7F0E00A7" android:name="org.mozilla.gecko.CrashReporter" android:process="cn.mozilla.firefox.CrashReporter" android:theme="@7F0F00AC">
+<intent-filter>
+<action android:name="org.mozilla.gecko.reportCrash">
+</action>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x00002484" android:excludeFromRecents="true" android:name="org.mozilla.gecko.preferences.GeckoPreferences" android:theme="@7F0F00AF">
+</activity>
+<provider android:authorities="cn.mozilla.firefox.db.browser" android:exported="false" android:name="org.mozilla.gecko.db.BrowserProvider">
+</provider>
+<provider android:authorities="cn.mozilla.firefox.partnerbookmarks" android:exported="false" android:name="org.mozilla.gecko.distribution.PartnerBookmarksProviderProxy">
+</provider>
+<activity android:configChanges="0x00002037" android:label="@7F0E0183" android:launchMode="1" android:name="org.mozilla.gecko.overlays.ui.ShareDialog" android:theme="@7F0F00BB" android:windowSoftInputMode="0x00000013">
+<intent-filter>
+<action android:name="android.intent.action.SEND">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:mimeType="text/plain">
+</data>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x00002DB7" android:name="org.mozilla.gecko.customtabs.CustomTabsActivity" android:theme="@7F0F00BA" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="org.mozilla.gecko.webapps.WebAppActivity" android:theme="@7F0F0179">
+</activity>
+<activity android:configChanges="0x00002DB7" android:exported="true" android:label="WebApp" android:launchMode="2" android:name="org.mozilla.gecko.webapps.WebApps$WebApp0" android:taskAffinity="org.mozilla.gecko.webapps.WebApps0" android:theme="@7F0F00AD" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:configChanges="0x00002DB7" android:exported="true" android:label="WebApp" android:launchMode="2" android:name="org.mozilla.gecko.webapps.WebApps$WebApp1" android:taskAffinity="org.mozilla.gecko.webapps.WebApps1" android:theme="@7F0F00AD" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:configChanges="0x00002DB7" android:exported="true" android:label="WebApp" android:launchMode="2" android:name="org.mozilla.gecko.webapps.WebApps$WebApp2" android:taskAffinity="org.mozilla.gecko.webapps.WebApps2" android:theme="@7F0F00AD" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:configChanges="0x00002DB7" android:exported="true" android:label="WebApp" android:launchMode="2" android:name="org.mozilla.gecko.webapps.WebApps$WebApp3" android:taskAffinity="org.mozilla.gecko.webapps.WebApps3" android:theme="@7F0F00AD" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:configChanges="0x00002DB7" android:exported="true" android:label="WebApp" android:launchMode="2" android:name="org.mozilla.gecko.webapps.WebApps$WebApp4" android:taskAffinity="org.mozilla.gecko.webapps.WebApps4" android:theme="@7F0F00AD" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:configChanges="0x00002DB7" android:exported="true" android:label="WebApp" android:launchMode="2" android:name="org.mozilla.gecko.webapps.WebApps$WebApp5" android:taskAffinity="org.mozilla.gecko.webapps.WebApps5" android:theme="@7F0F00AD" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:configChanges="0x00002DB7" android:exported="true" android:label="WebApp" android:launchMode="2" android:name="org.mozilla.gecko.webapps.WebApps$WebApp6" android:taskAffinity="org.mozilla.gecko.webapps.WebApps6" android:theme="@7F0F00AD" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:configChanges="0x00002DB7" android:exported="true" android:label="WebApp" android:launchMode="2" android:name="org.mozilla.gecko.webapps.WebApps$WebApp7" android:taskAffinity="org.mozilla.gecko.webapps.WebApps7" android:theme="@7F0F00AD" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:configChanges="0x00002DB7" android:exported="true" android:label="WebApp" android:launchMode="2" android:name="org.mozilla.gecko.webapps.WebApps$WebApp8" android:taskAffinity="org.mozilla.gecko.webapps.WebApps8" android:theme="@7F0F00AD" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:configChanges="0x00002DB7" android:exported="true" android:label="WebApp" android:launchMode="2" android:name="org.mozilla.gecko.webapps.WebApps$WebApp9" android:taskAffinity="org.mozilla.gecko.webapps.WebApps9" android:theme="@7F0F00AD" android:windowSoftInputMode="0x00000010">
+</activity>
+<service android:name="org.mozilla.gecko.overlays.service.OverlayActionService">
+</service>
+<provider android:authorities="cn.mozilla.firefox.db.passwords" android:exported="false" android:label="@7F0E0255" android:name="org.mozilla.gecko.db.PasswordsProvider" android:process="cn.mozilla.firefox.PasswordsProvider">
+</provider>
+<provider android:authorities="cn.mozilla.firefox.db.logins" android:exported="false" android:label="@7F0E0255" android:name="org.mozilla.gecko.db.LoginsProvider">
+</provider>
+<provider android:authorities="cn.mozilla.firefox.db.formhistory" android:exported="false" android:label="@7F0E0254" android:name="org.mozilla.gecko.db.FormHistoryProvider">
+</provider>
+<provider android:authorities="cn.mozilla.firefox.profiles" android:exported="false" android:name="org.mozilla.gecko.GeckoProfilesProvider">
+</provider>
+<provider android:authorities="cn.mozilla.firefox.db.tabs" android:exported="false" android:label="@7F0E0256" android:name="org.mozilla.gecko.db.TabsProvider">
+</provider>
+<provider android:authorities="cn.mozilla.firefox.db.home" android:exported="false" android:name="org.mozilla.gecko.db.HomeProvider">
+</provider>
+<provider android:authorities="cn.mozilla.firefox.db.searchhistory" android:exported="false" android:name="org.mozilla.gecko.db.SearchHistoryProvider">
+</provider>
+<service android:exported="false" android:name="org.mozilla.gecko.updater.UpdateService" android:process="cn.mozilla.firefox.UpdateService">
+</service>
+<service android:exported="false" android:name="org.mozilla.gecko.notifications.NotificationService">
+</service>
+<service android:exported="false" android:name="org.mozilla.gecko.dlc.DownloadContentService">
+</service>
+<service android:exported="false" android:name="org.mozilla.gecko.cleanup.FileCleanupService">
+</service>
+<receiver android:exported="false" android:name="org.mozilla.gecko.mma.PackageAddedReceiver">
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_ADDED">
+</action>
+<data android:scheme="package">
+</data>
+</intent-filter>
+</receiver>
+<receiver android:exported="false" android:name="org.mozilla.gecko.PackageReplacedReceiver">
+<intent-filter>
+<action android:name="android.intent.action.MY_PACKAGE_REPLACED">
+</action>
+</intent-filter>
+</receiver>
+<service android:exported="false" android:name="org.mozilla.gecko.telemetry.TelemetryUploadService">
+</service>
+<service android:exported="true" android:name="org.mozilla.gecko.customtabs.GeckoCustomTabsService">
+<intent-filter>
+<action android:name="android.support.customtabs.action.CustomTabsService">
+</action>
+</intent-filter>
+</service>
+<service android:exported="true" android:name="org.mozilla.gecko.fxa.authenticator.FxAccountAuthenticatorService">
+<intent-filter>
+<action android:name="android.accounts.AccountAuthenticator">
+</action>
+</intent-filter>
+<meta-data android:name="android.accounts.AccountAuthenticator" android:resource="@7F110000">
+</meta-data>
+</service>
+<service android:exported="false" android:name="org.mozilla.gecko.fxa.receivers.FxAccountDeletedService">
+</service>
+<service android:exported="false" android:name="org.mozilla.gecko.fxa.sync.FxAccountProfileService">
+</service>
+<service android:exported="false" android:name="org.mozilla.gecko.fxa.sync.FxAccountSyncService">
+<intent-filter>
+<action android:name="android.content.SyncAdapter">
+</action>
+</intent-filter>
+<meta-data android:name="android.content.SyncAdapter" android:resource="@7F110003">
+</meta-data>
+</service>
+<service android:exported="false" android:name="org.mozilla.gecko.tabqueue.TabReceivedService">
+</service>
+<service android:label="stumbler" android:name="org.mozilla.mozstumbler.service.stumblerthread.StumblerService">
+</service>
+<receiver android:name="org.mozilla.mozstumbler.service.uploadthread.UploadAlarmReceiver">
+</receiver>
+<service android:name="org.mozilla.mozstumbler.service.uploadthread.UploadAlarmReceiver$UploadAlarmService">
+</service>
+<receiver android:exported="false" android:name="org.mozilla.mozstumbler.service.mainthread.SafeReceiver">
+<intent-filter>
+<action android:name="org.mozilla.gecko.STUMBLER_REGISTER_LOCAL_LISTENER">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:exported="true" android:name="org.mozilla.mozstumbler.service.mainthread.SystemReceiver">
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+</intent-filter>
+</receiver>
+<service android:exported="false" android:name="org.mozilla.gecko.gcm.GcmInstanceIDListenerService">
+<intent-filter>
+<action android:name="com.google.android.gms.iid.InstanceID">
+</action>
+</intent-filter>
+</service>
+<receiver android:exported="true" android:name="com.google.android.gms.gcm.GcmReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+<action android:name="com.google.android.c2dm.intent.REGISTRATION">
+</action>
+<category android:name="cn.mozilla.firefox">
+</category>
+</intent-filter>
+</receiver>
+<service android:exported="false" android:name="org.mozilla.gecko.gcm.GcmMessageListenerService">
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+</intent-filter>
+</service>
+<service android:enabled="true" android:exported="false" android:isolatedProcess="false" android:name="org.mozilla.gecko.media.MediaManager" android:process=":media">
+</service>
+<service android:enabled="true" android:exported="false" android:isolatedProcess="false" android:name="org.mozilla.gecko.process.GeckoServiceChildProcess$geckomediaplugin" android:process=":geckomediaplugin">
+</service>
+<service android:enabled="true" android:exported="false" android:isolatedProcess="false" android:name="org.mozilla.gecko.process.GeckoServiceChildProcess$tab" android:process=":tab">
+</service>
+<service android:enabled="true" android:exported="false" android:isolatedProcess="false" android:name="org.mozilla.gecko.gfx.SurfaceAllocatorService">
+</service>
+<meta-data android:name="com.google.android.gms.version" android:value="@7F090007">
+</meta-data>
+</application>
+</manifest>

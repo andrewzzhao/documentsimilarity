@@ -1,0 +1,640 @@
+<?xml version="1.0" ?><manifest android:versionCode="101" android:versionName="1.0.1" package="com.er.pocket.shopping" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="15" android:targetSdkVersion="26">
+</uses-sdk>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES">
+</uses-permission>
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-feature android:name="android.hardware.location.gps">
+</uses-feature>
+<uses-permission android:name="android.permission.WRITE_SETTINGS">
+</uses-permission>
+<application android:allowBackup="false" android:icon="@7F060004" android:label="@7F070000" android:name="co.tiangongsky.bxsdkdemo.App" android:supportsRtl="true" android:theme="@7F080000">
+<activity android:name="co.tiangongsky.bxsdkdemo.ui.start.StartActivity" android:screenOrientation="1" android:theme="@7F080001">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:host="co.bxvip" android:scheme="bxvip.open">
+</data>
+</intent-filter>
+</activity>
+<activity android:name="co.tiangongsky.bxsdkdemo.ui.main.MainTestActivity">
+</activity>
+<activity android:name="co.tiangongsky.bxsdkdemo.SlayActivity">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:name="co.tiangongsky.bxsdkdemo.MainActivity">
+</activity>
+<activity android:name="co.tiangongsky.bxsdkdemo.DownLoadActivity">
+</activity>
+<receiver android:enabled="true" android:exported="false" android:name="co.tiangongsky.bxsdkdemo.jpush.JPushReceiver">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.REGISTRATION">
+</action>
+<action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED">
+</action>
+<action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED">
+</action>
+<action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED">
+</action>
+<action android:name="cn.jpush.android.intent.CONNECTION">
+</action>
+<category android:name="com.er.pocket.shopping">
+</category>
+</intent-filter>
+</receiver>
+<service android:enabled="true" android:exported="true" android:name="cn.jpush.android.service.DaemonService">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.DaemonService">
+</action>
+<category android:name="com.er.pocket.shopping">
+</category>
+</intent-filter>
+</service>
+<service android:name="cn.jpush.android.service.PushService" android:process=":multiprocess">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.REGISTER">
+</action>
+<action android:name="cn.jpush.android.intent.REPORT">
+</action>
+<action android:name="cn.jpush.android.intent.PushService">
+</action>
+<action android:name="cn.jpush.android.intent.PUSH_TIME">
+</action>
+</intent-filter>
+</service>
+<service android:name="com.qihoo360.replugin.sdk.log.LogService">
+</service>
+<service android:name="com.qihoo360.replugin.sdk.log.GrayLogService">
+</service>
+<service android:name="com.liulishuo.filedownloader.services.FileDownloadService$SharedMainProcessService">
+</service>
+<service android:name="com.liulishuo.filedownloader.services.FileDownloadService$SeparateProcessService" android:process=":filedownloader">
+</service>
+<provider android:authorities="com.er.pocket.shopping.fileProvider" android:exported="false" android:grantUriPermissions="true" android:name="android.support.v4.content.FileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F0A0000">
+</meta-data>
+</provider>
+<provider android:authorities="com.er.pocket.shopping.loader.p.mainN1" android:exported="false" android:name="com.qihoo360.replugin.component.process.ProcessPitProviderUI">
+</provider>
+<provider android:authorities="com.er.pocket.shopping.loader.p.prN1" android:exported="false" android:name="com.er.pocket.shopping.loader.p.ProviderN1">
+</provider>
+<service android:exported="false" android:name="com.er.pocket.shopping.loader.s.ServiceN1">
+</service>
+<provider android:authorities="com.er.pocket.shopping.loader.p.main0" android:exported="false" android:name="com.qihoo360.replugin.component.process.ProcessPitProviderLoader0" android:process=":loader0">
+</provider>
+<provider android:authorities="com.er.pocket.shopping.loader.p.pr0" android:exported="false" android:name="com.er.pocket.shopping.loader.p.Provider0" android:process=":loader0">
+</provider>
+<service android:exported="false" android:name="com.er.pocket.shopping.loader.s.Service0" android:process=":loader0">
+</service>
+<activity android:configChanges="0x000004B0" android:exported="false" android:launchMode="2" android:name="com.er.pocket.shopping.loader.a.Activity0_singleTask1" android:process=":loader0" android:screenOrientation="1" android:taskAffinity=":loader0" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:launchMode="3" android:name="com.er.pocket.shopping.loader.a.Activity0_singleInstance1" android:process=":loader0" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:name="com.er.pocket.shopping.loader.a.Activity0_task" android:process=":loader0" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:name="com.er.pocket.shopping.loader.a.Activity0_fullscreen" android:process=":loader0" android:screenOrientation="1" android:theme="@android:01030007">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:name="com.er.pocket.shopping.loader.a.Activity0_translucent" android:process=":loader0" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:name="com.er.pocket.shopping.loader.a.Activity0_translucent_fullscreen" android:process=":loader0" android:screenOrientation="1" android:theme="@android:01030011">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:name="com.er.pocket.shopping.loader.a.Activity0_dialog" android:process=":loader0" android:screenOrientation="1" android:theme="@android:0103000B">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:name="com.er.pocket.shopping.loader.a.Activity0" android:process=":loader0" android:screenOrientation="1" android:taskAffinity=":loader0" android:theme="@android:01030006">
+</activity>
+<provider android:authorities="com.er.pocket.shopping.loader.p.main1" android:exported="false" android:name="com.qihoo360.replugin.component.process.ProcessPitProviderLoader1" android:process=":loader1">
+</provider>
+<provider android:authorities="com.er.pocket.shopping.loader.p.pr1" android:exported="false" android:name="com.er.pocket.shopping.loader.p.Provider1" android:process=":loader1">
+</provider>
+<service android:exported="false" android:name="com.er.pocket.shopping.loader.s.Service1" android:process=":loader1">
+</service>
+<activity android:configChanges="0x000004B0" android:exported="false" android:launchMode="2" android:name="com.er.pocket.shopping.loader.a.Activity1_singleTask1" android:process=":loader1" android:screenOrientation="1" android:taskAffinity=":loader1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:launchMode="3" android:name="com.er.pocket.shopping.loader.a.Activity1_singleInstance1" android:process=":loader1" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:name="com.er.pocket.shopping.loader.a.Activity1_task" android:process=":loader1" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:name="com.er.pocket.shopping.loader.a.Activity1_fullscreen" android:process=":loader1" android:screenOrientation="1" android:theme="@android:01030007">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:name="com.er.pocket.shopping.loader.a.Activity1_translucent" android:process=":loader1" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:name="com.er.pocket.shopping.loader.a.Activity1_translucent_fullscreen" android:process=":loader1" android:screenOrientation="1" android:theme="@android:01030011">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:name="com.er.pocket.shopping.loader.a.Activity1_dialog" android:process=":loader1" android:screenOrientation="1" android:theme="@android:0103000B">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:name="com.er.pocket.shopping.loader.a.Activity1" android:process=":loader1" android:screenOrientation="1" android:taskAffinity=":loader1" android:theme="@android:01030006">
+</activity>
+<provider android:authorities="com.er.pocket.shopping.Plugin.NP.UIP" android:exported="false" android:name="com.qihoo360.replugin.component.provider.PluginPitProviderUI">
+</provider>
+<service android:name="com.qihoo360.replugin.component.service.server.PluginPitServiceUI">
+</service>
+<provider android:authorities="com.er.pocket.shopping.loader.p.pip" android:exported="false" android:name="com.qihoo360.replugin.packages.PluginFastInstallProvider">
+</provider>
+<provider android:authorities="com.er.pocket.shopping.updateFileProvider" android:exported="false" android:grantUriPermissions="true" android:name="com.maning.updatelibrary.MNUpdateApkFileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F0A0001">
+</meta-data>
+</provider>
+<provider android:authorities="com.er.pocket.shopping.loader.p.main" android:exported="false" android:name="com.qihoo360.replugin.component.process.ProcessPitProviderPersist" android:process=":GuardService">
+</provider>
+<provider android:authorities="com.er.pocket.shopping.Plugin.NP.PSP" android:exported="false" android:name="com.qihoo360.replugin.component.provider.PluginPitProviderPersist" android:process=":GuardService">
+</provider>
+<provider android:authorities="com.er.pocket.shopping.svcmanager" android:exported="false" android:multiprocess="false" android:name="com.qihoo360.mobilesafe.svcmanager.ServiceProvider" android:process=":GuardService">
+</provider>
+<service android:name="com.qihoo360.replugin.component.service.server.PluginPitServiceGuard" android:process=":GuardService">
+</service>
+<activity android:configChanges="0x000004B0" android:exported="false" android:name="com.er.pocket.shopping.loader.a.ActivityN1NRTS0" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:name="com.er.pocket.shopping.loader.a.ActivityN1NRTS1" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:launchMode="1" android:name="com.er.pocket.shopping.loader.a.ActivityN1STPTS0" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:launchMode="1" android:name="com.er.pocket.shopping.loader.a.ActivityN1STPTS1" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:launchMode="2" android:name="com.er.pocket.shopping.loader.a.ActivityN1STTS0" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:launchMode="2" android:name="com.er.pocket.shopping.loader.a.ActivityN1STTS1" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:launchMode="3" android:name="com.er.pocket.shopping.loader.a.ActivityN1SITS0" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:launchMode="3" android:name="com.er.pocket.shopping.loader.a.ActivityN1SITS1" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:launchMode="3" android:name="com.er.pocket.shopping.loader.a.ActivityN1SITS2" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:name="com.er.pocket.shopping.loader.a.ActivityN1NRNTS0" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:name="com.er.pocket.shopping.loader.a.ActivityN1NRNTS1" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:name="com.er.pocket.shopping.loader.a.ActivityN1NRNTS2" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:name="com.er.pocket.shopping.loader.a.ActivityN1NRNTS3" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:name="com.er.pocket.shopping.loader.a.ActivityN1NRNTS4" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:name="com.er.pocket.shopping.loader.a.ActivityN1NRNTS5" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:launchMode="1" android:name="com.er.pocket.shopping.loader.a.ActivityN1STPNTS0" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:launchMode="1" android:name="com.er.pocket.shopping.loader.a.ActivityN1STPNTS1" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:launchMode="2" android:name="com.er.pocket.shopping.loader.a.ActivityN1STNTS0" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:launchMode="2" android:name="com.er.pocket.shopping.loader.a.ActivityN1STNTS1" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:launchMode="2" android:name="com.er.pocket.shopping.loader.a.ActivityN1STNTS2" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:launchMode="3" android:name="com.er.pocket.shopping.loader.a.ActivityN1SINTS0" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:launchMode="3" android:name="com.er.pocket.shopping.loader.a.ActivityN1SINTS1" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:name="com.er.pocket.shopping.loader.a.ActivityN1TA0NRTS0" android:screenOrientation="1" android:taskAffinity=":t0" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:name="com.er.pocket.shopping.loader.a.ActivityN1TA0NRTS1" android:screenOrientation="1" android:taskAffinity=":t0" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:launchMode="1" android:name="com.er.pocket.shopping.loader.a.ActivityN1TA0STPTS0" android:screenOrientation="1" android:taskAffinity=":t0" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:launchMode="1" android:name="com.er.pocket.shopping.loader.a.ActivityN1TA0STPTS1" android:screenOrientation="1" android:taskAffinity=":t0" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:launchMode="2" android:name="com.er.pocket.shopping.loader.a.ActivityN1TA0STTS0" android:screenOrientation="1" android:taskAffinity=":t0" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:launchMode="2" android:name="com.er.pocket.shopping.loader.a.ActivityN1TA0STTS1" android:screenOrientation="1" android:taskAffinity=":t0" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:name="com.er.pocket.shopping.loader.a.ActivityN1TA0NRNTS0" android:screenOrientation="1" android:taskAffinity=":t0" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:name="com.er.pocket.shopping.loader.a.ActivityN1TA0NRNTS1" android:screenOrientation="1" android:taskAffinity=":t0" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:name="com.er.pocket.shopping.loader.a.ActivityN1TA0NRNTS2" android:screenOrientation="1" android:taskAffinity=":t0" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:name="com.er.pocket.shopping.loader.a.ActivityN1TA0NRNTS3" android:screenOrientation="1" android:taskAffinity=":t0" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:name="com.er.pocket.shopping.loader.a.ActivityN1TA0NRNTS4" android:screenOrientation="1" android:taskAffinity=":t0" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:name="com.er.pocket.shopping.loader.a.ActivityN1TA0NRNTS5" android:screenOrientation="1" android:taskAffinity=":t0" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:launchMode="1" android:name="com.er.pocket.shopping.loader.a.ActivityN1TA0STPNTS0" android:screenOrientation="1" android:taskAffinity=":t0" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:launchMode="1" android:name="com.er.pocket.shopping.loader.a.ActivityN1TA0STPNTS1" android:screenOrientation="1" android:taskAffinity=":t0" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:launchMode="2" android:name="com.er.pocket.shopping.loader.a.ActivityN1TA0STNTS0" android:screenOrientation="1" android:taskAffinity=":t0" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:launchMode="2" android:name="com.er.pocket.shopping.loader.a.ActivityN1TA0STNTS1" android:screenOrientation="1" android:taskAffinity=":t0" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:launchMode="2" android:name="com.er.pocket.shopping.loader.a.ActivityN1TA0STNTS2" android:screenOrientation="1" android:taskAffinity=":t0" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:name="com.er.pocket.shopping.loader.a.ActivityN1TA1NRTS0" android:screenOrientation="1" android:taskAffinity=":t1" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:name="com.er.pocket.shopping.loader.a.ActivityN1TA1NRTS1" android:screenOrientation="1" android:taskAffinity=":t1" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:launchMode="1" android:name="com.er.pocket.shopping.loader.a.ActivityN1TA1STPTS0" android:screenOrientation="1" android:taskAffinity=":t1" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:launchMode="1" android:name="com.er.pocket.shopping.loader.a.ActivityN1TA1STPTS1" android:screenOrientation="1" android:taskAffinity=":t1" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:launchMode="2" android:name="com.er.pocket.shopping.loader.a.ActivityN1TA1STTS0" android:screenOrientation="1" android:taskAffinity=":t1" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:launchMode="2" android:name="com.er.pocket.shopping.loader.a.ActivityN1TA1STTS1" android:screenOrientation="1" android:taskAffinity=":t1" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:name="com.er.pocket.shopping.loader.a.ActivityN1TA1NRNTS0" android:screenOrientation="1" android:taskAffinity=":t1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:name="com.er.pocket.shopping.loader.a.ActivityN1TA1NRNTS1" android:screenOrientation="1" android:taskAffinity=":t1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:name="com.er.pocket.shopping.loader.a.ActivityN1TA1NRNTS2" android:screenOrientation="1" android:taskAffinity=":t1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:name="com.er.pocket.shopping.loader.a.ActivityN1TA1NRNTS3" android:screenOrientation="1" android:taskAffinity=":t1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:name="com.er.pocket.shopping.loader.a.ActivityN1TA1NRNTS4" android:screenOrientation="1" android:taskAffinity=":t1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:name="com.er.pocket.shopping.loader.a.ActivityN1TA1NRNTS5" android:screenOrientation="1" android:taskAffinity=":t1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:launchMode="1" android:name="com.er.pocket.shopping.loader.a.ActivityN1TA1STPNTS0" android:screenOrientation="1" android:taskAffinity=":t1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:launchMode="1" android:name="com.er.pocket.shopping.loader.a.ActivityN1TA1STPNTS1" android:screenOrientation="1" android:taskAffinity=":t1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:launchMode="2" android:name="com.er.pocket.shopping.loader.a.ActivityN1TA1STNTS0" android:screenOrientation="1" android:taskAffinity=":t1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:launchMode="2" android:name="com.er.pocket.shopping.loader.a.ActivityN1TA1STNTS1" android:screenOrientation="1" android:taskAffinity=":t1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:launchMode="2" android:name="com.er.pocket.shopping.loader.a.ActivityN1TA1STNTS2" android:screenOrientation="1" android:taskAffinity=":t1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:name="com.er.pocket.shopping.loader.a.ActivityP0NRTS0" android:process=":p0" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:name="com.er.pocket.shopping.loader.a.ActivityP0NRTS1" android:process=":p0" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:launchMode="1" android:name="com.er.pocket.shopping.loader.a.ActivityP0STPTS0" android:process=":p0" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:launchMode="1" android:name="com.er.pocket.shopping.loader.a.ActivityP0STPTS1" android:process=":p0" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:launchMode="2" android:name="com.er.pocket.shopping.loader.a.ActivityP0STTS0" android:process=":p0" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:launchMode="2" android:name="com.er.pocket.shopping.loader.a.ActivityP0STTS1" android:process=":p0" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:launchMode="3" android:name="com.er.pocket.shopping.loader.a.ActivityP0SITS0" android:process=":p0" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:launchMode="3" android:name="com.er.pocket.shopping.loader.a.ActivityP0SITS1" android:process=":p0" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:launchMode="3" android:name="com.er.pocket.shopping.loader.a.ActivityP0SITS2" android:process=":p0" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:name="com.er.pocket.shopping.loader.a.ActivityP0NRNTS0" android:process=":p0" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:name="com.er.pocket.shopping.loader.a.ActivityP0NRNTS1" android:process=":p0" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:name="com.er.pocket.shopping.loader.a.ActivityP0NRNTS2" android:process=":p0" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:name="com.er.pocket.shopping.loader.a.ActivityP0NRNTS3" android:process=":p0" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:name="com.er.pocket.shopping.loader.a.ActivityP0NRNTS4" android:process=":p0" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:name="com.er.pocket.shopping.loader.a.ActivityP0NRNTS5" android:process=":p0" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:launchMode="1" android:name="com.er.pocket.shopping.loader.a.ActivityP0STPNTS0" android:process=":p0" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:launchMode="1" android:name="com.er.pocket.shopping.loader.a.ActivityP0STPNTS1" android:process=":p0" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:launchMode="2" android:name="com.er.pocket.shopping.loader.a.ActivityP0STNTS0" android:process=":p0" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:launchMode="2" android:name="com.er.pocket.shopping.loader.a.ActivityP0STNTS1" android:process=":p0" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:launchMode="2" android:name="com.er.pocket.shopping.loader.a.ActivityP0STNTS2" android:process=":p0" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:launchMode="3" android:name="com.er.pocket.shopping.loader.a.ActivityP0SINTS0" android:process=":p0" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:launchMode="3" android:name="com.er.pocket.shopping.loader.a.ActivityP0SINTS1" android:process=":p0" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:name="com.er.pocket.shopping.loader.a.ActivityP0TA0NRTS0" android:process=":p0" android:screenOrientation="1" android:taskAffinity=":t0" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:name="com.er.pocket.shopping.loader.a.ActivityP0TA0NRTS1" android:process=":p0" android:screenOrientation="1" android:taskAffinity=":t0" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:launchMode="1" android:name="com.er.pocket.shopping.loader.a.ActivityP0TA0STPTS0" android:process=":p0" android:screenOrientation="1" android:taskAffinity=":t0" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:launchMode="1" android:name="com.er.pocket.shopping.loader.a.ActivityP0TA0STPTS1" android:process=":p0" android:screenOrientation="1" android:taskAffinity=":t0" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:launchMode="2" android:name="com.er.pocket.shopping.loader.a.ActivityP0TA0STTS0" android:process=":p0" android:screenOrientation="1" android:taskAffinity=":t0" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:launchMode="2" android:name="com.er.pocket.shopping.loader.a.ActivityP0TA0STTS1" android:process=":p0" android:screenOrientation="1" android:taskAffinity=":t0" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:name="com.er.pocket.shopping.loader.a.ActivityP0TA0NRNTS0" android:process=":p0" android:screenOrientation="1" android:taskAffinity=":t0" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:name="com.er.pocket.shopping.loader.a.ActivityP0TA0NRNTS1" android:process=":p0" android:screenOrientation="1" android:taskAffinity=":t0" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:name="com.er.pocket.shopping.loader.a.ActivityP0TA0NRNTS2" android:process=":p0" android:screenOrientation="1" android:taskAffinity=":t0" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:name="com.er.pocket.shopping.loader.a.ActivityP0TA0NRNTS3" android:process=":p0" android:screenOrientation="1" android:taskAffinity=":t0" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:name="com.er.pocket.shopping.loader.a.ActivityP0TA0NRNTS4" android:process=":p0" android:screenOrientation="1" android:taskAffinity=":t0" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:name="com.er.pocket.shopping.loader.a.ActivityP0TA0NRNTS5" android:process=":p0" android:screenOrientation="1" android:taskAffinity=":t0" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:launchMode="1" android:name="com.er.pocket.shopping.loader.a.ActivityP0TA0STPNTS0" android:process=":p0" android:screenOrientation="1" android:taskAffinity=":t0" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:launchMode="1" android:name="com.er.pocket.shopping.loader.a.ActivityP0TA0STPNTS1" android:process=":p0" android:screenOrientation="1" android:taskAffinity=":t0" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:launchMode="2" android:name="com.er.pocket.shopping.loader.a.ActivityP0TA0STNTS0" android:process=":p0" android:screenOrientation="1" android:taskAffinity=":t0" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:launchMode="2" android:name="com.er.pocket.shopping.loader.a.ActivityP0TA0STNTS1" android:process=":p0" android:screenOrientation="1" android:taskAffinity=":t0" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:launchMode="2" android:name="com.er.pocket.shopping.loader.a.ActivityP0TA0STNTS2" android:process=":p0" android:screenOrientation="1" android:taskAffinity=":t0" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:name="com.er.pocket.shopping.loader.a.ActivityP0TA1NRTS0" android:process=":p0" android:screenOrientation="1" android:taskAffinity=":t1" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:name="com.er.pocket.shopping.loader.a.ActivityP0TA1NRTS1" android:process=":p0" android:screenOrientation="1" android:taskAffinity=":t1" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:launchMode="1" android:name="com.er.pocket.shopping.loader.a.ActivityP0TA1STPTS0" android:process=":p0" android:screenOrientation="1" android:taskAffinity=":t1" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:launchMode="1" android:name="com.er.pocket.shopping.loader.a.ActivityP0TA1STPTS1" android:process=":p0" android:screenOrientation="1" android:taskAffinity=":t1" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:launchMode="2" android:name="com.er.pocket.shopping.loader.a.ActivityP0TA1STTS0" android:process=":p0" android:screenOrientation="1" android:taskAffinity=":t1" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:launchMode="2" android:name="com.er.pocket.shopping.loader.a.ActivityP0TA1STTS1" android:process=":p0" android:screenOrientation="1" android:taskAffinity=":t1" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:name="com.er.pocket.shopping.loader.a.ActivityP0TA1NRNTS0" android:process=":p0" android:screenOrientation="1" android:taskAffinity=":t1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:name="com.er.pocket.shopping.loader.a.ActivityP0TA1NRNTS1" android:process=":p0" android:screenOrientation="1" android:taskAffinity=":t1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:name="com.er.pocket.shopping.loader.a.ActivityP0TA1NRNTS2" android:process=":p0" android:screenOrientation="1" android:taskAffinity=":t1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:name="com.er.pocket.shopping.loader.a.ActivityP0TA1NRNTS3" android:process=":p0" android:screenOrientation="1" android:taskAffinity=":t1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:name="com.er.pocket.shopping.loader.a.ActivityP0TA1NRNTS4" android:process=":p0" android:screenOrientation="1" android:taskAffinity=":t1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:name="com.er.pocket.shopping.loader.a.ActivityP0TA1NRNTS5" android:process=":p0" android:screenOrientation="1" android:taskAffinity=":t1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:launchMode="1" android:name="com.er.pocket.shopping.loader.a.ActivityP0TA1STPNTS0" android:process=":p0" android:screenOrientation="1" android:taskAffinity=":t1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:launchMode="1" android:name="com.er.pocket.shopping.loader.a.ActivityP0TA1STPNTS1" android:process=":p0" android:screenOrientation="1" android:taskAffinity=":t1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:launchMode="2" android:name="com.er.pocket.shopping.loader.a.ActivityP0TA1STNTS0" android:process=":p0" android:screenOrientation="1" android:taskAffinity=":t1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:launchMode="2" android:name="com.er.pocket.shopping.loader.a.ActivityP0TA1STNTS1" android:process=":p0" android:screenOrientation="1" android:taskAffinity=":t1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:launchMode="2" android:name="com.er.pocket.shopping.loader.a.ActivityP0TA1STNTS2" android:process=":p0" android:screenOrientation="1" android:taskAffinity=":t1" android:theme="@android:01030006">
+</activity>
+<provider android:authorities="com.er.pocket.shopping.Plugin.NP.0" android:exported="false" android:name="com.qihoo360.replugin.component.provider.PluginPitProviderP0" android:process=":p0">
+</provider>
+<provider android:authorities="com.er.pocket.shopping.loader.p.mainN100" android:exported="false" android:name="com.qihoo360.replugin.component.process.ProcessPitProviderP0" android:process=":p0">
+</provider>
+<service android:exported="false" android:name="com.qihoo360.replugin.component.service.server.PluginPitServiceP0" android:process=":p0">
+</service>
+<activity android:configChanges="0x000004B0" android:exported="false" android:name="com.er.pocket.shopping.loader.a.ActivityP1NRTS0" android:process=":p1" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:name="com.er.pocket.shopping.loader.a.ActivityP1NRTS1" android:process=":p1" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:launchMode="1" android:name="com.er.pocket.shopping.loader.a.ActivityP1STPTS0" android:process=":p1" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:launchMode="1" android:name="com.er.pocket.shopping.loader.a.ActivityP1STPTS1" android:process=":p1" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:launchMode="2" android:name="com.er.pocket.shopping.loader.a.ActivityP1STTS0" android:process=":p1" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:launchMode="2" android:name="com.er.pocket.shopping.loader.a.ActivityP1STTS1" android:process=":p1" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:launchMode="3" android:name="com.er.pocket.shopping.loader.a.ActivityP1SITS0" android:process=":p1" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:launchMode="3" android:name="com.er.pocket.shopping.loader.a.ActivityP1SITS1" android:process=":p1" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:launchMode="3" android:name="com.er.pocket.shopping.loader.a.ActivityP1SITS2" android:process=":p1" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:name="com.er.pocket.shopping.loader.a.ActivityP1NRNTS0" android:process=":p1" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:name="com.er.pocket.shopping.loader.a.ActivityP1NRNTS1" android:process=":p1" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:name="com.er.pocket.shopping.loader.a.ActivityP1NRNTS2" android:process=":p1" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:name="com.er.pocket.shopping.loader.a.ActivityP1NRNTS3" android:process=":p1" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:name="com.er.pocket.shopping.loader.a.ActivityP1NRNTS4" android:process=":p1" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:name="com.er.pocket.shopping.loader.a.ActivityP1NRNTS5" android:process=":p1" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:launchMode="1" android:name="com.er.pocket.shopping.loader.a.ActivityP1STPNTS0" android:process=":p1" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:launchMode="1" android:name="com.er.pocket.shopping.loader.a.ActivityP1STPNTS1" android:process=":p1" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:launchMode="2" android:name="com.er.pocket.shopping.loader.a.ActivityP1STNTS0" android:process=":p1" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:launchMode="2" android:name="com.er.pocket.shopping.loader.a.ActivityP1STNTS1" android:process=":p1" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:launchMode="2" android:name="com.er.pocket.shopping.loader.a.ActivityP1STNTS2" android:process=":p1" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:launchMode="3" android:name="com.er.pocket.shopping.loader.a.ActivityP1SINTS0" android:process=":p1" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:launchMode="3" android:name="com.er.pocket.shopping.loader.a.ActivityP1SINTS1" android:process=":p1" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:name="com.er.pocket.shopping.loader.a.ActivityP1TA0NRTS0" android:process=":p1" android:screenOrientation="1" android:taskAffinity=":t0" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:name="com.er.pocket.shopping.loader.a.ActivityP1TA0NRTS1" android:process=":p1" android:screenOrientation="1" android:taskAffinity=":t0" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:launchMode="1" android:name="com.er.pocket.shopping.loader.a.ActivityP1TA0STPTS0" android:process=":p1" android:screenOrientation="1" android:taskAffinity=":t0" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:launchMode="1" android:name="com.er.pocket.shopping.loader.a.ActivityP1TA0STPTS1" android:process=":p1" android:screenOrientation="1" android:taskAffinity=":t0" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:launchMode="2" android:name="com.er.pocket.shopping.loader.a.ActivityP1TA0STTS0" android:process=":p1" android:screenOrientation="1" android:taskAffinity=":t0" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:launchMode="2" android:name="com.er.pocket.shopping.loader.a.ActivityP1TA0STTS1" android:process=":p1" android:screenOrientation="1" android:taskAffinity=":t0" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:name="com.er.pocket.shopping.loader.a.ActivityP1TA0NRNTS0" android:process=":p1" android:screenOrientation="1" android:taskAffinity=":t0" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:name="com.er.pocket.shopping.loader.a.ActivityP1TA0NRNTS1" android:process=":p1" android:screenOrientation="1" android:taskAffinity=":t0" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:name="com.er.pocket.shopping.loader.a.ActivityP1TA0NRNTS2" android:process=":p1" android:screenOrientation="1" android:taskAffinity=":t0" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:name="com.er.pocket.shopping.loader.a.ActivityP1TA0NRNTS3" android:process=":p1" android:screenOrientation="1" android:taskAffinity=":t0" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:name="com.er.pocket.shopping.loader.a.ActivityP1TA0NRNTS4" android:process=":p1" android:screenOrientation="1" android:taskAffinity=":t0" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:name="com.er.pocket.shopping.loader.a.ActivityP1TA0NRNTS5" android:process=":p1" android:screenOrientation="1" android:taskAffinity=":t0" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:launchMode="1" android:name="com.er.pocket.shopping.loader.a.ActivityP1TA0STPNTS0" android:process=":p1" android:screenOrientation="1" android:taskAffinity=":t0" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:launchMode="1" android:name="com.er.pocket.shopping.loader.a.ActivityP1TA0STPNTS1" android:process=":p1" android:screenOrientation="1" android:taskAffinity=":t0" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:launchMode="2" android:name="com.er.pocket.shopping.loader.a.ActivityP1TA0STNTS0" android:process=":p1" android:screenOrientation="1" android:taskAffinity=":t0" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:launchMode="2" android:name="com.er.pocket.shopping.loader.a.ActivityP1TA0STNTS1" android:process=":p1" android:screenOrientation="1" android:taskAffinity=":t0" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:launchMode="2" android:name="com.er.pocket.shopping.loader.a.ActivityP1TA0STNTS2" android:process=":p1" android:screenOrientation="1" android:taskAffinity=":t0" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:name="com.er.pocket.shopping.loader.a.ActivityP1TA1NRTS0" android:process=":p1" android:screenOrientation="1" android:taskAffinity=":t1" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:name="com.er.pocket.shopping.loader.a.ActivityP1TA1NRTS1" android:process=":p1" android:screenOrientation="1" android:taskAffinity=":t1" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:launchMode="1" android:name="com.er.pocket.shopping.loader.a.ActivityP1TA1STPTS0" android:process=":p1" android:screenOrientation="1" android:taskAffinity=":t1" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:launchMode="1" android:name="com.er.pocket.shopping.loader.a.ActivityP1TA1STPTS1" android:process=":p1" android:screenOrientation="1" android:taskAffinity=":t1" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:launchMode="2" android:name="com.er.pocket.shopping.loader.a.ActivityP1TA1STTS0" android:process=":p1" android:screenOrientation="1" android:taskAffinity=":t1" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:launchMode="2" android:name="com.er.pocket.shopping.loader.a.ActivityP1TA1STTS1" android:process=":p1" android:screenOrientation="1" android:taskAffinity=":t1" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:name="com.er.pocket.shopping.loader.a.ActivityP1TA1NRNTS0" android:process=":p1" android:screenOrientation="1" android:taskAffinity=":t1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:name="com.er.pocket.shopping.loader.a.ActivityP1TA1NRNTS1" android:process=":p1" android:screenOrientation="1" android:taskAffinity=":t1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:name="com.er.pocket.shopping.loader.a.ActivityP1TA1NRNTS2" android:process=":p1" android:screenOrientation="1" android:taskAffinity=":t1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:name="com.er.pocket.shopping.loader.a.ActivityP1TA1NRNTS3" android:process=":p1" android:screenOrientation="1" android:taskAffinity=":t1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:name="com.er.pocket.shopping.loader.a.ActivityP1TA1NRNTS4" android:process=":p1" android:screenOrientation="1" android:taskAffinity=":t1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:name="com.er.pocket.shopping.loader.a.ActivityP1TA1NRNTS5" android:process=":p1" android:screenOrientation="1" android:taskAffinity=":t1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:launchMode="1" android:name="com.er.pocket.shopping.loader.a.ActivityP1TA1STPNTS0" android:process=":p1" android:screenOrientation="1" android:taskAffinity=":t1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:launchMode="1" android:name="com.er.pocket.shopping.loader.a.ActivityP1TA1STPNTS1" android:process=":p1" android:screenOrientation="1" android:taskAffinity=":t1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:launchMode="2" android:name="com.er.pocket.shopping.loader.a.ActivityP1TA1STNTS0" android:process=":p1" android:screenOrientation="1" android:taskAffinity=":t1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:launchMode="2" android:name="com.er.pocket.shopping.loader.a.ActivityP1TA1STNTS1" android:process=":p1" android:screenOrientation="1" android:taskAffinity=":t1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:launchMode="2" android:name="com.er.pocket.shopping.loader.a.ActivityP1TA1STNTS2" android:process=":p1" android:screenOrientation="1" android:taskAffinity=":t1" android:theme="@android:01030006">
+</activity>
+<provider android:authorities="com.er.pocket.shopping.Plugin.NP.1" android:exported="false" android:name="com.qihoo360.replugin.component.provider.PluginPitProviderP1" android:process=":p1">
+</provider>
+<provider android:authorities="com.er.pocket.shopping.loader.p.mainN99" android:exported="false" android:name="com.qihoo360.replugin.component.process.ProcessPitProviderP1" android:process=":p1">
+</provider>
+<service android:exported="false" android:name="com.qihoo360.replugin.component.service.server.PluginPitServiceP1" android:process=":p1">
+</service>
+<activity android:configChanges="0x000004B0" android:exported="false" android:name="com.er.pocket.shopping.loader.a.ActivityP2NRTS0" android:process=":p2" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:name="com.er.pocket.shopping.loader.a.ActivityP2NRTS1" android:process=":p2" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:launchMode="1" android:name="com.er.pocket.shopping.loader.a.ActivityP2STPTS0" android:process=":p2" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:launchMode="1" android:name="com.er.pocket.shopping.loader.a.ActivityP2STPTS1" android:process=":p2" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:launchMode="2" android:name="com.er.pocket.shopping.loader.a.ActivityP2STTS0" android:process=":p2" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:launchMode="2" android:name="com.er.pocket.shopping.loader.a.ActivityP2STTS1" android:process=":p2" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:launchMode="3" android:name="com.er.pocket.shopping.loader.a.ActivityP2SITS0" android:process=":p2" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:launchMode="3" android:name="com.er.pocket.shopping.loader.a.ActivityP2SITS1" android:process=":p2" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:launchMode="3" android:name="com.er.pocket.shopping.loader.a.ActivityP2SITS2" android:process=":p2" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:name="com.er.pocket.shopping.loader.a.ActivityP2NRNTS0" android:process=":p2" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:name="com.er.pocket.shopping.loader.a.ActivityP2NRNTS1" android:process=":p2" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:name="com.er.pocket.shopping.loader.a.ActivityP2NRNTS2" android:process=":p2" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:name="com.er.pocket.shopping.loader.a.ActivityP2NRNTS3" android:process=":p2" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:name="com.er.pocket.shopping.loader.a.ActivityP2NRNTS4" android:process=":p2" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:name="com.er.pocket.shopping.loader.a.ActivityP2NRNTS5" android:process=":p2" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:launchMode="1" android:name="com.er.pocket.shopping.loader.a.ActivityP2STPNTS0" android:process=":p2" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:launchMode="1" android:name="com.er.pocket.shopping.loader.a.ActivityP2STPNTS1" android:process=":p2" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:launchMode="2" android:name="com.er.pocket.shopping.loader.a.ActivityP2STNTS0" android:process=":p2" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:launchMode="2" android:name="com.er.pocket.shopping.loader.a.ActivityP2STNTS1" android:process=":p2" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:launchMode="2" android:name="com.er.pocket.shopping.loader.a.ActivityP2STNTS2" android:process=":p2" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:launchMode="3" android:name="com.er.pocket.shopping.loader.a.ActivityP2SINTS0" android:process=":p2" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:launchMode="3" android:name="com.er.pocket.shopping.loader.a.ActivityP2SINTS1" android:process=":p2" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:name="com.er.pocket.shopping.loader.a.ActivityP2TA0NRTS0" android:process=":p2" android:screenOrientation="1" android:taskAffinity=":t0" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:name="com.er.pocket.shopping.loader.a.ActivityP2TA0NRTS1" android:process=":p2" android:screenOrientation="1" android:taskAffinity=":t0" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:launchMode="1" android:name="com.er.pocket.shopping.loader.a.ActivityP2TA0STPTS0" android:process=":p2" android:screenOrientation="1" android:taskAffinity=":t0" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:launchMode="1" android:name="com.er.pocket.shopping.loader.a.ActivityP2TA0STPTS1" android:process=":p2" android:screenOrientation="1" android:taskAffinity=":t0" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:launchMode="2" android:name="com.er.pocket.shopping.loader.a.ActivityP2TA0STTS0" android:process=":p2" android:screenOrientation="1" android:taskAffinity=":t0" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:launchMode="2" android:name="com.er.pocket.shopping.loader.a.ActivityP2TA0STTS1" android:process=":p2" android:screenOrientation="1" android:taskAffinity=":t0" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:name="com.er.pocket.shopping.loader.a.ActivityP2TA0NRNTS0" android:process=":p2" android:screenOrientation="1" android:taskAffinity=":t0" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:name="com.er.pocket.shopping.loader.a.ActivityP2TA0NRNTS1" android:process=":p2" android:screenOrientation="1" android:taskAffinity=":t0" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:name="com.er.pocket.shopping.loader.a.ActivityP2TA0NRNTS2" android:process=":p2" android:screenOrientation="1" android:taskAffinity=":t0" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:name="com.er.pocket.shopping.loader.a.ActivityP2TA0NRNTS3" android:process=":p2" android:screenOrientation="1" android:taskAffinity=":t0" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:name="com.er.pocket.shopping.loader.a.ActivityP2TA0NRNTS4" android:process=":p2" android:screenOrientation="1" android:taskAffinity=":t0" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:name="com.er.pocket.shopping.loader.a.ActivityP2TA0NRNTS5" android:process=":p2" android:screenOrientation="1" android:taskAffinity=":t0" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:launchMode="1" android:name="com.er.pocket.shopping.loader.a.ActivityP2TA0STPNTS0" android:process=":p2" android:screenOrientation="1" android:taskAffinity=":t0" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:launchMode="1" android:name="com.er.pocket.shopping.loader.a.ActivityP2TA0STPNTS1" android:process=":p2" android:screenOrientation="1" android:taskAffinity=":t0" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:launchMode="2" android:name="com.er.pocket.shopping.loader.a.ActivityP2TA0STNTS0" android:process=":p2" android:screenOrientation="1" android:taskAffinity=":t0" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:launchMode="2" android:name="com.er.pocket.shopping.loader.a.ActivityP2TA0STNTS1" android:process=":p2" android:screenOrientation="1" android:taskAffinity=":t0" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:launchMode="2" android:name="com.er.pocket.shopping.loader.a.ActivityP2TA0STNTS2" android:process=":p2" android:screenOrientation="1" android:taskAffinity=":t0" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:name="com.er.pocket.shopping.loader.a.ActivityP2TA1NRTS0" android:process=":p2" android:screenOrientation="1" android:taskAffinity=":t1" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:name="com.er.pocket.shopping.loader.a.ActivityP2TA1NRTS1" android:process=":p2" android:screenOrientation="1" android:taskAffinity=":t1" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:launchMode="1" android:name="com.er.pocket.shopping.loader.a.ActivityP2TA1STPTS0" android:process=":p2" android:screenOrientation="1" android:taskAffinity=":t1" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:launchMode="1" android:name="com.er.pocket.shopping.loader.a.ActivityP2TA1STPTS1" android:process=":p2" android:screenOrientation="1" android:taskAffinity=":t1" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:launchMode="2" android:name="com.er.pocket.shopping.loader.a.ActivityP2TA1STTS0" android:process=":p2" android:screenOrientation="1" android:taskAffinity=":t1" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:launchMode="2" android:name="com.er.pocket.shopping.loader.a.ActivityP2TA1STTS1" android:process=":p2" android:screenOrientation="1" android:taskAffinity=":t1" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:name="com.er.pocket.shopping.loader.a.ActivityP2TA1NRNTS0" android:process=":p2" android:screenOrientation="1" android:taskAffinity=":t1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:name="com.er.pocket.shopping.loader.a.ActivityP2TA1NRNTS1" android:process=":p2" android:screenOrientation="1" android:taskAffinity=":t1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:name="com.er.pocket.shopping.loader.a.ActivityP2TA1NRNTS2" android:process=":p2" android:screenOrientation="1" android:taskAffinity=":t1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:name="com.er.pocket.shopping.loader.a.ActivityP2TA1NRNTS3" android:process=":p2" android:screenOrientation="1" android:taskAffinity=":t1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:name="com.er.pocket.shopping.loader.a.ActivityP2TA1NRNTS4" android:process=":p2" android:screenOrientation="1" android:taskAffinity=":t1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:name="com.er.pocket.shopping.loader.a.ActivityP2TA1NRNTS5" android:process=":p2" android:screenOrientation="1" android:taskAffinity=":t1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:launchMode="1" android:name="com.er.pocket.shopping.loader.a.ActivityP2TA1STPNTS0" android:process=":p2" android:screenOrientation="1" android:taskAffinity=":t1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:launchMode="1" android:name="com.er.pocket.shopping.loader.a.ActivityP2TA1STPNTS1" android:process=":p2" android:screenOrientation="1" android:taskAffinity=":t1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:launchMode="2" android:name="com.er.pocket.shopping.loader.a.ActivityP2TA1STNTS0" android:process=":p2" android:screenOrientation="1" android:taskAffinity=":t1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:launchMode="2" android:name="com.er.pocket.shopping.loader.a.ActivityP2TA1STNTS1" android:process=":p2" android:screenOrientation="1" android:taskAffinity=":t1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004B0" android:exported="false" android:launchMode="2" android:name="com.er.pocket.shopping.loader.a.ActivityP2TA1STNTS2" android:process=":p2" android:screenOrientation="1" android:taskAffinity=":t1" android:theme="@android:01030006">
+</activity>
+<provider android:authorities="com.er.pocket.shopping.Plugin.NP.2" android:exported="false" android:name="com.qihoo360.replugin.component.provider.PluginPitProviderP2" android:process=":p2">
+</provider>
+<provider android:authorities="com.er.pocket.shopping.loader.p.mainN98" android:exported="false" android:name="com.qihoo360.replugin.component.process.ProcessPitProviderP2" android:process=":p2">
+</provider>
+<service android:exported="false" android:name="com.qihoo360.replugin.component.service.server.PluginPitServiceP2" android:process=":p2">
+</service>
+</application>
+</manifest>

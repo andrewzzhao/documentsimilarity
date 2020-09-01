@@ -1,0 +1,96 @@
+<?xml version="1.0" ?><manifest android:installLocation="0" android:versionCode="18" android:versionName="1.4.6" package="jp.co.eeline.warumojicamera" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="8">
+</uses-sdk>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_PROVIDER">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_ATTACHMENT">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<permission android:name="jp.co.eeline.warumojicamera.permission.C2D_MESSAGE" android:protectionLevel="2">
+</permission>
+<uses-permission android:name="jp.co.eeline.warumojicamera.permission.C2D_MESSAGE">
+</uses-permission>
+<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<application android:icon="@7F020026" android:label="@7F040001" android:name=".layers">
+<meta-data android:name="CLIENT_SITE_ID" android:value="7036000">
+</meta-data>
+<meta-data android:name="CLIENT_SITE_ANKEN_ID" android:value="15493">
+</meta-data>
+<meta-data android:name="APP_URI" android:value="warumojicamerascheme://WarumojiCamera/">
+</meta-data>
+<meta-data android:name="apkey" android:value="JlfTNdJf5T">
+</meta-data>
+<meta-data android:name="aid" android:value="A30115020001">
+</meta-data>
+<meta-data android:name="Adlantis_Publisher_ID" android:value="MTMxMTA%3D%0A">
+</meta-data>
+<activity android:label="@7F040001" android:name=".WarumojiCameraActivity">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="WarumojiCamera" android:scheme="warumojicamerascheme">
+</data>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000A0" android:label="@7F040001" android:name=".PhotoSelect" android:screenOrientation="1" android:theme="@android:01030007">
+</activity>
+<activity android:configChanges="0x000000A0" android:label="@7F040001" android:name=".errorPage" android:screenOrientation="1" android:theme="@android:01030007">
+</activity>
+<activity android:configChanges="0x000000A0" android:label="@7F040001" android:name=".firstSetup" android:screenOrientation="1" android:theme="@android:01030007">
+</activity>
+<activity android:configChanges="0x000000A0" android:label="@7F040001" android:name=".Canvas" android:screenOrientation="1" android:theme="@android:01030007">
+</activity>
+<activity android:configChanges="0x000000A0" android:label="@7F040001" android:name=".settingLine" android:screenOrientation="1" android:theme="@android:01030007">
+</activity>
+<activity android:configChanges="0x000000A0" android:label="@7F040001" android:name=".settingFont" android:screenOrientation="1" android:theme="@android:01030007">
+</activity>
+<receiver android:exported="true" android:name="com.tapjoy.TapjoyReferralTracker">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+<service android:name="jp.co.eeline.warumojicamera.GCMIntentService">
+</service>
+<receiver android:name="com.google.android.gcm.GCMBroadcastReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+<action android:name="com.google.android.c2dm.intent.REGISTRATION">
+</action>
+<category android:name="jp.co.eeline.warumojicamera">
+</category>
+</intent-filter>
+</receiver>
+<activity android:name="mediba.ad.sdk.android.openx.MasAdClickWebview">
+</activity>
+<activity android:name="mediba.ad.sdk.android.openx.MasVideoview">
+</activity>
+</application>
+</manifest>

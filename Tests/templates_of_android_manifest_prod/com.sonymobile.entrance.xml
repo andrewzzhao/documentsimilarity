@@ -1,0 +1,368 @@
+<?xml version="1.0" ?><manifest android:versionCode="8650766" android:versionName="4.2.A.0.14" package="com.sonymobile.entrance" platformBuildVersionCode="24" platformBuildVersionName="7.000000" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="21" android:targetSdkVersion="24">
+</uses-sdk>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="com.sonyericsson.updatecenter.permission.READ_APPLICATION_UPDATES">
+</uses-permission>
+<uses-permission android:name="com.sonyericsson.updatecenter.permission.INSTALL_APPLICATIONS">
+</uses-permission>
+<uses-permission android:name="com.sonyericsson.updatecenter.permission.HANDLE_UPDATE_CENTER_SETTINGS">
+</uses-permission>
+<uses-permission android:name="com.sonyericsson.updatecenter.permission.RECEIVE_SYNC_SUCCESS">
+</uses-permission>
+<uses-permission android:name="com.sonyericsson.updatecenter.permission.READ_GENERIC_UPDATES">
+</uses-permission>
+<uses-permission android:name="com.sonyericsson.updatecenter.permission.READ_API_VERSION">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-permission android:name="com.sonymobile.permission.SYSTEM_UI_VISIBILITY_EXTENSIONS">
+</uses-permission>
+<uses-permission android:name="com.sonymobile.home.permission.PROVIDER_INSERT_BADGE">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE">
+</uses-permission>
+<permission android:name="com.sonymobile.entrance.permission.C2D_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="com.sonymobile.entrance.permission.C2D_MESSAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.PACKAGE_USAGE_STATS">
+</uses-permission>
+<uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT">
+</uses-permission>
+<permission android:name="com.sonymobile.entrance.permission.SETTINGS" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="android.permission.CHANGE_CONFIGURATION">
+</uses-permission>
+<uses-permission android:name="com.sonymobile.runtimeskinning.permission.MANAGE_SKINS">
+</uses-permission>
+<uses-permission android:name="com.sonymobile.runtimeskinning.permission.RECEIVE_SKIN_CHANGED">
+</uses-permission>
+<uses-permission android:name="com.sonymobile.xperiadataservices.permission.MANAGE_XDS">
+</uses-permission>
+<permission android:label="@7F0800B2" android:name="com.sonymobile.entrance.permission.INSTALL_APPLICATIONS" android:protectionLevel="0x00000003">
+</permission>
+<meta-data android:name="android.support.VERSION" android:value="25.3.1">
+</meta-data>
+<android:uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</android:uses-permission>
+<android:uses-permission android:name="android.permission.READ_PHONE_STATE">
+</android:uses-permission>
+<android:uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</android:uses-permission>
+<application android:allowBackup="false" android:icon="@7F020056" android:label="@7F0801C9" android:name="com.sonymobile.entrance.EntranceApplication" android:resizeableActivity="false" android:supportsRtl="true">
+<meta-data android:name="com.google.android.gms.version" android:value="@7F0B0009">
+</meta-data>
+<receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.analytics.AnalyticsReceiver">
+<intent-filter>
+<action android:name="com.google.android.gms.analytics.ANALYTICS_DISPATCH">
+</action>
+</intent-filter>
+</receiver>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.analytics.AnalyticsService">
+</service>
+<activity android:label="@7F0801C9" android:name="com.google.android.gms.tagmanager.PreviewActivity" android:noHistory="true">
+<intent-filter>
+<data android:scheme="tagmanager.c.com.sonymobile.entrance">
+</data>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.facebook.ads.AudienceNetworkActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.facebook.ads.InterstitialAdActivity">
+</activity>
+<activity android:configChanges="0x00000FB0" android:name="com.flurry.android.FlurryFullscreenTakeoverActivity" android:theme="@android:01030010">
+</activity>
+<activity android:name="com.sonymobile.entrance.ads.DummyActivityForInterstitialAds" android:parentActivityName="com.sonymobile.entrance.EntranceActivity" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<activity android:name="com.sonymobile.entrance.EntranceActivity" android:screenOrientation="1" android:theme="@7F0A0000" android:windowSoftInputMode="0x00000030">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:label="@7F0800BF" android:name="com.sonymobile.entrance.settings.SettingsActivity" android:parentActivityName="com.sonymobile.entrance.EntranceActivity" android:theme="@7F0A0007">
+</activity>
+<activity android:label="@7F0800BA" android:name="com.sonymobile.entrance.settings.AboutViewActivity" android:screenOrientation="1" android:theme="@7F0A0000">
+</activity>
+<activity android:name="com.sonymobile.entrance.permission.PermissionActivity" android:theme="@7F0A0012">
+</activity>
+<activity android:configChanges="0x000004A0" android:icon="@7F020056" android:name="com.sonymobile.entrance.imageviewer.ImageViewerActivity" android:parentActivityName="com.sonymobile.entrance.EntranceActivity" android:theme="@7F0A0005">
+</activity>
+<activity android:name="com.sonymobile.entrance.settings.SetServerParamActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:exported="false" android:name="com.sonymobile.entrance.WebViewFullscreenActivity" android:theme="@7F0A0013">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:host="webview" android:scheme="entrance">
+</data>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004A0" android:exported="false" android:name="com.sonymobile.entrance.WebViewFullscreenActivityTranslucent" android:theme="@7F0A0014">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:host="webviewtranslucent" android:scheme="entrance">
+</data>
+</intent-filter>
+</activity>
+<receiver android:exported="false" android:name="com.sonymobile.entrance.data.SyncAlarmReceiver">
+<intent-filter>
+<action android:name="SCHEDULE_SYNC">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name="com.sonymobile.entrance.logging.PackageInstallationReceiver">
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_ADDED">
+</action>
+<data android:scheme="package">
+</data>
+</intent-filter>
+</receiver>
+<receiver android:name="com.sonymobile.entrance.logging.PackageRemovedReceiver">
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_REMOVED">
+</action>
+<data android:scheme="package">
+</data>
+</intent-filter>
+</receiver>
+<receiver android:name="com.sonymobile.entrance.logging.EntranceUpdatedReceiver">
+<intent-filter>
+<action android:name="android.intent.action.MY_PACKAGE_REPLACED">
+</action>
+</intent-filter>
+</receiver>
+<service android:exported="false" android:name="com.sonymobile.entrance.logging.EntranceUpdatedService">
+</service>
+<receiver android:label="@7F0801C9" android:name="com.sonymobile.entrance.widget.WhatsNewAppWidgetProvider">
+<intent-filter>
+<action android:name="android.appwidget.action.APPWIDGET_UPDATE">
+</action>
+</intent-filter>
+<meta-data android:name="android.appwidget.provider" android:resource="@7F050000">
+</meta-data>
+</receiver>
+<service android:exported="false" android:name="com.sonymobile.entrance.widget.CardListWidgetService" android:permission="android.permission.BIND_REMOTEVIEWS">
+</service>
+<service android:exported="false" android:name="com.sonymobile.entrance.logging.PackageInstallationService">
+</service>
+<service android:exported="false" android:name="com.sonymobile.entrance.logging.LoggingService">
+</service>
+<service android:exported="false" android:name="com.sonymobile.entrance.logging.dispatch.DispatchService">
+</service>
+<provider android:authorities="com.sonymobile.entrance.logger" android:exported="false" android:name="com.sonymobile.entrance.logging.db.LogEntryProvider">
+</provider>
+<provider android:authorities="com.sonymobile.entrance.settings" android:exported="true" android:name="com.sonymobile.entrance.settings.SettingsProvider" android:permission="com.sonymobile.entrance.permission.SETTINGS">
+</provider>
+<service android:exported="false" android:name="com.sonymobile.entrance.sdk.internal.sync.SyncService">
+</service>
+<provider android:authorities="com.sonymobile.entrance.sdkprovider" android:exported="false" android:name="com.sonymobile.entrance.sdk.internal.storage.provider.EntranceProvider">
+</provider>
+<activity android:name="com.sonymobile.entrance.DeepLinkActivity" android:theme="@android:01030010">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:host="app" android:scheme="entrance">
+</data>
+</intent-filter>
+<intent-filter>
+<data android:mimeType="vnd.android.cursor.dir/vnd.sonymobile.applicationupdate">
+</data>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+</intent-filter>
+<intent-filter>
+<data android:mimeType="vnd.android.cursor.item/vnd.sonymobile.applicationupdate">
+</data>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+</intent-filter>
+<intent-filter>
+<data android:mimeType="vnd.android.cursor.item/update">
+</data>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+</intent-filter>
+<intent-filter>
+<data android:mimeType="vnd.android.cursor.item/vnd.sonymobile.genericupdate/whatsnew">
+</data>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="android.intent.action.VIEW">
+</action>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:name="com.sonymobile.entrance.TrustedDeepLinkActivity" android:theme="@android:01030010">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:host="trustedapp" android:scheme="entrance">
+</data>
+</intent-filter>
+</activity>
+<activity android:exported="false" android:name="com.sonymobile.entrance.TrustedEntranceActivity" android:screenOrientation="1" android:theme="@7F0A0000" android:windowSoftInputMode="0x00000030">
+</activity>
+<receiver android:enabled="true" android:name="com.sonymobile.entrance.operatorapps.UpdateCenterSyncReceiver" android:permission="com.sonyericsson.updatecenter.permission.SEND_SYNC_SUCCESS">
+<intent-filter>
+<action android:name="com.sonyericsson.updatecenter.action.SYNC_SUCCESS">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:enabled="false" android:name="com.sonymobile.entrance.operatorapps.ConnectionChangedReceiver">
+<intent-filter>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:enabled="true" android:name="com.sonymobile.entrance.operatorapps.BootCompletedReceiver">
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.SIM_STATE_CHANGED">
+</action>
+</intent-filter>
+</receiver>
+<service android:exported="false" android:name="com.sonymobile.entrance.operatorapps.OpAppService">
+</service>
+<meta-data android:name="com.sonymobile.xperiaservices.icon" android:resource="@7F020056">
+</meta-data>
+<meta-data android:name="com.sonymobile.xperiaservices.tagline" android:resource="@7F0800E3">
+</meta-data>
+<meta-data android:name="com.sonymobile.xperiaservices.declare_prio" android:value="50">
+</meta-data>
+<meta-data android:name="com.sonymobile.xperiaservices.account_types" android:resource="@7F0C0008">
+</meta-data>
+<meta-data android:name="com.sonymobile.xperiaservices.auth_scopes" android:resource="@7F0C0009">
+</meta-data>
+<meta-data android:name="com.sonymobile.xperiaservices.personal_data_used" android:resource="@7F0C000D">
+</meta-data>
+<meta-data android:name="com.sonymobile.xperiaservices.personal_data_labels" android:resource="@7F0C000B">
+</meta-data>
+<meta-data android:name="com.sonymobile.xperiaservices.personal_data_shared" android:resource="@7F0C000C">
+</meta-data>
+<meta-data android:name="com.sonymobile.xperiaservices.personal_data_purpose" android:resource="@7F0801C2">
+</meta-data>
+<receiver android:enabled="true" android:exported="true" android:name="com.sonymobile.entrance.servicepromotion.ActivationReceiver" android:permission="com.sonymobile.xperiaservices.PROMOTE_XPERIA_SERVICES">
+<intent-filter>
+<action android:name="com.sonymobile.xperiaservices.intent.action.ACTION_ACTIVATE_SERVICE">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="com.sonymobile.xperiaservices.intent.action.ACTION_DEACTIVATE_SERVICE">
+</action>
+</intent-filter>
+</receiver>
+<service android:exported="false" android:name="com.sonymobile.entrance.utils.BadgeService">
+</service>
+<receiver android:exported="true" android:name="com.google.android.gms.gcm.GcmReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+<category android:name="com.sonymobile.entrance">
+</category>
+</intent-filter>
+</receiver>
+<service android:exported="false" android:name="com.sonymobile.entrance.gcm.GcmNotificationListener">
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+</intent-filter>
+</service>
+<service android:exported="false" android:name="com.sonymobile.entrance.gcm.InstanceIDTokenService">
+<intent-filter>
+<action android:name="com.google.android.gms.iid.InstanceID">
+</action>
+</intent-filter>
+</service>
+<service android:exported="false" android:name="com.sonymobile.entrance.gcm.RegistrationIntentService">
+</service>
+<service android:exported="false" android:name="com.sonymobile.entrance.gcm.messagehandler.NotificationService">
+</service>
+<receiver android:enabled="false" android:name="com.sonymobile.udl.PackageReceiver">
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_ADDED">
+</action>
+<action android:name="android.intent.action.PACKAGE_REMOVED">
+</action>
+<data android:scheme="package">
+</data>
+</intent-filter>
+</receiver>
+<service android:enabled="true" android:exported="true" android:name="com.sonymobile.udl.UploadService" android:permission="android.permission.BIND_JOB_SERVICE" android:process=":com.sonymobile.udl">
+</service>
+<service android:exported="false" android:name="com.sonymobile.entrance.install.InstallService" android:permission="com.sonymobile.entrance.permission.INSTALL_APPLICATIONS">
+<intent-filter>
+<action android:name="com.sonymobile.entrance.action.INSTALL">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:scheme="https">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="com.sonymobile.entrance.action.CANCEL_INSTALL">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</service>
+<provider android:authorities="com.sonymobile.entrance.install.provider" android:exported="true" android:name="com.sonymobile.entrance.install.InstallProvider" android:permission="com.sonymobile.entrance.permission.INSTALL_APPLICATIONS">
+</provider>
+<activity android:configChanges="0x40002FFF" android:exported="false" android:name="com.sonymobile.entrance.install.InstallActivity" android:permission="com.sonymobile.entrance.permission.INSTALL_APPLICATIONS" android:theme="@android:01030010">
+<intent-filter>
+<action android:name="com.sonymobile.entrance.action.INSTANT_INSTALL">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:scheme="https">
+</data>
+</intent-filter>
+</activity>
+<service android:exported="false" android:name="com.sonymobile.entrance.notifications.UserNotifications$UserNotificationJobScheduler" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<service android:exported="false" android:name="com.sonymobile.entrance.gcm.messagehandler.NotificationService$NotificationJobScheduler" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:01030010">
+</activity>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.analytics.AnalyticsJobService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<activity android:configChanges="0x00000FB0" android:exported="false" android:name="com.google.android.gms.ads.AdActivity" android:theme="@android:0103000F">
+</activity>
+<activity android:configChanges="0x00000FB0" android:name="com.flurry.android.FlurryTileAdActivity" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x00000FB0" android:name="com.flurry.android.FlurryBrowserActivity" android:theme="@android:01030010">
+</activity>
+</application>
+</manifest>

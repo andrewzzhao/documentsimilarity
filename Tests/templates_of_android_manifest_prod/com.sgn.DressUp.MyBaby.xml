@@ -1,0 +1,136 @@
+<?xml version="1.0" ?><manifest android:installLocation="2" android:versionCode="3" android:versionName="1.0.2" package="com.sgn.DressUp.MyBaby" xmlns:android="http://schemas.android.com/apk/res/android">
+<supports-screens android:anyDensity="true" android:largeScreens="true" android:normalScreens="true" android:smallScreens="true" android:xlargeScreens="true">
+</supports-screens>
+<uses-sdk android:minSdkVersion="8" android:targetSdkVersion="14">
+</uses-sdk>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="com.android.vending.BILLING">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_OWNER_DATA">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<permission android:name="com.sgn.DressUp.MyBaby.permission.C2D_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="com.sgn.DressUp.MyBaby.permission.C2D_MESSAGE">
+</uses-permission>
+<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<application android:icon="@7F020017" android:label="@7F050001" android:largeHeap="true">
+<service android:name="net.robotmedia.billing.BillingService">
+</service>
+<receiver android:name="net.robotmedia.billing.BillingReceiver">
+<intent-filter>
+<action android:name="com.android.vending.billing.IN_APP_NOTIFY">
+</action>
+<action android:name="com.android.vending.billing.RESPONSE_CODE">
+</action>
+<action android:name="com.android.vending.billing.PURCHASE_STATE_CHANGED">
+</action>
+</intent-filter>
+</receiver>
+<service android:name=".GCMIntentService">
+</service>
+<receiver android:name="com.google.android.gcm.GCMBroadcastReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+<action android:name="com.google.android.c2dm.intent.REGISTRATION">
+</action>
+<category android:name="com.sgn.DressUp.MyBaby">
+</category>
+</intent-filter>
+</receiver>
+<activity android:name="com.sgn.DressUp.OpenPushActivity" android:screenOrientation="0" android:theme="@android:01030007">
+</activity>
+<activity android:label="@7F050001" android:name="com.sgn.DressUp.MainMenuActivity" android:screenOrientation="0" android:theme="@android:01030007">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:name="com.sgn.Billing.SgnBillingActivity" android:screenOrientation="0" android:theme="@android:01030007">
+</activity>
+<receiver android:exported="true" android:name="com.AdX.tag.AdXAppTracker">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+<meta-data android:name="forward.Google" android:value="com.google.analytics.tracking.android.AnalyticsReceiver">
+</meta-data>
+</receiver>
+<activity android:configChanges="0x000003B0" android:hardwareAccelerated="true" android:name="com.flurry.android.FlurryFullscreenTakeoverActivity">
+</activity>
+<activity android:configChanges="0x000004B0" android:name="com.burstly.lib.component.networkcomponent.burstly.BurstlyFullscreenActivity" android:theme="@android:01030007">
+</activity>
+<activity android:configChanges="0x00000FB0" android:name="com.google.ads.AdActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.amazon.device.ads.AdActivity">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.amazon.device.ads.MraidBrowser">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.amazon.device.ads.VideoActionHandler">
+</activity>
+<activity android:configChanges="0x000000B0" android:name="com.greystripe.sdk.GSFullscreenActivity">
+</activity>
+<activity android:configChanges="0x00000CB0" android:name="com.inmobi.androidsdk.IMBrowserActivity">
+</activity>
+<activity android:configChanges="0x000000B0" android:name="com.millennialmedia.android.MMActivity" android:theme="@android:01030007">
+</activity>
+<activity android:configChanges="0x000000B0" android:name="com.millennialmedia.android.VideoPlayer" android:theme="@android:01030007">
+</activity>
+<activity android:configChanges="0x000000B0" android:name="com.burstly.lib.component.networkcomponent.jumptap.JumptapActivity" android:theme="@android:01030007">
+</activity>
+<activity android:name="com.sgn.DressUp.Games.AliyahsNewCribGameActivity" android:screenOrientation="0" android:theme="@android:01030007">
+</activity>
+<activity android:name="com.sgn.DressUp.Games.BabyBumpGameActivity" android:screenOrientation="0" android:theme="@android:01030007">
+</activity>
+<activity android:name="com.sgn.DressUp.Games.BabyPlaypenGameActivity" android:screenOrientation="0" android:theme="@android:01030007">
+</activity>
+<activity android:name="com.sgn.DressUp.Games.JustLikeMommyGameActivity" android:screenOrientation="0" android:theme="@android:01030007">
+</activity>
+<activity android:name="com.sgn.DressUp.Games.MommyCuteTummyGameActivity" android:screenOrientation="0" android:theme="@android:01030007">
+</activity>
+<activity android:name="com.sgn.DressUp.Games.BookAdventureGameActivity" android:screenOrientation="0" android:theme="@android:01030007">
+</activity>
+<activity android:name="com.sgn.DressUp.Games.MotherDaughterShoppingGameActivity" android:screenOrientation="0" android:theme="@android:01030007">
+</activity>
+<activity android:name="com.sgn.DressUp.Games.MyCuteBabyGameActivity" android:screenOrientation="0" android:theme="@android:01030007">
+</activity>
+<activity android:name="com.sgn.DressUp.Games.NewMomMimiGameActivity" android:screenOrientation="0" android:theme="@android:01030007">
+</activity>
+<activity android:name="com.sgn.DressUp.Games.NewbornNatalieGameActivity" android:screenOrientation="0" android:theme="@android:01030007">
+</activity>
+<activity android:name="com.sgn.DressUp.Games.PresentForMommyGameActivity" android:screenOrientation="0" android:theme="@android:01030007">
+</activity>
+<activity android:name="com.sgn.DressUp.Games.PrettyYoungMotherGameActivity" android:screenOrientation="0" android:theme="@android:01030007">
+</activity>
+<activity android:name="com.sgn.DressUp.Games.BabyShowerGameActivity" android:screenOrientation="0" android:theme="@android:01030007">
+</activity>
+<activity android:name="com.sgn.DressUp.Games.TinaTheTroubleMakerGameActivity" android:screenOrientation="0" android:theme="@android:01030007">
+</activity>
+<activity android:name="com.sgn.DressUp.Games.TracyInToyWorldGameActivity" android:screenOrientation="0" android:theme="@android:01030007">
+</activity>
+<activity android:name="com.sgn.DressUp.Games.WorldOfDreamsGameActivity" android:screenOrientation="0" android:theme="@android:01030007">
+</activity>
+</application>
+</manifest>

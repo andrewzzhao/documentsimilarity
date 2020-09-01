@@ -1,0 +1,182 @@
+<?xml version="1.0" ?><manifest android:versionCode="54" android:versionName="2.0.3" package="com.amadeus.merci.kq" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="18" android:targetSdkVersion="27">
+</uses-sdk>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_CALENDAR">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_CALENDAR">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE">
+</uses-permission>
+<permission android:name="com.amadeus.merci.kq.permission.C2D_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="com.amadeus.merci.kq.permission.C2D_MESSAGE">
+</uses-permission>
+<uses-permission android:name="com.sec.android.provider.badge.permission.READ">
+</uses-permission>
+<uses-permission android:name="com.sec.android.provider.badge.permission.WRITE">
+</uses-permission>
+<uses-permission android:name="com.htc.launcher.permission.READ_SETTINGS">
+</uses-permission>
+<uses-permission android:name="com.htc.launcher.permission.UPDATE_SHORTCUT">
+</uses-permission>
+<uses-permission android:name="com.sonyericsson.home.permission.BROADCAST_BADGE">
+</uses-permission>
+<uses-permission android:name="com.sonymobile.home.permission.PROVIDER_INSERT_BADGE">
+</uses-permission>
+<uses-permission android:name="com.anddoes.launcher.permission.UPDATE_COUNT">
+</uses-permission>
+<uses-permission android:name="com.majeur.launcher.permission.UPDATE_BADGE">
+</uses-permission>
+<uses-permission android:name="com.huawei.android.launcher.permission.CHANGE_BADGE">
+</uses-permission>
+<uses-permission android:name="com.huawei.android.launcher.permission.READ_SETTINGS">
+</uses-permission>
+<uses-permission android:name="com.huawei.android.launcher.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_APP_BADGE">
+</uses-permission>
+<uses-permission android:name="com.oppo.launcher.permission.READ_SETTINGS">
+</uses-permission>
+<uses-permission android:name="com.oppo.launcher.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="me.everything.badger.permission.BADGE_COUNT_READ">
+</uses-permission>
+<uses-permission android:name="me.everything.badger.permission.BADGE_COUNT_WRITE">
+</uses-permission>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-feature android:name="android.hardware.camera" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.camera.autofocus" android:required="false">
+</uses-feature>
+<application android:allowBackup="true" android:fullBackupContent="true" android:icon="@7F0C0000" android:label="@7F0E0074" android:name="com.amadeus.merci.app.AppController" android:resizeableActivity="false" android:supportsRtl="true" android:theme="@7F0F0006">
+<activity android:name="com.amadeus.merci.app.ui.LaunchActivity" android:noHistory="true" android:screenOrientation="1">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+<intent-filter android:label="@7F0E0074">
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="@7F0E00B5">
+</data>
+<data android:host="@7F0E0124">
+</data>
+</intent-filter>
+</activity>
+<activity android:label="@7F0E0074" android:name="com.amadeus.merci.app.ui.MainActivity" android:screenOrientation="1" android:theme="@7F0F0008" android:windowSoftInputMode="0x00000010">
+</activity>
+<meta-data android:name="io.fabric.ApiKey" android:value="74fac11fc7a54f5640c08e763a9109e0c879d60b">
+</meta-data>
+<activity android:name="com.amadeus.merci.app.ui.HybridActivity" android:screenOrientation="1" android:theme="@7F0F0008">
+</activity>
+<activity android:configChanges="0x00000EB0" android:name="com.amadeus.merci.app.ui.DXWebActivity" android:screenOrientation="1" android:theme="@7F0F0008">
+</activity>
+<activity android:label="@7F0E0224" android:name="com.amadeus.merci.app.ui.ProfileActivity" android:parentActivityName="com.amadeus.merci.app.ui.MainActivity" android:screenOrientation="1" android:theme="@7F0F0008">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.amadeus.merci.app.ui.MainActivity">
+</meta-data>
+</activity>
+<activity android:name="com.amadeus.merci.app.ui.LicenseViewActivity" android:screenOrientation="1">
+</activity>
+<service android:exported="false" android:name="com.amadeus.merci.app.fcm.MessagingService">
+<intent-filter>
+<action android:name="com.google.firebase.MESSAGING_EVENT">
+</action>
+</intent-filter>
+</service>
+<service android:exported="false" android:name="com.amadeus.merci.app.fcm.InstanceIDListenerService">
+<intent-filter>
+<action android:name="com.google.firebase.INSTANCE_ID_EVENT">
+</action>
+</intent-filter>
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.amadeus.merci.app.service.DynamicResourceService">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.amadeus.merci.app.service.RuleEngineProcessor">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.amadeus.merci.app.service.ImagesAtDestinationService">
+<intent-filter>
+<action android:name="com.amadeus.merci.app.service.ImagesAtDestinationService">
+</action>
+</intent-filter>
+</service>
+<receiver android:enabled="true" android:name="com.amadeus.merci.app.service.ConnectivityBroadcastReceiver">
+</receiver>
+<service android:enabled="true" android:exported="false" android:name="com.amadeus.merci.app.service.GeoCoderIntentService">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.amadeus.merci.app.service.localnotification.RemindersService">
+</service>
+<receiver android:name="com.amadeus.merci.app.service.localnotification.RemindersAlarmReceiver">
+<intent-filter>
+<action android:name="android.media.action.DISPLAY_NOTIFICATION">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</receiver>
+<provider android:authorities="com.amadeus.merci.kq.crashlyticsinitprovider" android:exported="false" android:initOrder="100" android:name="com.crashlytics.android.CrashlyticsInitProvider">
+</provider>
+<receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.analytics.AnalyticsReceiver">
+</receiver>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.analytics.AnalyticsService">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.analytics.AnalyticsJobService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<activity android:excludeFromRecents="true" android:exported="false" android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity" android:theme="@android:01030010">
+</activity>
+<service android:exported="true" android:name="com.google.android.gms.auth.api.signin.RevocationBoundService" android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION">
+</service>
+<service android:exported="true" android:name="com.google.firebase.messaging.FirebaseMessagingService">
+<intent-filter android:priority="-500">
+<action android:name="com.google.firebase.MESSAGING_EVENT">
+</action>
+</intent-filter>
+</service>
+<activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:01030010">
+</activity>
+<receiver android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+<category android:name="com.amadeus.merci.kq">
+</category>
+</intent-filter>
+</receiver>
+<service android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdService">
+<intent-filter android:priority="-500">
+<action android:name="com.google.firebase.INSTANCE_ID_EVENT">
+</action>
+</intent-filter>
+</service>
+<provider android:authorities="com.amadeus.merci.kq.firebaseinitprovider" android:exported="false" android:initOrder="100" android:name="com.google.firebase.provider.FirebaseInitProvider">
+</provider>
+<meta-data android:name="com.google.android.gms.version" android:value="@7F090007">
+</meta-data>
+<activity android:configChanges="0x000000A0" android:name="io.card.payment.CardIOActivity">
+</activity>
+<activity android:name="io.card.payment.DataEntryActivity">
+</activity>
+<meta-data android:name="com.google.android.wearable.beta.app" android:resource="@7F110000">
+</meta-data>
+</application>
+</manifest>

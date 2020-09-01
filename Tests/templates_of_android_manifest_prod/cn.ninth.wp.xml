@@ -1,0 +1,404 @@
+<?xml version="1.0" ?><manifest android:versionCode="31005" android:versionName="3.1.5" package="cn.ninth.wp" platformBuildVersionCode="26" platformBuildVersionName="8.0.0" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="16" android:targetSdkVersion="24">
+</uses-sdk>
+<permission android:name="cn.ninth.wp.permission.JPUSH_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="cn.ninth.wp.permission.JPUSH_MESSAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_USER_PRESENT">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-permission android:name="android.permission.SET_DEBUG_APP">
+</uses-permission>
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="android.permission.USE_CREDENTIALS">
+</uses-permission>
+<uses-permission android:name="android.permission.MANAGE_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="android.permission.FLASHLIGHT">
+</uses-permission>
+<uses-feature android:name="android.hardware.camera">
+</uses-feature>
+<uses-feature android:name="android.hardware.camera.autofocus">
+</uses-feature>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT">
+</uses-permission>
+<uses-permission android:name="com.android.launcher.permission.UNINSTALL_SHORTCUT">
+</uses-permission>
+<uses-permission android:name="com.android.launcher.permission.READ_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_MEDIA_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.RECORD_AUDIO">
+</uses-permission>
+<meta-data android:name="android.support.VERSION" android:value="26.0.0-alpha1">
+</meta-data>
+<application android:allowBackup="true" android:hardwareAccelerated="true" android:icon="@7F03008D" android:label="@7F090059" android:largeHeap="true" android:name="com.stub.StubApp" android:qihoo="activity" android:supportsRtl="true" android:theme="@7F0B00B0">
+<service android:enabled="true" android:exported="false" android:name="cn.jpush.android.service.PushService" android:process=":pushcore">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.REGISTER">
+</action>
+<action android:name="cn.jpush.android.intent.REPORT">
+</action>
+<action android:name="cn.jpush.android.intent.PushService">
+</action>
+<action android:name="cn.jpush.android.intent.PUSH_TIME">
+</action>
+</intent-filter>
+</service>
+<service android:enabled="true" android:exported="true" android:name="cn.jpush.android.service.DaemonService">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.DaemonService">
+</action>
+<category android:name="cn.ninth.wp">
+</category>
+</intent-filter>
+</service>
+<receiver android:enabled="true" android:exported="false" android:name="cn.jpush.android.service.PushReceiver" android:process=":pushcore">
+<intent-filter android:priority="1000">
+<action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY">
+</action>
+<category android:name="cn.ninth.wp">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.USER_PRESENT">
+</action>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_ADDED">
+</action>
+<action android:name="android.intent.action.PACKAGE_REMOVED">
+</action>
+<data android:scheme="package">
+</data>
+</intent-filter>
+</receiver>
+<activity android:configChanges="0x000000A0" android:exported="false" android:name="cn.jpush.android.ui.PushActivity" android:theme="@android:01030006">
+<intent-filter>
+<action android:name="cn.jpush.android.ui.PushActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="cn.ninth.wp">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000A0" android:exported="false" android:name="cn.jpush.android.ui.PopWinActivity" android:theme="@7F0B00E6">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="cn.ninth.wp">
+</category>
+</intent-filter>
+</activity>
+<service android:enabled="true" android:exported="false" android:name="cn.jpush.android.service.DownloadService" android:process=":mult">
+</service>
+<receiver android:exported="false" android:name="cn.jpush.android.service.AlarmReceiver">
+</receiver>
+<receiver android:enabled="true" android:exported="false" android:name="cn.jpush.im.android.helpers.IMReceiver">
+<intent-filter android:priority="1000">
+<action android:name="cn.jpush.im.android.action.IM_RESPONSE">
+</action>
+<action android:name="cn.jpush.im.android.action.NOTIFICATION_CLICK_PROXY">
+</action>
+<category android:name="cn.ninth.wp">
+</category>
+</intent-filter>
+</receiver>
+<receiver android:enabled="true" android:exported="true" android:name="cn.ninth.wp.jpush.MyJPushReceiver">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.REGISTRATION">
+</action>
+<action android:name="cn.jpush.android.intent.UNREGISTRATION">
+</action>
+<action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED">
+</action>
+<action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED">
+</action>
+<action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED">
+</action>
+<action android:name="cn.jpush.android.intent.ACTION_RICHPUSH_CALLBACK">
+</action>
+<action android:name="cn.jpush.android.intent.CONNECTION">
+</action>
+<category android:name="cn.ninth.wp">
+</category>
+</intent-filter>
+</receiver>
+<meta-data android:name="UMENG_APPKEY" android:value="58f43b2e6e27a401400009c8">
+</meta-data>
+<meta-data android:name="UMENG_CHANNEL" android:value="13">
+</meta-data>
+<activity android:configChanges="0x000004A0" android:exported="true" android:name="cn.ninth.wp.wxapi.WXEntryActivity" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="cn.ninth.wp.umeng.WBShareActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000A0" android:exported="false" android:name="com.umeng.socialize.media.WBShareCallBackActivity" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<activity android:launchMode="2" android:name="com.sina.weibo.sdk.share.WbShareTransActivity" android:theme="@android:01030011">
+<intent-filter>
+<action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:launchMode="2" android:name="com.umeng.qq.tencent.AuthActivity" android:noHistory="true">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="tencent100424468">
+</data>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.umeng.qq.tencent.AssistActivity" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<meta-data android:name="BDAPPID" android:value="9571687">
+</meta-data>
+<meta-data android:name="BDAPPKEY" android:value="LTRBFaRPAu4bG1tgD1AZlQGS2foAZDWe">
+</meta-data>
+<provider android:authorities="cn.ninth.wp.fileprovider" android:exported="false" android:grantUriPermissions="true" android:name="android.support.v4.content.FileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F070000">
+</meta-data>
+</provider>
+<meta-data android:name="MW_APPID" android:value="4M30LA9SLTGWJLWXP4YVNYHP6D0KIOQG">
+</meta-data>
+<activity android:name="cn.ninth.wp.OpenActivity" android:screenOrientation="1" android:theme="@7F0B00AD">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:host="wp" android:scheme="launchapp">
+</data>
+</intent-filter>
+</activity>
+<meta-data android:name="cn.ninth.wp.utils.CustomGlideModule" android:value="GlideModule">
+</meta-data>
+<activity android:name="cn.ninth.wp.ForgetPasswordActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:name="cn.ninth.wp.InputPasswordActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:name="cn.ninth.wp.LoginActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:name="cn.ninth.wp.RegistActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:name="cn.ninth.wp.GuideActivity" android:screenOrientation="1" android:theme="@7F0B00AD">
+</activity>
+<activity android:name="cn.ninth.wp.MySubscribeActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000007A0" android:name="cn.ninth.wp.MainActivity" android:screenOrientation="1" android:theme="@7F0B00AD">
+</activity>
+<activity android:name="cn.ninth.wp.ChangePasswordActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:name="cn.ninth.wp.ChangeUserInfoActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.ninth.wp.AdviceActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.ninth.wp.HotArticleActivity" android:screenOrientation="1">
+</activity>
+<activity android:exported="true" android:name="cn.ninth.wp.MenuWebInfoActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.ninth.wp.TaskActivity">
+</activity>
+<activity android:name="cn.ninth.wp.MyCollectActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.ninth.wp.MyCollectDirectActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.ninth.wp.CollectSelectActivity" android:screenOrientation="1" android:theme="@7F0B00E7">
+</activity>
+<activity android:name="cn.ninth.wp.SpecialTopicGzhActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.ninth.wp.SpecialTopicDetailGzhActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.ninth.wp.GzhDetailActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="android.intent.action.CREATE_SHORTCUT">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000007A0" android:name="cn.ninth.wp.TopicDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000007A0" android:name="cn.ninth.wp.TopicDetailSearchActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000480" android:hardwareAccelerated="true" android:name="cn.ninth.wp.GzhContentDetailActivity">
+</activity>
+<activity android:name="cn.ninth.wp.CollectDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.ninth.wp.GzhTypeActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.ninth.wp.WebInfoActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.ninth.wp.SearchActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:configChanges="0x000007A0" android:name="cn.ninth.wp.SearchResultActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:name="cn.ninth.wp.CustomGzhActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:name="cn.ninth.wp.SettingActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.ninth.wp.SettingDisplayActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.ninth.wp.SettingPushActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.ninth.wp.SettingReadActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.ninth.wp.ConverActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.ninth.wp.SubscriptionAlertsActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.ninth.wp.GzhGroupActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.ninth.wp.widget.ImagePager.ImagePagerActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.ninth.wp.MySubjectActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.ninth.wp.MyCreateSubjectActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.ninth.wp.MyRelatedSubjectActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.ninth.wp.MyEditSubjectActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.ninth.wp.MyFeedBackActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.ninth.wp.MySubscribeResultActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.ninth.wp.FeedBackActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.ninth.wp.utils.keyboard.PickImageActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.ninth.wp.utils.keyboard.PickerAlbumActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.ninth.wp.utils.keyboard.BrowserViewPagerActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.ninth.wp.CollectEditNameActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.ninth.wp.MyListSubjectActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.ninth.wp.BindSocialActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.ninth.wp.BindPhotoActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.ninth.wp.SafetyVerificationActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="cn.ninth.wp.RegistPhotoActivity" android:screenOrientation="1">
+</activity>
+<receiver android:enabled="true" android:exported="false" android:name="cn.ninth.wp.jpush.NotificationBroadcastReceiver">
+<intent-filter>
+<action android:name="notification_cancelled">
+</action>
+<action android:name="notification_clicked">
+</action>
+</intent-filter>
+</receiver>
+<service android:name="cn.ninth.wp.jpush.MyServer">
+<intent-filter>
+<action android:name="android.intent.action.MyService">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</service>
+<activity android:name="cn.ninth.wp.ManagerSubscribeActivity">
+</activity>
+<activity android:name="cn.ninth.wp.ManagerSubscribeDetailActivity">
+</activity>
+<receiver android:exported="false" android:name="com.baidu.aiupdatesdk.receiver.BDBroadcastReceiver">
+<intent-filter>
+<action android:name="com.baidu.aiupdatesdk.ACTION_AS_DOWNLOAD_COMPLETE">
+</action>
+<action android:name="android.intent.action.PACKAGE_ADDED">
+</action>
+<data android:scheme="package">
+</data>
+</intent-filter>
+</receiver>
+<activity android:name="com.luck.picture.lib.PictureSelectorActivity" android:screenOrientation="1" android:theme="@7F0B0194" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:name="com.luck.picture.lib.PictureBaseActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.luck.picture.lib.PicturePreviewActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.luck.picture.lib.PictureVideoPlayActivity" android:screenOrientation="4">
+</activity>
+<activity android:name="com.luck.picture.lib.PictureExternalPreviewActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.yalantis.ucrop.UCropActivity" android:screenOrientation="1" android:theme="@7F0B012F">
+</activity>
+<activity android:name="com.yalantis.ucrop.PictureMultiCuttingActivity" android:screenOrientation="1" android:theme="@7F0B012F">
+</activity>
+<activity android:name="com.luck.picture.lib.PicturePlayAudioActivity" android:screenOrientation="1" android:theme="@7F0B012F">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.uuzuche.lib_zxing.activity.CaptureActivity" android:screenOrientation="1" android:theme="@7F0B0130" android:windowSoftInputMode="0x00000003">
+</activity>
+<provider android:authorities="cn.ninth.wp.DataProvider" android:exported="false" android:name="cn.jpush.android.service.DataProvider">
+</provider>
+<provider android:authorities="cn.ninth.wp.DownloadProvider" android:exported="true" android:name="cn.jpush.android.service.DownloadProvider">
+</provider>
+<meta-data android:name="JPUSH_CHANNEL" android:value="developer-default">
+</meta-data>
+<meta-data android:name="JPUSH_APPKEY" android:value="e39cf3744b25a4106300fd38">
+</meta-data>
+<activity android:exported="false" android:label="" android:name="pub.devrel.easypermissions.AppSettingsDialogHolderActivity" android:theme="@7F0B00E5">
+</activity>
+</application>
+</manifest>

@@ -1,0 +1,164 @@
+<?xml version="1.0" ?><manifest android:sharedUserId="nowinnovations.com" android:versionCode="430022" android:versionName="4.3.02" package="us.parknow" platformBuildVersionCode="23" platformBuildVersionName="6.0-2704002" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="10" android:targetSdkVersion="23">
+</uses-sdk>
+<supports-screens android:anyDensity="true" android:largeScreens="true" android:normalScreens="true" android:resizeable="true" android:smallScreens="true" android:xlargeScreens="true">
+</supports-screens>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-permission android:name="android.permission.FLASHLIGHT">
+</uses-permission>
+<uses-permission android:name="android.permission.NFC">
+</uses-permission>
+<uses-permission android:name="android.permission.SEND_SMS">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:maxSdkVersion="18" android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-feature android:name="android.hardware.camera" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.camera.flash" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.camera.autofocus" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.nfc" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.telephony" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.location.network" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.location.gps" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.location" android:required="false">
+</uses-feature>
+<application android:allowBackup="true" android:icon="@7F020083" android:label="MobileNOW! US" android:name="ee.location.framework.mobile.android.NOWApplication" android:supportsRtl="true" android:theme="@7F0A00F7">
+<activity android:configChanges="0x000000A0" android:launchMode="2" android:name="us.parknow.MobileNOWUSMainActivity" android:process=":mainapp" android:screenOrientation="1" android:windowSoftInputMode="0x00000011">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="mobile-now.us" android:pathPattern=".*MobileNOW\.apk" android:scheme="https">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="mobile-now.us" android:scheme="parknow">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="parknow">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="mobile-now.us" android:scheme="mobilenowus">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="mobilenowus">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.nfc.action.TECH_DISCOVERED">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+<meta-data android:name="android.nfc.action.TECH_DISCOVERED" android:resource="@7F050001">
+</meta-data>
+</activity>
+<activity android:name="ee.location.framework.mobile.android.webview.SeparateWebviewActivity" android:process=":webview" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:name="us.parknow.AlertActivity" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="io.card.payment.CardIOActivity" android:process=":cardioview">
+</activity>
+<activity android:name="io.card.payment.DataEntryActivity" android:process=":cardioview" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F07003C" android:name="com.zendesk.sdk.feedback.ui.ContactZendeskActivity" android:process=":zendeskview" android:screenOrientation="1" android:theme="@7F0A00EF" android:windowSoftInputMode="0x00000014">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F07003C" android:name="com.zendesk.sdk.requests.ViewRequestActivity" android:process=":zendeskview" android:screenOrientation="1" android:theme="@7F0A00EF" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:label="@7F070050" android:name="com.zendesk.sdk.requests.RequestActivity" android:process=":zendeskview" android:screenOrientation="1" android:theme="@7F0A00EF">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="MobileNOW! Help" android:name="com.zendesk.sdk.support.SupportActivity" android:process=":zendeskview" android:screenOrientation="1" android:theme="@7F0A00EF">
+</activity>
+<activity android:configChanges="0x00000480" android:name="com.zendesk.sdk.support.ViewArticleActivity" android:process=":zendeskview" android:screenOrientation="1" android:theme="@7F0A00EF">
+</activity>
+<activity android:name="us.parknow.ZendeskActivity" android:process=":zendeskview" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<receiver android:name="us.parknow.AlarmReceiver" android:process=":remote">
+</receiver>
+<receiver android:exported="false" android:name="us.parknow.OnBootReceiver">
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+</intent-filter>
+</receiver>
+<meta-data android:name="com.google.android.gms.version" android:value="@7F0B0004">
+</meta-data>
+<meta-data android:name="io.fabric.ApiKey" android:value="c3ee78b6e96f20f67b07ac7d3250f1c4f58f0198">
+</meta-data>
+<activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:01030010">
+</activity>
+<receiver android:name="com.zendesk.sdk.power.BatteryStateBroadcastReceiver">
+<intent-filter>
+<action android:name="android.intent.action.BATTERY_LOW">
+</action>
+<action android:name="android.intent.action.BATTERY_OKAY">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:exported="false" android:name="com.zendesk.sdk.deeplinking.ZendeskDeepLinkingBroadcastReceiver">
+<intent-filter>
+<action android:name="com.zendesk.sdk.deeplinking">
+</action>
+</intent-filter>
+</receiver>
+<provider android:authorities="us.parknow.belvedere.attachments" android:exported="false" android:grantUriPermissions="true" android:name="com.zendesk.belvedere.BelvedereFileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F050000">
+</meta-data>
+</provider>
+</application>
+</manifest>

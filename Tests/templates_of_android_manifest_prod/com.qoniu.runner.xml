@@ -1,0 +1,108 @@
+<?xml version="1.0" ?><manifest android:versionCode="9" android:versionName="1.09" package="com.qoniu.runner" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="8">
+</uses-sdk>
+<uses-feature android:glEsVersion="0x00020000">
+</uses-feature>
+<application android:debuggable="true" android:icon="@7F020000" android:label="@7F030000">
+<activity android:configChanges="0x00000080" android:label="@7F030000" android:name="com.qoniu.runner.BraveRunner" android:screenOrientation="0" android:theme="@android:01030007">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<service android:exported="true" android:name="mm.purchasesdk.iapservice.PurchaseService">
+<intent-filter android:priority="301">
+<action android:name="com.aspire.purchaseservice.BIND">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+<intent-filter android:priority="301">
+<action android:name="com.qoniu.runner.purchaseservice.BIND">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+<intent-filter android:priority="301">
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.SAFIAP.COMPONENT">
+</category>
+</intent-filter>
+</service>
+<activity android:configChanges="0x00000080" android:name="mm.purchasesdk.iapservice.BillingLayoutActivity" android:screenOrientation="0" android:theme="@android:0103000F">
+<intent-filter android:priority="301">
+<action android:name="com.qoniu.runner.com.mmiap.activity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<service android:exported="true" android:name="safiap.framework.SafFrameworkManager" android:process="safiap.framework">
+<intent-filter android:priority="630">
+<action android:name="safiap.framework.sdk.ISAFFramework">
+</action>
+</intent-filter>
+<intent-filter android:priority="630">
+<action android:name="safiap.framework.ACTION_START_DOWNLOAD">
+</action>
+</intent-filter>
+<intent-filter android:priority="630">
+<action android:name="safiap.framework.ACTION_CHECK_UPDATE">
+</action>
+</intent-filter>
+</service>
+<receiver android:name="safiap.framework.CheckUpdateReceiver">
+<intent-filter>
+<action android:name="safiap.framework.ACTION_CANCEL_NOTIFICATION">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="safiap.GET_SHARED_DATA">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="safiap.framework.ACTION_SET_TIMER">
+</action>
+</intent-filter>
+</receiver>
+<activity android:configChanges="0x00000080" android:excludeFromRecents="true" android:launchMode="3" android:name="safiap.framework.ui.UpdateHintActivity" android:theme="@android:01030010">
+<intent-filter>
+<action android:name="safiap.framework.ACTION_TO_INSTALL">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="safiap.framework.ACTION_TO_INSTALL_IAP">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="safiap.framework.ACTION_NETWORK_ERROR_IAP">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="safiap.framework.ACTION_NETWORK_ERROR_FRAMEWORK">
+</action>
+</intent-filter>
+</activity>
+<service android:name="safiap.framework.logreport.monitor.handler.LogreportHandler" android:process=":remote">
+</service>
+</application>
+<supports-screens android:anyDensity="true" android:largeScreens="true" android:normalScreens="true" android:smallScreens="true">
+</supports-screens>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.SEND_SMS">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS">
+</uses-permission>
+</manifest>

@@ -1,0 +1,64 @@
+<?xml version="1.0" ?><manifest android:versionCode="20" android:versionName="3.0" package="ebm.com.iibm" platformBuildVersionCode="25" platformBuildVersionName="7.1.1" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="14" android:targetSdkVersion="23">
+</uses-sdk>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.MEDIA_CONTENT_CONTROL">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_CALENDAR">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_CALENDAR">
+</uses-permission>
+<meta-data android:name="android.support.VERSION" android:value="25.3.1">
+</meta-data>
+<application android:allowBackup="true" android:icon="@7F030002" android:label="@7F070024" android:name="ebm.com.iibm.ApplicationMain" android:supportsRtl="true" android:theme="@7F0900A8">
+<meta-data android:name="android.max_aspect" android:value="3.000000">
+</meta-data>
+<activity android:configChanges="0x000004B0" android:label="@7F070024" android:name="ebm.com.iibm.EbmMainActivity" android:theme="@7F090040">
+</activity>
+<activity android:label="@7F070047" android:name="ebm.com.iibm.NavActivity" android:theme="@7F090040">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004B0" android:name="ebm.com.iibm.utils.ThemeSelectorActivity" android:theme="@7F090128">
+</activity>
+<activity android:name="ebm.com.iibm.NotificationActivity" android:parentActivityName="ebm.com.iibm.NavActivity">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:theme="@7F090128" android:value=".NavActivity">
+</meta-data>
+</activity>
+<receiver android:name="ebm.com.iibm.receivers.DailyAlarmReceiver">
+</receiver>
+<receiver android:name="ebm.com.iibm.receivers.BootCompleteReceiver">
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+</intent-filter>
+</receiver>
+<activity android:label="@7F070048" android:name="ebm.com.iibm.PrayerCardActivity" android:theme="@7F0900A8">
+</activity>
+<activity android:configChanges="0x00000480" android:label="@7F070046" android:name="ebm.com.iibm.DownloadsActivity" android:theme="@7F0900A8" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:label="@7F070046" android:name="ebm.com.iibm.fragments.SongsSearchActivity" android:theme="@7F0900A8">
+</activity>
+<activity android:name="ebm.com.iibm.AboutActivity">
+</activity>
+<activity android:name="ebm.com.iibm.activities.NewsActivity" android:theme="@7F0900A8">
+</activity>
+<activity android:name="ebm.com.iibm.activities.VideoActivity" android:theme="@7F0900A8">
+</activity>
+<activity android:name="ebm.com.iibm.activities.BMActivity" android:theme="@7F0900A8">
+</activity>
+</application>
+</manifest>

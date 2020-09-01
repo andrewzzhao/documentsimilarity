@@ -1,0 +1,414 @@
+<?xml version="1.0" ?><manifest android:versionCode="103" android:versionName="103.0" package="com.boss.taxi" platformBuildVersionCode="19" platformBuildVersionName="4.4.2-1456859" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="14" android:targetSdkVersion="17">
+</uses-sdk>
+<permission android:name="com.boss.taxi.permission.JPUSH_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="com.boss.taxi.permission.JPUSH_MESSAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_USER_PRESENT">
+</uses-permission>
+<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS">
+</uses-permission>
+<uses-permission android:name="android.permission.SET_DEBUG_APP">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-feature android:name="android.hardware.camera">
+</uses-feature>
+<uses-feature android:name="android.hardware.camera.autofocus">
+</uses-feature>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="android.permission.USE_CREDENTIALS">
+</uses-permission>
+<uses-permission android:name="android.permission.MANAGE_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="com.android.launcher.permission.READ_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.BROADCAST_STICKY">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CALL_PHONE">
+</uses-permission>
+<uses-permission android:name="cn.swiftpass.wxpay.permission.MMOAUTH_CALLBACK">
+</uses-permission>
+<uses-permission android:name="cn.swiftpass.wxpay.permission.MM_MESSAGE">
+</uses-permission>
+<uses-permission android:name="xvtian.gai.receiver">
+</uses-permission>
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW">
+</uses-permission>
+<uses-permission android:name="android.permission.SYSTEM_OVERLAY_WINDOW">
+</uses-permission>
+<uses-permission android:name="android.permission.NFC">
+</uses-permission>
+<uses-feature android:name="android.hardware.nfc" android:required="true">
+</uses-feature>
+<application android:allowBackup="true" android:icon="@7F02004F" android:label="@7F0B0000" android:name="com.stub.StubApp" android:qihoo="activity" android:theme="@android:01030006">
+<meta-data android:name="com.baidu.lbsapi.API_KEY" android:value="bCNGrGMROYiD74ZPdkXxIbjzFjStnfob">
+</meta-data>
+<activity android:exported="false" android:name="cn.jpush.android.ui.PopWinActivity" android:theme="@7F080001">
+</activity>
+<activity android:excludeFromRecents="true" android:launchMode="0" android:name="com.stub.plugin.Stub01" android:noHistory="true" android:taskAffinity="com.boss.taxi.affinity">
+</activity>
+<service android:enabled="true" android:exported="true" android:name="com.stub.plugin.Stub02">
+</service>
+<receiver android:enabled="true" android:exported="false" android:name="com.stub.plugin.Stub03">
+</receiver>
+<provider android:authorities="com.boss.taxi.COMMONPROVIDER" android:exported="true" android:name="com.stub.plugin.Stub04">
+</provider>
+<activity android:configChanges="0x000000A0" android:exported="false" android:name="cn.jpush.android.ui.PushActivity" android:theme="@android:01030006">
+<intent-filter>
+<action android:name="cn.jpush.android.ui.PushActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="com.boss.taxi">
+</category>
+</intent-filter>
+</activity>
+<service android:exported="false" android:name="cn.jpush.android.service.PushService" android:process=":mult">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.REGISTER">
+</action>
+<action android:name="cn.jpush.android.intent.REPORT">
+</action>
+<action android:name="cn.jpush.android.intent.PushService">
+</action>
+<action android:name="cn.jpush.android.intent.PUSH_TIME">
+</action>
+</intent-filter>
+</service>
+<provider android:authorities="com.boss.taxi.DataProvider" android:exported="true" android:name="cn.jpush.android.service.DataProvider">
+</provider>
+<service android:enabled="true" android:exported="true" android:name="cn.jpush.android.service.DaemonService">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.DaemonService">
+</action>
+<category android:name="com.boss.taxi">
+</category>
+</intent-filter>
+</service>
+<receiver android:enabled="true" android:exported="false" android:name="cn.jpush.android.service.PushReceiver">
+<intent-filter android:priority="1000">
+<action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY">
+</action>
+<category android:name="com.boss.taxi">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.USER_PRESENT">
+</action>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_ADDED">
+</action>
+<action android:name="android.intent.action.PACKAGE_REMOVED">
+</action>
+<data android:scheme="package">
+</data>
+</intent-filter>
+</receiver>
+<receiver android:exported="false" android:name="cn.jpush.android.service.AlarmReceiver">
+</receiver>
+<meta-data android:name="JPUSH_CHANNEL" android:value="developer-default">
+</meta-data>
+<meta-data android:name="JPUSH_APPKEY" android:value="2e67e6beea920d57655406b1">
+</meta-data>
+<receiver android:enabled="true" android:exported="false" android:name="com.boss.taxi.receiver.MyReceiver">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.REGISTRATION">
+</action>
+<action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED">
+</action>
+<action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED">
+</action>
+<action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED">
+</action>
+<action android:name="cn.jpush.android.intent.CONNECTION">
+</action>
+<category android:name="com.boss.taxi">
+</category>
+</intent-filter>
+</receiver>
+<receiver android:name="com.boss.taxi.receiver.MyJPushMessageReceiver">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.RECEIVE_MESSAGE">
+</action>
+<category android:name="com.boss.taxi">
+</category>
+</intent-filter>
+</receiver>
+<activity android:name="com.boss.taxi.ChooseUser" android:screenOrientation="5">
+</activity>
+<activity android:name="com.boss.taxi.CarGetUser" android:screenOrientation="5">
+</activity>
+<activity android:name="com.boss.taxi.ChangTaxi" android:screenOrientation="5">
+</activity>
+<activity android:name="com.boss.taxi.History" android:screenOrientation="5">
+</activity>
+<activity android:name="com.boss.taxi.Shopping" android:screenOrientation="5">
+</activity>
+<activity android:name="com.boss.taxi.ActActivity" android:screenOrientation="5">
+</activity>
+<activity android:name="com.boss.taxi.TaxiMenuActivity" android:screenOrientation="5">
+</activity>
+<activity android:name="com.boss.taxi.CallActivity" android:screenOrientation="5">
+</activity>
+<activity android:name="com.boss.taxi.GuestActivity" android:screenOrientation="5">
+</activity>
+<activity android:name="com.boss.taxi.RegisterTaxiActivity" android:screenOrientation="5">
+</activity>
+<activity android:launchMode="2" android:name="com.boss.taxi.Login" android:screenOrientation="5">
+</activity>
+<activity android:name="com.boss.taxi.MxChongzhi_Day" android:screenOrientation="5">
+</activity>
+<activity android:name="com.boss.taxi.TaxiSatusActivity" android:screenOrientation="5">
+</activity>
+<activity android:name="com.boss.taxi.ViewCarPark" android:screenOrientation="5">
+</activity>
+<activity android:name="com.boss.taxi.Mx_zc_tongji" android:screenOrientation="5">
+</activity>
+<activity android:name="com.boss.taxi.Xiaojie" android:screenOrientation="5">
+</activity>
+<activity android:name="com.boss.taxi.Mx_bs_tongji" android:screenOrientation="5">
+</activity>
+<activity android:name="com.boss.taxi.Mx_Chongzhi" android:screenOrientation="5">
+</activity>
+<activity android:name="com.boss.taxi.CarBookPark" android:screenOrientation="5">
+</activity>
+<activity android:name="com.boss.taxi.CarBookCw" android:screenOrientation="5">
+</activity>
+<activity android:name="com.boss.taxi.I_Driver_Detail" android:screenOrientation="5">
+</activity>
+<activity android:name="com.boss.taxi.AddMessage" android:screenOrientation="5">
+</activity>
+<activity android:name="com.boss.taxi.Add_Cwd01" android:screenOrientation="5">
+</activity>
+<activity android:name="com.boss.taxi.AddCwMap" android:screenOrientation="5">
+</activity>
+<activity android:name="com.boss.taxi.SendRedPackage" android:screenOrientation="5">
+</activity>
+<activity android:launchMode="2" android:name="com.boss.taxi.I_Driver" android:screenOrientation="5">
+</activity>
+<activity android:launchMode="2" android:name="com.boss.taxi.I_WantTo_Dadi" android:screenOrientation="5">
+</activity>
+<activity android:name="com.boss.taxi.I_WantTo_Dadi_2" android:screenOrientation="5">
+</activity>
+<activity android:name="com.boss.taxi.NoRedPackage" android:screenOrientation="5" android:theme="@7F080009">
+</activity>
+<activity android:name="com.boss.taxi.CaiRedPackage" android:screenOrientation="5" android:theme="@7F080009">
+</activity>
+<activity android:name="com.boss.taxi.TixianActivity" android:screenOrientation="5">
+</activity>
+<activity android:name="com.boss.taxi.MyFavority" android:screenOrientation="5">
+</activity>
+<activity android:launchMode="2" android:name="com.boss.taxi.MyMessage" android:screenOrientation="5">
+</activity>
+<activity android:launchMode="2" android:name="com.boss.taxi.RegisterActivity" android:screenOrientation="5">
+</activity>
+<activity android:launchMode="2" android:name="com.boss.taxi.OrderInfo_Details" android:screenOrientation="5">
+</activity>
+<activity android:launchMode="2" android:name="com.boss.taxi.OrderInfo" android:screenOrientation="5">
+</activity>
+<activity android:name="com.boss.taxi.GjView" android:screenOrientation="5">
+</activity>
+<activity android:name="com.boss.taxi.LoginActivity" android:screenOrientation="5">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:name="com.boss.taxi.Zhzz" android:screenOrientation="5">
+</activity>
+<activity android:name="com.boss.taxi.ModifyPwd" android:screenOrientation="5">
+</activity>
+<activity android:launchMode="2" android:name="com.boss.taxi.SellOrderInfo" android:screenOrientation="5">
+</activity>
+<activity android:launchMode="2" android:name="com.boss.taxi.ParkListAcitivity" android:screenOrientation="5">
+</activity>
+<activity android:name="com.boss.taxi.FrmIndex" android:screenOrientation="5">
+</activity>
+<activity android:name="com.boss.taxi.NfcRead" android:screenOrientation="5">
+</activity>
+<activity android:name="com.boss.taxi.CarParkImageList" android:screenOrientation="5">
+</activity>
+<activity android:name="com.boss.taxi.Cwd" android:screenOrientation="5">
+</activity>
+<activity android:launchMode="2" android:name="com.boss.taxi.NFC" android:screenOrientation="5">
+<intent-filter>
+<action android:name="android.nfc.action.TAG_DISCOVERED">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.nfc.action.TAG_DISCOVERED">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.nfc.action.TECH_DISCOVERED">
+</action>
+</intent-filter>
+<meta-data android:name="android.nfc.action.TECH_DISCOVERED" android:resource="@7F050000">
+</meta-data>
+</activity>
+<activity android:launchMode="2" android:name="com.boss.taxi.CarReportList" android:screenOrientation="5">
+</activity>
+<activity android:name="com.boss.taxi.CarParkReport" android:screenOrientation="5">
+</activity>
+<activity android:name="com.boss.taxi.CarReportDetails" android:screenOrientation="5">
+</activity>
+<activity android:name="com.boss.taxi.RentParkInfo2" android:screenOrientation="5">
+</activity>
+<activity android:launchMode="2" android:name="com.boss.taxi.RentList" android:screenOrientation="5">
+</activity>
+<activity android:name="com.boss.taxi.RentParkInfo" android:screenOrientation="5">
+</activity>
+<activity android:name="com.boss.taxi.Mx" android:screenOrientation="5">
+</activity>
+<activity android:name="com.boss.taxi.AddCarParkMap" android:screenOrientation="5">
+</activity>
+<activity android:launchMode="2" android:name="com.boss.taxi.BaiduShowMapView" android:screenOrientation="5">
+</activity>
+<activity android:name="com.boss.taxi.Register" android:screenOrientation="5">
+</activity>
+<activity android:launchMode="2" android:name="com.boss.taxi.AddCarPark" android:screenOrientation="5">
+</activity>
+<activity android:launchMode="2" android:name="com.boss.taxi.MyCarParkList" android:screenOrientation="5">
+</activity>
+<activity android:launchMode="2" android:name="com.boss.taxi.Zhsq_List" android:screenOrientation="5">
+</activity>
+<activity android:launchMode="2" android:name="com.boss.taxi.Zhxc_List" android:screenOrientation="5">
+</activity>
+<activity android:name="com.boss.taxi.FK" android:screenOrientation="5">
+</activity>
+<activity android:launchMode="2" android:name="com.boss.taxi.Personal" android:screenOrientation="5">
+</activity>
+<activity android:launchMode="2" android:name="com.boss.taxi.CarParkList" android:screenOrientation="5">
+</activity>
+<activity android:launchMode="2" android:name="com.boss.taxi.ZhxqMain" android:screenOrientation="5">
+</activity>
+<activity android:launchMode="2" android:name="com.boss.taxi.ZhxcMain" android:screenOrientation="5">
+</activity>
+<activity android:launchMode="2" android:name="com.boss.taxi.RedPackage" android:screenOrientation="5">
+</activity>
+<activity android:name="com.boss.taxi.Show_Dwsp" android:screenOrientation="5">
+</activity>
+<activity android:name="com.boss.taxi.StopingActivity" android:screenOrientation="5">
+</activity>
+<activity android:launchMode="2" android:name="com.boss.taxi.Show_Dwsp1" android:screenOrientation="5">
+</activity>
+<activity android:launchMode="2" android:name="com.boss.taxi.SpDetails" android:screenOrientation="5">
+</activity>
+<activity android:launchMode="2" android:name="com.boss.taxi.ViewPersonal" android:screenOrientation="5">
+</activity>
+<activity android:launchMode="2" android:name="com.boss.taxi.SpListView" android:screenOrientation="5">
+</activity>
+<activity android:launchMode="2" android:name="com.boss.taxi.ForgetPasswordActivity" android:screenOrientation="5">
+</activity>
+<activity android:launchMode="2" android:name="com.boss.taxi.ForgetPasswordActivity1" android:screenOrientation="5">
+</activity>
+<activity android:launchMode="2" android:name="com.boss.taxi.Zhbd_Setting" android:screenOrientation="5">
+</activity>
+<activity android:name="com.boss.taxi.ShiShiPark">
+</activity>
+<activity android:launchMode="2" android:name="com.boss.taxi.MenuList" android:screenOrientation="5">
+</activity>
+<activity android:name="com.boss.taxi.Mx_Day" android:screenOrientation="5">
+</activity>
+<activity android:name="com.boss.taxi.IncomeActivity" android:screenOrientation="5">
+</activity>
+<activity android:name="com.boss.taxi.TaxiManageActivity" android:screenOrientation="5">
+</activity>
+<activity android:name="com.boss.taxi.EditParkActivity" android:screenOrientation="5">
+</activity>
+<activity android:name="com.boss.taxi.Costing" android:screenOrientation="5">
+</activity>
+<activity android:name="com.boss.taxi.Zhbd" android:screenOrientation="5">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:scheme="wxc7bc3eb7ec3b5033">
+</data>
+</intent-filter>
+</activity>
+<service android:name="com.boss.taxi.LinshengService">
+</service>
+<activity android:label="@7F0B0000" android:launchMode="2" android:name="com.boss.taxi.SXX001MainActivity" android:screenOrientation="5">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.zxing.activity.CaptureActivity" android:screenOrientation="1" android:theme="@android:01030007" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000000E0" android:exported="false" android:name="com.alipay.sdk.app.H5PayActivity" android:screenOrientation="3" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.boss.taxi.MyDistanceActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.boss.taxi.PayActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.boss.taxi.PersonListActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.boss.taxi.TaxiActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.boss.taxi.TaxiOrderActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.boss.taxi.TaxiOrderListActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:exported="true" android:launchMode="1" android:name="com.boss.taxi.wxapi.WXPayEntryActivity">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.boss.taxi.CancelOrderActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000003">
+</activity>
+<service android:enabled="true" android:name="com.baidu.location.f" android:process=":remote">
+<intent-filter>
+<action android:name="com.baidu.location.service_v2.2">
+</action>
+</intent-filter>
+</service>
+<activity android:name=".SelectPicPopupWindow" android:theme="@7F08000B">
+</activity>
+<activity android:exported="false" android:name="com.boss.taxi.receiver.TestActivity">
+<intent-filter>
+<action android:name="jpush.testAction">
+</action>
+<category android:name="jpush.testCategory">
+</category>
+</intent-filter>
+</activity>
+</application>
+</manifest>

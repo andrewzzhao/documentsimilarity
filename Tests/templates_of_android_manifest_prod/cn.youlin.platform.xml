@@ -1,0 +1,298 @@
+<?xml version="1.0" ?><manifest android:versionCode="20150925" android:versionName="1.3.0" package="cn.youlin.platform" platformBuildVersionCode="22" platformBuildVersionName="5.1.1-1819727" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="14" android:targetSdkVersion="22">
+</uses-sdk>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.REORDER_TASKS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_LOGS">
+</uses-permission>
+<uses-permission android:name="android.intent.action.MEDIA_MOUNTED">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.CALL_PHONE">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_CONFIGURATION">
+</uses-permission>
+<uses-permission android:name="android.permission.RECORD_AUDIO">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_CONTACTS">
+</uses-permission>
+<uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-permission android:name="android.permission.FLASHLIGHT">
+</uses-permission>
+<uses-feature android:name="android.hardware.camera">
+</uses-feature>
+<uses-feature android:name="android.hardware.camera.autofocus">
+</uses-feature>
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW">
+</uses-permission>
+<application android:allowBackup="true" android:hardwareAccelerated="@7F080003" android:icon="@7F02016A" android:label="@7F05001E" android:largeHeap="true" android:name="cn.youlin.platform.YlApplication" android:theme="@7F07007A">
+<meta-data android:name="BUILD_VERSION" android:value="3">
+</meta-data>
+<meta-data android:name="YL_APP_ID" android:value="654321">
+</meta-data>
+<meta-data android:name="UMENG_APPKEY" android:value="5433852afd98c5b7be01a400">
+</meta-data>
+<meta-data android:name="UMENG_MESSAGE_SECRET" android:value="bd04ce63c69a472060b3ba9c715a96d6">
+</meta-data>
+<meta-data android:name="UMENG_CHANNEL" android:value="YOULIN">
+</meta-data>
+<meta-data android:name="RONG_CLOUD_APP_KEY" android:value="x4vkb1qpv6hkk">
+</meta-data>
+<meta-data android:name="com.amap.api.v2.apikey" android:value="8978a07fb41b40b2782ef2504877c874">
+</meta-data>
+<activity android:configChanges="0x000004A0" android:name="cn.youlin.plugin.app.HostActivity" android:screenOrientation="7" android:theme="@7F070132" android:windowSoftInputMode="0x00000013">
+<intent-filter>
+<action android:name="action.plugin.Activity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004A0" android:name="cn.youlin.platform.YlContainerActivity" android:screenOrientation="7" android:windowSoftInputMode="0x00000013">
+<intent-filter>
+<action android:name="action.sdk.page.Activity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:label="@7F05001E" android:name="cn.youlin.platform.YlWelcomeActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="cn.youlin.platform.main">
+</action>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004A0" android:name="cn.youlin.platform.UrlPageActivity" android:screenOrientation="7" android:windowSoftInputMode="0x00000013">
+<meta-data android:name="action" android:value="plugin.yl_url_page">
+</meta-data>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:host="pagehost" android:scheme="youlin">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:host="cn.youlin.platform" android:scheme="rong">
+</data>
+</intent-filter>
+</activity>
+<activity android:launchMode="2" android:name="com.tencent.tauth.AuthActivity" android:noHistory="true">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="1103958488">
+</data>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.tencent.connect.common.AssistActivity" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x000000A0" android:exported="false" android:name="com.sina.weibo.sdk.component.WeiboSdkBrowser" android:windowSoftInputMode="0x00000010">
+</activity>
+<receiver android:name="cn.youlin.platform.ui.chat.ChatNotificationBroadcastReceiver">
+<intent-filter>
+<action android:name="youlin.action.broadcast.notification.recieve.msg">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</receiver>
+<receiver android:name="cn.youlin.platform.PushEventReceiver">
+</receiver>
+<receiver android:exported="false" android:name="com.umeng.message.NotificationProxyBroadcastReceiver" android:process=":push">
+</receiver>
+<receiver android:name="com.umeng.message.SystemReceiver" android:process=":push">
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_REMOVED">
+</action>
+<data android:scheme="package">
+</data>
+</intent-filter>
+</receiver>
+<receiver android:name="com.umeng.message.MessageReceiver" android:process=":push">
+<intent-filter>
+<action android:name="org.agoo.android.intent.action.RECEIVE">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name="com.umeng.message.ElectionReceiver" android:process=":push">
+<intent-filter>
+<action android:name="org.agoo.android.intent.action.ELECTION_RESULT_V4">
+</action>
+<category android:name="umeng">
+</category>
+</intent-filter>
+</receiver>
+<receiver android:exported="false" android:name="com.umeng.message.RegistrationReceiver">
+<intent-filter>
+<action android:name="cn.youlin.platform.intent.action.COMMAND">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name="com.umeng.message.BootBroadcastReceiver">
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+</intent-filter>
+</receiver>
+<service android:exported="true" android:label="PushService" android:name="com.umeng.message.UmengService" android:process=":push">
+<intent-filter>
+<action android:name="cn.youlin.platform.intent.action.START">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="cn.youlin.platform.intent.action.COCKROACH">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="org.agoo.android.intent.action.PING_V4">
+</action>
+<category android:name="umeng">
+</category>
+</intent-filter>
+</service>
+<service android:name="com.umeng.message.UmengIntentService" android:process=":push">
+</service>
+<service android:name="com.umeng.message.UmengDownloadResourceService">
+</service>
+<service android:name="io.rong.imlib.ipc.RongService" android:process=":ipc">
+</service>
+<service android:name="io.rong.imlib.ReConnectService">
+</service>
+<receiver android:name="io.rong.imlib.ConnectChangeReceiver">
+</receiver>
+<receiver android:name="io.rong.imlib.ipc.PushMessageReceiver">
+<intent-filter>
+<action android:name="io.rong.push.message">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name="io.rong.imlib.HeartbeatReceiver" android:process=":ipc">
+</receiver>
+<service android:name="io.rong.push.PushService" android:process="io.rong.push">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="io.rong.push">
+</action>
+</intent-filter>
+</service>
+<service android:name="io.rong.push.CommandService" android:process="io.rong.push">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="io.rong.command">
+</action>
+</intent-filter>
+</service>
+<receiver android:name="io.rong.push.PushReceiver" android:process="io.rong.push">
+<intent-filter>
+<action android:name="io.rong.imlib.action.push.heartbeat">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.USER_PRESENT">
+</action>
+<action android:name="android.intent.action.ACTION_POWER_CONNECTED">
+</action>
+<action android:name="android.intent.action.ACTION_POWER_DISCONNECTED">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_REMOVED">
+</action>
+<data android:scheme="package">
+</data>
+</intent-filter>
+</receiver>
+<service android:exported="true" android:name="com.syg.monitor.service.GetService">
+</service>
+<service android:exported="true" android:name="com.syg.monitor.service.RepService">
+<intent-filter>
+<action android:name="com.syg.action.AUTOTEST">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="com.syg.action.SENDTOGC">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="com.syg.action.SHUTDOWN">
+</action>
+</intent-filter>
+</service>
+<service android:exported="true" android:name="com.syg.monitor.service.SygService" android:process=":sygmonitor">
+</service>
+<service android:enabled="false" android:name="com.squareup.leakcanary.internal.HeapAnalyzerService" android:process=":leakcanary">
+</service>
+<service android:enabled="false" android:name="com.squareup.leakcanary.DisplayLeakService">
+</service>
+<activity android:enabled="false" android:icon="@7F020000" android:label="@7F050011" android:name="com.squareup.leakcanary.internal.DisplayLeakActivity" android:taskAffinity="com.squareup.leakcanary" android:theme="@7F070020">
+</activity>
+</application>
+</manifest>

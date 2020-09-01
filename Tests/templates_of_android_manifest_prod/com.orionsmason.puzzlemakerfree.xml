@@ -1,0 +1,88 @@
+<?xml version="1.0" ?><manifest android:installLocation="0" android:versionCode="205" android:versionName="2.05" package="com.orionsmason.puzzlemakerfree" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="10" android:targetSdkVersion="16">
+</uses-sdk>
+<uses-permission android:name="com.android.vending.BILLING">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-feature android:glEsVersion="0x00020000">
+</uses-feature>
+<uses-feature android:name="android.hardware.telephony" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.camera" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.camera.front" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.camera.autofocus" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.screen.portrait" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.screen.landscape" android:required="true">
+</uses-feature>
+<application android:hardwareAccelerated="true" android:icon="@7F02002F" android:label="PuzzleMaker">
+<meta-data android:name="targetedAppStore" android:value="google">
+</meta-data>
+<activity android:configChanges="0x000004A0" android:label="PuzzleMaker" android:launchMode="2" android:name="com.ansca.corona.CoronaActivity" android:screenOrientation="0" android:theme="@android:01030007">
+<meta-data android:name="supportsOrientationPortrait" android:value="false">
+</meta-data>
+<meta-data android:name="supportsOrientationPortraitUpsideDown" android:value="false">
+</meta-data>
+<meta-data android:name="supportsOrientationLandscapeRight" android:value="true">
+</meta-data>
+<meta-data android:name="supportsOrientationLandscapeLeft" android:value="true">
+</meta-data>
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.ansca.corona.CameraActivity" android:screenOrientation="1" android:theme="@android:01030007">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.ansca.corona.VideoActivity" android:theme="@android:01030007">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.ansca.corona.purchasing.StoreActivity" android:theme="@android:01030007">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.facebook.LoginActivity" android:theme="@android:01030007">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.ansca.corona.facebook.FacebookFragmentActivity" android:theme="@android:01030007">
+</activity>
+<provider android:authorities="com.orionsmason.puzzlemakerfree.files" android:exported="true" android:name="com.ansca.corona.storage.FileContentProvider">
+</provider>
+<service android:name="com.ansca.corona.CoronaService">
+</service>
+<receiver android:name="com.ansca.corona.SystemStartupBroadcastReceiver">
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name="com.ansca.corona.notifications.AlarmManagerBroadcastReceiver">
+</receiver>
+<receiver android:name="com.ansca.corona.notifications.StatusBarBroadcastReceiver">
+</receiver>
+<receiver android:name="com.ansca.corona.notifications.GoogleCloudMessagingBroadcastReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+<action android:name="com.google.android.c2dm.intent.REGISTRATION">
+</action>
+<category android:name="com.orionsmason.puzzlemakerfree">
+</category>
+</intent-filter>
+</receiver>
+<receiver android:name="com.ansca.corona.purchasing.GoogleStoreBroadcastReceiver">
+<intent-filter>
+<action android:name="com.android.vending.billing.IN_APP_NOTIFY">
+</action>
+<action android:name="com.android.vending.billing.RESPONSE_CODE">
+</action>
+<action android:name="com.android.vending.billing.PURCHASE_STATE_CHANGED">
+</action>
+</intent-filter>
+</receiver>
+</application>
+</manifest>

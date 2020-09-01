@@ -1,0 +1,288 @@
+<?xml version="1.0" ?><manifest android:compileSdkVersion="23" android:compileSdkVersionCodename="6.0-2438415" android:installLocation="2" android:versionCode="4" android:versionName="1.0.3" package="com.appicplay.ripcn" platformBuildVersionCode="3" platformBuildVersionName="1.0.2" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="21" android:targetSdkVersion="28">
+</uses-sdk>
+<uses-feature android:glEsVersion="0x00020000">
+</uses-feature>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-feature android:name="android.hardware.touchscreen" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.touchscreen.multitouch" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.touchscreen.multitouch.distinct" android:required="false">
+</uses-feature>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW">
+</uses-permission>
+<uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="com.android.vending.BILLING">
+</uses-permission>
+<uses-feature android:name="android.software.vr.mode" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.software.vr.high_performance" android:required="false">
+</uses-feature>
+<application android:allowBackup="true" android:appComponentFactory="android.support.v4.app.CoreComponentFactory" android:hardwareAccelerated="true" android:icon="@7F0A0000" android:label="@7F0B0043" android:name="com.ap.sdk.unitywrapper.APUnityApplication" android:theme="@7F0C000D" android:usesCleartextTraffic="true">
+<activity android:configChanges="0x40003FFF" android:hardwareAccelerated="false" android:label="@7F0B0043" android:launchMode="2" android:name="com.appicplay.ripcn.UnityPlayerActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+<meta-data android:name="unityplayer.UnityActivity" android:value="true">
+</meta-data>
+</activity>
+<meta-data android:name="unity.build-id" android:value="b4253d8e-26b0-4555-93cf-6482c07d9f02">
+</meta-data>
+<meta-data android:name="unity.splash-mode" android:value="1">
+</meta-data>
+<meta-data android:name="unity.splash-enable" android:value="true">
+</meta-data>
+<meta-data android:name="reschedule_notifications_on_restart" android:value="true">
+</meta-data>
+<receiver android:exported="true" android:name="com.unity.androidnotifications.UnityNotificationManager">
+</receiver>
+<receiver android:enabled="false" android:name="com.unity.androidnotifications.UnityNotificationRestartOnBootReceiver">
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+</intent-filter>
+</receiver>
+<service android:name="com.liulishuo.filedownloader.wrap.services.FileDownloadService$SharedMainProcessService">
+</service>
+<service android:name="com.liulishuo.filedownloader.wrap.services.FileDownloadService$SeparateProcessService" android:process=":filedownloader">
+</service>
+<service android:exported="false" android:name="com.ap.android.atom.sdk.extra.service.APExtraService">
+</service>
+<activity android:configChanges="0x000005F0" android:excludeFromRecents="true" android:name="com.ap.android.atom.sdk.extra.APExtraProxyActivity" android:screenOrientation="3">
+</activity>
+<activity android:configChanges="0x000005F0" android:exported="true" android:name="com.ap.android.atom.sdk.pub.activity.APPubDebugActivity" android:screenOrientation="3" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.ap.android.atom.sdk.pub.activity.APSplashActivity" android:screenOrientation="6" android:theme="@android:01030007">
+<intent-filter>
+<action android:name="APPIC_SPLASH_DEFAULT_ACTION">
+</action>
+<category android:name="APPIC_SPLASH_DEFAULT_CATEGORY">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.ap.android.atom.sdk.pub.activity.APWebViewActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="com.ap.x.t.activity.LPAct" android:process=":aptd">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="com.ap.x.t.activity.PLPAct" android:process=":aptd">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="com.ap.x.t.activity.VLPAct" android:process=":aptd">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="com.ap.x.t.activity.RVAct" android:process=":aptd">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="com.ap.x.t.activity.FSVAct" android:process=":aptd">
+</activity>
+<activity android:launchMode="2" android:name="com.ap.x.t.activity.DAct" android:theme="@android:01030010">
+</activity>
+<activity android:launchMode="2" android:name="com.ap.x.t.activity.DSLAct" android:theme="@android:0103000B">
+</activity>
+<activity android:launchMode="2" android:name="com.ap.x.t.activity.DTDAct" android:theme="@android:0103000B">
+</activity>
+<activity android:launchMode="2" android:name="com.ap.x.t.activity.XDAct" android:theme="@android:01030010">
+</activity>
+<provider android:authorities="com.appicplay.ripcn.APXTFileProvider" android:exported="false" android:grantUriPermissions="true" android:name="com.ap.x.t.components.APXTFileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F0E0001">
+</meta-data>
+</provider>
+<provider android:authorities="com.appicplay.ripcn.APXTMPProvider" android:exported="false" android:name="com.ap.x.t.components.APXTMPProvider">
+</provider>
+<receiver android:name="com.ap.x.t.components.DownloadReceiver">
+</receiver>
+<service android:name="com.ap.x.t.components.LocalBinderService">
+</service>
+<service android:name="com.ap.x.t.components.DownloadNotifyService">
+</service>
+<service android:name="com.ap.x.t.components.DownloadService">
+</service>
+<service android:name="com.ap.x.t.components.SeprateDownloadService" android:process=":aptddownloader">
+</service>
+<service android:name="com.ap.x.t.components.ExtraService">
+</service>
+<service android:name="com.ap.x.t.components.DownloadHandlerService">
+</service>
+<activity android:configChanges="0x000005F0" android:excludeFromRecents="true" android:name="com.ap.android.atom.sdk.ad.activity.APADDebugActvity" android:screenOrientation="3">
+</activity>
+<activity android:configChanges="0x000005F0" android:excludeFromRecents="true" android:name="com.ap.android.atom.sdk.ad.activity.APADDebugRunActivity" android:screenOrientation="3">
+</activity>
+<provider android:authorities="com.appicplay.ripcn.fileprovider" android:exported="false" android:grantUriPermissions="true" android:name="com.ap.android.atom.sdk.ad.provider.AppicAdProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F0E0000">
+</meta-data>
+</provider>
+<activity android:configChanges="0x000005F0" android:exported="false" android:name="com.ap.android.atom.sdk.ad.activity.APADViewActivity">
+</activity>
+<activity android:configChanges="0x000005F0" android:exported="false" android:name="com.ap.android.atom.sdk.ad.activity.APIVideoADActivity" android:theme="@android:0103000A">
+</activity>
+<service android:exported="false" android:name="com.ap.android.atom.sdk.ad.service.DownloadService">
+</service>
+<activity android:configChanges="0x000005F0" android:name="com.ap.android.atom.sdk.core.activity.APCoreDebugActivity" android:screenOrientation="3">
+</activity>
+<service android:name="com.ap.android.atom.sdk.core.track.crash.openudid.OpenUDID_service">
+<intent-filter>
+<action android:name="org.openudid.GETUDID">
+</action>
+</intent-filter>
+</service>
+<meta-data android:name="APPIC_SDK_VERSION" android:value="3.7.2.6">
+</meta-data>
+<activity android:configChanges="0x40000FFF" android:name="com.unity.purchasing.googleplay.PurchaseActivity" android:theme="@android:01030011">
+</activity>
+<activity android:configChanges="0x40000FFF" android:enableVrMode="com.google.vr.vrcore/com.google.vr.vrcore.common.VrCoreListenerService" android:name="com.unity.purchasing.googleplay.VRPurchaseActivity" android:theme="@7F0C000F">
+<intent-filter>
+<action android:name="com.google.vr.vrcore.ACTION_NONE">
+</action>
+<category android:name="com.google.intent.category.DAYDREAM">
+</category>
+</intent-filter>
+</activity>
+<meta-data android:name="appicplay_game_launcher" android:value="com.appicplay.ripcn.UnityPlayerActivity">
+</meta-data>
+<meta-data android:name="appicplay_game_is_unity" android:value="true">
+</meta-data>
+<activity android:configChanges="0x40000FFF" android:hardwareAccelerated="true" android:name="com.unity3d.services.ads.adunit.AdUnitActivity" android:theme="@android:01030007">
+</activity>
+<activity android:configChanges="0x40000FFF" android:hardwareAccelerated="true" android:name="com.unity3d.services.ads.adunit.AdUnitTransparentActivity" android:theme="@android:01030011">
+</activity>
+<activity android:configChanges="0x40000FFF" android:hardwareAccelerated="false" android:name="com.unity3d.services.ads.adunit.AdUnitTransparentSoftwareActivity" android:theme="@android:01030011">
+</activity>
+<activity android:configChanges="0x40000FFF" android:hardwareAccelerated="false" android:name="com.unity3d.services.ads.adunit.AdUnitSoftwareActivity" android:theme="@android:01030007">
+</activity>
+<provider android:authorities="com.ap.android.atom.ripcn.TTFileProvider" android:exported="false" android:grantUriPermissions="true" android:name="com.bytedance.sdk.openadsdk.TTFileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F0E0002">
+</meta-data>
+</provider>
+<provider android:authorities="com.ap.android.atom.ripcn.TTMultiProvider" android:exported="false" android:name="com.bytedance.sdk.openadsdk.multipro.TTMultiProvider">
+</provider>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="com.bytedance.sdk.openadsdk.activity.TTLandingPageActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="com.bytedance.sdk.openadsdk.activity.TTPlayableLandingPageActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="com.bytedance.sdk.openadsdk.activity.TTVideoLandingPageActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="com.bytedance.sdk.openadsdk.activity.TTRewardVideoActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="com.bytedance.sdk.openadsdk.activity.TTFullScreenVideoActivity">
+</activity>
+<activity android:launchMode="2" android:name="com.bytedance.sdk.openadsdk.activity.TTDelegateActivity" android:theme="@android:01030010">
+</activity>
+<service android:name="com.bytedance.sdk.openadsdk.multipro.aidl.BinderPoolService">
+</service>
+<service android:name="com.ss.android.socialbase.downloader.notification.DownloadNotificationService">
+</service>
+<service android:name="com.ss.android.socialbase.downloader.downloader.DownloadService">
+</service>
+<service android:name="com.ss.android.socialbase.downloader.downloader.IndependentProcessDownloadService" android:process=":downloader">
+<intent-filter>
+<action android:name="com.ss.android.socialbase.downloader.remote">
+</action>
+</intent-filter>
+</service>
+<service android:name="com.ss.android.socialbase.downloader.impls.DownloadHandleService">
+</service>
+<service android:name="com.ss.android.socialbase.appdownloader.DownloadHandlerService">
+</service>
+<activity android:launchMode="2" android:name="com.ss.android.socialbase.appdownloader.view.DownloadSizeLimitActivity" android:theme="@android:0103000B">
+</activity>
+<activity android:launchMode="2" android:name="com.ss.android.socialbase.appdownloader.view.DownloadTaskDeleteActivity" android:theme="@android:0103000B">
+</activity>
+<activity android:launchMode="2" android:name="com.ss.android.downloadlib.activity.TTDelegateActivity" android:theme="@android:01030010">
+</activity>
+<receiver android:name="com.ss.android.downloadlib.core.download.DownloadReceiver">
+</receiver>
+<uses-library android:name="org.apache.http.legacy" android:required="false">
+</uses-library>
+<provider android:authorities="com.ap.android.atom.ripcn.fileprovider" android:exported="false" android:grantUriPermissions="true" android:name="com.ap.android.atom.sdk.ad.gdt.GdtFileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F0E0003">
+</meta-data>
+</provider>
+<service android:exported="false" android:name="com.qq.e.comm.DownloadService">
+</service>
+<activity android:configChanges="0x000004B0" android:name="com.qq.e.ads.ADActivity">
+</activity>
+<activity android:configChanges="0x000004B0" android:name="com.qq.e.ads.PortraitADActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004B0" android:name="com.qq.e.ads.LandscapeADActivity" android:screenOrientation="0">
+</activity>
+<activity android:configChanges="0x00000FB0" android:exported="false" android:name="com.google.android.gms.ads.AdActivity" android:theme="@android:0103000F">
+</activity>
+<activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:01030010">
+</activity>
+<meta-data android:name="com.google.android.gms.version" android:value="@7F080003">
+</meta-data>
+<activity android:configChanges="0x00000DA0" android:launchMode="1" android:name="com.vungle.warren.ui.VungleActivity" android:theme="@android:01030007">
+</activity>
+<activity android:configChanges="0x00000DA0" android:hardwareAccelerated="true" android:launchMode="1" android:name="com.vungle.warren.ui.VungleFlexViewActivity" android:theme="@android:01030010">
+</activity>
+<meta-data android:name="nmMbPByQ" android:value="eAzxMEyx">
+</meta-data>
+<meta-data android:name="YGLQovAx" android:value="qGJaYzyw">
+</meta-data>
+<meta-data android:name="com.ap.android.atom.android.CHANNEAL_ID" android:value="dwEN5W">
+</meta-data>
+</application>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+</manifest>

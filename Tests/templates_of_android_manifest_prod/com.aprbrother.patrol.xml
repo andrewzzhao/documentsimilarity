@@ -1,0 +1,290 @@
+<?xml version="1.0" ?><manifest android:versionCode="31" android:versionName="3.5.1" package="com.aprbrother.patrol" platformBuildVersionCode="24" platformBuildVersionName="7.000000" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="14" android:targetSdkVersion="22">
+</uses-sdk>
+<uses-permission android:name="android.permission.BLUETOOTH">
+</uses-permission>
+<uses-permission android:name="android.permission.BLUETOOTH_ADMIN">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_USER_PRESENT">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-permission android:name="android.permission.RECORD_AUDIO">
+</uses-permission>
+<uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERACT_ACROSS_USERS_FULL">
+</uses-permission>
+<uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<application android:icon="@7F030000" android:label="@7F080116" android:name="com.qihoo.util.StubApp3052527886" android:qihoo="activity" android:theme="@7F0A003A">
+<activity android:label="@7F080116" android:name="com.aprbrother.patrol.SplashActivity" android:theme="@7F0A0127" android:windowSoftInputMode="0x00000000">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<service android:enabled="false" android:exported="false" android:name="com.qihoo.util.QhJobService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<activity android:excludeFromRecents="true" android:exported="false" android:launchMode="2" android:name="com.qihoo.util.CommonActivity" android:taskAffinity="com.aprbrother.patrol.util" android:theme="@android:0103005F">
+</activity>
+<service android:enabled="true" android:exported="true" android:name="com.qihoo.util.CommonService">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.qihoo.util.CommonService2">
+</service>
+<receiver android:enabled="true" android:exported="false" android:name="com.qihoo.util.CommonReceiver">
+</receiver>
+<provider android:authorities="com.aprbrother.patrol.COMMONPROVIDER" android:exported="true" android:name="com.qihoo.util.CommonProvider">
+</provider>
+<activity android:configChanges="0x000000A0" android:exported="false" android:launchMode="2" android:name="com.qihoo.ls.LsActivity" android:screenOrientation="1" android:theme="@android:01030060">
+</activity>
+<service android:exported="false" android:name="com.qihoo.ls.SoService">
+</service>
+<service android:name="com.aprbrother.patrol.common.services.NotifyService">
+</service>
+<service android:name="com.aprbrother.patrol.common.services.BootstrapService">
+</service>
+<receiver android:name="com.tencent.android.tpush.XGPushReceiver" android:process=":xg_service_v2">
+<intent-filter android:priority="0x7FFFFFFF">
+<action android:name="com.tencent.android.tpush.action.SDK">
+</action>
+<action android:name="com.tencent.android.tpush.action.INTERNAL_PUSH_MESSAGE">
+</action>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+<action android:name="android.intent.action.USER_PRESENT">
+</action>
+<action android:name="android.bluetooth.adapter.action.STATE_CHANGED">
+</action>
+<action android:name="android.intent.action.ACTION_POWER_CONNECTED">
+</action>
+<action android:name="android.intent.action.ACTION_POWER_DISCONNECTED">
+</action>
+</intent-filter>
+<intent-filter android:priority="0x7FFFFFFF">
+<action android:name="android.intent.action.MEDIA_UNMOUNTED">
+</action>
+<action android:name="android.intent.action.MEDIA_REMOVED">
+</action>
+<action android:name="android.intent.action.MEDIA_CHECKING">
+</action>
+<action android:name="android.intent.action.MEDIA_EJECT">
+</action>
+<data android:scheme="file">
+</data>
+</intent-filter>
+</receiver>
+<service android:exported="true" android:name="com.tencent.android.tpush.service.XGPushService" android:persistent="true" android:process=":xg_service_v2">
+</service>
+<service android:exported="true" android:name="com.tencent.android.tpush.rpc.XGRemoteService">
+<intent-filter>
+<action android:name="com.aprbrother.patrol.PUSH_ACTION">
+</action>
+</intent-filter>
+</service>
+<meta-data android:name="XG_V2_ACCESS_ID" android:value="2100188416">
+</meta-data>
+<meta-data android:name="XG_V2_ACCESS_KEY" android:value="AED72JB14C6V">
+</meta-data>
+<receiver android:exported="true" android:name="com.aprbrother.patrol.common.receiver.IMNotificationReceiver">
+<intent-filter>
+<action android:name="io.rong.push.intent.MESSAGE_ARRIVED">
+</action>
+<action android:name="io.rong.push.intent.MI_MESSAGE_ARRIVED">
+</action>
+<action android:name="io.rong.push.intent.MESSAGE_CLICKED">
+</action>
+<action android:name="io.rong.push.intent.MI_MESSAGE_CLICKED">
+</action>
+</intent-filter>
+</receiver>
+<service android:exported="true" android:name="io.rong.push.core.MessageHandleService">
+</service>
+<service android:exported="true" android:name="io.rong.push.PushService" android:process="io.rong.push">
+</service>
+<receiver android:name="io.rong.push.PushReceiver" android:process="io.rong.push">
+<intent-filter>
+<action android:name="io.rong.push.intent.action.HEART_BEAT">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.USER_PRESENT">
+</action>
+<action android:name="android.intent.action.ACTION_POWER_CONNECTED">
+</action>
+<action android:name="android.intent.action.ACTION_POWER_DISCONNECTED">
+</action>
+</intent-filter>
+</receiver>
+<activity android:name="com.aprbrother.patrol.login.LoginActivity">
+</activity>
+<activity android:name="com.aprbrother.patrol.message.msgdetail.MsgDetailActivity">
+</activity>
+<activity android:launchMode="2" android:name="com.aprbrother.patrol.task.taskdetail.taskscancode.TaskScanCodeActivity">
+</activity>
+<activity android:name="com.aprbrother.patrol.task.tasklist.TaskListActivity">
+</activity>
+<activity android:name="com.aprbrother.patrol.task.checkitem.taskcheckitem.TaskCheckItemActivity" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:name="com.aprbrother.patrol.task.history.historytasks.HistoryTasksActivity">
+</activity>
+<activity android:name="com.aprbrother.patrol.task.history.historytaskdetail.HistoryTaskDetailActivity">
+</activity>
+<activity android:name="com.aprbrother.patrol.message.msgs.MsgListActivity">
+</activity>
+<activity android:name="com.aprbrother.patrol.task.checkitem.taskcheckitempreview.TaskCheckItemPreviewActivity">
+</activity>
+<activity android:name="com.aprbrother.patrol.task.history.historypointitem.HistoryPointItemActivity">
+</activity>
+<activity android:name="com.aprbrother.patrol.common.activity.CaptureActivity">
+</activity>
+<activity android:name="com.aprbrother.patrol.setting.SettingActivity">
+</activity>
+<activity android:name="com.aprbrother.patrol.setting.about.AboutActivity">
+</activity>
+<activity android:name="com.aprbrother.patrol.followup.followuplist.FollowupListActivity">
+</activity>
+<activity android:name="com.aprbrother.patrol.followup.followupdatail.FollowupDetailActivity">
+</activity>
+<activity android:name="com.aprbrother.patrol.followup.followupadd.FollowupAddActivity">
+</activity>
+<activity android:name="com.aprbrother.patrol.common.activity.ImagePagerActivity">
+</activity>
+<activity android:name="com.aprbrother.patrol.im.groupuserlist.GroupUserListActivity">
+</activity>
+<activity android:launchMode="2" android:name="com.aprbrother.patrol.common.activity.DetailWebActivity">
+</activity>
+<activity android:launchMode="2" android:name="com.aprbrother.patrol.setting.admin.AdminActivity">
+</activity>
+<activity android:launchMode="2" android:name="com.aprbrother.patrol.task.taskdetail.taskxunjian.TaskXunJianActivity">
+</activity>
+<activity android:name="com.aprbrother.patrol.task.taskdetail.TaskDetailDesActivity">
+</activity>
+<activity android:launchMode="2" android:name="com.aprbrother.patrol.task.taskdetail.taskxungeng.TaskXunGengActivity">
+</activity>
+<activity android:launchMode="2" android:name="com.aprbrother.patrol.common.activity.NotificationShowActivity" android:theme="@7F0A003B">
+</activity>
+<activity android:launchMode="2" android:name="com.aprbrother.patrol.im.conversation.ConversationActivity" android:windowSoftInputMode="0x00000012">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:host="com.aprbrother.patrol" android:pathPrefix="/conversation/" android:scheme="rong">
+</data>
+</intent-filter>
+</activity>
+<activity android:launchMode="2" android:name="com.aprbrother.patrol.im.grouplist.GroupListActivity">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:host="com.aprbrother.patrol" android:pathPrefix="/conversationlist" android:scheme="rong">
+</data>
+</intent-filter>
+</activity>
+<provider android:authorities="com.aprbrother.patrol.FileProvider" android:exported="false" android:grantUriPermissions="true" android:name="android.support.v4.content.FileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F060000">
+</meta-data>
+</provider>
+<activity android:name="com.aprbrother.patrol.setting.checkdevices.CheckDevicesActivity">
+</activity>
+<activity android:name="com.aprbrother.patrol.event.eventlist.EventListActivity">
+</activity>
+<activity android:name="com.aprbrother.patrol.event.eventcamera.EventCameraActivity">
+</activity>
+<activity android:name="com.aprbrother.patrol.event.eventadd.EventAddActivity">
+</activity>
+<activity android:name="com.aprbrother.patrol.event.eventdetail.EventDetailActivity">
+</activity>
+<activity android:name="io.rong.imkit.plugin.location.AMapLocationActivity">
+</activity>
+<activity android:name="io.rong.imkit.plugin.location.AMapPreviewActivity">
+</activity>
+<activity android:name="io.rong.imkit.plugin.location.AMapRealTimeActivity">
+</activity>
+<activity android:name="io.rong.imkit.plugin.image.PictureSelectorActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="io.rong.imkit.plugin.image.PicturePreviewActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="io.rong.imkit.tools.RongWebviewActivity" android:screenOrientation="1">
+<intent-filter>
+<action android:name="io.rong.imkit.intent.action.webview">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000A0" android:name="io.rong.imkit.widget.provider.TakingPicturesActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="io.rong.imkit.activity.PicturePagerActivity" android:theme="@android:01030007">
+<intent-filter>
+<action android:name="io.rong.imkit.intent.action.picturepagerview">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000A0" android:name="io.rong.imkit.mention.MemberMentionedActivity" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name="io.rong.imkit.activity.FileManagerActivity">
+</activity>
+<activity android:name="io.rong.imkit.activity.FileListActivity">
+</activity>
+<activity android:name="io.rong.imkit.activity.FilePreviewActivity">
+</activity>
+<meta-data android:name="RONG_CLOUD_APP_KEY" android:value="pvxdm17jpli8r">
+</meta-data>
+<service android:exported="true" android:name="io.rong.imlib.ipc.RongService" android:process=":ipc">
+</service>
+<service android:exported="true" android:name="io.rong.imlib.ReConnectService">
+</service>
+<receiver android:exported="true" android:name="io.rong.imlib.ConnectChangeReceiver">
+</receiver>
+<receiver android:name="io.rong.imlib.HeartbeatReceiver" android:process=":ipc">
+</receiver>
+<service android:exported="false" android:name="io.rong.push.core.PushRegistrationService">
+</service>
+</application>
+</manifest>

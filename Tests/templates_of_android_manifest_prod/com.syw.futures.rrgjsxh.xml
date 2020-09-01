@@ -1,0 +1,334 @@
+<?xml version="1.0" ?><manifest android:versionCode="11" android:versionName="3.3.0" package="com.syw.futures.rrgjsxh" platformBuildVersionCode="11" platformBuildVersionName="3.3.0" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="16" android:targetSdkVersion="27">
+</uses-sdk>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES">
+</uses-permission>
+<uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CALL_PHONE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_LOGS">
+</uses-permission>
+<uses-permission android:name="android.permission.RECORD_AUDIO">
+</uses-permission>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-feature android:name="android.hardware.Camera">
+</uses-feature>
+<uses-feature android:name="android.hardware.camera.autofocus">
+</uses-feature>
+<permission android:name="com.syw.futures.rrgjsxh.permission.JPUSH_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="com.syw.futures.rrgjsxh.permission.JPUSH_MESSAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_USER_PRESENT">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS">
+</uses-permission>
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.FLAG_GRANT_READ_URI_PERMISSION">
+</uses-permission>
+<uses-feature android:name="android.hardware.camera">
+</uses-feature>
+<application android:allowBackup="true" android:icon="@7F0D0000" android:label="@7F0F0033" android:name="com.tencent.StubShell.TxAppEntry" android:supportsRtl="true" android:theme="@7F100009">
+<meta-data android:name="TxAppEntry" android:value="com.syw.futures.app.App">
+</meta-data>
+<activity android:name="com.syw.futures.modules.splash.SplashActivity" android:screenOrientation="1" android:theme="@7F10000C">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x00000480" android:launchMode="2" android:name="com.syw.futures.modules.main.MainActivity" android:screenOrientation="1" android:theme="@7F1000AF" android:windowSoftInputMode="0x00000033">
+</activity>
+<activity android:configChanges="0x00000480" android:hardwareAccelerated="true" android:name="com.syw.futures.modules.browser.BrowserActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.syw.futures.modules.router.RouterActivity" android:parentActivityName="com.syw.futures.modules.main.MainActivity">
+<intent-filter>
+<data android:host="qianzi" android:scheme="futures">
+</data>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+</intent-filter>
+</activity>
+<activity android:launchMode="2" android:name="com.syw.futures.modules.login.LoginActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.syw.futures.modules.register.RegisterActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.syw.futures.modules.account.userinfo.UserInfoActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.syw.futures.modules.account.userinfo.edit.EditUserInfoActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.syw.futures.modules.account.security.phoneVerify.PhoneVerifyActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000015">
+</activity>
+<activity android:name="com.syw.futures.modules.account.security.verificationCode.VerificationCodeActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000015">
+</activity>
+<activity android:name="com.syw.futures.modules.account.security.password.login.ResetPasswordActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000015">
+</activity>
+<activity android:name="com.syw.futures.modules.account.security.password.trade.ModifyTradePasswordActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000015">
+</activity>
+<activity android:launchMode="1" android:name="com.syw.futures.modules.account.security.password.check.CheckPasswordDialog" android:theme="@7F1000B5" android:windowSoftInputMode="0x00000033">
+</activity>
+<activity android:name="com.syw.futures.modules.trade.check.TradeCheckActivity" android:theme="@7F10000E">
+</activity>
+<activity android:launchMode="1" android:name="com.syw.futures.modules.trade.order.create.CreateOrderDialog" android:theme="@7F1000B5" android:windowSoftInputMode="0x00000033">
+</activity>
+<activity android:name="com.syw.futures.modules.account.open.OpenAccountActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.syw.futures.modules.account.open.OpenAccountActivity2" android:screenOrientation="1">
+</activity>
+<activity android:name="com.syw.futures.modules.about.AboutActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.syw.futures.modules.setting.SettingActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.syw.futures.modules.setting.push.PushSettingActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.syw.futures.modules.message.MessageCenterActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.syw.futures.modules.message.list.MessageListActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.syw.futures.modules.message.detail.MessageDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.syw.futures.modules.feedback.FeedbackActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000015">
+</activity>
+<activity android:name="com.syw.futures.modules.common.service.ServiceActivity" android:theme="@7F10000E">
+</activity>
+<activity android:name="com.syw.futures.modules.common.service.wechat.WechatDialogActivity" android:theme="@7F1000B6">
+</activity>
+<activity android:name="com.syw.futures.modules.main.fragment.quotation.category.CategoryActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="com.syw.futures.modules.quotation.QuotationDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="com.syw.futures.modules.quotation.QuotationDetailLandActivity" android:screenOrientation="0" android:theme="@7F10000B">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.syw.futures.modules.live.LiveRoomActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.syw.futures.modules.live.code.LiveCodeActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.syw.futures.modules.common.image.PictureViewerActivity" android:screenOrientation="1" android:theme="@7F10000B">
+</activity>
+<activity android:name="com.syw.futures.modules.analysis.AnalysisListActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.syw.futures.modules.information.InformationActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.syw.futures.modules.information.data.detail.DataDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.syw.futures.modules.analyst.home.AnalystHomeActivity" android:screenOrientation="1" android:theme="@7F1000AF">
+</activity>
+<activity android:name="com.syw.futures.modules.follow.FollowActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.syw.futures.modules.trade.order.detail.OrderDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.syw.futures.modules.trade.position.profitloss.list.ProfitLossRuleListActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.syw.futures.modules.trade.followorder.strategy.index.StrategyIndexActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.syw.futures.modules.trade.followorder.master.index.MasterIndexActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.syw.futures.modules.trade.followorder.master.home.MasterHomeActivity" android:screenOrientation="1" android:theme="@7F1000AF">
+</activity>
+<activity android:name="com.syw.futures.modules.trade.followorder.strategy.detail.StrategyOrderDetailActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.syw.futures.modules.trade.order.condition.CreateConditionOrderActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.syw.futures.modules.chart.indexes.setting.ChartIndexesSettingActivity">
+</activity>
+<activity android:name="com.syw.futures.modules.chart.indexes.intro.ChartIndexesIntroActivity">
+</activity>
+<activity android:name="com.syw.futures.modules.share.ShareImageActivity" android:screenOrientation="1" android:theme="@7F10000D">
+</activity>
+<activity android:name="com.syw.futures.modules.contract.collect.edit.CollectEditActivity" android:screenOrientation="1">
+</activity>
+<activity android:configChanges="0x00000020" android:name="com.syw.futures.modules.contract.collect.add.CollectContractAddActivity" android:screenOrientation="1">
+</activity>
+<receiver android:name="com.syw.futures.utils.download.DownloadReceiver">
+<intent-filter>
+<action android:name="android.intent.action.DOWNLOAD_COMPLETE">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:enabled="true" android:exported="false" android:name="com.syw.futures.push.PushReceiver">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED">
+</action>
+<category android:name="com.syw.futures.rrgjsxh">
+</category>
+</intent-filter>
+</receiver>
+<activity android:name="com.yalantis.ucrop.UCropActivity" android:screenOrientation="1">
+</activity>
+<provider android:authorities="com.syw.futures.rrgjsxh.fileprovider" android:exported="false" android:grantUriPermissions="true" android:name="android.support.v4.content.FileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F120000">
+</meta-data>
+</provider>
+<activity android:configChanges="0x000000A0" android:exported="false" android:name="com.umeng.socialize.media.WBShareCallBackActivity" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x000000A0" android:exported="false" android:name="com.sina.weibo.sdk.web.WeiboSdkWebActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:launchMode="2" android:name="com.sina.weibo.sdk.share.WbShareTransActivity" android:theme="@android:01030011">
+<intent-filter>
+<action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004A0" android:exported="true" android:name="com.syw.futures.rrgjsxh.wxapi.WXEntryActivity" android:theme="@android:01030010">
+</activity>
+<activity android:launchMode="2" android:name="com.tencent.tauth.AuthActivity" android:noHistory="true">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="tencent1107692987">
+</data>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.tencent.connect.common.AssistActivity" android:theme="@android:01030010">
+</activity>
+<activity android:exported="false" android:name="cn.jpush.android.ui.PopWinActivity" android:theme="@7F1000BB">
+</activity>
+<activity android:configChanges="0x000000A0" android:exported="false" android:name="cn.jpush.android.ui.PushActivity" android:theme="@android:01030006">
+<intent-filter>
+<action android:name="cn.jpush.android.ui.PushActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="com.syw.futures.rrgjsxh">
+</category>
+</intent-filter>
+</activity>
+<service android:enabled="true" android:exported="false" android:name="cn.jpush.android.service.PushService" android:process=":pushcore">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.REGISTER">
+</action>
+<action android:name="cn.jpush.android.intent.REPORT">
+</action>
+<action android:name="cn.jpush.android.intent.PushService">
+</action>
+<action android:name="cn.jpush.android.intent.PUSH_TIME">
+</action>
+</intent-filter>
+</service>
+<service android:enabled="true" android:exported="true" android:name="cn.jpush.android.service.DaemonService">
+<intent-filter>
+<action android:name="cn.jpush.android.intent.DaemonService">
+</action>
+<category android:name="com.syw.futures.rrgjsxh">
+</category>
+</intent-filter>
+</service>
+<receiver android:enabled="true" android:exported="false" android:name="cn.jpush.android.service.PushReceiver">
+<intent-filter android:priority="1000">
+<action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY">
+</action>
+<category android:name="com.syw.futures.rrgjsxh">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.USER_PRESENT">
+</action>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_ADDED">
+</action>
+<action android:name="android.intent.action.PACKAGE_REMOVED">
+</action>
+<data android:scheme="package">
+</data>
+</intent-filter>
+</receiver>
+<receiver android:exported="false" android:name="cn.jpush.android.service.AlarmReceiver">
+</receiver>
+<provider android:authorities="com.syw.futures.rrgjsxh.DataProvider" android:exported="false" android:name="cn.jpush.android.service.DataProvider" android:process=":pushcore">
+</provider>
+<provider android:authorities="com.syw.futures.rrgjsxh.DownloadProvider" android:exported="true" android:name="cn.jpush.android.service.DownloadProvider">
+</provider>
+<meta-data android:name="JPUSH_CHANNEL" android:value="developer-default">
+</meta-data>
+<meta-data android:name="JPUSH_APPKEY" android:value="a5400bd195dc4abf99a76840">
+</meta-data>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="cn.udesk.activity.UdeskHelperActivity" android:screenOrientation="1" android:theme="@7F100148">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="cn.udesk.activity.UdeskHelperArticleActivity" android:screenOrientation="1" android:theme="@7F100148">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="cn.udesk.activity.UdeskRobotActivity" android:screenOrientation="1" android:theme="@7F100148" android:windowSoftInputMode="0x00000014">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="cn.udesk.activity.UdeskFormActivity" android:screenOrientation="1" android:theme="@7F100148">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="cn.udesk.activity.UdeskChatActivity" android:screenOrientation="1" android:theme="@7F100148" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="cn.udesk.activity.UdeskZoomImageActivty" android:screenOrientation="1" android:theme="@7F100148">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="cn.udesk.activity.UdeskOptionsAgentGroupActivity" android:screenOrientation="1" android:theme="@7F100148">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="cn.udesk.activity.UdeskWebViewUrlAcivity" android:screenOrientation="1" android:theme="@7F100148">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="cn.udesk.photoselect.PhotoSelectorActivity" android:screenOrientation="1" android:theme="@7F100148">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="cn.udesk.photoselect.PreviewActivity" android:screenOrientation="1" android:theme="@7F100148">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="1" android:name="cn.udesk.photoselect.PictureVideoPlayActivity" android:screenOrientation="1" android:theme="@7F100148">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="cn.udesk.camera.UdeskCameraActivity" android:screenOrientation="1" android:theme="@7F100148">
+</activity>
+<provider android:authorities="com.syw.futures.rrgjsxh.udeskfileprovider" android:exported="false" android:grantUriPermissions="true" android:name="cn.udesk.provider.UdeskFileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F120001">
+</meta-data>
+</provider>
+<activity android:name="com.zhihu.matisse.ui.MatisseActivity">
+</activity>
+<activity android:name="com.zhihu.matisse.internal.ui.AlbumPreviewActivity">
+</activity>
+<activity android:name="com.zhihu.matisse.internal.ui.SelectedPreviewActivity">
+</activity>
+<meta-data android:name="com.bumptech.glide.integration.okhttp3.OkHttpGlideModule" android:value="GlideModule">
+</meta-data>
+<provider android:authorities="com.syw.futures.rrgjsxh.AgentWebFileProvider" android:exported="false" android:grantUriPermissions="true" android:name="com.just.agentweb.AgentWebFileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F120002">
+</meta-data>
+</provider>
+<activity android:configChanges="0x000004A0" android:exported="false" android:launchMode="0" android:name="com.just.agentweb.ActionActivity" android:theme="@7F10019F" android:windowSoftInputMode="0x00000003">
+</activity>
+</application>
+</manifest>

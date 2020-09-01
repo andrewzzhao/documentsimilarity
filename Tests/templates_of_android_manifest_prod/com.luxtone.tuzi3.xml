@@ -1,0 +1,164 @@
+<?xml version="1.0" ?><manifest android:versionCode="340" android:versionName="339" package="com.luxtone.tuzi3" platformBuildVersionCode="19" platformBuildVersionName="4.4.2-1456859" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="7" android:targetSdkVersion="19">
+</uses-sdk>
+<supports-screens android:anyDensity="true" android:largeScreens="true" android:normalScreens="true" android:smallScreens="true">
+</supports-screens>
+<application android:debuggable="true" android:icon="@7F020081" android:label="@7F060000" android:name=".Tuzi3App">
+<activity android:alwaysRetainTaskState="true" android:clearTaskOnLaunch="true" android:configChanges="0x000004B0" android:finishOnTaskLaunch="true" android:label="@7F060000" android:name="com.luxtone.tuzi3.activity.Main" android:screenOrientation="0" android:theme="@7F070002">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000B0" android:label="@7F060000" android:name="com.luxtone.tuzi3.activity.UpdateTaskActivity" android:screenOrientation="0" android:theme="@7F070002">
+</activity>
+<activity android:configChanges="0x000004B0" android:hardwareAccelerated="false" android:label="@7F060000" android:launchMode="3" android:name="com.luxtone.tvplayer.activity.TvPlayerActivity" android:process=":player" android:screenOrientation="0" android:theme="@android:0103012A">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004B0" android:hardwareAccelerated="false" android:label="@7F060000" android:launchMode="3" android:name="com.luxtone.tuzi.live.activity.TuziLiveActivity" android:process=":live" android:screenOrientation="0" android:theme="@android:0103012A">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<receiver android:name=".receiver.AppInfoBroadcastReceiver">
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_ADDED">
+</action>
+<action android:name="android.intent.action.PACKAGE_REPLACED">
+</action>
+<action android:name="android.intent.action.PACKAGE_REMOVED">
+</action>
+<data android:scheme="package">
+</data>
+</intent-filter>
+</receiver>
+<receiver android:name=".receiver.SohuBroadcastReceiver">
+<intent-filter>
+<action android:name="com.luxtone.tuzi.intent.api">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name=".receiver.NetWorkBroadCastReceiver">
+<intent-filter>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</receiver>
+<receiver android:name="com.luxtone.tuzi3.protocol.TuziProtocolReciever">
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+<action android:name="android.net.wifi.WIFI_STATE_CHANGED">
+</action>
+<action android:name="android.net.wifi.STATE_CHANGE">
+</action>
+</intent-filter>
+</receiver>
+<provider android:authorities="com.luxtone.tuzi3.provider" android:exported="true" android:name="com.luxtone.tuzi3.data.provider.Tuzi3ContentProvider">
+</provider>
+<service android:name="com.luxtone.tuzi.live.service.TuziLiveService" android:process=":live">
+</service>
+<service android:name=".service.Tuzi3Service">
+</service>
+<service android:name="com.luxtone.tuzi3.protocol.TuziProtocolService">
+</service>
+<service android:name="com.luxtone.tvplayer.TvPlayerService" android:process=":player">
+<intent-filter>
+<action android:name="com.luxtone.tuzi3.webcontrol">
+</action>
+</intent-filter>
+</service>
+<service android:exported="false" android:name="com.sohutv.tv.logger.util.logsystem.LogService" android:process=":remotesohulogservice">
+</service>
+<meta-data android:name="UMENG_APPKEY" android:value="51abeef656240b1a470518d1">
+</meta-data>
+<meta-data android:name="UMENG_CHANNEL" android:value="pro">
+</meta-data>
+<meta-data android:name="SVN" android:value="19895">
+</meta-data>
+<meta-data android:name="CHANNEL" android:value="pro">
+</meta-data>
+<meta-data android:name="config_displayAppview" android:value="1">
+</meta-data>
+<meta-data android:name="config_disPlayExitView" android:value="1">
+</meta-data>
+<meta-data android:name="config_showWeather" android:value="1">
+</meta-data>
+<meta-data android:name="config_detailtoyouku" android:value="1">
+</meta-data>
+<meta-data android:name="config_debug" android:value="0">
+</meta-data>
+<meta-data android:name="BaiduMobAd_CHANNEL" android:value="pro">
+</meta-data>
+<meta-data android:name="BaiduMobAd_STAT_ID" android:value="859798985f">
+</meta-data>
+<meta-data android:name="BaiduMobAd_EXCEPTION_LOG" android:value="true">
+</meta-data>
+<meta-data android:name="BaiduMobAd_SEND_STRATEGY" android:value="APP_START">
+</meta-data>
+</application>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="com.luxtone.shareservice.permission">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW">
+</uses-permission>
+<uses-permission android:name="android.permission.DISABLE_KEYGUARD">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_LOGS">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.DEVICE_POWER">
+</uses-permission>
+<uses-permission android:name="android.permission.INSTALL_PACKAGES">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.REORDER_TASKS">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-permission android:name="android.permission.BROADCAST_STICKY">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+</manifest>

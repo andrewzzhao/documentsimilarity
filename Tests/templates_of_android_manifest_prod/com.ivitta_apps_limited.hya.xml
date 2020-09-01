@@ -1,0 +1,358 @@
+<?xml version="1.0" ?><manifest android:installLocation="1" android:versionCode="307018" android:versionName="2.0.3" package="com.ivitta_apps_limited.hya" platformBuildVersionCode="23" platformBuildVersionName="6.0-2438415" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="14" android:targetSdkVersion="22">
+</uses-sdk>
+<uses-feature android:name="android.hardware.telephony" android:required="false">
+</uses-feature>
+<uses-feature android:glEsVersion="0x00020000" android:required="true">
+</uses-feature>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.RECORD_AUDIO">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_SMS">
+</uses-permission>
+<uses-permission android:name="android.permission.SEND_SMS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_SMS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_CONTACTS">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_CONTACTS">
+</uses-permission>
+<uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS">
+</uses-permission>
+<uses-permission android:name="android.permission.CALL_PHONE">
+</uses-permission>
+<uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.BLUETOOTH">
+</uses-permission>
+<uses-permission android:name="android.permission.BLUETOOTH_ADMIN">
+</uses-permission>
+<uses-permission android:name="android.permission.BROADCAST_STICKY">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.DISABLE_KEYGUARD">
+</uses-permission>
+<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE">
+</uses-permission>
+<uses-permission android:name="com.ivitta_apps_limited.hya.permission.C2D_MESSAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PROFILE">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="android.permission.MANAGE_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_SYNC_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.SET_DEBUG_APP">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW">
+</uses-permission>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="com.android.vending.BILLING">
+</uses-permission>
+<permission android:name="com.ivitta_apps_limited.hya.permission.C2D_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<android:uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</android:uses-permission>
+<application android:allowBackup="true" android:icon="@7F0203A4" android:label="@7F0700A4" android:largeHeap="true" android:name="com.revesoft.itelmobiledialer.util.MyApplication">
+<receiver android:enabled="true" android:name="com.revesoft.itelmobiledialer.dialer.AutoStart" android:permission="android.permission.RECEIVE_BOOT_COMPLETED">
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</receiver>
+<receiver android:name="com.revesoft.itelmobiledialer.service.GCMMessageReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+<action android:name="com.google.android.c2dm.intent.REGISTRATION">
+</action>
+<category android:name="com.revesoft.itelmobiledialer">
+</category>
+</intent-filter>
+</receiver>
+<activity android:configChanges="0x000000A0" android:label="@7F0700A4" android:name="com.revesoft.itelmobiledialer.topup.MobileTopUpActivity" android:screenOrientation="5" android:theme="@android:01030006">
+<intent-filter>
+<action android:name="com.revesoft.itelmobiledialer.topup.TOP_UP_COUNTRY_LIST">
+</action>
+<action android:name="com.revesoft.itelmobiledialer.topup.TOP_UP_OPERATOR_LIST">
+</action>
+<action android:name="com.revesoft.itelmobiledialer.topup.TOP_UP_AMOUNT">
+</action>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000A0" android:label="@7F0700A4" android:name="com.revesoft.itelmobiledialer.topup.ConfirmTopUpActivity" android:screenOrientation="5" android:theme="@android:01030006">
+<intent-filter>
+<action android:name="com.revesoft.itelmobiledialer.topup.TOP_UP">
+</action>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000A0" android:label="@7F0700A4" android:name="com.revesoft.itelmobiledialer.topup.TopUpLogReportActivity" android:screenOrientation="5" android:theme="@android:01030006">
+<intent-filter>
+<action android:name="com.revesoft.itelmobiledialer.topup.TOP_UP_CHECK_STATUS">
+</action>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x00000030" android:label="@7F0700A4" android:name="com.revesoft.itelmobiledialer.dialer.SplashScreen" android:screenOrientation="5" android:theme="@android:01030006" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x00000030" android:label="@7F0700A4" android:launchMode="1" android:name="com.revesoft.itelmobiledialer.dialer.RootActivity" android:screenOrientation="5" android:theme="@android:01030006" android:windowSoftInputMode="0x00000023">
+<intent-filter android:label="@7F070198">
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:mimeType="vnd.android.cursor.item/com.revesoft.itelmobiledialer.mimetype_call">
+</data>
+<data android:mimeType="vnd.android.cursor.item/com.revesoft.itelmobiledialer.mimetype_im">
+</data>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x00000030" android:label="@7F0700A4" android:name="com.revesoft.itelmobiledialer.dialer.ITelMobileDialerGUI" android:screenOrientation="5" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x00000030" android:name="com.revesoft.itelmobiledialer.dialer.Options" android:screenOrientation="5" android:theme="@android:01030006" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:configChanges="0x00000030" android:name="com.revesoft.itelmobiledialer.dialer.RetailSettingsActivity" android:screenOrientation="5" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:name="com.revesoft.itelmobiledialer.dialer.SignupActivity" android:screenOrientation="5" android:theme="@android:01030006" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name="com.revesoft.itelmobiledialer.dialogues.ConfirmDialogue" android:screenOrientation="5" android:theme="@android:01030006" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name="com.revesoft.itelmobiledialer.dialer.SignupActivityWithSMS" android:screenOrientation="5" android:theme="@android:01030006" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:name="com.revesoft.itelmobiledialer.extra.AutoProvisionActivity" android:screenOrientation="5" android:theme="@android:01030006" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:label="@7F0700A4" android:name="com.revesoft.itelmobiledialer.extra.PackageConfirmActivity" android:screenOrientation="5" android:theme="@android:0103000B">
+</activity>
+<activity android:name="com.revesoft.itelmobiledialer.extra.SettingsAccessNumberActivity" android:screenOrientation="5" android:theme="@android:01030006" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:name="com.revesoft.itelmobiledialer.extra.SignInActivity" android:screenOrientation="5" android:theme="@android:01030006" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:label="@7F0700A4" android:name="com.revesoft.itelmobiledialer.calllog.CallLogActivity" android:screenOrientation="5" android:theme="@android:01030006">
+</activity>
+<activity android:label="@7F0700A4" android:name="com.revesoft.itelmobiledialer.dialer.MorePageActivity" android:screenOrientation="5" android:theme="@android:01030006">
+</activity>
+<activity android:label="@7F0700A4" android:name="com.revesoft.itelmobiledialer.sms.NewSMSActivity" android:screenOrientation="5" android:theme="@android:01030006">
+</activity>
+<activity android:label="@7F0700A4" android:name="com.revesoft.itelmobiledialer.sms.ShowSMSDetailsActivity" android:screenOrientation="5" android:theme="@android:01030006" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:label="@7F0700A4" android:name="com.revesoft.itelmobiledialer.sms.SMSHistoryFragmentActivity" android:screenOrientation="5" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x00000030" android:label="@7F0700A4" android:launchMode="1" android:name="com.revesoft.itelmobiledialer.recharge.BalanceTransferActivity" android:screenOrientation="5" android:theme="@android:01030006" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x00000030" android:label="@7F0700A4" android:launchMode="1" android:name="com.revesoft.itelmobiledialer.recharge.SubscribedContactsPickerActivity" android:screenOrientation="5" android:theme="@android:01030006" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x00000030" android:label="@7F0700A4" android:launchMode="1" android:name="com.revesoft.itelmobiledialer.invite.MailSharingActivity" android:theme="@7F0B0172">
+</activity>
+<activity android:configChanges="0x00000030" android:label="@7F0700A4" android:launchMode="1" android:name="com.revesoft.itelmobiledialer.profile.UserProfileActivity" android:theme="@android:01030006" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x00000030" android:label="@7F0700A4" android:launchMode="1" android:name="com.revesoft.itelmobiledialer.dialer.RateCountrySelectionActivity" android:theme="@android:01030006" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x00000030" android:label="@7F0700A4" android:launchMode="1" android:name="com.revesoft.itelmobiledialer.dialer.RateDetailsActivity" android:theme="@android:01030006" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x00000030" android:label="@7F0700A4" android:launchMode="1" android:name="com.revesoft.itelmobiledialer.dialer.RateCountryBasedActivity" android:theme="@android:01030006" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:excludeFromRecents="true" android:launchMode="3" android:name="com.revesoft.itelmobiledialer.dialogues.IncomingCallDialogue" android:screenOrientation="5" android:taskAffinity="" android:theme="@android:0103000B">
+</activity>
+<activity android:excludeFromRecents="true" android:launchMode="3" android:name="com.revesoft.itelmobiledialer.dialogues.PasswordChangeDialogue" android:screenOrientation="5" android:taskAffinity="" android:theme="@android:0103000B">
+</activity>
+<activity android:excludeFromRecents="true" android:launchMode="3" android:name="com.revesoft.itelmobiledialer.dialogues.OutgoingCallDialogue" android:screenOrientation="5" android:taskAffinity="" android:theme="@android:0103000B">
+</activity>
+<activity android:excludeFromRecents="true" android:label="@7F0700A4" android:launchMode="1" android:name="com.revesoft.itelmobiledialer.dialer.CallFrameGUIActivity" android:screenOrientation="5" android:theme="@android:01030006">
+</activity>
+<activity android:label="@7F0700A4" android:name="com.revesoft.itelmobiledialer.dialer.SettingsChangeActivity" android:screenOrientation="5" android:theme="@android:01030006" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:label="@7F0700A4" android:name="com.revesoft.itelmobiledialer.phonebook.ShowDetailsActivity" android:screenOrientation="5" android:theme="@android:01030006">
+</activity>
+<activity android:label="@7F0700A4" android:name="com.revesoft.itelmobiledialer.phonebook.PhoneBookContainerActivity" android:screenOrientation="5" android:theme="@android:01030006">
+</activity>
+<activity android:label="@7F0700A4" android:name="com.revesoft.itelmobiledialer.dialer.HelpActivity" android:screenOrientation="5" android:theme="@android:01030006">
+</activity>
+<activity android:label="@7F0700A4" android:name="com.revesoft.itelmobiledialer.dialer.RateActivity" android:screenOrientation="5" android:theme="@android:01030006">
+</activity>
+<activity android:label="@7F0700A4" android:name="com.revesoft.itelmobiledialer.dialer.InviteFriendsActivity" android:screenOrientation="5" android:theme="@android:01030006" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:label="@7F0700A4" android:name="com.revesoft.itelmobiledialer.dialer.AboutActivity" android:screenOrientation="5" android:theme="@android:01030006">
+</activity>
+<activity android:label="@7F0700A4" android:name="com.revesoft.itelmobiledialer.afilechooser.FileChooserActivity" android:screenOrientation="5" android:theme="@android:01030006">
+</activity>
+<activity android:label="@7F070322" android:name="com.revesoft.itelmobiledialer.util.CountrySelectionActivity" android:screenOrientation="5" android:theme="@android:0103000B" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:configChanges="0x00000030" android:launchMode="1" android:name="com.revesoft.itelmobiledialer.video.VideoCallFrameActivity" android:screenOrientation="1">
+</activity>
+<activity android:label="@7F0700A4" android:launchMode="1" android:name="com.revesoft.itelmobiledialer.video.OutgoingVideoCallerAcitivity" android:theme="@android:01030006">
+</activity>
+<activity android:label="@7F0700A4" android:launchMode="1" android:name="com.revesoft.itelmobiledialer.video.IncomingVideoCallAcitivity" android:theme="@android:01030006">
+</activity>
+<activity android:label="@7F0700A4" android:launchMode="1" android:name="com.revesoft.itelmobiledialer.mobilemoney.MoneyTransferActivity" android:screenOrientation="5" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000000A0" android:label="@7F0700A4" android:name="com.revesoft.itelmobiledialer.dialer.FAQActivity" android:screenOrientation="5" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000000A0" android:label="@7F0700A4" android:name="com.revesoft.itelmobiledialer.dialer.SupportCenterActivity" android:screenOrientation="5" android:theme="@android:01030006">
+</activity>
+<activity android:label="@7F0700A4" android:name="com.revesoft.itelmobiledialer.promotions.FragPack" android:screenOrientation="5" android:theme="@android:01030006">
+</activity>
+<activity android:label="@7F0700A4" android:name="com.revesoft.itelmobiledialer.dialogues.BundlePackageDetailsDialogue" android:screenOrientation="5" android:theme="@android:0103000B">
+</activity>
+<activity android:configChanges="0x000000A0" android:label="@7F0700A4" android:name="com.revesoft.itelmobiledialer.dialer.ReferralActivity" android:screenOrientation="5" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000000A0" android:label="@7F0700A4" android:name="com.revesoft.itelmobiledialer.payment.CreditCardPaymentActivity" android:screenOrientation="5" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000000A0" android:label="@7F0700A4" android:name="com.revesoft.itelmobiledialer.payment.PaypalPaymentActivity" android:screenOrientation="5" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000000A0" android:label="@7F0700A4" android:name="com.revesoft.itelmobiledialer.payment.RechargeSelectionActivity" android:screenOrientation="5" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000000A0" android:label="@7F0700A4" android:name="com.revesoft.itelmobiledialer.payment.VoucherPaymentActivity" android:screenOrientation="5" android:theme="@android:01030006" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:configChanges="0x000000A0" android:label="@7F0700A4" android:name="com.revesoft.itelmobiledialer.ims.IMSFragmentActivity" android:screenOrientation="5" android:theme="@android:01030006">
+<intent-filter>
+<action android:name="com.revesoft.itelmobiledialer.topup.TOP_UP_CHECK_STATUS">
+</action>
+</intent-filter>
+</activity>
+<activity android:label="@7F0700A4" android:name="com.revesoft.itelmobiledialer.ims.SendMessageActivity" android:screenOrientation="5" android:theme="@android:01030006">
+</activity>
+<activity android:label="@7F0700A4" android:name="com.revesoft.itelmobiledialer.ims.IMSPeopleSelectionActivity" android:screenOrientation="5" android:theme="@android:01030006" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:label="@7F0700A4" android:name="com.revesoft.itelmobiledialer.ims.FullscreenCameraCaptureActivity" android:screenOrientation="5">
+</activity>
+<activity android:label="@7F0700A4" android:name="com.revesoft.itelmobiledialer.profile.ProfileActivity" android:screenOrientation="5" android:theme="@android:01030006" android:windowSoftInputMode="0x00000023">
+</activity>
+<activity android:label="@7F0700A4" android:name="com.revesoft.itelmobiledialer.packages.PackageHomeActivity" android:screenOrientation="5" android:theme="@android:01030006" android:windowSoftInputMode="0x00000023">
+</activity>
+<activity android:label="@7F0700A4" android:name="com.revesoft.itelmobiledialer.recharge.RechargeSelectionFragmentActivity" android:screenOrientation="5" android:theme="@android:01030006" android:windowSoftInputMode="0x00000023">
+</activity>
+<activity android:label="@7F0700A4" android:name="com.revesoft.itelmobiledialer.payment.RechargeSelectionFragmentActivity" android:screenOrientation="5" android:theme="@android:01030006" android:windowSoftInputMode="0x00000023">
+</activity>
+<service android:name="com.revesoft.itelmobiledialer.service.DialerService">
+</service>
+<activity android:configChanges="0x00000030" android:label="@7F0700A4" android:launchMode="1" android:name="com.revesoft.itelmobiledialer.dialer.SplashActivity" android:screenOrientation="5" android:theme="@android:01030006" android:windowSoftInputMode="0x00000003">
+</activity>
+<service android:exported="true" android:name="com.revesoft.itelmobiledialer.service.AccountAuthenticatorService" android:process=":auth">
+<intent-filter>
+<action android:name="android.accounts.AccountAuthenticator">
+</action>
+</intent-filter>
+<meta-data android:name="android.accounts.AccountAuthenticator" android:resource="@7F050001">
+</meta-data>
+</service>
+<service android:exported="true" android:name="com.revesoft.itelmobiledialer.service.ContactsSyncAdapterService">
+<intent-filter>
+<action android:name="android.content.SyncAdapter">
+</action>
+</intent-filter>
+<meta-data android:name="android.content.SyncAdapter" android:resource="@7F050004">
+</meta-data>
+<meta-data android:name="android.provider.CONTACTS_STRUCTURE" android:resource="@7F050002">
+</meta-data>
+</service>
+<meta-data android:name="com.google.android.gms.version" android:value="@7F0C0004">
+</meta-data>
+<meta-data android:name="com.google.android.geo.API_KEY" android:value="@7F070185">
+</meta-data>
+<activity android:label="@7F0700A4" android:launchMode="1" android:name="com.revesoft.itelmobiledialer.invite.FacebookSharingActivity" android:theme="@7F0B0172">
+</activity>
+<activity android:configChanges="0x000005B0" android:label="@7F0700A4" android:name="com.facebook.FacebookActivity" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x000000A0" android:label="@7F0700A4" android:name="com.revesoft.itelmobiledialer.dialer.EarningsActivity" android:screenOrientation="5" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000000A0" android:label="@7F0700A4" android:name="com.revesoft.itelmobiledialer.dialer.RechargeReportActivity" android:screenOrientation="5" android:theme="@android:01030006">
+</activity>
+<activity android:label="@7F0700A4" android:name="com.revesoft.itelmobiledialer.dialer.RechargeShareCreditActivity" android:screenOrientation="5" android:theme="@android:01030006" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:label="@7F0700A4" android:name="com.revesoft.itelmobiledialer.dialer.RechargeReportActivityNew" android:screenOrientation="5" android:theme="@android:01030006" android:windowSoftInputMode="0x00000020">
+</activity>
+<meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@7F070165">
+</meta-data>
+<meta-data android:name="com.facebook.sdk.ApplicationName" android:value="@7F0700A4">
+</meta-data>
+<meta-data android:name="io.fabric.ApiKey" android:value="13cac4a4825188a2294dfe98266e21aed508aa77">
+</meta-data>
+<meta-data android:name="io.branch.sdk.BranchKey" android:value="key_live_clvjRoRuWoMyrsgMXTSpHhnjuzlIZU3j">
+</meta-data>
+<receiver android:exported="true" android:name="io.branch.referral.InstallListener">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+<activity android:excludeFromRecents="true" android:finishOnTaskLaunch="true" android:launchMode="3" android:name="org.acra.dialog.CrashReportDialog" android:theme="@android:0103000B">
+</activity>
+<service android:exported="false" android:name="org.acra.sender.SenderService" android:process=":acra">
+</service>
+<activity android:configChanges="0x000004A0" android:name="com.twitter.sdk.android.tweetui.PlayerActivity" android:theme="@7F0B001A">
+</activity>
+<activity android:name="com.twitter.sdk.android.tweetui.GalleryActivity" android:theme="@7F0B001A">
+</activity>
+<activity android:configChanges="0x00000480" android:excludeFromRecents="true" android:exported="false" android:name="com.twitter.sdk.android.core.identity.OAuthActivity">
+</activity>
+<activity android:configChanges="0x00000480" android:excludeFromRecents="true" android:exported="false" android:icon="@7F0205E3" android:label="@7F0701C4" android:name="com.twitter.sdk.android.core.identity.ShareEmailActivity">
+</activity>
+<activity android:configChanges="0x00000480" android:exported="false" android:name="com.digits.sdk.android.PhoneNumberActivity" android:taskAffinity="com.digits.sdk.android" android:windowSoftInputMode="0x00000004">
+</activity>
+<activity android:configChanges="0x00000480" android:exported="false" android:name="com.digits.sdk.android.ConfirmationCodeActivity" android:taskAffinity="com.digits.sdk.android" android:windowSoftInputMode="0x00000004">
+</activity>
+<activity android:configChanges="0x00000480" android:exported="false" android:name="com.digits.sdk.android.LoginCodeActivity" android:taskAffinity="com.digits.sdk.android" android:windowSoftInputMode="0x00000004">
+</activity>
+<activity android:configChanges="0x00000480" android:exported="false" android:name="com.digits.sdk.android.PinCodeActivity" android:taskAffinity="com.digits.sdk.android" android:windowSoftInputMode="0x00000004">
+</activity>
+<activity android:configChanges="0x00000480" android:exported="false" android:name="com.digits.sdk.android.FailureActivity" android:taskAffinity="com.digits.sdk.android">
+</activity>
+<activity android:configChanges="0x00000480" android:exported="false" android:name="com.digits.sdk.android.ContactsActivity">
+</activity>
+<activity android:configChanges="0x00000480" android:exported="false" android:name="com.digits.sdk.android.EmailRequestActivity" android:taskAffinity="com.digits.sdk.android" android:windowSoftInputMode="0x00000004">
+</activity>
+<activity android:configChanges="0x00000480" android:exported="false" android:name="com.digits.sdk.android.PhoneNumberActionBarActivity" android:taskAffinity="com.digits.sdk.android" android:windowSoftInputMode="0x00000004">
+</activity>
+<activity android:configChanges="0x00000480" android:exported="false" android:name="com.digits.sdk.android.ConfirmationCodeActionBarActivity" android:taskAffinity="com.digits.sdk.android" android:windowSoftInputMode="0x00000004">
+</activity>
+<activity android:configChanges="0x00000480" android:exported="false" android:name="com.digits.sdk.android.LoginCodeActionBarActivity" android:taskAffinity="com.digits.sdk.android" android:windowSoftInputMode="0x00000004">
+</activity>
+<activity android:configChanges="0x00000480" android:exported="false" android:name="com.digits.sdk.android.FailureActionBarActivity" android:taskAffinity="com.digits.sdk.android">
+</activity>
+<activity android:configChanges="0x00000480" android:exported="false" android:name="com.digits.sdk.android.ContactsActionBarActivity">
+</activity>
+<activity android:configChanges="0x00000480" android:exported="false" android:name="com.digits.sdk.android.PinCodeActionBarActivity" android:taskAffinity="com.digits.sdk.android" android:windowSoftInputMode="0x00000004">
+</activity>
+<activity android:configChanges="0x00000480" android:exported="false" android:name="com.digits.sdk.android.EmailRequestActionBarActivity" android:taskAffinity="com.digits.sdk.android" android:windowSoftInputMode="0x00000004">
+</activity>
+<service android:enabled="true" android:exported="false" android:name="com.digits.sdk.android.ContactsUploadService">
+</service>
+<activity android:exported="false" android:name="com.twitter.sdk.android.tweetcomposer.ComposerActivity" android:windowSoftInputMode="0x00000014">
+</activity>
+<service android:enabled="true" android:exported="false" android:name="com.twitter.sdk.android.tweetcomposer.TweetUploadService">
+</service>
+</application>
+</manifest>

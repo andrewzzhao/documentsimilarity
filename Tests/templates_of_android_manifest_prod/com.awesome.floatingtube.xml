@@ -1,0 +1,742 @@
+<?xml version="1.0" ?><manifest android:versionCode="53" android:versionName="5.6" package="com.awesome.floatingtube" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="16" android:targetSdkVersion="22">
+</uses-sdk>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="com.android.vending.BILLING">
+</uses-permission>
+<uses-permission android:name="android.permission.MANAGE_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_ACCOUNTS">
+</uses-permission>
+<permission android:name="com.supertool.floatingtube.history_WRITE">
+</permission>
+<permission android:name="com.supertool.floatingtube.history_READ">
+</permission>
+<permission android:name="com.supertool.floatingtube.favourite_WRITE">
+</permission>
+<permission android:name="com.supertool.floatingtube.favourite_READ">
+</permission>
+<uses-permission android:name="com.tools.extendedplayer.zi.provider.queue_WRITE">
+</uses-permission>
+<uses-feature android:name="android.hardware.screen.portrait" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.screen.landscape" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.location" android:required="false">
+</uses-feature>
+<uses-feature android:name="android.hardware.location.network" android:required="false">
+</uses-feature>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<application android:allowBackup="true" android:hardwareAccelerated="true" android:icon="@7F0E0000" android:label="@7F0F0026" android:largeHeap="true" android:name="com.supertool.floatingtube.MyApplication" android:theme="@7F100011">
+<activity android:configChanges="0x000005B0" android:label="@7F0F0026" android:launchMode="2" android:name="com.supertool.floatingtube.MainActivity" android:theme="@7F100013" android:windowSoftInputMode="0x00000002">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000005B0" android:launchMode="2" android:name="com.supertool.floatingtube.SearchResultsActivity">
+<meta-data android:name="android.app.searchable" android:resource="@7F120000">
+</meta-data>
+<intent-filter>
+<action android:name="android.intent.action.SEARCH">
+</action>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000005B0" android:launchMode="2" android:name="com.supertool.floatingtube.PlaylistActivity">
+</activity>
+<meta-data android:name="android.app.default_searchable" android:value="com.supertool.floatingtube.SearchResultsActivity">
+</meta-data>
+<service android:name="com.supertool.floatingtube.FeedbackService">
+</service>
+<service android:hardwareAccelerated="true" android:name="com.myplayer.activity.Floating2Service">
+</service>
+<service android:hardwareAccelerated="true" android:name="com.myplayer.activity.PlayerService">
+</service>
+<activity android:configChanges="0x000005B0" android:name="com.myplayer.activity.InitActivity">
+</activity>
+<activity android:configChanges="0x000005B0" android:launchMode="2" android:name="com.myplayer.activity.VideoActivity" android:theme="@7F100160">
+</activity>
+<activity android:configChanges="0x000005B0" android:label="@7F0F0113" android:launchMode="2" android:name="com.supertool.floatingtube.HistoryActivity" android:theme="@7F100013">
+</activity>
+<activity android:configChanges="0x000005B0" android:label="@7F0F0100" android:launchMode="2" android:name="com.supertool.floatingtube.SettingsActivity">
+</activity>
+<activity android:configChanges="0x000005B0" android:label="@7F0F0095" android:launchMode="2" android:name="com.supertool.floatingtube.LikedActivity" android:parentActivityName="com.supertool.floatingtube.MainActivity">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.supertool.floatingtube.MainActivity">
+</meta-data>
+</activity>
+<activity android:configChanges="0x000005B0" android:name="com.learnncode.mediachooser.activity.HomeScreenMediaChooser" android:screenOrientation="1" android:theme="@7F100013">
+</activity>
+<activity android:configChanges="0x000005B0" android:label="@7F0F0026" android:name="com.nononsenseapps.filepicker.FilePickerActivity" android:theme="@7F1000CE">
+<intent-filter>
+<action android:name="android.intent.action.GET_CONTENT">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<provider android:authorities="@7F0F00ED" android:exported="true" android:multiprocess="true" android:name="com.supertool.floatingtube.utils.provider.HistoryProvider" android:readPermission="com.supertool.floatingtube.history_READ" android:writePermission="com.supertool.floatingtube.history_WRITE">
+</provider>
+<provider android:authorities="@7F0F00EC" android:exported="true" android:multiprocess="true" android:name="com.supertool.floatingtube.utils.provider.FavouriteProvider" android:readPermission="com.supertool.floatingtube.favourite_READ" android:writePermission="com.supertool.floatingtube.favourite_WRITE">
+</provider>
+<provider android:authorities="@7F0F00EE" android:exported="false" android:name="com.supertool.floatingtube.utils.provider.QueueProvider">
+</provider>
+<provider android:authorities="@7F0F00EF" android:exported="false" android:name="com.supertool.floatingtube.utils.provider.RelatedProvider">
+</provider>
+<receiver android:name="com.supertool.floatingtube.utils.receiver.OnUpgradeReceiver">
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_REPLACED">
+</action>
+<data android:path="com.awesome.floatingtube" android:scheme="package">
+</data>
+</intent-filter>
+</receiver>
+<activity android:configChanges="0x00000480" android:name="com.appodeal.ads.InterstitialActivity" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x00000480" android:name="com.appodeal.ads.VideoActivity" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x00000480" android:name="com.appodeal.ads.LoaderActivity" android:theme="@android:01030010">
+</activity>
+<activity android:name="com.appodeal.ads.VideoPlayerActivity" android:theme="@android:0103000A">
+</activity>
+<receiver android:enabled="true" android:exported="true" android:name="com.appodeal.ads.AppodealPackageAddedReceiver">
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_ADDED">
+</action>
+<data android:scheme="package">
+</data>
+</intent-filter>
+</receiver>
+<activity android:name="com.appodeal.ads.TestActivity" android:theme="@android:01030010">
+</activity>
+<meta-data android:name="com.google.android.gms.version" android:value="@7F0A0008">
+</meta-data>
+<activity android:configChanges="0x00000FB0" android:exported="false" android:name="com.google.android.gms.ads.AdActivity" android:theme="@android:0103000F">
+</activity>
+<activity android:configChanges="0x000004A0" android:excludeFromRecents="true" android:hardwareAccelerated="true" android:name="com.chartboost.sdk.CBImpressionActivity" android:theme="@android:01030011">
+</activity>
+<activity android:configChanges="0x00000480" android:name="com.applovin.adview.AppLovinInterstitialActivity">
+</activity>
+<activity android:configChanges="0x00000480" android:name="com.applovin.adview.AppLovinConfirmationActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.mopub.mobileads.MoPubActivity" android:theme="@android:0103000F">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.mopub.common.MoPubBrowser">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.mopub.mobileads.MraidActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.mopub.mobileads.MraidVideoPlayerActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.mopub.mobileads.RewardedMraidActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="org.nexage.sourcekit.vast.activity.VASTActivity" android:theme="@android:01030007">
+</activity>
+<activity android:name="org.nexage.sourcekit.vast.activity.VPAIDActivity" android:theme="@android:01030007">
+</activity>
+<activity android:name="com.appodeal.ads.networks.vpaid.VPAIDActivity" android:theme="@android:01030007">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.amazon.device.ads.AdActivity">
+</activity>
+<activity android:configChanges="0x00000FB0" android:hardwareAccelerated="true" android:name="com.my.target.ads.MyTargetActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.facebook.ads.AudienceNetworkActivity">
+</activity>
+<activity android:name="com.startapp.android.publish.ads.list3d.List3DActivity" android:theme="@android:01030005">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.startapp.android.publish.adsCommon.activities.OverlayActivity" android:theme="@android:0103000F">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.startapp.android.publish.adsCommon.activities.FullScreenActivity" android:theme="@android:01030005">
+</activity>
+<service android:name="com.startapp.android.publish.common.metaData.PeriodicMetaDataService">
+</service>
+<service android:name="com.startapp.android.publish.common.metaData.InfoEventService">
+</service>
+<service android:enabled="true" android:exported="true" android:name="com.yandex.metrica.MetricaService" android:process=":Metrica">
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<action android:name="com.yandex.metrica.IMetricaService">
+</action>
+<data android:scheme="metrica">
+</data>
+</intent-filter>
+<meta-data android:name="metrica:api:level" android:value="58">
+</meta-data>
+</service>
+<receiver android:enabled="true" android:exported="true" android:name="com.yandex.metrica.MetricaEventHandler">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+<activity android:configChanges="0x00000FB0" android:name="com.yandex.mobile.ads.AdActivity">
+</activity>
+<activity android:configChanges="0x40000FFF" android:hardwareAccelerated="true" android:name="com.unity3d.ads.adunit.AdUnitActivity" android:theme="@android:01030007">
+</activity>
+<activity android:configChanges="0x40000FFF" android:hardwareAccelerated="false" android:name="com.unity3d.ads.adunit.AdUnitSoftwareActivity" android:theme="@android:01030007">
+</activity>
+<activity android:configChanges="0x40000FFF" android:hardwareAccelerated="true" android:name="com.unity3d.ads2.adunit.AdUnitActivity" android:theme="@android:01030007">
+</activity>
+<activity android:configChanges="0x40000FFF" android:hardwareAccelerated="false" android:name="com.unity3d.ads2.adunit.AdUnitSoftwareActivity" android:theme="@android:01030007">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.jirbo.adcolony.AdColonyOverlay" android:theme="@android:01030011">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.jirbo.adcolony.AdColonyFullscreen" android:theme="@android:0103000A">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.jirbo.adcolony.AdColonyBrowser" android:theme="@android:0103000A">
+</activity>
+<activity android:configChanges="0x00000DA0" android:name="com.vungle.publisher.VideoFullScreenAdActivity" android:theme="@android:01030007">
+</activity>
+<activity android:configChanges="0x00000DA0" android:name="com.vungle.publisher.MraidFullScreenAdActivity" android:theme="@android:01030011">
+</activity>
+<activity android:configChanges="0x00000DA0" android:name="com.vungle.publisher.FlexViewAdActivity" android:theme="@android:01030011">
+</activity>
+<activity android:configChanges="0x00000FB0" android:name="com.flurry.android.FlurryFullscreenTakeoverActivity" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x00000FB0" android:name="com.flurry.android.FlurryShareActivity" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x00000FB0" android:name="com.flurry.android.FlurryTileAdActivity" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x00000FB0" android:name="com.flurry.android.FlurryBrowserActivity" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x000004A0" android:hardwareAccelerated="true" android:name="com.tapjoy.TJAdUnitActivity" android:theme="@android:01030011">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.tapjoy.mraid.view.ActionHandler">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.tapjoy.mraid.view.Browser">
+</activity>
+<activity android:configChanges="0x000004A0" android:hardwareAccelerated="true" android:name="com.tapjoy.TJContentActivity" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x00000480" android:hardwareAccelerated="true" android:name="com.ironsource.sdk.controller.ControllerActivity">
+</activity>
+<activity android:configChanges="0x00000480" android:hardwareAccelerated="true" android:name="com.ironsource.sdk.controller.InterstitialActivity" android:theme="@android:0103000F">
+</activity>
+<activity android:configChanges="0x00000480" android:hardwareAccelerated="true" android:name="com.ironsource.sdk.controller.OpenUrlActivity" android:theme="@android:0103000F">
+</activity>
+<activity android:configChanges="0x000004A0" android:hardwareAccelerated="true" android:name="com.adcolony.sdk.AdColonyInterstitialActivity">
+</activity>
+<activity android:configChanges="0x000004A0" android:hardwareAccelerated="true" android:name="com.adcolony.sdk.AdColonyAdViewActivity">
+</activity>
+<activity android:configChanges="0x00000DB0" android:hardwareAccelerated="true" android:name="com.inmobi.rendering.InMobiAdActivity" android:resizeableActivity="false" android:theme="@android:01030006">
+</activity>
+<receiver android:enabled="true" android:exported="true" android:name="com.inmobi.commons.core.utilities.uid.ImIdShareBroadCastReceiver">
+<intent-filter>
+<action android:name="com.inmobi.share.id">
+</action>
+</intent-filter>
+</receiver>
+<meta-data android:name="presage_key" android:value="0">
+</meta-data>
+<service android:enabled="true" android:exported="true" android:name="io.presage.PresageService" android:process=":remote">
+<intent-filter>
+<action android:name="io.presage.PresageService.PIVOT">
+</action>
+</intent-filter>
+</service>
+<activity android:configChanges="0x000004B0" android:hardwareAccelerated="true" android:name="io.presage.activities.PresageActivity" android:theme="@android:01030010">
+<intent-filter>
+<action android:name="io.presage.intent.action.LAUNCH_WEBVIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<receiver android:name="io.presage.receiver.NetworkChangeReceiver">
+<intent-filter>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+<action android:name="android.net.wifi.WIFI_STATE_CHANGED">
+</action>
+<action android:name="io.presage.receiver.NetworkChangeReceiver.ONDESTROY">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name="io.presage.receiver.AlarmReceiver">
+</receiver>
+<provider android:authorities="com.awesome.floatingtube.PresageProvider" android:enabled="true" android:exported="true" android:name="io.presage.provider.PresageProvider">
+</provider>
+<provider android:authorities="com.awesome.floatingtube.MediaContentProvider" android:exported="false" android:grantUriPermissions="true" android:name="com.millennialmedia.internal.utils.MediaContentProvider">
+</provider>
+<activity android:excludeFromRecents="true" android:exported="true" android:label="@7F0F0026" android:name="com.supertool.floatingtube.HandlerActivity" android:noHistory="true" android:theme="@android:01030055">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<action android:name="android.media.action.MEDIA_PLAY_FROM_SEARCH">
+</action>
+<action android:name="android.nfc.action.NDEF_DISCOVERED">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="http">
+</data>
+<data android:scheme="https">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<action android:name="android.media.action.MEDIA_PLAY_FROM_SEARCH">
+</action>
+<action android:name="android.nfc.action.NDEF_DISCOVERED">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="http">
+</data>
+<data android:scheme="https">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.SEND">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:mimeType="text/plain">
+</data>
+<data android:mimeType="video/3gpp">
+</data>
+<data android:mimeType="video/mp4">
+</data>
+<data android:mimeType="video/m4v">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="rtmp">
+</data>
+<data android:scheme="rtmpe">
+</data>
+<data android:scheme="rtmps">
+</data>
+<data android:scheme="rtp">
+</data>
+<data android:scheme="rtsp">
+</data>
+<data android:scheme="mms">
+</data>
+<data android:scheme="mmsh">
+</data>
+<data android:scheme="icyx">
+</data>
+<data android:scheme="httplive">
+</data>
+<data android:scheme="udp">
+</data>
+<data android:scheme="vlc">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:mimeType="video/*">
+</data>
+<data android:scheme="rtmp">
+</data>
+<data android:scheme="rtmpe">
+</data>
+<data android:scheme="rtmps">
+</data>
+<data android:scheme="rtp">
+</data>
+<data android:scheme="rtsp">
+</data>
+<data android:scheme="mms">
+</data>
+<data android:scheme="mmsh">
+</data>
+<data android:scheme="icyx">
+</data>
+<data android:scheme="httplive">
+</data>
+<data android:scheme="udp">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="file">
+</data>
+<data android:scheme="ftp">
+</data>
+<data android:scheme="content">
+</data>
+<data android:scheme="http">
+</data>
+<data android:scheme="https">
+</data>
+<data android:mimeType="video/*">
+</data>
+<data android:mimeType="*/rmvb">
+</data>
+<data android:mimeType="*/avi">
+</data>
+<data android:mimeType="*/mkv">
+</data>
+<data android:mimeType="application/3gpp*">
+</data>
+<data android:mimeType="application/mp4">
+</data>
+<data android:mimeType="application/mpeg*">
+</data>
+<data android:mimeType="application/ogg">
+</data>
+<data android:mimeType="application/sdp">
+</data>
+<data android:mimeType="application/vnd.3gp*">
+</data>
+<data android:mimeType="application/vnd.apple.mpegurl">
+</data>
+<data android:mimeType="application/vnd.dvd*">
+</data>
+<data android:mimeType="application/vnd.dolby*">
+</data>
+<data android:mimeType="application/vnd.rn-realmedia*">
+</data>
+<data android:mimeType="application/x-iso9660-thumbnail">
+</data>
+<data android:mimeType="application/x-extension-mp4">
+</data>
+<data android:mimeType="application/x-flac">
+</data>
+<data android:mimeType="application/x-matroska">
+</data>
+<data android:mimeType="application/x-mpegURL">
+</data>
+<data android:mimeType="application/x-ogg">
+</data>
+<data android:mimeType="application/x-quicktimeplayer">
+</data>
+<data android:mimeType="application/x-shockwave-flash">
+</data>
+<data android:mimeType="application/xspf+xml">
+</data>
+<data android:mimeType="misc/ultravox">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="file">
+</data>
+<data android:scheme="ftp">
+</data>
+<data android:scheme="content">
+</data>
+<data android:scheme="http">
+</data>
+<data android:scheme="https">
+</data>
+<data android:host="*">
+</data>
+<data android:pathPattern=".*\.3g2">
+</data>
+<data android:pathPattern=".*\.3gp">
+</data>
+<data android:pathPattern=".*\.3gp2">
+</data>
+<data android:pathPattern=".*\.3gpp">
+</data>
+<data android:pathPattern=".*\.amv">
+</data>
+<data android:pathPattern=".*\.asf">
+</data>
+<data android:pathPattern=".*\.avi">
+</data>
+<data android:pathPattern=".*\.divx">
+</data>
+<data android:pathPattern=".*\.drc">
+</data>
+<data android:pathPattern=".*\.dv">
+</data>
+<data android:pathPattern=".*\.f4v">
+</data>
+<data android:pathPattern=".*\.flv">
+</data>
+<data android:pathPattern=".*\.gvi">
+</data>
+<data android:pathPattern=".*\.gxf">
+</data>
+<data android:pathPattern=".*\.ismv">
+</data>
+<data android:pathPattern=".*\.iso">
+</data>
+<data android:pathPattern=".*\.m1v">
+</data>
+<data android:pathPattern=".*\.m2v">
+</data>
+<data android:pathPattern=".*\.m2t">
+</data>
+<data android:pathPattern=".*\.m2ts">
+</data>
+<data android:pathPattern=".*\.m3u8">
+</data>
+<data android:pathPattern=".*\.mkv">
+</data>
+<data android:pathPattern=".*\.mov">
+</data>
+<data android:pathPattern=".*\.mp2">
+</data>
+<data android:pathPattern=".*\.mp2v">
+</data>
+<data android:pathPattern=".*\.mp4">
+</data>
+<data android:pathPattern=".*\.mp4v">
+</data>
+<data android:pathPattern=".*\.mpe">
+</data>
+<data android:pathPattern=".*\.mpeg">
+</data>
+<data android:pathPattern=".*\.mpeg1">
+</data>
+<data android:pathPattern=".*\.mpeg2">
+</data>
+<data android:pathPattern=".*\.mpeg4">
+</data>
+<data android:pathPattern=".*\.mpg">
+</data>
+<data android:pathPattern=".*\.mpv2">
+</data>
+<data android:pathPattern=".*\.mts">
+</data>
+<data android:pathPattern=".*\.mtv">
+</data>
+<data android:pathPattern=".*\.mxf">
+</data>
+<data android:pathPattern=".*\.mxg">
+</data>
+<data android:pathPattern=".*\.nsv">
+</data>
+<data android:pathPattern=".*\.nut">
+</data>
+<data android:pathPattern=".*\.nuv">
+</data>
+<data android:pathPattern=".*\.ogm">
+</data>
+<data android:pathPattern=".*\.ogv">
+</data>
+<data android:pathPattern=".*\.ogx">
+</data>
+<data android:pathPattern=".*\.ps">
+</data>
+<data android:pathPattern=".*\.rec">
+</data>
+<data android:pathPattern=".*\.rm">
+</data>
+<data android:pathPattern=".*\.rmvb">
+</data>
+<data android:pathPattern=".*\.tod">
+</data>
+<data android:pathPattern=".*\.ts">
+</data>
+<data android:pathPattern=".*\.tts">
+</data>
+<data android:pathPattern=".*\.vob">
+</data>
+<data android:pathPattern=".*\.vro">
+</data>
+<data android:pathPattern=".*\.webm">
+</data>
+<data android:pathPattern=".*\.wm">
+</data>
+<data android:pathPattern=".*\.wmv">
+</data>
+<data android:pathPattern=".*\.wtv">
+</data>
+<data android:pathPattern=".*\.xesc">
+</data>
+<data android:pathPattern=".*\.3G2">
+</data>
+<data android:pathPattern=".*\.3GP">
+</data>
+<data android:pathPattern=".*\.3GP2">
+</data>
+<data android:pathPattern=".*\.3GPP">
+</data>
+<data android:pathPattern=".*\.AMV">
+</data>
+<data android:pathPattern=".*\.ASF">
+</data>
+<data android:pathPattern=".*\.AVI">
+</data>
+<data android:pathPattern=".*\.DIVX">
+</data>
+<data android:pathPattern=".*\.DRC">
+</data>
+<data android:pathPattern=".*\.DV">
+</data>
+<data android:pathPattern=".*\.F4V">
+</data>
+<data android:pathPattern=".*\.FLV">
+</data>
+<data android:pathPattern=".*\.GVI">
+</data>
+<data android:pathPattern=".*\.GXF">
+</data>
+<data android:pathPattern=".*\.ISMV">
+</data>
+<data android:pathPattern=".*\.ISO">
+</data>
+<data android:pathPattern=".*\.M1V">
+</data>
+<data android:pathPattern=".*\.M2V">
+</data>
+<data android:pathPattern=".*\.M2T">
+</data>
+<data android:pathPattern=".*\.M2TS">
+</data>
+<data android:pathPattern=".*\.M3U8">
+</data>
+<data android:pathPattern=".*\.MKV">
+</data>
+<data android:pathPattern=".*\.MOV">
+</data>
+<data android:pathPattern=".*\.MP2">
+</data>
+<data android:pathPattern=".*\.MP2V">
+</data>
+<data android:pathPattern=".*\.MP4">
+</data>
+<data android:pathPattern=".*\.MP4V">
+</data>
+<data android:pathPattern=".*\.MPE">
+</data>
+<data android:pathPattern=".*\.MPEG">
+</data>
+<data android:pathPattern=".*\.MPEG1">
+</data>
+<data android:pathPattern=".*\.MPEG2">
+</data>
+<data android:pathPattern=".*\.MPEG4">
+</data>
+<data android:pathPattern=".*\.MPG">
+</data>
+<data android:pathPattern=".*\.MPV2">
+</data>
+<data android:pathPattern=".*\.MTS">
+</data>
+<data android:pathPattern=".*\.MTV">
+</data>
+<data android:pathPattern=".*\.MXF">
+</data>
+<data android:pathPattern=".*\.MXG">
+</data>
+<data android:pathPattern=".*\.NSV">
+</data>
+<data android:pathPattern=".*\.NUT">
+</data>
+<data android:pathPattern=".*\.NUV">
+</data>
+<data android:pathPattern=".*\.OGM">
+</data>
+<data android:pathPattern=".*\.OGV">
+</data>
+<data android:pathPattern=".*\.OGX">
+</data>
+<data android:pathPattern=".*\.PS">
+</data>
+<data android:pathPattern=".*\.REC">
+</data>
+<data android:pathPattern=".*\.RM">
+</data>
+<data android:pathPattern=".*\.RMVB">
+</data>
+<data android:pathPattern=".*\.TOD">
+</data>
+<data android:pathPattern=".*\.TS">
+</data>
+<data android:pathPattern=".*\.TTS">
+</data>
+<data android:pathPattern=".*\.VOB">
+</data>
+<data android:pathPattern=".*\.VRO">
+</data>
+<data android:pathPattern=".*\.WEBM">
+</data>
+<data android:pathPattern=".*\.WM">
+</data>
+<data android:pathPattern=".*\.WMV">
+</data>
+<data android:pathPattern=".*\.WTV">
+</data>
+<data android:pathPattern=".*\.XESC">
+</data>
+</intent-filter>
+</activity>
+<meta-data android:name="io.fabric.ApiKey" android:value="5b753b8e7a30860ff4bd535c2a2f510e759cb464">
+</meta-data>
+<activity android:label="@7F0F0112" android:launchMode="2" android:name="com.supertool.floatingtube.ChannelActivity" android:theme="@7F100013">
+</activity>
+<activity android:label="@7F0F0026" android:launchMode="2" android:name="com.cast.MyExpandedControllerActivity" android:screenOrientation="1" android:theme="@7F100161">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+</intent-filter>
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.myplayer.activity.VideoActivity">
+</meta-data>
+</activity>
+<service android:name="com.cast.PresentationService">
+</service>
+<activity android:launchMode="2" android:name="com.supertool.floatingtube.IntroActivity" android:theme="@7F100169">
+</activity>
+<meta-data android:name="android.support.VERSION" android:value="26.1.0">
+</meta-data>
+<activity android:excludeFromRecents="true" android:exported="false" android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity" android:theme="@android:01030010">
+</activity>
+<service android:exported="true" android:name="com.google.android.gms.auth.api.signin.RevocationBoundService" android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION">
+</service>
+<receiver android:name="com.google.android.gms.cast.framework.media.MediaIntentReceiver">
+</receiver>
+<service android:name="com.google.android.gms.cast.framework.media.MediaNotificationService">
+</service>
+<service android:name="com.google.android.gms.cast.framework.ReconnectionService">
+</service>
+<activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x00002004" android:label="@7F0F00AC" android:name="com.millennialmedia.internal.MMActivity" android:theme="@7F10016A">
+</activity>
+<activity android:configChanges="0x00002004" android:label="sdk" android:name="com.millennialmedia.internal.MMIntentWrapperActivity">
+</activity>
+<meta-data android:name="android.arch.lifecycle.VERSION" android:value="27.0.0-SNAPSHOT">
+</meta-data>
+</application>
+</manifest>

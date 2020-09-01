@@ -1,0 +1,130 @@
+<?xml version="1.0" ?><manifest android:installLocation="0" android:versionCode="1" android:versionName="1.0" package="com.lunainc.terminal" platformBuildVersionCode="22" platformBuildVersionName="5.1.1-1819727" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="4" android:targetSdkVersion="22">
+</uses-sdk>
+<uses-feature android:name="android.hardware.touchscreen" android:required="false">
+</uses-feature>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_SUPERUSER">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<permission android:description="@7F0A0044" android:label="@7F0A0041" android:name="jackpal.androidterm.permission.RUN_SCRIPT" android:permissionGroup="android.permission-group.SYSTEM_TOOLS" android:protectionLevel="0x00000001">
+</permission>
+<permission android:description="@7F0A0042" android:label="@7F0A003F" android:name="jackpal.androidterm.permission.APPEND_TO_PATH" android:permissionGroup="android.permission-group.SYSTEM_TOOLS" android:protectionLevel="0x00000001">
+</permission>
+<permission android:description="@7F0A0043" android:label="@7F0A0040" android:name="jackpal.androidterm.permission.PREPEND_TO_PATH" android:permissionGroup="android.permission-group.SYSTEM_TOOLS" android:protectionLevel="0x00000001">
+</permission>
+<application android:hardwareAccelerated="true" android:icon="@7F030001" android:label="@7F0A0010" android:theme="@7F0B0000">
+<activity android:configChanges="0x000000B0" android:launchMode="2" android:name="jackpal.androidterm.Term" android:windowSoftInputMode="0x00000015">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+<category android:name="android.intent.category.MULTIWINDOW_LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity-alias android:exported="false" android:name="jackpal.androidterm.TermInternal" android:targetActivity="jackpal.androidterm.Term">
+<intent-filter>
+<action android:name="jackpal.androidterm.private.OPEN_NEW_WINDOW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="jackpal.androidterm.private.SWITCH_WINDOW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity-alias>
+<activity android:excludeFromRecents="true" android:name="jackpal.androidterm.RemoteInterface">
+<intent-filter>
+<action android:name="jackpal.androidterm.OPEN_NEW_WINDOW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity-alias android:exported="true" android:label="@7F0A0001" android:name="jackpal.androidterm.TermHere" android:targetActivity="jackpal.androidterm.RemoteInterface">
+<intent-filter>
+<action android:name="android.intent.action.SEND">
+</action>
+<data android:mimeType="*/*">
+</data>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity-alias>
+<activity android:excludeFromRecents="true" android:name="jackpal.androidterm.RunScript" android:permission="jackpal.androidterm.permission.RUN_SCRIPT">
+<intent-filter>
+<action android:name="jackpal.androidterm.RUN_SCRIPT">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:excludeFromRecents="true" android:name="jackpal.androidterm.RunShortcut">
+<intent-filter>
+<action android:name="jackpal.androidterm.RUN_SHORTCUT">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:label="@7F0A0051" android:name="jackpal.androidterm.TermPreferences">
+</activity>
+<activity android:label="@7F0A008D" android:name="jackpal.androidterm.WindowList">
+</activity>
+<service android:name="jackpal.androidterm.TermService">
+<intent-filter>
+<action android:name="jackpal.androidterm.action.START_TERM.v1">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</service>
+<activity android:configChanges="0x000000B0" android:label="@7F0A0000" android:launchMode="1" android:name="jackpal.androidterm.shortcuts.AddShortcut" android:theme="@android:01030010">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.CREATE_SHORTCUT">
+</action>
+</intent-filter>
+<intent-filter>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<data android:mimeType="text/*">
+</data>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000000A0" android:exported="true" android:label="@7F0A0003" android:launchMode="1" android:name="jackpal.androidterm.shortcuts.FSNavigator">
+<intent-filter>
+<action android:name="android.intent.action.PICK">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.GET_CONTENT">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.OPENABLE">
+</category>
+<data android:mimeType="*/*">
+</data>
+</intent-filter>
+</activity>
+<meta-data android:name="com.sec.android.support.multiwindow" android:value="true">
+</meta-data>
+</application>
+</manifest>

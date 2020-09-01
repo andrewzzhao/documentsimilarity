@@ -1,0 +1,328 @@
+<?xml version="1.0" ?><manifest android:versionCode="2" android:versionName="1.1" package="com.mm.android.direct.osiris_security" platformBuildVersionCode="23" platformBuildVersionName="6.0-2704002" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="15" android:targetSdkVersion="21">
+</uses-sdk>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT">
+</uses-permission>
+<uses-permission android:name="android.permission.FLASHLIGHT">
+</uses-permission>
+<uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.RECORD_AUDIO">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_CONFIGURATION">
+</uses-permission>
+<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS">
+</uses-permission>
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW">
+</uses-permission>
+<uses-permission android:name="android.permission.USE_CREDENTIALS">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_SETTINGS">
+</uses-permission>
+<permission android:name="com.mm.android.direct.osiris_security.permission.C2D_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="com.mm.android.direct.osiris_security.permission.C2D_MESSAGE">
+</uses-permission>
+<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE">
+</uses-permission>
+<uses-feature android:name="android.hardware.camera">
+</uses-feature>
+<uses-feature android:name="android.hardware.camera.autofocus">
+</uses-feature>
+<application android:allowBackup="true" android:icon="@7F020209" android:label="OSIRIS SECURITY" android:name="com.mm.android.direct.gdmssphone.MyApplication" android:supportsRtl="false">
+<service android:name="com.mm.android.direct.gdmssphone.C2DMReceiver">
+</service>
+<meta-data android:name="BaiduMobAd_CHANNEL" android:value="gdmss">
+</meta-data>
+<meta-data android:name="BaiduMobAd_STAT_ID" android:value="332ee1da6c">
+</meta-data>
+<meta-data android:name="BaiduMobAd_EXCEPTION_LOG" android:value="true">
+</meta-data>
+<meta-data android:name="BaiduMobAd_SEND_STRATEGY" android:value="APP_START">
+</meta-data>
+<meta-data android:name="BaiduMobAd_EXCEPTION_LOG" android:value="true">
+</meta-data>
+<meta-data android:name="app_name" android:value="OSIRIS SECURITY">
+</meta-data>
+<meta-data android:name="icon" android:value="@7F020209">
+</meta-data>
+<receiver android:name="com.mm.android.direct.c2dm.C2DMBroadcastReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+<category android:name="com.mm.android.direct.osiris_security">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.REGISTRATION">
+</action>
+<category android:name="com.mm.android.direct.osiris_security">
+</category>
+</intent-filter>
+</receiver>
+<service android:name="com.mm.android.direct.push.PushTestService">
+</service>
+<activity android:configChanges="0x000004A0" android:name="com.mm.android.direct.gdmssphone.SplashActivity" android:screenOrientation="1" android:theme="@android:01030007">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.CREATE_SHORTCUT">
+</action>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.mm.android.direct.guide.GuideActivity" android:screenOrientation="1" android:theme="@android:01030007">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="com.mm.android.direct.gdmssphone.MainActivity" android:screenOrientation="1" android:theme="@android:01030006" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="com.mm.android.direct.door.DoorActivity" android:screenOrientation="1" android:theme="@android:01030006" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.mm.android.direct.door.DoorPreviewFragment" android:theme="@android:01030007" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.mm.android.direct.door.DoorDeviceDetailActivity" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.mm.android.direct.door.DoorDeviceListActivity" android:screenOrientation="1" android:theme="@android:0103000B">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.mm.android.direct.gdmssphone.DeviceListActivity" android:screenOrientation="1" android:theme="@android:0103000B">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.mm.android.direct.preview.DeviceTalkActivity" android:theme="@android:0103000B">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.mm.android.direct.push.PushMessageActivity" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.mm.android.direct.about.WebViewActivity" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.mm.android.direct.localsetting.PasswordSettingActivity" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.mm.android.direct.localsetting.PasswordConfirmActivity" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.mm.android.direct.favorite.FavoriteTreeActivity" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.mm.android.direct.devicemanager.DeviceDetailActivity" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F0701E5" android:name="com.mm.android.direct.gdmssphone.DialogActivity" android:theme="@7F0D0015" android:windowSoftInputMode="0x00000021">
+</activity>
+<activity android:configChanges="0x000004A0" android:label="@7F0701C2" android:name="com.mm.android.direct.gdmssphone.DateActivity" android:theme="@android:0103000B">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.mm.android.direct.push.DevicePushActivity" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.mm.android.direct.push.PushConfigActivity" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.mm.android.direct.emap.EMapGridtFragment" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.mm.android.direct.emap.EMapManagerActivity" android:screenOrientation="1" android:theme="@android:01030007">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.mm.android.direct.emap.EMapRealPlayActivity" android:screenOrientation="1" android:theme="@android:01030007" android:windowSoftInputMode="0x00000021">
+</activity>
+<activity android:configChanges="0x000004A0" android:exported="true" android:name="com.mm.android.direct.localfile.FilePlayBackActivity" android:theme="@android:01030006" android:windowSoftInputMode="0x00000020">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.mm.android.direct.remoteconfig.alarmout.AlarmOutActivity" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.mm.android.direct.remoteconfig.disk.DiskStateActivity" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.mm.android.direct.devicemanager.CaptureActivity" android:screenOrientation="1" android:theme="@android:01030007" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.mm.android.direct.gdmssphone.DeviceTabActivity" android:screenOrientation="1" android:theme="@android:01030006" android:windowSoftInputMode="0x00000003">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.mm.android.direct.remoteconfig.TeleConfigListActivity" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.mm.android.direct.remoteconfig.motiondetect.MotionDetectConfigActivity" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.mm.android.direct.gdmssphone.ChannelChooseActivity" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.mm.android.direct.remoteconfig.blinddetect.BlindDetectConfigActivity" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.mm.android.direct.remoteconfig.flashlight.FlashlightConfigActivity" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.mm.android.direct.devicemanager.DDNSManagerActivity" android:screenOrientation="1" android:theme="@android:01030006" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.mm.android.direct.remoteconfig.alarmmotion.AlarmMotionActivity" android:screenOrientation="1" android:theme="@android:01030006" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.mm.android.direct.gdmssphone.DetectShowActivity" android:screenOrientation="1" android:theme="@android:01030006" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.mm.android.direct.gdmssphone.DetectSettingActivity" android:screenOrientation="1" android:theme="@android:01030006" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.mm.android.direct.gdmssphone.DateSettingActivity" android:screenOrientation="1" android:theme="@android:01030006" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.mm.android.direct.gdmssphone.DelaySettingActivity" android:screenOrientation="1" android:theme="@android:01030006" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.mm.android.direct.gdmssphone.WeekdayChooseActivity" android:screenOrientation="1" android:theme="@android:01030006" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.mm.android.direct.remoteconfig.motiondetect.DetectAreaActivity" android:screenOrientation="1" android:theme="@android:01030006" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.mm.android.direct.remoteconfig.recordplan.RecordPlanConfigActivity" android:screenOrientation="1" android:theme="@android:01030006" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.mm.android.direct.remoteconfig.account.ModifyPasswordActivity" android:screenOrientation="1" android:theme="@android:01030006" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.mm.android.direct.remoteconfig.recordplan.RecordPlanSettingActivity" android:screenOrientation="1" android:theme="@android:01030006" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="com.mm.android.direct.gdmssphone.CCTVMainActivity" android:screenOrientation="1" android:theme="@android:01030006" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.mm.android.clouddisk.CloudDiskLoginActivity" android:screenOrientation="1" android:theme="@android:01030006" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.mm.android.clouddisk.CloudDiskDeviceActivity" android:theme="@android:01030006" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.mm.android.clouddisk.CloudFileDownLoadActivity" android:theme="@android:01030006" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.mm.android.clouddisk.CloudFileListActivity" android:theme="@android:01030006" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.mm.android.clouddisk.CloudDiskChannelActivity" android:theme="@android:01030006" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.mm.android.clouddisk.CloudDiskFileDateActivity" android:theme="@android:01030006" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.mm.android.clouddisk.CloudDiskFileTypeActivity" android:theme="@android:01030006" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.mm.android.direct.favorite.FavoriteGroupChannelActivity" android:screenOrientation="1" android:theme="@android:01030006" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.mm.android.direct.about.AboutActivity" android:screenOrientation="1" android:theme="@android:01030006" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.mm.android.direct.push.PushEventsTabActivity" android:theme="@android:01030006" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.mm.android.direct.remoteconfig.encode.ChannelConfigActivity" android:screenOrientation="1" android:theme="@android:01030006" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.mm.android.direct.gdmssphone.MyActivity" android:screenOrientation="1" android:theme="@android:01030006" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.mm.android.direct.commonSpinner.CommonSpinnerActivity" android:screenOrientation="1" android:theme="@android:01030006" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.mm.android.direct.push.PushSelectActivity" android:screenOrientation="1" android:theme="@android:01030006" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.mm.android.direct.devicemanager.DeviceTypeActivity" android:screenOrientation="1" android:theme="@android:01030006" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.mm.android.direct.smartconfig.SmartConfigActivity" android:screenOrientation="1" android:theme="@android:01030006" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.mm.android.direct.localsetting.LocalSettingActivity" android:screenOrientation="1" android:theme="@android:01030006" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.mm.android.direct.about.HelpListActivity" android:screenOrientation="1" android:theme="@android:01030006" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.mm.android.direct.localfile.ImageActivity" android:screenOrientation="1" android:theme="@android:01030006" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.mm.android.direct.door.localfile.DoorFilePlayBackActivity" android:screenOrientation="1" android:theme="@android:01030006" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.mm.android.direct.more.CommonWebViewActivity" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="com.mm.android.direct.door.DoorCallActivity" android:screenOrientation="4" android:theme="@android:01030006" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.mm.android.direct.about.UserExperienceActivity" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.mm.android.direct.more.MoreActivity" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.mm.android.direct.devicemanager.QRCodeActivity" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.mm.android.direct.gdmssphone.DeviceListPlaybackActivity" android:theme="@android:01030073">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.mm.android.direct.devicemanager.SDCardStateActivity" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.mm.android.direct.alarm.box.PartDetailActivity" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.mm.android.direct.alarm.box.LinkDeviceListActivity" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.mm.android.direct.alarm.boxmanager.AddAlarmBoxActivity" android:screenOrientation="1" android:theme="@android:01030006" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.mm.android.direct.alarm.boxmanager.AlarmBoxDetailActivity" android:screenOrientation="1" android:theme="@android:01030006" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.mm.android.direct.alarm.box.BoxModeSettingActivity" android:screenOrientation="1" android:theme="@android:01030006" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.mm.android.direct.alarm.boxmanager.AlarmboxListActivity" android:screenOrientation="1" android:theme="@android:01030006" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:configChanges="0x000004A0" android:launchMode="2" android:name="com.mm.android.direct.alarm.AlarmActivity" android:screenOrientation="1" android:theme="@android:01030006" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.mm.android.direct.push.FacePictureActivity" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.mm.android.direct.alarm.eventmanager.EventsTabActivity" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.mm.android.direct.devicemanager.DeviceForceChangePwd" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.mm.android.direct.deviceinit.WifiCaptureActivity" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.mm.android.direct.deviceinit.EditActivity" android:screenOrientation="1" android:theme="@android:01030006" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.mm.android.direct.deviceinit.WifiConfigActivity" android:screenOrientation="1" android:theme="@android:01030006" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.mm.android.direct.deviceinit.DeviceInitActivity" android:screenOrientation="1" android:theme="@android:01030006" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.mm.android.direct.deviceinit.SelectDevTypeActivity" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.mm.android.direct.devicemanager.WifiTypeActivity" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.mm.android.direct.devicemanager.WiredTypeActivity" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.mm.android.direct.alarm.box.AlarmDeviceListActivity" android:screenOrientation="1" android:theme="@android:0103000B">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.mm.android.direct.door.DoorDeviceConnectTypeActivity" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.mm.android.direct.gdmssphone.FaqActvivity" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.mm.android.direct.alarm.part.KeyManagerActivity" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.mm.android.direct.alarm.part.KeyDisplayActivity" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.mm.android.direct.alarm.part.KeyDisplayDetailActivity" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.mm.android.direct.devicesoftap.DeviceSoftAPActivity" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.mm.android.direct.deviceinit.DeviceInitAPActivity" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.mm.android.direct.deviceinit.DeviceCloudUpdateActivity" android:screenOrientation="1" android:theme="@android:0103000B">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.mm.android.direct.smartconfig.SmartCaptureActivity" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.mm.android.direct.smartconfig.SmartEditActivity" android:screenOrientation="1" android:theme="@android:01030006" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.mm.android.direct.gdmssphone.SplashCountrySelectActivity" android:screenOrientation="1" android:theme="@android:01030006">
+</activity>
+<provider android:authorities="com.mm.android.direct.osiris_security.firebaseinitprovider" android:exported="false" android:initOrder="100" android:name="com.google.firebase.provider.FirebaseInitProvider">
+</provider>
+<receiver android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+<action android:name="com.google.android.c2dm.intent.REGISTRATION">
+</action>
+<category android:name="com.mm.android.direct.osiris_security">
+</category>
+</intent-filter>
+</receiver>
+<receiver android:exported="false" android:name="com.google.firebase.iid.FirebaseInstanceIdInternalReceiver">
+</receiver>
+<service android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdService">
+<intent-filter android:priority="-500">
+<action android:name="com.google.firebase.INSTANCE_ID_EVENT">
+</action>
+</intent-filter>
+</service>
+<service android:exported="true" android:name="com.google.firebase.messaging.FirebaseMessagingService">
+<intent-filter android:priority="-500">
+<action android:name="com.google.firebase.MESSAGING_EVENT">
+</action>
+</intent-filter>
+</service>
+<meta-data android:name="com.google.android.gms.version" android:value="@7F0C0000">
+</meta-data>
+</application>
+</manifest>

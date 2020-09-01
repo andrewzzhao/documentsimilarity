@@ -1,0 +1,102 @@
+<?xml version="1.0" ?><manifest android:installLocation="2" android:versionCode="26" android:versionName="2.1" package="com.beurer.connect.healthmanager" platformBuildVersionCode="27" platformBuildVersionName="8.1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="21" android:targetSdkVersion="26">
+</uses-sdk>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.NFC">
+</uses-permission>
+<uses-permission android:name="android.permission.BLUETOOTH">
+</uses-permission>
+<uses-permission android:name="android.permission.BLUETOOTH_ADMIN">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_CONTACTS">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_SMS">
+</uses-permission>
+<uses-permission android:name="android.permission.DISABLE_KEYGUARD">
+</uses-permission>
+<uses-permission android:name="android.permission.BLUETOOTH_PRIVILEGED">
+</uses-permission>
+<uses-feature android:name="android.hardware.camera">
+</uses-feature>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW">
+</uses-permission>
+<uses-feature android:name="android.hardware.bluetooth_le" android:required="true">
+</uses-feature>
+<uses-feature android:name="android.hardware.nfc" android:required="false">
+</uses-feature>
+<supports-screens android:largeScreens="true" android:normalScreens="true" android:resizeable="true" android:smallScreens="true" android:xlargeScreens="false">
+</supports-screens>
+<uses-permission android:name="android.permission.READ_SMS">
+</uses-permission>
+<application android:allowBackup="false" android:fullBackupContent="false" android:icon="@7F0200CA" android:label="@7F070543" android:largeHeap="true" android:name="com.beurer.connect.healthmanager.healthmanagernew.global.App" android:theme="@7F0A009C">
+<provider android:authorities="com.beurer.connect.healthmanager.fileprovider" android:exported="false" android:grantUriPermissions="true" android:name="android.support.v4.content.FileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F060000">
+</meta-data>
+</provider>
+<service android:enabled="true" android:exported="true" android:name="com.analog.sdk.oem.Watch_SDK">
+</service>
+<service android:enabled="true" android:exported="true" android:name="com.ilink.bleapi.ScannerService" android:stopWithTask="false">
+</service>
+<service android:enabled="true" android:exported="true" android:name="com.ilink.bleapi.AS87Service" android:stopWithTask="false">
+</service>
+<service android:enabled="true" android:exported="true" android:name="com.ilink.bleapi.AS97Service" android:stopWithTask="false">
+</service>
+<service android:enabled="true" android:name="com.analog.ble.BluetoothLEService_AnalogWatch">
+</service>
+<service android:name="com.analog.notification.NotificationListener" android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE">
+<intent-filter>
+<action android:name="android.service.notification.NotificationListenerService">
+</action>
+</intent-filter>
+</service>
+<service android:enabled="true" android:exported="true" android:name="com.ilink.bleapi.BF600ScaleService">
+</service>
+<service android:enabled="true" android:exported="true" android:name="com.ilink.bleapi.BF850ScaleService">
+</service>
+<service android:enabled="true" android:exported="true" android:name="com.ilink.bleapi.BF105ScaleService">
+</service>
+<service android:enabled="true" android:exported="true" android:name="com.ilink.bleapi.BF950ScaleService">
+</service>
+<service android:enabled="true" android:exported="true" android:name="com.ilink.bleapi.SRBF1ScaleService">
+</service>
+<activity android:name="com.analog.notification.PagingDialog" android:screenOrientation="1" android:theme="@7F0A00F1">
+</activity>
+<activity android:name="com.analog.camera.CameraDemo" android:theme="@android:01030006">
+</activity>
+<receiver android:enabled="true" android:name="com.analog.camera.IncommingCallReceiver">
+<intent-filter>
+<action android:name="android.intent.action.PHONE_STATE">
+</action>
+</intent-filter>
+</receiver>
+<activity android:launchMode="1" android:name="com.beurer.connect.healthmanager.healthmanagernew.onboarding.activity.SplashActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000030">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:name="com.beurer.connect.healthmanager.healthmanagernew.onboarding.activity.UserActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:name="com.beurer.connect.healthmanager.healthmanagernew.cockpit.activity.DashboardActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000002">
+</activity>
+<activity android:name="com.beurer.connect.healthmanager.healthmanagernew.onboarding.activity.DataPrivacyGDPRScreenActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000010">
+</activity>
+</application>
+</manifest>

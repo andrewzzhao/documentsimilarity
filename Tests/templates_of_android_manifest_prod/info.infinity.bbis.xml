@@ -1,0 +1,206 @@
+<?xml version="1.0" ?><manifest android:versionCode="23" android:versionName="1.2.3" package="info.infinity.bbis" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="16" android:targetSdkVersion="27">
+</uses-sdk>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.LOCATION_HARDWARE">
+</uses-permission>
+<uses-permission android:name="android.permission.CAMERA">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CALL_PHONE">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_CONTACTS">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-feature android:glEsVersion="0x00020000" android:required="true">
+</uses-feature>
+<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE">
+</uses-permission>
+<permission android:name="info.infinity.bbis.permission.C2D_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="info.infinity.bbis.permission.C2D_MESSAGE">
+</uses-permission>
+<meta-data android:name="android.support.VERSION" android:value="25.3.1">
+</meta-data>
+<application android:allowBackup="true" android:icon="@7F0E0000" android:label="@7F0F0047" android:name="info.infinity.bbis.app.DigitalSchool" android:roundIcon="@7F0E0002" android:supportsRtl="true" android:theme="@7F10000D">
+<meta-data android:name="com.google.android.gms.version" android:value="@7F0B000C">
+</meta-data>
+<meta-data android:name="com.google.android.geo.API_KEY" android:value="@7F0F01A0">
+</meta-data>
+<service android:name="info.infinity.bbis.services.SpeedByLocationService">
+</service>
+<activity android:name="info.infinity.bbis.authentication.LoginAs" android:windowSoftInputMode="0x00000023">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:name="info.infinity.bbis.administrator.main.AdminHomeActivity" android:theme="@7F100010" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="info.infinity.bbis.teacher.fragments.main.TeacherHomeActivity" android:theme="@7F100010" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="info.infinity.bbis.student.fragments.main.HomeActivity" android:theme="@7F100010" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="info.infinity.bbis.student.fragments.transportation.DriverMapActivity">
+</activity>
+<activity android:name="info.infinity.bbis.student.fragments.transportation.parent.location.DriverLocationActivityForParent">
+</activity>
+<activity android:name="info.infinity.bbis.student.fragments.digital_classroom.YoutubeVideoList" android:theme="@7F100010">
+</activity>
+<activity android:name="info.infinity.bbis.student.activity.faculties.AllFacultiesInfo" android:screenOrientation="1" android:theme="@7F100010">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value="info.infinity.bbis.student.fragments.main.HomeActivity">
+</meta-data>
+</activity>
+<activity android:name="info.infinity.bbis.student.activity.faculties.ViewFacultyProfile" android:screenOrientation="1" android:theme="@7F100010">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value="info.infinity.bbis.student.activity.faculties.AllFacultiesInfo">
+</meta-data>
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.thefinestartist.finestwebview.FinestWebViewActivity" android:screenOrientation="4" android:theme="@7F1000DD">
+</activity>
+<activity android:name="info.infinity.bbis.photos.GalleryPhotos" android:screenOrientation="1" android:theme="@7F100010">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value="info.infinity.bbis.student.fragments.main.HomeActivity">
+</meta-data>
+</activity>
+<activity android:name="info.infinity.bbis.attendance.AttendanceMainActivity" android:screenOrientation="1" android:theme="@7F100166" android:windowSoftInputMode="0x00000020">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value="info.infinity.bbis.teacher.fragments.main.TeacherHomeActivity">
+</meta-data>
+</activity>
+<activity android:name="info.infinity.bbis.attendance.splash.SplashActivity" android:screenOrientation="1" android:theme="@7F100166">
+</activity>
+<activity android:configChanges="0x00000480" android:name="info.infinity.bbis.attendance.edit.EditStudentActivity" android:screenOrientation="1" android:theme="@7F100166" android:windowSoftInputMode="0x00000020">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value="info.infinity.bbis.attendance.AttendanceMainActivity">
+</meta-data>
+</activity>
+<activity android:configChanges="0x00000480" android:name="info.infinity.bbis.attendance.attendance.TakeAttendanceActivity" android:screenOrientation="1" android:theme="@7F100166">
+</activity>
+<activity android:configChanges="0x00000480" android:name="info.infinity.bbis.attendance.past_attendances.PastAttendancesListActivity" android:screenOrientation="1" android:theme="@7F100166">
+</activity>
+<activity android:configChanges="0x00000480" android:name="info.infinity.bbis.attendance.past_attendances.PastAttendanceActivity" android:screenOrientation="1" android:theme="@7F100166">
+</activity>
+<activity android:name="info.infinity.bbis.attendance.statistics.StatisticalListActivity" android:screenOrientation="1" android:theme="@7F100166" android:windowSoftInputMode="0x00000020">
+</activity>
+<activity android:name="com.desmond.squarecamera.CameraActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="info.infinity.bbis.image_picker.TempActivity" android:screenOrientation="1" android:theme="@7F100165">
+</activity>
+<activity android:name="com.yalantis.ucrop.UCropActivity" android:screenOrientation="1" android:theme="@7F100010">
+</activity>
+<activity android:name="info.infinity.bbis.authentication.SignInActivity" android:theme="@7F10000C" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:name="info.infinity.bbis.authentication.SignUpActivity" android:theme="@7F10000C" android:windowSoftInputMode="0x00000012">
+</activity>
+<activity android:name="info.infinity.bbis.authentication.PhoneAuthEnterNumber" android:theme="@7F10000C" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name="info.infinity.bbis.authentication.MyPhoneAuthentication" android:theme="@7F10000C" android:windowSoftInputMode="0x00000022">
+</activity>
+<activity android:name="info.infinity.bbis.authentication.MainActivityAuth" android:theme="@7F10000D">
+</activity>
+<activity android:name="info.infinity.bbis.authentication.StudentSplashActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="info.infinity.bbis.authentication.SetStudentRollNumber" android:screenOrientation="1" android:theme="@7F100010">
+</activity>
+<activity android:name="info.infinity.bbis.authentication.AdminAuthentication" android:screenOrientation="1" android:theme="@7F100010">
+</activity>
+<receiver android:name="info.infinity.bbis.utils.MyBroadcastReceiver">
+</receiver>
+<service android:name="info.infinity.bbis.fcm.FCMService">
+<intent-filter>
+<action android:name="com.google.firebase.MESSAGING_EVENT">
+</action>
+</intent-filter>
+</service>
+<service android:name="info.infinity.bbis.fcm.MyFirebaseMessagingService">
+<intent-filter>
+<action android:name="com.google.firebase.MESSAGING_EVENT">
+</action>
+</intent-filter>
+</service>
+<service android:name="info.infinity.bbis.fcm.MyFirebaseInstanceIDService">
+<intent-filter>
+<action android:name="com.google.firebase.INSTANCE_ID_EVENT">
+</action>
+</intent-filter>
+</service>
+<meta-data android:name="com.google.firebase.messaging.default_notification_icon" android:resource="@7F08016D">
+</meta-data>
+<meta-data android:name="com.google.firebase.messaging.default_notification_color" android:resource="@7F0600DB">
+</meta-data>
+<service android:exported="true" android:name="info.infinity.bbis.services.firebase.FirebaseCleanChatDataService">
+</service>
+<activity android:name="com.desmond.squarecamera.RuntimePermissionActivity" android:theme="@7F1001DB">
+</activity>
+<activity android:excludeFromRecents="true" android:exported="false" android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity" android:theme="@android:01030010">
+</activity>
+<service android:exported="true" android:name="com.google.android.gms.auth.api.signin.RevocationBoundService" android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION">
+</service>
+<activity android:excludeFromRecents="true" android:exported="true" android:launchMode="3" android:name="com.google.firebase.auth.internal.FederatedSignInActivity" android:permission="com.google.firebase.auth.api.gms.permission.LAUNCH_FEDERATED_SIGN_IN" android:theme="@android:01030010">
+</activity>
+<service android:exported="true" android:name="com.google.firebase.messaging.FirebaseMessagingService">
+<intent-filter android:priority="-500">
+<action android:name="com.google.firebase.MESSAGING_EVENT">
+</action>
+</intent-filter>
+</service>
+<receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementReceiver">
+</receiver>
+<receiver android:enabled="true" android:exported="true" android:name="com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver" android:permission="android.permission.INSTALL_PACKAGES">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementService">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementJobService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<receiver android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+<category android:name="info.infinity.bbis">
+</category>
+</intent-filter>
+</receiver>
+<service android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdService">
+<intent-filter android:priority="-500">
+<action android:name="com.google.firebase.INSTANCE_ID_EVENT">
+</action>
+</intent-filter>
+</service>
+<provider android:authorities="info.infinity.bbis.firebaseinitprovider" android:exported="false" android:initOrder="100" android:name="com.google.firebase.provider.FirebaseInitProvider">
+</provider>
+<service android:exported="true" android:name="com.firebase.jobdispatcher.GooglePlayReceiver" android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE">
+<intent-filter>
+<action android:name="com.google.android.gms.gcm.ACTION_TASK_READY">
+</action>
+</intent-filter>
+</service>
+<provider android:authorities="info.infinity.bbis.crashlyticsinitprovider" android:exported="false" android:initOrder="100" android:name="com.crashlytics.android.CrashlyticsInitProvider">
+</provider>
+<activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x00000FB0" android:exported="false" android:name="com.google.android.gms.ads.AdActivity" android:theme="@android:0103000F">
+</activity>
+<provider android:authorities="info.infinity.bbis.lifecycle-trojan" android:exported="false" android:multiprocess="true" android:name="android.arch.lifecycle.ProcessLifecycleOwnerInitializer">
+</provider>
+</application>
+</manifest>

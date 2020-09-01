@@ -1,0 +1,491 @@
+<?xml version="1.0" ?><manifest android:versionCode="30" android:versionName="2.1.0" package="com.example.dm_erp" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="10" android:targetSdkVersion="25">
+</uses-sdk>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_LOGS">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.BROADCAST_PACKAGE_ADDED">
+</uses-permission>
+<uses-permission android:name="android.permission.BROADCAST_PACKAGE_CHANGED">
+</uses-permission>
+<uses-permission android:name="android.permission.BROADCAST_PACKAGE_INSTALL">
+</uses-permission>
+<uses-permission android:name="android.permission.BROADCAST_PACKAGE_REPLACED">
+</uses-permission>
+<uses-permission android:name="android.permission.RESTART_PACKAGES">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_TASKS">
+</uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+</uses-permission>
+<uses-permission android:name="android.permission.CHANGE_NETWORK_STATE">
+</uses-permission>
+<meta-data android:name="android.support.VERSION" android:value="25.3.1">
+</meta-data>
+<application android:allowBackup="true" android:icon="@7F0A0067" android:label="@7F0B0020" android:name="com.tencent.StubShell.TxAppEntry" android:roundIcon="@7F0A0067" android:supportsRtl="true">
+<meta-data android:name="TxAppEntry" android:value="com.example.dm_erp.CustomApplication">
+</meta-data>
+<provider android:authorities="com.example.dm_erp.fileprovider" android:exported="false" android:grantUriPermissions="true" android:name="android.support.v4.content.FileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F0E0000">
+</meta-data>
+</provider>
+<activity android:configChanges="0x000004A4" android:name="com.tencent.bugly.beta.ui.BetaActivity" android:theme="@android:0103000F">
+</activity>
+<service android:name="com.amap.api.location.APSService">
+</service>
+<meta-data android:name="com.amap.api.v2.apikey" android:value="c781ec91e1634c14b630a1d61415ed46">
+</meta-data>
+<meta-data android:name="UMENG_APPKEY" android:value="563097b267e58e3429001edd">
+</meta-data>
+<meta-data android:name="UMENG_MESSAGE_SECRET" android:value="6d2e2af6875f0b0a7f3b1c9cec17f88e">
+</meta-data>
+<meta-data android:name="UMENG_CHANNEL" android:value="Fir">
+</meta-data>
+<activity android:name="com.example.dm_erp.LoginActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:launchMode="2" android:name="com.example.dm_erp.activitys.MainActivity" android:screenOrientation="1">
+</activity>
+<activity android:name="com.example.dm_erp.activitys.LoadingActivity" android:screenOrientation="1" android:windowSoftInputMode="0x00000010">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:name="com.example.dm_erp.activitys.ChildMoudleActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:configChanges="0x000000A0" android:name="com.example.dm_erp.activitys.clockin.ClockInActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.example.dm_erp.activitys.clockin.ListUserSignActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.example.dm_erp.activitys.clockin.SearchSignActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.example.dm_erp.activitys.SelectAreaListActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.example.dm_erp.activitys.SelectUserListActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.example.dm_erp.activitys.clockin.LeaveSubmitActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.example.dm_erp.activitys.clockin.OverTimeSubmitActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.example.dm_erp.activitys.clockin.GooutSubmitActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.example.dm_erp.activitys.clockin.SearchAttendanceManageApprovalsActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.example.dm_erp.activitys.attendancemanage.search.ApprovalKaoqinListActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.example.dm_erp.activitys.attendancemanage.detail.AttendanceManageDetailActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.example.dm_erp.activitys.clockin.PictureSubmitActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.example.dm_erp.activitys.clockin.SearchPictureUploadsActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.example.dm_erp.activitys.attendancemanage.search.PictureUploadsListActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.example.dm_erp.activitys.attendancemanage.detail.PictureUploadDetailActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.example.dm_erp.activitys.clockin.TaskSubmitActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:launchMode="2" android:name="com.example.dm_erp.activitys.attendancemanage.search.UnCheckTaskListActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.example.dm_erp.activitys.notice.NoticeDetailActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.example.dm_erp.activitys.NoticeListActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.example.dm_erp.activitys.shop.NewShopActivity" android:windowSoftInputMode="0x00000014">
+</activity>
+<activity android:name="com.example.dm_erp.activitys.SelectLastAreaOrCityListActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.example.dm_erp.activitys.SelectCustomerListActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.example.dm_erp.activitys.clockin.SearchShopsActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.example.dm_erp.activitys.attendancemanage.search.ShopListActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.example.dm_erp.activitys.shop.ShopDetailActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.example.dm_erp.activitys.clockin.SummarySubmitActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.example.dm_erp.activitys.clockin.SearchSummarysActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.example.dm_erp.activitys.attendancemanage.search.SummaryListActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.example.dm_erp.activitys.attendancemanage.detail.SummaryDetailActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.example.dm_erp.activitys.CustomerListActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.example.dm_erp.activitys.shop.XianYouCustomerDetailActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.example.dm_erp.activitys.attendancemanage.search.CustomerLinkManListActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.example.dm_erp.activitys.clockin.CustomerLinkManSubmitActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.example.dm_erp.activitys.clockin.CustomerLinkManDetailActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.example.dm_erp.activitys.shop.NewJpCustomerActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.example.dm_erp.activitys.shop.JpCustomerDetailActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.example.dm_erp.activitys.shop.CustomerSearchActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.example.dm_erp.activitys.attendancemanage.search.SelectShopListActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.example.dm_erp.activitys.shop.NewComplaintActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.example.dm_erp.activitys.attendancemanage.search.SelectCargoListActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.example.dm_erp.activitys.clockin.SearchComplaintsActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.example.dm_erp.activitys.attendancemanage.search.ComplaintListActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.example.dm_erp.activitys.shop.ComplaintDetailActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.example.dm_erp.activitys.clockin.VolumeSubmitActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+.
+<activity android:name="com.example.dm_erp.activitys.attendancemanage.search.AddCargoDetailListActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.example.dm_erp.activitys.clockin.AddCargoDetailActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.example.dm_erp.activitys.clockin.EditCargoDetailActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.example.dm_erp.activitys.clockin.ExpenseSubmitFirstActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.example.dm_erp.activitys.clockin.ExpenseSubmitLastActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.example.dm_erp.activitys.attendancemanage.search.SelectFeeTypeActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.example.dm_erp.activitys.clockin.SearchExpenseListActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.example.dm_erp.activitys.attendancemanage.search.ExpenseListActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.example.dm_erp.activitys.clockin.ExpenseDetailsActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.example.dm_erp.activitys.clockin.ExpenseOrderDetailsActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.example.dm_erp.activitys.clockin.AddUserMobileOrderActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.example.dm_erp.activitys.attendancemanage.search.UserMobileOrderListActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.example.dm_erp.activitys.clockin.UserMobileOrderDetailsActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.example.dm_erp.activitys.clockin.SearchUserMobileOrderListActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.example.dm_erp.activitys.attendancemanage.detail.AddInWorkActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.example.dm_erp.activitys.attendancemanage.detail.AddInWorkSubmitUserActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.example.dm_erp.activitys.attendancemanage.detail.AddInWorkSubmitAreaActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:launchMode="2" android:name="com.example.dm_erp.activitys.attendancemanage.detail.BangGangActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.example.dm_erp.activitys.clockin.SearchInWorksActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.example.dm_erp.activitys.attendancemanage.search.AddInWorkListActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:launchMode="2" android:name="com.example.dm_erp.activitys.attendancemanage.detail.AddInworkDetailActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.example.dm_erp.activitys.attendancemanage.search.ContactListActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.example.dm_erp.activitys.attendancemanage.detail.ContactsDetailActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.example.dm_erp.activitys.contacts.SmsContactListActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.example.dm_erp.activitys.clockin.SearchCostPhotoListActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.example.dm_erp.activitys.attendancemanage.search.CostPhotoListActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.example.dm_erp.activitys.attendancemanage.detail.CostPhotoDetailActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.example.dm_erp.activitys.attendancemanage.detail.AddCostPhtotoActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.example.dm_erp.activitys.attendancemanage.detail.AddCostPhotoJiHeActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.example.dm_erp.activitys.CostPhotoJiheHistoryListActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.example.dm_erp.activitys.attendancemanage.detail.CostPhotoImageHistoryListActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.example.dm_erp.activitys.CustomerLinshiVisitActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.example.dm_erp.activitys.VisitStepListActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.example.dm_erp.activitys.clockin.AddVisitInOutShopActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.example.dm_erp.activitys.clockin.VisitKuCunSubmitActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.example.dm_erp.activitys.clockin.VisitWuLiaoSubmitActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.example.dm_erp.activitys.clockin.AddVisitCommunicateActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.example.dm_erp.activitys.clockin.AddVisitUserMobileOrderActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.example.dm_erp.activitys.VisitPlanListActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.example.dm_erp.activitys.clockin.AddVisitPlanActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.example.dm_erp.activitys.visit.plan.UpdateVisitPlanActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.example.dm_erp.activitys.ShopLinshiVisitActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.example.dm_erp.activitys.clockin.AddVisitInspectActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.example.dm_erp.activitys.clockin.VisitMarketInformationSubmitActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.example.dm_erp.activitys.clockin.AddMarketInfoMationDetailActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.example.dm_erp.activitys.clockin.UpdateMarketInfoMationDetailActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.example.dm_erp.activitys.VisitLineListActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.example.dm_erp.activitys.clockin.AddVisitLineDetailActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.example.dm_erp.activitys.AddVisitLineListActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.example.dm_erp.activitys.visit.line.UpdateVisitLineDetailActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.example.dm_erp.activitys.visit.line.SelectCisitLineListActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.example.dm_erp.activitys.visit.line.VisitLinePlanListActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.example.dm_erp.activitys.AreaKanBanActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.example.dm_erp.activitys.CustomerKanBanActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.example.dm_erp.activitys.attendancemanage.search.CustomerMonthSaleListActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.example.dm_erp.activitys.CustomerMonthSaleDetailActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.example.dm_erp.activitys.attendancemanage.search.CustomerTargetReachListActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.example.dm_erp.activitys.CustomerTargetReachDetailActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.example.dm_erp.activitys.attendancemanage.search.AreaProvinceCitySaleIncreaseListActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.example.dm_erp.activitys.AreaProvinceCitySaleIncreaseDetailActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.example.dm_erp.activitys.attendancemanage.search.ClassSaleIncreaseListActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.example.dm_erp.activitys.ClassSaleIncreaseDetailActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.example.dm_erp.activitys.attendancemanage.search.UserTargetReachListActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.example.dm_erp.activitys.UserTargetReachDetailActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.example.dm_erp.activitys.attendancemanage.search.ExperienceUserActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.example.dm_erp.activitys.clockin.UserSignDetailActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.example.dm_erp.activitys.attendancemanage.detail.AddTaskSubmitAreaActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.example.dm_erp.activitys.attendancemanage.detail.AddTaskSubmitUserActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.example.dm_erp.activitys.attendancemanage.detail.TaskDetailActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.example.dm_erp.activitys.clockin.SearchTasksActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.example.dm_erp.activitys.attendancemanage.detail.HistoryTaskDetailActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.example.dm_erp.activitys.shop.SettingsActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.example.dm_erp.activitys.shop.WebPageActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.example.dm_erp.activitys.shop.AboutsActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.example.dm_erp.activitys.clockin.AddFeedBackActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.example.dm_erp.activitys.AttachmentDetailActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.example.dm_erp.activitys.clockin.UpdatePasswordActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.example.dm_erp.activitys.clockin.SearchVisitCommunicatesActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.example.dm_erp.activitys.clockin.ListVisitCommunicatesActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.example.dm_erp.activitys.clockin.VisitCommunicateDetailActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.example.dm_erp.activitys.clockin.SearchVisitInspectsActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.example.dm_erp.activitys.clockin.ListVisitInSpectsActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.example.dm_erp.activitys.clockin.VisitInSpectDetailActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.example.dm_erp.activitys.clockin.SearchVisitMarketInformationsActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.example.dm_erp.activitys.clockin.ListVisitMarketInforMationActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.example.dm_erp.activitys.clockin.VisitMarketInformationDetailActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.example.dm_erp.activitys.clockin.MarketInfoMationDetailActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.example.dm_erp.activitys.clockin.SearchCustomerOrderListActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.example.dm_erp.activitys.attendancemanage.search.CustomerOrderListActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.example.dm_erp.activitys.CustomerOrderDetailActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.example.dm_erp.activitys.clockin.SearchReportListActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:name="com.example.dm_erp.activitys.SelectClassOrCargoListActivity" android:windowSoftInputMode="0x00000010">
+</activity>
+<activity android:launchMode="2" android:name="com.tencent.tauth.AuthActivity" android:noHistory="true">
+<intent-filter>
+<action android:name="android.intent.action.VIEW">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+<category android:name="android.intent.category.BROWSABLE">
+</category>
+<data android:scheme="tencent1105976430">
+</data>
+</intent-filter>
+</activity>
+<activity android:configChanges="0x000004A0" android:name="com.tencent.connect.common.AssistActivity" android:theme="@android:01030010">
+</activity>
+<activity android:configChanges="0x000004A0" android:exported="true" android:name="com.example.dm_erp.wxapi.WXEntryActivity" android:screenOrientation="1" android:theme="@android:01030010">
+</activity>
+<service android:exported="true" android:name="com.taobao.accs.ChannelService" android:process=":channel">
+<intent-filter>
+<action android:name="com.taobao.accs.intent.action.SERVICE">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="com.taobao.accs.intent.action.ELECTION">
+</action>
+</intent-filter>
+</service>
+<service android:exported="true" android:name="com.taobao.accs.data.MsgDistributeService">
+<intent-filter>
+<action android:name="com.taobao.accs.intent.action.RECEIVE">
+</action>
+</intent-filter>
+</service>
+<receiver android:name="com.taobao.accs.EventReceiver" android:process=":channel">
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_REMOVED">
+</action>
+<data android:scheme="package">
+</data>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.USER_PRESENT">
+</action>
+</intent-filter>
+</receiver>
+<receiver android:name="com.taobao.accs.ServiceReceiver" android:process=":channel">
+<intent-filter>
+<action android:name="com.taobao.accs.intent.action.COMMAND">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="com.taobao.accs.intent.action.START_FROM_AGOO">
+</action>
+</intent-filter>
+</receiver>
+<service android:name="com.taobao.accs.ChannelService$KernelService" android:process=":channel">
+</service>
+<service android:exported="true" android:name="org.android.agoo.accs.AgooService">
+<intent-filter>
+<action android:name="com.taobao.accs.intent.action.RECEIVE">
+</action>
+</intent-filter>
+</service>
+<service android:exported="true" android:name="com.umeng.message.UmengIntentService" android:process=":channel">
+<intent-filter>
+<action android:name="org.agoo.android.intent.action.RECEIVE">
+</action>
+</intent-filter>
+</service>
+<service android:exported="true" android:name="com.umeng.message.XiaomiIntentService" android:process=":channel">
+<intent-filter>
+<action android:name="org.agoo.android.intent.action.RECEIVE">
+</action>
+</intent-filter>
+</service>
+<receiver android:exported="true" android:name="com.taobao.agoo.AgooCommondReceiver" android:process=":channel">
+<intent-filter>
+<action android:name="com.example.dm_erp.intent.action.COMMAND">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="android.intent.action.PACKAGE_REMOVED">
+</action>
+<data android:scheme="package">
+</data>
+</intent-filter>
+</receiver>
+<service android:exported="true" android:name="com.umeng.message.UmengMessageIntentReceiverService" android:process=":channel">
+<intent-filter>
+<action android:name="org.android.agoo.client.MessageReceiverService">
+</action>
+</intent-filter>
+</service>
+<receiver android:exported="false" android:name="com.umeng.message.NotificationProxyBroadcastReceiver">
+</receiver>
+<service android:exported="false" android:name="com.umeng.message.UmengMessageCallbackHandlerService">
+<intent-filter>
+<action android:name="com.umeng.messge.registercallback.action">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="com.umeng.message.enablecallback.action">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="com.umeng.message.disablecallback.action">
+</action>
+</intent-filter>
+<intent-filter>
+<action android:name="com.umeng.message.message.handler.action">
+</action>
+</intent-filter>
+</service>
+<service android:exported="false" android:name="com.umeng.message.UmengDownloadResourceService">
+</service>
+<provider android:authorities="com.example.dm_erp.umeng.message" android:exported="false" android:name="com.umeng.message.provider.MessageProvider">
+<grant-uri-permission android:pathPattern=".*">
+</grant-uri-permission>
+</provider>
+<provider android:authorities="com.example.dm_erp.fileProvider" android:exported="false" android:grantUriPermissions="true" android:name="com.tencent.bugly.beta.utils.BuglyFileProvider">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@7F0E0001">
+</meta-data>
+</provider>
+<service android:exported="false" android:name="com.tencent.bugly.beta.tinker.TinkerResultService">
+</service>
+<service android:exported="false" android:name="com.tencent.tinker.lib.service.TinkerPatchService" android:process=":patch">
+</service>
+<service android:exported="false" android:name="com.tencent.tinker.lib.service.TinkerPatchService$InnerService" android:process=":patch">
+</service>
+<service android:exported="false" android:name="com.tencent.tinker.lib.service.DefaultTinkerResultService">
+</service>
+</application>
+</manifest>

@@ -1,0 +1,284 @@
+<?xml version="1.0" ?><manifest android:versionCode="88" android:versionName="1.1.7" package="com.prosegur.smart20" platformBuildVersionCode="24" platformBuildVersionName="7.000000" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="15" android:targetSdkVersion="22">
+</uses-sdk>
+<uses-permission android:name="android.permission.INTERNET">
+</uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.CALL_PHONE">
+</uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.VIBRATE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE">
+</uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+</uses-permission>
+<uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS">
+</uses-permission>
+<permission android:name=".permission.C2D_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name=".permission.C2D_MESSAGE">
+</uses-permission>
+<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE">
+</uses-permission>
+<uses-permission android:name="android.permission.GET_ACCOUNTS">
+</uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK">
+</uses-permission>
+<uses-permission android:name="android.permission.RECORD_AUDIO">
+</uses-permission>
+<permission android:name="com.prosegur.smart20.permission.C2D_MESSAGE" android:protectionLevel="0x00000002">
+</permission>
+<uses-permission android:name="com.prosegur.smart20.permission.C2D_MESSAGE">
+</uses-permission>
+<application android:allowBackup="true" android:icon="@7F0201B1" android:label="@7F08024D" android:name="com.prosegur.smart20.app.SmartApp" android:supportsRtl="true" android:theme="@7F0A0047">
+<meta-data android:name="io.fabric.ApiKey" android:value="df5495d05aff182ebad9fe209e66bb10923bd3c5">
+</meta-data>
+<activity android:exported="true" android:name="com.prosegur.smart20.view.activities.PincodeConfigurationActivity" android:parentActivityName="com.prosegur.smart20.view.activities.SettingsActivity" android:screenOrientation="7" android:windowSoftInputMode="0x00000023">
+<intent-filter>
+<action android:name="view.activities.PincodeConfigurationActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.prosegur.smart20.view.activities.SettingsActivity">
+</meta-data>
+</activity>
+<activity android:exported="true" android:name="com.prosegur.smart20.view.activities.PasswordChangeActivity" android:parentActivityName="com.prosegur.smart20.view.activities.SettingsActivity" android:screenOrientation="7" android:theme="@7F0A0047" android:windowSoftInputMode="0x00000013">
+<intent-filter>
+<action android:name="view.activities.PasswordChangeActivity">
+</action>
+<category android:name="android.intent.category.DEFAULT">
+</category>
+</intent-filter>
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.prosegur.smart20.view.activities.SettingsActivity">
+</meta-data>
+</activity>
+<activity android:name="com.prosegur.smart20.view.activities.LoginActivity" android:screenOrientation="7" android:windowSoftInputMode="0x00000023">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<activity android:name="com.prosegur.smart20.view.activities.NoSessionUrlActivity" android:parentActivityName="com.prosegur.smart20.view.activities.LoginActivity" android:screenOrientation="7" android:theme="@7F0A0047" android:windowSoftInputMode="0x00000013">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.prosegur.smart20.view.activities.LoginActivity">
+</meta-data>
+</activity>
+<activity android:name="com.prosegur.smart20.view.activities.HelpActivity" android:parentActivityName="com.prosegur.smart20.view.activities.HomeActivity" android:screenOrientation="7" android:theme="@7F0A0047" android:windowSoftInputMode="0x00000013">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.prosegur.smart20.view.activities.HomeActivity">
+</meta-data>
+</activity>
+<activity android:label="@7F080144" android:launchMode="1" android:name="com.prosegur.smart20.view.activities.HomeActivity" android:screenOrientation="7" android:theme="@7F0A0047" android:windowSoftInputMode="0x00000013">
+</activity>
+<activity android:label="@7F08020B" android:name="com.prosegur.smart20.view.activities.EventDetailsActivity" android:parentActivityName="com.prosegur.smart20.view.activities.HomeActivity" android:screenOrientation="7">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.prosegur.smart20.view.activities.HomeActivity">
+</meta-data>
+</activity>
+<activity android:label="@7F08020B" android:name="com.prosegur.smart20.view.activities.EventImageDetailsActivity" android:parentActivityName="com.prosegur.smart20.view.activities.HomeActivity" android:screenOrientation="7">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.prosegur.smart20.view.activities.HomeActivity">
+</meta-data>
+</activity>
+<activity android:label="@7F08020B" android:name="com.prosegur.smart20.view.activities.EventVideoDetailsActivity" android:parentActivityName="com.prosegur.smart20.view.activities.HomeActivity" android:screenOrientation="10">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".view.activities.HomeActivity">
+</meta-data>
+</activity>
+<activity android:label="@7F08020A" android:launchMode="1" android:name="com.prosegur.smart20.view.activities.DetectorListActivity" android:parentActivityName="com.prosegur.smart20.view.activities.InstallationsActivity" android:screenOrientation="7" android:theme="@7F0A0047" android:windowSoftInputMode="0x00000013">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.prosegur.smart20.view.activities.InstallationsActivity">
+</meta-data>
+</activity>
+<activity android:label="@7F0800A1" android:launchMode="1" android:name="com.prosegur.smart20.view.activities.DetectorConfigurationActivity" android:parentActivityName="com.prosegur.smart20.view.activities.VideoMosaicActivity" android:screenOrientation="7" android:theme="@7F0A0047" android:windowSoftInputMode="0x00000023">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.prosegur.smart20.view.activities.VideoMosaicActivity">
+</meta-data>
+</activity>
+<activity android:label="@7F080209" android:name="com.prosegur.smart20.view.activities.DetectorDetailsActivity" android:parentActivityName="com.prosegur.smart20.view.activities.DetectorListActivity" android:screenOrientation="7" android:theme="@7F0A0047" android:windowSoftInputMode="0x00000013">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.prosegur.smart20.view.activities.DetectorListActivity">
+</meta-data>
+</activity>
+<activity android:name="com.prosegur.smart20.view.activities.SettingsActivity" android:parentActivityName="com.prosegur.smart20.view.activities.HomeActivity" android:screenOrientation="7" android:theme="@7F0A0047" android:windowSoftInputMode="0x00000013">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.prosegur.smart20.view.activities.HomeActivity">
+</meta-data>
+</activity>
+<activity android:name="com.prosegur.smart20.view.activities.SceneActivity" android:parentActivityName="com.prosegur.smart20.view.activities.HomeActivity" android:screenOrientation="7" android:theme="@7F0A0047" android:windowSoftInputMode="0x00000013">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".view.activities.HomeActivity">
+</meta-data>
+</activity>
+<activity android:name="com.prosegur.smart20.view.activities.AddSceneActivity" android:parentActivityName="com.prosegur.smart20.view.activities.SceneActivity" android:screenOrientation="7" android:theme="@7F0A0047" android:windowSoftInputMode="0x00000013">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".view.activities.SceneActivity">
+</meta-data>
+</activity>
+<activity android:label="@7F08020F" android:launchMode="1" android:name="com.prosegur.smart20.view.activities.VideoListActivity" android:parentActivityName="com.prosegur.smart20.view.activities.InstallationsActivity" android:screenOrientation="7" android:windowSoftInputMode="0x00000013">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.prosegur.smart20.view.activities.InstallationsActivity">
+</meta-data>
+</activity>
+<activity android:configChanges="0x00000480" android:label="@7F080114" android:launchMode="1" android:name="com.prosegur.smart20.view.activities.VideoMosaicActivity" android:parentActivityName="com.prosegur.smart20.view.activities.InstallationsActivity" android:screenOrientation="4" android:windowSoftInputMode="0x00000013">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.prosegur.smart20.view.activities.InstallationsActivity">
+</meta-data>
+</activity>
+<activity android:label="@7F080191" android:launchMode="1" android:name="com.prosegur.smart20.view.activities.VideoMosaicRecordsActivity" android:parentActivityName="com.prosegur.smart20.view.activities.VideoMosaicActivity" android:screenOrientation="7" android:theme="@7F0A0048" android:windowSoftInputMode="0x00000013">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.prosegur.smart20.view.activities.VideoMosaicActivity">
+</meta-data>
+</activity>
+<activity android:label="@7F08012C" android:launchMode="1" android:name="com.prosegur.smart20.view.activities.PictureDetailsActivity" android:parentActivityName="com.prosegur.smart20.view.activities.VideoMosaicRecordsActivity" android:screenOrientation="4" android:theme="@7F0A0048" android:windowSoftInputMode="0x00000013">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.prosegur.smart20.view.activities.VideoMosaicRecordsActivity">
+</meta-data>
+</activity>
+<activity android:label="@7F08020F" android:launchMode="1" android:name="com.prosegur.smart20.view.activities.RecordListActivity" android:parentActivityName="com.prosegur.smart20.view.activities.VideoListActivity" android:screenOrientation="7" android:theme="@7F0A0048" android:windowSoftInputMode="0x00000013">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.prosegur.smart20.view.activities.VideoListActivity">
+</meta-data>
+</activity>
+<activity android:launchMode="1" android:name="com.prosegur.smart20.view.activities.InstallationsActivity" android:parentActivityName="com.prosegur.smart20.view.activities.HomeActivity" android:screenOrientation="7" android:theme="@7F0A0047" android:windowSoftInputMode="0x00000013">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.prosegur.smart20.view.activities.HomeActivity">
+</meta-data>
+</activity>
+<activity android:label="@7F08015F" android:name="com.prosegur.smart20.view.activities.InstallationSettingsActivity" android:parentActivityName="com.prosegur.smart20.view.activities.InstallationsActivity" android:screenOrientation="7" android:theme="@7F0A0047" android:windowSoftInputMode="0x00000033">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.prosegur.smart20.view.activities.InstallationsActivity">
+</meta-data>
+</activity>
+<activity android:configChanges="0x00000780" android:label="@7F08023B" android:name="com.prosegur.smart20.view.activities.VideoPlayerActivity" android:parentActivityName="com.prosegur.smart20.view.activities.VideoListActivity" android:screenOrientation="4" android:theme="@7F0A0047" android:windowSoftInputMode="0x00000013">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.prosegur.smart20.view.activities.VideoListActivity">
+</meta-data>
+</activity>
+<activity android:label="@7F08020F" android:launchMode="1" android:name="com.prosegur.smart20.view.activities.CameraEditListActivity" android:parentActivityName="com.prosegur.smart20.view.activities.VideoListActivity" android:screenOrientation="7" android:theme="@7F0A0048" android:windowSoftInputMode="0x00000023">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".view.activities.VideoListActivity">
+</meta-data>
+</activity>
+<activity android:label="@7F080225" android:launchMode="1" android:name="com.prosegur.smart20.view.activities.ValidationPasswordViewActivity" android:parentActivityName="com.prosegur.smart20.view.activities.InstallationsActivity" android:screenOrientation="7" android:theme="@7F0A0047" android:windowSoftInputMode="0x00000013">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".view.activities.InstallationsActivity">
+</meta-data>
+</activity>
+<activity android:label="@7F080225" android:launchMode="1" android:name="com.prosegur.smart20.view.activities.ValidationPasswordChangeActivity" android:parentActivityName="com.prosegur.smart20.view.activities.ValidationPasswordViewActivity" android:screenOrientation="7" android:theme="@7F0A0047" android:windowSoftInputMode="0x00000023">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".view.activities.ValidationPasswordViewActivity">
+</meta-data>
+</activity>
+<activity android:label="@7F08020E" android:launchMode="1" android:name="com.prosegur.smart20.view.activities.PincodeEditListActivity" android:parentActivityName="com.prosegur.smart20.view.activities.InstallationsActivity" android:screenOrientation="7" android:theme="@7F0A0047" android:windowSoftInputMode="0x00000013">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".view.activities.InstallationsActivity">
+</meta-data>
+</activity>
+<activity android:label="@7F080207" android:launchMode="1" android:name="com.prosegur.smart20.view.activities.ActionPlanEditListActivity" android:parentActivityName="com.prosegur.smart20.view.activities.InstallationsActivity" android:screenOrientation="7" android:theme="@7F0A0047" android:windowSoftInputMode="0x00000013">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".view.activities.InstallationsActivity">
+</meta-data>
+</activity>
+<activity android:label="@7F080206" android:launchMode="1" android:name="com.prosegur.smart20.view.activities.ActionPlanContactEditActivity" android:parentActivityName="com.prosegur.smart20.view.activities.ActionPlanEditListActivity" android:screenOrientation="7" android:theme="@7F0A0047" android:windowSoftInputMode="0x00000023">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".view.activities.ActionPlanEditListActivity">
+</meta-data>
+</activity>
+<activity android:name="com.theartofdev.edmodo.cropper.CropImageActivity" android:theme="@7F0A006A">
+</activity>
+<activity android:label="@7F08008E" android:launchMode="1" android:name="com.prosegur.smart20.view.activities.AliasEditListActivity" android:parentActivityName="com.prosegur.smart20.view.activities.InstallationsActivity" android:screenOrientation="7" android:theme="@7F0A0047" android:windowSoftInputMode="0x00000013">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".view.activities.InstallationsActivity">
+</meta-data>
+</activity>
+<activity android:label="@7F08008F" android:launchMode="1" android:name="com.prosegur.smart20.view.activities.AliasSelectorActivity" android:parentActivityName="com.prosegur.smart20.view.activities.AliasEditListActivity" android:screenOrientation="7" android:theme="@7F0A0047" android:windowSoftInputMode="0x00000023">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".view.activities.AliasEditListActivity">
+</meta-data>
+</activity>
+<activity android:label="@7F08008E" android:launchMode="1" android:name="com.prosegur.smart20.view.activities.AliasEditActivity" android:parentActivityName="com.prosegur.smart20.view.activities.AliasEditActivity" android:screenOrientation="7" android:theme="@7F0A0047" android:windowSoftInputMode="0x00000023">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".view.activities.AliasEditListActivity">
+</meta-data>
+</activity>
+<activity android:name="com.prosegur.smart20.view.activities.DomoticsLightsListActivity" android:parentActivityName="com.prosegur.smart20.view.activities.HomeActivity" android:screenOrientation="7" android:theme="@7F0A0047" android:windowSoftInputMode="0x00000013">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".view.activities.HomeActivity">
+</meta-data>
+</activity>
+<activity android:launchMode="1" android:name="com.prosegur.smart20.view.activities.DomoticsLightDetailActivity" android:parentActivityName="com.prosegur.smart20.view.activities.DomoticsLightsListActivity" android:screenOrientation="7" android:windowSoftInputMode="0x00000013">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".view.activities.DomoticsLightsListActivity">
+</meta-data>
+</activity>
+<activity android:name="com.prosegur.smart20.view.activities.DomoticsLocksListActivity" android:parentActivityName="com.prosegur.smart20.view.activities.HomeActivity" android:screenOrientation="7" android:theme="@7F0A0047" android:windowSoftInputMode="0x00000013">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".view.activities.HomeActivity">
+</meta-data>
+</activity>
+<activity android:launchMode="1" android:name="com.prosegur.smart20.view.activities.DomoticsLockDetailActivity" android:parentActivityName="com.prosegur.smart20.view.activities.DomoticsLocksListActivity" android:screenOrientation="7" android:windowSoftInputMode="0x00000013">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".view.activities.DomoticsLocksListActivity">
+</meta-data>
+</activity>
+<activity android:launchMode="1" android:name="com.prosegur.smart20.view.activities.DomoticsThermostatListActivity" android:parentActivityName="com.prosegur.smart20.view.activities.HomeActivity" android:screenOrientation="7" android:windowSoftInputMode="0x00000013">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".view.activities.HomeActivity">
+</meta-data>
+</activity>
+<activity android:launchMode="1" android:name="com.prosegur.smart20.view.activities.DomoticsThermostatDetailActivity" android:parentActivityName="com.prosegur.smart20.view.activities.DomoticsThermostatListActivity" android:screenOrientation="7" android:windowSoftInputMode="0x00000013">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".view.activities.DomoticsThermostatListActivity">
+</meta-data>
+</activity>
+<activity android:launchMode="1" android:name="com.prosegur.smart20.view.activities.PartitionListActivity" android:parentActivityName="com.prosegur.smart20.view.activities.PartitionListActivity" android:screenOrientation="7" android:windowSoftInputMode="0x00000013">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.prosegur.smart20.view.activities.HomeActivity">
+</meta-data>
+</activity>
+<activity android:launchMode="1" android:name="com.prosegur.smart20.view.activities.PartitionSettingsActivity" android:parentActivityName="com.prosegur.smart20.view.activities.PartitionSettingsActivity" android:screenOrientation="7" android:windowSoftInputMode="0x00000013">
+<meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.prosegur.smart20.view.activities.PartitionListActivity">
+</meta-data>
+</activity>
+<receiver android:name="com.prosegur.smart20.services.GCMBroadcastReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+<action android:name="com.google.android.c2dm.intent.REGISTRATION">
+</action>
+<category android:name="com.prosegur.promobile">
+</category>
+</intent-filter>
+</receiver>
+<receiver android:name="com.prosegur.smart20.services.GCMRecevier">
+<intent-filter>
+<action android:name=".services.GCMRecevier.ACTION_GCM_REG_ID_UPDATED">
+</action>
+</intent-filter>
+</receiver>
+<service android:name="com.prosegur.smart20.services.GCMIntentService">
+</service>
+<meta-data android:name="com.google.android.gms.version" android:value="@7F0C000B">
+</meta-data>
+<service android:exported="false" android:name="com.prosegur.smart20.services.GCMUpdaterIntentService">
+</service>
+<service android:name="com.prosegur.smart20.services.WearMessageListenerService">
+<intent-filter>
+<action android:name="com.google.android.gms.wearable.BIND_LISTENER">
+</action>
+</intent-filter>
+</service>
+<provider android:authorities="com.prosegur.smart20.crashlyticsinitprovider" android:exported="false" android:initOrder="100" android:name="com.crashlytics.android.CrashlyticsInitProvider">
+</provider>
+<activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:01030010">
+</activity>
+<receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementReceiver">
+</receiver>
+<receiver android:enabled="true" android:exported="true" android:name="com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver" android:permission="android.permission.INSTALL_PACKAGES">
+<intent-filter>
+<action android:name="com.android.vending.INSTALL_REFERRER">
+</action>
+</intent-filter>
+</receiver>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementService">
+</service>
+<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementJobService" android:permission="android.permission.BIND_JOB_SERVICE">
+</service>
+<receiver android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.RECEIVE">
+</action>
+<category android:name="com.prosegur.smart20">
+</category>
+</intent-filter>
+</receiver>
+<receiver android:exported="false" android:name="com.google.firebase.iid.FirebaseInstanceIdInternalReceiver">
+</receiver>
+<service android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdService">
+<intent-filter android:priority="-500">
+<action android:name="com.google.firebase.INSTANCE_ID_EVENT">
+</action>
+</intent-filter>
+</service>
+<provider android:authorities="com.prosegur.smart20.firebaseinitprovider" android:exported="false" android:initOrder="100" android:name="com.google.firebase.provider.FirebaseInitProvider">
+</provider>
+<service android:name="com.appsee.AppseeBackgroundUploader">
+</service>
+<meta-data android:name="com.appsee.SDKVersion" android:value="2.4.1">
+</meta-data>
+<meta-data android:name="com.google.android.wearable.beta.app" android:resource="@7F060000">
+</meta-data>
+</application>
+</manifest>
